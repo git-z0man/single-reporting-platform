@@ -1,22 +1,22 @@
 <!--
-  ENISA Single Reporting Platform - Hersteller-Anleitung
+  ENISA Single Reporting Platform - Manufacturer Guide
   ============================================================
-  DEPLOYMENT (Netlify):
-  index.html zusammen mit den Screenshot-PNGs in EINEN Ordner legen
-  und den Ordner per Drag-and-drop in Netlify deployen.
+  DEPLOYMENT (Netlify / GitHub Pages):
+  Place index.html together with the screenshot PNGs in ONE folder
+  and deploy.
 
-  ERWARTETE BILDDATEIEN (gleicher Ordner wie index.html):
+  EXPECTED IMAGE FILES (same folder as index.html):
     reg-02-usertype.png       reg-08-association.png
     reg-03-country.png        reg-10-dashboard.png
     reg-04-eulogin.png        reg-11-greece.png
     reg-05-personal.png
     reg-06-manufacturer.png
-  Noch offen (24h / 72h / Final), Platzhalter erwarten:
+  Still open (24h / 72h / Final), placeholders expected:
     ew-13-form.png   ew-16-cvss.png   ew-20-dashboard.png   ew-23-edit.png
     n72-25-aev.png   n72-26-pec.png
     fin-28-detail.png   fin-31-confirm.png
 
-  Fehlt eine Datei, zeigt der Platzhalter automatisch den erwarteten Namen.
+  If a file is missing, the placeholder automatically shows the expected name.
 -->
 <style>
   :root{
@@ -25,8 +25,10 @@
     --w24:#d97706; --w24-bg:#fdf3e7;
     --w72:#0e6fb8; --w72-bg:#e8f3fb;
     --fin:#178a55; --fin-bg:#e8f6ee;
+    --faq:#7a4ec7; --faq-bg:#f1ecfb;
     --pflicht:#b42318; --pflicht-bg:#fdeceb;
     --opt:#475467; --opt-bg:#eef1f5;
+    --cond:#9a5b00; --cond-bg:#fbf2e3;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
@@ -46,6 +48,7 @@
   .badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;border:1px solid transparent;}
   .badge.pflicht{color:var(--pflicht);background:var(--pflicht-bg);border-color:#f3c7c3;}
   .badge.opt{color:var(--opt);background:var(--opt-bg);border-color:#d9dee6;}
+  .badge.cond{color:var(--cond);background:var(--cond-bg);border-color:#ecd7a8;}
 
   .overview{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 8px;}
   .ov{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;border-top:4px solid;text-decoration:none;color:inherit;display:block;transition:transform .12s ease,box-shadow .12s ease;}
@@ -55,6 +58,7 @@
   .ov .frist{font-size:12.5px;color:var(--muted);}
   .ov.reg{border-color:var(--reg)} .ov.w24{border-color:var(--w24)}
   .ov.w72{border-color:var(--w72)} .ov.fin{border-color:var(--fin)}
+  .ov.faq{border-color:var(--faq)}
 
   .note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--w24);
     border-radius:10px;padding:12px 14px;margin:16px 0;font-size:13.5px;color:var(--muted);}
@@ -69,6 +73,7 @@
   .phase.w24 .pnum{background:var(--w24)} .phase.w24 .sub{background:var(--w24-bg);color:var(--w24)}
   .phase.w72 .pnum{background:var(--w72)} .phase.w72 .sub{background:var(--w72-bg);color:var(--w72)}
   .phase.fin .pnum{background:var(--fin)} .phase.fin .sub{background:var(--fin-bg);color:var(--fin)}
+  .phase.faq .pnum{background:var(--faq)} .phase.faq .sub{background:var(--faq-bg);color:var(--faq)}
 
   .pbody{padding:20px 22px;}
   h4.block{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;font-weight:700;}
@@ -103,6 +108,16 @@
   .divider{height:1px;background:var(--line);margin:20px 0;}
   footer.doc{margin-top:30px;font-size:12px;color:var(--muted);text-align:center;}
 
+  details.faq{border:1px solid var(--line);border-radius:10px;background:#fff;margin:10px 0;overflow:hidden;}
+  details.faq summary{cursor:pointer;padding:12px 16px;font-weight:600;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:10px;}
+  details.faq summary::-webkit-details-marker{display:none;}
+  details.faq summary::before{content:"+";color:var(--faq);font-weight:700;font-size:18px;width:14px;display:inline-block;}
+  details.faq[open] summary::before{content:"\2212";}
+  details.faq .ans{padding:0 16px 14px 40px;font-size:14px;color:var(--ink);}
+  details.faq .ans p{margin:0 0 8px;}
+  details.faq .ans ul{margin:4px 0 8px 18px;padding:0;}
+  details.faq .ans a{color:var(--w72);}
+
   /* Lightbox */
   #lb{position:fixed;inset:0;background:rgba(15,22,34,.82);display:none;align-items:center;justify-content:center;z-index:999;padding:30px;cursor:zoom-out;}
   #lb.open{display:flex;}
@@ -123,6 +138,8 @@
     figure.shot{break-inside:avoid;}
     figure.shot img{cursor:default;}
     .ov{break-inside:avoid;}
+    details.faq{break-inside:avoid;}
+    details.faq[open] .ans{display:block;}
     #lb{display:none !important;}
   }
 </style>
@@ -130,221 +147,392 @@
 <div class="wrap">
 
   <header class="doc">
-    <div class="kicker">Cyber Resilience Act &middot; Meldepflicht nach Artikel 14</div>
-    <h1>ENISA Single Reporting Platform &ndash; Anleitung f&uuml;r Hersteller</h1>
-    <p>Meldung von aktiv ausgenutzten Schwachstellen (AEV) und schweren Vorf&auml;llen &uuml;ber die zentrale Meldeplattform. Diese Anleitung f&uuml;hrt durch alle vier Phasen, von der Registrierung bis zur Abschlussmeldung, und zeigt je Schritt die ben&ouml;tigten Datenfelder.</p>
-    <span class="stand">Stand: 10.06.2026 &middot; Test-Portal, Felder noch nicht final</span>
+    <div class="kicker">Cyber Resilience Act &middot; Reporting obligation under Article 14</div>
+    <h1>ENISA Single Reporting Platform &ndash; Manufacturer Guide</h1>
+    <p>Reporting actively exploited vulnerabilities (AEV) and severe incidents through the central reporting platform. This guide walks through all four phases, from registration to the final report, showing the required data fields for each step.</p>
+    <span class="stand">Status: 19 June 2026 &middot; Test portal, fields not yet final</span>
 
     <div class="legend">
-      <span class="lbl">Legende Datenfelder:</span>
-      <span class="badge pflicht">Pflicht</span>
+      <span class="lbl">Data field legend:</span>
+      <span class="badge pflicht">Mandatory</span>
+      <span class="badge cond">Conditional</span>
       <span class="badge opt">Optional</span>
     </div>
   </header>
 
   <div class="overview">
-    <a class="ov reg" href="#reg"><div class="ph">Phase 1</div><h3>Registrierung</h3><div class="frist">Einmalig, vorab</div></a>
-    <a class="ov w24" href="#w24"><div class="ph">Phase 2</div><h3>Erstmeldung</h3><div class="frist">Early Warning &middot; binnen 24 h</div></a>
-    <a class="ov w72" href="#w72"><div class="ph">Phase 3</div><h3>Folgemeldung</h3><div class="frist">72 h Notification &middot; binnen 72 h</div></a>
-    <a class="ov fin" href="#fin"><div class="ph">Phase 4</div><h3>Abschlussmeldung</h3><div class="frist">Final Report &middot; 14 Tage / 1 Monat</div></a>
+    <a class="ov reg" href="#reg"><div class="ph">Phase 1</div><h3>Registration</h3><div class="frist">One-off, in advance</div></a>
+    <a class="ov w24" href="#w24"><div class="ph">Phase 2</div><h3>Early Warning</h3><div class="frist">within 24 h</div></a>
+    <a class="ov w72" href="#w72"><div class="ph">Phase 3</div><h3>72h Notification</h3><div class="frist">within 72 h</div></a>
+    <a class="ov fin" href="#fin"><div class="ph">Phase 4</div><h3>Final Report</h3><div class="frist">14 days / 1 month</div></a>
+  </div>
+  <div class="overview" style="grid-template-columns:1fr;">
+    <a class="ov faq" href="#faq"><div class="ph">Reference</div><h3>ENISA FAQ on the CRA SRP</h3><div class="frist">Official Q&amp;A on scope, deadlines, data fields, governance</div></a>
   </div>
 
   <div class="note">
-    <b>Hinweis zum Reifegrad:</b> Die Plattform befindet sich im Testbetrieb. Die Datenfelder sind derzeit noch nicht final und k&ouml;nnen sich &auml;ndern. Das Portal dient ausschlie&szlig;lich der Erf&uuml;llung der rechtlichen Meldepflicht nach Artikel 14 CRA, freiwillige Meldungen Dritter und eine Dateiablage sind zur Einf&uuml;hrung nicht vorgesehen.
+    <b>Maturity note:</b> The platform is in test operation. Data fields are not yet final and may change. The portal exclusively serves to fulfil the legal reporting obligation under Article 14 CRA. Voluntary third-party notifications and file storage are not foreseen for the initial release (voluntary reporting will be enabled after 11 September 2026).
   </div>
 
-  <!-- ===================== PHASE 1: REGISTRIERUNG ===================== -->
+  <!-- ===================== PHASE 1: REGISTRATION ===================== -->
   <section class="phase reg" id="reg">
     <div class="phead">
       <div class="pnum">1</div>
-      <h2>Registrierung</h2>
-      <span class="sub">Einmalig, vorab</span>
+      <h2>Registration</h2>
+      <span class="sub">One-off, in advance</span>
     </div>
     <div class="pbody">
 
-      <h4 class="block">Ben&ouml;tigte Daten</h4>
+      <h4 class="block">Required data</h4>
       <table>
-        <thead><tr><th>Feld</th><th>Status</th><th>Hinweis</th></tr></thead>
+        <thead><tr><th>Field</th><th>Status</th><th>Note</th></tr></thead>
         <tbody>
-          <tr class="grp"><td colspan="3">Pers&ouml;nliche Daten</td></tr>
-          <tr><td class="f">E-Mail-Adresse (EU-Login)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Pers&ouml;nlicher EU-Login-Account</td></tr>
-          <tr><td class="f">Vorname</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
-          <tr><td class="f">Nachname</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
-          <tr><td class="f">Land (CSIRT)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">F&uuml;r DE: CSIRT Germany</td></tr>
-          <tr><td class="f">Adresse</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
-          <tr><td class="f">E-Mail-Adresse (Empfang)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Muss nicht dem EU-Login entsprechen</td></tr>
-          <tr><td class="f">Telefonnummer</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
-          <tr class="grp"><td colspan="3">Daten des Herstellers</td></tr>
-          <tr><td class="f">Name des Herstellers</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Aktuell Freitextfeld</td></tr>
-          <tr><td class="f">Hersteller-CSIRT (Mitgliedsstaat)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Bestimmt zust&auml;ndiges nationales CSIRT</td></tr>
-          <tr><td class="f">Sektor</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
-          <tr><td class="f">Registration Number</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Bedeutung noch unklar, evtl. USt-ID f&uuml;r DE</td></tr>
-          <tr><td class="f">Adresse (Hersteller)</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
+          <tr class="grp"><td colspan="3">Personal data</td></tr>
+          <tr><td class="f">Email address (EU Login)</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Personal EU Login account</td></tr>
+          <tr><td class="f">First name</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h"></td></tr>
+          <tr><td class="f">Last name</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h"></td></tr>
+          <tr><td class="f">Country (CSIRT)</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">For DE: CSIRT Germany</td></tr>
+          <tr><td class="f">Address</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h"></td></tr>
+          <tr><td class="f">Email address (contact)</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Need not match the EU Login address</td></tr>
+          <tr><td class="f">Phone number</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h"></td></tr>
+          <tr class="grp"><td colspan="3">Manufacturer data</td></tr>
+          <tr><td class="f">Manufacturer name</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Currently a free-text field</td></tr>
+          <tr><td class="f">Manufacturer CSIRT (Member State)</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Determines the responsible national CSIRT</td></tr>
+          <tr><td class="f">Sector</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
+          <tr><td class="f">Registration number</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Meaning still unclear; possibly VAT ID for DE</td></tr>
+          <tr><td class="f">Address (manufacturer)</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
         </tbody>
       </table>
 
       <div class="divider"></div>
 
-      <h4 class="block">Ablauf</h4>
+      <h4 class="block">Procedure</h4>
       <ol class="steps">
-        <li><b>Portal &ouml;ffnen.</b> Testbetrieb unter <span class="mono">portal.test-cra-srp.enisa.europa.eu</span>, Livebetrieb unter <span class="mono">crasrp.eu</span>. Portalsprache ist Englisch.</li>
-        <li><b>Benutzertyp w&auml;hlen.</b> Als Hersteller die Option &bdquo;Assigned Representative&ldquo; ausw&auml;hlen.</li>
-        <li><b>Nationalen Endpunkt w&auml;hlen.</b> Das zust&auml;ndige CSIRT festlegen, f&uuml;r ein deutsches Unternehmen &bdquo;CSIRT Germany&ldquo;.</li>
-        <li><b>Mit EU-Login anmelden.</b> Der pers&ouml;nliche Account wird sp&auml;ter dem Unternehmen als &bdquo;Authorized Representative&ldquo; zugeordnet.</li>
-        <li><b>Pers&ouml;nliche Daten eintragen</b> (Schritt 1 der Registrierung).</li>
-        <li><b>Hersteller zuordnen</b> (Schritt 2). Aktuell Freitextfelder; bis zu zwei Personen je Unternehmen. Die Zuordnung erfolgt vorl&auml;ufig und wird dem zust&auml;ndigen nationalen CSIRT weitergeleitet.</li>
-        <li><b>Auswahl des korrekten CSIRT</b> liegt beim Hersteller. Das Portal pr&uuml;ft dies nicht. Das gew&auml;hlte CSIRT wird bei k&uuml;nftigen Meldungen zuerst informiert.</li>
-        <li><b>Validierung durch das CSIRT.</b> Das CSIRT pr&uuml;ft die Zuordnung Person zu Hersteller (Art frei, z.&nbsp;B. telefonisch oder per E-Mail). Die BSI-Pr&auml;ferenz ist dem VDMA noch nicht bekannt, aber angefragt. Der Status ist in den Einstellungen einsehbar.</li>
-        <li><b>Meldef&auml;higkeit.</b> Die erfolgreiche &Uuml;bermittlung einer Meldung ist nicht von der erfolgreichen Validierung des Accounts abh&auml;ngig.</li>
-        <li><b>Dashboard.</b> Nach der Registrierung erscheint das Dashboard des nationalen CSIRT (erkennbar an der Flagge oben rechts).</li>
-        <li><b>Mehrere L&auml;nder.</b> Der gleiche Account kann Herstellern anderer EU-L&auml;nder zugeordnet werden, indem ein anderer nationaler Entrypoint gew&auml;hlt wird (Beispiel Griechenland). Die Validierung erfolgt dann durch das dortige CSIRT.</li>
+        <li><b>Open the portal.</b> Test environment at <span class="mono">portal.test-cra-srp.enisa.europa.eu</span>, live environment at <span class="mono">crasrp.eu</span>. Portal language is English.</li>
+        <li><b>Select user type.</b> As a manufacturer, choose the option &ldquo;Assigned Representative&rdquo;.</li>
+        <li><b>Select the national entry point.</b> Set the responsible CSIRT &ndash; for a German company, &ldquo;CSIRT Germany&rdquo;.</li>
+        <li><b>Sign in via EU Login.</b> The personal account is later linked to the company as an &ldquo;Authorized Representative&rdquo;.</li>
+        <li><b>Enter personal data</b> (registration step 1).</li>
+        <li><b>Link to manufacturer</b> (step 2). Currently free-text fields; up to two persons per company. The association is provisional and forwarded to the responsible national CSIRT.</li>
+        <li><b>Choice of the correct CSIRT</b> is the manufacturer&rsquo;s responsibility. The portal does not verify this. The selected CSIRT is notified first for future reports.</li>
+        <li><b>Validation by the CSIRT.</b> The CSIRT verifies the person-to-manufacturer association (method is open, e.g. by phone or email). The BSI&rsquo;s preferred process is not yet known to VDMA but has been requested. The status is visible in the user settings.</li>
+        <li><b>Ability to report.</b> Successful submission of a report does not depend on successful validation of the account.</li>
+        <li><b>Dashboard.</b> After registration, the national CSIRT dashboard appears (identifiable by the flag in the top right).</li>
+        <li><b>Multiple countries.</b> The same account can be assigned to manufacturers in other EU Member States by choosing a different national entry point (example: Greece). Validation is then performed by the CSIRT of that country.</li>
       </ol>
 
       <div class="shots">
-        <figure class="shot"><img src="reg-02-usertype.png" alt="Benutzertyp-Auswahl" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-02-usertype.png</span></div><figcaption><b>Schritt 2:</b> Benutzertyp-Auswahl &bdquo;What User are you?&ldquo; mit &bdquo;Assigned Representative&ldquo;</figcaption></figure>
-        <figure class="shot"><img src="reg-03-country.png" alt="L&auml;nderauswahl" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-03-country.png</span></div><figcaption><b>Schritt 3:</b> L&auml;nderauswahl &bdquo;Select Country&ldquo; / CSIRT Germany</figcaption></figure>
-        <figure class="shot"><img src="reg-04-eulogin.png" alt="EU-Login Anmeldung" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-04-eulogin.png</span></div><figcaption><b>Schritt 4:</b> EU-Login Anmeldung &bdquo;Sign in to continue&ldquo;</figcaption></figure>
-        <figure class="shot"><img src="reg-05-personal.png" alt="Pers&ouml;nliche Daten" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-05-personal.png</span></div><figcaption><b>Schritt 5:</b> Pers&ouml;nliche Daten (Personal Details)</figcaption></figure>
-        <figure class="shot"><img src="reg-06-manufacturer.png" alt="Hersteller-Zuordnung" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-06-manufacturer.png</span></div><figcaption><b>Schritt 6:</b> Hersteller-Zuordnung (Manufacturer Details)</figcaption></figure>
-        <figure class="shot"><img src="reg-08-association.png" alt="Association Management" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-08-association.png</span></div><figcaption><b>Schritt 8:</b> Einstellungen / Association Management, Status &bdquo;Unverified&ldquo;</figcaption></figure>
-        <figure class="shot"><img src="reg-10-dashboard.png" alt="Dashboard" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-10-dashboard.png</span></div><figcaption><b>Schritt 10:</b> Dashboard nach Registrierung (mit L&auml;nderflagge)</figcaption></figure>
-        <figure class="shot"><img src="reg-11-greece.png" alt="Mehrl&auml;nder-Zuordnung" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-11-greece.png</span></div><figcaption><b>Schritt 11:</b> Mehrl&auml;nder-Zuordnung (Beispiel CSIRT Greece)</figcaption></figure>
+        <figure class="shot"><img src="reg-02-usertype.png" alt="User type selection" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">reg-02-usertype.png</span></div><figcaption><b>Step 2:</b> User type selection &ldquo;What User are you?&rdquo; with &ldquo;Assigned Representative&rdquo;</figcaption></figure>
+        <figure class="shot"><img src="reg-03-country.png" alt="Country selection" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">reg-03-country.png</span></div><figcaption><b>Step 3:</b> Country selection &ldquo;Select Country&rdquo; / CSIRT Germany</figcaption></figure>
+        <figure class="shot"><img src="reg-04-eulogin.png" alt="EU Login" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">reg-04-eulogin.png</span></div><figcaption><b>Step 4:</b> EU Login &ldquo;Sign in to continue&rdquo;</figcaption></figure>
+        <figure class="shot"><img src="reg-05-personal.png" alt="Personal details" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">reg-05-personal.png</span></div><figcaption><b>Step 5:</b> Personal details</figcaption></figure>
+        <figure class="shot"><img src="reg-06-manufacturer.png" alt="Manufacturer details" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">reg-06-manufacturer.png</span></div><figcaption><b>Step 6:</b> Manufacturer details</figcaption></figure>
+        <figure class="shot"><img src="reg-08-association.png" alt="Association management" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">reg-08-association.png</span></div><figcaption><b>Step 8:</b> Settings / Association Management, status &ldquo;Unverified&rdquo;</figcaption></figure>
+        <figure class="shot"><img src="reg-10-dashboard.png" alt="Dashboard" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">reg-10-dashboard.png</span></div><figcaption><b>Step 10:</b> Dashboard after registration (with country flag)</figcaption></figure>
+        <figure class="shot"><img src="reg-11-greece.png" alt="Multi-country assignment" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">reg-11-greece.png</span></div><figcaption><b>Step 11:</b> Multi-country assignment (CSIRT Greece example)</figcaption></figure>
       </div>
 
     </div>
   </section>
 
-  <!-- ===================== PHASE 2: ERSTMELDUNG ===================== -->
+  <!-- ===================== PHASE 2: EARLY WARNING ===================== -->
   <section class="phase w24" id="w24">
     <div class="phead">
       <div class="pnum">2</div>
-      <h2>Erstmeldung &ndash; Early Warning</h2>
-      <span class="sub">Frist: binnen 24 h ab Kenntnis</span>
+      <h2>Early Warning</h2>
+      <span class="sub">Deadline: within 24 h of becoming aware</span>
     </div>
     <div class="pbody">
 
-      <h4 class="block">Ben&ouml;tigte Daten</h4>
+      <h4 class="block">Required data</h4>
       <table>
-        <thead><tr><th>Feld</th><th>Status</th><th>Hinweis</th></tr></thead>
+        <thead><tr><th>Field</th><th>Status</th><th>Note</th></tr></thead>
         <tbody>
-          <tr><td class="f">Art der Meldung (Incident / Vulnerability)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Blendet die jeweils passenden Felder ein</td></tr>
-          <tr><td class="f">Titel</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
-          <tr><td class="f">Zusammenfassung</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
-          <tr><td class="f">Hersteller</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Weitere Hersteller optional erg&auml;nzbar</td></tr>
-          <tr><td class="f">Mitgliedsstaaten mit Produktverf&uuml;gbarkeit</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Entscheidet, welche weiteren CSIRTs benachrichtigt werden</td></tr>
+          <tr><td class="f">Notification type (Incident / Vulnerability)</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Shows the matching fields for the chosen type</td></tr>
+          <tr><td class="f">Title</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h"></td></tr>
+          <tr><td class="f">Summary</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h"></td></tr>
+          <tr><td class="f">Manufacturer</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Additional manufacturers can be added</td></tr>
+          <tr><td class="f">Member States where product is available</td><td class="s"><span class="badge cond">Conditional</span></td><td class="h">Determines which further CSIRTs are notified; mandatory if known</td></tr>
+          <tr><td class="f">Incident suspected of unlawful or malicious acts (Incident only)</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Yes/No flag for incident-type notifications</td></tr>
           <tr><td class="f">CVSS Score</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
-          <tr><td class="f">Betroffenes Produkt (PwDE)</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Mehrere Produkte je Meldung m&ouml;glich</td></tr>
-          <tr><td class="f">Version des Produkts</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
-          <tr><td class="f">Weitere betroffene Produkte</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">&bdquo;Add another PwDE&ldquo;</td></tr>
+          <tr><td class="f">Affected product (PwDE)</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Multiple products per notification possible</td></tr>
+          <tr><td class="f">Product version</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
+          <tr><td class="f">Further affected products</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">&ldquo;Add another PwDE&rdquo;</td></tr>
+          <tr><td class="f">CVE ID / EUVD ID</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">If already assigned</td></tr>
         </tbody>
       </table>
 
       <div class="divider"></div>
 
-      <h4 class="block">Ablauf</h4>
+      <h4 class="block">Procedure</h4>
       <ol class="steps">
-        <li><b>Meldungstyp w&auml;hlen.</b> Je nach Auswahl Incident oder Vulnerability werden die passenden Felder angezeigt.</li>
-        <li><b>Mehrere Produkte.</b> Betrifft eine Schwachstelle mehrere Produkte oder Versionen, kann dies in einer einzigen Meldung erfasst werden.</li>
-        <li><b>Vertriebsl&auml;nder sorgf&auml;ltig w&auml;hlen.</b> Diese Auswahl ist entscheidend f&uuml;r die Benachrichtigung weiterer nationaler CSIRTs.</li>
-        <li><b>Entwurf speichern.</b> Meldungen k&ouml;nnen als Draft zwischengespeichert werden.</li>
-        <li><b>&Uuml;bermitteln.</b> Nach &bdquo;Submit&ldquo; werden Meldung und Status im Dashboard angezeigt; das nationale CSIRT erh&auml;lt die Erstmeldung zur Pr&uuml;fung und ggf. Freigabe.</li>
-        <li><b>Anpassbar.</b> Nach der &Uuml;bermittlung k&ouml;nnen Meldungen im Rahmen ihres Status jederzeit angepasst werden; das System zeichnet &Auml;nderungen auf.</li>
+        <li><b>Select notification type.</b> Depending on the choice (Incident or Vulnerability), the matching fields are shown.</li>
+        <li><b>Multiple products.</b> If one vulnerability affects several products or versions, they can be captured in a single notification.</li>
+        <li><b>Select countries of distribution carefully.</b> This selection determines which additional national CSIRTs are notified.</li>
+        <li><b>Save draft.</b> Notifications can be saved as drafts.</li>
+        <li><b>Submit.</b> After &ldquo;Submit&rdquo;, the notification and its status are shown on the dashboard; the national CSIRT receives the Early Warning for review and, where applicable, release.</li>
+        <li><b>Editable.</b> After submission, notifications can be adjusted at any time within their current status; the system records all changes.</li>
       </ol>
 
       <div class="note">
-        <b>Fristerinnerung:</b> 48 Stunden nach der Erstmeldung zeigt das Dashboard einen Alarm an, dass die Folgemeldung (sp&auml;testens nach 72 h) noch aussteht. Die Folgen einer verpassten Folgemeldung sind derzeit noch nicht bekannt.
+        <b>Deadline reminder:</b> 48 hours after the Early Warning, the dashboard displays an alert that the 72-hour notification is still outstanding. The consequences of a missed 72-hour notification are not yet known.
       </div>
 
       <div class="shots">
-        <figure class="shot"><img src="ew-13-form.png" alt="Meldungsformular" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">ew-13-form.png</span></div><figcaption><b>Schritt 13:</b> Formular &bdquo;What do you want to submit?&ldquo; mit Titel, Zusammenfassung, Hersteller</figcaption></figure>
-        <figure class="shot"><img src="ew-16-cvss.png" alt="CVSS und Produktfelder" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">ew-16-cvss.png</span></div><figcaption><b>Schritt 16&ndash;19:</b> CVSS Score, Impacted PwDE, Version, &bdquo;Save draft&ldquo;</figcaption></figure>
-        <figure class="shot"><img src="ew-20-dashboard.png" alt="Dashboard Early Warning" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">ew-20-dashboard.png</span></div><figcaption><b>Schritt 20:</b> Dashboard mit Status &bdquo;Early Warning&ldquo;</figcaption></figure>
-        <figure class="shot"><img src="ew-23-edit.png" alt="Bearbeitungsansicht" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">ew-23-edit.png</span></div><figcaption><b>Schritt 23:</b> Bearbeitungsansicht / &bdquo;Submit Early Warning&ldquo;</figcaption></figure>
+        <figure class="shot"><img src="ew-13-form.png" alt="Notification form" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">ew-13-form.png</span></div><figcaption><b>Step 13:</b> Form &ldquo;What do you want to submit?&rdquo; with title, summary, manufacturer</figcaption></figure>
+        <figure class="shot"><img src="ew-16-cvss.png" alt="CVSS and product fields" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">ew-16-cvss.png</span></div><figcaption><b>Steps 16&ndash;19:</b> CVSS Score, Impacted PwDE, Version, &ldquo;Save draft&rdquo;</figcaption></figure>
+        <figure class="shot"><img src="ew-20-dashboard.png" alt="Dashboard Early Warning" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">ew-20-dashboard.png</span></div><figcaption><b>Step 20:</b> Dashboard with status &ldquo;Early Warning&rdquo;</figcaption></figure>
+        <figure class="shot"><img src="ew-23-edit.png" alt="Edit view" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">ew-23-edit.png</span></div><figcaption><b>Step 23:</b> Edit view / &ldquo;Submit Early Warning&rdquo;</figcaption></figure>
       </div>
 
     </div>
   </section>
 
-  <!-- ===================== PHASE 3: FOLGEMELDUNG ===================== -->
+  <!-- ===================== PHASE 3: 72H NOTIFICATION ===================== -->
   <section class="phase w72" id="w72">
     <div class="phead">
       <div class="pnum">3</div>
-      <h2>Folgemeldung &ndash; 72h Notification</h2>
-      <span class="sub">Frist: binnen 72 h ab Kenntnis</span>
+      <h2>72h Notification</h2>
+      <span class="sub">Deadline: within 72 h of becoming aware</span>
     </div>
     <div class="pbody">
 
-      <h4 class="block">Ben&ouml;tigte Daten</h4>
+      <h4 class="block">Required data</h4>
       <table>
-        <thead><tr><th>Feld</th><th>Status</th><th>Hinweis</th></tr></thead>
+        <thead><tr><th>Field</th><th>Status</th><th>Note</th></tr></thead>
         <tbody>
-          <tr><td class="f">Art der aktiv ausgenutzten Schwachstelle</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
-          <tr><td class="f">Abhilfema&szlig;nahmen</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Weitere Ma&szlig;nahmen optional erg&auml;nzbar</td></tr>
-          <tr><td class="f">Datum der Verf&uuml;gbarkeit der Abhilfema&szlig;nahmen</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Formal Pflicht; nach 72 h ggf. noch nicht verf&uuml;gbar</td></tr>
-          <tr><td class="f">Umst&auml;nde f&uuml;r Nichtver&ouml;ffentlichung (PEC)</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Auswahlliste, siehe unten</td></tr>
-          <tr><td class="f">Weitere relevante Informationen</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
+          <tr><td class="f">General nature of the vulnerability (AEV) / nature of the incident</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h"></td></tr>
+          <tr><td class="f">General nature of the exploit (vulnerability)</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h"></td></tr>
+          <tr><td class="f">Corrective or mitigating measures taken</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Additional measures can be added</td></tr>
+          <tr><td class="f">Corrective or mitigating measures that users can take</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h"></td></tr>
+          <tr><td class="f">Date and time the incident was detected / occurred (incident)</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Incident only</td></tr>
+          <tr><td class="f">Initial assessment of the incident</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Incident only</td></tr>
+          <tr><td class="f">Date when corrective measure has been available</td><td class="s"><span class="badge cond">Conditional</span></td><td class="h">Mandatory if available; may not yet be known at 72 h</td></tr>
+          <tr><td class="f">Considered sensitivity of information</td><td class="s"><span class="badge cond">Conditional</span></td><td class="h">Mandatory if such information available</td></tr>
+          <tr><td class="f">Circumstances for non-dissemination (PEC)</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Selection list, see below</td></tr>
+          <tr><td class="f">Further relevant information</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
         </tbody>
       </table>
 
       <div class="divider"></div>
 
-      <h4 class="block">Ablauf</h4>
+      <h4 class="block">Procedure</h4>
       <ol class="steps">
-        <li><b>Meldung fortf&uuml;hren.</b> Die Folgemeldung wird in gleicher Weise wie die Erstmeldung erg&auml;nzt.</li>
-        <li><b>Nichtver&ouml;ffentlichung (optional).</b> Der Hersteller kann Gr&uuml;nde gegen eine Weiterleitung an andere nationale CSIRTs angeben (Particular Exceptional Circumstances, PEC).</li>
-        <li><b>Pr&uuml;fung durch das CSIRT.</b> Werden Gr&uuml;nde angegeben, pr&uuml;ft das nationale CSIRT die Weitergabe und h&auml;lt die Meldung ggf. zur&uuml;ck. Basis ist der Delegated Act (EU) 2026/881.</li>
+        <li><b>Continue the notification.</b> The 72-hour notification is added in the same way as the Early Warning.</li>
+        <li><b>Non-dissemination (optional).</b> The manufacturer can state reasons against forwarding to other national CSIRTs (Particularly Exceptional Circumstances, PEC).</li>
+        <li><b>CSIRT review.</b> If reasons are given, the national CSIRT reviews dissemination and may withhold the notification. The legal basis is Delegated Regulation (EU) C(2025) 8407 of 11 December 2025.</li>
+        <li><b>Partial information to ENISA.</b> Where the manufacturer marks at least one of the conditions of Article 16(2)(a)&ndash;(c) CRA, ENISA only receives partial information until the receiving CSIRT discloses the full notification.</li>
       </ol>
 
       <div class="note">
-        <b>PEC-Auswahlliste (optional):</b> aktiv ausgenutzt durch einen b&ouml;swilligen Akteur &middot; Ausnutzung erfolgte nur im Mitgliedsstaat des zust&auml;ndigen CSIRT &middot; sofortige Weiterverbreitung w&uuml;rde wesentlichen Interessen des Mitgliedstaats zuwiderlaufen &middot; die gemeldete Schwachstelle stellt durch Weiterverbreitung ein unmittelbares hohes Cybersicherheitsrisiko dar.
+        <b>PEC selection list (optional):</b> actively exploited by a malicious actor &middot; exploitation occurred only in the Member State of the responsible CSIRT &middot; immediate dissemination would be contrary to essential interests of the Member State &middot; the reported vulnerability poses an immediate high cybersecurity risk if disseminated.
       </div>
 
       <div class="shots">
-        <figure class="shot"><img src="n72-25-aev.png" alt="Nature of AEV" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">n72-25-aev.png</span></div><figcaption><b>Schritt 25:</b> Nature of AEV, Corrective measures, Verf&uuml;gbarkeitsdatum</figcaption></figure>
-        <figure class="shot"><img src="n72-26-pec.png" alt="Reason for non dissemination" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">n72-26-pec.png</span></div><figcaption><b>Schritt 26:</b> &bdquo;Reason for non dissemination&ldquo; (PEC-Auswahlliste)</figcaption></figure>
+        <figure class="shot"><img src="n72-25-aev.png" alt="Nature of AEV" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">n72-25-aev.png</span></div><figcaption><b>Step 25:</b> Nature of AEV, corrective measures, availability date</figcaption></figure>
+        <figure class="shot"><img src="n72-26-pec.png" alt="Reason for non dissemination" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">n72-26-pec.png</span></div><figcaption><b>Step 26:</b> &ldquo;Reason for non dissemination&rdquo; (PEC selection list)</figcaption></figure>
       </div>
 
     </div>
   </section>
 
-  <!-- ===================== PHASE 4: ABSCHLUSSMELDUNG ===================== -->
+  <!-- ===================== PHASE 4: FINAL REPORT ===================== -->
   <section class="phase fin" id="fin">
     <div class="phead">
       <div class="pnum">4</div>
-      <h2>Abschlussmeldung &ndash; Final Report</h2>
-      <span class="sub">Frist: 14 Tage (Schwachstelle) / 1 Monat (Vorfall)</span>
+      <h2>Final Report</h2>
+      <span class="sub">Deadline: 14 days (vulnerability) / 1 month (incident)</span>
     </div>
     <div class="pbody">
 
-      <h4 class="block">Ben&ouml;tigte Daten</h4>
+      <h4 class="block">Required data</h4>
       <table>
-        <thead><tr><th>Feld</th><th>Status</th><th>Hinweis</th></tr></thead>
+        <thead><tr><th>Field</th><th>Status</th><th>Note</th></tr></thead>
         <tbody>
-          <tr><td class="f">Detaillierte Beschreibung</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
-          <tr><td class="f">B&ouml;swilliger Akteur (AEV)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Akteur, der die AEV ausgenutzt hat oder ausnutzt</td></tr>
-          <tr><td class="f">Additional Notes</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Austausch mit dem nationalen CSIRT</td></tr>
+          <tr><td class="f">Detailed description (incl. severity and impact)</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Full description of the vulnerability or incident</td></tr>
+          <tr><td class="f">Date when corrective measure has been available</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Vulnerability: triggers the 14-day deadline</td></tr>
+          <tr><td class="f">Details about the security update / corrective measures</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Vulnerability</td></tr>
+          <tr><td class="f">Type of threat or root cause (incident)</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Incident</td></tr>
+          <tr><td class="f">Applied and ongoing mitigation measures</td><td class="s"><span class="badge pflicht">Mandatory</span></td><td class="h">Incident</td></tr>
+          <tr><td class="f">Malicious actor (AEV)</td><td class="s"><span class="badge cond">Conditional</span></td><td class="h">Mandatory if such information is available</td></tr>
+          <tr><td class="f">Additional notes</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Exchange channel with the national CSIRT</td></tr>
         </tbody>
       </table>
 
       <div class="divider"></div>
 
-      <h4 class="block">Ablauf</h4>
+      <h4 class="block">Procedure</h4>
       <ol class="steps">
-        <li><b>Restliche Angaben erg&auml;nzen</b> und innerhalb von 14 Tagen (Schwachstelle) bzw. einem Monat (Vorfall) &uuml;bermitteln.</li>
-        <li><b>Additional Notes</b> dienen dem Austausch mit dem nationalen CSIRT.</li>
-        <li><b>Abschluss.</b> Mit der &Uuml;bermittlung der Abschlussmeldung ist die Meldung geschlossen; &Auml;nderungen sind danach nicht mehr m&ouml;glich (Best&auml;tigungsdialog &bdquo;Are you sure?&ldquo;).</li>
+        <li><b>Complete the remaining fields</b> and submit within 14 days (vulnerability) or one month (incident).</li>
+        <li><b>Additional notes</b> serve as an exchange channel with the national CSIRT.</li>
+        <li><b>Closing.</b> Once the Final Report is submitted, the notification is closed; subsequent changes are no longer possible (confirmation dialog &ldquo;Are you sure?&rdquo;).</li>
       </ol>
 
       <div class="shots">
-        <figure class="shot"><img src="fin-28-detail.png" alt="Detailbeschreibung" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">fin-28-detail.png</span></div><figcaption><b>Schritt 28:</b> Detailed description und Malicious actor</figcaption></figure>
-        <figure class="shot"><img src="fin-31-confirm.png" alt="Best&auml;tigungsdialog" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">fin-31-confirm.png</span></div><figcaption><b>Schritt 31:</b> Best&auml;tigungsdialog &bdquo;Are you sure?&ldquo;</figcaption></figure>
+        <figure class="shot"><img src="fin-28-detail.png" alt="Detailed description" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">fin-28-detail.png</span></div><figcaption><b>Step 28:</b> Detailed description and malicious actor</figcaption></figure>
+        <figure class="shot"><img src="fin-31-confirm.png" alt="Confirmation dialog" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot missing<span class="fn">fin-31-confirm.png</span></div><figcaption><b>Step 31:</b> Confirmation dialog &ldquo;Are you sure?&rdquo;</figcaption></figure>
       </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="phase faq" id="faq">
+    <div class="phead">
+      <div class="pnum">?</div>
+      <h2>ENISA FAQ on the CRA SRP</h2>
+      <span class="sub">Source: ENISA &middot; June 2026</span>
+    </div>
+    <div class="pbody">
+
+      <p style="margin:0 0 14px;color:var(--muted);font-size:13.5px;">Condensed Q&amp;A based on ENISA&rsquo;s official FAQ document on the Single Reporting Platform. The original references CRA Articles 14&ndash;17 and Delegated Regulation C(2025) 8407.</p>
+
+      <details class="faq"><summary>What is the CRA Single Reporting Platform (SRP)?</summary>
+        <div class="ans">
+          <p>A centralized electronic system that simplifies reporting obligations for manufacturers and open-source software stewards under the Cyber Resilience Act. It is a &ldquo;single entry point&rdquo; that lets manufacturers report actively exploited vulnerabilities and severe incidents once, instead of notifying multiple national authorities separately.</p>
+          <p>Submissions are routed simultaneously to the CSIRT designated as coordinator (based on the manufacturer&rsquo;s main establishment, see CRA Article 14(7)) and to ENISA. The CSIRT then disseminates the information to other relevant CSIRTs in Member States where the product is available, and to market surveillance authorities as needed.</p>
+        </div>
+      </details>
+
+      <details class="faq"><summary>What is the legal basis?</summary>
+        <div class="ans">
+          <p>The Cyber Resilience Act, in particular Article 16(1): a single reporting platform is established by ENISA, which manages and maintains its day-to-day operations. CRA Articles 14&ndash;17 set out the reporting ecosystem.</p>
+          <p>In December 2025 the European Commission published a Delegated Regulation (C(2025) 8407) specifying the conditions for delaying dissemination of notifications.</p>
+        </div>
+      </details>
+
+      <details class="faq"><summary>Who runs the platform?</summary>
+        <div class="ans"><p>ENISA establishes, manages and maintains the day-to-day operations of the CRA SRP and ensures its security through appropriate technical and organizational measures.</p></div>
+      </details>
+
+      <details class="faq"><summary>When will the platform be operational?</summary>
+        <div class="ans"><p>Scheduled to be operational by <b>11 September 2026</b>, the date the mandatory reporting obligations enter into application (CRA Article 14). A testing period precedes this date.</p></div>
+      </details>
+
+      <details class="faq"><summary>What must be reported?</summary>
+        <div class="ans">
+          <p>Two types of occurrences:</p>
+          <ul>
+            <li><b>Actively Exploited Vulnerabilities (AEV)</b> &ndash; vulnerabilities for which there is reliable evidence of exploitation by a malicious actor.</li>
+            <li><b>Severe Incidents</b> &ndash; incidents with severe impact on the security of the product with digital elements (severity criteria in CRA Article 14(5)).</li>
+          </ul>
+          <p>Open-source software stewards are subject to the obligation under CRA Article 24(3).</p>
+        </div>
+      </details>
+
+      <details class="faq"><summary>What else can be reported (voluntary)?</summary>
+        <div class="ans">
+          <p>After 11 September 2026, the platform will also offer voluntary reporting. Any natural or legal person may notify on a voluntary basis:</p>
+          <ul>
+            <li>Vulnerabilities contained in a product with digital elements</li>
+            <li>Cyber threats that could affect the risk profile of a product</li>
+            <li>Incidents having an impact on the security of a product</li>
+            <li>Near misses that could have resulted in an incident</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq"><summary>What are the reporting deadlines?</summary>
+        <div class="ans">
+          <p>The clock starts the moment the manufacturer becomes aware of the active exploitation or the incident.</p>
+          <ul>
+            <li><b>Early Warning:</b> without undue delay, in any case within <b>24 hours</b>.</li>
+            <li><b>Vulnerability / Incident Notification:</b> within <b>72 hours</b>, with general information and an initial assessment.</li>
+            <li><b>Final Report:</b> for vulnerabilities &ndash; no later than <b>14 days</b> after a corrective measure is available; for severe incidents &ndash; within <b>1 month</b> of the initial notification.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq"><summary>How does the platform operate?</summary>
+        <div class="ans"><p>Manufacturers submit notifications electronically. The platform routes them simultaneously to the designated CSIRT coordinator and to ENISA. The CSIRT disseminates the information without delay to other relevant CSIRTs and to market surveillance authorities as needed. For sensitive reports, dissemination may be delayed on security grounds.</p></div>
+      </details>
+
+      <details class="faq"><summary>How is the term &ldquo;actively exploited vulnerability&rdquo; interpreted?</summary>
+        <div class="ans"><p>See subsection 5.1 of the European Commission&rsquo;s &ldquo;FAQs on the CRA Implementation&rdquo;: <i>How can a manufacturer become aware of an actively exploited vulnerability or a severe incident?</i> The Commission&rsquo;s draft guidance (section 9.1) provides further explanations on when a manufacturer is regarded as having become aware.</p></div>
+      </details>
+
+      <details class="faq"><summary>Do I have to report vulnerabilities in products placed on the market before the CRA applies?</summary>
+        <div class="ans"><p>See subsection 5.3 of the Commission&rsquo;s &ldquo;FAQs on the CRA Implementation&rdquo;.</p></div>
+      </details>
+
+      <details class="faq"><summary>Do I have to report vulnerabilities that were actively exploited before the CRA applies?</summary>
+        <div class="ans"><p>The obligation applies once the manufacturer becomes aware of them under the CRA. It does <i>not</i> extend to vulnerabilities whose active exploitation the manufacturer was already aware of before the reporting obligation applied.</p></div>
+      </details>
+
+      <details class="faq"><summary>If the vulnerability is in a third-party component, am I still obliged to notify?</summary>
+        <div class="ans"><p>See section 5.4 of the Commission&rsquo;s FAQ &ndash; <i>If an actively exploited vulnerability is contained in a third-party component, are all manufacturers integrating that component required to notify it?</i></p></div>
+      </details>
+
+      <details class="faq"><summary>Can the notification workflow be automated (API)?</summary>
+        <div class="ans"><p>Organizations may automate reporting workflows and integrate the requirements into their systems. <b>No APIs will be provided at this stage.</b></p></div>
+      </details>
+
+      <details class="faq"><summary>What are the data fields in the reporting template?</summary>
+        <div class="ans">
+          <p>The ENISA FAQ lists common, vulnerability-specific, and incident-specific fields per stage (24h / 72h / Final), classified as:</p>
+          <ul>
+            <li><b>A</b> &ndash; automated (not visible to submitter)</li>
+            <li><b>X</b> &ndash; obligatory</li>
+            <li><b>C</b> &ndash; copied from previous step by default, or updated</li>
+            <li><b>O</b> &ndash; optional</li>
+            <li><b>I</b> &ndash; obligatory if such information is available</li>
+          </ul>
+          <p>Common fields: notification type, notification level, reporting times, reporter, manufacturer/steward name, product, product type, product category, Member States where product is available, title. Vulnerability fields: CVE ID, EUVD ID, general nature, exploit nature, corrective measures, sensitivity, availability date, full description, severity, impact, malicious actor, security update details. Incident fields: suspected malicious acts, nature, detection/occurrence date and time, initial assessment, corrective measures, sensitivity, severity, impact, root cause, ongoing mitigations.</p>
+        </div>
+      </details>
+
+      <details class="faq"><summary>Will training be provided?</summary>
+        <div class="ans"><p>Yes. Materials supporting training and dry-run exercises will be available in June 2026.</p></div>
+      </details>
+
+      <details class="faq"><summary>How do I know which national CSIRT to report to?</summary>
+        <div class="ans"><p>Determined by your main location of establishment (or that of your authorised representative, if you are not established in the EU). CRA Article 14(7) provides the detailed rules. ENISA will publish the list of national CSIRTs designated as coordinators at a later stage.</p></div>
+      </details>
+
+      <details class="faq"><summary>Who is responsible for what?</summary>
+        <div class="ans">
+          <ul>
+            <li><b>Manufacturers:</b> submit timely notifications and comply with other CRA obligations.</li>
+            <li><b>Open-source software stewards:</b> submit timely notifications under Article 24(3).</li>
+            <li><b>ENISA:</b> manages the platform, processes reports, prepares biennial trend reports, operates a helpdesk (especially for SMEs), and discloses fixed vulnerabilities to the European Vulnerability Database.</li>
+            <li><b>CSIRTs designated as coordinators:</b> receive and assess reports, decide on dissemination delays, inform market surveillance authorities and the public if necessary, and provide helpdesk support alongside ENISA.</li>
+            <li><b>European Commission:</b> adopts delegated and implementing acts, evaluates platform effectiveness, supports coordination of enforcement.</li>
+            <li><b>Market surveillance authorities:</b> receive disseminated information and enforce compliance.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq"><summary>Who receives the reports?</summary>
+        <div class="ans">
+          <p>As a general rule, on submission a report is notified simultaneously to:</p>
+          <ul>
+            <li>The CSIRT designated as coordinator in the Member State where the manufacturer is established.</li>
+            <li>ENISA (unless particularly exceptional circumstances apply).</li>
+          </ul>
+          <p>The receiving CSIRT then disseminates it without delay to other relevant CSIRTs across the EU via the platform.</p>
+        </div>
+      </details>
+
+      <details class="faq"><summary>Can dissemination of a report be delayed or withheld?</summary>
+        <div class="ans">
+          <p>Yes. In <b>particularly exceptional circumstances</b>, the receiving CSIRT may delay or withhold dissemination &ndash; strictly limited to cases justified on security grounds (e.g. where spreading the information would pose an even greater security risk).</p>
+          <p>Delegated Regulation C(2025) 8407 of 11 December 2025 further specifies the conditions. If the manufacturer marks at least one of the conditions in Article 16(2)(a)&ndash;(c) CRA in the 72-hour notification, ENISA only receives partial information until the receiving CSIRT discloses the full notification.</p>
+        </div>
+      </details>
+
+      <details class="faq"><summary>How is the platform secured?</summary>
+        <div class="ans"><p>ENISA must take appropriate measures to manage risks to the platform&rsquo;s security and notify the CSIRTs Network and the Commission of any security incidents affecting the platform itself. Before launch, the platform undergoes user and security testing and is periodically re-checked.</p></div>
+      </details>
+
+      <details class="faq"><summary>How is the CSIRTs Network involved?</summary>
+        <div class="ans"><p>Under CRA Article 16, ENISA engages the CSIRTs Network in the development and future testing of the CRA SRP.</p></div>
+      </details>
 
     </div>
   </section>
 
   <footer class="doc">
-    Rechtsgrundlage: Cyber Resilience Act, Artikel 14&ndash;17 &middot; Single Reporting Platform betrieben durch ENISA &middot; geplanter Wirkbetrieb: 11.09.2026
+    Legal basis: Cyber Resilience Act, Articles 14&ndash;17 &middot; Single Reporting Platform operated by ENISA &middot; planned go-live: 11 September 2026
   </footer>
 
 </div>
