@@ -1,0 +1,372 @@
+<!--
+  ENISA Single Reporting Platform - Hersteller-Anleitung
+  ============================================================
+  DEPLOYMENT (Netlify):
+  index.html zusammen mit den Screenshot-PNGs in EINEN Ordner legen
+  und den Ordner per Drag-and-drop in Netlify deployen.
+
+  ERWARTETE BILDDATEIEN (gleicher Ordner wie index.html):
+    reg-02-usertype.png       reg-08-association.png
+    reg-03-country.png        reg-10-dashboard.png
+    reg-04-eulogin.png        reg-11-greece.png
+    reg-05-personal.png
+    reg-06-manufacturer.png
+  Noch offen (24h / 72h / Final), Platzhalter erwarten:
+    ew-13-form.png   ew-16-cvss.png   ew-20-dashboard.png   ew-23-edit.png
+    n72-25-aev.png   n72-26-pec.png
+    fin-28-detail.png   fin-31-confirm.png
+
+  Fehlt eine Datei, zeigt der Platzhalter automatisch den erwarteten Namen.
+-->
+<style>
+  :root{
+    --ink:#1c2430; --muted:#5b6573; --line:#e3e7ee; --bg:#f6f8fb;
+    --reg:#5b5fc7; --reg-bg:#eef0fb;
+    --w24:#d97706; --w24-bg:#fdf3e7;
+    --w72:#0e6fb8; --w72-bg:#e8f3fb;
+    --fin:#178a55; --fin-bg:#e8f6ee;
+    --pflicht:#b42318; --pflicht-bg:#fdeceb;
+    --opt:#475467; --opt-bg:#eef1f5;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;font-size:15px;}
+  .wrap{max-width:1000px;margin:0 auto;padding:28px 22px 80px;}
+
+  header.doc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 28px;margin-bottom:20px;}
+  header.doc .kicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;}
+  header.doc h1{font-size:26px;margin:6px 0 8px;}
+  header.doc p{margin:0;color:var(--muted);max-width:70ch;}
+  .stand{display:inline-block;margin-top:12px;background:var(--bg);border:1px solid var(--line);
+    border-radius:999px;padding:4px 12px;font-size:12.5px;color:var(--muted);}
+
+  .legend{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:18px 0 4px;font-size:13px;}
+  .legend .lbl{color:var(--muted);}
+  .badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;border:1px solid transparent;}
+  .badge.pflicht{color:var(--pflicht);background:var(--pflicht-bg);border-color:#f3c7c3;}
+  .badge.opt{color:var(--opt);background:var(--opt-bg);border-color:#d9dee6;}
+
+  .overview{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 8px;}
+  .ov{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;border-top:4px solid;text-decoration:none;color:inherit;display:block;transition:transform .12s ease,box-shadow .12s ease;}
+  .ov:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(20,30,50,.08);}
+  .ov .ph{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);}
+  .ov h3{margin:4px 0 8px;font-size:16px;}
+  .ov .frist{font-size:12.5px;color:var(--muted);}
+  .ov.reg{border-color:var(--reg)} .ov.w24{border-color:var(--w24)}
+  .ov.w72{border-color:var(--w72)} .ov.fin{border-color:var(--fin)}
+
+  .note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--w24);
+    border-radius:10px;padding:12px 14px;margin:16px 0;font-size:13.5px;color:var(--muted);}
+  .note b{color:var(--ink)}
+
+  section.phase{background:#fff;border:1px solid var(--line);border-radius:14px;margin:22px 0;overflow:hidden;}
+  .phead{padding:16px 22px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--line);}
+  .pnum{flex:0 0 auto;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:15px;}
+  .phead h2{margin:0;font-size:19px;}
+  .phead .sub{margin-left:auto;font-size:12.5px;font-weight:600;border-radius:999px;padding:4px 12px;}
+  .phase.reg .pnum{background:var(--reg)} .phase.reg .sub{background:var(--reg-bg);color:var(--reg)}
+  .phase.w24 .pnum{background:var(--w24)} .phase.w24 .sub{background:var(--w24-bg);color:var(--w24)}
+  .phase.w72 .pnum{background:var(--w72)} .phase.w72 .sub{background:var(--w72-bg);color:var(--w72)}
+  .phase.fin .pnum{background:var(--fin)} .phase.fin .sub{background:var(--fin-bg);color:var(--fin)}
+
+  .pbody{padding:20px 22px;}
+  h4.block{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;font-weight:700;}
+
+  table{width:100%;border-collapse:collapse;font-size:14px;margin:0 0 6px;}
+  th{text-align:left;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);
+    padding:8px 10px;border-bottom:2px solid var(--line);font-weight:700;}
+  td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+  td.f{font-weight:600;width:40%;}
+  td.s{width:120px;white-space:nowrap;}
+  td.h{color:var(--muted);font-size:13px;}
+  tr:last-child td{border-bottom:none;}
+  .grp td{background:var(--bg);font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);}
+
+  ol.steps{margin:6px 0 0;padding-left:20px;}
+  ol.steps li{margin:0 0 9px;font-size:14px;}
+  ol.steps li b{color:var(--ink)}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:1px 6px;}
+
+  .shots{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px;}
+  figure.shot{margin:0;border:1px solid var(--line);border-radius:10px;background:#fff;display:flex;flex-direction:column;overflow:hidden;}
+  figure.shot img{width:100%;height:auto;display:block;cursor:zoom-in;background:#fff;}
+  figure.shot .ph-mark{display:none;min-height:140px;align-items:center;justify-content:center;color:#90a0b5;font-size:12.5px;font-weight:600;text-align:center;padding:18px 12px;
+    background:repeating-linear-gradient(45deg,#fafbfd,#fafbfd 10px,#f2f5f9 10px,#f2f5f9 20px);}
+  figure.shot .ph-mark .fn{display:block;margin-top:6px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:#7a8aa0;}
+  figure.shot.missing{border:2px dashed #c7cfdb;}
+  figure.shot.missing img{display:none;}
+  figure.shot.missing .ph-mark{display:flex;}
+  figure.shot figcaption{font-size:12.5px;color:var(--muted);padding:8px 12px;background:#fff;border-top:1px solid var(--line);}
+  figure.shot figcaption b{color:var(--ink);font-weight:600;}
+
+  .divider{height:1px;background:var(--line);margin:20px 0;}
+  footer.doc{margin-top:30px;font-size:12px;color:var(--muted);text-align:center;}
+
+  /* Lightbox */
+  #lb{position:fixed;inset:0;background:rgba(15,22,34,.82);display:none;align-items:center;justify-content:center;z-index:999;padding:30px;cursor:zoom-out;}
+  #lb.open{display:flex;}
+  #lb img{max-width:95%;max-height:92%;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.4);}
+  #lb .cap{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#dde3ec;font-size:13px;}
+  #lb .x{position:absolute;top:18px;right:24px;color:#fff;font-size:30px;line-height:1;font-weight:300;cursor:pointer;}
+
+  @media (max-width:760px){
+    .overview{grid-template-columns:repeat(2,1fr)}
+    .shots{grid-template-columns:1fr}
+    td.f{width:auto}
+  }
+  @media print{
+    body{background:#fff;font-size:12px;}
+    .wrap{max-width:none;padding:0;}
+    .ov:hover{transform:none;box-shadow:none;}
+    section.phase{break-inside:avoid;border:1px solid #ccc;}
+    figure.shot{break-inside:avoid;}
+    figure.shot img{cursor:default;}
+    .ov{break-inside:avoid;}
+    #lb{display:none !important;}
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="doc">
+    <div class="kicker">Cyber Resilience Act &middot; Meldepflicht nach Artikel 14</div>
+    <h1>ENISA Single Reporting Platform &ndash; Anleitung f&uuml;r Hersteller</h1>
+    <p>Meldung von aktiv ausgenutzten Schwachstellen (AEV) und schweren Vorf&auml;llen &uuml;ber die zentrale Meldeplattform. Diese Anleitung f&uuml;hrt durch alle vier Phasen, von der Registrierung bis zur Abschlussmeldung, und zeigt je Schritt die ben&ouml;tigten Datenfelder.</p>
+    <span class="stand">Stand: 10.06.2026 &middot; Test-Portal, Felder noch nicht final</span>
+
+    <div class="legend">
+      <span class="lbl">Legende Datenfelder:</span>
+      <span class="badge pflicht">Pflicht</span>
+      <span class="badge opt">Optional</span>
+    </div>
+  </header>
+
+  <div class="overview">
+    <a class="ov reg" href="#reg"><div class="ph">Phase 1</div><h3>Registrierung</h3><div class="frist">Einmalig, vorab</div></a>
+    <a class="ov w24" href="#w24"><div class="ph">Phase 2</div><h3>Erstmeldung</h3><div class="frist">Early Warning &middot; binnen 24 h</div></a>
+    <a class="ov w72" href="#w72"><div class="ph">Phase 3</div><h3>Folgemeldung</h3><div class="frist">72 h Notification &middot; binnen 72 h</div></a>
+    <a class="ov fin" href="#fin"><div class="ph">Phase 4</div><h3>Abschlussmeldung</h3><div class="frist">Final Report &middot; 14 Tage / 1 Monat</div></a>
+  </div>
+
+  <div class="note">
+    <b>Hinweis zum Reifegrad:</b> Die Plattform befindet sich im Testbetrieb. Die Datenfelder sind derzeit noch nicht final und k&ouml;nnen sich &auml;ndern. Das Portal dient ausschlie&szlig;lich der Erf&uuml;llung der rechtlichen Meldepflicht nach Artikel 14 CRA, freiwillige Meldungen Dritter und eine Dateiablage sind zur Einf&uuml;hrung nicht vorgesehen.
+  </div>
+
+  <!-- ===================== PHASE 1: REGISTRIERUNG ===================== -->
+  <section class="phase reg" id="reg">
+    <div class="phead">
+      <div class="pnum">1</div>
+      <h2>Registrierung</h2>
+      <span class="sub">Einmalig, vorab</span>
+    </div>
+    <div class="pbody">
+
+      <h4 class="block">Ben&ouml;tigte Daten</h4>
+      <table>
+        <thead><tr><th>Feld</th><th>Status</th><th>Hinweis</th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="3">Pers&ouml;nliche Daten</td></tr>
+          <tr><td class="f">E-Mail-Adresse (EU-Login)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Pers&ouml;nlicher EU-Login-Account</td></tr>
+          <tr><td class="f">Vorname</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
+          <tr><td class="f">Nachname</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
+          <tr><td class="f">Land (CSIRT)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">F&uuml;r DE: CSIRT Germany</td></tr>
+          <tr><td class="f">Adresse</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
+          <tr><td class="f">E-Mail-Adresse (Empfang)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Muss nicht dem EU-Login entsprechen</td></tr>
+          <tr><td class="f">Telefonnummer</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
+          <tr class="grp"><td colspan="3">Daten des Herstellers</td></tr>
+          <tr><td class="f">Name des Herstellers</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Aktuell Freitextfeld</td></tr>
+          <tr><td class="f">Hersteller-CSIRT (Mitgliedsstaat)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Bestimmt zust&auml;ndiges nationales CSIRT</td></tr>
+          <tr><td class="f">Sektor</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
+          <tr><td class="f">Registration Number</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Bedeutung noch unklar, evtl. USt-ID f&uuml;r DE</td></tr>
+          <tr><td class="f">Adresse (Hersteller)</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
+        </tbody>
+      </table>
+
+      <div class="divider"></div>
+
+      <h4 class="block">Ablauf</h4>
+      <ol class="steps">
+        <li><b>Portal &ouml;ffnen.</b> Testbetrieb unter <span class="mono">portal.test-cra-srp.enisa.europa.eu</span>, Livebetrieb unter <span class="mono">crasrp.eu</span>. Portalsprache ist Englisch.</li>
+        <li><b>Benutzertyp w&auml;hlen.</b> Als Hersteller die Option &bdquo;Assigned Representative&ldquo; ausw&auml;hlen.</li>
+        <li><b>Nationalen Endpunkt w&auml;hlen.</b> Das zust&auml;ndige CSIRT festlegen, f&uuml;r ein deutsches Unternehmen &bdquo;CSIRT Germany&ldquo;.</li>
+        <li><b>Mit EU-Login anmelden.</b> Der pers&ouml;nliche Account wird sp&auml;ter dem Unternehmen als &bdquo;Authorized Representative&ldquo; zugeordnet.</li>
+        <li><b>Pers&ouml;nliche Daten eintragen</b> (Schritt 1 der Registrierung).</li>
+        <li><b>Hersteller zuordnen</b> (Schritt 2). Aktuell Freitextfelder; bis zu zwei Personen je Unternehmen. Die Zuordnung erfolgt vorl&auml;ufig und wird dem zust&auml;ndigen nationalen CSIRT weitergeleitet.</li>
+        <li><b>Auswahl des korrekten CSIRT</b> liegt beim Hersteller. Das Portal pr&uuml;ft dies nicht. Das gew&auml;hlte CSIRT wird bei k&uuml;nftigen Meldungen zuerst informiert.</li>
+        <li><b>Validierung durch das CSIRT.</b> Das CSIRT pr&uuml;ft die Zuordnung Person zu Hersteller (Art frei, z.&nbsp;B. telefonisch oder per E-Mail). Die BSI-Pr&auml;ferenz ist dem VDMA noch nicht bekannt, aber angefragt. Der Status ist in den Einstellungen einsehbar.</li>
+        <li><b>Meldef&auml;higkeit.</b> Die erfolgreiche &Uuml;bermittlung einer Meldung ist nicht von der erfolgreichen Validierung des Accounts abh&auml;ngig.</li>
+        <li><b>Dashboard.</b> Nach der Registrierung erscheint das Dashboard des nationalen CSIRT (erkennbar an der Flagge oben rechts).</li>
+        <li><b>Mehrere L&auml;nder.</b> Der gleiche Account kann Herstellern anderer EU-L&auml;nder zugeordnet werden, indem ein anderer nationaler Entrypoint gew&auml;hlt wird (Beispiel Griechenland). Die Validierung erfolgt dann durch das dortige CSIRT.</li>
+      </ol>
+
+      <div class="shots">
+        <figure class="shot"><img src="reg-02-usertype.png" alt="Benutzertyp-Auswahl" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-02-usertype.png</span></div><figcaption><b>Schritt 2:</b> Benutzertyp-Auswahl &bdquo;What User are you?&ldquo; mit &bdquo;Assigned Representative&ldquo;</figcaption></figure>
+        <figure class="shot"><img src="reg-03-country.png" alt="L&auml;nderauswahl" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-03-country.png</span></div><figcaption><b>Schritt 3:</b> L&auml;nderauswahl &bdquo;Select Country&ldquo; / CSIRT Germany</figcaption></figure>
+        <figure class="shot"><img src="reg-04-eulogin.png" alt="EU-Login Anmeldung" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-04-eulogin.png</span></div><figcaption><b>Schritt 4:</b> EU-Login Anmeldung &bdquo;Sign in to continue&ldquo;</figcaption></figure>
+        <figure class="shot"><img src="reg-05-personal.png" alt="Pers&ouml;nliche Daten" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-05-personal.png</span></div><figcaption><b>Schritt 5:</b> Pers&ouml;nliche Daten (Personal Details)</figcaption></figure>
+        <figure class="shot"><img src="reg-06-manufacturer.png" alt="Hersteller-Zuordnung" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-06-manufacturer.png</span></div><figcaption><b>Schritt 6:</b> Hersteller-Zuordnung (Manufacturer Details)</figcaption></figure>
+        <figure class="shot"><img src="reg-08-association.png" alt="Association Management" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-08-association.png</span></div><figcaption><b>Schritt 8:</b> Einstellungen / Association Management, Status &bdquo;Unverified&ldquo;</figcaption></figure>
+        <figure class="shot"><img src="reg-10-dashboard.png" alt="Dashboard" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-10-dashboard.png</span></div><figcaption><b>Schritt 10:</b> Dashboard nach Registrierung (mit L&auml;nderflagge)</figcaption></figure>
+        <figure class="shot"><img src="reg-11-greece.png" alt="Mehrl&auml;nder-Zuordnung" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">reg-11-greece.png</span></div><figcaption><b>Schritt 11:</b> Mehrl&auml;nder-Zuordnung (Beispiel CSIRT Greece)</figcaption></figure>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== PHASE 2: ERSTMELDUNG ===================== -->
+  <section class="phase w24" id="w24">
+    <div class="phead">
+      <div class="pnum">2</div>
+      <h2>Erstmeldung &ndash; Early Warning</h2>
+      <span class="sub">Frist: binnen 24 h ab Kenntnis</span>
+    </div>
+    <div class="pbody">
+
+      <h4 class="block">Ben&ouml;tigte Daten</h4>
+      <table>
+        <thead><tr><th>Feld</th><th>Status</th><th>Hinweis</th></tr></thead>
+        <tbody>
+          <tr><td class="f">Art der Meldung (Incident / Vulnerability)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Blendet die jeweils passenden Felder ein</td></tr>
+          <tr><td class="f">Titel</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
+          <tr><td class="f">Zusammenfassung</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
+          <tr><td class="f">Hersteller</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Weitere Hersteller optional erg&auml;nzbar</td></tr>
+          <tr><td class="f">Mitgliedsstaaten mit Produktverf&uuml;gbarkeit</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Entscheidet, welche weiteren CSIRTs benachrichtigt werden</td></tr>
+          <tr><td class="f">CVSS Score</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
+          <tr><td class="f">Betroffenes Produkt (PwDE)</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Mehrere Produkte je Meldung m&ouml;glich</td></tr>
+          <tr><td class="f">Version des Produkts</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
+          <tr><td class="f">Weitere betroffene Produkte</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">&bdquo;Add another PwDE&ldquo;</td></tr>
+        </tbody>
+      </table>
+
+      <div class="divider"></div>
+
+      <h4 class="block">Ablauf</h4>
+      <ol class="steps">
+        <li><b>Meldungstyp w&auml;hlen.</b> Je nach Auswahl Incident oder Vulnerability werden die passenden Felder angezeigt.</li>
+        <li><b>Mehrere Produkte.</b> Betrifft eine Schwachstelle mehrere Produkte oder Versionen, kann dies in einer einzigen Meldung erfasst werden.</li>
+        <li><b>Vertriebsl&auml;nder sorgf&auml;ltig w&auml;hlen.</b> Diese Auswahl ist entscheidend f&uuml;r die Benachrichtigung weiterer nationaler CSIRTs.</li>
+        <li><b>Entwurf speichern.</b> Meldungen k&ouml;nnen als Draft zwischengespeichert werden.</li>
+        <li><b>&Uuml;bermitteln.</b> Nach &bdquo;Submit&ldquo; werden Meldung und Status im Dashboard angezeigt; das nationale CSIRT erh&auml;lt die Erstmeldung zur Pr&uuml;fung und ggf. Freigabe.</li>
+        <li><b>Anpassbar.</b> Nach der &Uuml;bermittlung k&ouml;nnen Meldungen im Rahmen ihres Status jederzeit angepasst werden; das System zeichnet &Auml;nderungen auf.</li>
+      </ol>
+
+      <div class="note">
+        <b>Fristerinnerung:</b> 48 Stunden nach der Erstmeldung zeigt das Dashboard einen Alarm an, dass die Folgemeldung (sp&auml;testens nach 72 h) noch aussteht. Die Folgen einer verpassten Folgemeldung sind derzeit noch nicht bekannt.
+      </div>
+
+      <div class="shots">
+        <figure class="shot"><img src="ew-13-form.png" alt="Meldungsformular" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">ew-13-form.png</span></div><figcaption><b>Schritt 13:</b> Formular &bdquo;What do you want to submit?&ldquo; mit Titel, Zusammenfassung, Hersteller</figcaption></figure>
+        <figure class="shot"><img src="ew-16-cvss.png" alt="CVSS und Produktfelder" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">ew-16-cvss.png</span></div><figcaption><b>Schritt 16&ndash;19:</b> CVSS Score, Impacted PwDE, Version, &bdquo;Save draft&ldquo;</figcaption></figure>
+        <figure class="shot"><img src="ew-20-dashboard.png" alt="Dashboard Early Warning" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">ew-20-dashboard.png</span></div><figcaption><b>Schritt 20:</b> Dashboard mit Status &bdquo;Early Warning&ldquo;</figcaption></figure>
+        <figure class="shot"><img src="ew-23-edit.png" alt="Bearbeitungsansicht" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">ew-23-edit.png</span></div><figcaption><b>Schritt 23:</b> Bearbeitungsansicht / &bdquo;Submit Early Warning&ldquo;</figcaption></figure>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== PHASE 3: FOLGEMELDUNG ===================== -->
+  <section class="phase w72" id="w72">
+    <div class="phead">
+      <div class="pnum">3</div>
+      <h2>Folgemeldung &ndash; 72h Notification</h2>
+      <span class="sub">Frist: binnen 72 h ab Kenntnis</span>
+    </div>
+    <div class="pbody">
+
+      <h4 class="block">Ben&ouml;tigte Daten</h4>
+      <table>
+        <thead><tr><th>Feld</th><th>Status</th><th>Hinweis</th></tr></thead>
+        <tbody>
+          <tr><td class="f">Art der aktiv ausgenutzten Schwachstelle</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
+          <tr><td class="f">Abhilfema&szlig;nahmen</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Weitere Ma&szlig;nahmen optional erg&auml;nzbar</td></tr>
+          <tr><td class="f">Datum der Verf&uuml;gbarkeit der Abhilfema&szlig;nahmen</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Formal Pflicht; nach 72 h ggf. noch nicht verf&uuml;gbar</td></tr>
+          <tr><td class="f">Umst&auml;nde f&uuml;r Nichtver&ouml;ffentlichung (PEC)</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Auswahlliste, siehe unten</td></tr>
+          <tr><td class="f">Weitere relevante Informationen</td><td class="s"><span class="badge opt">Optional</span></td><td class="h"></td></tr>
+        </tbody>
+      </table>
+
+      <div class="divider"></div>
+
+      <h4 class="block">Ablauf</h4>
+      <ol class="steps">
+        <li><b>Meldung fortf&uuml;hren.</b> Die Folgemeldung wird in gleicher Weise wie die Erstmeldung erg&auml;nzt.</li>
+        <li><b>Nichtver&ouml;ffentlichung (optional).</b> Der Hersteller kann Gr&uuml;nde gegen eine Weiterleitung an andere nationale CSIRTs angeben (Particular Exceptional Circumstances, PEC).</li>
+        <li><b>Pr&uuml;fung durch das CSIRT.</b> Werden Gr&uuml;nde angegeben, pr&uuml;ft das nationale CSIRT die Weitergabe und h&auml;lt die Meldung ggf. zur&uuml;ck. Basis ist der Delegated Act (EU) 2026/881.</li>
+      </ol>
+
+      <div class="note">
+        <b>PEC-Auswahlliste (optional):</b> aktiv ausgenutzt durch einen b&ouml;swilligen Akteur &middot; Ausnutzung erfolgte nur im Mitgliedsstaat des zust&auml;ndigen CSIRT &middot; sofortige Weiterverbreitung w&uuml;rde wesentlichen Interessen des Mitgliedstaats zuwiderlaufen &middot; die gemeldete Schwachstelle stellt durch Weiterverbreitung ein unmittelbares hohes Cybersicherheitsrisiko dar.
+      </div>
+
+      <div class="shots">
+        <figure class="shot"><img src="n72-25-aev.png" alt="Nature of AEV" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">n72-25-aev.png</span></div><figcaption><b>Schritt 25:</b> Nature of AEV, Corrective measures, Verf&uuml;gbarkeitsdatum</figcaption></figure>
+        <figure class="shot"><img src="n72-26-pec.png" alt="Reason for non dissemination" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">n72-26-pec.png</span></div><figcaption><b>Schritt 26:</b> &bdquo;Reason for non dissemination&ldquo; (PEC-Auswahlliste)</figcaption></figure>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== PHASE 4: ABSCHLUSSMELDUNG ===================== -->
+  <section class="phase fin" id="fin">
+    <div class="phead">
+      <div class="pnum">4</div>
+      <h2>Abschlussmeldung &ndash; Final Report</h2>
+      <span class="sub">Frist: 14 Tage (Schwachstelle) / 1 Monat (Vorfall)</span>
+    </div>
+    <div class="pbody">
+
+      <h4 class="block">Ben&ouml;tigte Daten</h4>
+      <table>
+        <thead><tr><th>Feld</th><th>Status</th><th>Hinweis</th></tr></thead>
+        <tbody>
+          <tr><td class="f">Detaillierte Beschreibung</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h"></td></tr>
+          <tr><td class="f">B&ouml;swilliger Akteur (AEV)</td><td class="s"><span class="badge pflicht">Pflicht</span></td><td class="h">Akteur, der die AEV ausgenutzt hat oder ausnutzt</td></tr>
+          <tr><td class="f">Additional Notes</td><td class="s"><span class="badge opt">Optional</span></td><td class="h">Austausch mit dem nationalen CSIRT</td></tr>
+        </tbody>
+      </table>
+
+      <div class="divider"></div>
+
+      <h4 class="block">Ablauf</h4>
+      <ol class="steps">
+        <li><b>Restliche Angaben erg&auml;nzen</b> und innerhalb von 14 Tagen (Schwachstelle) bzw. einem Monat (Vorfall) &uuml;bermitteln.</li>
+        <li><b>Additional Notes</b> dienen dem Austausch mit dem nationalen CSIRT.</li>
+        <li><b>Abschluss.</b> Mit der &Uuml;bermittlung der Abschlussmeldung ist die Meldung geschlossen; &Auml;nderungen sind danach nicht mehr m&ouml;glich (Best&auml;tigungsdialog &bdquo;Are you sure?&ldquo;).</li>
+      </ol>
+
+      <div class="shots">
+        <figure class="shot"><img src="fin-28-detail.png" alt="Detailbeschreibung" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">fin-28-detail.png</span></div><figcaption><b>Schritt 28:</b> Detailed description und Malicious actor</figcaption></figure>
+        <figure class="shot"><img src="fin-31-confirm.png" alt="Best&auml;tigungsdialog" onerror="this.closest('figure').classList.add('missing')"><div class="ph-mark">Screenshot fehlt<span class="fn">fin-31-confirm.png</span></div><figcaption><b>Schritt 31:</b> Best&auml;tigungsdialog &bdquo;Are you sure?&ldquo;</figcaption></figure>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="doc">
+    Rechtsgrundlage: Cyber Resilience Act, Artikel 14&ndash;17 &middot; Single Reporting Platform betrieben durch ENISA &middot; geplanter Wirkbetrieb: 11.09.2026
+  </footer>
+
+</div>
+
+<!-- Lightbox -->
+<div id="lb"><span class="x">&times;</span><img alt=""><div class="cap"></div></div>
+<script>
+  (function(){
+    var lb = document.getElementById('lb');
+    var lbImg = lb.querySelector('img');
+    var lbCap = lb.querySelector('.cap');
+    document.querySelectorAll('figure.shot img').forEach(function(img){
+      img.addEventListener('click', function(){
+        if(img.closest('figure').classList.contains('missing')) return;
+        lbImg.src = img.src;
+        var cap = img.closest('figure').querySelector('figcaption');
+        lbCap.textContent = cap ? cap.textContent : '';
+        lb.classList.add('open');
+      });
+    });
+    function close(){ lb.classList.remove('open'); lbImg.src=''; }
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  })();
+</script>
