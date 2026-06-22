@@ -184,6 +184,7 @@ h2 {
 .seclabel.shots { margin: 38px 0 16px; }
 .seclabel-bar { width: 3px; height: 15px; background: var(--accent); border-radius: 2px; }
 .seclabel-text { font-size: 14px; font-weight: 600; color: var(--ink); }
+.seclabel-hint { margin-left: auto; font: 400 11px/1 'IBM Plex Mono', monospace; color: var(--faintest); }
 
 /* ---------- data tables ----------------------------------------------- */
 .table-wrap {
