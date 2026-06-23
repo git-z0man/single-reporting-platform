@@ -1,0 +1,14 @@
+# Local build scripts (kept locally for re-running crops/integration)
+_crop.py
+_integrate.py
+_crop_out/
+
+# Full-resolution source screenshots & scratch — not part of the published site
+pics/
+pics_by_slot/
+img.png
+img_1.png
+*.zip
+
+# Design references
+handoff/
