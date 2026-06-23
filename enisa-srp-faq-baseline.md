@@ -4,15 +4,31 @@ url: https://www.enisa.europa.eu/topics/product-security-and-certification/singl
 retrieved: 2026-06-23
 purpose: Baseline snapshot for change detection. Future runs diff the live page against this file.
 note: One logical block per FAQ entry to keep diffs readable. Update `retrieved` and content when a change is confirmed.
+last_check: 2026-06-23
+last_change: 2026-06-23
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
+## Change log (2026-06-23 check, vs. 2026-06-19 baseline)
+
+No FAQ questions were added or deleted (still Q1–Q23). The following existing entries were **changed** (clarifications / cross-references added by ENISA, no obligations altered):
+
+- **Intro**: two sentences added — ENISA's 2025–2026 implementation work, and a note that the CRA brings transparency to vulnerability disclosure / strengthens CSIRT risk mitigation. A new "Frequently Asked Questions" preamble was added, pointing to the European Commission's CRA reporting page and the related FAQ document.
+- **Q1**: added closing sentence — "The platform will incorporate security measures to protect confidentiality."
+- **Q8**: added a cross-reference to Q21 on delayed dissemination, and the same confidentiality-security sentence as in Q1.
+- **Q10**: added sentence noting a final version of the Commission's guidance Communication will be adopted shortly.
+- **Q13**: added a reference to the Commission's draft guidance (section 9.1) on when a manufacturer is considered "aware".
+- **Q15**: added a cross-reference to the Q16 data-fields table.
+- **Q16**: the incident field table was reformatted to mirror the vulnerability table's structure (parent header "Detailed description of the incident, incl.:" with sub-items "a. Severity" / "b. Impact", and the full legal text of the two severity criteria spelled out). Field count and X/O/I/A values are unchanged (13 incident fields).
+
 ## Intro
 
-The Cyber Resilience Act (CRA) introduces the Single Reporting Platform (SRP) as a technical tool for the reporting of actively exploited vulnerabilities and incidents impacting products with digital elements. The SRP will be used by CSIRTs and manufacturers for mandatory reporting and could be used by any natural/legal persons for voluntary reporting. The CRA mandates manufacturers to report using the platform as of 11 September 2026 onwards.
+The Cyber Resilience Act (CRA) introduces the Single Reporting Platform (SRP) as a technical tool for the reporting of actively exploited vulnerabilities and incidents impacting products with digital elements operating in the EU Digital Single Market. The SRP will be used by CSIRTs and manufacturers for mandatory reporting and could be used by any natural/legal persons for voluntary reporting. The CRA mandates manufacturers to report using the platform as of 11 September 2026 onwards. Throughout 2025 and 2026, ENISA is undertaking a number of necessary steps to support the successful implementation of the platform. The CRA brings transparency to the vulnerability disclosure processes and strengthens how EU CSIRTs can mitigate risks stemming from vulnerabilities.
 
 Reference: Regulation (EU) 2024/2847 (EUR-Lex).
+
+This FAQ collection on the CRA SRP is intended for publication on the ENISA website and is updated during implementation. See also the European Commission's CRA reporting page (digital-strategy.ec.europa.eu/en/policies/cra-reporting) and, in particular, the FAQ document linked there (ec.europa.eu/newsroom/dae/redirection/document/122331).
 
 ## FAQ entries
 
@@ -63,7 +79,7 @@ Manufacturers and open-source software stewards must adhere to specific deadline
   - For severe incidents: within 1 month after the initial notification.
 
 ### Q8. How does the Single Reporting Platform operate?
-Manufacturers submit notifications electronically through the platform, which automatically routes them to the designated CSIRT coordinator (based on manufacturer's main establishment) and ENISA simultaneously. The CSIRT then disseminates information without delay to other relevant CSIRTs in Member States where the product is available, and to market surveillance authorities as needed. For sensitive reports, dissemination may be delayed on security grounds (see Q21). The platform incorporates security measures to protect confidentiality.
+Manufacturers submit notifications electronically through the platform, which automatically routes them to the designated CSIRT coordinator (based on manufacturer's main establishment) and ENISA simultaneously. The CSIRT then disseminates information without delay to other relevant CSIRTs in Member States where the product is available, and to market surveillance authorities as needed. For sensitive reports, dissemination may be delayed on security grounds — see Q21 for more detail on the delayed dissemination process. The platform incorporates security measures to protect confidentiality.
 
 ### Q9. How will the platform be accessible and how will the registration process work?
 Specific manuals and instructions will be provided by ENISA in the course of June 2026.
@@ -84,7 +100,7 @@ The manufacturer's obligation to report actively exploited vulnerabilities appli
 Refer to the European Commission's FAQ in section 5.4 — "If an actively exploited vulnerability is contained in a third-party component, are all manufacturers integrating that component required to notify it?"
 
 ### Q15. Can the notification workflow be automated for large numbers of notifications from one manufacturer?
-Organisations might automate reporting workflows and integrate reporting requirements into their systems and databases; however, no Application Programming Interfaces will be provided at this stage.
+Organisations might automate reporting workflows and integrate reporting requirements into their systems and databases; however, no Application Programming Interfaces will be provided at this stage. The relevant data fields for reporting can be found in Q16.
 
 ### Q16. What are the data fields to be filled in the reporting template?
 Fields are classified as:
@@ -118,7 +134,7 @@ v18. Corrective or mitigating measures taken: O / X / C
 v19. Corrective or mitigating measures that users can take: O / X / C
 v20. Considered sensitivity of information: O / I / C
 v21. Date when corrective or mitigating measure has been available: O / O / X
-v22. Full description of the vulnerability (incl. severity and impact): O / O / X
+v22. Full description of the vulnerability, incl.: O / O / X
 v23. a. Severity of the vulnerability: O / O / X
 v24. b. Impact of the vulnerability: O / O / X
 v25. Malicious actor that has exploited / is exploiting the vulnerability: O / O / I
@@ -133,8 +149,10 @@ i17. Initial assessment of the incident: O / X / C
 i18. Corrective or mitigating measures taken: O / X / C
 i19. Corrective or mitigating measures that users can take: O / X / C
 i20. Considered sensitivity of information: O / I / C
-i21. Severity of the incident: O / O / X
-i22. Severity criteria (negatively affects availability/authenticity/integrity/confidentiality; leads to introduction or execution of malicious code): O / O / X
+Detailed description of the incident, incl.: O / O / X
+i21. a. Severity of the incident, where:
+  1) it negatively affects or is capable of negatively affecting the ability of a product with digital elements to protect the availability, authenticity, integrity or confidentiality of sensitive or important data or functions; or
+  2) it has led or is capable of leading to the introduction or execution of malicious code in a product with digital elements or in the network and information systems of a user of the product with digital elements: O / O / X
 i23. b. Impact of the incident: O / O / X
 i24. Type of threat or root cause that is likely to have triggered the incident: O / O / X
 i25. Applied and ongoing mitigation measures: O / O / X
@@ -172,3 +190,8 @@ ENISA is legally required to take appropriate measures to manage risks to the pl
 
 ### Q23. How is the CSIRTs network involved?
 As provided in CRA Article 16, ENISA is engaging the CSIRTs Network in development and future testing of the CRA SRP.
+
+## Check log
+
+- 2026-06-19: baseline established (10 Q&A entries added in prior sync; see git history).
+- 2026-06-23: checked — minor wording/cross-reference additions found in intro and Q1, Q8, Q10, Q13, Q15, Q16 (no questions added or removed). File updated accordingly.
