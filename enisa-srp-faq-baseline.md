@@ -1,7 +1,7 @@
 ---
 source: ENISA — Single Reporting Platform (SRP)
 url: https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp
-retrieved: 2026-06-19
+retrieved: 2026-06-23
 purpose: Baseline snapshot for change detection. Future runs diff the live page against this file.
 note: One logical block per FAQ entry to keep diffs readable. Update `retrieved` and content when a change is confirmed.
 ---
@@ -19,10 +19,12 @@ Reference: Regulation (EU) 2024/2847 (EUR-Lex).
 ### Q1. What is the Cyber Resilience Act's Single Reporting Platform (CRA SRP)?
 CRA SRP will be a centralized electronic system designed to simplify reporting obligations for manufacturers and open-source software stewards. It will serve as a "single entry point," allowing manufacturers to report actively exploited vulnerabilities and severe incidents only once, rather than notifying multiple national authorities individually.
 
-Manufacturers will submit notifications electronically, selecting the CSIRT designated as coordinator (based on the manufacturer's main establishment location per CRA Article 14(7)) and ENISA simultaneously. The CSIRT will then disseminate information without delay to other relevant CSIRTs in Member States where the product is available, and to market surveillance authorities as needed.
+Manufacturers will submit notifications electronically, selecting the CSIRT designated as coordinator (based on the manufacturer's main establishment location per CRA Article 14(7)) and ENISA simultaneously. The CSIRT will then disseminate information without delay to other relevant CSIRTs in Member States where the product is available, and to market surveillance authorities as needed. The platform will incorporate security measures to protect confidentiality.
 
 ### Q2. What is the legal basis for CRA SRP?
 The legal basis is the Cyber Resilience Act (CRA), Article 16(1): "For the purposes of the notifications referred to in Article 14(1) and (3) and Article 15(1) and (2) and in order to simplify the reporting obligations of manufacturers, a single reporting platform shall be established by ENISA."
+
+The architecture of the single reporting platform shall allow Member States and ENISA to put in place their own electronic notification end-points.
 
 Articles 14–17 of the CRA provide details of the ecosystem for reporting vulnerabilities. In December 2025, the European Commission published a Delegated Regulation specifying conditions for delaying dissemination of notifications.
 
@@ -61,13 +63,13 @@ Manufacturers and open-source software stewards must adhere to specific deadline
   - For severe incidents: within 1 month after the initial notification.
 
 ### Q8. How does the Single Reporting Platform operate?
-Manufacturers submit notifications electronically through the platform, which automatically routes them to the designated CSIRT coordinator (based on manufacturer's main establishment) and ENISA simultaneously. The CSIRT then disseminates information without delay to other relevant CSIRTs in Member States where the product is available, and to market surveillance authorities as needed. For sensitive reports, dissemination may be delayed on security grounds.
+Manufacturers submit notifications electronically through the platform, which automatically routes them to the designated CSIRT coordinator (based on manufacturer's main establishment) and ENISA simultaneously. The CSIRT then disseminates information without delay to other relevant CSIRTs in Member States where the product is available, and to market surveillance authorities as needed. For sensitive reports, dissemination may be delayed on security grounds (see Q21). The platform incorporates security measures to protect confidentiality.
 
 ### Q9. How will the platform be accessible and how will the registration process work?
 Specific manuals and instructions will be provided by ENISA in the course of June 2026.
 
 ### Q10. Where can I get further information on the application of the CRA?
-The European Commission has set up a document "FAQs on the CRA Implementation," which specifies more details related to reporting obligations in section 5. The Commission has also published a draft Communication intended to provide guidance on CRA application, including section 9.1 on reporting obligations.
+The European Commission has set up a document "FAQs on the CRA Implementation," which specifies more details related to reporting obligations in section 5. The Commission has also published a draft Communication intended to provide guidance on CRA application, including section 9.1 on reporting obligations. A final version of the Communication will be adopted shortly.
 
 ### Q11. How is the term "actively exploited vulnerability" interpreted in practice?
 The European Commission explains this term in subsection 5.1 of its "FAQs on the CRA Implementation" alongside other information related to the legal interpretation of CRA.
@@ -76,7 +78,7 @@ The European Commission explains this term in subsection 5.1 of its "FAQs on the
 Refer to the European Commission's "FAQs on the CRA Implementation," particularly subsection 5.3 — "Does a manufacturer need to report actively exploited vulnerabilities or severe incidents for products placed on the market before the CRA applies?"
 
 ### Q13. Do I need to report vulnerabilities that have been actively exploited before the CRA applies?
-The manufacturer's obligation to report actively exploited vulnerabilities applies once they become aware of them. The obligation does not extend to reporting vulnerabilities of which the manufacturer was already aware before the CRA reporting obligation applies.
+The manufacturer's obligation to report actively exploited vulnerabilities applies once they become aware of them. The European Commission's draft guidance provides further explanations on when a manufacturer is regarded to have become aware (section 9.1). The obligation does not extend to reporting vulnerabilities of which the manufacturer was already aware before the CRA reporting obligation applies.
 
 ### Q14. If a vulnerability in my product has its source in a third-party component, am I still obliged to notify it?
 Refer to the European Commission's FAQ in section 5.4 — "If an actively exploited vulnerability is contained in a third-party component, are all manufacturers integrating that component required to notify it?"
