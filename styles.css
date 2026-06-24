@@ -147,9 +147,9 @@ h1 {
 }
 .rail-title { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
 .rail-sub { margin: 0 0 22px; font-size: 13px; color: var(--faint); }
-.rail { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.rail { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
 .rail-node { position: relative; padding-right: 14px; }
-.rail-dotline { display: flex; align-items: center; margin-bottom: 12px; }
+.rail-dotline { display: flex; align-items: center; margin-bottom: 12px; position: relative; }
 .rail-dot {
   width: 11px; height: 11px; border-radius: 50%; background: var(--accent);
   flex: none; box-shadow: 0 0 0 4px var(--rail-halo);
@@ -157,6 +157,22 @@ h1 {
 .rail-line { flex: 1; height: 2px; background: var(--rail-line); }
 .rail-t { font: 500 12px/1 'IBM Plex Mono', monospace; color: var(--accent); margin-bottom: 7px; }
 .rail-label { font-size: 13px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+.rail-node.pre .rail-dot {
+  background: transparent; border: 2px solid var(--faint);
+  box-shadow: 0 0 0 4px var(--hairline-soft); box-sizing: border-box;
+}
+.rail-node.pre .rail-line {
+  background: none; height: 0;
+  border-top: 2px dashed var(--rail-line);
+}
+.rail-node.pre .rail-t { color: var(--faint); }
+.rail-node.pre .rail-label { color: var(--body); }
+.rail-annot {
+  position: absolute; bottom: calc(100% + 4px); left: 22px; right: 0;
+  text-align: center; white-space: nowrap;
+  font: 400 11px/1 'IBM Plex Mono', monospace;
+  color: var(--faint); letter-spacing: .02em;
+}
 
 /* ---------- sections -------------------------------------------------- */
 .phase { scroll-margin-top: 24px; padding-top: 56px; }
