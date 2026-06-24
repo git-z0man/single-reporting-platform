@@ -136,7 +136,7 @@ h1 {
 }
 .lede {
   margin: 20px 0 0; font-size: 17px; line-height: 1.6; color: var(--body);
-  max-width: 660px; text-wrap: pretty;
+  text-wrap: pretty;
 }
 
 /* ---------- deadline rail --------------------------------------------- */
@@ -176,7 +176,7 @@ h1 {
 h2 {
   margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink);
 }
-.intro { margin: 16px 0 0; font-size: 15.5px; line-height: 1.62; color: var(--body); max-width: 680px; }
+.intro { margin: 16px 0 0; font-size: 15.5px; line-height: 1.62; color: var(--body); }
 
 /* section labels (Required data / Procedure / From the platform) */
 .seclabel { display: flex; align-items: center; gap: 11px; margin: 36px 0 14px; }
@@ -237,7 +237,7 @@ li.step {
 li.step strong { color: var(--ink); font-weight: 600; }
 
 /* ---------- callouts -------------------------------------------------- */
-.callout { margin: 24px 0 0; padding: 16px 18px; border-radius: 10px; max-width: 700px; }
+.callout { margin: 24px 0 0; padding: 16px 18px; border-radius: 10px; }
 .callout p { margin: 0; font-size: 13.5px; line-height: 1.6; color: var(--callout-ink); }
 .callout p.lead { margin: 0 0 10px; }
 .callout strong { color: var(--ink); font-weight: 600; }
@@ -431,10 +431,10 @@ details.faq[open] > summary .faq-chev { transform: rotate(45deg); }
 /* ---------- footer ---------------------------------------------------- */
 footer.foot { margin-top: 56px; padding: 30px 0 80px; border-top: 1px solid var(--hairline); }
 .footer-label { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 14px; }
-dl.facts { margin: 0 0 28px; display: grid; grid-template-columns: 200px 1fr; gap: 0; max-width: 760px; }
+dl.facts { margin: 0 0 28px; display: grid; grid-template-columns: 200px 1fr; gap: 0; }
 dl.facts dt { padding: 11px 0; border-top: 1px solid var(--hairline-soft); font-size: 13px; color: var(--faint); }
 dl.facts dd { margin: 0; padding: 11px 0; border-top: 1px solid var(--hairline-soft); font-size: 13px; color: var(--ink); font-weight: 500; }
-.footer-legal { margin: 0 0 8px; font-size: 12.5px; line-height: 1.6; color: var(--faint); max-width: 760px; }
+.footer-legal { margin: 0 0 8px; font-size: 12.5px; line-height: 1.6; color: var(--faint); }
 .footer-legal a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
 .footer-disc { margin: 0; font-size: 12.5px; color: var(--faintest); }
 
