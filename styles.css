@@ -401,8 +401,8 @@ details.faq[open] > summary .faq-chev { transform: rotate(45deg); }
 .faq-body li { font-size: 14.5px; line-height: 1.6; color: var(--body); margin-bottom: 6px; }
 
 /* FAQ items amended with unofficial (Expert Group demo) information */
-.faq-qwrap { display: flex; align-items: baseline; gap: 10px; flex: 1; flex-wrap: wrap; min-width: 0; }
-.faq-qwrap > span:not([class]) { flex: 1 1 0; min-width: 0; }
+.faq-qwrap { display: flex; align-items: baseline; gap: 10px; flex: 1; min-width: 0; }
+.faq-qwrap > span:not([class]) { flex: 1 1 auto; min-width: 0; }
 .faq-num {
   flex: none; min-width: 28px;
   font: 500 12px/1 'IBM Plex Mono', monospace; letter-spacing: .02em;
