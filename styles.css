@@ -91,8 +91,8 @@ a { color: var(--accent); }
   font: 600 11px/1 'IBM Plex Mono', monospace;
 }
 .brand-name { display: flex; flex-direction: column; line-height: 1.25; }
-.brand-name .b-title { font-size: 13.5px; font-weight: 600; color: var(--ink); }
-.brand-name .b-sub { font-size: 11.5px; color: var(--faint); }
+.brand-name .b-title { font-size: 13px; font-weight: 600; color: var(--ink); }
+.brand-name .b-sub { font-size: 12px; color: var(--faint); }
 
 .sidenav { flex: 1; overflow: auto; padding: 20px 14px; }
 .sidenav-label {
@@ -110,18 +110,18 @@ a { color: var(--accent); }
 .toc-link.active:hover { background: var(--accent-tint); }
 .toc-num { font: 500 12px/1.4 'IBM Plex Mono', monospace; color: var(--accent); }
 .toc-body { display: flex; flex-direction: column; gap: 1px; }
-.toc-title { font-size: 13.5px; font-weight: 600; }
-.toc-sub { font-size: 11.5px; color: var(--faint); }
+.toc-title { font-size: 13px; font-weight: 600; }
+.toc-sub { font-size: 12px; color: var(--faint); }
 .toc-link.simple {
   display: block; padding: 9px 10px; border-radius: 7px;
-  color: var(--ink); font-size: 13.5px; font-weight: 600;
+  color: var(--ink); font-size: 13px; font-weight: 600;
 }
 .sidenav-divider { height: 1px; background: var(--hairline-soft); margin: 16px 10px; }
 
 .sidefoot { padding: 16px 22px; border-top: 1px solid var(--hairline-soft); }
 .status-pill {
   display: inline-flex; align-items: center; gap: 8px;
-  font-size: 11.5px; color: var(--amber-text);
+  font-size: 12px; color: var(--amber-text);
 }
 .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--amber-dot); }
 .sidefoot p { margin: 10px 0 0; font-size: 11px; line-height: 1.5; color: var(--faintest); }
@@ -156,7 +156,7 @@ h1 {
 }
 .rail-line { flex: 1; height: 2px; background: var(--rail-line); }
 .rail-t { font: 500 12px/1 'IBM Plex Mono', monospace; color: var(--accent); margin-bottom: 7px; }
-.rail-label { font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+.rail-label { font-size: 13px; font-weight: 600; color: var(--ink); line-height: 1.25; }
 
 /* ---------- sections -------------------------------------------------- */
 .phase { scroll-margin-top: 24px; padding-top: 56px; }
@@ -225,7 +225,7 @@ tr.group td {
 ol.steps { margin: 0; padding: 0; list-style: none; }
 li.step {
   position: relative; padding: 0 0 16px 38px;
-  font-size: 15px; line-height: 1.6; color: var(--body);
+  font-size: 14px; line-height: 1.6; color: var(--body);
 }
 .step-num {
   position: absolute; left: 0; top: 0;
@@ -238,7 +238,7 @@ li.step strong { color: var(--ink); font-weight: 600; }
 
 /* ---------- callouts -------------------------------------------------- */
 .callout { margin: 24px 0 0; padding: 16px 18px; border-radius: 10px; }
-.callout p { margin: 0; font-size: 13.5px; line-height: 1.6; color: var(--callout-ink); }
+.callout p { margin: 0; font-size: 13px; line-height: 1.6; color: var(--callout-ink); }
 .callout p.lead { margin: 0 0 10px; }
 .callout strong { color: var(--ink); font-weight: 600; }
 .callout.info  { background: var(--info-bg); border: 1px solid var(--info-border); }
@@ -246,7 +246,7 @@ li.step strong { color: var(--ink); font-weight: 600; }
 .callout.amber strong.lead-in { color: var(--amber-text); }
 .callout.neutral { background: var(--card-alt); border: 1px solid var(--hairline); }
 .callout ul { margin: 0; padding-left: 18px; }
-.callout li { font-size: 13.5px; line-height: 1.55; color: var(--callout-ink); margin-bottom: 5px; }
+.callout li { font-size: 13px; line-height: 1.55; color: var(--callout-ink); margin-bottom: 5px; }
 .callout li:last-child { margin-bottom: 0; }
 
 /* ---------- screenshot grid ------------------------------------------- */
@@ -367,7 +367,7 @@ figure.missing .shot-ph { display: flex; }
 .fb-menu a {
   display: flex; align-items: center; gap: 11px;
   padding: 9px 12px; border-radius: 8px;
-  text-decoration: none; color: var(--ink); font-size: 13.5px; font-weight: 600;
+  text-decoration: none; color: var(--ink); font-size: 13px; font-weight: 600;
 }
 .fb-menu a .fb-mnum {
   flex: none; width: 18px;
@@ -395,10 +395,10 @@ details.faq > summary::-webkit-details-marker { display: none; }
 }
 details.faq[open] > summary .faq-chev { transform: rotate(45deg); }
 .faq-body { padding: 0 20px 20px; max-width: 720px; }
-.faq-body p { margin: 0 0 12px; font-size: 14.5px; line-height: 1.66; color: var(--body); }
+.faq-body p { margin: 0 0 12px; font-size: 14px; line-height: 1.66; color: var(--body); }
 .faq-body p:last-child { margin-bottom: 0; }
 .faq-body ul { margin: 2px 0 12px; padding-left: 20px; }
-.faq-body li { font-size: 14.5px; line-height: 1.6; color: var(--body); margin-bottom: 6px; }
+.faq-body li { font-size: 14px; line-height: 1.6; color: var(--body); margin-bottom: 6px; }
 
 /* FAQ items amended with unofficial (Expert Group demo) information */
 .faq-qwrap { display: flex; align-items: baseline; gap: 10px; flex: 1; min-width: 0; }
