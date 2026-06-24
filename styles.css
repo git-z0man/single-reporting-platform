@@ -402,6 +402,11 @@ details.faq[open] > summary .faq-chev { transform: rotate(45deg); }
 
 /* FAQ items amended with unofficial (Expert Group demo) information */
 .faq-qwrap { display: flex; align-items: center; gap: 10px; flex: 1; flex-wrap: wrap; }
+.faq-num {
+  flex: none; min-width: 28px;
+  font: 500 12px/1 'IBM Plex Mono', monospace; letter-spacing: .02em;
+  color: var(--faint);
+}
 .faq-tag {
   font: 500 10px/1 'IBM Plex Mono', monospace; letter-spacing: .02em;
   color: var(--amber-text); background: var(--amber-chip-bg);
