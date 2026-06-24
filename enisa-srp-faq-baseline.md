@@ -4,7 +4,7 @@ url: https://www.enisa.europa.eu/topics/product-security-and-certification/singl
 retrieved: 2026-06-23
 purpose: Baseline snapshot for change detection. Future runs diff the live page against this file.
 note: One logical block per FAQ entry to keep diffs readable. Update `retrieved` and content when a change is confirmed.
-last_check: 2026-06-23
+last_check: 2026-06-24
 last_change: 2026-06-23
 ---
 
@@ -195,3 +195,4 @@ As provided in CRA Article 16, ENISA is engaging the CSIRTs Network in developme
 
 - 2026-06-19: baseline established (10 Q&A entries added in prior sync; see git history).
 - 2026-06-23: checked — minor wording/cross-reference additions found in intro and Q1, Q8, Q10, Q13, Q15, Q16 (no questions added or removed). File updated accordingly.
+- 2026-06-24: checked — no changes detected (still Q1–Q23, same intro and data-field table). File unchanged except this log entry.
