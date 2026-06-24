@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Single Reporting Platform: Manufacturer's guide</title>
-<meta name="description" content="A practical walkthrough of the EU Cyber Resilience Act Single Reporting Platform: registration, the 24 h Early Warning, the 72 h Notification and the Final Report, with the data fields required at each step.">
+<meta name="description" content="A practical walkthrough of the EU Cyber Resilience Act Single Reporting Platform: Registration, the 24h Early Warning, the 72h Notification and the Final Report, with the data fields required at each step and additional inofficial information from the Expert Group meeting.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -49,7 +49,7 @@
 
     <div class="sidefoot">
       <span class="status-pill"><span class="status-dot"></span>Test portal · fields not final</span>
-      <p>Unofficial guide based on the Expert Group demo. Not affiliated with ENISA.</p>
+      <p>Unofficial guide based on the ENISA demo at the EG meeting. Not affiliated with ENISA.</p>
     </div>
   </aside>
 
@@ -60,10 +60,10 @@
       <!-- HERO -->
       <section class="hero">
         <div class="eyebrow">Cyber Resilience Act&nbsp;&nbsp;/&nbsp;&nbsp;Article 14</div>
-        <h1>Reporting vulnerabilities &amp; incidents through the Single Reporting Platform</h1>
-        <p class="lede">A walkthrough of the central platform manufacturers will use to report actively exploited vulnerabilities (AEV) and severe incidents, from first-time registration to the final report, with the data fields required at each step.</p>
+        <h1>Reporting through the Single Reporting Platform</h1>
+        <p class="lede">A walkthrough of the central platform manufacturers will use to report actively exploited vulnerabilities (AEV) and severe incidents in the European Union, from first-time registration to the final report, with the data fields required in practice at each step.</p>
         <div class="callout amber" style="margin-top:20px">
-          <p><strong class="lead-in">Status · 10 June 2026 · test portal, fields not yet final.</strong> The platform is in test operation. Data fields are not yet final and may change. The portal exclusively serves to fulfil the legal reporting obligation under Article&nbsp;14 CRA. This reflects the status presented at the CRA Expert Group meeting&nbsp;#5.</p>
+          <p><strong class="lead-in">Status · 10 June 2026 · test portal, fields not yet final.</strong> The platform is in test operation. Data fields are not yet final and may change. The portal exclusively serves to fulfil the legal reporting obligation under Article&nbsp;14 CRA. This walkthrough reflects the status presented at the CRA Expert Group meeting&nbsp;#5 and includes screenshots taken during a demo.</p>
         </div>
 
         <div style="margin-top:28px">
@@ -71,9 +71,9 @@
           <dl class="facts">
             <dt>Go-live</dt><dd>11 September 2026 (mandatory reporting)</dd>
             <dt>Voluntary reporting</dt><dd>Planned on a later date; 11 December 2027 at latest</dd>
-            <dt>Portal language</dt><dd>English only due to distribution to multiple CSIRTs</dd>
+            <dt>Portal language</dt><dd>English only, due to distribution to multiple CSIRTs</dd>
             <dt>Users per manufacturer</dt><dd>Two: a primary and a backup</dd>
-            <dt>Manufacturer-facing API</dt><dd>Not planned</dd>
+            <dt>Manufacturer-facing API</dt><dd>Not planned (but requested by the EG members)</dd>
             <dt>Attachments &amp; links</dt><dd>Not supported</dd>
             <dt>Built by</dt><dd>Uni Systems (lead), Wavestone &amp; Luxembourg House of Cybersecurity · €11M, four-year public tender</dd>
           </dl>
@@ -82,8 +82,8 @@
 
       <!-- DEADLINE RAIL -->
       <section class="rail-card" aria-label="Deadline overview">
-        <div class="rail-title">From “becoming aware”, the clock runs</div>
-        <p class="rail-sub">One continuous, editable notification. The final report is due 14 days after a fix is available (vulnerability) or one month after the 72-hour notification (incident), not from becoming aware.</p>
+        <div class="rail-title">After “becoming aware”, the clock starts</div>
+        <p class="rail-sub">With the early warning notification, a continuously editable notification is generated. The final report is not linked to "becoming aware". For AEV, the final report has to be submitted within 14 days after a corrective/mitigating measure is available (not 14 days after becoming aware). For severe incidents, the final report is due within one month after the 72h notification (not one month after becoming aware).</p>
         <div class="rail">
           <div class="rail-node">
             <div class="rail-dotline"><span class="rail-dot"></span><span class="rail-line"></span></div>
@@ -92,17 +92,17 @@
           </div>
           <div class="rail-node">
             <div class="rail-dotline"><span class="rail-dot"></span><span class="rail-line"></span></div>
-            <div class="rail-t">24 h</div>
+            <div class="rail-t">24h</div>
             <div class="rail-label">Early Warning</div>
           </div>
           <div class="rail-node">
             <div class="rail-dotline"><span class="rail-dot"></span><span class="rail-line"></span></div>
-            <div class="rail-t">72 h</div>
+            <div class="rail-t">72h</div>
             <div class="rail-label">72&hairsp;h Notification</div>
           </div>
           <div class="rail-node">
             <div class="rail-dotline"><span class="rail-dot"></span><span class="rail-line"></span></div>
-            <div class="rail-t">14 d / 1 mo</div>
+            <div class="rail-t">14d / 1mo</div>
             <div class="rail-label">Final Report</div>
           </div>
         </div>
