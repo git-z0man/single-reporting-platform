@@ -123,7 +123,7 @@
       <section id="reg" class="phase">
         <div class="phase-eyebrow">Phase 01 · first-time setup</div>
         <h2>Registration</h2>
-        <p class="intro">There is no need for a pre-registration: you may register the first time you need to report. It is advised to register at least the primary contact to get familiar with the portal and the forms. As part of the registration you sign in with a personal <a href="https://trusted-digital-identity.europa.eu/index_en" target="_blank" rel="noopener">EU Login account</a> and link yourself to a manufacturer. Your association to the manufacturer is forwarded to the national CSIRT of the manufacturer for validation, but you are able to submit straight away, before that validation has been completed by the CSIRT. It is a one-time setup; afterwards your account is reused for every report.</p>
+        <p class="intro">Before you can submit, you have to register the user and link the user to the manufacturer. But there is no need for a pre-registration: you may register the first time you need to report. For pracical reasons it is better to register beforehand to get familiar with the portal and the forms. As part of the registration you sign in with a personal <a href="https://trusted-digital-identity.europa.eu/index_en" target="_blank" rel="noopener">EU Login account</a> and link yourself to a manufacturer. Your association to the manufacturer is forwarded to the national CSIRT of the manufacturer for validation, but you are able to submit straight away, before that validation has been completed by the CSIRT. It is a one-time setup; afterwards your account is reused for every report.</p>
 
         <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Required data</span></div>
         <div class="table-wrap">
@@ -132,18 +132,18 @@
             <thead><tr><th>Field</th><th class="c-status">Status</th><th>Note</th></tr></thead>
             <tbody>
               <tr class="group"><td colspan="3">Personal data</td></tr>
-              <tr><td class="c-field">Email address (EU Login)</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Personal EU Login account</td></tr>
+              <tr><td class="c-field">EU Login</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Personal EU Login account</td></tr>
               <tr><td class="c-field">First name</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
               <tr><td class="c-field">Last name</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
               <tr><td class="c-field">Country (CSIRT)</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">For DE: CSIRT Germany</td></tr>
-              <tr><td class="c-field">Address</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
+              <tr><td class="c-field">Address</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">TBC: personal address?</td></tr>
               <tr><td class="c-field">Email address (contact)</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Need not match the EU Login address</td></tr>
               <tr><td class="c-field">Phone number</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
               <tr class="group"><td colspan="3">Manufacturer data</td></tr>
               <tr><td class="c-field">Manufacturer name</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Currently a free-text field</td></tr>
               <tr><td class="c-field">Manufacturer CSIRT (Member State)</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Determines the responsible national CSIRT</td></tr>
               <tr><td class="c-field">Sector</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note"></td></tr>
-              <tr><td class="c-field">Registration number</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Meaning not yet defined; not assigned by ENISA (possibly a national ID, e.g. VAT ID for DE)</td></tr>
+              <tr><td class="c-field">Registration number</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Meaning TBC; not assigned by ENISA (maybe a national ID, e.g. VAT ID for DE)</td></tr>
               <tr><td class="c-field">Address (manufacturer)</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note"></td></tr>
             </tbody>
           </table>
@@ -165,7 +165,7 @@
         </ol>
 
         <div class="callout info">
-          <p><strong>Validation, by example of Germany.</strong> Validation is deliberately low-key and the method is decided per Member State. For Germany, BSI has indicated it will likely just check the email domain, with <strong>no ELSTER certificate required</strong>. Other Member States will validate differently. A pending check never blocks submission.</p>
+          <p><strong>Validation by the CSIRT</strong> Validation is deliberately low-key and the method is decided per Member State. For Germany, BSI has indicated it will likely just check the email domain, with <strong>no ELSTER certificate required</strong>. Other Member States may validate differently. A pending validation never blocks the submission of notifications.</p>
         </div>
 
         <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">From the platform</span><span class="seclabel-hint">click to enlarge</span></div>
@@ -173,11 +173,11 @@
           <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-02-usertype.png" data-full="reg-02-usertype.png" alt="user type" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-02 · user type</div><figcaption>User type: “What user are you?”</figcaption></figure>
           <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-03-country.png" data-full="reg-03-country.png" alt="country" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-03 · country</div><figcaption>Selecting your national CSIRT</figcaption></figure>
           <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-04-eulogin.png" data-full="reg-04-eulogin.png" alt="EU Login" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-04 · EU Login</div><figcaption>EU Login: “Sign in to continue”</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-05-personal.png" data-full="reg-05-personal.png" alt="personal details" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-05 · personal</div><figcaption>Personal details (registration step 1)</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-06-manufacturer.png" data-full="reg-06-manufacturer.png" alt="manufacturer details" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-06 · manufacturer</div><figcaption>Manufacturer details (registration step 2)</figcaption></figure>
+          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-05-personal.png" data-full="reg-05-personal.png" alt="personal details" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-05 · personal</div><figcaption>Personal details</figcaption></figure>
+          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-06-manufacturer.png" data-full="reg-06-manufacturer.png" alt="manufacturer details" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-06 · manufacturer</div><figcaption>Manufacturer details</figcaption></figure>
           <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-08-association.png" data-full="reg-08-association.png" alt="association" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-08 · association</div><figcaption>Association management: status “Unverified”</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-10-dashboard.png" data-full="reg-10-dashboard.png" alt="dashboard" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-10 · dashboard</div><figcaption>The national CSIRT dashboard after registration</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="reg-11-greece.png" alt="multi-country assignment" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-11 · multi-country</div><figcaption>Assigning the account to another Member State (Greece)</figcaption></figure>
+          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-10-dashboard.png" data-full="reg-10-dashboard.png" alt="dashboard" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-10 · dashboard</div><figcaption>The default dashboard after registration</figcaption></figure>
+          <figure><img class="shot" title="Click to enlarge" src="reg-11-greece.png" alt="multi-country assignment" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-11 · multi-country</div><figcaption>Opening the dashboard of another Member State (Greece)</figcaption></figure>
         </div>
       </section>
 
