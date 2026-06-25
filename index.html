@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Single Reporting Platform: Manufacturer's guide</title>
-<meta name="description" content="A practical walkthrough of the EU Cyber Resilience Act Single Reporting Platform: Registration, the 24h Early Warning, the 72h Notification and the Final Report, with the data fields required at each step and additional inofficial information from the Expert Group meeting.">
+<meta name="description" content="A practical walkthrough of the EU Cyber Resilience Act Single Reporting Platform: Registration, the 24h Early Warning, the 72h Notification and the Final Report, with the data fields required at each step.">
 <script>(function(){try{var s=localStorage.getItem('theme');if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +54,7 @@
         <span class="theme-toggle-label">Dark mode</span>
       </button>
       <span class="status-pill"><span class="status-dot"></span>Status: beta · fields not final</span>
-      <p>Unofficial guide based on the ENISA demo at the EG meeting and the 3rd draft of the Commission’s guidance (not yet adopted). Not a legal advice. Not affiliated with ENISA.</p>
+      <p>Unofficial guide based on the Commission’s draft CRA guidance (not yet adopted). Not legal advice. Not affiliated with ENISA.</p>
     </div>
   </aside>
 
@@ -68,7 +68,7 @@
         <h1>Reporting through the Single Reporting Platform</h1>
         <p class="lede">A walkthrough of the central platform manufacturers will use to report actively exploited vulnerabilities (AEV) and severe incidents in the European Union, from first-time registration to the final report, with the data fields required in practice at each step.</p>
         <div class="callout amber" style="margin-top:20px">
-          <p><strong class="lead-in">SRP Status · 10 June 2026 · test portal, fields not yet final.</strong> The platform is in test operation. Data fields are not yet final and may change. The portal exclusively serves to fulfil the legal reporting obligation under Article&nbsp;14 CRA. This walkthrough reflects the status presented at the CRA Expert Group meeting&nbsp;#5 and includes screenshots taken during a demo.</p>
+          <p><strong class="lead-in">SRP Status · test portal, fields not yet final.</strong> The platform is in test operation. Data fields are not yet final and may change. The portal exclusively serves to fulfil the legal reporting obligation under Article&nbsp;14 CRA.</p>
         </div>
 
         <div style="margin-top:28px">
@@ -77,8 +77,7 @@
             <dt>Go-live</dt><dd>11 September 2026 (mandatory reporting)</dd>
             <dt>Voluntary reporting</dt><dd>Planned on a later date; 11 December 2027 at latest</dd>
             <dt>Portal language</dt><dd>English only, due to distribution to multiple CSIRTs</dd>
-            <dt>Users per manufacturer</dt><dd>Two: a primary and a backup</dd>
-            <dt>Manufacturer-facing API</dt><dd>Not planned at this stage (but requested by the EG members)</dd>
+            <dt>Manufacturer-facing API</dt><dd>Not planned at this stage</dd>
             <dt>Attachments &amp; links</dt><dd>Not supported</dd>
             <dt>Built by</dt><dd>Uni Systems (lead), Wavestone &amp; Luxembourg House of Cybersecurity · €11M, four-year public tender</dd>
           </dl>
@@ -164,7 +163,7 @@
           <li class="step"><span class="step-num">3</span><strong>Select the national entry point.</strong> Set the responsible CSIRT. For a German company, that is “CSIRT Germany”.</li>
           <li class="step"><span class="step-num">4</span><strong>Sign in via EU Login.</strong> The personal account is later linked to the company as an “Authorized Representative”.</li>
           <li class="step"><span class="step-num">5</span><strong>Enter personal data</strong> (registration step 1).</li>
-          <li class="step"><span class="step-num">6</span><strong>Link to manufacturer</strong> (step 2). Currently free-text fields; up to two persons per company. The association is provisional and forwarded to the responsible national CSIRT.</li>
+          <li class="step"><span class="step-num">6</span><strong>Link to manufacturer</strong> (step 2). Currently free-text fields. The association is provisional and forwarded to the responsible national CSIRT.</li>
           <li class="step"><span class="step-num">7</span><strong>Choosing the correct CSIRT</strong> is the manufacturer’s responsibility. The portal does not verify this, and is notified first for future reports.</li>
           <li class="step"><span class="step-num">8</span><strong>Validation by the CSIRT.</strong> The CSIRT verifies the person-to-manufacturer association out of band; the method is decided per country. The status is visible in the user settings.</li>
           <li class="step"><span class="step-num">9</span><strong>Ability to report.</strong> Successful submission of a report does not depend on successful validation of the account.</li>
@@ -172,21 +171,6 @@
           <li class="step"><span class="step-num">11</span><strong>Multiple countries.</strong> The same account can be assigned to manufacturers in other Member States by choosing a different national entry point (example: Greece). Validation is then performed by that country’s CSIRT.</li>
         </ol>
 
-        <div class="callout info">
-          <p><strong>Validation by the CSIRT</strong> Validation is deliberately low-key and the method is decided per Member State. For Germany, BSI has indicated it will likely just check the email domain, with <strong>no ELSTER certificate required</strong>. Other Member States may validate differently. A pending validation never blocks the submission of notifications.</p>
-        </div>
-
-        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">From the platform</span><span class="seclabel-hint">click to enlarge</span></div>
-        <div class="imggrid">
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-02-usertype.png" data-full="reg-02-usertype.png" alt="user type" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-02 · user type</div><figcaption>User type: “What user are you?”</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-03-country.png" data-full="reg-03-country.png" alt="country" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-03 · country</div><figcaption>Selecting your national CSIRT</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-04-eulogin.png" data-full="reg-04-eulogin.png" alt="EU Login" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-04 · EU Login</div><figcaption>EU Login: “Sign in to continue”</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-05-personal.png" data-full="reg-05-personal.png" alt="personal details" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-05 · personal</div><figcaption>Personal details</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-06-manufacturer.png" data-full="reg-06-manufacturer.png" alt="manufacturer details" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-06 · manufacturer</div><figcaption>Manufacturer details</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-08-association.png" data-full="reg-08-association.png" alt="association" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-08 · association</div><figcaption>Association management: status “Unverified”</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/reg-10-dashboard.png" data-full="reg-10-dashboard.png" alt="dashboard" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-10 · dashboard</div><figcaption>The default dashboard after registration</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="reg-11-greece.png" alt="multi-country assignment" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">reg-11 · multi-country</div><figcaption>Opening the dashboard of another Member State (Greece)</figcaption></figure>
-        </div>
       </section>
 
       <!-- ===================== PHASE 02 ===================== -->
@@ -226,17 +210,6 @@
           <li class="step"><span class="step-num">6</span><strong>Editable.</strong> After submission, notifications can be adjusted at any time within their current status; the system records all changes.</li>
         </ol>
 
-        <div class="callout amber">
-          <p><strong class="lead-in">Deadline reminder.</strong> 48 hours after the Early Warning, the dashboard shows an alert that the 72-hour notification is still outstanding. The consequences of a missed 72-hour notification are not yet known.</p>
-        </div>
-
-        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">From the platform</span><span class="seclabel-hint">click to enlarge</span></div>
-        <div class="imggrid">
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/ew-13-form.png" data-full="ew-13-form.png" alt="submission type" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">ew-13 · form</div><figcaption>Choosing what to submit: “What do you want to submit?”</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/ew-16-cvss.png" data-full="ew-16-cvss.png" alt="CVSS, product, version" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">ew-16 · CVSS &amp; product</div><figcaption>CVSS score, impacted PwDE and version</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/ew-20-dashboard.png" data-full="ew-20-dashboard.png" alt="dashboard" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">ew-20 · dashboard</div><figcaption>Dashboard: status “Early Warning”</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/ew-23-edit.png" data-full="ew-23-edit.png" alt="edit view" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">ew-23 · edit</div><figcaption>Edit view: “Submit Early Warning”</figcaption></figure>
-        </div>
       </section>
 
       <!-- ===================== PHASE 03 ===================== -->
@@ -283,11 +256,6 @@
           </ul>
         </div>
 
-        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">From the platform</span><span class="seclabel-hint">click to enlarge</span></div>
-        <div class="imggrid">
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/n72-25-aev.png" data-full="n72-25-aev.png" alt="nature of AEV" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">n72-25 · nature of AEV</div><figcaption>Nature of the AEV and corrective measures</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/n72-26-pec.png" data-full="n72-26-pec.png" alt="non-dissemination" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">n72-26 · non-dissemination</div><figcaption>Reason for non-dissemination (PEC)</figcaption></figure>
-        </div>
       </section>
 
       <!-- ===================== PHASE 04 ===================== -->
@@ -320,18 +288,12 @@
           <li class="step"><span class="step-num">3</span><strong>Closing.</strong> Once the Final Report is submitted, the notification is closed; subsequent changes are no longer possible (confirmation dialog “Are you sure?”).</li>
         </ol>
 
-        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">From the platform</span><span class="seclabel-hint">click to enlarge</span></div>
-        <div class="imggrid">
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/fin-28-detail.png" data-full="fin-28-detail.png" alt="detailed description" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">fin-28 · detail</div><figcaption>Detailed description and malicious actor</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="fin-31-confirm.png" alt="confirmation dialog" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">fin-31 · confirm</div><figcaption>Confirmation dialog: “Are you sure?”</figcaption></figure>
-          <figure><img class="shot" title="Click to enlarge" src="thumbs/fin-32-complete.png" data-full="fin-32-complete.png" alt="Dashboard: all stages submitted, notification closed" onerror="this.closest('figure').classList.add('missing')"><div class="shot-ph">fin-32 · complete</div><figcaption>Dashboard: Early Warning, 72&#8202;h and Final Report all submitted</figcaption></figure>
-        </div>
       </section>
 
       <!-- ===================== FAQ ===================== -->
       <section id="faq" class="phase divider">
         <h2>Questions &amp; answers</h2>
-        <p class="intro" style="color:var(--faint)">ENISA's official Single Reporting Platform FAQ, reproduced in full (23 questions). A few answers are <strong>amended with unofficial information</strong> from the CRA Expert Group demo (meeting&nbsp;10 June&nbsp;2026); those questions carry a <span class="faq-tag">+ unofficial</span> tag, and the added text appears below the official answer under an &ldquo;Amended with unofficial information&rdquo; label. References CRA Articles 14–17 and Delegated Regulation C(2025)&nbsp;8407.</p>
+        <p class="intro" style="color:var(--faint)">ENISA's official Single Reporting Platform FAQ, reproduced in full (23 questions). References CRA Articles 14–17 and Delegated Regulation C(2025)&nbsp;8407.</p>
         <div class="faq-wrap">
           <details class="faq">
             <summary><span class="faq-qwrap"><span class="faq-num">Q1</span><span>What is the Cyber Resilience Act's Single Reporting Platform (CRA SRP)?</span></span><span class="faq-chev">+</span></summary>
@@ -404,15 +366,9 @@
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q9</span><span>How will the platform be accessible and how will the registration process work?</span><span class="faq-tag">+ unofficial</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q9</span><span>How will the platform be accessible and how will the registration process work?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p>Specific manuals and instructions will be provided by ENISA in the course of June 2026.</p>
-              <div class="faq-amend">
-                <span class="amend-label">Amended with unofficial information</span>
-                <p>In practice (from the Expert Group demo): authorization works on a good-faith model at first: you sign in via EU Login, claim to represent a manufacturer, and can submit immediately. The designated CSIRT validates the association afterwards, out of band; the method is decided per country and a pending validation never blocks submission. Only two users are allowed per manufacturer: a primary and a backup.</p>
-                <p>Validation is deliberately low-key. For Germany, BSI has indicated it will likely just check the email domain, with no ELSTER certificate required; other Member States will validate differently, so this should not be generalised.</p>
-                <p>The portal will be English only, at least initially, and does not support attachments or links; where more detail is needed, CSIRTs follow up directly.</p>
-              </div>
             </div>
           </details>
           <details class="faq">
@@ -446,13 +402,9 @@
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q15</span><span>Can the notification workflow be automated for large numbers of notifications from one manufacturer?</span><span class="faq-tag">+ unofficial</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q15</span><span>Can the notification workflow be automated for large numbers of notifications from one manufacturer?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p>Organisations might automate reporting workflows and integrate reporting requirements into their systems and databases; however, no Application Programming Interfaces will be provided at this stage.</p>
-              <div class="faq-amend">
-                <span class="amend-label">Amended with unofficial information</span>
-                <p>From the Expert Group demo: an API for integration with national platforms is planned for a later iteration of the portal, for now submissions to the SRP are made manually. ENISA's stated view is that even the highest-volume company does not see enough actively exploited vulnerabilities to justify an automated submission API. It was also mentioned that it is hard to write secure APIs and that automatic submissions are not in scope of the CRA and therefore not in scope for the SRP. Data export from the platform is currently also not foreseen.</p>
-              </div>
             </div>
           </details>
           <details class="faq">
@@ -524,13 +476,9 @@
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q18</span><span>How do I know what is the national CSIRT to which I should report through the CRA SRP?</span><span class="faq-tag">+ unofficial</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q18</span><span>How do I know what is the national CSIRT to which I should report through the CRA SRP?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p>The national CSIRT to which you should report is essentially determined by your main location of establishment (or of the establishment of your authorised representative, if you are not established in the EU). CRA Article 14(7) provides detailed information. Additional information (list of national CSIRTs designated as coordinators) will be provided by ENISA at a later stage.</p>
-              <div class="faq-amend">
-                <span class="amend-label">Amended with unofficial information</span>
-                <p>From the Expert Group demo: the platform will never suggest which CSIRT to choose. That choice, and its correctness, is the manufacturer's responsibility.</p>
-              </div>
             </div>
           </details>
           <details class="faq">
