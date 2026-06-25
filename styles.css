@@ -47,6 +47,82 @@
   --chip-opt-bg:  #e6eaee; --chip-opt-text:  #687079;
 }
 
+/* ---------- dark palette ---------------------------------------------- */
+:root[data-theme="dark"] {
+  --bg:            #0f1316;
+  --sidebar:       #161a1f;
+  --card:          #1a1f25;
+  --card-alt:      #20262d;
+  --group-row:     #1f2a2a;
+  --hairline:      #2a313a;
+  --hairline-soft: #1f252c;
+  --group-rule:    #2a313a;
+
+  --ink:    #eef1f4;
+  --body:   #b6bec7;
+  --muted:  #9aa2ab;
+  --faint:  #7a828b;
+  --faintest: #5e666f;
+
+  --accent:        #4cb6b8;
+  --accent-tint:   #16363a;
+  --accent-strong: #7fd1d2;
+  --rail-halo:     #1d3034;
+  --rail-line:     #323a44;
+
+  --amber-text:    #d8a558;
+  --amber-dot:     #d8a558;
+  --amber-chip-bg: #3a2a16;
+  --amber-callout-bg: #2a2114;
+  --amber-callout-border: #4a3a1e;
+
+  --info-bg:     #19222a;
+  --info-border: #2a3640;
+  --callout-ink: #c2c9d2;
+
+  --chip-mand-bg: #16363a; --chip-mand-text: #7fd1d2;
+  --chip-cond-bg: #3a2a16; --chip-cond-text: #d8a558;
+  --chip-opt-bg:  #262d35; --chip-opt-text:  #a3abb3;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:            #0f1316;
+    --sidebar:       #161a1f;
+    --card:          #1a1f25;
+    --card-alt:      #20262d;
+    --group-row:     #1f2a2a;
+    --hairline:      #2a313a;
+    --hairline-soft: #1f252c;
+    --group-rule:    #2a313a;
+
+    --ink:    #eef1f4;
+    --body:   #b6bec7;
+    --muted:  #9aa2ab;
+    --faint:  #7a828b;
+    --faintest: #5e666f;
+
+    --accent:        #4cb6b8;
+    --accent-tint:   #16363a;
+    --accent-strong: #7fd1d2;
+    --rail-halo:     #1d3034;
+    --rail-line:     #323a44;
+
+    --amber-text:    #d8a558;
+    --amber-dot:     #d8a558;
+    --amber-chip-bg: #3a2a16;
+    --amber-callout-bg: #2a2114;
+    --amber-callout-border: #4a3a1e;
+
+    --info-bg:     #19222a;
+    --info-border: #2a3640;
+    --callout-ink: #c2c9d2;
+
+    --chip-mand-bg: #16363a; --chip-mand-text: #7fd1d2;
+    --chip-cond-bg: #3a2a16; --chip-cond-text: #d8a558;
+    --chip-opt-bg:  #262d35; --chip-opt-text:  #a3abb3;
+  }
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -479,4 +555,35 @@ dl.facts dd { margin: 0; padding: 11px 0; border-top: 1px solid var(--hairline-s
   dl.facts { grid-template-columns: 1fr; }
   dl.facts dt { padding-bottom: 0; }
   dl.facts dd { border-top: none; padding-top: 2px; }
+}
+
+/* ---------- theme toggle --------------------------------------------- */
+.theme-toggle {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; padding: 8px 10px; margin-bottom: 12px;
+  background: transparent; border: 1px solid var(--hairline);
+  border-radius: 8px; cursor: pointer;
+  color: var(--body); font: 500 12px/1 'IBM Plex Sans', sans-serif;
+}
+.theme-toggle:hover { background: var(--card-alt); color: var(--ink); }
+.theme-toggle-track {
+  position: relative; flex: none;
+  width: 26px; height: 14px;
+  background: var(--hairline); border-radius: 999px;
+  transition: background .2s ease;
+}
+.theme-toggle-thumb {
+  position: absolute; top: 1px; left: 1px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--sidebar);
+  box-shadow: 0 1px 2px rgba(0,0,0,.25);
+  transition: transform .2s ease, background .2s ease;
+}
+.theme-toggle[aria-pressed="true"] .theme-toggle-track { background: var(--accent); }
+.theme-toggle[aria-pressed="true"] .theme-toggle-thumb { transform: translateX(12px); }
+
+/* dark-mode screenshot framing: lift white-bg shots off the dark card */
+:root[data-theme="dark"] .shot { box-shadow: 0 0 0 1px var(--hairline); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .shot { box-shadow: 0 0 0 1px var(--hairline); }
 }

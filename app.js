@@ -150,3 +150,27 @@
     else if (e.key === 'ArrowRight') show(idx + 1);
   });
 })();
+
+// ---- theme toggle ----------------------------------------------------
+(function () {
+  var btn = document.querySelector('.theme-toggle');
+  if (!btn) return;
+  var root = document.documentElement;
+  var mql = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function current() {
+    var explicit = root.getAttribute('data-theme');
+    if (explicit) return explicit;
+    return mql.matches ? 'dark' : 'light';
+  }
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    btn.setAttribute('aria-pressed', String(theme === 'dark'));
+    try { localStorage.setItem('theme', theme); } catch (e) {}
+  }
+
+  btn.setAttribute('aria-pressed', String(current() === 'dark'));
+  btn.addEventListener('click', function () {
+    apply(current() === 'dark' ? 'light' : 'dark');
+  });
+})();
