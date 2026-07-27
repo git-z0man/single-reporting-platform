@@ -4,7 +4,7 @@ url: https://www.enisa.europa.eu/topics/product-security-and-certification/singl
 retrieved: 2026-07-20
 purpose: Baseline snapshot for change detection. Future runs diff the live page against this file.
 note: One logical block per FAQ entry to keep diffs readable. Update `retrieved` and content when a change is confirmed.
-last_check: 2026-07-20
+last_check: 2026-07-27
 last_change: 2026-07-17
 ---
 
@@ -210,3 +210,4 @@ As provided in CRA Article 16, ENISA is engaging the CSIRTs Network in developme
 - 2026-06-25: checked — no changes detected (still Q1–Q23, same intro and Q16 data-field table values). File unchanged except this log entry.
 - 2026-06-25: file dropped from this repo as part of public-release sanitisation (internal change-detection only; full version maintained privately). See commit 2eb8a20.
 - 2026-07-20: file recreated in this repo at explicit user request. Checked — page shows "Updated: 17 July 2026"; live page flags Q9 and Q17 as "[Updated]". Q9 rewritten with full registration/EU Login process detail (previously a placeholder pending June 2026 manuals); Q17 updated from "available within June" to "published in July," now naming short videos and a fact sheet. No questions added or removed (still Q1–Q23). Q16 data-field table values verified unchanged.
+- 2026-07-27: checked — no changes detected. Page still shows "Updated: 17 July 2026" with Q9 and Q17 flagged "[Updated]", still Q1–Q23, Q9 and Q17 text verified verbatim identical to baseline.
