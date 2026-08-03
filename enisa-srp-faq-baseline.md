@@ -1,14 +1,22 @@
 ---
 source: ENISA — Single Reporting Platform (SRP)
 url: https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp
-retrieved: 2026-08-01
+retrieved: 2026-08-03
 purpose: Baseline snapshot for change detection. Future runs diff the live page against this file.
 note: One logical block per FAQ entry to keep diffs readable. Update `retrieved` and content when a change is confirmed.
-last_check: 2026-08-01
-last_change: 2026-08-01
+last_check: 2026-08-03
+last_change: 2026-08-03
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
+
+## Change log (2026-08-03 check, vs. 2026-08-01 baseline)
+
+No FAQ questions were added, deleted, or changed (still Q1–Q23, same "Updated: 31 July 2026" note, same data-field table values, same guidance-documents list). One change found outside the FAQ:
+
+- **New: "CRA Single Reporting Platform Factsheet" section** — added between the intro paragraphs and the "Frequently Asked Questions" heading. Reads: "ENISA has published a factsheet on the CRA Single Reporting Platform. It can be downloaded here, currently in English." Links to https://www.enisa.europa.eu/media/57221. This factsheet was previously only referenced in text (Q17: "Guidance instructions and a fact sheet have been published...") with no dedicated section or direct download link on the page.
+
+All 23 FAQ entries, the Q16 data-field table, and the guidance-documents list at the bottom were verified word-for-word unchanged from the 2026-08-01 baseline.
 
 ## Change log (2026-08-01 check, vs. 2026-07-20 baseline)
 
@@ -32,6 +40,10 @@ The CRA mandates manufacturers of products with digital elements to report activ
 The CRA brings transparency to the vulnerability disclosure processes and strengthens how EU CSIRTs can mitigate risks stemming from vulnerabilities.
 
 Further information: Regulation (EU) 2024/2847 (EUR-Lex).
+
+### CRA Single Reporting Platform Factsheet [New, first seen 2026-08-03]
+
+ENISA has published a factsheet on the CRA Single Reporting Platform. It can be downloaded here (https://www.enisa.europa.eu/media/57221), currently in English.
 
 This FAQ collection on the CRA SRP is intended for publication on the ENISA website and is updated during implementation. See also the European Commission's CRA reporting page (digital-strategy.ec.europa.eu/en/policies/cra-reporting) and, in particular, the FAQ document linked there (ec.europa.eu/newsroom/dae/redirection/document/122331).
 
@@ -224,3 +236,4 @@ Linked at the bottom of the page (referenced from Q9, Q10, Q17):
 - 2026-06-25: file dropped from this repo as part of public-release sanitisation (internal change-detection only; full version maintained privately). See commit 2eb8a20.
 - 2026-07-20: file recreated in this repo at explicit user request. Checked — page shows "Updated: 17 July 2026"; live page flags Q9 and Q17 as "[Updated]". Q9 rewritten with full registration/EU Login process detail (previously a placeholder pending June 2026 manuals); Q17 updated from "available within June" to "published in July," now naming short videos and a fact sheet. No questions added or removed (still Q1–Q23). Q16 data-field table values verified unchanged.
 - 2026-08-01: checked — page now shows "Updated: 31 July 2026" (no more per-question "[Updated]" tags on the live page itself). Still Q1–Q23, no questions added or removed. Three entries changed: Q9 (added closing pointer to guidance documents), Q10 (draft Communication → final "Guidance to support timely Cyber Resilience Act implementation" published 27 July 2026), Q17 (training materials now published, not just promised; added webinar "two weeks before" launch detail). New guidance-documents list added at bottom of page ("CRA SRP - AR User registration" and "CRA SRP - AR Notification submission and update", both dated 31/07/2026). Intro, Q1, Q8, and Q16 data-field table verified unchanged. File updated accordingly.
+- 2026-08-03: checked (fetched raw HTML directly, not just the summarizing fetch tool, to allow a full word-for-word diff) — still "Updated: 31 July 2026", still Q1–Q23, no questions added/removed/changed, Q16 data-field table and bottom guidance-documents list verified unchanged. One new item found: a "CRA Single Reporting Platform Factsheet" section with a direct download link (https://www.enisa.europa.eu/media/57221) now appears between the intro and the FAQ heading — previously the factsheet was only mentioned in Q17's text with no dedicated link. File updated accordingly.
