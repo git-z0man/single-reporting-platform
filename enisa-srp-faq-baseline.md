@@ -1,15 +1,27 @@
 ---
 source: ENISA — Single Reporting Platform (SRP)
-url: https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp
+url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp
+old_url: https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp (now redirects to `url` above, first seen 2026-08-31)
 faq_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions
-retrieved: 2026-08-24
+retrieved: 2026-08-31
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) against this file.
 note: One logical block per FAQ entry to keep diffs readable. Update `retrieved` and content when a change is confirmed.
-last_check: 2026-08-24
-last_change: 2026-08-24
+last_check: 2026-08-31
+last_change: 2026-08-31
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
+
+## Change log (2026-08-31 check, vs. 2026-08-24 baseline)
+
+No questions added, deleted, or reordered — still Q1–Q23. Three questions had their answer text changed (Q1, Q6, Q17); everything else (intro, Q2–Q5, Q7–Q16 incl. the data-field table, Q18–Q23, guidance documents, factsheet) verified unchanged via raw-HTML word-for-word diff.
+
+- **Main page URL changed**: the main SRP page's canonical URL moved from `.../topics/product-security-and-certification/single-reporting-platform-srp` to `.../topics/product-security/single-reporting-platform-srp` (now recorded as `url` above; old URL kept as `old_url` since it still resolves via a redirect). This aligns the main page's URL with the FAQ subpage's URL, which already used the `product-security` (not `product-security-and-certification`) path segment. Breadcrumb now reads Topics → Product Security → Single Reporting Platform (SRP).
+- **Q1 answer reworded**: substance unchanged, but restructured into two shorter paragraphs and shifted from future tense ("CRA SRP will be...") to present tense ("The CRA SRP is an online tool..."). No new facts, obligations, or figures.
+- **Q6 answer changed**: the specific trigger date for voluntary-reporting functionality was removed — "This functionality will be enabled in the CRA SRP after 11 September 2026" is now "In the future, the platform will also offer functionality for voluntary reporting. This functionality will be enabled in the next phase of the CRA SRP." (no longer tied to a specific date).
+- **Q17 answer changed**: "Other material, including short videos, will be published closer to the launch of the Platform." is now "Other material, including a PDF manual tutorial videos, will be published closer to the launch of the Platform." (adds a PDF manual to the planned material; likely a missing "and" on ENISA's side, reproduced verbatim here).
+- Page-level "Updated: 03 August 2026" note is unchanged despite the above wording edits — ENISA did not bump the displayed update date for this pass.
+- Minor cosmetic-only items, not treated as substantive: Q18 has a stray typo "Iist" for "list" (reproduced verbatim, not corrected); the Q16 data-field table's i22 row (the two "severity" sub-bullets under i21) is confirmed via raw HTML to be its own explicit table row with blank A/X/O values — same effective meaning as before, just more finely broken out in the markup.
 
 ## Change log (2026-08-24 check, vs. 2026-08-03 baseline)
 
@@ -48,9 +60,9 @@ ENISA has published a factsheet on the CRA Single Reporting Platform. It can be 
 Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 03 August 2026". Intro text on the FAQ page: "This is a collection of frequently asked questions on Cyber Resilience Act Single Reporting Platform (CRA SRP). Document is intended for publication on ENISA website and is updated regularly during the implementation of CRA SRP. Please note that the European Commission also provides guidance on the implementation of the CRA, please consult the question 10 of this FAQ for the references."
 
 ### Q1. What is the Cyber Resilience Act's Single Reporting Platform (CRA SRP)?
-CRA SRP will be a centralized electronic system designed to simplify the reporting obligations for manufacturers and open-source software stewards under the Cyber Resilience Act. It will serve as a "single entry point", allowing for manufacturers to report actively exploited vulnerabilities and severe incidents having an impact on the security of products with digital elements only once, rather than having to notify multiple national authorities individually.
+The CRA Single Reporting Platform (SRP) is an online tool for manufacturers and open-source software stewards to meet their obligation to report actively exploited vulnerabilities and severe incidents having an impact on the security of products with digital elements under the Cyber Resilience Act (CRA). Designed to simplify EU reporting obligations, the SRP enables manufacturers to report only once, rather than having to notify multiple national authorities individually. The platform incorporates security measures to protect confidentiality.
 
-Manufacturers will submit notifications electronically through the platform, which will allow them select CSIRT designated as coordinator (based on the location of the manufacturer's main establishment - see CRA Article 14(7) on determining relevant CSIRT for reporting) and ENISA simultaneously. The CSIRT will then disseminate the information without delay to other relevant CSIRTs in Member States where the product is available, and to market surveillance authorities as needed. The platform will incorporate security measures to protect confidentiality.
+Manufacturers and open-source software stewards submit notifications electronically through the SRP and select the relevant CSIRT designated as coordinator. In general, the national CSIRT to which the notification should be submitted is primarily determined by the main location of establishment, in accordance with Article 14(7) of the CRA. Once submitted, the notification is simultaneously made available to ENISA, while the CSIRT initially receiving it disseminates the information to other relevant CSIRTs in Member States where the product is also available, and to market surveillance authorities as needed.
 
 ### Q2. What is the legal basis for CRA SRP?
 The legal basis for the operation of the SRP is the Cyber Resilience Act (CRA), which states in Article 16(1): For the purposes of the notifications referred to in Article 14(1) and (3) and Article 15(1) and (2) and in order to simplify the reporting obligations of manufacturers, a single reporting platform shall be established by ENISA. The day-to-day operations of that single reporting platform shall be managed and maintained by ENISA. The architecture of the single reporting platform shall allow Member States and ENISA to put in place their own electronic notification end-points.
@@ -71,7 +83,7 @@ Under CRA, manufacturers will be obliged to notify two specific types of occurre
 Open-source software stewards are subject to reporting obligations to the extent that they are involved with products with digital elements, as per Article 24(3) of CRA.
 
 ### Q6. What else can be reported in the platform?
-The platform will also offer functionality to allow voluntary reporting. This functionality will be enabled in the CRA SRP after 11 September 2026.
+In the future, the platform will also offer functionality for voluntary reporting. This functionality will be enabled in the next phase of the CRA SRP.
 
 Any natural or legal person may notify on a voluntary basis:
 - Vulnerabilities contained in a product with digital elements;
@@ -182,7 +194,7 @@ i24. Type of threat or root cause that is likely to have triggered the incident:
 i25. Applied and ongoing mitigation measures: O / O / X
 
 ### Q17. Will any trainings be provided for the relevant parties?
-Yes. ENISA recognises the need to ensure that all relevant contributors and reporting teams have sufficient time to prepare ahead of the CRA reporting obligations becoming applicable. Guidance instructions and a fact sheet have been published by ENISA in July 2026 and are successively expanded and updated. Other material, including short videos, will be published closer to the launch of the Platform. To support training and preparation efforts, ENISA also foresees to hold a webinar two weeks before the entry into service of the SRP.
+Yes. ENISA recognises the need to ensure that all relevant contributors and reporting teams have sufficient time to prepare ahead of the CRA reporting obligations becoming applicable. Guidance instructions and a fact sheet have been published by ENISA in July 2026 and are successively expanded and updated. Other material, including a PDF manual tutorial videos, will be published closer to the launch of the Platform. To support training and preparation efforts, ENISA also foresees to hold a webinar two weeks before the entry into service of the SRP.
 
 ### Q18. How do I know what is the national CSIRT to which I should report through the CRA SRP?
 The national CSIRT to which you should report through the SRP is essentially determined by your main location of establishment (or of the establishment of your authorised representative, if you are not established in the EU). The CRA Art.14(7) provides detailed information allowing for the manufacturer to identify the national CSIRT to report to.
@@ -238,3 +250,4 @@ Support contact listed on the main page: cra-srp-helpdesk[@]enisa.europa.eu
 - 2026-08-01: checked — page now shows "Updated: 31 July 2026" (no more per-question "[Updated]" tags on the live page itself). Still Q1–Q23, no questions added or removed. Three entries changed: Q9 (added closing pointer to guidance documents), Q10 (draft Communication → final "Guidance to support timely Cyber Resilience Act implementation" published 27 July 2026), Q17 (training materials now published, not just promised; added webinar "two weeks before" launch detail). New guidance-documents list added at bottom of page ("CRA SRP - AR User registration" and "CRA SRP - AR Notification submission and update", both dated 31/07/2026). Intro, Q1, Q8, and Q16 data-field table verified unchanged. File updated accordingly.
 - 2026-08-03: checked (fetched raw HTML directly, not just the summarizing fetch tool, to allow a full word-for-word diff) — still "Updated: 31 July 2026", still Q1–Q23, no questions added/removed/changed, Q16 data-field table and bottom guidance-documents list verified unchanged. One new item found: a "CRA Single Reporting Platform Factsheet" section with a direct download link (https://www.enisa.europa.eu/media/57221) now appears between the intro and the FAQ heading — previously the factsheet was only mentioned in Q17's text with no dedicated link. File updated accordingly.
 - 2026-08-24: checked (fetched raw HTML directly for both the main SRP page and, after discovering it, the new dedicated FAQ subpage, for a full word-for-word diff). Major structural change: the FAQ content moved off the main page onto its own subpage (`faq_url`), which now shows "Updated: 03 August 2026" and a single page-level update note instead of per-question "[Updated]" tags. All 23 questions received a copyediting pass (wording/punctuation only, no substantive changes to dates, deadlines, or obligations) and Q16's 39-entry data-field table was verified value-for-value unchanged. New third guidance document added ("CRA SRP - AR Interface functions", updated 14/08/2026); the two existing guidance documents now show "Updated: 3/08/2026" (previously 31/07/2026). Main-page intro paragraph reworded (new lead sentence added; standalone EUR-Lex reference line replaced with an inline link). Factsheet section and its download link unchanged. File updated accordingly.
+- 2026-08-31: checked (fetched raw HTML directly for both the main SRP page and the FAQ subpage, for a full word-for-word diff; old main-page URL was found to now 301/meta-redirect to a new URL, so both were fetched). Still Q1–Q23, no questions added/removed/reordered. Main page's canonical URL changed from `.../topics/product-security-and-certification/single-reporting-platform-srp` to `.../topics/product-security/single-reporting-platform-srp` (old URL now redirects; recorded as `old_url`). Three answers changed in substance/wording: Q1 (reworded to present tense, same substance), Q6 (removed the specific "after 11 September 2026" trigger date for voluntary reporting, now "next phase of the CRA SRP"), Q17 (training material description changed from "short videos" to "a PDF manual tutorial videos"). Page-level "Updated: 03 August 2026" note was not bumped despite these edits. Intro, Q2–Q5, Q7–Q16 (incl. data-field table values), Q18–Q23, and guidance-documents section verified unchanged. File updated accordingly.
