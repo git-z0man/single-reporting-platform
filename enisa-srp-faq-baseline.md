@@ -3,11 +3,16 @@ source: ENISA — Single Reporting Platform (SRP)
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp
 old_url: https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp (now redirects to `url` above, first seen 2026-08-31)
 faq_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions
+guidance_urls:
+  - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-user-registration
+  - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update
+  - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-interface-functions
 retrieved: 2026-08-31
-purpose: Baseline snapshot for change detection. Future runs diff the live page(s) against this file.
-note: One logical block per FAQ entry to keep diffs readable. Update `retrieved` and content when a change is confirmed.
-last_check: 2026-08-31
-last_change: 2026-08-31
+guidance_retrieved: 2026-09-02
+purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page and the three guidance subpages listed in `guidance_urls` — against this file.
+note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or `guidance_retrieved`) and content when a change is confirmed.
+last_check: 2026-09-02
+last_change: 2026-09-02
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
@@ -239,6 +244,63 @@ As provided in CRA Article 16, ENISA is engaging the CSIRTs Network in developme
 
 Support contact listed on the main page: cra-srp-helpdesk[@]enisa.europa.eu
 
+## Guidance subpages — full content baseline
+
+**[New section, first captured 2026-09-02]**. The three guidance documents above are separate subpages (URLs in `guidance_urls` in the frontmatter) that were previously only tracked by title and "Updated:" date. As of 2026-09-02 their full content is captured below so future checks can diff them too, not just the summary list above. All three currently carry the disclaimer: "The information on this page is provided according to our current best knowledge and may be subject to change. Please ensure you consult the latest available guidance before applying these instructions."
+
+### Guidance: CRA SRP - AR User registration
+URL: see `guidance_urls`. Page note: "Last updated: 3/08/2026."
+
+This page provides information on the Assigned Representatives (AR) user registration in the SRP. It is intended for AR users (Primary and Secondary).
+
+AR users authenticate through EU Login when registering on the SRP. Authentication steps related to EU Login are not described here; all related information can be found at: https://trusted-digital-identity.europa.eu/index_en.
+
+Notes: Validation of the registration of the assigned representative (AR) by the CSIRT Designated as Coordinator (CDaC), which happens after the registration process described below, is not a prerequisite for fulfilling the CRA reporting obligation. The validation that an AR is authorised to submit a report on behalf of a specific manufacturer or open-source steward will take place after the first access to the platform, in parallel with the reporting process, and will not affect the ability to submit notifications through the SRP. As the specific validation procedure may vary between CSIRTs and remains the responsibility of the relevant CSIRT, manufacturers and open-source stewards are advised to register and initiate the validation process only when they need to submit a specific notification, rather than creating an account pre-emptively.
+
+**Registration as Primary Assigned Representative & AR Association with Manufacturer via "Registration Flow"**
+Follow these steps to register on the SRP and associate your account with a manufacturer.
+- Pre-conditions: You are not already registered as an SRP user; you already have an active EU Login account.
+- Steps: Open the SRP website (URL to be provided at launch), select your role (AR) and click "Continue" (note: hovering over the "i" icon shows role info) → Select the designated CSIRT from the drop-down menu and click "Continue" → Authenticate through EU Login → Read and accept the legal agreement → Confirm the accuracy of your pre-filled personal details (First Name, Last Name, Email, Legal name), click "Continue" → Enter the manufacturer details (manufacturer name, manufacturer address, additional information) and click "Continue". Exceptions: omitting mandatory manufacturer details (manufacturer name, additional information) returns an error and keeps "Continue" disabled.
+- Expected result: Registration is completed, subject only to approval of the AR association with manufacturer. Account is "Active" with role "AR Primary User". A confirmation email is sent. If manufacturer details were included, the manufacturer entity is created in the SRP.
+
+**Registration via Invitation (Secondary AR)**
+Follow these steps if you, as a new Secondary AR, wish to register on the SRP following an email invitation received from the Primary AR.
+- Pre-conditions: You are not already registered as an SRP user; you already have an active EU Login account; you have received an email invitation from the Primary AR.
+- Steps: Click the link in the email invitation → authenticate through EU Login (exception: an invitation link expired — more than 7 days since sent — redirects to an error page) → Confirm the accuracy of your pre-filled personal details (First Name, Last Name, Email, Legal name) and click "Continue" → Confirm the accuracy of the pre-filled manufacturer details for the manufacturer associated with the Primary AR who initiated the invitation and click "Accept invitation".
+- Expected result: You are registered as a Secondary AR with role "AR Backup User" for the relevant manufacturer, status "Active". If registration is not completed within 7 days of the invitation being sent, the user record status automatically changes to "Invitation Expired".
+
+### Guidance: CRA SRP - AR Notification submission and update
+URL: see `guidance_urls`. Page note: "Last updated: 3/08/2026."
+
+This page provides information on the Assigned Representatives (AR) submission and update of notifications in the SRP. It is intended for AR users (Primary and Secondary/Backup).
+
+**Submit a New Notification**
+Purpose: submit a new notification for an Actively Exploited Vulnerability (AEV) or a Severe Incident (SI), to inform the relevant users of the CSIRT Designated as Coordinator (CDaC) so they can review, disseminate and further process it. Pre-conditions: user status "Active", logged in, Dashboard opened.
+
+- *Submit an Early Warning*: Click "Submit new notification" (auto-created, pre-filled with user type AR) → fill mandatory/optional fields under the Early Warning tab → select an existing manufacturer (approved or pending validation) or add a new one → submit or save as draft → optionally fill Additional Notes → notification listed on the Dashboard. Exception: omitting mandatory data returns an error naming the missing data.
+- *Submit a 72-hour Notification*: Pre-conditions: status "Active", logged in, Dashboard open, an Early Warning already submitted. Steps: click an existing notification on the Dashboard → fill mandatory/optional fields under the 72-hour Notification tab → submit or save as draft → notification listed on the Dashboard, subject to CSIRT validation. Exception: omitting mandatory data returns an error.
+- *Submit a Final Report*: Pre-conditions: status "Active", logged in, Dashboard open, an Early Warning and a 72-hour Notification already submitted. Steps: click an existing notification → fill mandatory/optional fields under the Final Report tab → submit the Final Report or save as draft. Exception: omitting mandatory data returns an error.
+- *Expected results*: Draft — saved notification state becomes "Draft", visible only to the author. Early Warning — stored and accessible to the CDaC and ENISA; email/alert sent to the CDaC, to the submitter and all other ARs of the selected manufacturer, and automatically to ENISA; state becomes "Early Warning"; other concerned CSIRTs receive it only after manual dissemination by the CDaC. 72-hour Notification — state becomes "72h Submitted" (or "72h Submitted under PEC" if Particularly Exceptional Circumstances apply); email/alert sent to the CDaC, submitter, other ARs, and to ENISA automatically only when PEC has not been invoked; other CSIRTs receive it only after manual CDaC dissemination. Final Report — state becomes "FR Submitted" (sub-state "Final Report"); ENISA receives it automatically only when PEC has not been invoked; other CSIRTs receive it only after manual CDaC dissemination.
+
+**Update an Existing Notification**
+Purpose: update an existing notification for an AEV or SI. Pre-conditions: status "Active" and logged in; a notification has been previously submitted or saved as draft; notification is not closed (closed notifications cannot be updated); the Final Report is not submitted (the notification becomes non-editable after Final Report submission). Steps: open a notification and update the necessary fields under the Notification tab → click "Update" to save. Exception: omitting mandatory data on "Update" returns an error. The SRP automatically notifies the CDaC via alert and email, and automatically notifies ENISA and any concerned CSIRTs that previously received the notification through dissemination, via alert and email.
+
+### Guidance: CRA SRP - AR Interface functions
+URL: see `guidance_urls`. Page note: "Last updated: 14/08/2026."
+
+This section explains the AR's interface of the SRP for various functions that can be performed. Note: AR users can access the Dashboard only after successfully logging in and while their SRP user status is "Active", subject to applicable role and association restrictions.
+
+- **View Personal and Update Manufacturer Details through Settings**: Pre-conditions: status "Active", logged in. Steps: open the Dashboard, click your profile name → open the profile drop-down → click Settings → view personal details or update manufacturer details using the same steps as the registration flow.
+- **Invite Secondary AR (Primary AR only)**: Purpose: as Primary AR, invite a Secondary AR for the same manufacturer. Pre-conditions: status "Active", logged in; you hold the "AR User Primary" role for the specific manufacturer; the invitee's email is not already registered in the SRP. Steps: in Settings, select the option to add a Secondary AR for the manufacturer you represent → enter the new Secondary AR's email address and click "Send Invitation". Expected result: an email is sent instructing the Secondary AR to complete registration; a new user record is created in the SRP (email + manufacturer details only), status "Pending Invitation", no role yet assigned.
+- **Add an Association with an Additional Manufacturer through Settings**: Pre-conditions: status "Active", logged in. Steps: Dashboard → profile menu → Settings → "Association Management" → "Add Manufacturer" → enter required details for the new manufacturer → "Save". A pop-up confirms creation. Exception: omitting the mandatory Manufacturer Name returns an error and keeps "Continue" disabled. Expected result: the manufacturer is created and the AR–manufacturer association is created with status "Unverified"; a verification request goes to the CSIRT User/Admin of the selected CDaC for review and approval; a confirmation email is sent. As an unverified AR you can submit only up to 10 notifications.
+- **Claim Primary AR Role as a Secondary AR**: Purpose: as a Secondary AR, request to become Primary AR. Pre-conditions: you are a Secondary AR associated with a manufacturer; status "Active", logged in. Steps: Dashboard → profile menu → Settings → select the option to claim the Primary AR role for the manufacturer. A pop-up confirms the request, which is sent to the CDaC for review. Expected result: request created and sent to the designated CDaC for review.
+- **Delete AR – Manufacturer Association**: Purpose: manage the association of Primary/Secondary AR users with one or more manufacturer(s). Pre-conditions: status "Active", logged in; valid EU Login account able to authenticate; the AR–manufacturer association has been verified. Steps: navigate to the AR Association management page (a Primary AR can remove their own association or a Secondary AR's; a Secondary AR can remove only their own) → click "Remove Association" and confirm. Expected result: the AR Association is removed and its status updated to "Deleted".
+- **Dashboard**: Purpose: access the Dashboard, view/search/sort/filter notifications, and access notification details. Accessible via a valid URL or the Dashboard button. Pre-condition: status "Active", logged in.
+  - *View the Dashboard*: shows notifications accessible to the manufacturer associated with you; only your own draft notifications are shown (not drafts created by another AR of the same manufacturer).
+  - *Search, Sort & Filter Notifications*: Pre-conditions: status "Active", logged in, at least one notification previously submitted/saved as draft. Search by Notification ID, Manufacturer, or Title. Sort by Title (alphabetical) or Last Update (chronological). Filter via "All filters" by Member States where the product is available and Type of submission; "Action Required" shows only notifications with a pending action label; "Clear Filters" removes all applied filters. Exception: no matching results shown if none found.
+  - *View Notification Details*: click a notification to view its details.
+- **View Alerts**: Purpose: review alerts generated by the system. Pre-conditions: registered as a user in the SRP; valid EU Login account able to authenticate. Steps: open the Alerts tab. Alerts are triggered by an action requiring AR attention; light blue = unread, turns grey ("read") once opened via "Check notification"; red alerts appear only for exceptional/critical actions (e.g., a designated CSIRT has invalidated a submission). Expected result: the selected alert is marked "Read" and its details can be reviewed.
+
 ## Check log
 
 - 2026-06-19: baseline established (10 Q&A entries added in prior sync; see git history).
@@ -251,3 +313,4 @@ Support contact listed on the main page: cra-srp-helpdesk[@]enisa.europa.eu
 - 2026-08-03: checked (fetched raw HTML directly, not just the summarizing fetch tool, to allow a full word-for-word diff) — still "Updated: 31 July 2026", still Q1–Q23, no questions added/removed/changed, Q16 data-field table and bottom guidance-documents list verified unchanged. One new item found: a "CRA Single Reporting Platform Factsheet" section with a direct download link (https://www.enisa.europa.eu/media/57221) now appears between the intro and the FAQ heading — previously the factsheet was only mentioned in Q17's text with no dedicated link. File updated accordingly.
 - 2026-08-24: checked (fetched raw HTML directly for both the main SRP page and, after discovering it, the new dedicated FAQ subpage, for a full word-for-word diff). Major structural change: the FAQ content moved off the main page onto its own subpage (`faq_url`), which now shows "Updated: 03 August 2026" and a single page-level update note instead of per-question "[Updated]" tags. All 23 questions received a copyediting pass (wording/punctuation only, no substantive changes to dates, deadlines, or obligations) and Q16's 39-entry data-field table was verified value-for-value unchanged. New third guidance document added ("CRA SRP - AR Interface functions", updated 14/08/2026); the two existing guidance documents now show "Updated: 3/08/2026" (previously 31/07/2026). Main-page intro paragraph reworded (new lead sentence added; standalone EUR-Lex reference line replaced with an inline link). Factsheet section and its download link unchanged. File updated accordingly.
 - 2026-08-31: checked (fetched raw HTML directly for both the main SRP page and the FAQ subpage, for a full word-for-word diff; old main-page URL was found to now 301/meta-redirect to a new URL, so both were fetched). Still Q1–Q23, no questions added/removed/reordered. Main page's canonical URL changed from `.../topics/product-security-and-certification/single-reporting-platform-srp` to `.../topics/product-security/single-reporting-platform-srp` (old URL now redirects; recorded as `old_url`). Three answers changed in substance/wording: Q1 (reworded to present tense, same substance), Q6 (removed the specific "after 11 September 2026" trigger date for voluntary reporting, now "next phase of the CRA SRP"), Q17 (training material description changed from "short videos" to "a PDF manual tutorial videos"). Page-level "Updated: 03 August 2026" note was not bumped despite these edits. Intro, Q2–Q5, Q7–Q16 (incl. data-field table values), Q18–Q23, and guidance-documents section verified unchanged. File updated accordingly.
+- 2026-09-02: monitoring scope extended at user request to include the three guidance subpages themselves (previously only their title/date were tracked from the summary list on the main page), listed in `guidance_urls`. Fetched raw HTML of all three and captured full content as a new baseline section ("Guidance subpages — full content baseline"), dated `guidance_retrieved: 2026-09-02`. Their "Last updated" dates on this pass (3/08/2026, 3/08/2026, 14/08/2026) match what was already known from the summary list, so this is a first full-content capture, not a detected change. FAQ/main page content itself was not re-checked in this pass (still as of 2026-08-31); the next check should diff both the FAQ/main page and all three guidance subpages against this file.
