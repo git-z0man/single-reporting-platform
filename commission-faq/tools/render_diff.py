@@ -20,7 +20,9 @@ Usage:
 
 import argparse
 import difflib
+import glob
 import html
+import os
 import re
 import sys
 from datetime import date
@@ -150,7 +152,9 @@ def build_rows(old, new, context, full):
         if tag == "equal":
             span = i2 - i1
             if full:
-                head = tail = span
+                # Emit the whole block once, as leading context; the trailing
+                # loop must stay empty or every sentence would appear twice.
+                head, tail = span, 0
             else:
                 # Keep a little context either side of a change, elide the rest.
                 first = index == 0
@@ -247,9 +251,6 @@ def write_index(diff_dir):
     Called after every render so the index can never go stale: whatever HTML
     comparisons exist on disk are exactly what the index lists.
     """
-    import glob
-    import os
-
     pages = sorted(
         (os.path.basename(f) for f in glob.glob(os.path.join(diff_dir, "v*-v*.html"))),
         key=lambda n: [
@@ -331,7 +332,6 @@ def main():
     with open(args.out, "w", encoding="utf-8") as handle:
         handle.write(page)
 
-    import os
     write_index(os.path.dirname(args.out) or ".")
 
     total = counts["replace"] + counts["insert"] + counts["delete"]
