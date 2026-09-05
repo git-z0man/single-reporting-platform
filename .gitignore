@@ -12,3 +12,7 @@ img_1.png
 
 # Design references
 handoff/
+
+# Python bytecode
+__pycache__/
+*.pyc

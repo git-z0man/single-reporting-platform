@@ -1,0 +1,117 @@
+{
+  "document": "FAQs on the Cyber Resilience Act",
+  "publisher": "European Commission, DG CNECT",
+  "licence": "CC BY 4.0 (Commission Decision 2011/833/EU)",
+  "landing_page": "https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-implementation-frequently-asked-questions",
+  "factpage": "https://digital-strategy.ec.europa.eu/en/factpages/cyber-resilience-act-implementation",
+  "current_version": "1.4",
+  "last_check": "2026-09-05",
+  "last_change": "2026-09-04",
+  "draftable": {
+    "base_url": "https://api.draftable.com/v1",
+    "status": "blocked",
+    "note": "api.draftable.com is denied by this environment's network egress policy (403 on CONNECT). Comparisons cannot be created until the host is allowlisted and DRAFTABLE_ACCOUNT_ID / DRAFTABLE_AUTH_TOKEN are set.",
+    "comparisons": []
+  },
+  "versions": [
+    {
+      "version": "1.0",
+      "date": "2025-12-03",
+      "changes_stated": "New",
+      "source_document_id": null,
+      "archived": true,
+      "files": {
+        "pdf": {
+          "path": "commission-faq/versions/FAQs-on-the-CRA-v1.0.pdf",
+          "raw_url": "https://raw.githubusercontent.com/git-z0man/single-reporting-platform/main/commission-faq/versions/FAQs-on-the-CRA-v1.0.pdf",
+          "sha256": "dd8632510030c1d392bb51368e8868f51a03f6512e77a2e8fb99a69d6f3ec337",
+          "bytes": 585349
+        },
+        "text": {
+          "path": "commission-faq/text/FAQs-on-the-CRA-v1.0.txt",
+          "raw_url": "https://raw.githubusercontent.com/git-z0man/single-reporting-platform/main/commission-faq/text/FAQs-on-the-CRA-v1.0.txt",
+          "sha256": "d70e72e59d8fcf53101ea2f313fd8c53fdd96050f41c7beeaf62be4217147bf2",
+          "bytes": 162296
+        }
+      }
+    },
+    {
+      "version": "1.1",
+      "date": "2025-12-17",
+      "changes_stated": "Copyright notice; minor formatting issues",
+      "source_document_id": null,
+      "archived": false,
+      "note": "Not archived: no copy of v1.1 available. Its changes are visible in the v1.0 -> v1.2 diff."
+    },
+    {
+      "version": "1.2",
+      "date": "2026-01-16",
+      "changes_stated": "Minor correction of 6.2",
+      "source_document_id": null,
+      "archived": true,
+      "files": {
+        "pdf": {
+          "path": "commission-faq/versions/FAQs-on-the-CRA-v1.2.pdf",
+          "raw_url": "https://raw.githubusercontent.com/git-z0man/single-reporting-platform/main/commission-faq/versions/FAQs-on-the-CRA-v1.2.pdf",
+          "sha256": "a9d9f0cfefd5cabfc92fb7f01c895c3e2d2c69026ce5aec141415b5ed3113f16",
+          "bytes": 592841
+        },
+        "text": {
+          "path": "commission-faq/text/FAQs-on-the-CRA-v1.2.txt",
+          "raw_url": "https://raw.githubusercontent.com/git-z0man/single-reporting-platform/main/commission-faq/text/FAQs-on-the-CRA-v1.2.txt",
+          "sha256": "98d83839682112bd848d2f9eacc877a4353a4bf34814c6d7363e4d49694fbd61",
+          "bytes": 162852
+        }
+      }
+    },
+    {
+      "version": "1.3",
+      "date": "2026-07-01",
+      "changes_stated": "Deletion of subsection 4.6",
+      "source_document_id": null,
+      "archived": true,
+      "files": {
+        "pdf": {
+          "path": "commission-faq/versions/FAQs-on-the-CRA-v1.3.pdf",
+          "raw_url": "https://raw.githubusercontent.com/git-z0man/single-reporting-platform/main/commission-faq/versions/FAQs-on-the-CRA-v1.3.pdf",
+          "sha256": "4ae3e9665ed70b14cc0eed4bef5790dd9b097aed31711a613e7ff7197140151a",
+          "bytes": 598558
+        },
+        "text": {
+          "path": "commission-faq/text/FAQs-on-the-CRA-v1.3.txt",
+          "raw_url": "https://raw.githubusercontent.com/git-z0man/single-reporting-platform/main/commission-faq/text/FAQs-on-the-CRA-v1.3.txt",
+          "sha256": "d3abd423211551e34365b0e357ee8020573c27359aa4860d54d23248a55af753",
+          "bytes": 161132
+        }
+      }
+    },
+    {
+      "version": "1.4",
+      "date": "2026-09-04",
+      "changes_stated": "Addition of FAQ 5.5",
+      "source_document_id": 122331,
+      "source_document_id_markdown": 123307,
+      "archived": true,
+      "files": {
+        "pdf": {
+          "path": "commission-faq/versions/FAQs-on-the-CRA-v1.4.pdf",
+          "raw_url": "https://raw.githubusercontent.com/git-z0man/single-reporting-platform/main/commission-faq/versions/FAQs-on-the-CRA-v1.4.pdf",
+          "sha256": "43cd3da1d98a96733a2ab49457dd9d28a766ff71f8dc4f063a16c1092806b54a",
+          "bytes": 599159
+        },
+        "markdown": {
+          "path": "commission-faq/versions/FAQs-on-the-CRA-v1.4.md",
+          "raw_url": "https://raw.githubusercontent.com/git-z0man/single-reporting-platform/main/commission-faq/versions/FAQs-on-the-CRA-v1.4.md",
+          "sha256": "beb9b79ae2c7bd9473bc8fa2f267444960200868ea81ac0c1e4e25702cb9dbc9",
+          "bytes": 172521
+        },
+        "text": {
+          "path": "commission-faq/text/FAQs-on-the-CRA-v1.4.txt",
+          "raw_url": "https://raw.githubusercontent.com/git-z0man/single-reporting-platform/main/commission-faq/text/FAQs-on-the-CRA-v1.4.txt",
+          "sha256": "a620fd8f5ac6f18e137f0c2d01f24139a636cf340686bbd6a019360248faeaba",
+          "bytes": 161584
+        }
+      }
+    }
+  ]
+}
