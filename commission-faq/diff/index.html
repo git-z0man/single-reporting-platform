@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRA FAQ version comparisons</title>
+<style>
+:root{
+  --bg:#eef1f4; --card:#ffffff; --card-alt:#f5f7f9; --hairline:#e2e7ec;
+  --ink:#16191d; --body:#5e666f; --muted:#6b727b; --faint:#8b939c;
+  --accent:#16636b; --accent-tint:#eef4f4;
+  --chg-bg:#fafbfc; --chg-rule:#d8dee4;
+  --del-bg:#fdecec; --del-mark:#f7c9c9; --del-ink:#8a2020;
+  --ins-bg:#e9f6ec; --ins-mark:#bfe6c8; --ins-ink:#14612c;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#14171a; --card:#1c2024; --card-alt:#20252a; --hairline:#2c3238;
+    --ink:#e8ecef; --body:#aab3bc; --muted:#98a1aa; --faint:#79828b;
+    --accent:#5fb3ba; --accent-tint:#18292b;
+    --chg-bg:#1f242a; --chg-rule:#39414a;
+    --del-bg:#2e1a1a; --del-mark:#5e2a2a; --del-ink:#f0a9a9;
+    --ins-bg:#16281c; --ins-mark:#28532f; --ins-ink:#9adcaa;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.6 'IBM Plex Sans',system-ui,-apple-system,sans-serif;}
+.wrap{max-width:1400px;margin:0 auto;padding:32px 24px 80px}
+header{margin-bottom:28px}
+h1{font-size:24px;font-weight:600;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:14px;margin:0 0 18px}
+.sub a{color:var(--accent)}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 8px;padding:0;list-style:none}
+.stats li{background:var(--card);border:1px solid var(--hairline);border-radius:7px;
+  padding:7px 13px;font-size:13px;color:var(--body)}
+.stats b{color:var(--ink);font-weight:600}
+.note{background:var(--accent-tint);border:1px solid var(--hairline);border-radius:8px;
+  padding:12px 16px;font-size:13px;color:var(--body);margin:16px 0 0}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:14px 0 0}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.swatch{width:13px;height:13px;border-radius:3px;display:inline-block}
+.swatch.del{background:var(--del-mark)} .swatch.ins{background:var(--ins-mark)}
+table{width:100%;border-collapse:collapse;margin-top:24px;background:var(--card);
+  border:1px solid var(--hairline);border-radius:10px;overflow:hidden;table-layout:fixed}
+thead th{background:var(--card-alt);border-bottom:1px solid var(--hairline);
+  padding:11px 16px;text-align:left;font-size:13px;font-weight:600;color:var(--body);width:50%}
+td{padding:9px 16px;vertical-align:top;border-bottom:1px solid var(--hairline);
+  font-size:14px;line-height:1.62;word-wrap:break-word;overflow-wrap:break-word}
+tr:last-child td{border-bottom:none}
+td.ctx{color:var(--faint);background:transparent}
+td.del{background:var(--del-bg);color:var(--del-ink)}
+td.ins{background:var(--ins-bg);color:var(--ins-ink)}
+td.chg{background:var(--chg-bg);border-left:3px solid var(--chg-rule)}
+td.chg.l{border-left-color:var(--del-mark)} td.chg.r{border-left-color:var(--ins-mark)}
+td.empty{background:var(--card-alt)}
+mark.del{background:var(--del-mark);color:inherit;padding:1px 2px;border-radius:2px;
+  text-decoration:line-through;text-decoration-thickness:1px}
+mark.ins{background:var(--ins-mark);color:inherit;padding:1px 2px;border-radius:2px}
+tr.gap td{background:var(--card-alt);color:var(--faint);font-size:12px;text-align:center;
+  padding:5px;letter-spacing:.04em}
+footer{margin-top:32px;color:var(--faint);font-size:12px;line-height:1.7}
+footer a{color:var(--accent)}
+@media (max-width:820px){
+  thead{display:none}
+  table,tbody,tr,td{display:block;width:100%}
+  td.empty{display:none}
+  tr{border-bottom:1px solid var(--hairline)}
+  td{border-bottom:none}
+}
+
+ul.idx{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+ul.idx a{display:flex;flex-direction:column;gap:3px;background:var(--card);
+  border:1px solid var(--hairline);border-radius:9px;padding:15px 17px;
+  text-decoration:none;color:var(--ink)}
+ul.idx a:hover{border-color:var(--accent)}
+ul.idx span{color:var(--muted);font-size:13px}
+</style></head><body><div class="wrap">
+<header>
+<h1>FAQs on the Cyber Resilience Act</h1>
+<p class="sub">Version comparisons &middot; generated 2026-09-05 &middot;
+<a href="https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-implementation-frequently-asked-questions">source</a></p>
+<p class="note">Each page shows what changed between two released versions of the
+Commission's CRA FAQ, generated from the archived copies in this repository.
+Version 1.1 was never captured, so its edits appear inside the v1.0 &rarr; v1.2
+comparison.</p>
+</header>
+<ul class="idx">
+<li><a href="v1.0-v1.2.html"><b>v1.0 &rarr; v1.2</b><span>side-by-side comparison</span></a></li>
+<li><a href="v1.2-v1.3.html"><b>v1.2 &rarr; v1.3</b><span>side-by-side comparison</span></a></li>
+<li><a href="v1.3-v1.4.html"><b>v1.3 &rarr; v1.4</b><span>side-by-side comparison</span></a></li>
+</ul>
+<footer>
+<p>&copy; European Union, 2025. Reusable under
+<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> per Commission
+Decision 2011/833/EU. Comparisons are generated from unmodified archived copies.</p>
+<p>The FAQ is prepared by Commission services and is not an official position of the
+European Commission. Not legal advice.</p>
+</footer>
+</div></body></html>
