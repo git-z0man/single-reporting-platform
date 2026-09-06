@@ -30,3 +30,25 @@ first, per the usual flow), mark it ready for review and merge it immediately
 This auto-merge behavior applies only to PRs from this routine that touch
 `commission-cra-faq-baseline.md` and `commission-faq/` alone. Any other change
 to this repository follows the normal review-and-confirm flow.
+
+## SRP domain reachability routine
+
+`srp-domains-baseline.md` and everything under `srp-domains/` are maintained by
+a scheduled task that periodically re-checks the CRA Single Reporting Platform
+production zone (`cra-srp.enisa.europa.eu`, 29 hosts), records the reachability
+state, detects the go-live, and opens a PR.
+
+The same convention as the ENISA and Commission routines applies: no manual
+review is required. After pushing the branch and opening the PR (create it as a
+draft first, per the usual flow), mark it ready for review and merge it
+immediately — do not leave it open waiting for approval.
+
+This auto-merge behavior applies only to PRs from this routine that touch
+`srp-domains-baseline.md` and `srp-domains/` alone. Any other change to this
+repository follows the normal review-and-confirm flow.
+
+Note for anyone editing `srp-domains/check.sh`: liveness is decided on an HTTP
+status code and deliberately **not** on the TLS handshake. Behind an
+intercepting egress proxy both TCP and TLS succeed against every host while the
+platform is dark, so the obvious simplification silently breaks the monitor.
+The reasoning is in the script's header comment.

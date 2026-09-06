@@ -1,0 +1,6 @@
+Per-host evidence for the country → CSIRT mapping, written by the monitoring
+routine once a host goes live: the deciding public signal (final URL after
+redirects, HTTP status chain, TLS certificate SAN, page title) as
+<host>.txt, so every mapping in srp-domains-baseline.md stays checkable.
+
+Empty until go-live.
