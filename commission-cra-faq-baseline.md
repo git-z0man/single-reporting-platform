@@ -8,6 +8,7 @@ current_version: "1.4"
 current_version_date: 2026-09-04
 archive: commission-faq/versions/ (PDF + Markdown per version, manifest.json)
 canonical_text: commission-faq/text/ (diffable plain text per version)
+visual_diffs: commission-faq/diff/ (self-contained HTML, one page per version pair)
 retrieved: 2026-09-05
 factpage_retrieved: 2026-09-05
 purpose: Baseline snapshot for change detection on the Commission's CRA FAQ and its implementation factpage. Future runs compare the live document against the archived version and record the delta here.
@@ -129,23 +130,40 @@ baseline:
 | 30 Oct 2027 | Additional standardisation deliverables |
 | 11 Dec 2027 | Full CRA application |
 
-## Visual comparisons (Draftable)
+## Visual comparisons
 
-Textual diffs of the archived versions are produced locally by
-`commission-faq/tools/diff_versions.py` and are what the change log above is
-built from. Draftable adds a *visual*, document-aware comparison — the
-rendered side-by-side view that a naive text diff cannot give.
+Side-by-side comparisons are generated from the archived versions by
+`commission-faq/tools/render_diff.py` and committed as self-contained HTML.
+No external service, API key or network access is involved.
 
-**Not yet available.** `api.draftable.com` is denied by this environment's
-network egress policy (HTTP 403 on CONNECT), so no comparison has been
-created. See `commission-faq/README.md` for what needs to be unblocked. Once
-it is, this table is filled in by the monitoring routine:
+Browse them at
+**<https://git-z0man.github.io/single-reporting-platform/commission-faq/diff/>**
 
-| Comparison | Identifier | Viewer |
+| Comparison | Changes | Page |
 |---|---|---|
-| v1.0 → v1.2 | `cra-faq-v1.0-v1.2` | pending |
-| v1.2 → v1.3 | `cra-faq-v1.2-v1.3` | pending |
-| v1.3 → v1.4 | `cra-faq-v1.3-v1.4` | pending |
+| v1.0 → v1.2 | 11 modified, 1 deleted | [v1.0-v1.2.html](commission-faq/diff/v1.0-v1.2.html) |
+| v1.2 → v1.3 | 10 modified, 1 deleted | [v1.2-v1.3.html](commission-faq/diff/v1.2-v1.3.html) |
+| v1.3 → v1.4 | 6 modified, 1 inserted | [v1.3-v1.4.html](commission-faq/diff/v1.3-v1.4.html) |
+
+Each page shows changed passages with surrounding context, with word-level
+highlighting inside modified sentences. The counts above are change *blocks*,
+not individual words; most "modified" blocks in the v1.0 → v1.2 and v1.2 → v1.3
+comparisons are page-number shifts in the table of contents rather than
+substantive edits — the change log above says which ones matter.
+
+### Why not a commercial comparison service
+
+Draftable and Diffchecker were both evaluated. Neither is usable here: this
+environment's network egress policy is a strict allowlist and denies
+`api.draftable.com`, `draftable.com`, `help.draftable.com`,
+`api.diffchecker.com` and `diffchecker.com` alike (HTTP 403 on CONNECT,
+confirmed from a freshly started container, not just a long-running one).
+Draftable additionally requires a paid API plan, which is not available.
+
+`commission-faq/tools/draftable_compare.py` is kept in the repository: it is a
+complete, verified client, so if the host is ever allowlisted and credentials
+exist, a Draftable comparison can be created without rewriting anything. It is
+not part of the monitoring routine's normal path.
 
 ## Provenance
 

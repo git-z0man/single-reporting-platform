@@ -9,8 +9,8 @@
   "last_change": "2026-09-04",
   "draftable": {
     "base_url": "https://api.draftable.com/v1",
-    "status": "blocked",
-    "note": "api.draftable.com is denied by this environment's network egress policy (403 on CONNECT). Comparisons cannot be created until the host is allowlisted and DRAFTABLE_ACCOUNT_ID / DRAFTABLE_AUTH_TOKEN are set.",
+    "status": "unavailable",
+    "note": "Denied by this environment's network egress policy (403 on CONNECT), confirmed from a fresh container; and no API plan is available. Diffchecker is blocked identically. Visual comparisons are generated locally instead - see `comparisons`. commission-faq/tools/draftable_compare.py is kept as a working client in case this changes.",
     "comparisons": []
   },
   "versions": [
@@ -113,5 +113,42 @@
         }
       }
     }
-  ]
+  ],
+  "comparisons": {
+    "generator": "commission-faq/tools/render_diff.py",
+    "index": "https://git-z0man.github.io/single-reporting-platform/commission-faq/diff/",
+    "note": "Self-contained HTML, generated from the archived versions. No external service involved.",
+    "pages": [
+      {
+        "pair": "1.0-1.2",
+        "path": "commission-faq/diff/v1.0-v1.2.html",
+        "url": "https://git-z0man.github.io/single-reporting-platform/commission-faq/diff/v1.0-v1.2.html",
+        "changes": {
+          "modified": 11,
+          "inserted": 0,
+          "deleted": 1
+        }
+      },
+      {
+        "pair": "1.2-1.3",
+        "path": "commission-faq/diff/v1.2-v1.3.html",
+        "url": "https://git-z0man.github.io/single-reporting-platform/commission-faq/diff/v1.2-v1.3.html",
+        "changes": {
+          "modified": 10,
+          "inserted": 0,
+          "deleted": 1
+        }
+      },
+      {
+        "pair": "1.3-1.4",
+        "path": "commission-faq/diff/v1.3-v1.4.html",
+        "url": "https://git-z0man.github.io/single-reporting-platform/commission-faq/diff/v1.3-v1.4.html",
+        "changes": {
+          "modified": 6,
+          "inserted": 1,
+          "deleted": 0
+        }
+      }
+    ]
+  }
 }

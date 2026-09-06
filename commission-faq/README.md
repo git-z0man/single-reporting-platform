@@ -13,10 +13,12 @@ commission-faq/
   versions/           each released version, verbatim (PDF, and Markdown where published)
     manifest.json     version metadata: dates, sha256, raw URLs, Draftable comparison ids
   text/               canonical plain text per version, for diffing
+  diff/               rendered side-by-side comparisons (HTML) + index
   tools/
     extract_text.py   PDF -> canonical text
     diff_versions.py  substantive diff between two versions
-    draftable_compare.py  Draftable Compare API client (visual diff)
+    render_diff.py    side-by-side HTML comparison + index
+    draftable_compare.py  Draftable API client (unused; see below)
 ```
 
 ## Why an archive rather than an inlined baseline
@@ -65,37 +67,56 @@ artefacts differ between two renderings of an unchanged sentence — a plain
 `diff` reports dozens of changes that are not changes. Where the Commission
 publishes the Markdown rendering, diff that instead: it has no such artefacts.
 
-## Draftable — visual comparison
+## Visual comparison
 
-A text diff finds *what* changed. Draftable renders *how* the document
-changed, side by side, which is what you want when reviewing a 66-page legal
-document. It is a complement to the text diff, not a replacement, and the
-monitor works without it.
+A text diff finds *what* changed. A rendered side-by-side view shows *how*, which
+is what you want when reviewing a 66-page legal document.
 
-### Status in this environment: blocked
+`render_diff.py` produces that as a self-contained HTML page — no external CSS,
+JS, fonts or network calls — committed to the repository and served from GitHub
+Pages at
+<https://git-z0man.github.io/single-reporting-platform/commission-faq/diff/>
 
-`api.draftable.com` is denied by the network egress policy:
+```bash
+python3 commission-faq/tools/render_diff.py \
+    commission-faq/text/FAQs-on-the-CRA-v1.4.txt \
+    commission-faq/text/FAQs-on-the-CRA-v1.5.txt \
+    commission-faq/diff/v1.4-v1.5.html \
+    --old-label "v1.4 (04/09/2026)" --new-label "v1.5 (<date>)"
+```
+
+It uses the same whitespace-insensitive matching as `diff_versions.py`, adds
+word-level highlighting inside modified sentences, and shows changed passages
+with surrounding context (`--full` for the whole document, `--context N` to
+widen). After each render it regenerates `diff/index.html` by globbing the
+directory, so the index cannot go stale.
+
+The pages are theme-aware (light and dark) and collapse to a single column on
+narrow screens.
+
+## Commercial comparison services
+
+Draftable and Diffchecker were both evaluated and neither is usable here.
+
+This environment's network egress policy is a strict allowlist. It denies
+`api.draftable.com`, `draftable.com`, `help.draftable.com`,
+`api.diffchecker.com` and `diffchecker.com`:
 
 ```
 $ curl https://api.draftable.com/v1/comparisons
 curl: (56) CONNECT tunnel failed, response 403
 ```
 
-To enable it:
+This was confirmed from a freshly started container, so it is the policy
+itself, not a stale one cached by a long-running session. Draftable also
+requires a paid API plan, which is not available.
 
-1. **Allowlist `api.draftable.com`** in the Claude Code environment's network
-   policy (Settings → the environment used by the monitoring routine). Without
-   this no routine running in that environment can reach the API.
-2. **Set credentials** as environment variables on the routine's environment:
-   `DRAFTABLE_ACCOUNT_ID` and `DRAFTABLE_AUTH_TOKEN`, from
-   <https://api.draftable.com/account/credentials>. API access requires a paid
-   Draftable API plan; the free web comparison tool has no API.
-3. Verify with `python3 commission-faq/tools/draftable_compare.py check`.
+`draftable_compare.py` is kept anyway — it is a complete client, so nothing
+needs rewriting if the situation changes. It is not on the routine's normal
+path; the routine skips it unless `DRAFTABLE_ACCOUNT_ID` and
+`DRAFTABLE_AUTH_TOKEN` are set *and* the host answers.
 
-A self-hosted Draftable instance works too — point `DRAFTABLE_BASE_URL` at it
-(`https://<host>/api/v1`) and allowlist that host instead.
-
-### The API
+### The Draftable API, for reference
 
 Base URL `https://api.draftable.com/v1`. One header authenticates everything:
 `Authorization: Token <auth_token>`. The account id is never sent in a header;
@@ -113,9 +134,8 @@ it appears only in viewer URLs.
 
 A comparison has two sides, `left` and `right`, each given as flattened form
 fields — `left.file_type` plus either `left.file` (upload) or `left.source_url`
-(the API downloads it itself, retrying up to 4 times), and an optional
-`left.display_name`. Create also takes `identifier` (auto-generated if
-omitted), `public`, and `expiry_time`.
+(the API downloads it itself), and an optional `left.display_name`. Create also
+takes `identifier`, `public`, and `expiry_time`.
 
 Accepted file types: `pdf`, `docx`, `docm`, `doc`, `rtf`, `pptx`, `pptm`,
 `ppt`, `txt`. Export kinds: `single_page`, `combined`, `left`, `right`.
@@ -123,46 +143,17 @@ Accepted file types: `pdf`, `docx`, `docm`, `doc`, `rtf`, `pptx`, `pptm`,
 Creation returns immediately with `ready: false`; poll `GET /comparisons/{id}`
 until `ready` or `failed` (then read `error_message`).
 
-Viewer URLs come in two forms:
+Viewer URLs come in two forms: **public** —
+`/comparisons/viewer/{account_id}/{identifier}`, requires `public: true`, never
+expires; and **signed** — the same path plus `?valid_until=<unix>&signature=<hex>`,
+where the signature is `HMAC-SHA256(auth_token, policy)` over the compact JSON
+`{"account_id":"…","identifier":"…","valid_until":<int>}` with the keys in
+exactly that order, defaulting to 30 minutes. Append `?wait` to have the viewer
+hold until the comparison is ready.
 
-- **public** — `/comparisons/viewer/{account_id}/{identifier}`, requires
-  `public: true` at creation, never expires, anyone with the link can view.
-- **signed** — the same path plus `?valid_until=<unix>&signature=<hex>`, where
-  the signature is `HMAC-SHA256(auth_token, policy)` over the compact JSON
-  `{"account_id":"…","identifier":"…","valid_until":<int>}` with the keys in
-  exactly that order. Defaults to 30 minutes.
-
-Append `?wait` (or `&wait`) to have the viewer hold until the comparison is
-ready instead of erroring.
-
-### Why this repository suits the URL-side form
-
-The repository is public, so an archived version is already at a public URL
-and Draftable can fetch both sides itself — no upload:
-
-```bash
-export DRAFTABLE_ACCOUNT_ID=... DRAFTABLE_AUTH_TOKEN=...
-BASE=https://raw.githubusercontent.com/git-z0man/single-reporting-platform/main/commission-faq/versions
-
-python3 commission-faq/tools/draftable_compare.py compare \
-    "$BASE/FAQs-on-the-CRA-v1.3.pdf" \
-    "$BASE/FAQs-on-the-CRA-v1.4.pdf" \
-    --identifier cra-faq-v1.3-v1.4 \
-    --left-name "FAQ v1.3 (01/07/2026)" \
-    --right-name "FAQ v1.4 (04/09/2026)" \
-    --public
-```
-
-This prints a permanent viewer URL, which goes into the comparison table in
-the overview page. `--public` is deliberate: the link is recorded in a public
-file, and both documents are public Commission documents under CC BY 4.0. Drop
-it and the tool prints a signed URL that expires in 30 minutes instead.
-
-Note the ordering convention: **left is the older version, right is the newer**
-one. Draftable presents left as the original and right as the revision.
-
-The comparisons are created once per version pair and kept (no
-`--expires-days`), so the links in the overview page stay valid.
+Since this repository is public, archived versions could be handed to the API as
+`source_url` sides with no upload — the raw URLs in `manifest.json` resolve
+publicly. Left is the older version, right the newer.
 
 ## Provenance
 
