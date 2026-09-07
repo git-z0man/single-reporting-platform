@@ -55,7 +55,7 @@
         <span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span>
         <span class="theme-toggle-label">Dark mode</span>
       </button>
-      <span class="status-pill"><span class="status-dot"></span>Guidance published · go-live 11 Sep 2026</span>
+      <span class="status-pill"><span class="status-dot"></span>Guidance published · live 11 Sep</span>
       <p>Unofficial guide, built from ENISA’s published SRP guidance, glossary and FAQ. Not legal advice. Not affiliated with ENISA.</p>
     </div>
   </aside>
@@ -204,8 +204,8 @@
               <tr><td class="c-field">Notification type (Vulnerability/Incident)<span class="fieldref">1</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Chooses which set of fields the form shows from here on.</td></tr>
               <tr><td class="c-field">Title<span class="fieldref">7</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 255 characters. Enough to recognise product and issue, no confidential detail.</td></tr>
               <tr><td class="c-field">Summary<span class="fieldref">8</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters: what happened, affected product or version, known impact, current mitigation status.</td></tr>
-              <tr><td class="c-field">Manufacturer name<span class="fieldref">9</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Legal name of the manufacturer the notification is submitted for.</td></tr>
-              <tr><td class="c-field">Member States where product available (Concerned CSIRT)<span class="fieldref">10</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Drives who else is notified. Mandatory if you know it — name the Member States, not “EU-wide”.</td></tr>
+              <tr><td class="c-field">Manufacturer name<span class="fieldref">9</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Read-only. The platform fills this in from your registration; you only check that it is the right manufacturer.</td></tr>
+              <tr><td class="c-field">Member States where product available (Concerned CSIRT)<span class="fieldref">10</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Your own CSIRT is pre-selected; add every other Member State where the product is available. This is what decides who else gets the notification.</td></tr>
               <tr><td class="c-field">Product Name<span class="fieldref">11</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Commercial name as it appears to users.</td></tr>
               <tr><td class="c-field">Product version<span class="fieldref">12</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Version, release, build or model. A range is acceptable.</td></tr>
               <tr class="group"><td colspan="3">Vulnerability only</td></tr>
@@ -437,6 +437,7 @@
               <p><strong>How to complete it.</strong> Select Actively Exploited Vulnerability when reporting an AEV. Select Severe Incident when reporting a SI having an impact on the security of a product with digital elements.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Vulnerability</span></p>
               <p><strong>Format.</strong> Select one: Vulnerability or Incident</p>
+              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -447,6 +448,7 @@
               <p><strong>How to complete it.</strong> For example, enter a short, specific title that allows users to recognise the affected product and the reported issue. Do not include confidential technical detail that is unnecessary for identification (max. 255 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Active exploitation affecting Product X version 4.2.</span></p>
               <p><strong>Format.</strong> Plain text; concise title</p>
+              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -457,6 +459,7 @@
               <p><strong>How to complete it.</strong> For example, provide a concise overview of what happened, the affected product or version, the known impact, and the current mitigation status. Use factual information available at the reporting stage (max. 4000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">An actively exploited vulnerability affects Product X 4.2. A temporary workaround is available, and a security update is being prepared.</span></p>
               <p><strong>Format.</strong> Short paragraph</p>
+              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -467,6 +470,7 @@
               <p><strong>How to complete it.</strong> No user action is required. The platform creates or updates this value automatically based on what you wrote when you registered to the Platform or added at a later stage. You may review it only to confirm that the displayed information is consistent with the notification history.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Automatically populated by the platform during the notification submission or free text during manufacturer registration [Name of the company].</span></p>
               <p><strong>Format.</strong> System-generated / read-only</p>
+              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -477,6 +481,7 @@
               <p><strong>How to complete it.</strong> The Platform will automatically show you CDaC, however, you may select other Member States (MS) where the affected product has been made available, based on the information currently known to the manufacturer. Update the selection if new distribution information becomes available.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Belgium as your CDaC, automatically populated by the platform and you may add Greece and Italy and MS where the affected product has been made available</span></p>
               <p><strong>Format.</strong> Select one or more Member States</p>
+              <p class="field-status">Early Warning <span class="chip conditional">If available</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -487,6 +492,7 @@
               <p><strong>How to complete it.</strong> For example, enter the official commercial or technical name of the affected product with digital elements. Use the same name that appears in product technical documentation or market information (max. 255 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Product X</span></p>
               <p><strong>Format.</strong> Official product name</p>
+              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -497,6 +503,7 @@
               <p><strong>How to complete it.</strong> For example, enter every affected version, release, build, model, or firmware revision. Use exact identifiers and clearly state a range when multiple versions are affected (max. 255 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">4.0 to 4.2.1</span></p>
               <p><strong>Format.</strong> Version or version range</p>
+              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -507,6 +514,7 @@
               <p><strong>How to complete it.</strong> For example, select the CRA regulatory type applicable to the product. Choose Important or Critical only where the product falls within the relevant CRA category (Annexes III and IV); otherwise select Default.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Important</span></p>
               <p><strong>Format.</strong> Select one: Default, Important, Critical</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -517,6 +525,7 @@
               <p><strong>How to complete it.</strong> For example, for an important product, select the applicable CRA class. Leave the field empty when the product is not classified as an important product or when no class applies.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Class II</span></p>
               <p><strong>Format.</strong> Select one configured class</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -527,6 +536,7 @@
               <p><strong>How to complete it.</strong> You may select the category that best matches the affected product under the applicable CRA category list. Use the product’s core functionality, not only its commercial name.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Choose between: Hardware devices with Security Boxes; Smart meter gateways within smart metering systems and other devices for advanced security purposes, including secure cryptoprocessing devices; or Smartcards or similar devices, including secure elements.</span></p>
               <p><strong>Format.</strong> Select one configured category</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -537,6 +547,7 @@
               <p><strong>How to complete it.</strong> You may select one: Yes when the product with digital elements has reached the end of the support period or No when is doesn’t.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Yes</span></p>
               <p><strong>Format.</strong> Select one: Yes or No</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
               <div class="faq-amend"><p><strong>ENISA’s own text contradicts itself here.</strong> The <em>meaning</em> above describes the CRA duty to <em>inform</em> users that support has ended — whether the product has a user interface for doing so. The completion instruction, the format and the example all ask something else: has the support period ended, Yes or No. The workable reading is the Yes/No one; it is the only one the field can hold. (ENISA also writes “or No when is doesn’t”.) Reported unchanged through two editing passes of the glossary.</p></div>
             </div>
           </details>
@@ -548,6 +559,7 @@
               <p><strong>How to complete it.</strong> For example, enter the name of the affected hardware or software component. You may include the component version when known. Leave empty if the issue cannot be attributed to a component (max. 255 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Authentication module 3.1</span></p>
               <p><strong>Format.</strong> Component name and optional version</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -558,6 +570,7 @@
               <p><strong>How to complete it.</strong> For example, select Yes only when an effective security update, workaround, or user guidance is expected shortly and the expectation is supported by the remediation plan. Otherwise select No or Unknown.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Yes</span></p>
               <p><strong>Format.</strong> Select one: Yes, No, Unknown</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -568,6 +581,7 @@
               <p><strong>How to complete it.</strong> You may describe the immediate action a user can take to reduce the likelihood or impact of exploitation or the incident. Provide clear, practical instructions and identify any limitation or prerequisite (max. 4000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Disable the affected interface until the security update is installed.</span></p>
               <p><strong>Format.</strong> Action-oriented text</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -578,6 +592,7 @@
               <p><strong>How to complete it.</strong> You may describe why any submitted information requires restricted handling. Identify the sensitive element and the potential consequence of premature or wider disclosure. Do not use a generic confidentiality statement (max. 255 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">The technical details reveal an unpatched exploitation path that is not yet publicly known.</span></p>
               <p><strong>Format.</strong> Concise justification</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip conditional">If available</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -588,6 +603,7 @@
               <p><strong>How to complete it.</strong> For example, list the actions already taken to correct the issue or to reduce the risk. You may include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful. (max. 2000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Disabled the affected service; revoked exposed credentials; increased monitoring.</span></p>
               <p><strong>Format.</strong> Bulleted list or structured text</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -598,6 +614,7 @@
               <p><strong>How to complete it.</strong> For example, provide step-oriented guidance that users can apply. Prioritise the effective fix, then state temporary workarounds and any operational impact. Clearly identify actions that are no longer recommended (max. 4000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Install version 4.2.2. Until installation, restrict management-interface access to trusted networks.</span></p>
               <p><strong>Format.</strong> Action-oriented text</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
               <div class="faq-amend"><p>The FAQ writes this field “Corrective or mitigating measures that <em>users</em> can take”; the glossary and the current FAQ table say “<em>user</em>”. Same field.</p></div>
             </div>
           </details>
@@ -609,6 +626,7 @@
               <p><strong>How to complete it.</strong> For example, describe how the vulnerability may be exploited or how the incident reached the affected product. State the relevant interface, access path, protocol, or user interaction. Avoid unsupported assumptions (max. 255 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Remote network access through an exposed API.</span></p>
               <p><strong>Format.</strong> Short, structured description or configured classification</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip optional">Optional</span></p>
             </div>
           </details>
         </div>
@@ -623,6 +641,7 @@
               <p><strong>How to complete it.</strong> You may enter the official CVE ID only if one has been assigned by the competent CNA. Copy the ID exactly as published. Leave the field empty if no ID exists (max. 255 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">CVE-2026-12345</span></p>
               <p><strong>Format.</strong> CVE identifier</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -633,6 +652,7 @@
               <p><strong>How to complete it.</strong> You may enter the official EUVD ID if one has been assigned by ENISA. Copy the ID exactly as published. Leave the field empty if no ID exists (max. 255 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">EUVD-2026-12345</span></p>
               <p><strong>Format.</strong> EUVD identifier</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -643,6 +663,7 @@
               <p><strong>How to complete it.</strong> For example, describe the vulnerability at a high level and explain how the known exploit operates. Include the affected function, required access, and observed exploitation behaviour. Do not include unverified attribution (max. 4000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">An authentication bypass in the management interface allows a remote actor with network access to execute privileged actions.</span></p>
               <p><strong>Format.</strong> Structured narrative</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -653,6 +674,7 @@
               <p><strong>How to complete it.</strong> For example, enter the date and time when the mitigating measure has been available.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-09-02 09:15 UTC</span></p>
               <p><strong>Format.</strong> Date and time</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -663,6 +685,7 @@
               <p><strong>How to complete it.</strong> For example, provide the completed technical description of the vulnerability. Including the assessed severity rating, classification, rationale for the assessment and other relevant factors or criteria supporting the assigned severity level (max. 4000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Authentication validation is missing in endpoint X... Severity: High... Affected versions: 4.0–4.2.1...</span></p>
               <p><strong>Format.</strong> Detailed structured narrative</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
               <div class="faq-amend"><p>The FAQ calls the AEV pair “Full description of the severity / impact” and the SI pair “Detailed description of the Severity / Impact”. Same kind of field, two names — both spellings are given here so you recognise them in the portal.</p></div>
             </div>
           </details>
@@ -674,6 +697,7 @@
               <p><strong>How to complete it.</strong> For example, provide the completed technical description of the vulnerability. Including the potential or actual impact of the vulnerability, the affected systems, components, data, users or services, as applicable (max. 4000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Authentication validation is missing in endpoint X... Impact: High... Affected versions: 4.0–4.2.1...</span></p>
               <p><strong>Format.</strong> Detailed structured narrative</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -684,6 +708,7 @@
               <p><strong>How to complete it.</strong> For example, enter the date and time when the vulnerability was first detected. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-08-24 09:15 UTC</span></p>
               <p><strong>Format.</strong> Date and time</p>
+              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
               <p class="field-foot">ENISA footnote [1]: “This field will be available in the next release of the Platform.”</p>
             </div>
           </details>
@@ -695,6 +720,7 @@
               <p><strong>How to complete it.</strong> You may enter confirmed information about the malicious actor or observed activity. If attribution is unconfirmed, describe the observed indicators and state that attribution is unknown (max. 100 characters)..</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Unknown actor; observed infrastructure includes the indicators listed in Reference REF-2026-18.</span></p>
               <p><strong>Format.</strong> Free text</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip conditional">If available</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -704,6 +730,7 @@
               <p><strong>What it means.</strong> Selection indicating that one or more legally specified circumstances in the third subparagraph of Article 16 (2) of CRA justify withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination.</p>
               <p><strong>How to complete it.</strong> You may select the applicable exceptional circumstance only when the corresponding legal condition is met.</p>
               <p><strong>Format.</strong> Select applicable PEC option(s)</p>
+              <p class="field-status">Early Warning <span class="chip na">n/a</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip na">n/a</span></p>
               <div class="faq-amend"><p>Only reachable in the 72-hour notification — not at the Early Warning, not in the Final Report.</p></div>
             </div>
           </details>
@@ -715,6 +742,7 @@
               <p><strong>How to complete it.</strong> Support the selection with specific facts in PEC Delay Reason and indicate the requested dissemination delay. You may select at least one of the three options.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">You may choose: the notified vulnerability has been actively exploited by a malicious actor and, according to the information available, it has been exploited in no other Member State than the one of the CSIRT designated as coordinator to which the manufacturer has notified the vulnerability; or&lt;br&gt;N/A&lt;br&gt;that any immediate further dissemination of the notified vulnerability would likely result in the supply of information the disclosure of which would be contrary to the essential interests of that Member State; or</span></p>
               <p><strong>Format.</strong> Select applicable check box</p>
+              <p class="field-status">Early Warning <span class="chip na">n/a</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip na">n/a</span></p>
               <div class="faq-amend"><p><strong>Inconsistent since 7 September 2026.</strong> The meaning says “one of the three” while the completion instruction says “at least one of the three”. The three grounds themselves are those of the third subparagraph of Art. 16(2) CRA and have not changed.</p></div>
             </div>
           </details>
@@ -726,6 +754,7 @@
               <p><strong>How to complete it.</strong> You may provide additional information(s).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">We consider it very important for national security.</span></p>
               <p><strong>Format.</strong> Free text</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
         </div>
@@ -740,6 +769,7 @@
               <p><strong>How to complete it.</strong> For example, select Yes when available evidence indicates intentional unlawful or malicious activity. Select No when the event is assessed as non-malicious. Select Unknown while the cause remains unresolved.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Yes</span></p>
               <p><strong>Format.</strong> Select one: Yes, No, Unknown</p>
+              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -750,6 +780,7 @@
               <p><strong>How to complete it.</strong> For example, describe what occurred, the affected product functions or security properties, and the currently known scope. Focus on confirmed facts available at the 72-hour stage (max. 4000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Malicious code executed through the update service and affected the integrity of locally stored configuration data.</span></p>
               <p><strong>Format.</strong> Structured narrative</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -760,6 +791,7 @@
               <p><strong>How to complete it.</strong> For example, list the actions already applied or ongoing to correct the issue or reduce risk. Include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful (max. 4000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Disabled the affected service; revoked exposed credentials; increased monitoring.</span></p>
               <p><strong>Format.</strong> Structured narrative</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
               <div class="faq-amend"><p>The FAQ writes “Applied <strong>and</strong> ongoing mitigation measures”, the glossary “Applied <strong>or</strong> ongoing”. Not a pure style difference; the FAQ wording is the wider one.</p></div>
             </div>
           </details>
@@ -771,6 +803,7 @@
               <p><strong>How to complete it.</strong> For example, provide the completed description of the severity of the incident. Include the sequence of events, affected products and functions, severity, scope, evidence, root cause, response measures, and recovery status (max. 4000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Low – limited impact, no significant disruption to operation.</span></p>
               <p><strong>Format.</strong> Structured narrative</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
               <div class="faq-amend"><p>Two separate description fields, not a duplicate: this one is severity, the next one is impact. Both up to 4,000 characters, both required in the Final Report.</p></div>
             </div>
           </details>
@@ -782,6 +815,7 @@
               <p><strong>How to complete it.</strong> For example, provide the completed description of the impact of the incident, including the impact on the product, data, functions, users, or connected systems (max. 4000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Minimal – no material impact of operations, users or data.</span></p>
               <p><strong>Format.</strong> Structured narrative</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
               <div class="faq-amend"><p>ENISA numbers this row <code>I39.</code> in the FAQ table — a capital I where every other row uses a lowercase prefix.</p></div>
             </div>
           </details>
@@ -793,6 +827,7 @@
               <p><strong>How to complete it.</strong> For example, state the most likely threat type and root cause supported by the investigation. Explain the evidence briefly and mark the conclusion as preliminary when analysis is incomplete (max. 255 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Supply-chain compromise caused by an unauthorised modification to the update package.</span></p>
               <p><strong>Format.</strong> Classification plus short explanation</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
           <details class="faq field">
@@ -803,6 +838,7 @@
               <p><strong>How to complete it.</strong> For example, enter the date and time you become aware of the incident. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-08-24 09:15 UTC</span></p>
               <p><strong>Format.</strong> Date and time</p>
+              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
               <p class="field-foot">ENISA footnote [2]: “In the current release this field is named: ‘Date/time the incident was detected’.”</p>
               <div class="faq-amend"><p>Required. This is the field the deadlines run from. If the exact time is unknown, enter your best supported estimate and say in the description that it is an estimate.</p></div>
             </div>
@@ -815,6 +851,7 @@
               <p><strong>How to complete it.</strong> For example, enter the date and time when the incident was began or occurred. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description.</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-08-24 09:15 UTC</span></p>
               <p><strong>Format.</strong> Date and time</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip optional">Optional</span></p>
               <div class="faq-amend"><p>Optional — and a different field from the one above. “When you became aware” is mandatory, “when the incident occurred” is not.</p></div>
             </div>
           </details>
@@ -826,6 +863,7 @@
               <p><strong>How to complete it.</strong> For example, provide the preliminary assessment of severity, scope, affected security properties, products or users, and likely impact. Clearly distinguish confirmed findings from matters still under investigation (max. 4000 characters).</p>
               <p><strong>ENISA’s example.</strong> <span class="field-ex">Confirmed impact is limited to integrity of configuration data on three product instances; broader exposure remains under investigation.</span></p>
               <p><strong>Format.</strong> Structured narrative</p>
+              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
         </div>
