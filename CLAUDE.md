@@ -38,13 +38,16 @@ in the Routines UI; see `routines/README.md`.
 maintained by a scheduled task that periodically re-checks the ENISA Single
 Reporting Platform page (its guidance subpages, the CRA SRP Glossary page,
 and the CSIRT-list page) for changes, updates the baseline file(s), and
-opens a PR. The Glossary page in particular has shown itself to be
-unreliable (it briefly returned HTTP 403 on 2026-09-07 while every other
-tracked SRP page stayed up), so `enisa-srp-glossary-baseline.md` is the
-full-detail historical record of its field-by-field content — kept diffable
-in the same one-block-per-entry style as the rest of these baselines, and
-not to be reconstructed only from the (deliberately trimmed) summary table
-that `enisa-srp-faq-baseline.md` also carries.
+opens a PR. The Glossary page needs its own full record for two reasons
+established on 2026-09-07: it changed address that day (the old path still
+returns HTTP 403, the page lives on and is reachable at the new one), and its
+content was edited the same evening without its version stamp or date moving.
+Neither the URL nor the version number is a reliable handle on it. So
+`enisa-srp-glossary-baseline.md` is the full-detail historical record of its
+field-by-field content — kept diffable in the same one-block-per-entry style
+as the rest of these baselines, and not to be reconstructed only from the
+(deliberately trimmed) summary table that `enisa-srp-faq-baseline.md` also
+carries.
 
 For this specific recurring task, no manual review is required: after
 pushing the branch and opening the PR (create it as a draft first, per the
