@@ -1,23 +1,40 @@
 # ENISA SRP pages monitor
 
 - **Trigger**: `trig_015C8QiJhXwkxPkDdoMbkHeD`
-- **Schedule**: `0 5 * * 1` (Mondays 05:00 UTC)
+- **Schedule**: `0 * * * *` — **hourly, temporarily**, for the run-up to go-live. Back to `0 5 * * 1` (Mondays 05:00 UTC) on **2026-09-14**.
 - **Writes**: `enisa-srp-faq-baseline.md`, `enisa-srp-glossary-baseline.md`
 - **Updatable by an agent**: **no** — created via `http_api`, so the prompt below
   must be pasted into the Routines UI by hand.
 
-> **Applied 2026-09-07 (morning)**, then amended the same evening — section 2
-> and the report line below have changed since that paste and are **not yet
-> live**.
-> `update_trigger` refused the routine (created via `http_api`), so this
-> version has to be pasted into the Routines UI by hand. Until that happens
-> the live Routine still carries the morning's text, which describes the
-> Glossary's 403 as unreliability rather than as the page move it turned out
-> to be. It reads its URLs from the baseline frontmatter either way, so a run
-> in the meantime still checks the right address.
+> **Pending in the Routines UI: an hourly schedule and this prompt.** ENISA has
+> signalled frequent changes in the run-up to the 11 September go-live, so the
+> monitor moves from Mondays 05:00 UTC to `0 * * * *` until **2026-09-14**,
+> when it goes back to weekly. Set the cron and paste the prompt below in the
+> same visit.
 >
-> The constraint above is permanent — every future change to this prompt needs
-> the same manual step.
+> Two things to know when saving: the platform anchors `0 * * * *` to the
+> **minute you save**, and the domain monitor already sits at `:22` fetching
+> the same CSIRT list — so save at a minute well away from it, say `:05`–`:15`
+> or `:35`–`:50`. And every edit reassigns the Routine's outcome branch name;
+> harmless here, since this prompt pushes with `git push -u origin HEAD`.
+>
+> **Hourly needed three prompt changes first**, all from problems seen on
+> 2026-09-07 rather than imagined: runs that find nothing changed now end
+> silently (section 4, the pattern the domain monitor already uses), a second
+> change log section on the same day carries a UTC time (section 4), and a 429
+> or 5xx that survives the retries is reported as a failed check instead of
+> being diffed as content (section 1).
+>
+> **The 2026-09-07 paste is otherwise live and verified** — read back from the
+> Routine and diffed against this file: same sections, same rules, 0.998
+> word-level match, the remainder being markdown the UI strips. The one loss
+> was three `<placeholder>` markers in the closing report line, eaten as if
+> they were HTML tags; the placeholders here are square brackets now, which
+> survive.
+>
+> An agent cannot update this Routine — `update_trigger` and `fire_trigger`
+> both refuse it, because it was created via `http_api`. Prompt and schedule
+> alike are a manual step.
 
 ---
 
@@ -59,6 +76,13 @@ Tracked in `enisa-srp-glossary-baseline.md`:
 
 Fetch raw HTML and diff word-for-word against the baseline. Do not rely on a rendered or summarised view — past checks caught wording-level edits that a summary would have hidden.
 
+Fetch with backoff — `curl --retry 5 --retry-delay 5 --retry-all-errors` — because ENISA rate-limits. On 2026-09-07 it answered a burst of requests with HTTP 429.
+
+Then check what actually came back, and treat a bad fetch as a bad fetch:
+
+- **HTTP 429 or 5xx that survives the retries is a check failure, not a change.** Do not touch the baseline, never diff an error page as if it were content, and report the run as failed with the exact status. This is the same mistake class as reading a 403 as an unpublished page: an HTTP status tells you about the fetch, not about the page.
+- Confirm each response really is the page — a non-empty HTML body, not an error document — before diffing. Check the content, not just curl's exit code: on 2026-09-07 ten downloads returned error bodies with exit code 0 and were only caught by inspecting the files.
+
 Also walk the page navigation ("Content" subtopics list) on the main page. If a page appears there that is not in either baseline, that is itself a finding: ENISA added the Glossary and the CSIRT list this way on 2026-09-07. Add it to the appropriate baseline and say so in the report.
 
 ## 2. The Glossary needs specific handling
@@ -96,12 +120,22 @@ sides.
 For each changed page, update the relevant baseline file:
 
 - One logical block per FAQ entry / per guidance subpage / one table row per Glossary field, so diffs stay readable.
-- Add a dated `## Change log (<date> check, vs. <previous date> baseline)` section at the top of the change log, naming what was added, deleted, or reworded. Quote new or changed text verbatim.
+- Add a dated `## Change log ([date] check, vs. [previous date] baseline)` section at the top of the change log, naming what was added, deleted, or reworded. Quote new or changed text verbatim.
+- **If the change log already carries a section for today**, do not add a second one with the same heading. Put the UTC time in both halves instead — `## Change log ([date] [HH:MM] UTC check, vs. the [date] [HH:MM] UTC baseline)` — so the two are told apart and it is clear what each was compared against. Running hourly, this is a normal occurrence. Leave existing headings alone; baselines are not renamed retroactively.
 - Reproduce ENISA's text as-is, including typos and inconsistencies. Note them rather than silently correcting them — past checks recorded a doubled "inin", a missing "d" in "adress", an untagged Q19, and a duplicated sentence in Q9. That fidelity is the point of a baseline.
 - Separate substantive changes (a question added, deleted or reworded; a changed date, obligation, field, or legal reference) from cosmetic ones (link markup, page numbering).
 - Update `retrieved`, `last_check`, and `last_change` in the frontmatter of whichever file changed. `last_check` moves on every successful check; `last_change` only when content actually changed.
 
-If nothing changed anywhere, update `last_check` in both files and leave `last_change` alone. If that leaves nothing to commit because the dates already say today, do not invent a change and do not open an empty PR.
+### Nothing changed anywhere
+
+Only when all seven pages came back unchanged. Read `last_check` as it stands on `origin/main`:
+
+    git show origin/main:enisa-srp-faq-baseline.md | sed -n 's/^last_check: //p' | head -1
+
+- If it is **today's date** → today's measurement point is already recorded. Do NOT commit, do NOT open a PR, do NOT report anything. End the run silently. Running hourly, this is the normal outcome for 23 of the 24 daily runs.
+- If it is an **earlier date** → this is the first run of the day. Update `last_check` in the frontmatter of both baseline files to today, leave `last_change` alone, then commit, PR and merge per section 5. Do NOT report — a routine heartbeat is not worth a notification.
+
+Never invent a change and never open an empty PR. This silence applies only when nothing changed: **any** substantive change is committed and reported immediately, whatever the time of day and whether or not today already has a measurement point.
 
 ## 5. Commit, PR, merge
 
@@ -127,7 +161,8 @@ Answer in German, concisely.
 - **A new page appeared in the navigation** — name it and say it has been added to the baseline.
 - **The CSIRT list changed** — prominently, with the affected countries (see section 3).
 - **A Glossary reachability transition or move** — state the direction or the new address, and that the baseline content was left intact.
-- **Nothing changed** — one line.
+- **A fetch failed** (429 or 5xx after the retries) — say which page and which status, and that the baseline was left untouched.
+- **Nothing changed** — report nothing at all, whether or not this run wrote the day's heartbeat commit. See "Nothing changed anywhere" in section 4. Running hourly, silence is the normal outcome and the only signal worth sending is a real one.
 
-End with exactly one line:
-ENISA SRP: <n> Seiten geprüft | geändert: <Seiten oder keine> | Glossary: <HTTP-Code> | push: <OK/FAIL/nichts zu pushen>
+When you report, end with exactly one line (a silent run reports nothing, this line included):
+ENISA SRP: [n] Seiten geprüft | geändert: [Seiten oder keine] | Glossary: [HTTP-Code] | push: [OK/FAIL/nichts zu pushen]

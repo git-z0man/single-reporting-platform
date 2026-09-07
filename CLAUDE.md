@@ -59,6 +59,20 @@ This auto-merge behavior applies only to PRs from this routine that touch
 Any other change to this repository follows the normal review-and-confirm
 flow.
 
+The check normally runs weekly. **Until 2026-09-14 it runs hourly**, because
+ENISA signalled frequent edits in the run-up to the 11 September go-live and a
+Tuesday change would otherwise wait until the following Monday. The same
+daily-rhythm rule as the domain routine applies while it does: the repository
+keeps **one measurement point per day** plus every real change. A run that
+finds nothing changed and sees today's date in `last_check` on `main` ends
+silently — no commit, no PR, no notification — and that is the normal outcome
+for most runs. Any substantive change is committed and reported immediately,
+whatever the time of day.
+
+Fetches are rate-limited by ENISA: an HTTP 429 or 5xx that survives the retries
+is a failed check, never a content change. Do not diff an error page against a
+baseline, and do not touch the baseline because a fetch failed.
+
 ## Commission CRA FAQ version-check routine
 
 `commission-cra-faq-baseline.md` and everything under `commission-faq/` are
