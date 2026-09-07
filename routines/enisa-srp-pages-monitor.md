@@ -66,11 +66,20 @@ The live Glossary page is unreliable — it returned **HTTP 403 on 2026-09-07** 
 
 Note that `enisa-srp-faq-baseline.md` also carries a deliberately trimmed summary table of the Glossary fields (in Q16 and its "CRA SRP Glossary" section). That summary is NOT the record — never reconstruct the full baseline from it, and keep the two consistent when the Glossary changes.
 
-## 3. The CSIRT list feeds another baseline
+## 3. The CSIRT list — diff it, but do not act on it
 
-`csirt_list_url` is the authoritative country → CSIRT-designated-as-coordinator mapping. `srp-domains-baseline.md` was verified against it on 2026-09-07 (19 of 27 assumptions confirmed, 8 corrected), and `srp-domains/evidence/*.txt` cites it per country.
+`csirt_list_url` is the authoritative country → CSIRT-designated-as-coordinator
+mapping. Diff it word-for-word like every other page and record changes in
+`enisa-srp-faq-baseline.md`, the same as you would for the FAQ.
 
-If that list changes — a Member State's coordinator changes, an entry is added or removed — say so **prominently** in the report and name the countries. Do NOT edit `srp-domains-baseline.md` or `srp-domains/` yourself: those belong to the SRP domain reachability routine, and a PR from this routine that touches them falls outside this routine's auto-merge scope. Report it so it can be handled there.
+Do **not** edit `srp-domains-baseline.md` or anything under `srp-domains/`.
+That table is owned by the SRP domain reachability routine, which fetches this
+same list on its own hourly run and applies changes to its country table
+itself — so no handoff is needed and nothing is waiting on you. Touching those
+paths would also put your PR outside this routine's auto-merge scope.
+
+Mention a change in your report anyway, briefly, so it is visible from both
+sides.
 
 ## 4. Recording changes
 

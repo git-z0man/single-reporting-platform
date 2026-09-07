@@ -16,11 +16,47 @@ for which ones an agent may update and which need a human.
 
 ## The routines
 
-| Prompt file | Trigger ID | Schedule | Writes |
+| Prompt file | Name in the Routines UI | Trigger ID | Schedule |
 |---|---|---|---|
-| `enisa-srp-pages-monitor.md` | `trig_015C8QiJhXwkxPkDdoMbkHeD` | `0 5 * * 1` | `enisa-srp-faq-baseline.md`, `enisa-srp-glossary-baseline.md` |
-| `commission-cra-faq-monitor.md` | `trig_012AzfKXKrPnRCEjXXYWBgY4` | `0 5 * * 1` | `commission-cra-faq-baseline.md`, `commission-faq/` |
-| `srp-domains-monitor.md` | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `22 * * * *` | `srp-domains-baseline.md`, `srp-domains/` |
+| `enisa-srp-pages-monitor.md` | **Single Reporting FAQ monitor** | `trig_015C8QiJhXwkxPkDdoMbkHeD` | `0 5 * * 1` |
+| `commission-cra-faq-monitor.md` | **Commission CRA FAQ monitor** | `trig_012AzfKXKrPnRCEjXXYWBgY4` | `0 5 * * 1` |
+| `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `22 * * * *` |
+
+The UI name and the file name differ for the first one: an attempt to rename it
+to "ENISA SRP pages monitor" was refused along with the prompt update (see
+below), so the UI still shows its original name. Go by the trigger ID.
+
+| Prompt file | Writes |
+|---|---|
+| `enisa-srp-pages-monitor.md` | `enisa-srp-faq-baseline.md`, `enisa-srp-glossary-baseline.md` |
+| `commission-cra-faq-monitor.md` | `commission-cra-faq-baseline.md`, `commission-faq/` |
+| `srp-domains-monitor.md` | `srp-domains-baseline.md`, `srp-domains/` |
+
+Other Routines on this account (`CRA notified body alert`, `FuFA Reisen`,
+`absence.io Zeiterfassung`) do not write to this repository and are not
+mirrored here.
+
+## Two routines watch the SRP — on purpose
+
+`Single Reporting FAQ monitor` reads ENISA's **web pages** and diffs their
+wording. `SRP domain reachability monitor` probes the 29 **hosts** of the
+production zone and classifies whether they answer. Same subject, different
+signal — and, decisively, different cadence: weekly for pages that change every
+few weeks, hourly for a go-live that has to be caught when it happens.
+
+Merging them would force one of two bad outcomes: fetching seven ENISA pages
+every hour, or slowing go-live detection to a weekly beat, which would defeat
+the only reason the domain monitor exists. They also fail differently (a 403 on
+an ENISA page and a dark production host mean opposite things) and their
+auto-merge scopes are disjoint, so a combined run touching both would fall out
+of auto-merge entirely.
+
+**Where they did overlap, ownership decides, not merging.** ENISA's CSIRT
+coordinator list is both a page to diff and the source of the country table in
+`srp-domains-baseline.md`. The domain monitor owns that table, so it fetches
+the list itself and applies changes directly; the pages monitor diffs the same
+page for its own baseline and reports, but does not reach across. Each file has
+exactly one writer, and nothing waits on a human to relay a change.
 
 ## Who can update which
 
