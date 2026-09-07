@@ -18,6 +18,10 @@ registration, early warning (24 h), notification (72 h), and final report,
 plus ENISA's FAQ. Published via GitHub Pages at
 <https://git-z0man.github.io/single-reporting-platform/>.
 
+The archive below is served from the same site, so anything in it can be linked
+directly — most usefully the [FAQ version comparisons](https://git-z0man.github.io/single-reporting-platform/commission-faq/diff/)
+and the [current reachability status](https://git-z0man.github.io/single-reporting-platform/srp-domains/status.md).
+
 ## The tracking archive
 
 Four baselines, each with a dated change log recording what moved and when.
@@ -35,9 +39,10 @@ quietly tidies its source cannot be diffed against it.
 ### Things in here you may not find elsewhere
 
 - **Every archived version of the Commission FAQ**, as PDF, as diffable text,
-  and as rendered side-by-side comparisons under
-  [`commission-faq/diff/`](commission-faq/diff/). The Commission publishes only
-  the current version. The diffs show that its own one-line change notes
+  and as [rendered side-by-side comparisons](https://git-z0man.github.io/single-reporting-platform/commission-faq/diff/)
+  (source under [`commission-faq/diff/`](commission-faq/diff/) — those are HTML,
+  so read them through the link, not in the repository). The Commission
+  publishes only the current version. The diffs show that its own one-line change notes
   understate what changed: v1.2 was described as a "minor correction of 6.2",
   and it removed the notified body's NANDO number from the CE marking step.
 - **The full SRP Glossary**, field by field, captured while it was reachable.
