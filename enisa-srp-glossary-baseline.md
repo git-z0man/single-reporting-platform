@@ -1,6 +1,7 @@
 ---
 source: ENISA — CRA SRP Glossary
-url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary
+url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
+old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.1 (page footer: last update 05/09/2026)"
 retrieved: 2026-09-07 (fetched 05:06 UTC)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
@@ -8,15 +9,18 @@ purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative
   and per-stage status for every field). The compact field-name/status table cross-referenced
   from `enisa-srp-faq-baseline.md` (Q16 and the "CRA SRP Glossary" section there) is a trimmed
   summary of this file; this file is the one to diff against for wording-level changes to any
-  field's description, example, or format, and is the historical record now that the live page
-  is not reliably available (see status below).
+  field's description, example, or format. The live page has already moved once (see
+  `old_url` and status), so this file is also the stable reference when the URL shifts.
 status: >-
-  Live page returned HTTP 403 as of the 2026-09-07 15:56 UTC re-check, a few hours after this
-  content was captured. At the same check, the main SRP page, the FAQ page, the CSIRT-list page,
-  and all three guidance subpages were still HTTP 200 — so this looks specific to the Glossary
-  page (ENISA editing or temporarily unpublishing it) rather than a site-wide outage. Re-verify
-  on every future check; update this line with whatever is found.
-last_check: 2026-09-07
+  Resolved. The page was MOVED, not withdrawn: it now lives at `.../cra-srp-glossary2`
+  and returns HTTP 200 (Version 1.1, last update 05/09/2026 — unchanged). The old
+  `.../cra-srp-glossary` path still returns HTTP 403 and is recorded as `old_url`.
+  The earlier reading on this line — that ENISA might have unpublished the page —
+  was wrong; a 403 on one path while every neighbouring page stayed up is equally
+  consistent with a move, and that is what happened. Content verified identical
+  after the move: 38 fields, same numbering, no name changed. Re-verify the URL on
+  every future check, not just the status code.
+last_check: 2026-09-08
 last_change: 2026-09-07
 note: >-
   One row per field, one table per group (Common / AEV / SI), matching the live page's own
@@ -31,6 +35,21 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-08 — page moved, content unchanged
+
+The Glossary moved from `.../cra-srp-glossary` to `.../cra-srp-glossary2`. The old
+path returns HTTP 403; the new one returns 200 with Version 1.1 and the same
+05/09/2026 date. Compared field by field against this baseline: **38 fields, identical
+numbering, no name changed** — including field 11, whose stated meaning still
+contradicts its own completion instructions, and the "when is doesn't" typo in that
+same row.
+
+This corrects the diagnosis recorded on 2026-09-07. A 403 on a single page while its
+neighbours stay up reads like an unpublication, and that is how it was written down.
+It was a move. The lesson is in the frontmatter: check where a page went before
+concluding it is gone.
+
 
 ### 2026-09-07 — rebuilt as maintained tables; fixed invalid YAML frontmatter
 This file's first commit (same day) used one prose block per field. Two issues found and fixed
