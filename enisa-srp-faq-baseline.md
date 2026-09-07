@@ -3,44 +3,42 @@ source: ENISA — Single Reporting Platform (SRP)
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp
 old_url: https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp (now redirects to `url` above, first seen 2026-08-31)
 faq_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions
+glossary_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary
+csirt_list_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators
 guidance_urls:
   - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-user-registration
   - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update
   - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-interface-functions
-retrieved: 2026-08-31
-guidance_retrieved: 2026-09-02
-purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page and the three guidance subpages listed in `guidance_urls` — against this file.
-note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or `guidance_retrieved`) and content when a change is confirmed.
-last_check: 2026-09-02
-last_change: 2026-09-02
+retrieved: 2026-09-07
+guidance_retrieved: 2026-09-07
+glossary_retrieved: 2026-09-07
+csirt_list_retrieved: 2026-09-07
+purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the new Glossary and CSIRT-list subpages, and the three guidance subpages listed in `guidance_urls` — against this file.
+note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections.
+last_check: 2026-09-07
+last_change: 2026-09-07
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
-## Change log (2026-08-31 check, vs. 2026-08-24 baseline)
+## Change log (2026-09-07 check, vs. 2026-08-31 baseline)
 
-No questions added, deleted, or reordered — still Q1–Q23. Three questions had their answer text changed (Q1, Q6, Q17); everything else (intro, Q2–Q5, Q7–Q16 incl. the data-field table, Q18–Q23, guidance documents, factsheet) verified unchanged via raw-HTML word-for-word diff.
+**Major overhaul of the FAQ page, plus two brand-new subpages.** This is the largest change observed since monitoring began. Fetched raw HTML directly for the main page, the FAQ subpage, and (newly discovered via the page navigation) a "CRA SRP Glossary" page and a "List of CSIRTs Designated as Coordinators" page, both now linked from the site navigation and from within the FAQ answers. Also re-fetched the three existing guidance subpages, which are unchanged.
 
-- **Main page URL changed**: the main SRP page's canonical URL moved from `.../topics/product-security-and-certification/single-reporting-platform-srp` to `.../topics/product-security/single-reporting-platform-srp` (now recorded as `url` above; old URL kept as `old_url` since it still resolves via a redirect). This aligns the main page's URL with the FAQ subpage's URL, which already used the `product-security` (not `product-security-and-certification`) path segment. Breadcrumb now reads Topics → Product Security → Single Reporting Platform (SRP).
-- **Q1 answer reworded**: substance unchanged, but restructured into two shorter paragraphs and shifted from future tense ("CRA SRP will be...") to present tense ("The CRA SRP is an online tool..."). No new facts, obligations, or figures.
-- **Q6 answer changed**: the specific trigger date for voluntary-reporting functionality was removed — "This functionality will be enabled in the CRA SRP after 11 September 2026" is now "In the future, the platform will also offer functionality for voluntary reporting. This functionality will be enabled in the next phase of the CRA SRP." (no longer tied to a specific date).
-- **Q17 answer changed**: "Other material, including short videos, will be published closer to the launch of the Platform." is now "Other material, including a PDF manual tutorial videos, will be published closer to the launch of the Platform." (adds a PDF manual to the planned material; likely a missing "and" on ENISA's side, reproduced verbatim here).
-- Page-level "Updated: 03 August 2026" note is unchanged despite the above wording edits — ENISA did not bump the displayed update date for this pass.
-- Minor cosmetic-only items, not treated as substantive: Q18 has a stray typo "Iist" for "list" (reproduced verbatim, not corrected); the Q16 data-field table's i22 row (the two "severity" sub-bullets under i21) is confirmed via raw HTML to be its own explicit table row with blank A/X/O values — same effective meaning as before, just more finely broken out in the markup.
-
-## Change log (2026-08-24 check, vs. 2026-08-03 baseline)
-
-Significant structural change: **the FAQ moved off the main SRP page onto its own dedicated subpage**, `.../single-reporting-platform-srp/frequently-asked-questions` (now recorded as `faq_url` above). The main SRP page now shows only a "Frequently asked questions" summary card with a "View all FAQs" link, not the full Q&A content inline. Bookmarks/anchors pointing at FAQ content on the old main-page URL no longer resolve to that content.
-
-Other changes:
-
-- **New guidance document added**: "CRA SRP - AR Interface functions" (Updated: 14/08/2026) — "explains the AR's interface of the SRP for various functions that can be performed." This is a third guidance document alongside the previous two.
-- **Updated dates on the two existing guidance documents**: "CRA SRP - AR User registration" and "CRA SRP - AR Notification submission and update" both now show "Updated: 3/08/2026" (previously 31/07/2026). No means to verify their internal content changed, only the stated update date.
-- **FAQ page now carries a single page-level "Updated: 03 August 2026" note** instead of the previous per-question "[Updated 31 July 2026]" tags on Q9, Q10, and Q17 (those tags have been removed; the questions themselves are otherwise unchanged in substance — see below).
-- **Main-page intro paragraph reworded**: added a new lead sentence ("The Cyber Resilience Act (CRA) introduces the Single Reporting Platform (SRP) for cybersecurity incident reporting in the EU Digital Single Market."); the standalone closing line "Further information: Regulation (EU) 2024/2847 (EUR-Lex)" was removed and replaced with an inline hyperlink on "Cyber Resilience Act" within the body text (still linking to the same EUR-Lex regulation, eur-lex.europa.eu/eli/reg/2024/2847/oj/eng).
-- **All 23 FAQ questions (Q1–Q23) received a light copyediting pass** during the move to the new subpage — minor wording, punctuation, and phrasing tweaks throughout (e.g. "must ensure" → "must also ensure", straight quotes → curly quotes, added clarifying phrases like "under the Cyber Resilience Act" in Q1 and "allowing for the manufacturer to identify the national CSIRT to report to" in Q18). No question was added, deleted, reordered, or renumbered, and none of these edits change any obligation, deadline, date, or scope — verified word-for-word against the 2026-08-03 baseline for substantive differences.
-- **Q16 data-field table**: all 39 field entries (12 common + 14 vulnerability + 13 incident) and their X/C/A/O/I values verified identical to the 2026-08-03 baseline. Only cosmetic change: the legend order on the new page lists "A - automated..." first instead of "X - obligatory" first.
-- Guidance-documents section on the main page ("User guidance") verified present with the same descriptive text pattern for each document, now covering three documents (see below).
+- **FAQ page-level date bumped**: "Updated: 03 August 2026" → "Updated: 04 September 2026". FAQ intro paragraph fully rewritten (see Intro/FAQ-entries section below) and no longer references "question 10" by number — it now links directly to the Commission's "FAQs on the CRA Implementation" document.
+- **Every FAQ question reworded/expanded** and tagged "[UPDATED]" on the live page — Q1–Q18 and Q20–Q26 all carry the tag; **Q19 does not carry the tag despite its text also having changed** (Manufacturers bullet now cites "as per Article (14)"; Market Surveillance Authorities bullet reworded from "Receive disseminated information" to "Receive information from the CSIRT Designated as Coordinator") — an ENISA tagging inconsistency, noted rather than corrected.
+- **Three new numbered questions added**: Q24 "In which languages will the SRP be available?", Q25 "What should I do if the SRP is temporarily unavailable?", Q26 "How are the 72hrs and Final Report counter calculated". A further question appears **without a number** at the very end of the list, tagged "[NEW]": "Can I report vulnerabilities even if they are not actively exploited?" (reproduced as-is; likely a numbering glitch on ENISA's side). FAQ entry count goes from 23 to 27.
+- **New closing note added**: "You did not find above the answer to your question? For matters not covered by this FAQ, nor by available guidance pages, please contact: cra-srp-helpdesk[@]enisa.europa.eu" — this is where the helpdesk contact now lives; it has been **removed from the main SRP page** (previously listed in the "User guidance" section footer there).
+- **Q16 data-field table restructured and greatly expanded**: common fields grow from 12 to 23 (new: Summary, Product version, Product Type/Class/Category split out, End of support indicator, Component name, Mitigating measure expected shortly, User Action able to reduce impact, Attack vector, etc.); AEV-specific fields go from 14 to 11 (v24–v34, some folded into the now-larger common set, two new PEC-related fields added: "Particular Exceptional Circumstances (PEC)" and "PEC Delay Reason"); SI-specific fields go from 13 to 9 (i35–i43). New total: 43 fields (was 39). The FAQ answer itself now defers the authoritative, fully-explained version of this table to the new **SRP Glossary** page (see below) and reproduces only the abbreviated table.
+- **New page: CRA SRP Glossary** (`glossary_url`, version 1.1, last update: 05/09/2026) — the authoritative field-by-field reference (field meaning, how to complete it, an example, expected format, per-stage status), linked repeatedly throughout the rewritten FAQ answers (Q8, Q11, Q15, Q16, Q17). Its own field numbering is **not consistent with the FAQ's Q16 table**: the Glossary numbers only 18 common fields (it doesn't itemize the 5 automated/system fields — Notification level, the three "Reporting time" fields, Reporter — that the FAQ table lists explicitly), 11 AEV fields (v19–v29, same substance as the FAQ's v24–v34) and 9 SI fields (i30–i38, same substance as the FAQ's i35–i43). Two footnotes: "[1] This field will be available in the next release of the Platform" (on the AEV awareness-date field) and "[2] In the current release this field is named: 'Date/time the incident was detected'" (on the SI awareness-date field). See dedicated section below.
+- **New page: List of CSIRTs Designated as Coordinators** (`csirt_list_url`, "Updated: 04/09/2026") — contact links for the national CSIRT designated as coordinator in each of the 27 EU Member States. See dedicated section below.
+- **Main page navigation updated**: the "Content" subtopics list (shown on the main page, the FAQ page, and all guidance subpages) now includes the two new pages ("List of CSIRTs Designated as Coordinators", "CRA SRP Glossary") alongside the FAQ and the three guidance documents.
+- **Main page gets a new "Get Started" section heading** grouping the Factsheet, "Frequently asked questions" and a new "CRA SRP Glossary" resource card ("Consult the fields to be filled in during each stage of notification, their meaning and format" / "View the SRP Glossary"). The intro paragraphs, the Factsheet section text, and the "User guidance" section with its three guidance documents (same titles, same dates: 3/08/2026, 3/08/2026, 14/08/2026) are otherwise unchanged.
+- **Factsheet download link changed cosmetically**: "It can be downloaded here" is no longer itself a hyperlink (previously linked to `/media/57221`); the "Download the SRP factsheet" button now links directly to the PDF at `/sites/default/files/2026-07/ENISA_CRA_SRP_Factsheet_v1.0_0.pdf`. Same document, no content change.
+- **Q9 registration process substantially expanded**: now specifies Multi-Factor Authentication (MFA) is required for EU Login, that there can be only one Primary AR per manufacturer but "up to 20 Secondary ARs" (a new specific number), and that "Non-validated ARs may submit up to 20 notifications for one manufacturer before validation becomes mandatory" (also new). Contains a duplicated sentence on the live page ("No additional corporate entity authentication mechanism is currently used by the SRP." appears twice back-to-back) — reproduced verbatim, not corrected.
+- **Q4 gains an explicit go-live scope statement**: "On the 11th of September the platform will ONLY allow the submission of mandatory reporting fulfilling Art 14 and 24(x). Voluntary reporting per art15 will not be possible."
+- **Q14 has a typo**: "Please refer to the European Commission's FAQ inin particular section 5.4..." (doubled "in"), reproduced verbatim.
+- **Guidance subpages verified unchanged** in substance and "Last updated" dates (3/08/2026, 3/08/2026, 14/08/2026 respectively). One cosmetic-only item spotted on the AR User Registration page: "manufacturer adress" (missing a "d") where the field had previously read "manufacturer address" — reproduced verbatim, not corrected. The registration pre-conditions bullet also gained a parenthetical "(please check the URL above)" after "You already have an active EU Login account."
 
 ## Intro
 
@@ -58,195 +56,316 @@ Overall, the CRA brings transparency to the vulnerability disclosure processes a
 
 ### CRA Single Reporting Platform Factsheet
 
-ENISA has published a factsheet on the CRA Single Reporting Platform. It can be downloaded here (https://www.enisa.europa.eu/media/57221), currently in English.
+ENISA has published a factsheet on the CRA Single Reporting Platform. It can be downloaded here, currently in English. ("Download the SRP factsheet" button links directly to `/sites/default/files/2026-07/ENISA_CRA_SRP_Factsheet_v1.0_0.pdf`; the inline "here" text is no longer itself a hyperlink, unlike the previous check.)
+
+### Get Started (new section heading on the main page)
+
+Groups three resource cards: the Factsheet (above), "Frequently asked questions" (→ `faq_url`), and the new "CRA SRP Glossary" ("Consult the fields to be filled in during each stage of notification, their meaning and format" → `glossary_url`).
 
 ## FAQ entries
 
-Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 03 August 2026". Intro text on the FAQ page: "This is a collection of frequently asked questions on Cyber Resilience Act Single Reporting Platform (CRA SRP). Document is intended for publication on ENISA website and is updated regularly during the implementation of CRA SRP. Please note that the European Commission also provides guidance on the implementation of the CRA, please consult the question 10 of this FAQ for the references."
+Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 04 September 2026". Intro text on the FAQ page: "All you need to know about the CRA Single Reporting Platform" (subtitle) — "This page provides answers to frequently asked questions about the Cyber Resilience Act Single Reporting Platform (CRA SRP), including its purpose, reporting process, registration and use. The FAQs are updated regularly to reflect the latest available information and guidance as the CRA SRP is implemented. For broader guidance on the interpretation and implementation of the CRA, please also consult the European Commission's "FAQs on the CRA Implementation"."
+
+Every question below is tagged "[UPDATED]" on the live page except Q19 (see change log above); Q24–Q26 and the final unnumbered entry are tagged "[NEW]".
 
 ### Q1. What is the Cyber Resilience Act's Single Reporting Platform (CRA SRP)?
-The CRA Single Reporting Platform (SRP) is an online tool for manufacturers and open-source software stewards to meet their obligation to report actively exploited vulnerabilities and severe incidents having an impact on the security of products with digital elements under the Cyber Resilience Act (CRA). Designed to simplify EU reporting obligations, the SRP enables manufacturers to report only once, rather than having to notify multiple national authorities individually. The platform incorporates security measures to protect confidentiality.
+The CRA Single Reporting Platform (SRP) is an online tool for manufacturers and open-source software stewards to meet their obligation to report actively exploited vulnerabilities and severe incidents having an impact on the security of products with digital elements under the Cyber Resilience Act (CRA). Designed to simplify EU reporting obligations, the SRP enables manufacturers and open-source software stewards to report only once, rather than having to notify multiple national authorities individually. The platform incorporates security measures to protect confidentiality.
 
-Manufacturers and open-source software stewards submit notifications electronically through the SRP and select the relevant CSIRT designated as coordinator. In general, the national CSIRT to which the notification should be submitted is primarily determined by the main location of establishment, in accordance with Article 14(7) of the CRA. Once submitted, the notification is simultaneously made available to ENISA, while the CSIRT initially receiving it disseminates the information to other relevant CSIRTs in Member States where the product is also available, and to market surveillance authorities as needed.
+Manufacturers and open-source software stewards submit notifications electronically through the SRP and select the relevant CSIRT designated as coordinator. In general, the national CSIRT to which the notification should be submitted is primarily determined by the manufacturer's main location of establishment, in accordance with Article 14(7) of the CRA.
 
-### Q2. What is the legal basis for CRA SRP?
-The legal basis for the operation of the SRP is the Cyber Resilience Act (CRA), which states in Article 16(1): For the purposes of the notifications referred to in Article 14(1) and (3) and Article 15(1) and (2) and in order to simplify the reporting obligations of manufacturers, a single reporting platform shall be established by ENISA. The day-to-day operations of that single reporting platform shall be managed and maintained by ENISA. The architecture of the single reporting platform shall allow Member States and ENISA to put in place their own electronic notification end-points.
+Once submitted, the notification is simultaneously made available to ENISA, while the CSIRT initially receiving it disseminates the information to other relevant CSIRTs in Member States where the product is also available, and to market surveillance authorities as needed. CSIRTs designated as coordinators also share some information with their respective market surveillance authorities to enable them to fulfil their enforcement obligations.
 
-Articles 14-17 of the CRA provide the details of the ecosystem for reporting of vulnerabilities. Additionally, in December 2025 the European Commission published a Delegated Regulation specifying the conditions for delaying the dissemination of notifications.
+### Q2. What is the legal basis for the CRA SRP?
+The legal basis for the operation of the SRP is the [Cyber Resilience Act (CRA)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847), which states in Article 16(1): For the purposes of the notifications referred to in Article 14(1) and (3) and Article 15(1) and (2) and in order to simplify the reporting obligations of manufacturers, a single reporting platform shall be established by ENISA. The day-to-day operations of that single reporting platform shall be managed and maintained by ENISA. The architecture of the single reporting platform shall allow Member States and ENISA to put in place their own electronic notification end-points.
+
+Articles 14-17 of the CRA provide the relevant framework for the reporting and dissemination of notifications. Additionally, in December 2025, the European Commission published a [Delegated Regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=PI_COM:C(2025)8407) specifying the conditions under which the dissemination of notifications may be delayed.
 
 ### Q3. Who is responsible for establishing and managing the platform?
-ENISA is tasked with establishing, managing, and maintaining the day-to-day operations of the CRA SRP. ENISA must also ensure the platform's security and implement appropriate technical and organizational measures to protect the information submitted.
+ENISA is responsible for establishing the CRA SRP and for managing and maintaining its day-to-day operations. ENISA must also ensure the platform's security and implement appropriate technical and organizational measures to protect the information submitted.
 
 ### Q4. When will the Single Reporting Platform be operational?
-The platform is scheduled to be operational by 11 September 2026. This coincides with the date when the mandatory reporting obligations for manufacturers officially enter into application (art.14 of Cyber Resilience Act). A testing period is expected to take place before this date.
+The platform is scheduled to be operational from 11 September 2026, coinciding with the date on which the CRA reporting obligations under Art.14 become applicable.
+
+On the 11th of September the platform will ONLY allow the submission of mandatory reporting fulfilling Art 14 and 24(x). Voluntary reporting per art15 will not be possible.
 
 ### Q5. What must be reported via the platform?
-Under CRA, manufacturers will be obliged to notify two specific types of occurrences:
-- Actively Exploited Vulnerabilities: Vulnerabilities in products with digital elements for which there is reliable evidence that they have been exploited by a malicious actor;
-- Severe Incidents: Incidents that have a severe impact on the security of the product with digital elements (e.g., compromising availability, authenticity, integrity, or confidentiality); the criteria for severity are defined in Article 14(5).
+Under the CRA, manufacturers are required to notify two specific types of events:
+- Actively Exploited Vulnerabilities: vulnerabilities in products with digital elements for which there is reliable evidence that they have been exploited by a malicious actor;
+- Severe Incidents: incidents having a severe impact on the security of a product with digital elements (e.g., compromising its availability, authenticity, integrity, or confidentiality). The criteria for severity are set out in Article 14(5).
 
-Open-source software stewards are subject to reporting obligations to the extent that they are involved with products with digital elements, as per Article 24(3) of CRA.
+Open-source software stewards are also subject to reporting obligations to the extent that they are involved in the deployment of products with digital elements, in accordance with Article 24(3) of CRA.
 
 ### Q6. What else can be reported in the platform?
-In the future, the platform will also offer functionality for voluntary reporting. This functionality will be enabled in the next phase of the CRA SRP.
+In a future phase, the SRP will also offer functionality for voluntary notifications.
 
-Any natural or legal person may notify on a voluntary basis:
+Any natural or legal person may voluntarily notify:
 - Vulnerabilities contained in a product with digital elements;
 - Cyber threats that could affect the risk profile of a product with digital elements;
-- Incidents having an impact on the security of a product;
+- Incidents having an impact on the security of a product with digital elements;
 - Near misses that could have resulted in an incident.
 
 ### Q7. What are the deadlines for reporting?
-Reporting process starts at the moment manufacturer becomes aware of active exploitation of vulnerability or incident.
+The reporting process starts when a manufacturer or open-source steward becomes aware of an actively exploitation vulnerability or severe incident.
 
 'Actively exploited vulnerability' means a vulnerability for which there is reliable evidence that a malicious actor has exploited it in a system without permission of the system owner (CRA definition).
 
-'Incident having an impact on the security of the product with digital elements' means an incident that negatively affects or is capable of negatively affecting the ability of a product with digital elements to protect the availability, authenticity, integrity or confidentiality of data or functions (CRA definition).
+'Incident having an impact on the security of the product with digital elements' means an incident that negatively affects (or is capable of negatively affecting) the ability of a product with digital elements to protect the availability, authenticity, integrity or confidentiality of data or functions (CRA definition).
 
-The manufacturers and open-source software stewards must adhere to specific deadlines:
-- Early Warning: Without undue delay and in any case within 24 hours of becoming aware of the vulnerability or incident;
-- Vulnerability/Incident Notification: Without undue delay and in any case within 72 hours of becoming aware, providing general information and an initial assessment;
+Manufacturers and open-source software stewards must adhere to the following reporting deadlines:
+- Early Warning: Without undue delay and in any case within 24 hours of becoming aware of the actively exploited vulnerability or severe incident;
+- Actively Exploited Vulnerability/Severe Incident Notification: Without undue delay and in any case within 72 hours of becoming aware, providing general information and an initial assessment;
 - Final Report:
-  - For vulnerabilities: No later than 14 days after a corrective measure (e.g., patch) is available.
-  - For severe incidents: Within 1 month after the initial notification.
+  - For actively exploited vulnerabilities: No later than 14 days after a corrective measure (e.g., patch) becomes available.
+  - For severe incidents: Within 1 month after the 72-hour notification.
 
 ### Q8. How does the Single Reporting Platform operate?
-Manufacturers submit notifications electronically through the platform, which automatically routes them to the designated CSIRT coordinator (based on the manufacturer's main establishment) and ENISA simultaneously. The CSIRT then disseminates the information without delay to other relevant CSIRTs in Member States where the product is available, and to market surveillance authorities as needed. For sensitive reports, dissemination may be delayed on security grounds. More detailed information on the delayed dissemination process is provided in [Q21]. The platform incorporates security measures to protect confidentiality.
+Manufacturers and open-source software stewards submit notifications electronically through the SRP and select the relevant CSIRT designated as coordinator. In general, the national CSIRT to which the notification should be submitted is primarily determined in accordance with Article 15(7) of the CRA.
 
-### Q9. How will the platform be accessible and how will the registration process work?
-The SRP platform will be accessible through a dedicated public URL, which will be communicated and published in due course on this page before the platform goes live.
+Only one notification is required for any given actively exploited vulnerability (AEV) or severe incident (SI), even when a manufacturer has multiple branches or subsidiaries in the EU and/or its parent company is headquartered outside the EU. It is the manufacturer's responsibility to coordinate internally across its corporate structure and ensure that the required notification is submitted through the SRP.
 
-Manufacturers and open-source stewards representatives (AR), will be required to register using an EU Login account, which can be created in advance at the following link: https://ecas.ec.europa.eu/cas/login.
+Once submitted, the notification is simultaneously made available to ENISA, while the CSIRT acting as coordinator disseminates the information without delay to other relevant CSIRTs in Member States where the product is also available. National CSIRTs also share some information with their respective market surveillance authorities to enable them to fulfil their enforcement obligations. Under exceptional circumstances, dissemination of information may be delayed in accordance with Article 16(2) of the CRA. More detailed information on delayed dissemination is provided in Q21. The platform incorporates security measures to protect confidentiality.
 
-The validation that a representative can submit a report on behalf of a specific manufacturer will subsequently be performed by the CSIRT designated as coordinator. This validation will take place after the first access to the platform, in parallel with the reporting process, and will not affect the manufacturer's or open-source steward's ability to submit notifications through the platform.
+Information on the reporting fields and how to complete them is available in the [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary) and the regularly updated ENISA guidance materials.
 
-The specific validation procedure may vary between CSIRTs and will remain the responsibility of the relevant CSIRT. To avoid significantly increasing the validation workload of designated CSIRTs, manufacturers and open-source stewards are advised to register and initiate the validation process only when they need to submit a specific notification.
+### Q9. How is the platform accessible and how does the registration process work?
+The SRP will be accessible through a dedicated public URL, which will be published on this page before the platform goes live.
 
-More information can be found in the regularly updated guidance documents, to which we provide links at the bottom of this page.
+Assigned Representatives (ARs) of manufacturers or open-source stewards must have an EU Login account with Multi Factor Authentication enabled and use it to register on the SRP. An EU Login account can be created in advance at the following link: https://ecas.ec.europa.eu/cas/login. No additional corporate entity authentication mechanism is currently used by the SRP.
+
+No additional corporate entity authentication mechanism is currently used by the SRP. *(sentence duplicated verbatim on the live page)*
+
+EU Login accounts are personal, and multi-factor authentication (MFA) is required to access the SRP. Therefore, ARs submitting notifications should use their EU Login accounts.
+
+A Primary AR can register directly on the SRP by selecting the relevant CSIRT designated as coordinator, providing the required manufacturer information and creating the initial association with the manufacturer. A Secondary AR can register on the SRP after receiving an invitation from the Primary AR and confirming the pre-filled manufacturer information.
+
+There can be only one Primary AR per manufacturer, while there can be up to 20 Secondary ARs. The Primary AR has additional administrative functions, including managing the manufacturer entity and inviting or removing Secondary ARs. The AR–manufacturer association is subsequently validated by the CSIRT designated as coordinator. The specific validation procedure and processing time may vary between CSIRTs and remain the responsibility of the relevant CSIRT. Validation takes place in parallel with the reporting process and does not prevent an AR from submitting notifications while validation is pending. Non-validated ARs may submit up to 20 notifications for one manufacturer before validation becomes mandatory.
+
+To limit the validation workload for CSIRTs designated as coordinators, manufacturers and open-source software stewards are advised to register and initiate the validation process only when they need to submit a notification. Provided that the AR already has an active EU Login account, registration on the SRP takes just a few minutes.
+
+More information on registration, AR roles, and use of the platform is available in the regularly updated ENISA guidance materials.
 
 ### Q10. Where can I get further information on the application of the CRA?
-To ensure smooth implementation of the CRA, the European Commission has set up a web page about the reporting obligations, including a document "FAQs on the CRA Implementation", which specifies in section 5 more details related to the reporting obligations under this Regulation.
+To ensure smooth implementation of the CRA, the European Commission has set up [a web page about the reporting obligations](https://digital-strategy.ec.europa.eu/en/policies/cra-reporting), which includes the document "[FAQs on the CRA Implementation](https://ec.europa.eu/newsroom/dae/redirection/document/122331)". Section 5 provides more details on the reporting obligations under the CRA.
 
-On the 27th July 2026 the European Commission has published the Guidance to support timely Cyber Resilience Act implementation. In particular, the point 9.1 of the Guidance document explains in detail reporting obligations of manufacturers and open-source software stewards.
+On 27 July 2026, the European Commission also published its [Guidance to support timely Cyber Resilience Act implementation](https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation). In particular, Section 9.1 provides detailed guidance on the reporting obligations of manufacturers and open-source software stewards.
 
-Also in July 2026 ENISA published guidance documents, available at the bottom of this page.
+ENISA has also published guidance and supporting documents on the use of the CRA SRP, which are available on the main CRA SRP page and are updated as necessary.
 
-### Q11. How is the term "actively exploited vulnerability" interpreted in practice?
-The European Commission explains this term in its subsection 5.1 of its "FAQs on the CRA Implementation" – How can a manufacturer become aware of an actively exploited vulnerability or a severe incident?, alongside with other information related to the legal interpretation of CRA.
+### Q11. How is the term "actively exploited vulnerability" and "severe incidents" interpreted and reported in practice?
+The European Commission provides further guidance on the interpretation of actively exploited vulnerabilities (AEVs) and severe incidents (SIs) in Section 5 of its "FAQs on the CRA Implementation", including in subsection 5.1 – How can a manufacturer become aware of an actively exploited vulnerability or a severe incident?.
 
-### Q12. Do I need to report a vulnerability discovered in products made available before the entry into force of the CRA?
-Please refer to the European Commission's "FAQs on the CRA Implementation", in particular for this context to the subsection 5.3 – Does a manufacturer need to report actively exploited vulnerabilities or severe incidents for products placed on the market before the CRA applies?
+For the purposes of reporting through the SRP, an AR must select whether the notification concerns an AEV or a SI having a severe impact on the security of a product with digital elements. The reporting fields then adapt to the selected notification type. The [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary) provides practical guidance on the information to be supplied for each type of notification. For AEVs, this includes – where applicable/available – information such as the CVE ID, EUVD ID, general information about the vulnerability and exploitation, severity and impact, malicious actor, general nature of the exploit, and Particular Exceptional Circumstances (PEC). For SIs, the relevant fields include information on the nature of the incident, applied or ongoing mitigation measures, severity and impact, and the threat or root cause likely to have triggered the incident.
 
-### Q13. Do I need to report vulnerabilities that have been actively exploited before the CRA applies?
-The manufacturer's obligation to report actively exploited vulnerabilities applies once the manufacturer becomes aware of them. The European's Commission draft guidance provides further explanations on when a manufacturer is regarded to have become aware (section 9.1). The obligation does not extend to reporting of vulnerabilities the active exploitation of which the manufacturer was already aware before the CRA reporting obligation applies.
+Please note that not all the fields are required. Some fields might not be required in the 24hrs but become required in the 72hrs or in the final report. Refer to the SRP Glossary for additional information.
 
-### Q14. If a vulnerability in my product has its source in a third-party component, am I still obliged to notify it?
-Please refer to the European Commission's FAQ in section 5.4 - If an actively exploited vulnerability is contained in a third-party component, are all manufacturers integrating that component required to notify it?
+For further details on the legal interpretation of these concepts, please refer to the European Commission's guidance; for practical guidance on completing the relevant SRP fields, please consult the SRP Glossary.
 
-### Q15. Can the notification workflow be automated for large number of notifications from one manufacturer?
-Organisations might automate reporting workflows and integrate reporting requirements into their systems and databases, however no Application Programming Interfaces will be provided at this stage. The relevant data fields for reporting can be found in the next section of this FAQ (Q16).
+### Q12. Do I need to report actively exploited vulnerabilities or severe incidents for products placed on the market before the entry into force of the CRA?
+Please refer to the European Commission's "FAQs on the CRA Implementation", in particular subsection 5.3 on the reporting obligations under Article 14, which will apply from 11 September 2026 to all products with digital elements falling within the scope of the CRA, including products that were placed on the market before 11 December 2027.
+
+### Q13. Do I need to report vulnerabilities whose active exploitation occurred before the CRA reporting obligations apply?
+The manufacturer's obligation to report actively exploited vulnerabilities is triggered when the manufacturer becomes aware of them. According to the European Commission's "FAQs on the CRA Implementation" a manufacturer is not required to retrospectively report an actively exploited vulnerability where it was already aware of the active exploitation before 11 September 2026 (subsections 5.1 & 5.3). However, where the manufacturer becomes aware of the active exploitation after that date, the reporting obligation applies, including where the underlying vulnerability existed or was previously known.
+
+### Q14. If an actively exploited vulnerability in my product originates from a third-party component, am I still required to notify it?
+Please refer to the European Commission's FAQ inin particular section 5.4 on the reporting obligations for actively exploited vulnerability contained in a third-party component. *("inin" is a typo on the live page, reproduced verbatim.)*
+
+### Q15. Can the notification workflow be automated for a large number of notifications from one manufacturer?
+Organisations may automate their internal reporting workflows and integrate CRA reporting requirements into their own systems and databases. However, no Application Programming Interface (API) will be provided at the initial release of the SRP, so notifications must be submitted through the platform interface. API functionality may be considered in a future phase of the SRP.
+
+Detailed information on the data fields to be completed at each reporting stage is available in the next section of this FAQ (Q16) and the SRP Glossary.
 
 ### Q16. What are the data fields to be filled in the reporting template?
-The table below explains the fields that will be obligatory (stemming directly from CRA or identified by logical consequence) or optional at each stage of reporting.
+The SRP Glossary and table provide detailed guidance on all fields available in the platform for both actively exploited vulnerabilities and severe incidents. For each field, it explains what the field means, how it may be completed, the expected format, and at which reporting stage it applies. The Glossary also indicates whether each field is required (stemming directly from CRA obligations or identified by logical consequence), optional, mandatory if the information is available, or carried forward from a previous reporting stage.
 
-Legend: A — automated (not visible for the submitter); X — obligatory; C — by default copied from previous step, or updated; O — optional; I — obligatory if such information available.
+Please consult the SRP Glossary for the complete and most up-to-date field-by-field guidance.
 
-Common fields (24h / 72h / Final):
-1. Notification type (Vulnerability/Incident): X / C / C
-2. Notification level (24h/72h/Final): X / X / X
-3. Reporting time - 24h: A / A / A
-4. Reporting time - 72h: A / A / A
-5. Reporting time - Final: A / A / A
-6. Reporter: A / A / A
-7. Name of manufacturer or open-source software steward: X / C / C
-8. Product: X / C / C
-9. Product Type (Default/Important/Critical): O / C / C
-10. Product Category (If Product Type other than Default - CRA Annex III/IV): O / C / C
-11. Member States where product available: I / C / C
-12. Title: X / C / C
+Status legend: Required; By default copied from previous step, or updated; Automated (not visible for the submitter); Optional; Required if such information available.
 
-Vulnerability fields:
-v13. CVE ID: O / C / C
-v14. EUVD ID: O / C / C
-v15. General information, in particular: O / X / C
-v16. a. General nature of the vulnerability: O / X / C
-v17. b. General nature of the exploit: O / X / C
-v18. Corrective or mitigating measures taken: O / X / C
-v19. Corrective or mitigating measures that users can take: O / X / C
-v20. Considered sensitivity of information: O / I / C
-v21. Date when corrective or mitigating measure has been available: O / O / X
-v22. Full description of the vulnerability, incl.: O / O / X
-v23. a. Severity of the vulnerability: O / O / X
-v24. b. Impact of the vulnerability: O / O / X
-v25. Malicious actor that has exploited / is exploiting the vulnerability: O / O / I
-v26. Details about the security update / corrective measures available: O / O / X
+Common fields (Early Warning 24h / 72h / Final Report):
+1. Notification type (Vulnerability/Incident): Required / copied-or-updated / copied-or-updated
+2. Notification level (24h/72h/Final): Required / Required / Required
+3. Reporting time - 24h: Automated / Automated / Automated
+4. Reporting time - 72h: Automated / Automated / Automated
+5. Reporting time - Final: Automated / Automated / Automated
+6. Reporter: Automated / Automated / Automated
+7. Title: Required / copied-or-updated / copied-or-updated
+8. Summary: Required / copied-or-updated / copied-or-updated
+9. Manufacturer name: Required / copied-or-updated / copied-or-updated
+10. Member States where product available (Concerned CSIRT): Required if available / copied-or-updated / copied-or-updated
+11. Product Name: Required / copied-or-updated / copied-or-updated
+12. Product version: Required / copied-or-updated / copied-or-updated
+13. Product Type (Default/Important/Critical): Optional / copied-or-updated / copied-or-updated
+14. Product Class: Optional / copied-or-updated / copied-or-updated
+15. Product Category: Optional / copied-or-updated / copied-or-updated
+16. End of support indicator: Optional / copied-or-updated / copied-or-updated
+17. Component name: Optional / copied-or-updated / copied-or-updated
+18. Mitigating measure expected shortly: Optional / copied-or-updated / copied-or-updated
+19. User Action able to reduce impact: Optional / copied-or-updated / copied-or-updated
+20. Considered sensitivity of information: Optional / Required if available / copied-or-updated
+21. Corrective or mitigating measures taken: Optional / Required / Required
+22. Corrective or mitigating measures that users can take: Optional / Required / Required
+23. Attack vector: Optional / Optional / Optional
 
-Incident fields:
-i13. Incident is suspected by unlawful or malicious acts: X / C / C
-i14. General information, about the nature of the incident: O / X / C
-i15. Date and time when the incident was detected: O / X / C
-i16. Date and time when the incident occurred: O / X / C
-i17. Initial assessment of the incident: O / X / C
-i18. Corrective or mitigating measures taken: O / X / C
-i19. Corrective or mitigating measures that users can take: O / X / C
-i20. Considered sensitivity of information: O / I / C
-Detailed description of the incident, incl.: O / O / X
-i21. a. Severity of the incident, where:
-  1) it negatively affects or is capable of negatively affecting the ability of a product with digital elements to protect the availability, authenticity, integrity or confidentiality of sensitive or important data or functions; or
-  2) it has led or is capable of leading to the introduction or execution of malicious code in a product with digital elements or in the network and information systems of a user of the product with digital elements: O / O / X
-i23. b. Impact of the incident: O / O / X
-i24. Type of threat or root cause that is likely to have triggered the incident: O / O / X
-i25. Applied and ongoing mitigation measures: O / O / X
+Actively Exploited Vulnerability (AEV) fields:
+v24. CVE ID: Optional / copied-or-updated / copied-or-updated
+v25. EUVD ID: Optional / copied-or-updated / copied-or-updated
+v26. General information: Optional / Required / copied-or-updated
+v27. Date when corrective or mitigating measure has been available: Optional / Optional / Required
+v28. Full description of the severity of the vulnerability: Optional / Optional / Required
+v29. Full description of the impact of the vulnerability: Optional / Optional / Required
+v30. Date/time when you become aware of the Actively Exploited Vulnerability: Required / copied-or-updated / copied-or-updated
+v31. Malicious actor that has exploited / is exploiting the vulnerability: Optional / Optional / Required if available
+v32. Particular Exceptional Circumstances (PEC): N/A / Optional / N/A
+v33. PEC Delay Reason: N/A / Optional / N/A
+v34. Please provide further information: Optional / Optional / copied-or-updated
 
-### Q17. Will any trainings be provided for the relevant parties?
-Yes. ENISA recognises the need to ensure that all relevant contributors and reporting teams have sufficient time to prepare ahead of the CRA reporting obligations becoming applicable. Guidance instructions and a fact sheet have been published by ENISA in July 2026 and are successively expanded and updated. Other material, including a PDF manual tutorial videos, will be published closer to the launch of the Platform. To support training and preparation efforts, ENISA also foresees to hold a webinar two weeks before the entry into service of the SRP.
+Severe Incident (SI) fields:
+i35. Incident is suspected of unlawful or malicious acts: Required / copied-or-updated / copied-or-updated
+i36. General information about nature of incident: Optional / Required / copied-or-updated
+i37. Applied and ongoing mitigation measures: Optional / Optional / Required
+i38. Detailed description of the Severity of the incident: Optional / Optional / Required
+I39. Detailed description of the Impact of the incident: Optional / Optional / Required
+i40. Type of threat or root cause that is likely to have triggered the incident: Optional / Optional / Required
+i41. Date/time when you become aware of the incident: Required / copied-or-updated / copied-or-updated
+i42. Date/time when the incident occurred: Optional / Optional / Optional
+i43. Initial assessment of the incident: Optional / Required / copied-or-updated
 
-### Q18. How do I know what is the national CSIRT to which I should report through the CRA SRP?
-The national CSIRT to which you should report through the SRP is essentially determined by your main location of establishment (or of the establishment of your authorised representative, if you are not established in the EU). The CRA Art.14(7) provides detailed information allowing for the manufacturer to identify the national CSIRT to report to.
+### Q17. What guidance material is available for the relevant parties?
+ENISA recognises the need to ensure that manufacturers, open-source software stewards, Assigned Representatives and other relevant reporting teams have clear and practical information to prepare for and use the CRA SRP. ENISA has published a range of supporting materials, including the SRP Factsheet, FAQs, and SRP Glossary. Additional operational materials, including a user manual and tutorial videos, will be published at the launch of the platform. These materials will be updated and expanded as necessary.
 
-Additional information (list of national CSIRTs designated as coordinators) will be provided by ENISA at the later stage.
+The SRP Glossary provides detailed field-by-field guidance, including what each field means, how it may be completed, the expected format, and at which reporting stage it applies.
 
-### Q19. What are the responsibilities of key entities involved with the CRA SRP?
-- Manufacturers: Submit timely notifications and comply with the other obligations established by the CRA;
+### Q18. How do I know which national CSIRT I should report to through the CRA SRP?
+As per Art.14(7) of the CRA, you should report to the CSIRT designated as coordinator (CDaC) in the Member States of your main establishment in the EU. Under the CRA, the main establishment is the place where decisions related to the cybersecurity of your products with digital elements are predominantly taken.
+
+If this cannot be determined, use the Member State where your establishment with the highest number of employees in the EU is located.
+
+If you do not have a main establishment in the EU, determine the relevant Member State using the following order (and based on the information available):
+- the Member State where your authorised representative acts on your behalf for the highest number of products with digital elements;
+- if this does not apply, the Member State where the importer places the highest number of your products with digital elements on the market;
+- if this does not apply, the Member State where the distributor makes the highest number of your products with digital elements available on the market;
+- if none of the above applies, the Member State with the highest number of users of your products with digital elements.
+
+You should then select the corresponding CSIRT designated as coordinator when submitting your notification through the SRP. (See also the new "List of CSIRTs Designated as Coordinators" page, `csirt_list_url`.)
+
+### Q19. What are the responsibilities of key entities involved with the CRA SRP? *(not tagged [UPDATED] on the live page despite the text below having changed — see change log)*
+- Manufacturers: Submit timely notifications and comply with the other obligations established by the CRA as per Article (14);
 - Open-source software stewards: Submit timely notifications to the extent that they are involved with products with digital elements, as per Article 24(3);
 - ENISA: Manages the platform, processes reports, prepares biennial trend reports (first due within 24 months of the reporting obligations starting), operates a helpdesk (especially for SMEs), and discloses fixed vulnerabilities to the European Vulnerability Database;
 - CSIRTs Designated as Coordinators: Receive and assess reports, decide on dissemination delays, inform market surveillance authorities and the public if necessary, and provide helpdesk support alongside ENISA;
 - European Commission: Adopts delegated and implementing acts (e.g., for delay criteria and report formats), evaluates the platform's effectiveness, and supports coordination of enforcement activities;
-- Market Surveillance Authorities: Receive disseminated information and enforce compliance, such as through investigations or corrective actions.
+- Market Surveillance Authorities: Receive information from the CSIRT Designated as Coordinator and enforce compliance, such as through investigations or corrective actions.
 
-### Q20. Who receives the reports submitted to the platform?
-As a general rule, when a manufacturer submits a report to the CRA SRP, it is simultaneously notified to:
-- The CSIRT (Computer Security Incident Response Team) designated as the coordinator in the Member State where the manufacturer is established.
+### Q20. Who receives the reports submitted through the platform?
+As a general rule, when a manufacturer submits a notification through the CRA SRP, it is simultaneously made available to:
+- The CSIRT (Computer Security Incident Response Team) designated as coordinator in the relevant Member State; and
 - ENISA (unless particularly exceptional circumstances apply).
 
 The CSIRT designated as coordinator that initially receives the notification is then responsible for disseminating it without delay to other relevant CSIRTs across the EU via the platform.
 
-### Q21. Can the dissemination of a report be delayed or withheld?
-Yes. In exceptional circumstances, the receiving CSIRT may decide to delay or withhold the dissemination of a notification to other Member States. This is strictly limited to cases where immediate dissemination is justified on security related grounds (e.g., if spreading the information would pose an even greater security risk).
+### Q21. Can the dissemination of a report be delayed or withheld? What are the particularly exceptional circumstances?
+Yes. In particularly exceptional circumstances (PEC), the receiving CSIRT may delay or withhold the dissemination of a notification to other Member States, including at the request of the manufacturer or open-source software steward.
 
 The European Commission adopted a delegated act on 11 December 2025 to further specify the terms and conditions for applying these grounds.
 
-In particularly exceptional circumstances, ENISA will not receive the full content of the 72-hour notification. This is only the case where, in the 72-hour notification, the manufacturer actively marks that at least one of the conditions listed in points (a) to (c) of Article 16(2) applies. In such case, ENISA only receives partial information, until the receiving CSIRT discloses the full notification.
+During the first 72-hour window, you should assess, where applicable, whether PEC applies. PEC may be invoked only where at least one of the conditions under Article 16(2) of the CRA is met. It is intended for exceptional situations in which the dissemination of information may need to be delayed to avoid security-related risks.
+
+Where PEC is invoked in the 72-hour notification, ENISA will not receive the full content of the notification immediately. This applies only where the manufacturer actively marks that at least one of the conditions listed in points (a) to (c) of Article 16(2) applies. In such a case, ENISA receives only partial information until the receiving CSIRT makes the full notification available.
 
 ### Q22. How does the platform ensure security?
-ENISA is legally required to take appropriate measures to manage risks to the platform's security and must notify the CSIRTs Network and the Commission of any security incidents affecting the platform itself.
+ENISA is legally required to take appropriate technical and organisational measures to manage risks to the platform's security and must notify the CSIRTs Network and the European Commission of any security incidents affecting the platform itself.
 
-Before its launch, the platform will be subject to user and security testing, to ensure its reliability. It will be also periodically re-checked.
+Before launch, the platform underwent user and security testing to support its reliability, security, and functionality. It will be also periodically reviewed and re-tested as necessary.
 
-### Q23. How is the CSIRTs network involved?
-As provided in CRA Article 16, ENISA is engaging the CSIRTs Network in development and future testing of the CRA SRP.
+### Q23. How was the CSIRTs Network involved?
+As provided for in Article 16 of the CRA, ENISA has engaged the CSIRTs Network in the development and testing of the CRA SRP. Various CSIRTs participated in user testing and security testing, providing valuable feedback on the functioning of the platform.
+
+### Q24. In which languages will the SRP be available? *(new question)*
+ENISA will progressively translate the Factsheet and other supporting materials into all EU languages. This availability of additional language versions of the platform itself will be reviewed in the next phase of the project.
+
+### Q25. What should I do if the SRP is temporarily unavailable? *(new question)*
+Manufacturers must fulfil their reporting obligations by submitting notifications through the Single Reporting Platform (SRP), in accordance with Article 14(7). If the SRP is temporarily unavailable, manufacturers should wait until it becomes available again and then submit the required notification.
+
+If, in the meantime, manufacturers consider that immediate communication is necessary before the SRP is restored, they may contact their designated CSIRT directly. Please note, however, that even where the CSIRT has been contacted directly, the notification must still be submitted through the SRP once it is available again in accordance with the CRA.
+
+The same applies to open-source software stewards.
+
+### Q26. How are the 72hrs and Final Report counter calculated *(new question)*
+To help manufacturers and open-source software stewards Assigned Representatives to prioritise as well be reminded of the reporting obligations, the platform implements a number of counters.
+
+The counters for the 72hrs and Final reports are used as reference to send reminder emails as well to display alerts that a report may be potentially overdue.
+
+These counters should be used to provide visibility but do not replace the duty of the manufacturers and open-source software stewards Assigned Representative to comply with the obligations laid down in CRA, including the need to report upon becoming aware, without undue delay and in any event within the timeline set out in Article 14.
+
+72hrs counter: In the current release, the 72hrs counter logic displays the due date/time for the 72hrs report, 48hrs after the submission of the 24hrs report. Due to this, in some cases, a notification might be displayed as overdue before 72 hours from when the manufacturer or open-source software stewards has become aware of the event. This logic will be updated in future release to start counting using instead the field 'Date and Time when you became aware of the incident/actively exploited vulnerability' for both AEV and SI once this field will be introduced as required.
+
+Final Report: For the final report, there is a difference between AEV and SI report due to how the different law provisions are laid down in Article 14. For AEV, there is no counter implemented as the final submission depends on the date and time when a corrective or mitigating measure is available. For SI, the logic is similar to the 72hrs counter, that is, i.e. the counter will display 1 month after the 72hrs notification is submitted.
+
+### Q27 (unnumbered on the live page). Can I report vulnerabilities even if they are not actively exploited? *(new question, tagged [NEW]; appears without a number after Q26 — likely a numbering glitch on ENISA's side, reproduced as-is)*
+The platform has not yet implemented the voluntary reporting functionality provided for under Article 15 of the CRA. As such, only mandatory notifications concerning actively exploited vulnerability and severe incident having an impact on the security of products with digital elements, in accordance with Articles 14 and 24 of the CRA, can currently be submitted through the SRP.
+
+The platform will be enhanced at a later stage to support voluntary reporting.
+
+### Closing note (new, end of FAQ page)
+"You did not find above the answer to your question? For matters not covered by this FAQ, nor by available guidance pages, please contact: cra-srp-helpdesk[@]enisa.europa.eu" — this replaces the support-contact line that previously appeared in the main page's "User guidance" section footer (now removed from the main page).
 
 ## Guidance documents (User guidance section, on the main SRP page)
 
 - "CRA SRP - AR User registration" — Updated: 3/08/2026. "This page provides information on the Assigned Representatives (AR) user registration in the SRP. It is intended for AR users (Primary and Secondary)."
 - "CRA SRP - AR Notification submission and update" — Updated: 3/08/2026. "This page provides information on the Assigned Representatives (AR) submission and update of notifications in the SRP. It is intended for AR users (Primary and Secondary)."
-- "CRA SRP - AR Interface functions" — Updated: 14/08/2026 — **[New, first seen 2026-08-24]**. "This page explains the AR's interface of the SRP for various functions that can be performed."
+- "CRA SRP - AR Interface functions" — Updated: 14/08/2026. "This page explains the AR's interface of the SRP for various functions that can be performed."
 
-Support contact listed on the main page: cra-srp-helpdesk[@]enisa.europa.eu
+The support-contact line previously listed here (cra-srp-helpdesk[@]enisa.europa.eu) has moved to the bottom of the FAQ page — see "Closing note" above.
+
+## CRA SRP Glossary (new page, `glossary_url`)
+
+Version 1.1, last update: 05/09/2026. The authoritative field-by-field reference for the reporting template: for each field it gives the meaning, how to complete it, a worked example, the expected format, and its per-stage status (Early Warning 24h / 72h / Final Report). Its own field numbering differs from the FAQ's Q16 table — it does not itemize the 5 automated/system common fields (Notification level, the three Reporting-time fields, Reporter) that Q16 lists explicitly, so its common-field numbering runs 1–18 instead of 1–23; the AEV and SI fields (same substance as Q16's v24–v34 and i35–i43) are renumbered v19–v29 and i30–i38 respectively.
+
+**Scope note**: only field names, applies-to (Both/AEV/SI), and per-stage status are captured below, not the full descriptive text (meaning/how-to-complete/example/format) for each field — that level of detail lives on the live page itself and would make this baseline unwieldy to diff. A future check should re-verify field names, counts, and statuses against this list, and flag if the page's own numbering or the field set changes.
+
+Common fields (1–18, "Both" AEV/SI): 1 Notification type, 2 Title, 3 Summary, 4 Manufacturer name, 5 Member States where product available (Concerned CSIRT), 6 Product Name, 7 Product version, 8 Product Type (Default/Important/Critical), 9 Product Class, 10 Product Category, 11 End of support indicator, 12 Component name, 13 Mitigating measure expected shortly, 14 User Action able to reduce impact, 15 Considered sensitivity of information, 16 Corrective or mitigating measures taken, 17 Corrective or mitigating measures users can take, 18 Attack vector.
+
+AEV fields (v19–v29): v19 CVE ID, v20 EUVD ID, v21 General information, v22 Date when corrective or mitigating measure has been available, v23 Full description of the severity of the vulnerability, v24 Full description of the impact of the vulnerability, v25 Date/time when you become aware of the Actively Exploited Vulnerability [1], v26 Malicious actor that has exploited/is exploiting the vulnerability, v27 Particular Exceptional Circumstances (PEC), v28 PEC Delay Reason, v29 Please provide further information.
+
+SI fields (i30–i38): i30 Incident is suspected of unlawful or malicious acts, i31 General information about nature of incident, i32 Applied or ongoing mitigation measures, i33 Detailed description of the Severity of the incident, i34 Detailed description of the Impact of the incident, i35 Type of Threat or root cause likely to have triggered incident, i36 Date/time when you become aware of the incident [2], i37 Date/time incident occurred, i38 Initial assessment of the incident.
+
+Footnotes on the page: [1] "This field will be available in the next release of the Platform." [2] "In the current release this field is named: 'Date/time the incident was detected'."
+
+## List of CSIRTs Designated as Coordinators (new page, `csirt_list_url`)
+
+"Updated: 04/09/2026". Page note: "This list provides the contacts to the CSIRTs Designated as Coordinators, in the meaning of the Cyber Resilience Act (CRA)." One entry per EU Member State (27 total), each with one or more contact links:
+
+- Austria: https://www.cert.at/de/ueber-uns/kontakt/ ; https://www.cert.at/en/about-us/contact/
+- Belgium: https://ccb.belgium.be/contacts
+- Bulgaria: https://www.govcert.bg/en/contact-us/
+- Croatia: https://www.cert.hr/en/home-page/
+- Cyprus: https://www.csirt.cy/en/contact-us
+- Czechia: https://nukib.gov.cz/cs/kontakty/
+- Denmark: https://www.fe-ddis.dk/da/arbejdsomrade-a/Cybertruslen/
+- Estonia: https://www.ria.ee/en/cyber-security/handling-cyber-incidents-cert-ee
+- Finland: https://www.kyberturvallisuuskeskus.fi/en/contact-us/contact
+- France: https://www.cert.ssi.gouv.fr/contact-us/
+- Germany: https://www.bsi.bund.de/CERT-Bund/ ; https://www.bsi.bund.de/EN/CERT-Bund/
+- Greece: https://cyber.gov.gr/el-csirt/
+- Hungary: https://ncsc.gov.hu
+- Ireland: https://www.ncsc.gov.ie/cra/
+- Italy: https://www.acn.gov.it/portale/csirt-italia/chi-siamo
+- Latvia: https://cert.lv/uploads/par-mums/RFC_2350_CERT-LV_21072025.pdf
+- Lithuania: https://www.nksc.lt/kontaktai.html
+- Luxembourg: https://www.circl.lu/pub/coordinated-vulnerability-disclosure/
+- Malta: http://www.mita.gov.mt
+- Netherlands: https://www.ncsc.nl/contact
+- Poland: https://cert.pl/en/cvd/
+- Portugal: https://www.cncs.gov.pt/pt/certpt/rfc-2350
+- Romania: https://www.dnsc.ro/contact
+- Slovakia: http://www.sk-cert.sk
+- Slovenia: https://www.cert.si/en/about-si-cert/
+- Spain: for incidents — https://www.incibe.es/incibe-cert/incidentes/respuesta-incidentes and https://www.incibe.es/en/incibe-cert/incidents/incident-handling ; for vulnerability coordination — https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/asignacion-publicacion-cve and https://www.incibe.es/en/incibe-cert/early-warning/vulnerabilities/cve-assignment-publication
+- Sweden: https://cert.se/rapportera/
 
 ## Guidance subpages — full content baseline
 
-**[New section, first captured 2026-09-02]**. The three guidance documents above are separate subpages (URLs in `guidance_urls` in the frontmatter) that were previously only tracked by title and "Updated:" date. As of 2026-09-02 their full content is captured below so future checks can diff them too, not just the summary list above. All three currently carry the disclaimer: "The information on this page is provided according to our current best knowledge and may be subject to change. Please ensure you consult the latest available guidance before applying these instructions."
+The three guidance documents above are separate subpages (URLs in `guidance_urls` in the frontmatter). All three currently carry the disclaimer: "The information on this page is provided according to our current best knowledge and may be subject to change. Please ensure you consult the latest available guidance before applying these instructions." Re-verified 2026-09-07: content and "Last updated" dates unchanged from the 2026-09-02 capture, except the one cosmetic typo noted below.
 
 ### Guidance: CRA SRP - AR User registration
 URL: see `guidance_urls`. Page note: "Last updated: 3/08/2026."
@@ -259,8 +378,8 @@ Notes: Validation of the registration of the assigned representative (AR) by the
 
 **Registration as Primary Assigned Representative & AR Association with Manufacturer via "Registration Flow"**
 Follow these steps to register on the SRP and associate your account with a manufacturer.
-- Pre-conditions: You are not already registered as an SRP user; you already have an active EU Login account.
-- Steps: Open the SRP website (URL to be provided at launch), select your role (AR) and click "Continue" (note: hovering over the "i" icon shows role info) → Select the designated CSIRT from the drop-down menu and click "Continue" → Authenticate through EU Login → Read and accept the legal agreement → Confirm the accuracy of your pre-filled personal details (First Name, Last Name, Email, Legal name), click "Continue" → Enter the manufacturer details (manufacturer name, manufacturer address, additional information) and click "Continue". Exceptions: omitting mandatory manufacturer details (manufacturer name, additional information) returns an error and keeps "Continue" disabled.
+- Pre-conditions: You are not already registered as an SRP user; you already have an active EU Login account (please check the URL above) — *the parenthetical is new since the 2026-09-02 capture*.
+- Steps: Open the SRP website (URL to be provided at launch), select your role (AR) and click "Continue" (note: hovering over the "i" icon shows role info) → Select the designated CSIRT from the drop-down menu and click "Continue" → Authenticate through EU Login → Read and accept the legal agreement → Confirm the accuracy of your pre-filled personal details (First Name, Last Name, Email, Legal name), click "Continue" → Enter the manufacturer details (manufacturer name, manufacturer adress [typo on live page, was "address"], additional information) and click "Continue". Exceptions: omitting mandatory manufacturer details (manufacturer name, additional information) returns an error and keeps "Continue" disabled.
 - Expected result: Registration is completed, subject only to approval of the AR association with manufacturer. Account is "Active" with role "AR Primary User". A confirmation email is sent. If manufacturer details were included, the manufacturer entity is created in the SRP.
 
 **Registration via Invitation (Secondary AR)**
@@ -314,3 +433,4 @@ This section explains the AR's interface of the SRP for various functions that c
 - 2026-08-24: checked (fetched raw HTML directly for both the main SRP page and, after discovering it, the new dedicated FAQ subpage, for a full word-for-word diff). Major structural change: the FAQ content moved off the main page onto its own subpage (`faq_url`), which now shows "Updated: 03 August 2026" and a single page-level update note instead of per-question "[Updated]" tags. All 23 questions received a copyediting pass (wording/punctuation only, no substantive changes to dates, deadlines, or obligations) and Q16's 39-entry data-field table was verified value-for-value unchanged. New third guidance document added ("CRA SRP - AR Interface functions", updated 14/08/2026); the two existing guidance documents now show "Updated: 3/08/2026" (previously 31/07/2026). Main-page intro paragraph reworded (new lead sentence added; standalone EUR-Lex reference line replaced with an inline link). Factsheet section and its download link unchanged. File updated accordingly.
 - 2026-08-31: checked (fetched raw HTML directly for both the main SRP page and the FAQ subpage, for a full word-for-word diff; old main-page URL was found to now 301/meta-redirect to a new URL, so both were fetched). Still Q1–Q23, no questions added/removed/reordered. Main page's canonical URL changed from `.../topics/product-security-and-certification/single-reporting-platform-srp` to `.../topics/product-security/single-reporting-platform-srp` (old URL now redirects; recorded as `old_url`). Three answers changed in substance/wording: Q1 (reworded to present tense, same substance), Q6 (removed the specific "after 11 September 2026" trigger date for voluntary reporting, now "next phase of the CRA SRP"), Q17 (training material description changed from "short videos" to "a PDF manual tutorial videos"). Page-level "Updated: 03 August 2026" note was not bumped despite these edits. Intro, Q2–Q5, Q7–Q16 (incl. data-field table values), Q18–Q23, and guidance-documents section verified unchanged. File updated accordingly.
 - 2026-09-02: monitoring scope extended at user request to include the three guidance subpages themselves (previously only their title/date were tracked from the summary list on the main page), listed in `guidance_urls`. Fetched raw HTML of all three and captured full content as a new baseline section ("Guidance subpages — full content baseline"), dated `guidance_retrieved: 2026-09-02`. Their "Last updated" dates on this pass (3/08/2026, 3/08/2026, 14/08/2026) match what was already known from the summary list, so this is a first full-content capture, not a detected change. FAQ/main page content itself was not re-checked in this pass (still as of 2026-08-31); the next check should diff both the FAQ/main page and all three guidance subpages against this file.
+- 2026-09-07: checked (fetched raw HTML directly for the main page, the FAQ page, both re-verified guidance subpages, and — newly discovered via the site's own updated navigation — two brand-new subpages, the "CRA SRP Glossary" and the "List of CSIRTs Designated as Coordinators"). **Major overhaul**: FAQ page-level date bumped to "Updated: 04 September 2026"; every FAQ answer reworded/expanded and tagged [UPDATED] (except Q19, whose text changed without the tag); FAQ entry count grew from 23 to 27 (three new numbered questions Q24–Q26 plus one new unnumbered entry, all tagged [NEW]); Q16's data-field table grew from 39 to 43 fields and now defers to the new Glossary page as the authoritative source; a new helpdesk-contact closing note was added to the bottom of the FAQ page (the equivalent line was removed from the main page's "User guidance" footer). The two new subpages (Glossary — version 1.1, last update 05/09/2026; CSIRT list — Updated 04/09/2026) are now tracked going forward (`glossary_url`, `csirt_list_url` added to frontmatter) and captured in summary/table form. Guidance subpages verified unchanged in substance/dates, with one cosmetic typo spotted ("manufacturer adress"). See the "Change log (2026-09-07 check...)" section above for full detail. File updated accordingly.
