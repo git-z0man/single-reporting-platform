@@ -6,14 +6,18 @@
 - **Updatable by an agent**: **no** — created via `http_api`, so the prompt below
   must be pasted into the Routines UI by hand.
 
-> **Applied 2026-09-07.** Pasted into the Routines UI and verified against the
-> live Routine: 8,213 characters, all seven section markers present, no
-> fragment of the June prompt left, next run 14.09. 05:02 UTC. This file now
-> mirrors what actually runs.
+> **Applied 2026-09-07 (morning)**, then amended the same evening — section 2
+> and the report line below have changed since that paste and are **not yet
+> live**.
+> `update_trigger` refused the routine (created via `http_api`), so this
+> version has to be pasted into the Routines UI by hand. Until that happens
+> the live Routine still carries the morning's text, which describes the
+> Glossary's 403 as unreliability rather than as the page move it turned out
+> to be. It reads its URLs from the baseline frontmatter either way, so a run
+> in the meantime still checks the right address.
 >
-> The constraint above still holds — a future change to this prompt needs the
-> same manual step, because `update_trigger` refuses a routine created via
-> `http_api`.
+> The constraint above is permanent — every future change to this prompt needs
+> the same manual step.
 
 ---
 
@@ -61,14 +65,16 @@ Also walk the page navigation ("Content" subtopics list) on the main page. If a 
 
 `enisa-srp-glossary-baseline.md` is the full-detail, field-by-field historical record of the Glossary page, kept as one table row per field (Common / AEV / SI groups) so a single changed field shows up as a single-row diff.
 
-The live Glossary page is unreliable — it returned **HTTP 403 on 2026-09-07** while every other tracked SRP page returned 200. Therefore:
+The Glossary page has already moved once: on 2026-09-07 the URL that had been tracked began returning **HTTP 403**, and the page turned out to have been republished at `.../cra-srp-glossary2`. Note also that the FAQ page kept linking to the old path afterwards, so ENISA's own links can be stale. A 403 on this page is therefore an ambiguous signal, not a diagnosis. Rules:
 
-- A 403 (or any non-200) on the Glossary is **not a run failure and not a reason to touch the table content**. Never delete, empty, or trim the baseline because the page is unavailable — it is the record precisely for that case.
-- A reachability transition is itself a reportable finding. Update the `status:` line in the frontmatter with what you found and the UTC timestamp, and mention it in the report. Both directions matter: 200 → 403 and 403 → 200.
+- A non-200 on the Glossary is **not a run failure and not a reason to touch the table content**. Never delete, empty, or trim the baseline because the page is unavailable — it is the record precisely for that case.
+- Before concluding anything from a non-200, **look for the page under a new address**: walk the "Content" subtopics navigation on the main SRP page and search the site for a Glossary entry. A moved page is the more likely explanation than an unpublished one. If you find it, update `url` in the frontmatter, keep the previous address in `old_url`, and report the move.
+- Only if no replacement address exists is the page genuinely unavailable. Record that in the `status:` line with the UTC timestamp, and report it. Both directions matter: 200 → non-200 and non-200 → 200.
+- Correct an earlier wrong diagnosis in `status:` rather than overwriting it silently. The frontmatter is what the next run reads; a stale wrong URL there produces a false reachability finding a week later.
 - Only when the page returns 200 do you diff its content and update the tables, `page_version`, and `retrieved`.
-- Check the other six pages in the same run before concluding anything: a Glossary-only failure means ENISA is editing or unpublishing that page; all seven failing means a site-wide outage.
+- Check the other six pages in the same run before concluding anything: a Glossary-only failure means ENISA moved, is editing, or unpublished that page; all seven failing means a site-wide outage.
 
-Note that `enisa-srp-faq-baseline.md` also carries a deliberately trimmed summary table of the Glossary fields (in Q16 and its "CRA SRP Glossary" section). That summary is NOT the record — never reconstruct the full baseline from it, and keep the two consistent when the Glossary changes.
+Note that `enisa-srp-faq-baseline.md` also carries a deliberately trimmed summary table of the Glossary fields (in Q16 and its "CRA SRP Glossary" section). That summary is NOT the record — never reconstruct the full baseline from it, and keep the two consistent when the Glossary changes. It also repeats the Glossary URL in prose — when the page moves, update those occurrences too.
 
 ## 3. The CSIRT list — diff it, but do not act on it
 
@@ -120,8 +126,8 @@ Answer in German, concisely.
 - **Substantive change on any page** — what changed, on which page, quoting new or reworded text where it matters. Flag anything touching reporting obligations, deadlines, data fields, or the CSIRT mapping.
 - **A new page appeared in the navigation** — name it and say it has been added to the baseline.
 - **The CSIRT list changed** — prominently, with the affected countries (see section 3).
-- **A Glossary reachability transition** — state the direction and that the baseline content was left intact.
+- **A Glossary reachability transition or move** — state the direction or the new address, and that the baseline content was left intact.
 - **Nothing changed** — one line.
 
 End with exactly one line:
-ENISA SRP: <n> Seiten geprüft | geändert: <Seiten oder keine> | Glossary: <200/403> | push: <OK/FAIL/nichts zu pushen>
+ENISA SRP: <n> Seiten geprüft | geändert: <Seiten oder keine> | Glossary: <HTTP-Code> | push: <OK/FAIL/nichts zu pushen>
