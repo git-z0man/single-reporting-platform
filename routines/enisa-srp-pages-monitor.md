@@ -6,18 +6,22 @@
 - **Updatable by an agent**: **no** — created via `http_api`, so the prompt below
   must be pasted into the Routines UI by hand.
 
-> **Applied 2026-09-07 (morning)**, then amended the same evening — section 2
-> and the report line below have changed since that paste and are **not yet
-> live**.
-> `update_trigger` refused the routine (created via `http_api`), so this
-> version has to be pasted into the Routines UI by hand. Until that happens
-> the live Routine still carries the morning's text, which describes the
-> Glossary's 403 as unreliability rather than as the page move it turned out
-> to be. It reads its URLs from the baseline frontmatter either way, so a run
-> in the meantime still checks the right address.
+> **Live since 2026-09-07 (evening).** Pasted into the Routines UI by hand and
+> verified against the live Routine: same seven sections, same rules, 0.998
+> word-level match — the remaining difference is only the markdown the UI
+> strips (backticks, `##`, list numbering).
 >
-> The constraint above is permanent — every future change to this prompt needs
-> the same manual step.
+> **One caveat, found during that check.** The UI ate three of the four
+> angle-bracket placeholders in the closing report line: it now reads
+> `ENISA SRP: Seiten geprüft | geändert: | Glossary: | push: ...`, because
+> `<n>`, `<Seiten oder keine>` and `<HTTP-Code>` look like HTML tags and were
+> stripped. The placeholders in this file are therefore written with square
+> brackets, which survive. Re-paste to pick that up; until then the routine
+> still runs correctly and only its one-line summary is degraded.
+>
+> An agent cannot update this Routine — `update_trigger` and `fire_trigger`
+> both refuse it, because it was created via `http_api`. Every future change
+> to this prompt needs the same manual paste.
 
 ---
 
@@ -96,7 +100,7 @@ sides.
 For each changed page, update the relevant baseline file:
 
 - One logical block per FAQ entry / per guidance subpage / one table row per Glossary field, so diffs stay readable.
-- Add a dated `## Change log (<date> check, vs. <previous date> baseline)` section at the top of the change log, naming what was added, deleted, or reworded. Quote new or changed text verbatim.
+- Add a dated `## Change log ([date] check, vs. [previous date] baseline)` section at the top of the change log, naming what was added, deleted, or reworded. Quote new or changed text verbatim.
 - Reproduce ENISA's text as-is, including typos and inconsistencies. Note them rather than silently correcting them — past checks recorded a doubled "inin", a missing "d" in "adress", an untagged Q19, and a duplicated sentence in Q9. That fidelity is the point of a baseline.
 - Separate substantive changes (a question added, deleted or reworded; a changed date, obligation, field, or legal reference) from cosmetic ones (link markup, page numbering).
 - Update `retrieved`, `last_check`, and `last_change` in the frontmatter of whichever file changed. `last_check` moves on every successful check; `last_change` only when content actually changed.
@@ -130,4 +134,4 @@ Answer in German, concisely.
 - **Nothing changed** — one line.
 
 End with exactly one line:
-ENISA SRP: <n> Seiten geprüft | geändert: <Seiten oder keine> | Glossary: <HTTP-Code> | push: <OK/FAIL/nichts zu pushen>
+ENISA SRP: [n] Seiten geprüft | geändert: [Seiten oder keine] | Glossary: [HTTP-Code] | push: [OK/FAIL/nichts zu pushen]

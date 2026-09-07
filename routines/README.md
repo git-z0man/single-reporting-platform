@@ -74,6 +74,42 @@ Agents can only update routines they created (via create_trigger).
 | Commission CRA FAQ monitor | `meta_mcp` | Yes |
 | SRP domain reachability monitor | `meta_mcp` | Yes |
 
+## The paste path eats angle brackets
+
+Verified on 2026-09-07, after the ENISA prompt was pasted in by hand: three of
+its four `<placeholder>` markers were gone from the stored prompt. Its closing
+report line went from
+
+```
+ENISA SRP: <n> Seiten geprüft | geändert: <Seiten oder keine> | Glossary: <HTTP-Code> | push: <OK/FAIL/nichts zu pushen>
+```
+
+to
+
+```
+ENISA SRP: Seiten geprüft | geändert: | Glossary: | push: <OK/FAIL/nichts zu pushen>
+```
+
+`<n>`, `<Seiten oder keine>` and `<HTTP-Code>` were stripped as if they were
+HTML tags, while `<date>`, `<previous date>` and `<OK/FAIL/nichts zu pushen>`
+in the same prompt survived. The rule is not obvious and not worth reverse
+engineering.
+
+It is the paste path, not storage: both `meta_mcp` routines keep every angle
+bracket they were given (7 and 20 respectively), because they were set through
+the API.
+
+**So write placeholders in square brackets** — `[n]`, `[date]` — in any prompt
+that will be pasted through the UI. They survive, and nothing else in these
+prompts depends on the character. `enisa-srp-pages-monitor.md` already uses
+them; the other two are set through the API and are left as they are.
+
+After pasting, check what actually landed rather than assuming: read the
+Routine back (`list_triggers` returns the stored text in
+`derived_state.prompt`) and diff it against the file here, ignoring the
+markdown the UI strips — backticks, `##`, list numbering and blank lines all
+disappear, which is expected and harmless.
+
 ## Keeping a prompt in sync
 
 A monitor's scope grows over time — a new page appears, a new baseline file is
