@@ -46,6 +46,7 @@
 
       <div class="sidenav-divider"></div>
       <a class="toc-link simple" data-toc="roles" href="#roles">Accounts &amp; roles</a>
+      <a class="toc-link simple" data-toc="fields" href="#fields">Every field, explained</a>
       <a class="toc-link simple" data-toc="faq" href="#faq">Questions &amp; answers</a>
     </nav>
 
@@ -54,8 +55,8 @@
         <span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span>
         <span class="theme-toggle-label">Dark mode</span>
       </button>
-      <span class="status-pill"><span class="status-dot"></span>Status: beta · fields not final</span>
-      <p>Unofficial guide based on the Commission’s draft CRA guidance (not yet adopted). Not legal advice. Not affiliated with ENISA.</p>
+      <span class="status-pill"><span class="status-dot"></span>Guidance published · go-live 11 Sep 2026</span>
+      <p>Unofficial guide, built from ENISA’s published SRP guidance, glossary and FAQ. Not legal advice. Not affiliated with ENISA.</p>
     </div>
   </aside>
 
@@ -67,19 +68,20 @@
       <section class="hero">
         <div class="eyebrow">Cyber Resilience Act&nbsp;&nbsp;/&nbsp;&nbsp;Article 14</div>
         <h1>Reporting through the Single Reporting Platform</h1>
-        <p class="lede">A walkthrough of the central platform manufacturers will use to report actively exploited vulnerabilities (AEV) and severe incidents in the European Union, from first-time registration to the final report, with the data fields required in practice at each step.</p>
+        <p class="lede">A walkthrough of the central platform manufacturers use to report actively exploited vulnerabilities (AEV) and severe incidents in the European Union, from first-time registration to the final report, with every data field ENISA requires at each step.</p>
         <div class="callout amber" style="margin-top:20px">
-          <p><strong class="lead-in">SRP Status · test portal, fields not yet final.</strong> The platform is in test operation. Data fields are not yet final and may change. The portal exclusively serves to fulfil the legal reporting obligation under Article&nbsp;14 CRA.</p>
+          <p><strong class="lead-in">Status &middot; the guidance is published; the platform opens on 11 September 2026.</strong> ENISA has published its registration, submission and interface guidance, a glossary itemising every reporting field, and the platform address: <a href="https://portal.cra-srp.enisa.europa.eu" target="_blank" rel="noopener">portal.cra-srp.enisa.europa.eu</a>. This page follows those sources. They are still moving &mdash; the FAQ and the glossary were both edited on 7&nbsp;September&nbsp;2026, the glossary without changing its version number &mdash; so check the originals before you rely on a detail. The portal serves only the reporting obligation under Article&nbsp;14 CRA.</p>
         </div>
 
         <div style="margin-top:28px">
           <div class="footer-label">At a glance</div>
           <dl class="facts">
             <dt>Go-live</dt><dd>11 September 2026 (mandatory reporting)</dd>
-            <dt>Voluntary reporting</dt><dd>Planned on a later date; 11 December 2027 at latest</dd>
-            <dt>Portal language</dt><dd>English only, due to distribution to multiple CSIRTs</dd>
-            <dt>Manufacturer-facing API</dt><dd>Not planned at this stage</dd>
-            <dt>Attachments &amp; links</dt><dd>Not supported</dd>
+            <dt>Open-source stewards</dt><dd>Reporting obligations under Art. 24(3) apply from 11 December 2027, per Art. 71(2)</dd>
+            <dt>Voluntary reporting</dt><dd>Not at launch; a later phase, no date given</dd>
+            <dt>Portal address</dt><dd><a href="https://portal.cra-srp.enisa.europa.eu" target="_blank" rel="noopener">portal.cra-srp.enisa.europa.eu</a> · sign in with EU Login</dd>
+            <dt>Portal language</dt><dd>English only at launch; ENISA is translating the supporting material, not the platform</dd>
+            <dt>Manufacturer-facing API</dt><dd>None at the initial release; ENISA says it may be considered in a future phase</dd>
             <dt>Built by</dt><dd>Uni Systems (lead), Wavestone &amp; Luxembourg House of Cybersecurity · €11M, four-year public tender</dd>
           </dl>
         </div>
@@ -139,32 +141,31 @@
             <colgroup><col class="col-field"><col class="col-status"><col></colgroup>
             <thead><tr><th>Field</th><th class="c-status">Status</th><th>Note</th></tr></thead>
             <tbody>
-              <tr class="group"><td colspan="3">Personal data</td></tr>
-              <tr><td class="c-field">EU Login</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Personal EU Login account</td></tr>
-              <tr><td class="c-field">First name</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
-              <tr><td class="c-field">Last name</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
-              <tr><td class="c-field">Country (CSIRT)</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">For DE: CSIRT Germany</td></tr>
-              <tr><td class="c-field">Address</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">TBC: personal address?</td></tr>
-              <tr><td class="c-field">Email address (contact)</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Need not match the EU Login address</td></tr>
-              <tr><td class="c-field">Phone number</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
-              <tr class="group"><td colspan="3">Manufacturer data</td></tr>
-              <tr><td class="c-field">Manufacturer name</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Currently a free-text field</td></tr>
-              <tr><td class="c-field">Manufacturer CSIRT (Member State)</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Determines the responsible national CSIRT</td></tr>
-              <tr><td class="c-field">Sector</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note"></td></tr>
-              <tr><td class="c-field">Registration number</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Meaning TBC; not assigned by ENISA (maybe a national ID, e.g. VAT ID for DE)</td></tr>
-              <tr><td class="c-field">Address (manufacturer)</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note"></td></tr>
+              <tr class="group"><td colspan="3">Before the form: two choices on the landing screen</td></tr>
+              <tr><td class="c-field">Role</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">“Assigned Representative”. Hovering the “i” explains each role.</td></tr>
+              <tr><td class="c-field">CSIRT designated as coordinator</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">A drop-down. Picking the right one is <em>your</em> responsibility — and since 7 September 2026 ENISA states that a notification sent to the wrong one may be invalidated and have to be resubmitted.</td></tr>
+              <tr><td class="c-field">EU Login account</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Personal, with multi-factor authentication. Create it in advance if you do not have one; everything else takes minutes.</td></tr>
+              <tr class="group"><td colspan="3">Personal details — pre-filled from EU Login, you confirm them</td></tr>
+              <tr><td class="c-field">First name</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Pre-filled.</td></tr>
+              <tr><td class="c-field">Last name</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Pre-filled.</td></tr>
+              <tr><td class="c-field">Email</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Pre-filled from the EU Login account.</td></tr>
+              <tr><td class="c-field">Legal name</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Pre-filled. <strong>ENISA does not explain this field anywhere</strong> — it appears in the registration screenshots and in no glossary entry. Treat what EU Login supplies as authoritative until ENISA says otherwise.</td></tr>
+              <tr class="group"><td colspan="3">Manufacturer details</td></tr>
+              <tr><td class="c-field">Manufacturer name</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Omitting it returns an error and keeps “Continue” disabled.</td></tr>
+              <tr><td class="c-field">Additional information</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Mandatory alongside the name, per ENISA&rsquo;s own error case. The guidance does not say what belongs in it.</td></tr>
+              <tr><td class="c-field">Manufacturer address</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Not among the fields whose absence blocks “Continue”. ENISA&rsquo;s page spells it “adress”.</td></tr>
             </tbody>
           </table>
         </div>
 
         <div class="seclabel proc"><span class="seclabel-bar"></span><span class="seclabel-text">Procedure</span></div>
         <ol class="steps">
-          <li class="step"><span class="step-num">1</span><strong>Open the portal.</strong> ENISA has not published the live URL yet — its guidance says only “URL to be provided at launch”. The production DNS zone is <code>cra-srp.enisa.europa.eu</code>. An earlier candidate, <code>crasrp.eu</code>, was dropped and does not resolve. The portal language is English.</li>
+          <li class="step"><span class="step-num">1</span><strong>Open the portal.</strong> <a href="https://portal.cra-srp.enisa.europa.eu" target="_blank" rel="noopener"><code>https://portal.cra-srp.enisa.europa.eu</code></a> — published by ENISA on 7&nbsp;September&nbsp;2026 and available from 11&nbsp;September&nbsp;2026. The registration guidance page still says “URL to be provided at launch”; the FAQ is the current source. At launch the platform is in <strong>English only</strong>.</li>
           <li class="step"><span class="step-num">2</span><strong>Select user type.</strong> As a manufacturer, choose “Assigned Representative”.</li>
           <li class="step"><span class="step-num">3</span><strong>Select the national entry point.</strong> Set the responsible CSIRT. For a German company, that is “CSIRT Germany”.</li>
           <li class="step"><span class="step-num">4</span><strong>Sign in via EU Login.</strong> The personal account is then linked to the manufacturer. ENISA calls this role <strong>Assigned Representative</strong> — not <em>authorised representative</em>, which under CRA Art.&nbsp;3(13) means something else: a separate economic operator acting under a written mandate, with its own obligations under Art.&nbsp;18. Same abbreviation, different concept. EU Login requires multi-factor authentication.</li>
-          <li class="step"><span class="step-num">5</span><strong>Enter personal data</strong> (registration step 1).</li>
-          <li class="step"><span class="step-num">6</span><strong>Link to manufacturer</strong> (step 2). Currently free-text fields. The association is provisional and forwarded to the responsible national CSIRT.</li>
+          <li class="step"><span class="step-num">5</span><strong>Accept the legal agreement, then confirm your personal details.</strong> They arrive pre-filled from EU Login; you are confirming them, not typing them.</li>
+          <li class="step"><span class="step-num">6</span><strong>Enter the manufacturer details</strong> and continue. The association is provisional and goes to the chosen CSIRT for validation. If you registered by invitation as a Secondary AR, these details are already filled in and you only accept them — and an invitation expires after seven days.</li>
           <li class="step"><span class="step-num">7</span><strong>Choosing the correct CSIRT</strong> is the manufacturer’s responsibility. The portal does not verify this, and is notified first for future reports.</li>
           <li class="step"><span class="step-num">8</span><strong>Validation by the CSIRT.</strong> The CSIRT verifies the person-to-manufacturer association out of band; the method is decided per country. The status is visible in the user settings.</li>
           <li class="step"><span class="step-num">9</span><strong>Ability to report.</strong> Successful submission of a report does not depend on successful validation of the account.</li>
@@ -192,23 +193,26 @@
         <h2>Early Warning</h2>
         <p class="intro">Submitted within 24 hours of becoming aware. You declare whether it is an incident or a vulnerability (the form then shows the matching fields), give it a title and summary, and select the countries of distribution, which determines who else is notified.</p>
 
-        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Required data</span></div>
+        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">What this stage requires</span><span class="seclabel-hint">field numbers follow ENISA&rsquo;s FAQ&nbsp;16</span></div>
+        <p class="fieldgroup-sub">Only the fields that must be filled in to submit an Early Warning. Everything else on the form is optional at this stage and can be added later &mdash; see <a href="#fields">Every field, explained</a>.</p>
         <div class="table-wrap">
           <table class="data">
             <colgroup><col class="col-field"><col class="col-status"><col></colgroup>
             <thead><tr><th>Field</th><th class="c-status">Status</th><th>Note</th></tr></thead>
             <tbody>
-              <tr><td class="c-field">Notification type (Incident / Vulnerability)</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Shows the matching fields for the chosen type</td></tr>
-              <tr><td class="c-field">Title</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
-              <tr><td class="c-field">Summary</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
-              <tr><td class="c-field">Manufacturer</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Additional manufacturers can be added</td></tr>
-              <tr><td class="c-field">Member States where product is available</td><td class="c-status"><span class="chip conditional">Conditional</span></td><td class="c-note">Determines which further CSIRTs are notified; mandatory if known</td></tr>
-              <tr><td class="c-field">Incident suspected of unlawful or malicious acts</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Incident notifications only; Yes/No flag</td></tr>
-              <tr><td class="c-field">CVSS score</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note"></td></tr>
-              <tr><td class="c-field">Affected product (PwDE)</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Multiple products per notification possible</td></tr>
-              <tr><td class="c-field">Product version</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note"></td></tr>
-              <tr><td class="c-field">Further affected products</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">“Add another PwDE”</td></tr>
-              <tr><td class="c-field">CVE ID / EUVD ID</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">If already assigned</td></tr>
+              <tr class="group"><td colspan="3">Both notification types</td></tr>
+              <tr><td class="c-field">Notification type (Vulnerability/Incident)<span class="fieldref">1</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Chooses which set of fields the form shows from here on.</td></tr>
+              <tr><td class="c-field">Title<span class="fieldref">7</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 255 characters. Enough to recognise product and issue, no confidential detail.</td></tr>
+              <tr><td class="c-field">Summary<span class="fieldref">8</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters: what happened, affected product or version, known impact, current mitigation status.</td></tr>
+              <tr><td class="c-field">Manufacturer name<span class="fieldref">9</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Legal name of the manufacturer the notification is submitted for.</td></tr>
+              <tr><td class="c-field">Member States where product available (Concerned CSIRT)<span class="fieldref">10</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Drives who else is notified. Mandatory if you know it — name the Member States, not “EU-wide”.</td></tr>
+              <tr><td class="c-field">Product Name<span class="fieldref">11</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Commercial name as it appears to users.</td></tr>
+              <tr><td class="c-field">Product version<span class="fieldref">12</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Version, release, build or model. A range is acceptable.</td></tr>
+              <tr class="group"><td colspan="3">Vulnerability only</td></tr>
+              <tr><td class="c-field">Date/time when you become aware of the Actively Exploited Vulnerability [1]<span class="fieldref">v30</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The date and time your 24 h, 72 h and Final Report deadlines are counted from. Estimate if you must, and say so in the description.</td></tr>
+              <tr class="group"><td colspan="3">Incident only</td></tr>
+              <tr><td class="c-field">Incident is suspected of unlawful or malicious acts<span class="fieldref">i35</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Yes/No. Whether the incident is suspected of resulting from unlawful or malicious acts.</td></tr>
+              <tr><td class="c-field">Date/time when you become aware of the incident [2]<span class="fieldref">i41</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">As above, for incidents. Currently still labelled “Date/time the incident was detected” in the platform.</td></tr>
             </tbody>
           </table>
         </div>
@@ -243,24 +247,29 @@
         <h2>72&hairsp;h Notification</h2>
         <p class="intro">Added to the same notification, with the general nature of the vulnerability or incident, an initial assessment and the corrective measures taken so far. Here you can also state reasons against onward dissemination.</p>
 
-        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Required data</span></div>
+        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">What this stage adds</span><span class="seclabel-hint">field numbers follow ENISA&rsquo;s FAQ&nbsp;16</span></div>
+        <p class="fieldgroup-sub">Fields that become mandatory now. Everything from the Early Warning is already there, carried over and editable &mdash; see <a href="#fields">Every field, explained</a>.</p>
         <div class="table-wrap">
           <table class="data">
             <colgroup><col class="col-field"><col class="col-status"><col></colgroup>
             <thead><tr><th>Field</th><th class="c-status">Status</th><th>Note</th></tr></thead>
             <tbody>
-              <tr><td class="c-field">General nature of the vulnerability (AEV) / of the incident</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
-              <tr><td class="c-field">General nature of the exploit (vulnerability)</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
-              <tr><td class="c-field">Corrective or mitigating measures taken</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Additional measures can be added</td></tr>
-              <tr><td class="c-field">Corrective or mitigating measures users can take</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note"></td></tr>
-              <tr><td class="c-field">Date and time the incident was detected / occurred</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Incident notifications only</td></tr>
-              <tr><td class="c-field">Initial assessment of the incident</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Incident notifications only</td></tr>
-              <tr><td class="c-field">Date when corrective measure has been available</td><td class="c-status"><span class="chip conditional">Conditional</span></td><td class="c-note">Mandatory if available; may not yet be known at 72 h</td></tr>
-              <tr><td class="c-field">Considered sensitivity of information</td><td class="c-status"><span class="chip conditional">Conditional</span></td><td class="c-note">Mandatory if such information available</td></tr>
-              <tr><td class="c-field">Circumstances for non-dissemination (PEC)</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Selection list, see below</td></tr>
-              <tr><td class="c-field">Further relevant information</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note"></td></tr>
+              <tr class="group"><td colspan="3">Both notification types</td></tr>
+              <tr><td class="c-field">Considered sensitivity of information<span class="fieldref">20</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Free text, not a confidentiality label: name the sensitive element and what premature disclosure would cause.</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures taken<span class="fieldref">21</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What you have already done — containment, configuration changes, withdrawal, credential rotation, monitoring. Max. 2,000 characters.</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures users can take<span class="fieldref">22</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What users should do themselves: update, workaround, configuration change, with the version that fixes it.</td></tr>
+              <tr class="group"><td colspan="3">Vulnerability only</td></tr>
+              <tr><td class="c-field">General information<span class="fieldref">v26</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">General information about the vulnerability and its exploitation.</td></tr>
+              <tr><td class="c-field">Particular Exceptional Circumstances (PEC)<span class="fieldref">v32</span></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Only selectable at this stage — see the PEC note below.</td></tr>
+              <tr class="group"><td colspan="3">Incident only</td></tr>
+              <tr><td class="c-field">General information about nature of incident<span class="fieldref">i36</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">General information on the nature of the incident.</td></tr>
+              <tr><td class="c-field">Initial assessment of the incident<span class="fieldref">i43</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Preliminary assessment: severity, scope, affected functions or data. Distinguish confirmed findings from what is still under investigation.</td></tr>
             </tbody>
           </table>
+        </div>
+
+        <div class="callout amber">
+          <p><strong class="lead-in">The 72-hour counter can tell you that you are late when you are not.</strong> ENISA documents this: in the current release the counter shows a due date <strong>48 hours after you submitted the Early Warning</strong>, not 72 hours after you became aware. Submit the Early Warning at hour 20 and the platform will mark the notification overdue at hour 68. It is a display defect in the reminder, not a change to the deadline &mdash; the legal clock still runs from awareness under Art.&nbsp;14. ENISA says a future release will count from the &ldquo;date/time you became aware&rdquo; field instead. Keep your own record of when the 72 hours actually expire.</p>
         </div>
 
         <div class="seclabel proc"><span class="seclabel-bar"></span><span class="seclabel-text">Procedure</span></div>
@@ -279,13 +288,13 @@
 
 
         <div class="callout neutral">
-          <p class="lead"><strong>Reasons for non-dissemination (PEC, optional).</strong> Particularly exceptional circumstances under which a manufacturer may ask the CSIRT to withhold dissemination:</p>
+          <p class="lead"><strong>Reasons for non-dissemination (PEC, optional).</strong> Three grounds, from the third subparagraph of Art.&nbsp;16(2) CRA, under which a manufacturer may ask the CSIRT to withhold or delay dissemination:</p>
           <ul>
-            <li>actively exploited by a malicious actor;</li>
-            <li>exploitation occurred only in the Member State of the responsible CSIRT;</li>
-            <li>immediate dissemination would be contrary to essential interests of the Member State;</li>
-            <li>the reported vulnerability poses an immediate high cybersecurity risk if disseminated.</li>
+            <li>the vulnerability has been actively exploited by a malicious actor and, on the information available, in no Member State other than that of the CSIRT it was notified to;</li>
+            <li>further dissemination would likely supply information whose disclosure would be contrary to the essential interests of that Member State;</li>
+            <li>the vulnerability poses an imminent high cybersecurity risk stemming from the further dissemination.</li>
           </ul>
+          <p>Selecting a ground is not enough on its own: ENISA asks you to support it with specific facts in the <em>PEC Delay Reason</em> field and to state the delay you are requesting. Note that ENISA writes <em>Particular</em> Exceptional Circumstances in the platform and the glossary, and <em>particularly</em> exceptional circumstances in the FAQ &mdash; the same thing. Its glossary is currently inconsistent about whether you may select one ground or several.</p>
         </div>
 
       </section>
@@ -296,19 +305,26 @@
         <h2>Final Report</h2>
         <p class="intro">The closing report: a full description with severity and impact, and details of the corrective measure. For vulnerabilities, no later than 14 days after a corrective or mitigating measure is available; for severe incidents, within one month after the 72h notification. Once submitted, the notification is closed.</p>
 
-        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Required data</span></div>
+        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">What this stage adds</span><span class="seclabel-hint">field numbers follow ENISA&rsquo;s FAQ&nbsp;16</span></div>
+        <p class="fieldgroup-sub">The last fields to become mandatory. The two description pairs are the substance of the report &mdash; severity and impact are separate fields, not a duplicate.</p>
         <div class="table-wrap">
           <table class="data">
             <colgroup><col class="col-field"><col class="col-status"><col></colgroup>
             <thead><tr><th>Field</th><th class="c-status">Status</th><th>Note</th></tr></thead>
             <tbody>
-              <tr><td class="c-field">Detailed description (incl. severity and impact)</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Full description of the vulnerability or incident</td></tr>
-              <tr><td class="c-field">Date when corrective measure has been available</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">For a vulnerability, the date a corrective or mitigating measure becomes available starts the 14-day clock</td></tr>
-              <tr><td class="c-field">Details about the security update / corrective measures</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Vulnerability notifications</td></tr>
-              <tr><td class="c-field">Type of threat or root cause</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Incident notifications</td></tr>
-              <tr><td class="c-field">Applied and ongoing mitigation measures</td><td class="c-status"><span class="chip mandatory">Mandatory</span></td><td class="c-note">Incident notifications</td></tr>
-              <tr><td class="c-field">Malicious actor behind the exploitation</td><td class="c-status"><span class="chip conditional">Conditional</span></td><td class="c-note">Actively exploited vulnerabilities; mandatory if available</td></tr>
-              <tr><td class="c-field">Additional notes</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Exchange channel with the national CSIRT</td></tr>
+              <tr class="group"><td colspan="3">Both notification types</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures taken<span class="fieldref">21</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Carried over from the 72-hour notification and updated with what has happened since.</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures users can take<span class="fieldref">22</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Same field, updated.</td></tr>
+              <tr class="group"><td colspan="3">Vulnerability only</td></tr>
+              <tr><td class="c-field">Date when corrective or mitigating measure has been available<span class="fieldref">v27</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The date a corrective or mitigating measure became available — this is what the 14-day deadline runs from.</td></tr>
+              <tr><td class="c-field">Full description of the severity of the vulnerability<span class="fieldref">v28</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters. ENISA calls the incident equivalent “Detailed description of the Severity”.</td></tr>
+              <tr><td class="c-field">Full description of the impact of the vulnerability<span class="fieldref">v29</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Separate field from the severity description above.</td></tr>
+              <tr><td class="c-field">Malicious actor that has exploited/is exploiting the vulnerability<span class="fieldref">v31</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Mandatory if you know it; do not speculate about attribution.</td></tr>
+              <tr class="group"><td colspan="3">Incident only</td></tr>
+              <tr><td class="c-field">Applied or ongoing mitigation measures<span class="fieldref">i37</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Measures applied and still running. The FAQ writes “applied and ongoing”, the glossary “applied or ongoing”.</td></tr>
+              <tr><td class="c-field">Detailed description of the Severity of the incident<span class="fieldref">i38</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters.</td></tr>
+              <tr><td class="c-field">Detailed description of the Impact of the incident<span class="fieldref">i39</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">A second, separate description field — impact, not severity.</td></tr>
+              <tr><td class="c-field">Type of Threat or root cause likely to have triggered incident<span class="fieldref">i40</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The type of threat or root cause likely to have triggered the incident.</td></tr>
             </tbody>
           </table>
         </div>
@@ -386,238 +402,699 @@
       </section>
 
       <!-- ===================== FAQ ===================== -->
+      <!-- ===================== FIELD REFERENCE ===================== -->
+      <section id="fields" class="phase divider">
+        <div class="phase-eyebrow">Reference &middot; the reporting template</div>
+        <h2>Every field, explained</h2>
+        <p class="intro">The phase tables above show what each stage <em>requires</em>. This is the whole form: all 38 fields ENISA itemises, with what each one means, how ENISA says to complete it, its worked example and its expected format. Open a field to read it. The source is ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">CRA SRP Glossary</a>, retrieved 7&nbsp;September&nbsp;2026; the meanings, instructions and examples are quoted from it.</p>
+
+        <div class="callout">
+          <p><strong class="lead-in">Two numbering systems, both ENISA&rsquo;s.</strong> The FAQ counts <strong>43</strong> fields, the Glossary itemises <strong>38</strong>. Nothing is missing from either: the FAQ additionally lists five fields the platform fills in by itself (notification level, three reporting timestamps, and the reporter), which the Glossary does not describe because you never type them. This page uses the FAQ number as the field&rsquo;s label and names the Glossary number inside each entry, so a field stays findable in both.</p>
+        </div>
+
+        <div class="callout neutral">
+          <p class="lead"><strong>The four statuses.</strong> Each field carries one per stage:</p>
+          <ul>
+            <li><span class="chip mandatory">Required</span> must be filled in before the notification can be submitted at that stage.</li>
+            <li><span class="chip conditional">If available</span> ENISA&rsquo;s &ldquo;required if such information available&rdquo;: mandatory once you have the information, and not a reason to delay.</li>
+            <li><span class="chip carried">Carried over</span> ENISA&rsquo;s &ldquo;by default copied from previous step, or updated&rdquo;. The value you gave earlier is already there and can be corrected. This is why the same field reappears in a later stage.</li>
+            <li><span class="chip optional">Optional</span> and <span class="chip na">n/a</span>, which means the field does not exist at that stage at all.</li>
+          </ul>
+        </div>
+
+        <div class="callout amber">
+          <p><strong class="lead-in">Read the examples as examples.</strong> On 7&nbsp;September&nbsp;2026 ENISA rewrote 29 of the 38 completion instructions from an instruction into an illustration &mdash; &ldquo;Enter a short, specific title&hellip;&rdquo; became &ldquo;<em>For example,</em> enter a short, specific title&hellip;&rdquo;. Nothing else in those sentences changed. They are quoted below as they now stand, so what looks like hedging is ENISA&rsquo;s wording, not ours. Where the glossary contradicts itself, this page says so in the field rather than quietly smoothing it over.</p>
+        </div>
+
+        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Common fields</span></div>
+        <p class="fieldgroup-sub">Apply to both an actively exploited vulnerability and a severe incident.</p>
+        <div class="faq-wrap">
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">1</span><span>Notification type (Vulnerability/Incident)</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 1</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Indicates whether the notification concerns an actively exploited vulnerability (AEV) or a severe incident (SI) having an impact on the security of a product with digital elements.</p>
+              <p><strong>How to complete it.</strong> Select Actively Exploited Vulnerability when reporting an AEV. Select Severe Incident when reporting a SI having an impact on the security of a product with digital elements.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Vulnerability</span></p>
+              <p><strong>Format.</strong> Select one: Vulnerability or Incident</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">7</span><span>Title</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 2</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Short human-readable name for the notification.</p>
+              <p><strong>How to complete it.</strong> For example, enter a short, specific title that allows users to recognise the affected product and the reported issue. Do not include confidential technical detail that is unnecessary for identification (max. 255 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Active exploitation affecting Product X version 4.2.</span></p>
+              <p><strong>Format.</strong> Plain text; concise title</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">8</span><span>Summary</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 3</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Concise overview of the facts, affected product, and issue being notified.</p>
+              <p><strong>How to complete it.</strong> For example, provide a concise overview of what happened, the affected product or version, the known impact, and the current mitigation status. Use factual information available at the reporting stage (max. 4000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">An actively exploited vulnerability affects Product X 4.2. A temporary workaround is available, and a security update is being prepared.</span></p>
+              <p><strong>Format.</strong> Short paragraph</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">9</span><span>Manufacturer name</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 4</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Name of the natural or legal person who develops or manufactures the product with digital elements or has the product with digital elements designed, developed or manufactured, and markets it under its name or trademark, whether for payment, monetisation or free of charge.</p>
+              <p><strong>How to complete it.</strong> No user action is required. The platform creates or updates this value automatically based on what you wrote when you registered to the Platform or added at a later stage. You may review it only to confirm that the displayed information is consistent with the notification history.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Automatically populated by the platform during the notification submission or free text during manufacturer registration [Name of the company].</span></p>
+              <p><strong>Format.</strong> System-generated / read-only</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">10</span><span>Member States where product available (Concerned CSIRT)</span></span><span class="field-chips"><span class="chip conditional">If available</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 5</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Member States in which territory the manufacturer is aware that the affected product has been made available; used to determine concerned CSIRTs.</p>
+              <p><strong>How to complete it.</strong> The Platform will automatically show you CDaC, however, you may select other Member States (MS) where the affected product has been made available, based on the information currently known to the manufacturer. Update the selection if new distribution information becomes available.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Belgium as your CDaC, automatically populated by the platform and you may add Greece and Italy and MS where the affected product has been made available</span></p>
+              <p><strong>Format.</strong> Select one or more Member States</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">11</span><span>Product Name</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 6</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Name that identifies the affected product with digital elements.</p>
+              <p><strong>How to complete it.</strong> For example, enter the official commercial or technical name of the affected product with digital elements. Use the same name that appears in product technical documentation or market information (max. 255 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Product X</span></p>
+              <p><strong>Format.</strong> Official product name</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">12</span><span>Product version</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 7</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Version, release, build, model, or other revision information required to identify the affected product instance.</p>
+              <p><strong>How to complete it.</strong> For example, enter every affected version, release, build, model, or firmware revision. Use exact identifiers and clearly state a range when multiple versions are affected (max. 255 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">4.0 to 4.2.1</span></p>
+              <p><strong>Format.</strong> Version or version range</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">13</span><span>Product Type (Default/Important/Critical)</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 8</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Regulatory category indicating whether the product is default, important, or critical under the CRA classification framework.</p>
+              <p><strong>How to complete it.</strong> For example, select the CRA regulatory type applicable to the product. Choose Important or Critical only where the product falls within the relevant CRA category (Annexes III and IV); otherwise select Default.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Important</span></p>
+              <p><strong>Format.</strong> Select one: Default, Important, Critical</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">14</span><span>Product Class</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 9</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> For an important product, the applicable Class I or Class II category used for conformity-assessment treatment.</p>
+              <p><strong>How to complete it.</strong> For example, for an important product, select the applicable CRA class. Leave the field empty when the product is not classified as an important product or when no class applies.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Class II</span></p>
+              <p><strong>Format.</strong> Select one configured class</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">15</span><span>Product Category</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 10</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> The applicable CRA product category, normally selected from the relevant category list in CRA Annexes III or IV.</p>
+              <p><strong>How to complete it.</strong> You may select the category that best matches the affected product under the applicable CRA category list. Use the product’s core functionality, not only its commercial name.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Choose between: Hardware devices with Security Boxes; Smart meter gateways within smart metering systems and other devices for advanced security purposes, including secure cryptoprocessing devices; or Smartcards or similar devices, including secure elements.</span></p>
+              <p><strong>Format.</strong> Select one configured category</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">16</span><span>End of support indicator</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 11</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Indicates whether the product with digital elements has a user interface or similar technical means allowing direct interaction with its users and the manufacturer should make use of such features to inform users that their product with digital elements has reached the end of the support period.</p>
+              <p><strong>How to complete it.</strong> You may select one: Yes when the product with digital elements has reached the end of the support period or No when is doesn’t.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Yes</span></p>
+              <p><strong>Format.</strong> Select one: Yes or No</p>
+              <div class="faq-amend"><p><strong>ENISA’s own text contradicts itself here.</strong> The <em>meaning</em> above describes the CRA duty to <em>inform</em> users that support has ended — whether the product has a user interface for doing so. The completion instruction, the format and the example all ask something else: has the support period ended, Yes or No. The workable reading is the Yes/No one; it is the only one the field can hold. (ENISA also writes “or No when is doesn’t”.) Reported unchanged through two editing passes of the glossary.</p></div>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">17</span><span>Component name</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 12</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Name of the software or hardware component in which the vulnerability or incident is located or observed.</p>
+              <p><strong>How to complete it.</strong> For example, enter the name of the affected hardware or software component. You may include the component version when known. Leave empty if the issue cannot be attributed to a component (max. 255 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Authentication module 3.1</span></p>
+              <p><strong>Format.</strong> Component name and optional version</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">18</span><span>Mitigating measure expected shortly</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 13</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Indicates whether an effective risk-mitigation measure, such as a security update or user guidance, is expected to become available.</p>
+              <p><strong>How to complete it.</strong> For example, select Yes only when an effective security update, workaround, or user guidance is expected shortly and the expectation is supported by the remediation plan. Otherwise select No or Unknown.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Yes</span></p>
+              <p><strong>Format.</strong> Select one: Yes, No, Unknown</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">19</span><span>User Action able to reduce impact</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 14</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Action that product users can take to prevent, reduce, or contain the impact of the vulnerability or incident.</p>
+              <p><strong>How to complete it.</strong> You may describe the immediate action a user can take to reduce the likelihood or impact of exploitation or the incident. Provide clear, practical instructions and identify any limitation or prerequisite (max. 4000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Disable the affected interface until the security update is installed.</span></p>
+              <p><strong>Format.</strong> Action-oriented text</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">20</span><span>Considered sensitivity of information</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip conditional">If available</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 15</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Manufacturer's assessment of how sensitive the notified information is, to inform secure handling and dissemination decisions.</p>
+              <p><strong>How to complete it.</strong> You may describe why any submitted information requires restricted handling. Identify the sensitive element and the potential consequence of premature or wider disclosure. Do not use a generic confidentiality statement (max. 255 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">The technical details reveal an unpatched exploitation path that is not yet publicly known.</span></p>
+              <p><strong>Format.</strong> Concise justification</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">21</span><span>Corrective or mitigating measures taken</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 16</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Actions already implemented by the manufacturer or other responsible party to correct the issue or reduce its risk or impact.</p>
+              <p><strong>How to complete it.</strong> For example, list the actions already taken to correct the issue or to reduce the risk. You may include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful. (max. 2000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Disabled the affected service; revoked exposed credentials; increased monitoring.</span></p>
+              <p><strong>Format.</strong> Bulleted list or structured text</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">22</span><span>Corrective or mitigating measures users can take</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 17</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Instructions or actions users can apply to reduce exposure or impact, including workarounds, configuration changes, patches, or isolation measures.</p>
+              <p><strong>How to complete it.</strong> For example, provide step-oriented guidance that users can apply. Prioritise the effective fix, then state temporary workarounds and any operational impact. Clearly identify actions that are no longer recommended (max. 4000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Install version 4.2.2. Until installation, restrict management-interface access to trusted networks.</span></p>
+              <p><strong>Format.</strong> Action-oriented text</p>
+              <div class="faq-amend"><p>The FAQ writes this field “Corrective or mitigating measures that <em>users</em> can take”; the glossary and the current FAQ table say “<em>user</em>”. Same field.</p></div>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">23</span><span>Attack vector</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip optional">Optional</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary 18</span> &middot; applies to Both</p>
+              <p><strong>What it means.</strong> Description or structured classification of the path or means by which exploitation or compromise can occur.</p>
+              <p><strong>How to complete it.</strong> For example, describe how the vulnerability may be exploited or how the incident reached the affected product. State the relevant interface, access path, protocol, or user interaction. Avoid unsupported assumptions (max. 255 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Remote network access through an exposed API.</span></p>
+              <p><strong>Format.</strong> Short, structured description or configured classification</p>
+            </div>
+          </details>
+        </div>
+        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Actively exploited vulnerability</span></div>
+        <p class="fieldgroup-sub">Shown only when the notification type is <em>Vulnerability</em>.</p>
+        <div class="faq-wrap">
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">v24</span><span>CVE ID</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary v19</span> &middot; applies to AEV</p>
+              <p><strong>What it means.</strong> CVE Identifier (CVE ID) assigned to the publicly disclosed vulnerability under the Common Vulnerabilities and Exposures (CVE) Program.</p>
+              <p><strong>How to complete it.</strong> You may enter the official CVE ID only if one has been assigned by the competent CNA. Copy the ID exactly as published. Leave the field empty if no ID exists (max. 255 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">CVE-2026-12345</span></p>
+              <p><strong>Format.</strong> CVE identifier</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">v25</span><span>EUVD ID</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary v20</span> &middot; applies to AEV</p>
+              <p><strong>What it means.</strong> Identifier of the vulnerability record in the European Vulnerability Database (EUVD).</p>
+              <p><strong>How to complete it.</strong> You may enter the official EUVD ID if one has been assigned by ENISA. Copy the ID exactly as published. Leave the field empty if no ID exists (max. 255 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">EUVD-2026-12345</span></p>
+              <p><strong>Format.</strong> EUVD identifier</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">v26</span><span>General information</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary v21</span> &middot; applies to AEV</p>
+              <p><strong>What it means.</strong> High-level description of the vulnerability and, where known, how exploitation works, without requiring the full final technical analysis.</p>
+              <p><strong>How to complete it.</strong> For example, describe the vulnerability at a high level and explain how the known exploit operates. Include the affected function, required access, and observed exploitation behaviour. Do not include unverified attribution (max. 4000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">An authentication bypass in the management interface allows a remote actor with network access to execute privileged actions.</span></p>
+              <p><strong>Format.</strong> Structured narrative</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">v27</span><span>Date when corrective or mitigating measure has been available</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary v22</span> &middot; applies to AEV</p>
+              <p><strong>What it means.</strong> Date and time when the mitigating measure has been available.</p>
+              <p><strong>How to complete it.</strong> For example, enter the date and time when the mitigating measure has been available.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-09-02 09:15 UTC</span></p>
+              <p><strong>Format.</strong> Date and time</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">v28</span><span>Full description of the severity of the vulnerability</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary v23</span> &middot; applies to AEV</p>
+              <p><strong>What it means.</strong> Complete description of the vulnerability, including at least its severity.</p>
+              <p><strong>How to complete it.</strong> For example, provide the completed technical description of the vulnerability. Including the assessed severity rating, classification, rationale for the assessment and other relevant factors or criteria supporting the assigned severity level (max. 4000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Authentication validation is missing in endpoint X... Severity: High... Affected versions: 4.0–4.2.1...</span></p>
+              <p><strong>Format.</strong> Detailed structured narrative</p>
+              <div class="faq-amend"><p>The FAQ calls the AEV pair “Full description of the severity / impact” and the SI pair “Detailed description of the Severity / Impact”. Same kind of field, two names — both spellings are given here so you recognise them in the portal.</p></div>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">v29</span><span>Full description of the impact of the vulnerability</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary v24</span> &middot; applies to AEV</p>
+              <p><strong>What it means.</strong> Complete description of the vulnerability, including at least its impact.</p>
+              <p><strong>How to complete it.</strong> For example, provide the completed technical description of the vulnerability. Including the potential or actual impact of the vulnerability, the affected systems, components, data, users or services, as applicable (max. 4000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Authentication validation is missing in endpoint X... Impact: High... Affected versions: 4.0–4.2.1...</span></p>
+              <p><strong>Format.</strong> Detailed structured narrative</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">v30</span><span>Date/time when you become aware of the Actively Exploited Vulnerability [1]</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary v25</span> &middot; applies to AEV</p>
+              <p><strong>What it means.</strong> Date and time when the manufacturer or another relevant party first detected the vulnerability.</p>
+              <p><strong>How to complete it.</strong> For example, enter the date and time when the vulnerability was first detected. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-08-24 09:15 UTC</span></p>
+              <p><strong>Format.</strong> Date and time</p>
+              <p class="field-foot">ENISA footnote [1]: “This field will be available in the next release of the Platform.”</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">v31</span><span>Malicious actor that has exploited/is exploiting the vulnerability</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip conditional">If available</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary v26</span> &middot; applies to AEV</p>
+              <p><strong>What it means.</strong> Available information about the actor that exploited or is exploiting the vulnerability, without requiring attribution where information is unavailable.</p>
+              <p><strong>How to complete it.</strong> You may enter confirmed information about the malicious actor or observed activity. If attribution is unconfirmed, describe the observed indicators and state that attribution is unknown (max. 100 characters)..</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Unknown actor; observed infrastructure includes the indicators listed in Reference REF-2026-18.</span></p>
+              <p><strong>Format.</strong> Free text</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">v32</span><span>Particular Exceptional Circumstances (PEC)</span></span><span class="field-chips"><span class="chip na">n/a</span><span class="chip optional">Optional</span><span class="chip na">n/a</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary v27</span> &middot; applies to AEV</p>
+              <p><strong>What it means.</strong> Selection indicating that one or more legally specified circumstances in the third subparagraph of Article 16 (2) of CRA justify withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination.</p>
+              <p><strong>How to complete it.</strong> You may select the applicable exceptional circumstance only when the corresponding legal condition is met.</p>
+              <p><strong>Format.</strong> Select applicable PEC option(s)</p>
+              <div class="faq-amend"><p>Only reachable in the 72-hour notification — not at the Early Warning, not in the Final Report.</p></div>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">v33</span><span>PEC Delay Reason</span></span><span class="field-chips"><span class="chip na">n/a</span><span class="chip optional">Optional</span><span class="chip na">n/a</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary v28</span> &middot; applies to AEV</p>
+              <p><strong>What it means.</strong> You may select one of the three of the legally specified circumstances justifying withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination.</p>
+              <p><strong>How to complete it.</strong> Support the selection with specific facts in PEC Delay Reason and indicate the requested dissemination delay. You may select at least one of the three options.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">You may choose: the notified vulnerability has been actively exploited by a malicious actor and, according to the information available, it has been exploited in no other Member State than the one of the CSIRT designated as coordinator to which the manufacturer has notified the vulnerability; or&lt;br&gt;N/A&lt;br&gt;that any immediate further dissemination of the notified vulnerability would likely result in the supply of information the disclosure of which would be contrary to the essential interests of that Member State; or</span></p>
+              <p><strong>Format.</strong> Select applicable check box</p>
+              <div class="faq-amend"><p><strong>Inconsistent since 7 September 2026.</strong> The meaning says “one of the three” while the completion instruction says “at least one of the three”. The three grounds themselves are those of the third subparagraph of Art. 16(2) CRA and have not changed.</p></div>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">v34</span><span>Please provide further information</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary v29</span> &middot; applies to AEV</p>
+              <p><strong>What it means.</strong> Description of anything that should be helpful for CSIRT Designated as Coordinator (CDaC)taking their decision.</p>
+              <p><strong>How to complete it.</strong> You may provide additional information(s).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">We consider it very important for national security.</span></p>
+              <p><strong>Format.</strong> Free text</p>
+            </div>
+          </details>
+        </div>
+        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Severe incident</span></div>
+        <p class="fieldgroup-sub">Shown only when the notification type is <em>Incident</em>.</p>
+        <div class="faq-wrap">
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">i35</span><span>Incident is suspected of unlawful or malicious acts</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary i30</span> &middot; applies to SI</p>
+              <p><strong>What it means.</strong> Boolean indication of whether available evidence suggests the incident resulted from unlawful or malicious activity.</p>
+              <p><strong>How to complete it.</strong> For example, select Yes when available evidence indicates intentional unlawful or malicious activity. Select No when the event is assessed as non-malicious. Select Unknown while the cause remains unresolved.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Yes</span></p>
+              <p><strong>Format.</strong> Select one: Yes, No, Unknown</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">i36</span><span>General information about nature of incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary i31</span> &middot; applies to SI</p>
+              <p><strong>What it means.</strong> High-level account of what happened, how the incident manifested, and the affected security properties or functions.</p>
+              <p><strong>How to complete it.</strong> For example, describe what occurred, the affected product functions or security properties, and the currently known scope. Focus on confirmed facts available at the 72-hour stage (max. 4000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Malicious code executed through the update service and affected the integrity of locally stored configuration data.</span></p>
+              <p><strong>Format.</strong> Structured narrative</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">i37</span><span>Applied or ongoing mitigation measures</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary i32</span> &middot; applies to SI</p>
+              <p><strong>What it means.</strong> Actions that have been taken by the manufacturer or other responsible party or are still ongoing to correct the issue or reduce its risk or impact.</p>
+              <p><strong>How to complete it.</strong> For example, list the actions already applied or ongoing to correct the issue or reduce risk. Include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful (max. 4000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Disabled the affected service; revoked exposed credentials; increased monitoring.</span></p>
+              <p><strong>Format.</strong> Structured narrative</p>
+              <div class="faq-amend"><p>The FAQ writes “Applied <strong>and</strong> ongoing mitigation measures”, the glossary “Applied <strong>or</strong> ongoing”. Not a pure style difference; the FAQ wording is the wider one.</p></div>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">i38</span><span>Detailed description of the Severity of the incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary i33</span> &middot; applies to SI</p>
+              <p><strong>What it means.</strong> Complete the detailed description of the severity of the incident.</p>
+              <p><strong>How to complete it.</strong> For example, provide the completed description of the severity of the incident. Include the sequence of events, affected products and functions, severity, scope, evidence, root cause, response measures, and recovery status (max. 4000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Low – limited impact, no significant disruption to operation.</span></p>
+              <p><strong>Format.</strong> Structured narrative</p>
+              <div class="faq-amend"><p>Two separate description fields, not a duplicate: this one is severity, the next one is impact. Both up to 4,000 characters, both required in the Final Report.</p></div>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">i39</span><span>Detailed description of the Impact of the incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary i34</span> &middot; applies to SI</p>
+              <p><strong>What it means.</strong> Complete the detailed description of the impact of the incident.</p>
+              <p><strong>How to complete it.</strong> For example, provide the completed description of the impact of the incident, including the impact on the product, data, functions, users, or connected systems (max. 4000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Minimal – no material impact of operations, users or data.</span></p>
+              <p><strong>Format.</strong> Structured narrative</p>
+              <div class="faq-amend"><p>ENISA numbers this row <code>I39.</code> in the FAQ table — a capital I where every other row uses a lowercase prefix.</p></div>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">i40</span><span>Type of Threat or root cause likely to have triggered incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary i35</span> &middot; applies to SI</p>
+              <p><strong>What it means.</strong> Most likely threat category, initiating event, weakness, failure, or root cause that triggered the incident.</p>
+              <p><strong>How to complete it.</strong> For example, state the most likely threat type and root cause supported by the investigation. Explain the evidence briefly and mark the conclusion as preliminary when analysis is incomplete (max. 255 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Supply-chain compromise caused by an unauthorised modification to the update package.</span></p>
+              <p><strong>Format.</strong> Classification plus short explanation</p>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">i41</span><span>Date/time when you become aware of the incident [2]</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary i36</span> &middot; applies to SI</p>
+              <p><strong>What it means.</strong> Date and time when the manufacturer or another relevant become aware of the incident.</p>
+              <p><strong>How to complete it.</strong> For example, enter the date and time you become aware of the incident. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-08-24 09:15 UTC</span></p>
+              <p><strong>Format.</strong> Date and time</p>
+              <p class="field-foot">ENISA footnote [2]: “In the current release this field is named: ‘Date/time the incident was detected’.”</p>
+              <div class="faq-amend"><p>Required. This is the field the deadlines run from. If the exact time is unknown, enter your best supported estimate and say in the description that it is an estimate.</p></div>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">i42</span><span>Date/time incident occurred</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip optional">Optional</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary i37</span> &middot; applies to SI</p>
+              <p><strong>What it means.</strong> Known or estimated date and time when the incident began or took place.</p>
+              <p><strong>How to complete it.</strong> For example, enter the date and time when the incident was began or occurred. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description.</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-08-24 09:15 UTC</span></p>
+              <p><strong>Format.</strong> Date and time</p>
+              <div class="faq-amend"><p>Optional — and a different field from the one above. “When you became aware” is mandatory, “when the incident occurred” is not.</p></div>
+            </div>
+          </details>
+          <details class="faq field">
+            <summary><span class="faq-qwrap"><span class="faq-num">i43</span><span>Initial assessment of the incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-src"><span class="field-gl">Glossary i38</span> &middot; applies to SI</p>
+              <p><strong>What it means.</strong> Preliminary analysis of the incident's severity, scope, likely impact, affected functions or data, and immediate implications.</p>
+              <p><strong>How to complete it.</strong> For example, provide the preliminary assessment of severity, scope, affected security properties, products or users, and likely impact. Clearly distinguish confirmed findings from matters still under investigation (max. 4000 characters).</p>
+              <p><strong>ENISA’s example.</strong> <span class="field-ex">Confirmed impact is limited to integrity of configuration data on three product instances; broader exposure remains under investigation.</span></p>
+              <p><strong>Format.</strong> Structured narrative</p>
+            </div>
+          </details>
+        </div>
+
+        <p class="imgsrc">Field meanings, completion instructions, examples and formats: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">CRA SRP Glossary</a>, version&nbsp;1.1, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Field numbers follow ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions" target="_blank" rel="noopener">SRP FAQ</a>, question&nbsp;16.</p>
+      </section>
+
       <section id="faq" class="phase divider">
         <h2>Questions &amp; answers</h2>
-        <p class="intro" style="color:var(--faint)">ENISA's official Single Reporting Platform FAQ, reproduced in full (23 questions). References CRA Articles 14–17 and Delegated Regulation C(2025)&nbsp;8407.</p>
+        <p class="intro" style="color:var(--faint)">ENISA&rsquo;s official Single Reporting Platform FAQ, reproduced in full &mdash; all 29 questions as they stood on 7&nbsp;September&nbsp;2026. Wording is ENISA&rsquo;s. One thing is not: every &ldquo;SRP Glossary&rdquo; link in ENISA&rsquo;s own text currently points at an address that returns 403, so those links are repaired here. <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions" target="_blank" rel="noopener">Read it at the source</a>.</p>
         <div class="faq-wrap">
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q1</span><span>What is the Cyber Resilience Act's Single Reporting Platform (CRA SRP)?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q1</span><span>What is the Cyber Resilience Act’s Single Reporting Platform (CRA SRP)?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>CRA SRP will be a centralized electronic system designed to simplify reporting obligations for manufacturers and open-source software stewards. It will serve as a “single entry point,” allowing manufacturers to report actively exploited vulnerabilities and severe incidents only once, rather than notifying multiple national authorities individually.</p>
-              <p>Manufacturers will submit notifications electronically, selecting the CSIRT designated as coordinator (based on the manufacturer's main establishment location per CRA Article 14(7)) and ENISA simultaneously. The CSIRT will then disseminate information without delay to other relevant CSIRTs in Member States where the product is available, and to market surveillance authorities as needed.</p>
+              <p>The CRA Single Reporting Platform (SRP) is an online tool for manufacturers and open-source software stewards to meet their obligation to report actively exploited vulnerabilities and severe incidents having an impact on the security of products with digital elements under the Cyber Resilience Act (CRA). Designed to simplify EU reporting obligations, the SRP enables manufacturers and open-source software stewards to report only once, rather than having to notify multiple national authorities individually. The platform incorporates security measures to protect confidentiality.</p>
+              <p>Manufacturers and open-source software stewards submit notifications electronically through the SRP and select the relevant CSIRT designated as coordinator. In general, the national CSIRT to which the notification should be submitted is primarily determined by the manufacturer’s main location of establishment, in accordance with Art. 14(7) of the CRA.</p>
+              <p>Once submitted, the notification is simultaneously made available to ENISA, while the CSIRT initially receiving it disseminates the information to other relevant CSIRTs in Member States where the product is also available, and to market surveillance authorities as needed. CSIRTs designated as coordinators may also share some information with their respective market surveillance authorities to enable them to fulfil their enforcement obligations.</p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q2</span><span>What is the legal basis for CRA SRP?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q2</span><span>What is the legal basis for the CRA SRP?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>The legal basis is the <a href="https://data.europa.eu/eli/reg/2024/2847/oj" target="_blank" rel="noopener">Cyber Resilience Act</a> (CRA), Article 16(1): “For the purposes of the notifications referred to in Article 14(1) and (3) and Article 15(1) and (2) and in order to simplify the reporting obligations of manufacturers, a single reporting platform shall be established by ENISA.”</p>
-              <p>The architecture of the single reporting platform shall allow Member States and ENISA to put in place their own electronic notification end-points.</p>
-              <p>Articles 14–17 of the CRA provide details of the ecosystem for reporting vulnerabilities. In December 2025, the European Commission published a <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=PI_COM:C(2025)8407" target="_blank" rel="noopener">Delegated Regulation</a> specifying conditions for delaying dissemination of notifications.</p>
+              <p>The legal basis for the operation of the SRP is the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847" target="_blank" rel="noopener">Cyber Resilience Act</a> (CRA), which states in Art. 16(1): For the purposes of the notifications referred to in Art. 14(1) and (3) and Art. 15(1) and (2) and in order to simplify the reporting obligations of manufacturers, a single reporting platform shall be established by ENISA. The day-to-day operations of that single reporting platform shall be managed and maintained by ENISA. The architecture of the single reporting platform shall allow Member States and ENISA to put in place their own electronic notification end-points.</p>
+              <p>Articles 14-17 of the CRA provide the relevant framework for the reporting and dissemination of notifications. Additionally, in December 2025, the European Commission published a <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=PI_COM:C(2025" target="_blank" rel="noopener">Delegated Regulation</a>8407) specifying the conditions under which the dissemination of notifications may be delayed.</p>
             </div>
           </details>
           <details class="faq">
             <summary><span class="faq-qwrap"><span class="faq-num">Q3</span><span>Who is responsible for establishing and managing the platform?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>ENISA is tasked with establishing, managing, and maintaining the day-to-day operations of the CRA SRP. ENISA must ensure the platform's security and implement appropriate technical and organizational measures to protect submitted information.</p>
+              <p>ENISA is responsible for establishing the CRA SRP and for managing and maintaining its day-to-day operations. ENISA must also ensure the platform's security and implement appropriate technical and organizational measures to protect the information submitted.</p>
             </div>
           </details>
           <details class="faq">
             <summary><span class="faq-qwrap"><span class="faq-num">Q4</span><span>When will the Single Reporting Platform be operational?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>The platform is scheduled to be operational by 11 September 2026. This coincides with when mandatory reporting obligations for manufacturers officially enter into application (Article 14 of the Cyber Resilience Act). A testing period is expected before this date.</p>
+              <p>The platform is scheduled to be operational from 11 September 2026, coinciding with the date on which the CRA reporting obligations under Art.14 become applicable.</p>
+              <p>At launch, the platform will support only mandatory reporting of actively exploited vulnerabilities and severe incidents under Art. 14 of the CRA. The corresponding reporting obligations for open-source software stewards under Art. 24(3) will apply from 11 December 2027, in accordance with Art. 71(2) of the CRA.</p>
+              <p>Voluntary reporting under Art. 15 will not be available at launch and will be introduced in a future phase of the platform.</p>
             </div>
           </details>
           <details class="faq">
             <summary><span class="faq-qwrap"><span class="faq-num">Q5</span><span>What must be reported via the platform?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>Under CRA, manufacturers will be obliged to notify two specific types of occurrences:</p>
+              <p>Under the CRA, manufacturers are required to notify two specific types of events:</p>
               <ul>
-                <li>Actively Exploited Vulnerabilities: vulnerabilities in products with digital elements for which there is reliable evidence they have been exploited by a malicious actor.</li>
-                <li>Severe Incidents: incidents that have a severe impact on the security of the product with digital elements (compromising availability, authenticity, integrity, or confidentiality); criteria for severity are defined in Article 14(5).</li>
+                <li>Actively Exploited Vulnerabilities: vulnerabilities in products with digital elements for which there is reliable evidence that they have been exploited by a malicious actor;</li>
+                <li>Severe Incidents: incidents having a severe impact on the security of a product with digital elements (e.g., compromising its availability, authenticity, integrity, or confidentiality). The criteria for severity are set out in Art. 14(5).</li>
               </ul>
-              <p>Open-source software stewards are subject to reporting obligations to the extent they are involved with products with digital elements, as per Article 24(3) of CRA.</p>
+              <p>Open-source software stewards will also be subject to reporting obligations, starting from 11 December 2027, to the extent that they are involved in the deployment of products with digital elements, in accordance with Art. 24(3) of CRA.</p>
             </div>
           </details>
           <details class="faq">
             <summary><span class="faq-qwrap"><span class="faq-num">Q6</span><span>What else can be reported in the platform?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>The platform will offer functionality for voluntary reporting after 11 September 2026. Any natural or legal person may voluntarily notify:</p>
+              <p>In a future phase, the SRP will also offer functionality for voluntary notifications.</p>
+              <p>Any natural or legal person may voluntarily notify:</p>
               <ul>
-                <li>Vulnerabilities contained in a product with digital elements</li>
-                <li>Cyber threats that could affect the risk profile of a product with digital elements</li>
-                <li>Incidents having an impact on the security of a product</li>
-                <li>Near misses that could have resulted in an incident</li>
+                <li>Vulnerabilities contained in a product with digital elements;</li>
+                <li>Cyber threats that could affect the risk profile of a product with digital elements;</li>
+                <li>Incidents having an impact on the security of a product with digital elements;</li>
+                <li>Near misses that could have resulted in an incident.</li>
               </ul>
             </div>
           </details>
           <details class="faq">
             <summary><span class="faq-qwrap"><span class="faq-num">Q7</span><span>What are the deadlines for reporting?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>The reporting process starts when a manufacturer becomes aware of active exploitation of a vulnerability or incident.</p>
-              <p>“Actively exploited vulnerability” means a vulnerability for which there is reliable evidence that a malicious actor has exploited it in a system without permission of the system owner (CRA definition).</p>
-              <p>“Incident having an impact on the security of the product with digital elements” means an incident that negatively affects or is capable of negatively affecting the ability of a product with digital elements to protect the availability, authenticity, integrity or confidentiality of data or functions (CRA definition).</p>
-              <p>Manufacturers and open-source software stewards must adhere to specific deadlines:</p>
+              <p>The reporting process starts when a manufacturer or open-source steward becomes aware of an actively exploitation vulnerability or severe incident.</p>
+              <p>‘Actively exploited vulnerability’ means a vulnerability for which there is reliable evidence that a malicious actor has exploited it in a system without permission of the system owner (CRA definition).</p>
+              <p>‘Incident having an impact on the security of the product with digital elements’ means an incident that negatively affects (or is capable of negatively affecting) the ability of a product with digital elements to protect the availability, authenticity, integrity or confidentiality of data or functions (CRA definition).</p>
+              <p>Manufacturers and, once applicable, open-source software stewards must adhere to the following reporting deadlines:</p>
               <ul>
-                <li>Early Warning: without undue delay and in any case within 24 hours of becoming aware.</li>
-                <li>Vulnerability/Incident Notification: without undue delay and in any case within 72 hours of becoming aware, providing general information and an initial assessment.</li>
-                <li>Final Report, for vulnerabilities: no later than 14 days after a corrective measure (e.g., patch) is available; for severe incidents: within 1 month after the initial notification.</li>
+                <li>Early Warning: Without undue delay and in any case within 24 hours of becoming aware of the actively exploited vulnerability or severe incident;</li>
+                <li>Actively Exploited Vulnerability/Severe Incident Notification: Without undue delay and in any case within 72 hours of becoming aware, providing general information and an initial assessment;</li>
+                <li>Final Report:</li>
+                <li>For actively exploited vulnerabilities : No later than 14 days after a corrective measure (e.g., patch) becomes available.</li>
+                <li>For severe incidents : Within 1 month after the 72-hour notification.</li>
               </ul>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q8</span><span>How does the Single Reporting Platform operate?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q8</span><span>How does the Single Reporting Platform operate?</span><span class="faq-tag">UPDATED</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>Manufacturers submit notifications electronically through the platform, which automatically routes them to the designated CSIRT coordinator (based on manufacturer's main establishment) and ENISA simultaneously. The CSIRT then disseminates information without delay to other relevant CSIRTs in Member States where the product is available, and to market surveillance authorities as needed. For sensitive reports, dissemination may be delayed on security grounds.</p>
+              <p>Manufacturers and open-source software stewards submit notifications electronically through the SRP and select the relevant CSIRT designated as coordinator. Manufacturers and, once applicable, open-source software stewards are responsible for identifying the relevant CSIRT designated as coordinator in accordance with Art. 14(7) of the CRA and submitting their notification accordingly.</p>
+              <p>Only one notification is required for any given actively exploited vulnerability (AEV) or severe incident (SI), even when a manufacturer has multiple branches or subsidiaries in the EU and/or its parent company is headquartered outside the EU. It is the manufacturer’s responsibility to coordinate internally across its corporate structure and ensure that the required notification is submitted through the SRP.</p>
+              <p>Once submitted, the notification is simultaneously made available to ENISA, while the CSIRT acting as coordinator disseminates the information without delay to other relevant CSIRTs in Member States where the product is also available. National CSIRTs also share some information with their respective market surveillance authorities to enable them to fulfil their enforcement obligations. Under exceptional circumstances, dissemination of information may be delayed in accordance with Art. 16(2) of the CRA. More detailed information on delayed dissemination is provided in FAQ 21. The platform incorporates security measures to protect confidentiality.</p>
+              <p>Information on the reporting workflow, the mandatory and optional fields and how to complete them is available in the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>, User Manuals and the regularly updated ENISA guidance materials.</p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q9</span><span>How will the platform be accessible and how will the registration process work?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q9</span><span>How is the platform accessible and how does the registration process work?</span><span class="faq-tag">UPDATED</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>Specific manuals and instructions will be provided by ENISA in the course of June 2026.</p>
+              <p>The SRP will be available at <a href="https://portal.cra-srp.enisa.europa.eu" target="_blank" rel="noopener">https://portal.cra-srp.enisa.europa.eu</a>.</p>
+              <p>Assigned Representatives (ARs) of manufacturers and, once applicable, open-source stewards must have an EU Login account with multi-factor authentication (MFA) enabled and use it to register on the SRP. An EU Login account can be created in advance at the following link: <a href="https://ecas.ec.europa.eu/cas/login" target="_blank" rel="noopener">https://ecas.ec.europa.eu/cas/login</a>. No additional corporate entity authentication mechanism is currently used by the SRP.</p>
+              <p>EU Login accounts are personal, and MFA is required to access the SRP. Therefore, ARs submitting notifications should use their own EU Login accounts.</p>
+              <p>A Primary AR can register directly on the SRP by selecting the relevant CSIRT designated as coordinator, providing the required manufacturer information and creating the initial association with the manufacturer. A Secondary AR can register on the SRP after receiving an invitation from the Primary AR and confirming the pre-filled manufacturer information.</p>
+              <p>There can be only one Primary AR per manufacturer, while there can be up to 20 Secondary ARs. The Primary AR has additional administrative functions, including managing the manufacturer entity and inviting or removing Secondary ARs. The AR–manufacturer association is subsequently validated by the CSIRT designated as coordinator. The specific validation procedure and processing time may vary between CSIRTs and remain the responsibility of the relevant CSIRT. Validation takes place in parallel with the reporting process and does not prevent an AR from submitting notifications while validation is pending. Non-validated ARs may submit up to 20 notifications for one manufacturer before validation becomes mandatory.</p>
+              <p>To limit the validation workload for CSIRTs designated as coordinators, manufacturers and open-source software stewards are advised to register and initiate the validation process only when they need to submit a notification . Provided that the AR already has an active EU Login account, registration on the SRP takes just a few minutes.</p>
+              <p>More information on registration, AR roles, and use of the platform is available in the regularly updated ENISA guidance materials.</p>
             </div>
           </details>
           <details class="faq">
             <summary><span class="faq-qwrap"><span class="faq-num">Q10</span><span>Where can I get further information on the application of the CRA?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>The European Commission has set up a document “<a href="https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-implementation-frequently-asked-questions" target="_blank" rel="noopener">FAQs on the CRA Implementation</a>,” which specifies more details related to reporting obligations in section 5. The Commission has also published a draft Communication intended to provide guidance on CRA application, including section 9.1 on reporting obligations. A final version of the Communication will be adopted shortly.</p>
+              <p>To ensure smooth implementation of the CRA, the European Commission has set up <a href="https://digital-strategy.ec.europa.eu/en/policies/cra-reporting" target="_blank" rel="noopener">a web page about the reporting obligations</a>, which includes the document “<a href="https://ec.europa.eu/newsroom/dae/redirection/document/122331" target="_blank" rel="noopener">FAQs on the CRA Implementation</a>”. Section 5 provides more details on the reporting obligations under the CRA.</p>
+              <p>On 27 July 2026, the European Commission also published its <a href="https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation" target="_blank" rel="noopener">Guidance to support timely Cyber Resilience Act implementation</a>. In particular, Section 9.1 provides detailed guidance on the reporting obligations of manufacturers and open-source software stewards.</p>
+              <p>ENISA has also published guidance and supporting documents on the use of the CRA SRP, which are available on the main <a href="https://www.enisa.europa.eu/cra-srp" target="_blank" rel="noopener">CRA SRP</a> page and are updated as necessary.</p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q11</span><span>How is the term “actively exploited vulnerability” interpreted in practice?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q11</span><span>How is the term “actively exploited vulnerability” and “severe incidents” interpreted and reported in practice?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>The European Commission explains this term in subsection 5.1 of its “<a href="https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-implementation-frequently-asked-questions" target="_blank" rel="noopener">FAQs on the CRA Implementation</a>” alongside other information related to the legal interpretation of CRA.</p>
+              <p>The European Commission provides further guidance on the interpretation of actively exploited vulnerabilities (AEVs) and severe incidents (SIs) in Section 5 of its “<a href="https://ec.europa.eu/newsroom/dae/redirection/document/122331" target="_blank" rel="noopener">FAQs on the CRA Implementation</a>”, including in subsection 5.1 – How can a manufacturer become aware of an actively exploited vulnerability or a severe incident? .</p>
+              <p>For the purposes of reporting through the SRP, an AR must select whether the notification concerns an AEV or a SI having a severe impact on the security of a product with digital elements. The reporting fields then adapt to the selected notification type. The <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a> provides practical guidance on the information to be supplied for each type of notification. For AEVs, this includes – where applicable/available – information such as the CVE ID, EUVD ID, general information about the vulnerability and exploitation, severity and impact, malicious actor, general nature of the exploit, and Particular Exceptional Circumstances (PEC). For SIs, the relevant fields include information on the nature of the incident, applied or ongoing mitigation measures, severity and impact, and the threat or root cause likely to have triggered the incident.</p>
+              <p>Please note that not all the fields are required. Some fields may not be required in the 24-hour Early Warning but become required in the 72-hour Notification or in the Final Report. Refer to the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a> for additional information.</p>
+              <p>For further details on the legal interpretation of these concepts, please refer to the European Commission’s guidance; for practical guidance on completing the relevant SRP fields, please consult the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>.</p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q12</span><span>Do I need to report a vulnerability discovered in products made available before the entry into force of the CRA?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q12</span><span>Do I need to report actively exploited vulnerabilities or severe incidents for products placed on the market before the entry into force of the CRA?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>Refer to the European Commission's “<a href="https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-implementation-frequently-asked-questions" target="_blank" rel="noopener">FAQs on the CRA Implementation</a>,” particularly subsection 5.3: “Does a manufacturer need to report actively exploited vulnerabilities or severe incidents for products placed on the market before the CRA applies?”</p>
+              <p>Please refer to the European Commission’s “<a href="https://ec.europa.eu/newsroom/dae/redirection/document/122331" target="_blank" rel="noopener">FAQs on the CRA Implementation</a>”, in particular subsection 5.3 on the reporting obligations under Art. 14, which will apply from 11 September 2026 to all products with digital elements falling within the scope of the CRA, including products that were placed on the market before 11 December 2027.</p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q13</span><span>Do I need to report vulnerabilities that have been actively exploited before the CRA applies?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q13</span><span>Do I need to report vulnerabilities whose active exploitation occurred before the CRA reporting obligations apply?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>The manufacturer's obligation to report actively exploited vulnerabilities applies once they become aware of them. The obligation does not extend to reporting vulnerabilities of which the manufacturer was already aware before the CRA reporting obligation applies.</p>
+              <p>The manufacturer’s obligation to report actively exploited vulnerabilities is triggered when the manufacturer becomes aware of them. According to the European Commission’s “<a href="https://ec.europa.eu/newsroom/dae/redirection/document/122331" target="_blank" rel="noopener">FAQs on the CRA Implementation</a>” a manufacturer is not required to retrospectively report an actively exploited vulnerability where it was already aware of the active exploitation before 11 September 2026 (subsections 5.1 &amp; 5.3). However, where the manufacturer becomes aware of the active exploitation after that date, the reporting obligation applies, including where the underlying vulnerability existed or was previously known.</p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q14</span><span>If a vulnerability in my product has its source in a third-party component, am I still obliged to notify it?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q14</span><span>If an actively exploited vulnerability in my product originates from a third-party component, am I still required to notify it?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>Refer to the European Commission's FAQ in section 5.4: “If an actively exploited vulnerability is contained in a third-party component, are all manufacturers integrating that component required to notify it?”</p>
+              <p>Please refer to the <a href="https://ec.europa.eu/newsroom/dae/redirection/document/122331" target="_blank" rel="noopener">European Commission’s FAQ</a>, in particular Section 5.4 on the reporting obligations for actively exploited vulnerability contained in a third-party component.</p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q15</span><span>Can the notification workflow be automated for large numbers of notifications from one manufacturer?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q15</span><span>Can the notification workflow be automated for a large number of notifications from one manufacturer?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>Organisations might automate reporting workflows and integrate reporting requirements into their systems and databases; however, no Application Programming Interfaces will be provided at this stage.</p>
+              <p>Organisations may automate their internal reporting workflows and integrate CRA reporting requirements into their own systems and databases. However, no Application Programming Interface (API) will be provided at the initial release of the SRP, so notifications must be submitted through the platform interface. API functionality may be considered in a future phase of the SRP.</p>
+              <p>Detailed information on the data fields to be completed at each reporting stage is available in FAQ 16 and the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>.</p>
             </div>
           </details>
           <details class="faq">
             <summary><span class="faq-qwrap"><span class="faq-num">Q16</span><span>What are the data fields to be filled in the reporting template?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>Fields are classified as:</p>
-              <ul>
-                <li>X: obligatory</li>
-                <li>C: by default copied from previous step, or updated</li>
-                <li>A: automated (not visible for the submitter)</li>
-                <li>O: optional</li>
-                <li>I: obligatory if such information is available</li>
-              </ul>
-              <p>Codes below show the value at each step (24 h / 72 h / Final).</p>
-              <p style="font-weight:600;color:var(--ink);margin:14px 0 6px">Common fields</p>
-              <ul>
-                <li>Notification type (Vulnerability/Incident): X / C / C</li>
-                <li>Notification level (24h/72h/Final): X / X / X</li>
-                <li>Reporting time – 24h: A / A / A</li>
-                <li>Reporting time – 72h: A / A / A</li>
-                <li>Reporting time – Final: A / A / A</li>
-                <li>Reporter: A / A / A</li>
-                <li>Name of manufacturer or open-source software steward: X / C / C</li>
-                <li>Product: X / C / C</li>
-                <li>Product Type (Default/Important/Critical): O / C / C</li>
-                <li>Product Category (if Product Type other than Default – CRA Annex III/IV): O / C / C</li>
-                <li>Member States where product available: I / C / C</li>
-                <li>Title: X / C / C</li>
-              </ul>
-              <p style="font-weight:600;color:var(--ink);margin:14px 0 6px">Vulnerability fields</p>
-              <ul>
-                <li>CVE ID: O / C / C</li>
-                <li>EUVD ID: O / C / C</li>
-                <li>General information: O / X / C</li>
-                <li>General nature of the vulnerability: O / X / C</li>
-                <li>General nature of the exploit: O / X / C</li>
-                <li>Corrective or mitigating measures taken: O / X / C</li>
-                <li>Corrective or mitigating measures that users can take: O / X / C</li>
-                <li>Considered sensitivity of information: O / I / C</li>
-                <li>Date when corrective or mitigating measure has been available: O / O / X</li>
-                <li>Full description of the vulnerability (incl. severity and impact): O / O / X</li>
-                <li>Severity of the vulnerability: O / O / X</li>
-                <li>Impact of the vulnerability: O / O / X</li>
-                <li>Malicious actor that has exploited / is exploiting the vulnerability: O / O / I</li>
-                <li>Details about the security update / corrective measures available: O / O / X</li>
-              </ul>
-              <p style="font-weight:600;color:var(--ink);margin:14px 0 6px">Incident fields</p>
-              <ul>
-                <li>Incident is suspected by unlawful or malicious acts: X / C / C</li>
-                <li>General information about the nature of the incident: O / X / C</li>
-                <li>Date and time when the incident was detected: O / X / C</li>
-                <li>Date and time when the incident occurred: O / X / C</li>
-                <li>Initial assessment of the incident: O / X / C</li>
-                <li>Corrective or mitigating measures taken: O / X / C</li>
-                <li>Corrective or mitigating measures that users can take: O / X / C</li>
-                <li>Considered sensitivity of information: O / I / C</li>
-                <li>Severity of the incident: O / O / X</li>
-                <li>Severity criteria (affects availability/authenticity/integrity/confidentiality; introduction or execution of malicious code): O / O / X</li>
-                <li>Impact of the incident: O / O / X</li>
-                <li>Type of threat or root cause likely to have triggered the incident: O / O / X</li>
-                <li>Applied and ongoing mitigation measures: O / O / X</li>
-              </ul>
+              <p>The <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a> and table provide detailed guidance on all fields available in the platform for both actively exploited vulnerabilities and severe incidents. For each field, it explains that the field means, how it may be completed, the expected format, and at which reporting stage it applies. The Glossary also indicates whether each field is required (stemming directly from CRA obligations or identified by logical consequence), optional , mandatory if the information is available , or carried forward from a previous reporting stage.</p>
+              <p>Please consult the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a> for the complete and most up-to-date field-by-field guidance.</p>
+              <p><em>ENISA reproduces the whole 43-row table here. It is set out field by field, with meaning, completion instructions, example and format, under <a href="#fields">Every field, explained</a>.</em></p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q17</span><span>Will any trainings be provided for the relevant parties?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q17</span><span>What guidance material is available for the relevant parties?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>ENISA recognises the need for sufficient preparation time to train all relevant contributors and reporting teams prior to the compliance deadline. Information that will support training and dry-run exercises will be available within the month of June.</p>
+              <p>ENISA recognises the need to ensure that manufacturers, open-source software stewards, Assigned Representatives and other relevant reporting teams have clear and practical information to prepare for and use the CRA SRP. ENISA has published a range of supporting materials, including the SRP Factsheet, FAQs, and SRP Glossary. Additional operational materials, including a user manual and tutorial videos, will be published at the launch of the platform. These materials will be updated and expanded as necessary.</p>
+              <p>The <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a> provides detailed field-by-field guidance, including what each field means, how it may be completed, the expected format, and at which reporting stage it applies.</p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q18</span><span>How do I know what is the national CSIRT to which I should report through the CRA SRP?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q18</span><span>How do I know which national CSIRT I should report to through the CRA SRP?</span><span class="faq-tag">UPDATED</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>The national CSIRT to which you should report is essentially determined by your main location of establishment (or of the establishment of your authorised representative, if you are not established in the EU). CRA Article 14(7) provides detailed information. Additional information (list of national CSIRTs designated as coordinators) will be provided by ENISA at a later stage.</p>
+              <p>Manufacturers and, once applicable, open-source software stewards are responsible for identifying the correct CSIRT designated as coordinator (CDaC) in accordance with Art. 14(7) of the CRA and selecting it when submitting a notification through the SRP. If the wrong CDaC is selected, the notification may be invalidated and will need to be resubmitted to the correct CDaC.</p>
+              <p>In general, you should report to the CDaC in the Member State of your main establishment in the EU. Under the CRA, the main establishment is the place where decisions related to the cybersecurity of your products with digital elements are predominantly taken.</p>
+              <p>If this cannot be determined, use the Member State where your establishment with the highest number of employees in the EU is located.</p>
+              <p>If you do not have a main establishment in the EU, determine the relevant Member State using the following order, based on the information available:</p>
+              <ul>
+                <li>the Member State where your authorised representative acts on your behalf for the highest number of products with digital elements;</li>
+                <li>if this does not apply, the Member State where the importer places the highest number of your products with digital elements on the market;</li>
+                <li>if this does not apply, the Member State where the distributor makes the highest number of your products with digital elements available on the market;</li>
+                <li>if none of the above applies, the Member State with the highest number of users of your products with digital elements.</li>
+              </ul>
+              <p>You should then select the corresponding CDaC when submitting your notification through the SRP.</p>
             </div>
           </details>
           <details class="faq">
             <summary><span class="faq-qwrap"><span class="faq-num">Q19</span><span>What are the responsibilities of key entities involved with the CRA SRP?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <ul>
-                <li>Manufacturers: submit timely notifications and comply with other obligations established by the CRA.</li>
-                <li>Open-source software stewards: submit timely notifications to the extent involved with products with digital elements, as per Article 24(3).</li>
-                <li>ENISA: manages the platform, processes reports, prepares biennial trend reports (first due within 24 months of reporting obligations starting), operates a helpdesk (especially for SMEs), and discloses fixed vulnerabilities to the European Vulnerability Database.</li>
-                <li>CSIRTs Designated as Coordinators: receive and assess reports, decide on dissemination delays, inform market surveillance authorities and the public if necessary, and provide helpdesk support alongside ENISA.</li>
-                <li>European Commission: adopts delegated and implementing acts (e.g., for delay criteria and report formats), evaluates the platform's effectiveness, and supports coordination of enforcement activities.</li>
-                <li>Market Surveillance Authorities: receive disseminated information and enforce compliance, such as through investigations or corrective actions.</li>
+                <li>Manufacturers : Submit timely notifications and comply with the other obligations established by the CRA, as per Art. 14;</li>
+                <li>Open-source software stewards : Submit timely notifications to the extent that they are involved with products with digital elements, as per Art. 24(3);</li>
+                <li>ENISA : Manages the platform, processes reports, prepares biennial trend reports (first due within 24 months of the reporting obligations starting), operates a helpdesk (especially for SMEs), and discloses fixed vulnerabilities to the European Vulnerability Database (EUVD);</li>
+                <li>CSIRTs Designated as Coordinators : Receive and assess reports, decide on dissemination delays, inform market surveillance authorities and the public, if necessary, and provide helpdesk support alongside ENISA;</li>
+                <li>European Commission : Adopts delegated and implementing acts (e.g., for delay criteria and report formats), evaluates the platform's effectiveness, and supports coordination of enforcement activities;</li>
+                <li>Market Surveillance Authorities : Receive information from the CSIRT designated as coordinator and enforce compliance, such as through investigations or corrective actions.</li>
               </ul>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q20</span><span>Who receives the reports submitted to the platform?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q20</span><span>Who receives the reports submitted through the platform?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>As a general rule, when a manufacturer submits a report to the CRA SRP, it is simultaneously notified to:</p>
+              <p>As a general rule, when a manufacturer submits a notification through the CRA SRP, it is simultaneously made available to:</p>
               <ul>
-                <li>The CSIRT designated as the coordinator in the Member State where the manufacturer is established.</li>
+                <li>The CSIRT (Computer Security Incident Response Team) designated as coordinator in the relevant Member State; and</li>
                 <li>ENISA (unless particularly exceptional circumstances apply).</li>
               </ul>
               <p>The CSIRT designated as coordinator that initially receives the notification is then responsible for disseminating it without delay to other relevant CSIRTs across the EU via the platform.</p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q21</span><span>Can the dissemination of a report be delayed or withheld?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q21</span><span>Can the dissemination of a report be delayed or withheld? What are the particularly exceptional circumstances?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>Yes. In exceptional circumstances, the receiving CSIRT may decide to delay or withhold the dissemination of a notification to other Member States. This is strictly limited to cases where immediate dissemination is justified on security related grounds (if spreading information would pose an even greater security risk).</p>
-              <p>The European Commission adopted a <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=PI_COM:C(2025)8407" target="_blank" rel="noopener">delegated act</a> on 11 December 2025 to further specify the terms and conditions for applying these grounds.</p>
-              <p>In particularly exceptional circumstances, ENISA will not receive the full content of the 72-hour notification. This is only the case where, in the 72-hour notification, the manufacturer actively marks that at least one of the conditions listed in points (a) to (c) of Article 16(2) applies. In such case, ENISA only receives partial information, until the receiving CSIRT discloses the full notification.</p>
+              <p>Yes. In particular exceptional circumstances (PEC) , the receiving CSIRT may delay or withhold the dissemination of a notification to other Member States, including at the request of the manufacturer or open-source software steward.</p>
+              <p>The European Commission adopted a <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=PI_COM:C(2025" target="_blank" rel="noopener">Delegated Act</a>8407%20) on 11 December 2025 to further specify the terms and conditions for applying these grounds.</p>
+              <p>During the first 72-hour window, you should assess, where applicable, whether PEC applies. PEC may be invoked only where at least one of the conditions under Art. 16(2) of the CRA is met. It is intended for exceptional situations in which the dissemination of information may need to be delayed to avoid security-related risks.</p>
+              <p>Where PEC is invoked in the 72-hour Notification, ENISA will not receive the full content of the notification immediately. This applies only where the manufacturer actively marks that at least one of the conditions listed in points (a) to (c) of Art. 16(2) applies. In such a case, ENISA receives only partial information until the receiving CSIRT makes the full notification available.</p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q22</span><span>How does the platform ensure security?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q22</span><span>How does the platform ensure security?</span><span class="faq-tag">UPDATED</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>ENISA is legally required to take appropriate measures to manage risks to the platform's security and must notify the CSIRTs Network and the Commission of any security incidents affecting the platform itself. Before its launch, the platform will be subject to user and security testing, to ensure its reliability. It will also be periodically re-checked.</p>
+              <p>ENISA is legally required to take appropriate technical and organisational measures to manage risks to the platform's security and must notify the CSIRTs Network and the European Commission of any security incidents affecting the platform itself.</p>
+              <p>Before launch, the platform underwent several user, security and technical testing exercises with selected stakeholders, including national CSIRTs, the CRA Expert Group, selected manufacturers and other users. Their feedback helped strengthen the platform’s functionality, security and usability. ENISA does not currently foresee additional testing before go-live.</p>
+              <p>The platform will also be periodically reviewed and re-tested as necessary after launch.</p>
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q23</span><span>How is the CSIRTs network involved?</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q23</span><span>How was the CSIRTs Network involved?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p>As provided in CRA Article 16, ENISA is engaging the CSIRTs Network in development and future testing of the CRA SRP.</p>
+              <p>As provided for in Art. 16 of the CRA, ENISA has engaged the CSIRTs Network in the development and testing of the CRA SRP. Various CSIRTs participated in user, security and technical testing, providing valuable feedback on the functioning of the platform.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary><span class="faq-qwrap"><span class="faq-num">Q24</span><span>In which languages will the SRP be available?</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p>At launch, the platform will be available in English only.</p>
+              <p>ENISA will progressively translate the Factsheet and other supporting materials into all EU languages. This availability of additional language versions of the platform itself will be reviewed in the next phase of the project.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary><span class="faq-qwrap"><span class="faq-num">Q25</span><span>What should I do if the SRP is temporarily unavailable?</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p>Manufacturers must fulfil their reporting obligations by submitting notifications through the Single Reporting Platform (SRP), in accordance with Article 14(7). If the SRP is temporarily unavailable, manufacturers should wait until it becomes available again and then submit the required notification.</p>
+              <p>If, in the meantime, manufacturers consider that immediate communication is necessary before the SRP is restored, they may contact their designated CSIRT directly. Please note, however, that even where the CSIRT has been contacted directly, the notification must still be submitted through the SRP once it is available again in accordance with the CRA.</p>
+              <p>The same applies to open-source software stewards.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary><span class="faq-qwrap"><span class="faq-num">Q26</span><span>How are the 72-hour and Final Report counters calculated?</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p>To help Assigned Representatives (ARs) of manufacturers and, once applicable, open-source software stewards prioritise and keep track of their reporting obligations, the platform implements a number of counters.</p>
+              <p>The counters for the 72-hour Notification and Final Report are used as a reference for sending reminder emails and displaying alerts that a report may be overdue.</p>
+              <p>These counters are intended to provide visibility but do not replace the responsibility of manufacturers and open-source software stewards to comply with the obligations laid down in CRA, including the requirement to report upon becoming aware, without undue delay and in any event within the timelines set out in Art. 14.</p>
+              <ul>
+                <li>72-hour counter : In the current release, the 72-hour counter displays a due date/time 48hrs after submission of the 24-hour Early Warning. As a result, in some cases, a notification may be displayed as overdue before 72 hours have elapsed since the manufacturer or open-source software steward became aware of the event. This logic will be updated in a future release to calculate the deadline using the "Date/Time when you became aware of the incident/actively exploited vulnerability" field for both AEVs and SIs.</li>
+                <li>Final Report : The Final Report deadline is calculated differently for AEVs and SIs, reflecting the different requirements under Art. 14. For AEVs, no counter is currently implemented, as the Final Report deadline depends on the date and time when a corrective or mitigating measure becomes available. For SIs, the counter displays a due date one month after submission of the 72-hour Sever Incident Notification.</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq">
+            <summary><span class="faq-qwrap"><span class="faq-num">Q27</span><span>Can I report vulnerabilities even if they are not actively exploited?</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p>The platform has not yet implemented the voluntary reporting functionality provided for under Art. 15 of the CRA. As such, only mandatory notifications concerning actively exploited vulnerability and severe incident having an impact on the security of products with digital elements, in accordance with Articles 14 and 24 of the CRA, can currently be submitted through the SRP.</p>
+              <p>The platform will be enhanced at a later stage to support voluntary reporting.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary><span class="faq-qwrap"><span class="faq-num">Q28</span><span>How do I connect to the CRA Single Reporting Platform?</span><span class="faq-tag">NEW</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p>The SRP will be available at <a href="https://portal.cra-srp.enisa.europa.eu" target="_blank" rel="noopener">https://portal.cra-srp.enisa.europa.eu</a>.</p>
+              <p>From there, select "Assigned Representative" and log in using your EU Login account.</p>
+              <p>The portal will be available from 11 September 2026.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary><span class="faq-qwrap"><span class="faq-num">Q29</span><span>When do the reporting obligations start?</span><span class="faq-tag">NEW</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p>The CRA reporting obligations under Art. 14 apply to manufacturers of products with digital elements from 11 September 2026.</p>
+              <p>In accordance with Art. 71(2) of the CRA, the reporting obligations for open-source software stewards under Art. 24(3) apply from 11 December 2027.</p>
+              <p>Mandatory notifications must be submitted through the CRA Single Reporting Platform. See FAQ 25 for information on what to do if the platform is temporarily unavailable.</p>
             </div>
           </details>
         </div>
@@ -625,8 +1102,8 @@
 
       <!-- ===================== FOOTER ===================== -->
       <footer class="foot">
-        <p class="footer-legal">Cyber Resilience Act, Articles 14–17 · Delegated Regulation (EU) C(2025)&nbsp;8407 of 11 December 2025. Platform operated by ENISA. <a href="https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp" target="_blank" rel="noopener">ENISA official SRP FAQ ↗</a></p>
-        <p class="footer-disc">Unofficial community guide. Not affiliated with ENISA. Test portal: data fields are not final and may change.</p>
+        <p class="footer-legal">Cyber Resilience Act, Articles 14–17 · Delegated Regulation (EU) C(2025)&nbsp;8407 of 11 December 2025. Platform operated by ENISA. <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp" target="_blank" rel="noopener">ENISA official SRP pages ↗</a></p>
+        <p class="footer-disc">Unofficial community guide. Not affiliated with ENISA. Built from ENISA&rsquo;s published guidance, glossary and FAQ, retrieved 7&nbsp;September&nbsp;2026 &mdash; all three are being edited actively, so check the source for anything you rely on.</p>
       </footer>
 
     </div>
@@ -649,6 +1126,7 @@
     <a href="#n72" data-fb="n72" role="menuitem"><span class="fb-mnum">03</span>72&hairsp;h Notification</a>
     <a href="#fin" data-fb="fin" role="menuitem"><span class="fb-mnum">04</span>Final Report</a>
     <a href="#roles" data-fb="roles" role="menuitem"><span class="fb-mnum">·</span>Accounts &amp; roles</a>
+    <a href="#fields" data-fb="fields" role="menuitem"><span class="fb-mnum">·</span>Every field, explained</a>
     <a href="#faq" data-fb="faq" role="menuitem"><span class="fb-mnum">·</span>Questions &amp; answers</a>
   </div>
 </nav>

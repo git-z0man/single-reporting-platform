@@ -312,6 +312,25 @@ tr.group td {
 .chip.mandatory   { background: var(--chip-mand-bg); color: var(--chip-mand-text); }
 .chip.conditional { background: var(--chip-cond-bg); color: var(--chip-cond-text); }
 .chip.optional    { background: var(--chip-opt-bg);  color: var(--chip-opt-text); }
+.chip.carried     { background: var(--card-alt);     color: var(--faint); }
+.chip.na          { background: transparent;         color: var(--faintest); border: 1px dashed var(--hairline); padding: 3px 9px; }
+
+/* ---------- field reference ------------------------------------------- */
+.fieldgroup-sub { margin: -6px 0 12px; font-size: 13px; line-height: 1.6; color: var(--faint); }
+details.faq.field > summary { gap: 12px; }
+.field-chips { display: flex; gap: 6px; flex: 0 0 auto; }
+.field-chips .chip { font-size: 11px; padding: 3px 8px; }
+.field-src { font: 400 12px/1.5 'IBM Plex Mono', monospace; color: var(--faintest); margin: 0 0 12px; }
+.field-gl { color: var(--faint); }
+.field-ex { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink); }
+.field-foot { font-size: 13px; color: var(--faint); font-style: italic; }
+.fieldref {
+  display: inline-block; margin-left: 8px; vertical-align: 1px;
+  font: 500 11px/1 'IBM Plex Mono', monospace; color: var(--faintest);
+}
+@media (max-width: 720px) {
+  .field-chips { display: none; }
+}
 
 /* ---------- procedure steps ------------------------------------------- */
 ol.steps { margin: 0; padding: 0; list-style: none; }
