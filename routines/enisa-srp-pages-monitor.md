@@ -6,10 +6,14 @@
 - **Updatable by an agent**: **no** — created via `http_api`, so the prompt below
   must be pasted into the Routines UI by hand.
 
-> **Not yet applied.** The live Routine still runs the original June prompt,
-> which fetches only the main SRP page and diffs only
-> `enisa-srp-faq-baseline.md`. Paste the text below into the Routines UI to
-> bring it in line with what the monitor actually covers.
+> **Applied 2026-09-07.** Pasted into the Routines UI and verified against the
+> live Routine: 8,213 characters, all seven section markers present, no
+> fragment of the June prompt left, next run 14.09. 05:02 UTC. This file now
+> mirrors what actually runs.
+>
+> The constraint above still holds — a future change to this prompt needs the
+> same manual step, because `update_trigger` refuses a routine created via
+> `http_api`.
 
 ---
 
