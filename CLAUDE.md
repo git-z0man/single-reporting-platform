@@ -1,5 +1,37 @@
 # Repository conventions for Claude Code
 
+## Routine prompts must be kept in sync with the repository
+
+Each of the three monitors below is driven by a scheduled Routine. What a
+Routine executes is its **prompt**, held by the platform — not anything in
+this repository. A copy of each prompt is mirrored under `routines/`, together
+with its trigger ID and whether an agent may update it.
+
+**Whenever a change widens what a monitor covers — a new page to watch, a new
+baseline file, a new output path — the prompt must be updated in the same
+change.** Otherwise the next scheduled run silently reverts to the narrower
+job, and the wider scope survives only as long as the session that invented it.
+
+Concretely, in this order:
+
+1. Update the mirrored prompt in `routines/`, in the same commit as the
+   repository change.
+2. **Apply it to the live Routine** — `update_trigger` where the routine was
+   created by an agent, otherwise paste it into the Routines UI. This is the
+   step that actually takes effect; the other two are documentation.
+3. Update the auto-merge paths in this file if the routine now writes
+   somewhere new.
+
+This is not hypothetical. On 2026-09-07 the ENISA run discovered ENISA's new
+CRA SRP Glossary page, built `enisa-srp-glossary-baseline.md`, and updated
+this file — while its own prompt still described a single page and a single
+file. The routine was more thorough than its instructions, and nothing carried
+that forward to the next run.
+
+Note that an agent can only update a Routine it created itself. The ENISA
+monitor was created through the API, so its prompt changes are a manual step
+in the Routines UI; see `routines/README.md`.
+
 ## ENISA SRP FAQ baseline-check routine
 
 `enisa-srp-faq-baseline.md` and `enisa-srp-glossary-baseline.md` are
