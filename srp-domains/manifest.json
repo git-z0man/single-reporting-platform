@@ -57,7 +57,7 @@
   "host_count": 29,
   "live_count": 0,
   "last_check": "2026-09-07",
-  "last_change": "2026-09-06",
+  "last_change": "2026-09-07",
   "last_run_trust": "proxied",
   "hosts": [
     {
@@ -94,10 +94,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "at",
       "country": "Österreich",
-      "csirt_assumed": "CERT.at / GovCERT Austria",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/at.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CERT.at",
+      "csirt_url": "https://www.cert.at/en/about-us/contact/"
     },
     {
       "host": "be.cra-srp.enisa.europa.eu",
@@ -111,10 +112,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "be",
       "country": "Belgien",
-      "csirt_assumed": "CERT.be (Centre for Cybersecurity Belgium, CCB)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/be.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CCB / CERT.be",
+      "csirt_url": "https://ccb.belgium.be/contacts"
     },
     {
       "host": "bg.cra-srp.enisa.europa.eu",
@@ -129,9 +131,11 @@
       "country_code": "bg",
       "country": "Bulgarien",
       "csirt_assumed": "CERT Bulgaria (National CERT)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "korrigiert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/bg.cra-srp.enisa.europa.eu.txt",
+      "csirt": "GovCERT.bg",
+      "csirt_url": "https://www.govcert.bg/en/contact-us/"
     },
     {
       "host": "cy.cra-srp.enisa.europa.eu",
@@ -145,10 +149,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "cy",
       "country": "Zypern",
-      "csirt_assumed": "National CSIRT-CY",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/cy.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CSIRT-CY",
+      "csirt_url": "https://www.csirt.cy/en/contact-us"
     },
     {
       "host": "cz.cra-srp.enisa.europa.eu",
@@ -162,10 +167,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "cz",
       "country": "Tschechien",
-      "csirt_assumed": "GovCERT.CZ (NÚKIB)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/cz.cra-srp.enisa.europa.eu.txt",
+      "csirt": "NÚKIB (GovCERT.CZ)",
+      "csirt_url": "https://nukib.gov.cz/cs/kontakty/"
     },
     {
       "host": "de.cra-srp.enisa.europa.eu",
@@ -179,10 +185,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "de",
       "country": "Deutschland",
-      "csirt_assumed": "CERT-Bund (BSI)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/de.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CERT-Bund (BSI)",
+      "csirt_url": "https://www.bsi.bund.de/EN/CERT-Bund/"
     },
     {
       "host": "dk.cra-srp.enisa.europa.eu",
@@ -196,10 +203,12 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "dk",
       "country": "Dänemark",
-      "csirt_assumed": "CFCS / DKCERT (Center for Cybersikkerhed)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_assumed": "CFCS / DKCERT",
+      "csirt_status": "korrigiert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/dk.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CFCS (Center for Cybersikkerhed)",
+      "csirt_url": "https://www.fe-ddis.dk/da/arbejdsomrade-a/Cybertruslen/"
     },
     {
       "host": "ee.cra-srp.enisa.europa.eu",
@@ -213,10 +222,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "ee",
       "country": "Estland",
-      "csirt_assumed": "CERT-EE (RIA)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/ee.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CERT-EE (RIA)",
+      "csirt_url": "https://www.ria.ee/en/cyber-security/handling-cyber-incidents-cert-ee"
     },
     {
       "host": "es.cra-srp.enisa.europa.eu",
@@ -231,9 +241,11 @@
       "country_code": "es",
       "country": "Spanien",
       "csirt_assumed": "INCIBE-CERT / CCN-CERT",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "korrigiert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/es.cra-srp.enisa.europa.eu.txt",
+      "csirt": "INCIBE-CERT",
+      "csirt_url": "https://www.incibe.es/en/incibe-cert/incidents/incident-handling"
     },
     {
       "host": "fi.cra-srp.enisa.europa.eu",
@@ -247,10 +259,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "fi",
       "country": "Finnland",
-      "csirt_assumed": "NCSC-FI (Traficom)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/fi.cra-srp.enisa.europa.eu.txt",
+      "csirt": "NCSC-FI (Traficom)",
+      "csirt_url": "https://www.kyberturvallisuuskeskus.fi/en/contact-us/contact"
     },
     {
       "host": "fr.cra-srp.enisa.europa.eu",
@@ -264,10 +277,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "fr",
       "country": "Frankreich",
-      "csirt_assumed": "CERT-FR (ANSSI)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/fr.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CERT-FR (ANSSI)",
+      "csirt_url": "https://www.cert.ssi.gouv.fr/contact-us/"
     },
     {
       "host": "gr.cra-srp.enisa.europa.eu",
@@ -282,9 +296,11 @@
       "country_code": "gr",
       "country": "Griechenland",
       "csirt_assumed": "National CSIRT Greece (NCSA)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "korrigiert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/gr.cra-srp.enisa.europa.eu.txt",
+      "csirt": "National Cybersecurity Authority (cyber.gov.gr)",
+      "csirt_url": "https://cyber.gov.gr/el-csirt/"
     },
     {
       "host": "hr.cra-srp.enisa.europa.eu",
@@ -299,9 +315,11 @@
       "country_code": "hr",
       "country": "Kroatien",
       "csirt_assumed": "CERT.hr (CARNET) / ZSIS",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "korrigiert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/hr.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CERT.hr (CARNET)",
+      "csirt_url": "https://www.cert.hr/en/home-page/"
     },
     {
       "host": "hu.cra-srp.enisa.europa.eu",
@@ -316,9 +334,11 @@
       "country_code": "hu",
       "country": "Ungarn",
       "csirt_assumed": "NKI (National Cyber Security Center Hungary)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "korrigiert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/hu.cra-srp.enisa.europa.eu.txt",
+      "csirt": "NCSC Hungary",
+      "csirt_url": "https://ncsc.gov.hu"
     },
     {
       "host": "ie.cra-srp.enisa.europa.eu",
@@ -332,10 +352,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "ie",
       "country": "Irland",
-      "csirt_assumed": "NCSC-IE / CSIRT-IE",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/ie.cra-srp.enisa.europa.eu.txt",
+      "csirt": "NCSC-IE",
+      "csirt_url": "https://www.ncsc.gov.ie/cra/"
     },
     {
       "host": "it.cra-srp.enisa.europa.eu",
@@ -349,10 +370,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "it",
       "country": "Italien",
-      "csirt_assumed": "CSIRT Italia (ACN)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/it.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CSIRT Italia (ACN)",
+      "csirt_url": "https://www.acn.gov.it/portale/csirt-italia/chi-siamo"
     },
     {
       "host": "lt.cra-srp.enisa.europa.eu",
@@ -367,9 +389,11 @@
       "country_code": "lt",
       "country": "Litauen",
       "csirt_assumed": "NKSC / CERT-LT",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "korrigiert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/lt.cra-srp.enisa.europa.eu.txt",
+      "csirt": "NKSC",
+      "csirt_url": "https://www.nksc.lt/kontaktai.html"
     },
     {
       "host": "lu.cra-srp.enisa.europa.eu",
@@ -384,9 +408,11 @@
       "country_code": "lu",
       "country": "Luxemburg",
       "csirt_assumed": "CIRCL / GOVCERT.LU",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "korrigiert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/lu.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CIRCL",
+      "csirt_url": "https://www.circl.lu/pub/coordinated-vulnerability-disclosure/"
     },
     {
       "host": "lv.cra-srp.enisa.europa.eu",
@@ -400,10 +426,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "lv",
       "country": "Lettland",
-      "csirt_assumed": "CERT.LV",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/lv.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CERT.LV",
+      "csirt_url": "https://cert.lv/uploads/par-mums/RFC_2350_CERT-LV_21072025.pdf"
     },
     {
       "host": "mt.cra-srp.enisa.europa.eu",
@@ -417,10 +444,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "mt",
       "country": "Malta",
-      "csirt_assumed": "CSIRTMalta",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/mt.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CSIRTMalta (MITA)",
+      "csirt_url": "http://www.mita.gov.mt"
     },
     {
       "host": "nl.cra-srp.enisa.europa.eu",
@@ -434,10 +462,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "nl",
       "country": "Niederlande",
-      "csirt_assumed": "NCSC-NL",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/nl.cra-srp.enisa.europa.eu.txt",
+      "csirt": "NCSC-NL",
+      "csirt_url": "https://www.ncsc.nl/contact"
     },
     {
       "host": "pl.cra-srp.enisa.europa.eu",
@@ -451,10 +480,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "pl",
       "country": "Polen",
-      "csirt_assumed": "CSIRT NASK",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/pl.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CERT.PL (NASK)",
+      "csirt_url": "https://cert.pl/en/cvd/"
     },
     {
       "host": "pt.cra-srp.enisa.europa.eu",
@@ -468,10 +498,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "pt",
       "country": "Portugal",
-      "csirt_assumed": "CERT.PT (CNCS)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/pt.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CERT.PT (CNCS)",
+      "csirt_url": "https://www.cncs.gov.pt/pt/certpt/rfc-2350"
     },
     {
       "host": "ro.cra-srp.enisa.europa.eu",
@@ -485,10 +516,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "ro",
       "country": "Rumänien",
-      "csirt_assumed": "DNSC (vormals CERT-RO)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/ro.cra-srp.enisa.europa.eu.txt",
+      "csirt": "DNSC",
+      "csirt_url": "https://www.dnsc.ro/contact"
     },
     {
       "host": "se.cra-srp.enisa.europa.eu",
@@ -502,10 +534,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "se",
       "country": "Schweden",
-      "csirt_assumed": "CERT-SE (MSB)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/se.cra-srp.enisa.europa.eu.txt",
+      "csirt": "CERT-SE (MSB)",
+      "csirt_url": "https://cert.se/rapportera/"
     },
     {
       "host": "si.cra-srp.enisa.europa.eu",
@@ -519,10 +552,11 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "si",
       "country": "Slowenien",
-      "csirt_assumed": "SI-CERT",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/si.cra-srp.enisa.europa.eu.txt",
+      "csirt": "SI-CERT",
+      "csirt_url": "https://www.cert.si/en/about-si-cert/"
     },
     {
       "host": "sk.cra-srp.enisa.europa.eu",
@@ -536,10 +570,17 @@
       "last_checked": "2026-09-07T00:23:31Z",
       "country_code": "sk",
       "country": "Slowakei",
-      "csirt_assumed": "SK-CERT (NBÚ)",
-      "csirt_status": "angenommen",
-      "csirt_verified_on": null,
-      "csirt_evidence": null
+      "csirt_status": "verifiziert",
+      "csirt_verified_on": "2026-09-07",
+      "csirt_evidence": "srp-domains/evidence/sk.cra-srp.enisa.europa.eu.txt",
+      "csirt": "SK-CERT (NBÚ)",
+      "csirt_url": "http://www.sk-cert.sk"
     }
-  ]
+  ],
+  "csirt_source": {
+    "title": "ENISA, \"List of CSIRTs Designated as Coordinators\" (Stand 04/09/2026)",
+    "url": "https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators",
+    "retrieved": "2026-09-07",
+    "note": "Authoritative country -> CSIRT-designated-as-coordinator mapping, published by ENISA. Replaces the assumptions recorded when this baseline was created; it does not depend on the platform going live."
+  }
 }
