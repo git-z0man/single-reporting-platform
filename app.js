@@ -10,6 +10,7 @@
     { id: 'ew',  num: '02', label: 'Early Warning' },
     { id: 'n72', num: '03', label: '72 h Notification' },
     { id: 'fin', num: '04', label: 'Final Report' },
+    { id: 'roles', num: '·', label: 'Accounts & roles' },
     { id: 'faq', num: '·', label: 'Questions & answers' }
   ];
   var indexOf = {};

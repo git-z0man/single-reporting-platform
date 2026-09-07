@@ -45,6 +45,7 @@
       </a>
 
       <div class="sidenav-divider"></div>
+      <a class="toc-link simple" data-toc="roles" href="#roles">Accounts &amp; roles</a>
       <a class="toc-link simple" data-toc="faq" href="#faq">Questions &amp; answers</a>
     </nav>
 
@@ -127,7 +128,7 @@
       <section id="reg" class="phase">
         <div class="phase-eyebrow">Phase 01 · first-time setup</div>
         <h2>Registration</h2>
-        <p class="intro">Before you can submit, you have to register the user and link the user to the manufacturer. There is no need to pre-register, and ENISA explicitly advises against it: register and begin validation <em>when you need to submit a specific notification</em>, rather than creating an account pre-emptively. As part of the registration you sign in with a personal <a href="https://trusted-digital-identity.europa.eu/index_en" target="_blank" rel="noopener">EU Login account</a> and link yourself to a manufacturer. Your association to the manufacturer is forwarded to the national CSIRT of the manufacturer for validation, but you are able to submit straight away, before that validation has been completed by the CSIRT. It is a one-time setup; afterwards your account is reused for every report.</p>
+        <p class="intro">Before you can submit, you have to register the user and link the user to the manufacturer. There is no need to pre-register, and ENISA explicitly advises against it: register and begin validation <em>when you need to submit a specific notification</em>, rather than creating an account pre-emptively. As part of the registration you sign in with a personal <a href="https://trusted-digital-identity.europa.eu/index_en" target="_blank" rel="noopener">EU Login account</a> and link yourself to a manufacturer. Your association to the manufacturer is forwarded to the national CSIRT of the manufacturer for validation, but you are able to submit straight away, before that validation has been completed by the CSIRT. It is a one-time setup; afterwards your account is reused for every report. How further colleagues are added, and what happens when the person holding the account leaves, is covered under <a href="#roles">Accounts and roles</a>.</p>
         <div class="callout amber">
           <p><strong class="lead-in">Don't register out of curiosity.</strong> Only sign up if you manufacture products with digital elements. Your account is linked to a specific manufacturer and that association is shared with the national authorities for validation. ENISA gives the same advice, with the reason: the validation procedure differs per CSIRT and is that CSIRT’s responsibility.</p>
         </div>
@@ -172,6 +173,7 @@
         </ol>
 
       </section>
+
 
       <!-- ===================== PHASE 02 ===================== -->
       <section id="ew" class="phase divider">
@@ -287,6 +289,58 @@
           <li class="step"><span class="step-num">2</span><strong>Additional notes</strong> serve as an exchange channel with the national CSIRT.</li>
           <li class="step"><span class="step-num">3</span><strong>Closing.</strong> Once the Final Report is submitted, the notification is closed; subsequent changes are no longer possible (confirmation dialog “Are you sure?”).</li>
         </ol>
+
+      </section>
+
+      <!-- ===================== ACCOUNTS & ROLES ===================== -->
+      <section id="roles" class="phase divider">
+        <div class="phase-eyebrow">Accounts · ongoing</div>
+        <h2>Accounts and roles</h2>
+        <p class="intro">Registration creates one account, but a manufacturer normally needs several people able to report — and needs them to stay able to report when someone leaves. The platform handles this with two roles and a set of self-service functions, all under <em>Settings</em>. None of this requires the CSIRT.</p>
+
+        <div class="callout">
+          <p><strong class="lead-in">Two numbers worth knowing.</strong> There can be exactly <strong>one Primary AR per manufacturer</strong> and <strong>up to 20 Secondary ARs</strong>. Separately, a non-validated AR may submit <strong>up to 20 notifications</strong> for one manufacturer before validation becomes mandatory — so a pending validation never blocks a deadline.</p>
+        </div>
+
+        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Who may do what</span></div>
+        <div class="table-wrap">
+          <table class="data">
+            <thead><tr><th>Function</th><th>Primary AR</th><th>Secondary AR</th></tr></thead>
+            <tbody>
+              <tr><td>Submit notifications</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td>Manage the manufacturer entity</td><td>Yes</td><td>No</td></tr>
+              <tr><td>Invite a Secondary AR</td><td>Yes</td><td>No</td></tr>
+              <tr><td>Remove a Secondary AR’s association</td><td>Yes</td><td>No</td></tr>
+              <tr><td>Remove own association</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td>Claim the Primary role</td><td>—</td><td>Yes, by request</td></tr>
+              <tr><td>Associate with a further manufacturer</td><td>Yes</td><td>Yes</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="seclabel proc"><span class="seclabel-bar"></span><span class="seclabel-text">Procedure</span></div>
+        <ol class="steps">
+          <li class="step"><span class="step-num">1</span><strong>Invite a Secondary AR.</strong> Primary only. In <em>Settings</em>, add a Secondary AR for the manufacturer you represent and enter their email address. The invitee must not already be registered on the SRP. They receive an invitation and complete registration with the manufacturer details pre-filled.</li>
+          <li class="step"><span class="step-num">2</span><strong>Claim the Primary role.</strong> A Secondary AR can request to become the Primary AR from <em>Settings</em>. This matters when the Primary leaves: without it, an account nobody controls would hold the manufacturer entity.</li>
+          <li class="step"><span class="step-num">3</span><strong>Remove an association.</strong> The Primary can remove their own association or that of a Secondary; a Secondary can remove their own. Use this when someone leaves, rather than abandoning the account.</li>
+          <li class="step"><span class="step-num">4</span><strong>Add another manufacturer.</strong> One account can represent several manufacturers — <em>Settings</em> → <em>Association Management</em> → <em>Add Manufacturer</em>. Each association is validated by the CSIRT of that manufacturer’s Member State.</li>
+          <li class="step"><span class="step-num">5</span><strong>Check your details.</strong> <em>Settings</em> shows personal details and lets you update manufacturer details, using the same form as registration.</li>
+        </ol>
+
+        <div class="callout amber">
+          <p><strong class="lead-in">Drafts are private.</strong> A saved draft is visible only to the AR who created it — not to the other ARs of the same manufacturer. Plan for that: a draft left behind by an absent colleague cannot be picked up by someone else.</p>
+        </div>
+
+        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">From the platform</span></div>
+        <div class="imggrid">
+          <figure><img class="shot" src="img/enisa/if-05-invite-secondary.png" alt="Settings dialog for entering a Secondary AR email address and sending the invitation"><figcaption>Inviting a Secondary AR (Primary only).</figcaption></figure>
+          <figure><img class="shot" src="img/enisa/if-06-invite-confirmation.png" alt="Pop-up confirming that the invitation has been sent"><figcaption>Confirmation that the invitation was sent.</figcaption></figure>
+          <figure><img class="shot" src="img/enisa/if-08-claim-primary-role.png" alt="Settings option to claim the Primary AR role for a manufacturer"><figcaption>A Secondary AR claiming the Primary role.</figcaption></figure>
+          <figure><img class="shot" src="img/enisa/if-09-remove-association.png" alt="Confirmation dialog for removing an AR to manufacturer association"><figcaption>Removing an AR–manufacturer association.</figcaption></figure>
+          <figure><img class="shot" src="img/enisa/if-07-add-manufacturer.png" alt="Association management screen with the Add Manufacturer action"><figcaption>Associating with a further manufacturer.</figcaption></figure>
+          <figure><img class="shot" src="img/enisa/if-01-personal-details.png" alt="Settings view showing the AR personal details"><figcaption>Personal details under Settings.</figcaption></figure>
+        </div>
+        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-interface-functions" target="_blank" rel="noopener">CRA SRP guidance — AR Interface functions</a>, retrieved 7 September 2026. Reproduced with acknowledgement per the ENISA Legal Notice.</p>
 
       </section>
 
@@ -553,6 +607,7 @@
     <a href="#ew" data-fb="ew" role="menuitem"><span class="fb-mnum">02</span>Early Warning</a>
     <a href="#n72" data-fb="n72" role="menuitem"><span class="fb-mnum">03</span>72&hairsp;h Notification</a>
     <a href="#fin" data-fb="fin" role="menuitem"><span class="fb-mnum">04</span>Final Report</a>
+    <a href="#roles" data-fb="roles" role="menuitem"><span class="fb-mnum">·</span>Accounts &amp; roles</a>
     <a href="#faq" data-fb="faq" role="menuitem"><span class="fb-mnum">·</span>Questions &amp; answers</a>
   </div>
 </nav>

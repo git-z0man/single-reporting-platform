@@ -355,6 +355,8 @@ li.step strong { color: var(--ink); font-weight: 600; }
 }
 /* fallback box when a screenshot is missing */
 figure.missing .shot { display: none; }
+.imgsrc { margin: 10px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--faint); }
+.imgsrc a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
 .shot-ph {
   display: none; width: 100%; aspect-ratio: 16/10;
   border: 1px dashed var(--hairline); border-radius: 8px;
