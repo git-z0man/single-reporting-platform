@@ -18,7 +18,7 @@ for which ones an agent may update and which need a human.
 
 | Prompt file | Name in the Routines UI | Trigger ID | Schedule |
 |---|---|---|---|
-| `enisa-srp-pages-monitor.md` | **Single Reporting FAQ monitor** | `trig_015C8QiJhXwkxPkDdoMbkHeD` | `0 5 * * 1` |
+| `enisa-srp-pages-monitor.md` | **Single Reporting FAQ monitor** | `trig_015C8QiJhXwkxPkDdoMbkHeD` | `0 * * * *` (temporary, see below) |
 | `commission-cra-faq-monitor.md` | **Commission CRA FAQ monitor** | `trig_012AzfKXKrPnRCEjXXYWBgY4` | `0 5 * * 1` |
 | `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `22 * * * *` |
 
@@ -36,20 +36,47 @@ Other Routines on this account (`CRA notified body alert`, `FuFA Reisen`,
 `absence.io Zeiterfassung`) do not write to this repository and are not
 mirrored here.
 
+## The ENISA monitor is hourly until 2026-09-14
+
+Weekly by design, and weekly again from 14 September. In between it runs
+`0 * * * *`: ENISA signalled frequent edits in the run-up to the 11 September
+go-live, and a Tuesday change would otherwise sit unnoticed until the following
+Monday. The revert date is in the prompt file's header note as well, so it does
+not depend on anyone remembering.
+
+Hourly is not just a cron change. Three rules had to go into the prompt first,
+or the faster beat would have been a downgrade:
+
+- **Silence when nothing changed.** Without it, 23 notifications a day saying
+  nothing happened. The rule is the one the domain monitor already uses: read
+  `last_check` from `origin/main`, and if it is today, end the run with no
+  commit, no PR and no report. One heartbeat commit per day, notifications only
+  for real findings.
+- **A UTC time in the change log heading** once a day already has a section.
+  Two same-day sections titled identically is not a hypothetical: it happened
+  on 2026-09-07 and was disentangled by hand into "morning" and "evening".
+- **429 and 5xx are check failures, not changes.** ENISA rate-limited a burst
+  of requests that day. Seven pages an hour, on top of the domain monitor's own
+  hourly fetch of the CSIRT list, makes that likelier — and an error page
+  diffed as content would corrupt the baseline.
+
 ## Two routines watch the SRP — on purpose
 
 `Single Reporting FAQ monitor` reads ENISA's **web pages** and diffs their
 wording. `SRP domain reachability monitor` probes the 29 **hosts** of the
 production zone and classifies whether they answer. Same subject, different
-signal — and, decisively, different cadence: weekly for pages that change every
+signal — and normally a different cadence: weekly for pages that change every
 few weeks, hourly for a go-live that has to be caught when it happens.
 
-Merging them would force one of two bad outcomes: fetching seven ENISA pages
-every hour, or slowing go-live detection to a weekly beat, which would defeat
-the only reason the domain monitor exists. They also fail differently (a 403 on
-an ENISA page and a dark production host mean opposite things) and their
-auto-merge scopes are disjoint, so a combined run touching both would fall out
-of auto-merge entirely.
+They happen to share a cadence right now (see above), and that changes nothing:
+the reason to keep them apart was never only the schedule. They fail
+differently — a 403 on an ENISA page and a dark production host mean opposite
+things, and each needs its own reading. Their auto-merge scopes are disjoint,
+so a combined run touching both files would fall out of auto-merge entirely.
+And the shared cadence is temporary: on 14 September the pages monitor goes
+back to weekly, while the domain monitor stays hourly for as long as go-live
+detection matters. A merged routine would then be stuck picking one of the two
+beats, which is exactly the bind this separation avoids.
 
 **Where they did overlap, ownership decides, not merging.** ENISA's CSIRT
 coordinator list is both a page to diff and the source of the country table in
