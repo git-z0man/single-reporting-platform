@@ -80,10 +80,15 @@ timing out at the TLS stage.
 ## Verification after go-live
 
 Dormant until a host reports `LIVE`. Then the routine confirms the portal's
-role, identifies the SSO provider, and checks the assumed CSIRT per country
-instance against page title, branding, imprint, redirect target, or TLS SAN —
-flipping each row in the baseline table to `verifiziert` or `korrigiert`, and
-storing the deciding signal under `evidence/`.
+role, identifies the SSO provider, and cross-checks the CSIRT each country
+instance actually serves against the verified table in the baseline.
+
+The country → CSIRT mapping itself is **already settled** as of 2026-09-07,
+from ENISA's published [List of CSIRTs Designated as
+Coordinators](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators)
+— 19 of the original 27 assumptions confirmed, 8 corrected. It did not need
+the platform to go live. Per-country evidence is in `evidence/`. What remains
+open at go-live is whether the running platform agrees with that list.
 
 It also settles the open infrastructure question: all 29 labels resolve to the
 same anycast pair, but that pair is a filtering proxy and not the origin, so

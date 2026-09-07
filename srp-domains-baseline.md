@@ -31,8 +31,8 @@ when that changes.
 | Edge | `185.8.236.7`, `185.8.236.8` (WEDOS Global, CZ) |
 | State | provisioned, not yet released |
 | Expected go-live | in the coming days, at the latest **11 September 2026** |
-| Last check | 2026-09-06 |
-| Last change | 2026-09-06 (baseline created) |
+| Last check | 2026-09-07 |
+| Last change | 2026-09-07 (country → CSIRT mapping verified) |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
 
@@ -80,44 +80,59 @@ go-live, from behind the edge. Recorded as an open question, not an assumption.
 
 ## Member State instances
 
-One host per Member State (EU-27). The CSIRT column is the **expected**
-operator, to be confirmed per instance at go-live — see "Verification after
-go-live". `Status` is `angenommen` until a live endpoint proves it, then
-`verifiziert` or `korrigiert`.
+One host per Member State (EU-27). The CSIRT column is the **authoritative**
+operator, taken from ENISA's published [List of CSIRTs Designated as
+Coordinators](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators) (page dated 04/09/2026, retrieved 2026-09-07) — not from the
+hosts themselves, which are still dark. `Status` is `verifiziert` where the
+official list confirms the value assumed when this baseline was created, and
+`korrigiert` where it does not; the superseded assumption is kept in a
+footnote. Per-country evidence is in `srp-domains/evidence/<host>.txt`.
 
-| Code | Land | Nationales CSIRT (erwartet) | Host | Status | Belegt am |
-|------|------|------------------------------|------|--------|-----------|
-| at | Österreich | CERT.at / GovCERT Austria | `at.cra-srp.enisa.europa.eu` | angenommen | — |
-| be | Belgien | CERT.be (Centre for Cybersecurity Belgium, CCB) | `be.cra-srp.enisa.europa.eu` | angenommen | — |
-| bg | Bulgarien | CERT Bulgaria (National CERT) | `bg.cra-srp.enisa.europa.eu` | angenommen | — |
-| cy | Zypern | National CSIRT-CY | `cy.cra-srp.enisa.europa.eu` | angenommen | — |
-| cz | Tschechien | GovCERT.CZ (NÚKIB) | `cz.cra-srp.enisa.europa.eu` | angenommen | — |
-| de | Deutschland | CERT-Bund (BSI) | `de.cra-srp.enisa.europa.eu` | angenommen | — |
-| dk | Dänemark | CFCS / DKCERT (Center for Cybersikkerhed) | `dk.cra-srp.enisa.europa.eu` | angenommen | — |
-| ee | Estland | CERT-EE (RIA) | `ee.cra-srp.enisa.europa.eu` | angenommen | — |
-| es | Spanien | INCIBE-CERT / CCN-CERT | `es.cra-srp.enisa.europa.eu` | angenommen | — |
-| fi | Finnland | NCSC-FI (Traficom) | `fi.cra-srp.enisa.europa.eu` | angenommen | — |
-| fr | Frankreich | CERT-FR (ANSSI) | `fr.cra-srp.enisa.europa.eu` | angenommen | — |
-| gr | Griechenland | National CSIRT Greece (NCSA) | `gr.cra-srp.enisa.europa.eu` | angenommen | — |
-| hr | Kroatien | CERT.hr (CARNET) / ZSIS | `hr.cra-srp.enisa.europa.eu` | angenommen | — |
-| hu | Ungarn | NKI (National Cyber Security Center Hungary) | `hu.cra-srp.enisa.europa.eu` | angenommen | — |
-| ie | Irland | NCSC-IE / CSIRT-IE | `ie.cra-srp.enisa.europa.eu` | angenommen | — |
-| it | Italien | CSIRT Italia (ACN) | `it.cra-srp.enisa.europa.eu` | angenommen | — |
-| lt | Litauen | NKSC / CERT-LT | `lt.cra-srp.enisa.europa.eu` | angenommen | — |
-| lu | Luxemburg | CIRCL / GOVCERT.LU | `lu.cra-srp.enisa.europa.eu` | angenommen | — |
-| lv | Lettland | CERT.LV | `lv.cra-srp.enisa.europa.eu` | angenommen | — |
-| mt | Malta | CSIRTMalta | `mt.cra-srp.enisa.europa.eu` | angenommen | — |
-| nl | Niederlande | NCSC-NL | `nl.cra-srp.enisa.europa.eu` | angenommen | — |
-| pl | Polen | CSIRT NASK | `pl.cra-srp.enisa.europa.eu` | angenommen | — |
-| pt | Portugal | CERT.PT (CNCS) | `pt.cra-srp.enisa.europa.eu` | angenommen | — |
-| ro | Rumänien | DNSC (vormals CERT-RO) | `ro.cra-srp.enisa.europa.eu` | angenommen | — |
-| se | Schweden | CERT-SE (MSB) | `se.cra-srp.enisa.europa.eu` | angenommen | — |
-| si | Slowenien | SI-CERT | `si.cra-srp.enisa.europa.eu` | angenommen | — |
-| sk | Slowakei | SK-CERT (NBÚ) | `sk.cra-srp.enisa.europa.eu` | angenommen | — |
+| Code | Land | CSIRT designated as coordinator | Host | Status | Belegt am |
+|------|------|----------------------------------|------|--------|-----------|
+| at | Österreich | CERT.at | `at.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| be | Belgien | CCB / CERT.be | `be.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| bg | Bulgarien | GovCERT.bg[^1] | `bg.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-07 |
+| cy | Zypern | CSIRT-CY | `cy.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| cz | Tschechien | NÚKIB (GovCERT.CZ) | `cz.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| de | Deutschland | CERT-Bund (BSI) | `de.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| dk | Dänemark | CFCS (Center for Cybersikkerhed)[^2] | `dk.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-07 |
+| ee | Estland | CERT-EE (RIA) | `ee.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| es | Spanien | INCIBE-CERT[^3] | `es.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-07 |
+| fi | Finnland | NCSC-FI (Traficom) | `fi.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| fr | Frankreich | CERT-FR (ANSSI) | `fr.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| gr | Griechenland | National Cybersecurity Authority (cyber.gov.gr)[^4] | `gr.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-07 |
+| hr | Kroatien | CERT.hr (CARNET)[^5] | `hr.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-07 |
+| hu | Ungarn | NCSC Hungary[^6] | `hu.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-07 |
+| ie | Irland | NCSC-IE | `ie.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| it | Italien | CSIRT Italia (ACN) | `it.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| lt | Litauen | NKSC[^7] | `lt.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-07 |
+| lu | Luxemburg | CIRCL[^8] | `lu.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-07 |
+| lv | Lettland | CERT.LV | `lv.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| mt | Malta | CSIRTMalta (MITA) | `mt.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| nl | Niederlande | NCSC-NL | `nl.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| pl | Polen | CERT.PL (NASK) | `pl.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| pt | Portugal | CERT.PT (CNCS) | `pt.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| ro | Rumänien | DNSC | `ro.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| se | Schweden | CERT-SE (MSB) | `se.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| si | Slowenien | SI-CERT | `si.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
+| sk | Slowakei | SK-CERT (NBÚ) | `sk.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
 
-For the countries with more than one candidate CSIRT (ES, CZ, HR, GR, IE) the
-endpoint actually served at go-live decides; the assumed value is kept as a
-footnote if it turns out wrong.
+The countries that had more than one candidate CSIRT are now resolved from the
+official list: **ES** → INCIBE-CERT (CCN-CERT is not the coordinator), **HR** →
+CERT.hr (not ZSIS), **LT** → NKSC, **LU** → CIRCL, **DK** → CFCS (not DKCERT).
+**CZ** (NÚKIB/GovCERT.CZ) and **IE** (NCSC-IE) confirmed as assumed.
+
+Footnotes — the value assumed on 2026-09-06 and superseded by the official list:
+
+[^1]: was assumed to be *CERT Bulgaria (National CERT)*.
+[^2]: was assumed to be *CFCS / DKCERT*.
+[^3]: was assumed to be *INCIBE-CERT / CCN-CERT*.
+[^4]: was assumed to be *National CSIRT Greece (NCSA)*.
+[^5]: was assumed to be *CERT.hr (CARNET) / ZSIS*.
+[^6]: was assumed to be *NKI (National Cyber Security Center Hungary)*.
+[^7]: was assumed to be *NKSC / CERT-LT*.
+[^8]: was assumed to be *CIRCL / GOVCERT.LU*.
 
 ## Current reachability
 
@@ -185,12 +200,18 @@ the routine additionally confirms, using **only publicly visible signals — no
 login attempts, no form input, no authentication**:
 
 1. **Portal** — that `portal.…` is the entry point with country/CSIRT
-   selection. If it exposes a selector, the real country → endpoint mapping is
-   extracted from it and **overrides** the assumed table above.
+   selection. If it exposes a selector, extract the real country → endpoint
+   mapping and cross-check it against the table above. That table is already
+   verified against ENISA's official coordinator list, so a divergence here
+   means the platform disagrees with ENISA's own published list — worth
+   flagging rather than silently overwriting.
 2. **SSO** — the identity provider behind `auth.…` (EU Login / Keycloak /
    other), from redirect target, page title, or login branding.
-3. **Per country** — the actual CSIRT per live instance, from page title,
-   branding, imprint, redirect target, or TLS certificate SAN.
+3. **Per country** — cross-check the CSIRT each live instance actually
+   serves (page title, branding, imprint, redirect target, TLS SAN) against
+   the verified table. No longer the open question it was: the mapping is
+   settled from ENISA's official list, so this step only catches an
+   implementation that departs from it.
 4. **Backend separation** — whether each country host serves a distinct
    instance or one shared application behind the anycast pair, from differing
    TLS SANs, `Server`/`Set-Cookie` headers, redirect targets, or page identity.
@@ -198,6 +219,36 @@ login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-09-07 — country → CSIRT mapping verified against ENISA's official list
+
+ENISA published a **List of CSIRTs Designated as Coordinators** (page dated
+04/09/2026), found by the ENISA SRP FAQ monitor in the same pass that took the
+FAQ from 23 to 27 questions. It is the authoritative country → CSIRT mapping
+and it settles the table above **without waiting for go-live**, which is what
+the original plan had assumed would be necessary.
+
+Of the 27 assumptions recorded on 2026-09-06: **19 confirmed, 8 corrected.**
+
+| Code | Assumed | Actual |
+|---|---|---|
+| bg | CERT Bulgaria (National CERT) | **GovCERT.bg** |
+| dk | CFCS / DKCERT | **CFCS (Center for Cybersikkerhed)** |
+| es | INCIBE-CERT / CCN-CERT | **INCIBE-CERT** |
+| gr | National CSIRT Greece (NCSA) | **National Cybersecurity Authority (cyber.gov.gr)** |
+| hr | CERT.hr (CARNET) / ZSIS | **CERT.hr (CARNET)** |
+| hu | NKI (National Cyber Security Center Hungary) | **NCSC Hungary** |
+| lt | NKSC / CERT-LT | **NKSC** |
+| lu | CIRCL / GOVCERT.LU | **CIRCL** |
+
+Most corrections drop a second candidate that turned out not to be the
+coordinator (DK, ES, HR, LT, LU); BG, GR and HU name a different body
+altogether. Evidence per country is stored under `srp-domains/evidence/`.
+
+The reachability state is unchanged: still **0/29 live**, all `PROVISIONED`.
+The remaining go-live verification steps — portal role, SSO provider, and
+whether each country host has its own backend behind the shared anycast edge —
+are untouched by this and still need the platform to answer.
 
 ### 2026-09-06 — baseline created
 

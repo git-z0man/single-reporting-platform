@@ -1,0 +1,15 @@
+host:        cz.cra-srp.enisa.europa.eu
+country:     Tschechien (CZ)
+csirt:       NÚKIB (GovCERT.CZ)
+contact:     https://nukib.gov.cz/cs/kontakty/
+status:      verifiziert
+verified_on: 2026-09-07
+
+signal:
+  ENISA, "List of CSIRTs Designated as Coordinators" (Stand 04/09/2026)
+  https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators
+
+  The mapping is taken from ENISA's own published list of CSIRTs
+  designated as coordinators under the CRA, not inferred from the host
+  itself. The host is still dark (PROVISIONED), so no signal could be
+  read from it; this source is authoritative regardless.
