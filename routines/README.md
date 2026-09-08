@@ -1,6 +1,6 @@
 # Scheduled routine prompts
 
-The three monitors in this repository are driven by scheduled Routines. What a
+The four monitors in this repository are driven by scheduled Routines. What a
 Routine actually executes is its **prompt**, held by the platform — not
 anything in this repository. This directory keeps a copy of each prompt under
 version control so that:
@@ -21,6 +21,7 @@ for which ones an agent may update and which need a human.
 | `enisa-srp-pages-monitor.md` | **Single Reporting FAQ monitor** | `trig_015C8QiJhXwkxPkDdoMbkHeD` | `0 * * * *` (temporary, see below) |
 | `commission-cra-faq-monitor.md` | **Commission CRA FAQ monitor** | `trig_012AzfKXKrPnRCEjXXYWBgY4` | `0 5 * * 1` |
 | `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `22 * * * *` |
+| `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
 
 The UI name and the file name differ for the first one: an attempt to rename it
 to "ENISA SRP pages monitor" was refused along with the prompt update (see
@@ -31,10 +32,10 @@ below), so the UI still shows its original name. Go by the trigger ID.
 | `enisa-srp-pages-monitor.md` | `enisa-srp-faq-baseline.md`, `enisa-srp-glossary-baseline.md` |
 | `commission-cra-faq-monitor.md` | `commission-cra-faq-baseline.md`, `commission-faq/` |
 | `srp-domains-monitor.md` | `srp-domains-baseline.md`, `srp-domains/` |
+| `notified-bodies-monitor.md` | `notified-bodies-baseline.md`, `notified-bodies/` |
 
-Other Routines on this account (`CRA notified body alert`, `FuFA Reisen`,
-`absence.io Zeiterfassung`) do not write to this repository and are not
-mirrored here.
+Other Routines on this account (`FuFA Reisen`, `absence.io Zeiterfassung`) do
+not write to this repository and are not mirrored here.
 
 ## The ENISA monitor is hourly until 2026-09-14
 
@@ -100,6 +101,7 @@ Agents can only update routines they created (via create_trigger).
 | ENISA SRP pages monitor | `http_api` | **No — paste it in the Routines UI** |
 | Commission CRA FAQ monitor | `meta_mcp` | Yes |
 | SRP domain reachability monitor | `meta_mcp` | Yes |
+| CRA notified body alert | `http_api` | **No — paste it in the Routines UI** |
 
 ## The paste path eats angle brackets
 
@@ -136,6 +138,34 @@ Routine back (`list_triggers` returns the stored text in
 `derived_state.prompt`) and diff it against the file here, ignoring the
 markdown the UI strips — backticks, `##`, list numbering and blank lines all
 disappear, which is expected and harmless.
+
+## Moving a routine to another repository
+
+A Routine's **prompt** says what to do. Which repository it may read and write
+is separate: platform-side session config, `sources` and `outcomes`.
+
+```
+sources:  https://github.com/git-z0man/notified-bodies
+outcomes: git-z0man/notified-bodies, branch claude/youthful-gauss
+```
+
+**No agent tool can change that.** `create_trigger` does not accept `sources`
+or `outcomes` at all, and `update_trigger` reaches only name, schedule, enabled
+state, model and prompt — and refuses this Routine outright, since it was
+created via `http_api`.
+
+So moving a monitor between repositories is not a prompt edit. Pasting a
+repointed prompt without changing the config makes it worse, not better: the
+run looks for files that are not in its checkout and its push is rejected with
+a 403. The prompts here say so at the top when they are in that state, and
+their section on push failures calls out a 403 as the likely sign of it.
+
+`notified-bodies-monitor.md` is in exactly that state now: the prompt is
+written for this repository, the Routine still points at
+`git-z0man/notified-bodies`. Until someone repoints it — in the Routines UI if
+it is editable there, otherwise by recreating the Routine against this
+repository — the old repository keeps running the old prompt, so nothing goes
+unmonitored in the meantime.
 
 ## Keeping a prompt in sync
 

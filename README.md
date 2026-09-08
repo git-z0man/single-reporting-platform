@@ -24,7 +24,7 @@ and the [current reachability status](https://git-z0man.github.io/single-reporti
 
 ## The tracking archive
 
-Four baselines, each with a dated change log recording what moved and when.
+Five baselines, each with a dated change log recording what moved and when.
 Every one reproduces its source verbatim — including typos and internal
 inconsistencies, which are noted rather than corrected, because a baseline that
 quietly tidies its source cannot be diffed against it.
@@ -35,8 +35,18 @@ quietly tidies its source cannot be diffed against it.
 | [`enisa-srp-glossary-baseline.md`](enisa-srp-glossary-baseline.md) | The CRA SRP Glossary — every reporting field, its meaning, format and per-stage status | The live page returned HTTP 403 hours after capture; this is currently the only record of its contents |
 | [`commission-cra-faq-baseline.md`](commission-cra-faq-baseline.md) | The Commission's *FAQs on the CRA*, a versioned 66-page document (now v1.4) | Four versions archived verbatim under [`commission-faq/`](commission-faq/), with side-by-side diffs |
 | [`srp-domains-baseline.md`](srp-domains-baseline.md) | The production DNS zone `cra-srp.enisa.europa.eu` — 29 hosts | Country → CSIRT mapping verified against ENISA's official list; reachability history under [`srp-domains/`](srp-domains/) |
+| [`notified-bodies-baseline.md`](notified-bodies-baseline.md) | Conformity assessment bodies notified under the CRA | **Still zero**, on every working day since 21 June 2026 — 65 checks. Machine state under [`notified-bodies/`](notified-bodies/) |
 
 ### Things in here you may not find elsewhere
+
+- **A count of the notified bodies authorised to certify under the CRA: zero**,
+  checked every working day since June and recorded each time. The interesting
+  number here is a date that has not arrived yet — until a body is notified,
+  third-party conformity assessment for important and critical products cannot
+  be completed at all, and the Commission's timeline expects "sufficient CABs
+  designated" by 11 December 2026. The check carries a canary query against a
+  busy directive, because a query that has quietly stopped matching returns the
+  same zero as a true one.
 
 - **Every archived version of the Commission FAQ**, as PDF, as diffable text,
   and as [rendered side-by-side comparisons](https://git-z0man.github.io/single-reporting-platform/commission-faq/diff/)
@@ -66,6 +76,7 @@ something moves. Their prompts, schedules and output paths are mirrored in
 | ENISA SRP pages | weekly | the two ENISA baselines |
 | Commission CRA FAQ | weekly | the Commission baseline and archive |
 | SRP domain reachability | hourly until launch, then daily | the domain baseline and its logs |
+| CRA notified bodies | weekdays | the notified-bodies baseline and its state |
 
 Each baseline records `last_check` (when it was last verified) and
 `last_change` (when the source last actually moved), so a stale monitor is
