@@ -120,11 +120,44 @@ sides.
 For each changed page, update the relevant baseline file:
 
 - One logical block per FAQ entry / per guidance subpage / one table row per Glossary field, so diffs stay readable.
-- Add a dated `## Change log ([date] check, vs. [previous date] baseline)` section at the top of the change log, naming what was added, deleted, or reworded. Quote new or changed text verbatim.
-- **If the change log already carries a section for today**, do not add a second one with the same heading. Put the UTC time in both halves instead — `## Change log ([date] [HH:MM] UTC check, vs. the [date] [HH:MM] UTC baseline)` — so the two are told apart and it is clear what each was compared against. Running hourly, this is a normal occurrence. Leave existing headings alone; baselines are not renamed retroactively.
+- Add an entry at the top of the `## Change log` section, in the format below. Leave existing entries alone; baselines are not renamed retroactively.
 - Reproduce ENISA's text as-is, including typos and inconsistencies. Note them rather than silently correcting them — past checks recorded a doubled "inin", a missing "d" in "adress", an untagged Q19, and a duplicated sentence in Q9. That fidelity is the point of a baseline.
-- Separate substantive changes (a question added, deleted or reworded; a changed date, obligation, field, or legal reference) from cosmetic ones (link markup, page numbering).
 - Update `retrieved`, `last_check`, and `last_change` in the frontmatter of whichever file changed. `last_check` moves on every successful check; `last_change` only when content actually changed.
+### The change log entry
+
+A reader must be able to take in an entry in half a minute, however much ENISA moved. Substance first, editorial work summarised. Use exactly this shape:
+
+    ### [date] [HH:MM] UTC (vs. [what it was compared against])
+
+    One or two sentences: what a reader needs if they read nothing else.
+
+    **New**
+    - Things that did not exist before: a page, a question, a field, a rule.
+
+    **Changed**
+    - Substantive changes to something that already existed.
+
+    **Fixed**
+    - Defects this record has been tracking that no longer apply. Say so, and stop flagging them.
+
+    **Watch**
+    - Contradictions, oddities, anything a later run should keep an eye on.
+
+    **Editorial**
+    One line: counts and a pointer, never a list.
+
+    **Unchanged**
+    One line, with the identifying stamps.
+
+Rules for it:
+
+- **Empty rubrics are left out.** Keep the order of those that remain.
+- **One finding per bullet**, one or two sentences. If a single finding genuinely needs more — a changed reporting path, say — give it its own short `####` heading inside its rubric rather than a long paragraph.
+- **Quote verbatim only where the wording is the finding**: a changed obligation, a new field name, a corrected legal reference. Otherwise point at the content sections further down, which already carry the page text in full. Do not reproduce it twice.
+- **Editorial means summarised.** Typos, punctuation, capitalisation, link markup, house-style shifts ("Article" → "Art.") get counted, not enumerated: "three new typos and two stray full stops on the rewritten pages, verbatim in the text below". The defects themselves stay marked in the content sections, so nothing is lost by not listing them here.
+- **Aim for 250 words.** Not a hard limit — a day like 2026-09-07, with a published platform URL and two new questions, earns more. But an entry over budget is usually one that spelled out editorial work.
+- **The heading carries a UTC time** whenever the day already has an entry, which running hourly is normal.
+- Separate substantive changes (a question added, deleted or reworded; a changed date, obligation, field, or legal reference) from cosmetic ones (link markup, page numbering) — that separation is what the rubrics are for.
 
 ### Nothing changed anywhere
 
@@ -155,9 +188,11 @@ That is exactly how the Glossary was nearly lost. The 2026-09-07 run discovered 
 
 ## 7. Report
 
-Answer in German, concisely.
+Answer in German, concisely, and in the same shape as the change log entry — same problem, same cure. Lead with one or two sentences on what matters, then the rubrics that apply (**Neu**, **Geändert**, **Behoben**, **Beobachtet**, **Redaktionell**, **Unverändert**), leaving out the empty ones. Editorial work is summarised in a line, never enumerated.
 
-- **Substantive change on any page** — what changed, on which page, quoting new or reworded text where it matters. Flag anything touching reporting obligations, deadlines, data fields, or the CSIRT mapping.
+What earns a mention at all:
+
+- **Substantive change on any page** — what changed and where, quoting new or reworded text where the wording is the point. Flag anything touching reporting obligations, deadlines, data fields, or the CSIRT mapping.
 - **A new page appeared in the navigation** — name it and say it has been added to the baseline.
 - **The CSIRT list changed** — prominently, with the affected countries (see section 3).
 - **A Glossary reachability transition or move** — state the direction or the new address, and that the baseline content was left intact.
