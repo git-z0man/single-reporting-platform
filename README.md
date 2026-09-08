@@ -8,14 +8,14 @@ Resilience Act.
 This repository holds two things: a walkthrough of what that reporting looks
 like, and a dated archive of how the official sources have changed while the
 platform was being built. The archive is the part that is hard to reconstruct
-later — ENISA's pages are edited in place, and one of them has already been
-temporarily withdrawn.
+later — ENISA's pages are edited in place, one has already changed address
+mid-flight, and another was rewritten without its version stamp moving.
 
 ## The guide
 
 [`index.html`](index.html) — a manufacturer's walkthrough of the four stages:
 registration, early warning (24 h), notification (72 h), and final report,
-plus ENISA's FAQ. Published via GitHub Pages at
+plus every reporting field explained from ENISA's Glossary and its FAQ in full. Published via GitHub Pages at
 <https://git-z0man.github.io/single-reporting-platform/>.
 
 The archive below is served from the same site, so anything in it can be linked
@@ -55,25 +55,27 @@ quietly tidies its source cannot be diffed against it.
   publishes only the current version. The diffs show that its own one-line change notes
   understate what changed: v1.2 was described as a "minor correction of 6.2",
   and it removed the notified body's NANDO number from the CE marking step.
-- **The full SRP Glossary**, field by field, captured while it was reachable.
+- **The full SRP Glossary**, field by field — including the entry whose stated
+  meaning contradicts its own completion instructions, and the day ENISA
+  rewrote 29 of 38 rows without changing the version number in the footer.
 - **The country → CSIRT-designated-as-coordinator mapping** for all 27 Member
   States, checked against ENISA's published list — 19 confirmed, 8 corrected,
   with the superseded value kept in a footnote and per-country evidence under
   [`srp-domains/evidence/`](srp-domains/evidence/).
 - **A reachability record of the production zone** from before launch: all 29
-  hosts resolving to a filtering anycast edge that accepts TCP and drops the
-  TLS handshake.
+  hosts resolving to a filtering anycast edge which, from a non-allowlisted
+  source, accepts TCP and drops the TLS handshake.
 
 ## How it is maintained
 
-Three scheduled tasks re-check the sources and open a pull request when
+Four scheduled tasks re-check the sources and open a pull request when
 something moves. Their prompts, schedules and output paths are mirrored in
 [`routines/`](routines/); the conventions they follow are in
 [`CLAUDE.md`](CLAUDE.md).
 
 | Monitor | Cadence | Writes |
 |---|---|---|
-| ENISA SRP pages | weekly | the two ENISA baselines |
+| ENISA SRP pages | hourly until 14 Sep, then weekly | the two ENISA baselines |
 | Commission CRA FAQ | weekly | the Commission baseline and archive |
 | SRP domain reachability | hourly until launch, then daily | the domain baseline and its logs |
 | CRA notified bodies | weekdays | the notified-bodies baseline and its state |
@@ -84,8 +86,9 @@ visible rather than silent.
 
 One deliberate design note, since it is the kind of thing that gets
 "simplified" later: the domain monitor decides liveness on an HTTP status code
-and **not** on a completed TLS handshake. Behind an intercepting proxy, TCP and
-TLS succeed against every host — including hosts that are dark, and including a
+and **not** on a completed TLS handshake. That is about the measuring end, not
+the edge: behind the intercepting proxy this monitor runs through, TCP and TLS
+succeed against every host — including hosts that are dark, and including a
 reserved unroutable address. The reasoning is in the header of
 [`srp-domains/check.sh`](srp-domains/check.sh).
 
@@ -93,11 +96,12 @@ reserved unroutable address. The reasoning is in the header of
 
 Not affiliated with ENISA or the European Commission. **Not legal advice.**
 
-The guide is unofficial and based on the Commission's draft CRA guidance, which
-is not yet adopted; the platform itself is in test operation and its data
-fields are not final. Where this repository and an official source disagree,
-the official source governs — the baselines exist to make such differences
-visible, not to replace anything.
+The guide is unofficial. It follows ENISA's published SRP guidance, Glossary
+and FAQ, and the Commission's Article 26 guidance adopted on 27 July 2026 —
+all of which are still being edited, several of them in the same week this was
+written. Where this repository and an official source disagree, the official
+source governs; the baselines exist to make such differences visible, not to
+replace anything.
 
 This is the **public** build. Portal screenshots and material shared through
 the CRA Expert Group were removed following Commission feedback and are not
