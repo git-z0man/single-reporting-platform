@@ -32,6 +32,32 @@ Note that an agent can only update a Routine it created itself. The ENISA
 monitor was created through the API, so its prompt changes are a manual step
 in the Routines UI; see `routines/README.md`.
 
+## How a change log entry is written
+
+Every baseline in this repository carries a change log, and they are read by
+people, not only diffed. The house format, substance first:
+
+    ### [date] [HH:MM] UTC (vs. [what it was compared against])
+
+    One or two sentences: what a reader needs if they read nothing else.
+
+    **New** / **Changed** / **Fixed** / **Watch**   — one finding per bullet
+    **Editorial**   — one line, counts and a pointer, never a list
+    **Unchanged**   — one line, with the identifying stamps
+
+Empty rubrics are left out; the order of the rest stays. Aim for 250 words —
+not a hard limit, but an entry over it has usually spelled out editorial work
+that belonged in one summarising line. Typos, punctuation, capitalisation and
+house-style shifts are counted, not enumerated: the defects themselves stay
+marked in the content sections below, so nothing is lost by not listing them
+twice. Quote verbatim only where the wording *is* the finding — a changed
+obligation, a new field name, a corrected legal reference.
+
+This is why: on 2026-09-08 a single entry ran to 600 words, most of it about a
+wording pass over two guidance pages, while the two things that mattered — the
+Glossary links working again, and two ENISA pages disagreeing about who
+receives an invitation email — sat buried in the middle of it.
+
 ## ENISA SRP FAQ baseline-check routine
 
 `enisa-srp-faq-baseline.md` and `enisa-srp-glossary-baseline.md` are

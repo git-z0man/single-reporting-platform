@@ -39,112 +39,62 @@ note: >-
 
 ## Change log
 
-### 2026-09-08 (00:14 UTC check, vs. the 2026-09-07 22:0x UTC baseline) — unchanged, one baseline correction
+### 2026-09-08 00:14 UTC (vs. 2026-09-07 22:0x)
 
-Fetched raw HTML at the current address (`cra-srp-glossary2`), HTTP 200. Footer still reads
-Version 1.1, last update 05/09/2026. **All 38 fields diffed row-by-row against this baseline:
-no wording, numbering, or status changed anywhere**, including every previously-noted defect
-(field 11's contradictory meaning and "is doesn't" typo, v26's doubled full stop, v29's missing
-space, i36's and i37's broken grammar, the i32/v-side "or" vs the FAQ's "and" discrepancy, and
-v28's own "one of the three" / "at least one of the three" inconsistency) — all still present,
-unchanged, exactly as recorded.
+Page unchanged. One correction to this record, not to ENISA's page.
 
-**One correction to this baseline itself, not to ENISA's page**: the v28 PEC Delay Reason row's
-Example cell was missing its second of three grounds, showing a stray "N/A" in its place
-(`...vulnerability; or<br>N/A<br>that any immediate further dissemination...`). The live page's
-markup makes clear why: the three grounds sit in three separate table rows under one `rowspan`
-Example column, and the middle row's own text was dropped in favour of an adjacent status
-column's "N/A" during an earlier capture. The live content — confirmed unchanged since 2026-09-07
-by the meaning/how-to-complete cells matching this baseline exactly — has always read as three
-full grounds with no placeholder. Corrected the row to the complete three-item list; nothing about
-ENISA's page changed today, only the fidelity of this record.
+**Fixed (this baseline, not the page)**
 
-### 2026-09-07 (22:0x UTC) — content edited without a version bump
+- The v28 PEC Delay Reason row's Example cell was missing the second of its three grounds and showed a stray "N/A" in its place. The live page puts the three grounds in three table rows under one `rowspan`; an earlier capture picked up an adjacent status cell instead of the middle row's text. Restored to the full three-item list — ENISA's page has always read that way.
 
-The page still shows **Version 1.1, last update 05/09/2026** in its footer, but its content
-changed on 2026-09-07. **The version stamp on this page is not a reliable change signal** —
-diff the rows, not the header. Field count, numbering and every field name are unchanged
-(38 fields: 18 common, v19–v29, i30–i38). 29 of the 38 rows differ.
+**Unchanged**
 
-**The systematic change: "How to complete" is now phrased as illustration, not instruction.**
-29 rows had their completion instruction reworded from an imperative to "For example, …" —
-"Enter a short, specific title…" became "For example, enter a short, specific title…",
-"Provide a concise overview…" became "For example, provide…", and so on. Nothing else in
-those sentences moved. It reads as a deliberate pass to stop the examples being taken as
-requirements, and it weakens every completion instruction on the page in the same way.
+All 38 rows diffed row by row: no wording, numbering or status moved, and every tracked defect is still present exactly as recorded — field 11's contradictory meaning and its "is doesn't" typo, v26's doubled full stop, v29's missing space, i36's and i37's broken grammar, v28's "one" against "at least one", and i32's "or" against the FAQ's "and". Footer still Version 1.1, 05/09/2026.
 
-**Substantive change in one row: v28 PEC Delay Reason.**
+### 2026-09-07 22:0x UTC (vs. the same evening's capture)
 
-- Meaning was "One of the legally specified circumstances justifying withholding…"; it now
-  reads "**You may select one of the three of** the legally specified circumstances
-  justifying withholding…" — garbled, and the numbered list "1. … 2. … 3." that carried the
-  three grounds has been flattened into prose separated by "or".
-- How to complete gained a sentence: "**You may select at least one of the three options.**"
-  Together with the Meaning's "one of the three", the page now says both *one* and *at least
-  one*. The three grounds themselves are unchanged (third subparagraph of Art. 16(2) CRA).
+Content edited **without a version bump** — the footer still says Version 1.1, 05/09/2026. On this page the version stamp is not a change signal; diff the rows. 38 fields, same numbering, no field name changed; 29 of the 38 rows differ.
 
-**Four new defects, all reproduced verbatim in the tables below:**
+**Changed**
 
-| Field | Defect |
-|---|---|
-| v26 | "(max. 255 characters).**.**" — doubled full stop |
-| v29 | "CSIRT Designated as Coordinator (CDaC)**taking** their decision" — missing space |
-| i36 | "the manufacturer or another relevant **become aware**" — was "another relevant party became aware" |
-| i37 | "the date and time when the incident **was began** or occurred" |
+- **"How to complete" is now illustration, not instruction.** 29 rows had their completion sentence reworded from an imperative into "For example, …" — "Enter a short, specific title…" became "For example, enter a short, specific title…". Nothing else in those sentences moved. It reads as a deliberate pass to stop the examples being taken as requirements, and it weakens every completion instruction on the page in the same way.
+- **v28 PEC Delay Reason**, the one substantive row: the Meaning is now garbled ("You may select one of the three of the legally specified circumstances…"), and the numbered list that carried the three grounds is flattened into prose. How to complete gained "You may select at least one of the three options." The grounds themselves are unchanged — third subparagraph of Art. 16(2) CRA.
 
-**Field 11 "End of support indicator" is unchanged, including both of its problems**: the
-Meaning still describes whether the product has a user interface for informing users, while
-How to complete / Example / Format still ask a Yes/No question about whether the support
-period has ended; and the typo "or No when is doesn't" is still there. Two edit passes have
-now gone over this page without touching it.
+**Watch**
 
-Also unchanged: the two footnotes, and i32's "Applied or ongoing mitigation measures" against
-the FAQ's "Applied and ongoing" — the and/or discrepancy between the two ENISA sources stands.
+- **v28 now says both "one of the three" and "at least one of the three".**
+- **Field 11 is untouched** by this pass and the one before it: its Meaning still describes whether the product has a user interface for informing users, while its instruction, format and example ask Yes/No about the support period — and "or No when is doesn't" is still there.
+- i32's "Applied **or** ongoing mitigation measures" still stands against the FAQ's "Applied **and** ongoing".
 
-### 2026-09-07 (evening) — page moved, content unchanged at the time of the move
+**Editorial**
 
-The Glossary moved from `.../cra-srp-glossary` to `.../cra-srp-glossary2`. The old
-path returns HTTP 403; the new one returns 200 with Version 1.1 and the same
-05/09/2026 date. Compared field by field against this baseline: **38 fields, identical
-numbering, no name changed** — including field 11, whose stated meaning still
-contradicts its own completion instructions, and the "when is doesn't" typo in that
-same row.
+Four new defects, each reproduced verbatim in the tables below: v26 a doubled full stop, v29 a missing space in "(CDaC)taking", i36 "another relevant become aware" (was "another relevant party became aware"), i37 "the incident was began".
 
-This corrects the diagnosis recorded on 2026-09-07. A 403 on a single page while its
-neighbours stay up reads like an unpublication, and that is how it was written down.
-It was a move. The lesson is in the frontmatter: check where a page went before
-concluding it is gone.
+**Unchanged**
 
+The two footnotes.
 
-### 2026-09-07 — rebuilt as maintained tables; fixed invalid YAML frontmatter
-This file's first commit (same day) used one prose block per field. Two issues found and fixed
-in this pass, both introduced in that first commit:
-- **Invalid YAML frontmatter**: `page_version: 1.1, last update per page footer: 05/09/2026`
-  contained an unquoted `: ` (colon-space) inside a plain scalar value, which GitHub's YAML
-  frontmatter renderer (and any strict parser, confirmed with PyYAML) rejects outright —
-  "mapping values are not allowed in this context". Fixed by quoting the value.
-- **Rebuilt as tables** (this request): content converted from prose blocks to the three
-  markdown tables below, at the user's request, so the file is easier to scan and — going
-  forward — easier to maintain as a straight per-row diff against the live page's own table.
+### 2026-09-07 evening — the page moved
 
-### 2026-09-07 — initial capture
-First full-detail capture of this page. It was discovered via the ENISA SRP FAQ baseline-check
-routine's 2026-09-07 run (the FAQ page overhaul that day added links to a previously-untracked
-"CRA SRP Glossary" page and a "List of CSIRTs Designated as Coordinators" page). The Glossary was
-fetched as raw HTML at 05:06 UTC and captured here in full; `enisa-srp-faq-baseline.md` from the
-same run only holds a compact field-name/status summary of it, trimmed for size.
+**Fixed**
 
-Hours later the same day, a re-check found the live Glossary page returning HTTP 403 (see
-`status` in the frontmatter) while every other tracked SRP page remained reachable. This file was
-written from the 05:06 UTC capture — i.e. from the last known-good fetch — since the page could
-not be re-fetched at write time.
+- **Diagnosis corrected.** The Glossary moved from `.../cra-srp-glossary` to `.../cra-srp-glossary2`: the old path returns 403, the new one 200. It had been recorded here as possibly unpublished. A 403 on one page while its neighbours stay up reads like an unpublication — it was a move. The rule now sits in the frontmatter: check where a page went before concluding it is gone.
 
-Field counts at capture: 18 common fields (numbered 1–18), 11 Actively Exploited Vulnerability
-(AEV) fields (v19–v29), 9 Severe Incident (SI) fields (i30–i38) — 38 fields total. Note this
-numbering is the Glossary's own and differs from the FAQ's Q16 table, which additionally
-itemizes 5 automated/system common fields (Notification level, the three Reporting-time fields,
-Reporter) that the Glossary does not number explicitly; see `enisa-srp-faq-baseline.md` for that
-cross-reference.
+**Unchanged**
+
+38 fields, identical numbering, no name changed at the time of the move — including field 11's contradiction and its "when is doesn't" typo. Version 1.1, 05/09/2026.
+
+### 2026-09-07 — this file rebuilt as tables
+
+Repository-side housekeeping, not an ENISA change. Both items were introduced by this file's first commit the same day.
+
+- **Rebuilt as three markdown tables**, one row per field, replacing the prose blocks — easier to scan, and diffable row by row against the live page's own table.
+- **Invalid YAML frontmatter fixed**: `page_version: 1.1, last update per page footer: 05/09/2026` carried an unquoted colon-space, which GitHub's renderer and any strict parser reject outright. Quoted.
+
+### 2026-09-07 05:06 UTC — initial capture
+
+First full-detail capture. Found by the FAQ routine's run that morning, when the FAQ overhaul added links to two previously untracked pages. Written from the 05:06 UTC fetch: hours later the page returned 403 — it had moved, see above — and could not be re-fetched at write time. `enisa-srp-faq-baseline.md` holds only a trimmed field-name/status summary of the same page.
+
 
 ## Page metadata
 

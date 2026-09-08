@@ -21,104 +21,104 @@ last_change: 2026-09-08
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
-## Change log (2026-09-08 04:10 UTC check, vs. the 2026-09-07 evening baseline)
+## Change log
 
-**No FAQ wording change, but two of the three guidance subpages were rewritten and the FAQ's long-broken Glossary links were fixed.** All seven tracked pages returned HTTP 200. FAQ page itself (still "Updated: 07 September 2026", still Q1–Q29) and the Q16 data-field table are byte-for-byte unchanged from the previous baseline; the CSIRT list (still "Updated: 04/09/2026", 27 countries) and the Glossary (still Version 1.1, 38 fields, footer date 05/09/2026) are unchanged too. Two things did change:
+Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
 
-### The FAQ's Glossary links are fixed
+### 2026-09-08 04:10 UTC (vs. 2026-09-07 evening)
 
-All eight "SRP Glossary" links in the FAQ answers (Q8, Q11 ×3, Q15, Q16 ×2, Q17), previously pointing at the dead `.../cra-srp-glossary` path (HTTP 403) and reproduced as broken since 2026-09-07, now point at `.../cra-srp-glossary2` and resolve normally. The "Broken Glossary links" defect tracked since 2026-09-07 no longer applies; not re-flagging it going forward.
+No FAQ wording change. Two of the three guidance subpages were rewritten, and the FAQ's broken Glossary links now work. All seven tracked pages returned HTTP 200.
 
-### Two guidance subpages rewritten, one left alone
+**Changed**
 
-The **AR User Registration** and **AR Interface Functions** guidance pages both now show **"Last updated: 07/09/2026"** (previously 3/08/2026 and 14/08/2026) and have been rewritten from imperative/bulleted phrasing into a second-person "Purpose: Follow these steps to …" narrative style throughout. The **AR Notification Submission and Update** page is untouched — still "Last updated: 3/08/2026", still in the older phrasing. Checked field-by-field: no reporting deadline, obligation, status name, or numeric limit (20 Secondary ARs, 20 notifications before validation, 10 notifications for an unverified AR, the 7-day invitation expiry) changed in either rewritten page — this is a wording/structure pass, not a substantive process change, with three exceptions and two new typos:
+- **AR User Registration** and **AR Interface Functions** rewritten, both now "Last updated: 07/09/2026" (were 3/08 and 14/08). A wording and structure pass into "Purpose: Follow these steps to …" narrative. Checked field by field: no deadline, obligation, status name or limit moved — the 20/20/10 figures and the 7-day invitation expiry all stand. Full text below.
+- AR User Registration now names the sender of the invitation: "an email invitation from **SRP triggered by** the Primary AR" (was "from the Primary AR").
+- **AR Notification Submission and Update** is untouched, still 3/08/2026 and still in the older phrasing.
 
-- **AR User Registration**, Secondary-AR pre-condition now reads "You have received an email invitation from **SRP triggered by** the Primary AR" (previously: "from the Primary AR" — the SRP is now named as the sender, the Primary AR as what triggers it; same underlying flow, more precise about which system account actually sends the email).
-- **AR Interface Functions**, "Invite Secondary AR" expected result now reads: "**An email is sent to the Primary AR, who instructs the Secondary AR to complete registration.**" The previous wording had the SRP email the Secondary AR directly to complete registration. Read literally, the new sentence has the invitation email going to the *Primary* AR instead, who would then have to separately tell the Secondary AR — which would be a different, more manual flow, and sits oddly next to the User Registration page's own "Registration via Invitation" section (unchanged there), which still describes the Secondary AR clicking a link from their own received email. Flagging this rather than correcting it: it reads like a wording slip introduced by the same-day rewrite rather than an intended process change, but it directly concerns the registration/notification workflow, so a future check should watch whether ENISA revises it further.
-- **AR User Registration**, the manufacturer-details exception now reads "manufacturer name, additional **Information**), the SRP will return an error" — capital I, was lowercase "additional information".
-- **AR Interface Functions** has two new typos: the Dashboard-access section opens "**Yo** can access the Dashboard by:" (missing "u"), and the "Add an Association with an Additional Manufacturer" section title now duplicates its own noun — "**Add an Association with an Additional Manufacturer Association through Settings**". Both reproduced verbatim below.
-- Two new stray double-full-stops on the AR Interface Functions page, reproduced as-is: "…to request to become a Primary AR**..**" and "…based on your selections**..**".
+**Fixed**
 
-See the updated "Guidance subpages — full content baseline" section below for the full rewritten text of both pages.
+- All eight "SRP Glossary" links in the FAQ answers (Q8, Q11 ×3, Q15, Q16 ×2, Q17) now point at `.../cra-srp-glossary2` and resolve. The broken-link defect tracked since 2026-09-07 is closed and no longer flagged.
 
-### Main-page/FAQ navigation: Glossary no longer listed
+**Watch**
 
-The "Content" subtopics list on the main page, the FAQ page, and every guidance/CSIRT-list page currently shows only five entries — Frequently Asked Questions, the three guidance pages, and List of CSIRTs Designated as Coordinators — **without** "CRA SRP Glossary", even though the 2026-09-07 baseline entry recorded the nav as including it. The Get Started card's own "View the SRP Glossary" link on the main page is unaffected and still points at `cra-srp-glossary2`. Noting this as an observation rather than acting on it: it may mean the Glossary was quietly dropped from this taxonomy-driven listing (its move to `cra-srp-glossary2` predates this checked change), or that the 2026-09-07 record of the nav was already slightly off. Either way there is no user-facing loss (the page is still linked and reachable), so nothing is removed from the baseline over this alone; a future check should note if the Glossary reappears there.
+- **Two ENISA pages now describe two different invitation flows.** AR Interface Functions says the email goes to the *Primary* AR, "who instructs the Secondary AR to complete registration"; AR User Registration still has the Secondary AR clicking a link in their own email. Reads like a slip from the rewrite, but it concerns the registration path — watch it.
+- **The Glossary is no longer listed in the "Content" navigation** on any page. It is still linked from the Get Started card and reachable, so nothing is removed from this baseline. Note it if it reappears.
 
-## Change log (2026-09-07 evening check, vs. the same morning's baseline)
+**Editorial**
 
-**Second major FAQ pass in five days, plus the platform URL.** Page-level date moved "Updated: 04 September 2026" → **"Updated: 07 September 2026"**. All seven tracked pages returned HTTP 200; the Glossary was checked at its new address (see `glossary_url`).
+Three new typos and two stray double full stops across the two rewritten pages, plus "additional **I**nformation" gaining a capital — all reproduced verbatim in the guidance text below.
 
-### The platform address is now published
+**Unchanged**
 
-Q9 previously said the SRP "will be accessible through a dedicated public URL, which will be published on this page before the platform goes live." It now says:
+FAQ page ("Updated: 07 September 2026", Q1–Q29) and its Q16 table, byte for byte. Glossary (Version 1.1, 38 fields). CSIRT list ("Updated: 04/09/2026", 27 countries).
 
-> The SRP will be available at https://portal.cra-srp.enisa.europa.eu .
+### 2026-09-07 evening (vs. the same morning)
 
-The same URL is repeated in the new Q28, which adds: "From there, select 'Assigned Representative' and log in using your EU Login account. The portal will be available from 11 September 2026."
+Second FAQ pass in five days, and the platform address is published. Page date "Updated: 04 September 2026" → **"07 September 2026"**; all seven pages HTTP 200.
 
-This is the first time ENISA has named the production host. It sits inside the `cra-srp.enisa.europa.eu` zone tracked by the SRP domain reachability routine — `portal.cra-srp.enisa.europa.eu` is one of the 29 hosts already on that routine's list.
+**New**
 
-### Two new questions
+- **The production URL.** Q9 no longer says the address will follow: "The SRP will be available at https://portal.cra-srp.enisa.europa.eu". First time ENISA names the host — it is one of the 29 already tracked by the SRP domain reachability routine.
+- **Q28 "How do I connect to the CRA Single Reporting Platform?"** — the URL, the "Assigned Representative" choice on the landing screen, available from 11 September 2026.
+- **Q29 "When do the reporting obligations start?"** — Art. 14 for manufacturers from 11 September 2026, Art. 24(3) for open-source software stewards from 11 December 2027 per Art. 71(2).
+- **Q24 gains a first sentence**: "At launch, the platform will be available in **English only**."
+- **Q22 names the pre-launch testers** for the first time — national CSIRTs, the CRA Expert Group, selected manufacturers — and states that **no further testing is foreseen before go-live**.
 
-- **Q28 [NEW] "How do I connect to the CRA Single Reporting Platform?"** — the URL, the "Assigned Representative" choice on the landing screen, and "The portal will be available from 11 September 2026."
-- **Q29 [NEW] "When do the reporting obligations start?"** — Art. 14 for manufacturers from 11 September 2026; Art. 24(3) for open-source software stewards from 11 December 2027 per Art. 71(2); mandatory notifications go through the SRP, with a pointer to FAQ 25 for outages.
+**Changed**
 
-The entry that appeared **without a number** on 2026-09-07 ("Can I report vulnerabilities even if they are not actively exploited?") is now correctly numbered **27**. The numbering glitch recorded last week is fixed. Entry count 27 → 29.
+- **Q8: ENISA corrects its own article reference.** Choosing the CSIRT moves from **Article 15(7)** to **Art. 14(7)**; 15(7) does not concern that choice. The answer also points to "User Manuals", a document set not linked anywhere else on these pages.
+- **Q18: a new consequence.** "If the wrong CDaC is selected, the notification **may be invalidated and will need to be resubmitted** to the correct CDaC." The identification duty is now put on the manufacturer up front.
+- **Q4**: the unfilled placeholder "Art 14 and **24(x)**" is resolved — Art. 24(3), applying 11 December 2027 per Art. 71(2). Voluntary reporting under Art. 15 "will not be available at launch".
+- **Q9**: the sentence duplicated verbatim last week is de-duplicated. The one-Primary / 20-Secondary / 20-notifications figures are unchanged.
+- **Q26** retitled and rewritten; substance unchanged — the 72-hour counter still runs 48 hours from the Early Warning rather than from awareness, so a notification can show as overdue early.
+- **Q16 table**: 43 fields, same numbering, none added or removed. The status legend moved out of its own line and into every cell.
+- **Q14**: the doubled "inin" recorded that morning is fixed. Q5 and Q7 make the 11 December 2027 steward date explicit; Q19 corrects "as per Article (14)" to "Art. 14".
 
-### Substantive changes to existing questions
+**Watch**
 
-- **Q8** — the sentence "In general, the national CSIRT to which the notification should be submitted is primarily determined by the manufacturer's main location of establishment, in accordance with **Article 15(7)**" is replaced by "Manufacturers and, once applicable, open-source software stewards are responsible for identifying the relevant CSIRT designated as coordinator in accordance with **Art. 14(7)** of the CRA and submitting their notification accordingly." The article reference was **wrong before and is now right** — 15(7) does not concern the choice of CSIRT. The answer also now points to "User Manuals" alongside the Glossary, a document set not otherwise linked from these pages.
-- **Q18** — new consequence, stated for the first time: "If the wrong CDaC is selected, **the notification may be invalidated and will need to be resubmitted to the correct CDaC**." The answer also now opens by putting the identification duty on the manufacturer, and uses the abbreviation "CDaC" throughout.
-- **Q9** — besides the URL: the sentence duplicated verbatim on the live page last week ("No additional corporate entity authentication mechanism is currently used by the SRP.") has been **de-duplicated**; "ARs … should use their EU Login accounts" became "their **own** EU Login accounts". The one-Primary/20-Secondary and 20-notifications-before-validation figures are unchanged.
-- **Q4** — launch scope rewritten. Was "On the 11th of September the SRP will ONLY allow the submission of notifications fulfilling Art 14 and **24(x)**" (an unfilled placeholder). Now: "At launch, the platform will support only mandatory reporting of actively exploited vulnerabilities and severe incidents under Art. 14 of the CRA. The corresponding reporting obligations for open-source software stewards under **Art. 24(3)** will apply from **11 December 2027**, in accordance with Art. 71(2) of the CRA." Voluntary reporting under Art. 15 "will not be available at launch and will be introduced in a future phase".
-- **Q22** — the pre-launch testing account is expanded and, for the first time, names who took part: "several user, security and technical testing exercises with selected stakeholders, including **national CSIRTs, the CRA Expert Group, selected manufacturers and other users**. Their feedback helped strengthen the platform's functionality, security and usability. **ENISA does not currently foresee additional testing before go-live.**" Q23 gains the matching "user, security and technical" wording.
-- **Q24** — gains a first sentence: "**At launch, the platform will be available in English only.**" The rest is unchanged.
-- **Q26** — retitled ("How are the 72hrs and Final Report counter calculated" → "How are the 72-hour and Final Report counters calculated?") and rewritten throughout. Substance is unchanged: the 72-hour counter still counts 48 hours from the Early Warning rather than from awareness, so a notification can show as overdue early. New typo: "72-hour **Sever** Incident Notification".
-- **Q5, Q7** — "open-source software stewards … starting from 11 December 2027" made explicit; "and, once applicable," inserted where stewards are named.
-- **Q11, Q15** — "24hrs / 72hrs / final report" replaced by "24-hour Early Warning / 72-hour Notification / Final Report" throughout; Q15's cross-reference is now "FAQ 16" rather than "the next section of this FAQ (Q16)".
-- **Q14** — the doubled "inin" recorded on 2026-09-07 is **fixed** ("inin section 5.5" → ", in Section 5.5").
-- **Q19** — "as per Article (14)" corrected to "Art. 14"; "European Vulnerability Database" gains "(EUVD)"; the AEV/SI wording is otherwise unchanged. It still carries no "[UPDATED]" tag.
-- **Q21** — "In **particularly** exceptional circumstances (PEC)" became "In **particular** exceptional circumstances (PEC)", while the question's own title still says "particularly exceptional circumstances". The Glossary uses "Particular Exceptional Circumstances". "delegated act" is now "Delegated Act".
-- **Site-wide**: "Article" is now written "Art." in almost every occurrence.
+- **The eight Glossary links in the FAQ answers are broken**: they point at `.../cra-srp-glossary`, which returns 403. The page moved to `.../cra-srp-glossary2` and the main page's link was updated; the FAQ's were not. Reproduced as they stand.
+- **Q21 changes the PEC term** — "In **particularly** exceptional circumstances" → "In **particular** exceptional circumstances" — while the question's own title still says "particularly". The Glossary says "Particular Exceptional Circumstances".
+- **`I39.`** is still capitalised in the Q16 table where every other SI row uses a lowercase prefix.
 
-### Q16 data-field table
+**Editorial**
 
-43 fields, same numbering, **no field added or removed**. Changes:
+"Article" is now written "Art." almost throughout, and "24hrs / 72hrs / final report" became "24-hour Early Warning / 72-hour Notification / Final Report", alongside a handful of capitalisation shifts. Three new errors, verbatim below: "72-hour **Sever** Incident Notification" (Q26), "measures that **user** can take" (Q16 field 22), "it explains **that** the field means" (Q16 intro).
 
-- The status legend is no longer a separate line; each cell now spells out its status in full ("By default copied from previous step, or updated", "Automated (not visible for the submitter)", "Required if such information available"). Captured here in the abbreviated form used since 2026-09-07.
-- Field 12 "Product version" → "Product **V**ersion"; field 10's "(Concerned CSIRT)" → "(concerned CSIRT)".
-- Field 22 "Corrective or mitigating measures that **users** can take" → "that **user** can take" — a new grammatical error, not a scope change.
-- Group heading "Severe Incident (SI)" → "Severe Incident**s** (SI)".
-- The intro sentence gained a typo: "it explains **that** the field means" (should be "what").
-- **`I39.` is still capitalised** where every other SI row uses a lowercase prefix — unchanged since 2026-09-07.
+**Unchanged**
 
-### Broken Glossary links
+The three guidance subpages (3/08, 3/08, 14/08/2026) and the CSIRT list ("Updated: 04/09/2026", 27 countries), word for word. The main page apart from its Glossary link, which now points at `.../cra-srp-glossary2`. No new page in the navigation.
 
-All **eight** "SRP Glossary" links in the FAQ answers point to `.../cra-srp-glossary`, which returns **HTTP 403**. The Glossary moved to `.../cra-srp-glossary2` (verified 200 the same day); the main SRP page's link was updated, the FAQ's links were not. Reproduced as they stand.
+### 2026-09-07 morning (vs. 2026-08-31)
 
-### Unchanged
+The largest change since monitoring began: the FAQ rewritten end to end, and two new pages found through the site navigation. Page date "Updated: 03 August 2026" → **"04 September 2026"**.
 
-The three guidance subpages (dates 3/08, 3/08 and 14/08/2026) and the List of CSIRTs Designated as Coordinators (Updated: 04/09/2026, 27 countries) are re-verified word-for-word unchanged. The main SRP page is unchanged apart from its Glossary link, which now points at `cra-srp-glossary2`. No new page appeared in the navigation.
+**New**
 
-## Change log (2026-09-07 morning check, vs. 2026-08-31 baseline)
+- **CRA SRP Glossary** (Version 1.1, 05/09/2026) — the authoritative field-by-field reference: meaning, how to complete, example, format and per-stage status. Its numbering does **not** match the FAQ's Q16 table: 18 common fields (the five automated ones are not itemised), v19–v29 for AEV, i30–i38 for SI. Full detail in `enisa-srp-glossary-baseline.md`.
+- **List of CSIRTs Designated as Coordinators** ("Updated: 04/09/2026") — contact links for the coordinator in each of the 27 Member States. Section below.
+- **Three numbered questions**: Q24 languages, Q25 platform unavailable, Q26 counters. A fourth appears **without a number** at the end, tagged [NEW]: "Can I report vulnerabilities even if they are not actively exploited?" — reproduced as-is. Count 23 → 27.
+- **A closing note** carrying the helpdesk address `cra-srp-helpdesk[@]enisa.europa.eu` — **moved here from the main page**, where it no longer appears.
+- Main page gains a **"Get Started"** heading grouping the Factsheet, the FAQ and a new Glossary card; the "Content" navigation gains both new pages.
 
-**Major overhaul of the FAQ page, plus two brand-new subpages.** This is the largest change observed since monitoring began. Fetched raw HTML directly for the main page, the FAQ subpage, and (newly discovered via the page navigation) a "CRA SRP Glossary" page and a "List of CSIRTs Designated as Coordinators" page, both now linked from the site navigation and from within the FAQ answers. Also re-fetched the three existing guidance subpages, which are unchanged.
+**Changed**
 
-- **FAQ page-level date bumped**: "Updated: 03 August 2026" → "Updated: 04 September 2026". FAQ intro paragraph fully rewritten (see Intro/FAQ-entries section below) and no longer references "question 10" by number — it now links directly to the Commission's "FAQs on the CRA Implementation" document.
-- **Every FAQ question reworded/expanded** and tagged "[UPDATED]" on the live page — Q1–Q18 and Q20–Q26 all carry the tag; **Q19 does not carry the tag despite its text also having changed** (Manufacturers bullet now cites "as per Article (14)"; Market Surveillance Authorities bullet reworded from "Receive disseminated information" to "Receive information from the CSIRT Designated as Coordinator") — an ENISA tagging inconsistency, noted rather than corrected.
-- **Three new numbered questions added**: Q24 "In which languages will the SRP be available?", Q25 "What should I do if the SRP is temporarily unavailable?", Q26 "How are the 72hrs and Final Report counter calculated". A further question appears **without a number** at the very end of the list, tagged "[NEW]": "Can I report vulnerabilities even if they are not actively exploited?" (reproduced as-is; likely a numbering glitch on ENISA's side). FAQ entry count goes from 23 to 27.
-- **New closing note added**: "You did not find above the answer to your question? For matters not covered by this FAQ, nor by available guidance pages, please contact: cra-srp-helpdesk[@]enisa.europa.eu" — this is where the helpdesk contact now lives; it has been **removed from the main SRP page** (previously listed in the "User guidance" section footer there).
-- **Q16 data-field table restructured and greatly expanded**: common fields grow from 12 to 23 (new: Summary, Product version, Product Type/Class/Category split out, End of support indicator, Component name, Mitigating measure expected shortly, User Action able to reduce impact, Attack vector, etc.); AEV-specific fields go from 14 to 11 (v24–v34, some folded into the now-larger common set, two new PEC-related fields added: "Particular Exceptional Circumstances (PEC)" and "PEC Delay Reason"); SI-specific fields go from 13 to 9 (i35–i43). New total: 43 fields (was 39). The FAQ answer itself now defers the authoritative, fully-explained version of this table to the new **SRP Glossary** page (see below) and reproduces only the abbreviated table.
-- **New page: CRA SRP Glossary** (`glossary_url`, version 1.1, last update: 05/09/2026) — the authoritative field-by-field reference (field meaning, how to complete it, an example, expected format, per-stage status), linked repeatedly throughout the rewritten FAQ answers (Q8, Q11, Q15, Q16, Q17). Its own field numbering is **not consistent with the FAQ's Q16 table**: the Glossary numbers only 18 common fields (it doesn't itemize the 5 automated/system fields — Notification level, the three "Reporting time" fields, Reporter — that the FAQ table lists explicitly), 11 AEV fields (v19–v29, same substance as the FAQ's v24–v34) and 9 SI fields (i30–i38, same substance as the FAQ's i35–i43). Two footnotes: "[1] This field will be available in the next release of the Platform" (on the AEV awareness-date field) and "[2] In the current release this field is named: 'Date/time the incident was detected'" (on the SI awareness-date field). See dedicated section below.
-- **New page: List of CSIRTs Designated as Coordinators** (`csirt_list_url`, "Updated: 04/09/2026") — contact links for the national CSIRT designated as coordinator in each of the 27 EU Member States. See dedicated section below.
-- **Main page navigation updated**: the "Content" subtopics list (shown on the main page, the FAQ page, and all guidance subpages) now includes the two new pages ("List of CSIRTs Designated as Coordinators", "CRA SRP Glossary") alongside the FAQ and the three guidance documents.
-- **Main page gets a new "Get Started" section heading** grouping the Factsheet, "Frequently asked questions" and a new "CRA SRP Glossary" resource card ("Consult the fields to be filled in during each stage of notification, their meaning and format" / "View the SRP Glossary"). The intro paragraphs, the Factsheet section text, and the "User guidance" section with its three guidance documents (same titles, same dates: 3/08/2026, 3/08/2026, 14/08/2026) are otherwise unchanged.
-- **Factsheet download link changed cosmetically**: "It can be downloaded here" is no longer itself a hyperlink (previously linked to `/media/57221`); the "Download the SRP factsheet" button now links directly to the PDF at `/sites/default/files/2026-07/ENISA_CRA_SRP_Factsheet_v1.0_0.pdf`. Same document, no content change.
-- **Q9 registration process substantially expanded**: now specifies Multi-Factor Authentication (MFA) is required for EU Login, that there can be only one Primary AR per manufacturer but "up to 20 Secondary ARs" (a new specific number), and that "Non-validated ARs may submit up to 20 notifications for one manufacturer before validation becomes mandatory" (also new). Contains a duplicated sentence on the live page ("No additional corporate entity authentication mechanism is currently used by the SRP." appears twice back-to-back) — reproduced verbatim, not corrected.
-- **Q4 gains an explicit go-live scope statement**: "On the 11th of September the platform will ONLY allow the submission of mandatory reporting fulfilling Art 14 and 24(x). Voluntary reporting per art15 will not be possible."
-- **Q14 has a typo**: "Please refer to the European Commission's FAQ inin particular section 5.4..." (doubled "in"), reproduced verbatim.
-- **Guidance subpages verified unchanged** in substance and "Last updated" dates (3/08/2026, 3/08/2026, 14/08/2026 respectively). One cosmetic-only item spotted on the AR User Registration page: "manufacturer adress" (missing a "d") where the field had previously read "manufacturer address" — reproduced verbatim, not corrected. The registration pre-conditions bullet also gained a parenthetical "(please check the URL above)" after "You already have an active EU Login account."
+- **Every question reworded or expanded.** Q9 is the substantive one: MFA required for EU Login, **one Primary AR and up to 20 Secondary ARs**, and **up to 20 notifications before validation becomes mandatory** — all three numbers new.
+- **Q16 restructured and expanded**: common fields 12 → 23, AEV 14 → 11 (two new PEC fields), SI 13 → 9. Total 39 → **43**. The answer now defers to the Glossary and reproduces only the abbreviated table.
+- **Q4** gains a go-live scope statement: at launch only mandatory reporting "fulfilling Art 14 and 24(x)", no voluntary reporting under Art. 15.
+- The intro no longer refers to "question 10" by number; it links the Commission's "FAQs on the CRA Implementation" directly.
+
+**Watch**
+
+- **Q19 changed but carries no "[UPDATED]" tag**, unlike every other question — an ENISA tagging inconsistency. Its Market Surveillance bullet moved from "Receive disseminated information" to "Receive information from the CSIRT Designated as Coordinator".
+- **A sentence is duplicated verbatim in Q9**: "No additional corporate entity authentication mechanism is currently used by the SRP." twice, back to back.
+
+**Editorial**
+
+Two typos reproduced as they stand: "inin particular section 5.4" in Q14, and "manufacturer adress" on the AR User Registration page. On the main page the Factsheet's inline "here" is no longer a hyperlink and the download button points straight at the PDF — same document.
+
+**Unchanged**
+
+The three guidance subpages in substance and date (3/08, 3/08, 14/08/2026), apart from the typo above and a new parenthetical "(please check the URL above)" in the registration pre-conditions.
 
 ## Intro
 
