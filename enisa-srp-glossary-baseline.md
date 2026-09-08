@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.1 (page footer: last update 05/09/2026)"
-retrieved: 2026-09-07 (fetched 22:02 UTC)
+retrieved: 2026-09-08 (fetched 00:14 UTC)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -23,7 +23,7 @@ status: >-
   consistent with a move, and that is what happened. Content verified identical
   after the move: 38 fields, same numbering, no name changed. Re-verify the URL on
   every future check, not just the status code.
-last_check: 2026-09-07
+last_check: 2026-09-08
 last_change: 2026-09-07
 note: >-
   One row per field, one table per group (Common / AEV / SI), matching the live page's own
@@ -38,6 +38,26 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-08 (00:14 UTC check, vs. the 2026-09-07 22:0x UTC baseline) — unchanged, one baseline correction
+
+Fetched raw HTML at the current address (`cra-srp-glossary2`), HTTP 200. Footer still reads
+Version 1.1, last update 05/09/2026. **All 38 fields diffed row-by-row against this baseline:
+no wording, numbering, or status changed anywhere**, including every previously-noted defect
+(field 11's contradictory meaning and "is doesn't" typo, v26's doubled full stop, v29's missing
+space, i36's and i37's broken grammar, the i32/v-side "or" vs the FAQ's "and" discrepancy, and
+v28's own "one of the three" / "at least one of the three" inconsistency) — all still present,
+unchanged, exactly as recorded.
+
+**One correction to this baseline itself, not to ENISA's page**: the v28 PEC Delay Reason row's
+Example cell was missing its second of three grounds, showing a stray "N/A" in its place
+(`...vulnerability; or<br>N/A<br>that any immediate further dissemination...`). The live page's
+markup makes clear why: the three grounds sit in three separate table rows under one `rowspan`
+Example column, and the middle row's own text was dropped in favour of an adjacent status
+column's "N/A" during an earlier capture. The live content — confirmed unchanged since 2026-09-07
+by the meaning/how-to-complete cells matching this baseline exactly — has always read as three
+full grounds with no placeholder. Corrected the row to the complete three-item list; nothing about
+ENISA's page changed today, only the fidelity of this record.
 
 ### 2026-09-07 (22:0x UTC) — content edited without a version bump
 
@@ -168,7 +188,7 @@ cross-reference.
 | v25 | Date/time when you become aware of the Actively Exploited Vulnerability [1] | AEV | Date and time when the manufacturer or another relevant party first detected the vulnerability. | For example, enter the date and time when the vulnerability was first detected. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description. | 2026-08-24 09:15 UTC | Date and time | Required | copied-or-updated | copied-or-updated |
 | v26 | Malicious actor that has exploited/is exploiting the vulnerability | AEV | Available information about the actor that exploited or is exploiting the vulnerability, without requiring attribution where information is unavailable. | You may enter confirmed information about the malicious actor or observed activity. If attribution is unconfirmed, describe the observed indicators and state that attribution is unknown (max. 100 characters).. | Unknown actor; observed infrastructure includes the indicators listed in Reference REF-2026-18. | Free text | Optional | Optional | Required if such information available |
 | v27 | Particular Exceptional Circumstances (PEC) | AEV | Selection indicating that one or more legally specified circumstances in the third subparagraph of Article 16 (2) of CRA justify withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination. | You may select the applicable exceptional circumstance only when the corresponding legal condition is met. | — | Select applicable PEC option(s) | N/A | Optional | N/A |
-| v28 | PEC Delay Reason | AEV | You may select one of the three of the legally specified circumstances justifying withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination. | Support the selection with specific facts in PEC Delay Reason and indicate the requested dissemination delay. You may select at least one of the three options. | You may choose: the notified vulnerability has been actively exploited by a malicious actor and, according to the information available, it has been exploited in no other Member State than the one of the CSIRT designated as coordinator to which the manufacturer has notified the vulnerability; or<br>N/A<br>that any immediate further dissemination of the notified vulnerability would likely result in the supply of information the disclosure of which would be contrary to the essential interests of that Member State; or | Select applicable check box | N/A | Optional | N/A |
+| v28 | PEC Delay Reason | AEV | You may select one of the three of the legally specified circumstances justifying withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination. | Support the selection with specific facts in PEC Delay Reason and indicate the requested dissemination delay. You may select at least one of the three options. | You may choose: the notified vulnerability has been actively exploited by a malicious actor and, according to the information available, it has been exploited in no other Member State than the one of the CSIRT designated as coordinator to which the manufacturer has notified the vulnerability; or<br>that any immediate further dissemination of the notified vulnerability would likely result in the supply of information the disclosure of which would be contrary to the essential interests of that Member State; or<br>that the notified vulnerability poses an imminent high cybersecurity risk stemming from the further dissemination; | Select applicable check box | N/A | Optional | N/A |
 | v29 | Please provide further information | AEV | Description of anything that should be helpful for CSIRT Designated as Coordinator (CDaC)taking *(missing space on the live page, new on 2026-09-07)* their decision. | You may provide additional information(s). | We consider it very important for national security. | Free text | Optional | Optional | copied-or-updated |
 
 ## Severe Incident (SI) fields
@@ -206,3 +226,5 @@ cross-reference.
   live tables row-by-row against the 38 fields captured here.
 
 - 2026-09-07 (second check): page fetched at its new address, HTTP 200. Content edited without a version bump — footer still reads "Version 1.1, last update: 05/09/2026". 29 of 38 rows reworded ("How to complete" recast as "For example, …"), v28 PEC Delay Reason substantively changed and internally inconsistent, four new typos, field 11 still contradictory. Tables above updated; see the change log.
+
+- 2026-09-08: page fetched at `cra-srp-glossary2`, HTTP 200. All 38 fields re-verified row-by-row against this baseline — no change anywhere, footer still "Version 1.1, last update: 05/09/2026". Corrected a likely capture artifact in v28's Example cell (a stray "N/A" standing in for the second of three PEC grounds, traced to the live page's own 3-row rowspan table structure); see the change log entry at the top. `last_check` and `retrieved` updated to today; `last_change` left at 2026-09-07 since ENISA's content did not change.
