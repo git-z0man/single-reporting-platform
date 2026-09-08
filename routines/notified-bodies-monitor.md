@@ -6,26 +6,25 @@
 - **Updatable by an agent**: **no** — created via `http_api`, so the prompt below
   must be pasted into the Routines UI by hand.
 
-> **Not yet live, and it needs more than a paste.** The Routine's configured
-> source and outcome repository is still `git-z0man/notified-bodies`:
+> **Ready to paste — the repository access is in place.** On 2026-09-08 both
+> repositories were added to this Routine's session config, as sources and as
+> outcomes:
 >
 > ```
-> sources:  https://github.com/git-z0man/notified-bodies
-> outcomes: git-z0man/notified-bodies, branch claude/youthful-gauss
+> sources:  git-z0man/notified-bodies, git-z0man/single-reporting-platform
+> outcomes: git-z0man/notified-bodies      → claude/fervent-hamilton
+>           git-z0man/single-reporting-platform → claude/nifty-pasteur
 > ```
 >
-> That is platform-side session config, not part of the prompt, and no agent
-> tool can change it — `create_trigger` and `update_trigger` both refuse to set
-> `sources`/`outcomes`. Until it points at `git-z0man/single-reporting-platform`,
-> pasting the prompt below only makes the routine fail: it would look for
-> `notified-bodies-baseline.md` in the wrong repository and its push would be
-> rejected.
+> That is what the prompt below needs. **It is still not live**: the Routine was
+> created via `http_api`, so no agent can update its prompt — paste it into the
+> Routines UI. Until then the old prompt keeps running and keeps writing to
+> `git-z0man/notified-bodies`, so nothing goes unmonitored.
 >
-> So this file is the destination state, not the running one. See
-> `routines/README.md` → "Moving a routine to another repository".
->
-> The old repository keeps running the old prompt in the meantime, so nothing
-> stops being monitored while this is pending.
+> Because two repositories are now checked out, section 0 below picks the right
+> working tree by its remote rather than assuming there is only one. The old
+> repository stays attached but is not written to any more; removing it from the
+> config later is tidying, not a fix.
 
 ---
 
@@ -35,18 +34,30 @@ Repository: git-z0man/single-reporting-platform (public)
 
 ## 0. Repository and branch
 
-If the repository is already checked out in the working directory, use it. Otherwise clone it:
+**Two repositories are checked out in this session.** Work in
+`git-z0man/single-reporting-platform` and write only there. Do not update
+`git-z0man/notified-bodies` any more — its files are the old location of this
+monitor and are no longer maintained.
+
+Find the right working tree by its remote rather than by guessing a path:
+
+    for d in */ .; do
+      git -C "$d" remote get-url origin 2>/dev/null | grep -q single-reporting-platform && cd "$d" && break
+    done
+    git remote -v   # confirm before doing anything else
+
+If it is not checked out at all, clone it:
 
     git clone https://github.com/git-z0man/single-reporting-platform && cd single-reporting-platform
 
 Read `CLAUDE.md` first — it records the conventions for this routine.
 
-Do NOT hard-code a state branch name. The platform assigns this Routine's outcome branch a fresh name whenever the Routine is edited, so any name written here goes stale.
+Do NOT hard-code a state branch name. The platform assigns each outcome branch a fresh name whenever the Routine is edited, so any name written here goes stale.
 
-- If the session already has a branch checked out that is not `main`, stay on it and refresh it: `git fetch origin main && git reset --hard origin/main`.
+- If this checkout is already on a branch that is not `main`, stay on it and refresh it: `git fetch origin main && git reset --hard origin/main`.
 - Otherwise create one from main: `git fetch origin main && git checkout -B notified-bodies-monitor origin/main`.
 
-Never push to `main`. Never create a new per-run branch when the session already gave you one.
+Never push to `main`. Never create a new per-run branch when the session already gave you one. All git commands run inside this checkout — a `git push` from the wrong directory silently updates the wrong repository.
 
 ## 1. Run the two queries
 
@@ -93,7 +104,7 @@ Only when the set of bodies is unchanged and the canary is healthy. Read `last_c
 
 Only if something actually changed. Commit with a message naming what changed. Push with `git push -u origin HEAD`, retrying up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network errors only.
 
-If the push fails for lack of credentials (403), do NOT try to route around it — no workarounds, no alternate remotes, no GitHub MCP fallback. Leave the commit on the local branch and report that the push failed, with the exact error AND the branch name you pushed to, so a mismatch with this Routine's configured repository outcome can be spotted. A 403 here most likely means the Routine still points at the old `notified-bodies` repository.
+If the push fails for lack of credentials (403), do NOT try to route around it — no workarounds, no alternate remotes, no GitHub MCP fallback. Leave the commit on the local branch and report that the push failed, with the exact error AND the branch name you pushed to, so a mismatch with this Routine's configured repository outcome can be spotted. A 403 here most likely means you are pushing from the wrong checkout — confirm `git remote -v` names `single-reporting-platform`.
 
 Otherwise open a pull request as a draft, then mark it ready for review and merge it yourself immediately. This is the standing convention recorded in CLAUDE.md. It applies only to PRs that touch `notified-bodies-baseline.md` and/or `notified-bodies/` alone. If your change touches anything else, leave that PR open, do not merge it, and say so.
 

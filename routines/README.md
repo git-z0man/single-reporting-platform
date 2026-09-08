@@ -141,31 +141,39 @@ disappear, which is expected and harmless.
 
 ## Moving a routine to another repository
 
-A Routine's **prompt** says what to do. Which repository it may read and write
+A Routine's **prompt** says what to do. Which repositories it may read and write
 is separate: platform-side session config, `sources` and `outcomes`.
 
+**No agent tool can change that.** `create_trigger` does not accept `sources` or
+`outcomes` at all, and `update_trigger` reaches only name, schedule, enabled
+state, model and prompt. A repository move is therefore never a prompt edit, and
+pasting a repointed prompt before the config moves makes things worse rather
+than better: the run looks for files that are not in its checkout and its push
+comes back 403.
+
+The order that works is **config first, prompt second**.
+
+`CRA notified body alert` went through this on 2026-09-08. The config now lists
+both repositories, as sources and as outcomes:
+
 ```
-sources:  https://github.com/git-z0man/notified-bodies
-outcomes: git-z0man/notified-bodies, branch claude/youthful-gauss
+sources:  git-z0man/notified-bodies, git-z0man/single-reporting-platform
+outcomes: git-z0man/notified-bodies      → claude/fervent-hamilton
+          git-z0man/single-reporting-platform → claude/nifty-pasteur
 ```
 
-**No agent tool can change that.** `create_trigger` does not accept `sources`
-or `outcomes` at all, and `update_trigger` reaches only name, schedule, enabled
-state, model and prompt — and refuses this Routine outright, since it was
-created via `http_api`.
+Two consequences worth knowing before writing a prompt for such a Routine:
 
-So moving a monitor between repositories is not a prompt edit. Pasting a
-repointed prompt without changing the config makes it worse, not better: the
-run looks for files that are not in its checkout and its push is rejected with
-a 403. The prompts here say so at the top when they are in that state, and
-their section on push failures calls out a 403 as the likely sign of it.
+- **The session checks out more than one repository**, so "the repository" is
+  ambiguous and a bare `git push` can update the wrong one. The prompt has to
+  select its working tree explicitly — `notified-bodies-monitor.md` does it by
+  matching `git remote get-url origin`, not by assuming a path.
+- **Each outcome gets its own branch name**, reassigned whenever the Routine is
+  edited. Prompts stay branch-agnostic and push with `git push -u origin HEAD`
+  from inside the right checkout.
 
-`notified-bodies-monitor.md` is in exactly that state now: the prompt is
-written for this repository, the Routine still points at
-`git-z0man/notified-bodies`. Until someone repoints it — in the Routines UI if
-it is editable there, otherwise by recreating the Routine against this
-repository — the old repository keeps running the old prompt, so nothing goes
-unmonitored in the meantime.
+Leaving the old repository attached does no harm once the prompt stops writing
+to it. Removing it later is tidying, not a fix.
 
 ## Keeping a prompt in sync
 
@@ -197,3 +205,7 @@ time the Routine is edited (`claude/youthful-fermat` became
 `claude/trusting-hawking` after a single edit). None of these prompts hard-code
 a branch: they use whatever branch the session provides and push with
 `git push -u origin HEAD`.
+
+A Routine with two outcomes gets one branch per repository, each reassigned on
+the same schedule — see "Moving a routine to another repository" above. The
+branch is not the risk there; the working directory is.
