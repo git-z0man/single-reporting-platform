@@ -173,15 +173,74 @@
           <li class="step"><span class="step-num">11</span><strong>Multiple countries.</strong> The same account can be assigned to manufacturers in other Member States by choosing a different national entry point (example: Greece). Validation is then performed by that country’s CSIRT.</li>
         </ol>
 
-        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">From the platform</span></div>
-        <div class="imggrid">
-          <figure><img class="shot" src="img/enisa/reg-01-role-select.png" alt="Role selection screen with Assigned Representative among the options"><figcaption>Selecting the role. Hovering the “i” explains each one.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/reg-02-csirt-select.png" alt="Drop-down for choosing the CSIRT designated as coordinator"><figcaption>Choosing the CSIRT designated as coordinator.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/reg-03-personal-details.png" alt="Form showing pre-filled first name, last name, email and legal name"><figcaption>Personal details, pre-filled from EU Login.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/reg-04-manufacturer-details.png" alt="Form for manufacturer name, address and additional information"><figcaption>Manufacturer details. Name and additional information are mandatory.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/reg-05-invited-personal-details.png" alt="Personal details form as seen by an invited Secondary AR"><figcaption>The same step for an invited Secondary AR.</figcaption></figure>
-        </div>
-        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-user-registration" target="_blank" rel="noopener">CRA SRP guidance — AR User registration</a>, retrieved 7 September 2026. Reproduced with acknowledgement per the ENISA Legal Notice.</p>
+        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">Screen by screen</span><span class="seclabel-hint">fields as the screen labels them</span></div>
+        <ol class="walk">
+          <li class="wstep" id="step-reg-role">
+            <div class="wstep-head"><span class="wstep-num">1</span><h3>Choose your role</h3></div>
+            <figure><img class="shot" src="img/enisa/reg-01-role-select.png" alt="SRP landing screen with the role choice, Assigned Representative among the options"><figcaption>The landing screen. Hovering the &ldquo;i&rdquo; explains each role.</figcaption></figure>
+            <p class="wstep-lede">Two choices stand between you and the form. This is the first: pick <strong>Assigned Representative</strong>.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">Role</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Assigned Representative. Not <em>authorised representative</em> in the Art.&nbsp;3(13) sense &mdash; see the warning above.</td></tr>
+              </tbody></table>
+            </div>
+            <!-- OWN-NOTE reg-role: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-reg-csirt">
+            <div class="wstep-head"><span class="wstep-num">2</span><h3>Choose the CSIRT designated as coordinator</h3></div>
+            <figure><img class="shot" src="img/enisa/reg-02-csirt-select.png" alt="Drop-down listing the CSIRTs designated as coordinators"><figcaption>The CDaC drop-down. This choice is yours to get right.</figcaption></figure>
+            <p class="wstep-lede">The second choice, and the consequential one: it decides who receives everything you later submit.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">CSIRT designated as coordinator</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Normally the Member State of your main establishment in the EU (Art.&nbsp;14(7) CRA). Since 7&nbsp;September&nbsp;2026 ENISA states that a notification sent to the wrong one <strong>may be invalidated and have to be resubmitted</strong>.</td></tr>
+              </tbody></table>
+            </div>
+            <!-- OWN-NOTE reg-csirt: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-reg-personal">
+            <div class="wstep-head"><span class="wstep-num">3</span><h3>Confirm your personal details</h3></div>
+            <figure><img class="shot" src="img/enisa/reg-03-personal-details.png" alt="Registration step 1 with First Name, Last Name, Email and Legal name pre-filled from EU Login"><figcaption>Step&nbsp;1 of&nbsp;2. Pre-filled from EU Login &mdash; you are confirming, not typing.</figcaption></figure>
+            <p class="wstep-lede">After the EU Login sign-in and the legal agreement. Everything here arrives filled in.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">First Name</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">From your EU Login account.</td></tr>
+              <tr><td class="c-field">Last Name</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">From your EU Login account.</td></tr>
+              <tr><td class="c-field">Email</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">From your EU Login account. This is where invitations and alerts go.</td></tr>
+              <tr><td class="c-field">Legal name (for legal entities)</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">The screen&rsquo;s own parenthesis is the only explanation ENISA gives of this field &mdash; it appears in no glossary entry. Read it as: the registered name of the entity you act for, where you act for one.</td></tr>
+              </tbody></table>
+            </div>
+            <!-- OWN-NOTE reg-personal: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-reg-manufacturer">
+            <div class="wstep-head"><span class="wstep-num">4</span><h3>Enter the manufacturer details</h3></div>
+            <figure><img class="shot" src="img/enisa/reg-04-manufacturer-details.png" alt="Registration step 2 with Name, a greyed-out CSIRT field and Additional Information"><figcaption>Step&nbsp;2 of&nbsp;2. Two required fields, and the CDaC shown read-only.</figcaption></figure>
+            <p class="wstep-lede">The manufacturer you will report for. Omitting either required field returns an error and leaves &ldquo;Continue&rdquo; disabled.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">Name</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The manufacturer&rsquo;s name.</td></tr>
+              <tr><td class="c-field">CSIRT Designated as Coordinator (CDaC)</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">Greyed out &mdash; carried over from step&nbsp;2 above, not editable here.</td></tr>
+              <tr><td class="c-field">Additional Information</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Required alongside the name. Neither the guidance nor the glossary says what belongs in it.</td></tr>
+              </tbody></table>
+            </div>
+            <div class="callout amber"><p><strong class="lead-in">ENISA&rsquo;s text and ENISA&rsquo;s screenshot disagree.</strong> The registration guidance lists &ldquo;manufacturer name, manufacturer adress, additional information&rdquo;; the screenshot above has no address field at all. Reproduced as found &mdash; if an address field exists, it is not on this screen.</p></div>
+            <!-- OWN-NOTE reg-manufacturer: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-reg-invited">
+            <div class="wstep-head"><span class="wstep-num">5</span><h3>If you were invited: accept instead</h3></div>
+            <figure><img class="shot" src="img/enisa/reg-05-invited-personal-details.png" alt="Personal details screen reached through an invitation link"><figcaption>The Secondary AR path: the same details, reached from an invitation e-mail.</figcaption></figure>
+            <p class="wstep-lede">A Secondary AR does not choose a role or a CSIRT. The link in the invitation leads here, the manufacturer details are already filled in, and the last button says &ldquo;Accept invitation&rdquo;. The link expires after <strong>seven days</strong>; after that the record turns to &ldquo;Invitation Expired&rdquo;.</p>
+            <!-- OWN-NOTE reg-invited: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+        </ol>
+        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-user-registration" target="_blank" rel="noopener">CRA SRP guidance — AR User registration</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>.</p>
 
 
       </section>
@@ -227,16 +286,71 @@
           <li class="step"><span class="step-num">6</span><strong>Editable.</strong> After submission, notifications can be adjusted at any time within their current status; the system records all changes.</li>
         </ol>
 
-        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">From the platform</span></div>
-        <div class="imggrid">
-          <figure><img class="shot" src="img/enisa/ew-01-new-notification.png" alt="Dashboard with the Submit new notification action"><figcaption>A new notification, pre-filled with the user type.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/ew-02-early-warning-tab.png" alt="Early Warning tab with its mandatory and optional fields"><figcaption>The Early Warning tab.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/ew-03-select-manufacturer.png" alt="Selection list of approved and pending manufacturers"><figcaption>Selecting a manufacturer — approved or pending validation.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/ew-04-additional-notes.png" alt="Additional notes field on a notification"><figcaption>Additional notes are optional.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/ew-05-before-csirt-validation.png" alt="Notification view before CSIRT validation"><figcaption>Before CSIRT validation.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/ew-06-after-csirt-validation.png" alt="Notification view after CSIRT validation"><figcaption>After CSIRT validation.</figcaption></figure>
-        </div>
-        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7 September 2026. Reproduced with acknowledgement per the ENISA Legal Notice.</p>
+        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">Screen by screen</span><span class="seclabel-hint">fields as the screen labels them</span></div>
+        <ol class="walk">
+          <li class="wstep" id="step-ew-start">
+            <div class="wstep-head"><span class="wstep-num">1</span><h3>Start the notification</h3></div>
+            <figure><img class="shot" src="img/enisa/ew-01-new-notification.png" alt="Dashboard with the Submit new notification button highlighted"><figcaption>The Dashboard. &ldquo;Submit new notification&rdquo; creates the record.</figcaption></figure>
+            <p class="wstep-lede">The Dashboard is also where you come back to everything later. The tabs count what needs attention: <em>All</em>, <em>Overdue</em>, <em>Needs Submission</em>, <em>Corrective Measures Required</em>, <em>Draft</em>, <em>Archive</em>. You can search by ID, manufacturer or title.</p>
+            <!-- OWN-NOTE ew-start: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-ew-fields">
+            <div class="wstep-head"><span class="wstep-num">2</span><h3>Type, title, summary</h3></div>
+            <figure><img class="shot" src="img/enisa/ew-02-early-warning-tab.png" alt="Early Warning tab showing the notification type radio buttons, Title and Summary"><figcaption>The Early Warning tab. The four tabs across the top carry each stage and its due date.</figcaption></figure>
+            <p class="wstep-lede">The type is the first thing you choose and it decides the rest of the form &mdash; vulnerability and incident have different field sets from here on.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">Notification Type (Vulnerability / Incident)<span class="fieldref">1</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">&ldquo;I want to report a Vulnerability&rdquo; or &ldquo;I want to report an Incident&rdquo;. Everything below adapts to this choice.</td></tr>
+              <tr><td class="c-field">Title<span class="fieldref">7</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 255 characters. Enough to recognise the product and the issue; no confidential detail that is not needed for identification.</td></tr>
+              <tr><td class="c-field">Summary<span class="fieldref">8</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters: what happened, the affected product or version, the known impact, the current mitigation status.</td></tr>
+              </tbody></table>
+            </div>
+            <p class="wstep-more">The screenshot is cropped here. The rest of this form &mdash; product, Member States, dates, and the type-specific fields &mdash; is in <a href="#fields">Every field, explained</a>.</p>
+            <!-- OWN-NOTE ew-fields: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-ew-manufacturer">
+            <div class="wstep-head"><span class="wstep-num">3</span><h3>Pick the manufacturer</h3></div>
+            <figure><img class="shot" src="img/enisa/ew-03-select-manufacturer.png" alt="Manufacturer drop-down with an Add Manufacturer link"><figcaption>Approved or still pending validation &mdash; either can be selected.</figcaption></figure>
+            <p class="wstep-lede">A pending validation does not block you here.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">Manufacturer<span class="fieldref">9</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Select one you are associated with, or &ldquo;+ Add Manufacturer&rdquo; to create another association on the spot.</td></tr>
+              </tbody></table>
+            </div>
+            <!-- OWN-NOTE ew-manufacturer: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-ew-submit">
+            <div class="wstep-head"><span class="wstep-num">4</span><h3>Submit, or save a draft</h3></div>
+            <figure><img class="shot" src="img/enisa/ew-05-before-csirt-validation.png" alt="Notification listed on the dashboard before CSIRT validation"><figcaption>Listed on the Dashboard, before the CSIRT has validated the association.</figcaption></figure>
+            <p class="wstep-lede">Submitting stores the notification and makes it available to your CDaC and to ENISA; both are alerted by e-mail. Other CSIRTs see it only after the CDaC disseminates it manually. A draft is visible <strong>only to you</strong> &mdash; not to colleagues sharing the same manufacturer.</p>
+            <!-- OWN-NOTE ew-submit: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-ew-validated">
+            <div class="wstep-head"><span class="wstep-num">5</span><h3>After the CSIRT validates</h3></div>
+            <figure><img class="shot" src="img/enisa/ew-06-after-csirt-validation.png" alt="The same notification after CSIRT validation"><figcaption>The same record once the association has been validated.</figcaption></figure>
+            <p class="wstep-lede">Validation runs in parallel and never blocks a submission. How many notifications you may send before it becomes mandatory is a number ENISA gives twice, differently: the FAQ says <strong>20</strong> for a non-validated AR, while the interface guidance says <strong>10</strong> for an unverified AR who has just added a manufacturer. Both are reproduced here because neither can be shown to supersede the other.</p>
+            <!-- OWN-NOTE ew-validated: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-ew-notes">
+            <div class="wstep-head"><span class="wstep-num">6</span><h3>Additional notes, at any time</h3></div>
+            <figure><img class="shot" src="img/enisa/ew-04-additional-notes.png" alt="Additional Notes tab with the AR Note field and a dissemination warning"><figcaption>The optional fourth tab. Note the banner above the field.</figcaption></figure>
+            <p class="wstep-lede">A free channel to the CDaC, outside the staged fields.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">AR Note</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Free text. The screen carries its own warning: <strong>&ldquo;This field will be shared during the dissemination&rdquo;</strong> &mdash; whatever you write here travels with the notification.</td></tr>
+              </tbody></table>
+            </div>
+            <p class="ownnote"><strong>From practice.</strong> Treat Additional Notes as public to every CSIRT that receives the dissemination &mdash; the banner on the screen says so, and there is no way to send a note only to your own CDaC. Anything you would not want in fifteen national inboxes belongs in a direct call instead.</p>
+            <!-- OWN-NOTE ew-notes: replace the example above, or delete it -->
+          </li>
+        </ol>
+        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>.</p>
 
 
       </section>
@@ -275,26 +389,71 @@
         <div class="seclabel proc"><span class="seclabel-bar"></span><span class="seclabel-text">Procedure</span></div>
         <ol class="steps">
           <li class="step"><span class="step-num">1</span><strong>Continue the notification.</strong> The 72-hour notification is added in the same way as the Early Warning.</li>
-          <li class="step"><span class="step-num">2</span><strong>Non-dissemination (optional).</strong> The manufacturer can state reasons against forwarding to other national CSIRTs (Particularly Exceptional Circumstances, PEC).</li>
+          <li class="step"><span class="step-num">2</span><strong>Non-dissemination (optional, vulnerabilities only).</strong> For an actively exploited vulnerability &mdash; not for an incident &mdash; the manufacturer can state reasons against forwarding to other national CSIRTs (Particular Exceptional Circumstances, PEC). See steps&nbsp;3 and&nbsp;4 below.</li>
           <li class="step"><span class="step-num">3</span><strong>CSIRT review.</strong> If reasons are given, the national CSIRT reviews dissemination and may withhold the notification. The legal basis is Delegated Regulation (EU) C(2025) 8407.</li>
           <li class="step"><span class="step-num">4</span><strong>Partial information to ENISA.</strong> Where the manufacturer marks at least one of the conditions of Article 16(2)(a)–(c) CRA, ENISA only receives partial information until the receiving CSIRT discloses the full notification.</li>
         </ol>
 
-        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">From the platform</span></div>
-        <div class="imggrid">
-          <figure><img class="shot" src="img/enisa/n72-01-open-notification.png" alt="Dashboard listing an existing notification to open"><figcaption>Open the existing notification and continue on the 72-hour tab.</figcaption></figure>
-        </div>
-        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7 September 2026. Reproduced with acknowledgement per the ENISA Legal Notice.</p>
+        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">Screen by screen</span><span class="seclabel-hint">fields as the screen labels them</span></div>
+        <ol class="walk">
+          <li class="wstep" id="step-n72-open">
+            <div class="wstep-head"><span class="wstep-num">1</span><h3>Reopen the notification</h3></div>
+            <figure><img class="shot" src="img/enisa/n72-01-open-notification.png" alt="Dashboard listing an existing notification to open"><figcaption>The same record, continued on its 72-hour tab.</figcaption></figure>
+            <p class="wstep-lede">There is no second notification. You open the existing one and move to the next tab.</p>
+            <!-- OWN-NOTE n72-open: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-n72-fields">
+            <div class="wstep-head"><span class="wstep-num">2</span><h3>The fields that become mandatory now</h3></div>
+            <p class="wstep-lede">Everything from the Early Warning is carried over and can be corrected. These are the ones that stop being optional.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">Considered sensitivity of information<span class="fieldref">20</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Free text, not a confidentiality label: name the sensitive element and what premature disclosure would cause.</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures taken<span class="fieldref">21</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What you have already done &mdash; containment, configuration changes, withdrawal, credential rotation, monitoring. Max. 2,000 characters.</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures that user can take<span class="fieldref">22</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What users should do themselves, with the version that fixes it.</td></tr>
+              <tr><td class="c-field">General information<span class="fieldref">v26</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Vulnerability only: the vulnerability and its exploitation.</td></tr>
+              <tr><td class="c-field">General information about nature of incident<span class="fieldref">i36</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only.</td></tr>
+              <tr><td class="c-field">Initial assessment of the incident<span class="fieldref">i43</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only: severity, scope, affected functions or data. Separate what is confirmed from what is still under investigation.</td></tr>
+              </tbody></table>
+            </div>
+            <!-- OWN-NOTE n72-fields: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-pec-toggle">
+            <div class="wstep-head"><span class="wstep-num">3</span><h3>Only for a vulnerability: flag PEC</h3></div>
+            <figure><img class="shot" src="img/enisa/pec-01-toggle.png" alt="The 72-hour form scrolled to Reason for non dissemination with the PEC toggle switched off"><figcaption>Scroll to <em>Reason for non dissemination</em> and toggle the indicator.</figcaption></figure>
+            <p class="wstep-lede">ENISA published a dedicated guidance page for this on 8&nbsp;September&nbsp;2026, and it narrows the scope: <strong>PEC applies only to the 72-hour notification of an actively exploited vulnerability.</strong> Not to incidents, not to the Early Warning, not to the Final Report.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">Malicious actor that has exploited / is exploiting the vulnerability<span class="fieldref">v31</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Visible just above the toggle. The screen states a limit the glossary does not: <strong>max. 100 characters</strong>.</td></tr>
+              <tr><td class="c-field">Particular Exceptional Circumstances (PEC)<span class="fieldref">v32</span></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">A toggle, off by default. Turning it on reveals the reasons below.</td></tr>
+              </tbody></table>
+            </div>
+            <!-- OWN-NOTE pec-toggle: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-pec-reasons">
+            <div class="wstep-head"><span class="wstep-num">4</span><h3>Choose the ground, and say why</h3></div>
+            <figure><img class="shot" src="img/enisa/pec-02-delay-reasons.png" alt="PEC Delay Reason with three checkboxes and a free-text justification field"><figcaption>The three grounds of the third subparagraph of Art.&nbsp;16(2) CRA, as checkboxes.</figcaption></figure>
+            <p class="wstep-lede">Invoking PEC sets the dissemination status to <strong>&ldquo;72h Submitted under PEC&rdquo;</strong>. ENISA then receives only limited information under Art.&nbsp;16(2); the CDaC decides whether to disseminate, and shares the full notification manually.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">PEC Delay Reason<span class="fieldref">v33</span></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Three checkboxes, one per legal ground: exploitation confined to the CDaC&rsquo;s own Member State; dissemination contrary to that Member State&rsquo;s essential interests; imminent high cybersecurity risk from dissemination.</td></tr>
+              <tr><td class="c-field">Please provide further information<span class="fieldref">v34</span></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Justification for the CDaC. The screen states <strong>max. 800 characters</strong> &mdash; a limit that appears nowhere in the glossary.</td></tr>
+              </tbody></table>
+            </div>
+            <div class="callout neutral"><p><strong>Three ENISA spellings, one field.</strong> The guidance page writes &ldquo;PEC Delay <strong>Reson</strong>&rdquo; in its text while the screenshot shows &ldquo;Reason&rdquo;; the platform labels the toggle &ldquo;Particular Exceptional Circumstances(PEC)&rdquo; without a space; the FAQ calls the concept &ldquo;particularly exceptional circumstances&rdquo;. The second checkbox reads &ldquo;essential <strong>intrests</strong>&rdquo; on screen. All reproduced as found.</p></div>
+            <!-- OWN-NOTE pec-reasons: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+        </ol>
+        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>. PEC screens: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-particular-exceptional-circumstances-pec" target="_blank" rel="noopener">CRA SRP guidance — Particular Exceptional Circumstances (PEC)</a>, retrieved 8&nbsp;September&nbsp;2026 — the page appeared that day. Reproduced with acknowledgement per the ENISA Legal Notice.</p>
 
 
         <div class="callout neutral">
-          <p class="lead"><strong>Reasons for non-dissemination (PEC, optional).</strong> Three grounds, from the third subparagraph of Art.&nbsp;16(2) CRA, under which a manufacturer may ask the CSIRT to withhold or delay dissemination:</p>
-          <ul>
-            <li>the vulnerability has been actively exploited by a malicious actor and, on the information available, in no Member State other than that of the CSIRT it was notified to;</li>
-            <li>further dissemination would likely supply information whose disclosure would be contrary to the essential interests of that Member State;</li>
-            <li>the vulnerability poses an imminent high cybersecurity risk stemming from the further dissemination.</li>
-          </ul>
-          <p>Selecting a ground is not enough on its own: ENISA asks you to support it with specific facts in the <em>PEC Delay Reason</em> field and to state the delay you are requesting. Note that ENISA writes <em>Particular</em> Exceptional Circumstances in the platform and the glossary, and <em>particularly</em> exceptional circumstances in the FAQ &mdash; the same thing. Its glossary is currently inconsistent about whether you may select one ground or several.</p>
+          <p><strong>The legal basis, and one thing ENISA has not settled.</strong> Withholding rests on the third subparagraph of Art.&nbsp;16(2) CRA, with the conditions further specified by <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=PI_COM:C(2025)8407" target="_blank" rel="noopener">Delegated Regulation (EU) C(2025)&nbsp;8407</a> of 11&nbsp;December&nbsp;2025. Whether you may invoke <em>one</em> ground or <em>several</em> is genuinely unclear: the glossary&rsquo;s description of the field says &ldquo;one of the three&rdquo; and its completion instruction says &ldquo;at least one of the three&rdquo;. The form shows checkboxes, which suggests several; the guide does not resolve what ENISA has not.</p>
         </div>
 
       </section>
@@ -336,11 +495,35 @@
           <li class="step"><span class="step-num">3</span><strong>Closing.</strong> Once the Final Report is submitted, the notification is closed; subsequent changes are no longer possible (confirmation dialog “Are you sure?”).</li>
         </ol>
 
-        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">From the platform</span></div>
-        <div class="imggrid">
-          <figure><img class="shot" src="img/enisa/fin-01-open-notification.png" alt="Dashboard listing a notification ready for its final report"><figcaption>Open the same notification and complete the Final Report tab.</figcaption></figure>
-        </div>
-        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7 September 2026. Reproduced with acknowledgement per the ENISA Legal Notice.</p>
+        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">Screen by screen</span><span class="seclabel-hint">fields as the screen labels them</span></div>
+        <ol class="walk">
+          <li class="wstep" id="step-fin-open">
+            <div class="wstep-head"><span class="wstep-num">1</span><h3>Reopen it one last time</h3></div>
+            <figure><img class="shot" src="img/enisa/fin-01-open-notification.png" alt="Dashboard listing a notification ready for its final report"><figcaption>The same record again, now on the Final Report tab.</figcaption></figure>
+            <p class="wstep-lede">Once this is submitted the notification closes and nothing further can be changed &mdash; the platform asks &ldquo;Are you sure?&rdquo; first.</p>
+            <!-- OWN-NOTE fin-open: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-fin-fields">
+            <div class="wstep-head"><span class="wstep-num">2</span><h3>The closing fields</h3></div>
+            <p class="wstep-lede">The substance of the report. The two description pairs are separate fields, not a duplicate.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">Date when corrective or mitigating measure has been available<span class="fieldref">v27</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Vulnerability only &mdash; and the date the 14-day deadline runs from.</td></tr>
+              <tr><td class="c-field">Full description of the severity of the vulnerability<span class="fieldref">v28</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters. ENISA calls the incident equivalent &ldquo;Detailed description of the Severity&rdquo;.</td></tr>
+              <tr><td class="c-field">Full description of the impact of the vulnerability<span class="fieldref">v29</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">A separate field from the severity description.</td></tr>
+              <tr><td class="c-field">Malicious actor that has exploited / is exploiting the vulnerability<span class="fieldref">v31</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Mandatory if known. Do not speculate about attribution.</td></tr>
+              <tr><td class="c-field">Applied and ongoing mitigation measures<span class="fieldref">i37</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only. The FAQ writes &ldquo;applied <em>and</em> ongoing&rdquo;, the glossary &ldquo;applied <em>or</em> ongoing&rdquo;.</td></tr>
+              <tr><td class="c-field">Detailed description of the Severity of the incident<span class="fieldref">i38</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only. Max. 4,000 characters.</td></tr>
+              <tr><td class="c-field">Detailed description of the Impact of the incident<span class="fieldref">I39</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only. Separate from severity.</td></tr>
+              <tr><td class="c-field">Type of threat or root cause that is likely to have triggered the incident<span class="fieldref">i40</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only.</td></tr>
+              </tbody></table>
+            </div>
+            <!-- OWN-NOTE fin-fields: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+        </ol>
+        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>.</p>
 
 
       </section>
