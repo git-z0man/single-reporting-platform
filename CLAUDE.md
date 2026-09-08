@@ -2,7 +2,7 @@
 
 ## Routine prompts must be kept in sync with the repository
 
-Each of the three monitors below is driven by a scheduled Routine. What a
+Each of the four monitors below is driven by a scheduled Routine. What a
 Routine executes is its **prompt**, held by the platform — not anything in
 this repository. A copy of each prompt is mirrored under `routines/`, together
 with its trigger ID and whether an agent may update it.
@@ -29,8 +29,13 @@ file. The routine was more thorough than its instructions, and nothing carried
 that forward to the next run.
 
 Note that an agent can only update a Routine it created itself. The ENISA
-monitor was created through the API, so its prompt changes are a manual step
-in the Routines UI; see `routines/README.md`.
+monitor and the notified-bodies monitor were created through the API, so their
+prompt changes are a manual step in the Routines UI; see `routines/README.md`.
+
+Which repositories a Routine may read and write is separate again — session
+config, not prompt — and no agent tool can set it. Moving a monitor to another
+repository is therefore config first, prompt second; the reverse order only
+produces runs that cannot find their files. `routines/README.md` has the detail.
 
 ## How a change log entry is written
 
