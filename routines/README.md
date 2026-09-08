@@ -153,8 +153,9 @@ comes back 403.
 
 The order that works is **config first, prompt second**.
 
-`CRA notified body alert` went through this on 2026-09-08. The config now lists
-both repositories, as sources and as outcomes:
+`CRA notified body alert` went through this on 2026-09-08, in that order:
+config first, then the prompt, which was read back afterwards and matched the
+mirror exactly. The config lists both repositories, as sources and as outcomes:
 
 ```
 sources:  git-z0man/notified-bodies, git-z0man/single-reporting-platform

@@ -6,9 +6,11 @@
 - **Updatable by an agent**: **no** — created via `http_api`, so the prompt below
   must be pasted into the Routines UI by hand.
 
-> **Ready to paste — the repository access is in place.** On 2026-09-08 both
-> repositories were added to this Routine's session config, as sources and as
-> outcomes:
+> **Live since 2026-09-08.** Pasted into the Routines UI and read back from the
+> Routine: 1.0000 word-level match with this file, all four square-bracket
+> placeholders intact, cron `0 7 * * 1-5`, next run 2026-09-09 07:03 UTC.
+>
+> Both repositories are attached to the Routine, as sources and as outcomes:
 >
 > ```
 > sources:  git-z0man/notified-bodies, git-z0man/single-reporting-platform
@@ -16,15 +18,15 @@
 >           git-z0man/single-reporting-platform → claude/nifty-pasteur
 > ```
 >
-> That is what the prompt below needs. **It is still not live**: the Routine was
-> created via `http_api`, so no agent can update its prompt — paste it into the
-> Routines UI. Until then the old prompt keeps running and keeps writing to
-> `git-z0man/notified-bodies`, so nothing goes unmonitored.
+> That is why section 0 picks its working tree by remote instead of assuming
+> there is only one: with two checkouts, a `git push` from the wrong directory
+> updates the wrong repository and reports success. The old repository stays
+> attached but is no longer written to — removing it from the config is tidying,
+> not a fix.
 >
-> Because two repositories are now checked out, section 0 below picks the right
-> working tree by its remote rather than assuming there is only one. The old
-> repository stays attached but is not written to any more; removing it from the
-> config later is tidying, not a fix.
+> An agent cannot update this Routine: it was created via `http_api`, so every
+> future change to this prompt needs the same manual paste. Use square brackets
+> for placeholders — the paste path strips anything that looks like an HTML tag.
 
 ---
 
