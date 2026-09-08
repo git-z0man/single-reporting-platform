@@ -141,15 +141,24 @@ Browse them at
 
 | Comparison | Changes | Page |
 |---|---|---|
-| v1.0 → v1.2 | 11 modified, 1 deleted | [v1.0-v1.2.html](commission-faq/diff/v1.0-v1.2.html) |
+| v1.0 → v1.2 | 12 modified | [v1.0-v1.2.html](commission-faq/diff/v1.0-v1.2.html) |
 | v1.2 → v1.3 | 10 modified, 1 deleted | [v1.2-v1.3.html](commission-faq/diff/v1.2-v1.3.html) |
-| v1.3 → v1.4 | 6 modified, 1 inserted | [v1.3-v1.4.html](commission-faq/diff/v1.3-v1.4.html) |
+| v1.3 → v1.4 | 2 modified, 1 inserted | [v1.3-v1.4.html](commission-faq/diff/v1.3-v1.4.html) |
 
 Each page shows changed passages with surrounding context, with word-level
 highlighting inside modified sentences. The counts above are change *blocks*,
 not individual words; most "modified" blocks in the v1.0 → v1.2 and v1.2 → v1.3
 comparisons are page-number shifts in the table of contents rather than
 substantive edits — the change log above says which ones matter.
+
+`render_diff.py` and `diff_versions.py` normalise a spurious space PDF
+extraction sometimes places before punctuation (e.g. "period ?," in one
+version's extraction, "period? ," in the next) before splitting into
+sentences. Left unnormalised, that space shifts the sentence-split point
+between two renderings of the very same wording and shows up as a false
+modified/inserted/deleted pair — this previously inflated the v1.3 → v1.4
+count to "6 modified, 1 inserted" purely from page-reflow artefacts around
+unchanged sentences.
 
 ### Why not a commercial comparison service
 

@@ -23,6 +23,7 @@ import sys
 
 SENTENCE_SPLIT = re.compile(r"(?<=[.?!:])\s+")
 WHITESPACE = re.compile(r"\s+")
+SPACE_BEFORE_PUNCT = re.compile(r"\s+([.,;:!?)])")
 
 
 def load(path: str) -> list:
@@ -39,6 +40,13 @@ def load(path: str) -> list:
         text = text.replace(src, dst)
 
     text = WHITESPACE.sub(" ", text)
+    # PDF extraction places a spurious space before punctuation inconsistently
+    # between renderings of the same sentence (e.g. "period ?," in one version,
+    # "period? ," in the next). Left alone, that shifts where SENTENCE_SPLIT
+    # breaks the sentence and produces a false "changed" pair. Stripping it
+    # before splitting keeps identical wording aligned regardless of which
+    # version the spurious space landed in.
+    text = SPACE_BEFORE_PUNCT.sub(r"\1", text)
     text = re.sub(r"\.\s*(?:\.\s*){3,}", " ... ", text)
     return [s.strip() for s in SENTENCE_SPLIT.split(text) if s.strip()]
 

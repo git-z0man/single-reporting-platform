@@ -29,6 +29,7 @@ from datetime import date
 
 SENTENCE_SPLIT = re.compile(r"(?<=[.?!:])\s+")
 WHITESPACE = re.compile(r"\s+")
+SPACE_BEFORE_PUNCT = re.compile(r"\s+([.,;:!?)])")
 
 STYLE = """
 :root{
@@ -105,6 +106,10 @@ def load(path):
                      ("–", "-"), ("—", "-"), ("…", "..."), (" ", " ")):
         text = text.replace(src, dst)
     text = WHITESPACE.sub(" ", text)
+    # See diff_versions.py: PDF extraction inconsistently places a spurious
+    # space before punctuation between renderings of the same sentence, which
+    # shifts sentence-split points and produces a false "changed" pair.
+    text = SPACE_BEFORE_PUNCT.sub(r"\1", text)
     text = re.sub(r"\.\s*(?:\.\s*){3,}", " ... ", text)
     return [s.strip() for s in SENTENCE_SPLIT.split(text) if s.strip()]
 
