@@ -99,6 +99,47 @@ Fetches are rate-limited by ENISA: an HTTP 429 or 5xx that survives the retries
 is a failed check, never a content change. Do not diff an error page against a
 baseline, and do not touch the baseline because a fetch failed.
 
+## CRA notified bodies routine
+
+`notified-bodies-baseline.md` and everything under `notified-bodies/` are
+maintained by a scheduled task that checks whether any conformity assessment
+body has been notified under the Cyber Resilience Act. The answer has been
+**zero** on every working day since 21 June 2026.
+
+The same convention as the other routines applies: no manual review is
+required. After pushing the branch and opening the PR (create it as a draft
+first, per the usual flow), mark it ready for review and merge it immediately.
+
+This auto-merge behavior applies only to PRs from this routine that touch
+`notified-bodies-baseline.md` and `notified-bodies/` alone. Any other change to
+this repository follows the normal review-and-confirm flow.
+
+The daily-rhythm rule applies here too: one measurement point per day plus
+every real change. A run that finds nothing changed and sees today's date in
+`last_check` on `main` ends silently — no commit, no PR, no notification.
+
+Three things about this check are easy to get wrong, and each of them turns a
+broken query into a confident "0 bodies, no change":
+
+- **The canary is not optional.** Every run also queries a legislation known to
+  have many active bodies (Directive 2014/53/EU, Radio Equipment,
+  `legislationId 154428`). If that returns nothing, the pipeline is broken:
+  report it and write nothing. A zero is believable only when the canary is
+  healthy.
+- **The field names are `csType: nando_notification` and
+  `notificationLegislationId`** — not `csType: nb` and `legislationId`, which is
+  what the site's own filter URL suggests and which returns zero for every
+  legislation.
+- **A result page caps at 200 rows** however large a `pageSize` is requested,
+  and rows are per notification rather than per body. Page through
+  `totalResults` and dedupe on `displayTypeAndNumber`, or the list silently
+  truncates the first time bodies actually appear.
+
+Do not render the NANDO page with a headless browser. It is an Angular
+application that shows nothing without JavaScript, and this environment's
+egress proxy resets browser connections to `webgate.ec.europa.eu` in any case —
+`curl` against the recorded API works, a browser does not.
+
 ## Commission CRA FAQ version-check routine
 
 `commission-cra-faq-baseline.md` and everything under `commission-faq/` are

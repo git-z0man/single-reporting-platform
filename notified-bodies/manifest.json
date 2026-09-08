@@ -1,0 +1,667 @@
+{
+  "_about": "Machine state for the CRA notified-bodies monitor. The routine reads this file, runs the recorded search_request, compares the current ACTIVE list against current_snapshot, and commits an updated copy on every successful run. Do NOT render the NANDO page with a headless browser: it is an Angular SPA and this environment's egress proxy will not let a browser through to it anyway. Use the recorded request.",
+  "legislation": {
+    "name": "Regulation (EU) 2024/2847 (Cyber Resilience Act)",
+    "legislationId": "167953",
+    "notificationStatusId": "1",
+    "status_label": "Active",
+    "human_view": "https://webgate.ec.europa.eu/single-market-compliance-space/notified-bodies/notified-body-list?filter=legislationId:167953,notificationStatusId:1"
+  },
+  "search_request": {
+    "_note": "Reuse this exact request. Do not re-derive. The human filter URL is an Angular SPA; the data API is a multipart POST.",
+    "method": "POST",
+    "endpoint": "https://webgate.ec.europa.eu/es/search-api/rest/search",
+    "content_type": "multipart/form-data",
+    "user_agent": "Mozilla/5.0",
+    "form_fields": {
+      "text": "*",
+      "pageSize": "200",
+      "apiKey": "e2418f53-ea99-4bc4-a12f-c4cdd419de2c",
+      "_apiKey_note": "Public default NANDO key baked into the site's compiled JS. Not a secret, safe to reuse.",
+      "query": {
+        "_sent_as": "application/json part",
+        "bool": {
+          "must": [
+            {
+              "term": {
+                "csType": "nando_notification"
+              }
+            },
+            {
+              "term": {
+                "notificationLegislationId": "167953"
+              }
+            },
+            {
+              "term": {
+                "notificationStatusId": "1"
+              }
+            }
+          ]
+        }
+      },
+      "_pageSize_note": "The endpoint caps a page at 200 rows regardless of what is asked for: a request for 1000 returned 200 of 366 canary rows on 2026-09-08. Page with pageNumber (1-based) until the rows collected reach totalResults."
+    },
+    "parsing": {
+      "_note": "Results are per notification ROW (one row per linked product/specification), NOT one row per body. Multiple rows can share one body.",
+      "dedupe_by": "displayTypeAndNumber",
+      "alt_dedupe_by": "organizationRefeCd",
+      "response_shape": "{ totalResults: N, results: [ { metadata: { jsonDoc: [ \"<JSON string>\" ] } } ] }",
+      "per_result": "Parse metadata.jsonDoc[0] as JSON. Fields of interest: organizationName, organizationCountryName, displayTypeAndNumber, notificationStatusId, notificationLegislationId.",
+      "body_fields": {
+        "name": "organizationName",
+        "number": "displayTypeAndNumber",
+        "member_state": "organizationCountryName"
+      },
+      "paging": "Read totalResults from the first response, then fetch pageNumber=2,3,... with the same pageSize until you have every row. Deduping a truncated first page silently under-reports."
+    }
+  },
+  "canary": {
+    "_note": "Sanity check against a legislation known to have active bodies. If canary returns 0, the pipeline is BROKEN: alert that the check failed and STOP. Trust the CRA result only when canary > 0.",
+    "name": "Directive 2014/53/EU (Radio Equipment Directive, RED)",
+    "legislationId": "154428",
+    "notificationStatusId": "1",
+    "last_observed_raw_rows": 360,
+    "last_observed_date": "2026-06-23"
+  },
+  "legislation_id_lookup": {
+    "_note": "To map legislation names to IDs, query the same endpoint with { term: { csType: 'nando_legislation' } } (no other filter, pageSize ~100).",
+    "confirmed": {
+      "167953": "Regulation (EU) 2024/2847 (CRA)",
+      "154428": "Directive 2014/53/EU Radio equipment (RED) — canary"
+    }
+  },
+  "last_successful_check": "2026-09-08T07:15:03+00:00",
+  "current_snapshot": {
+    "date": "2026-09-08",
+    "checked_at": "2026-09-08T07:15:03+00:00",
+    "count": 0,
+    "bodies": [],
+    "canary_ok": true,
+    "canary_raw_rows": 366,
+    "note": "No change vs prior snapshot (0 active bodies). Request pipeline verified working."
+  },
+  "history": [
+    {
+      "date": "2026-09-08",
+      "checked_at": "2026-09-08T07:15:03+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 366,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-09-07",
+      "checked_at": "2026-09-07T07:20:33+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 366,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-09-04",
+      "checked_at": "2026-09-04T07:16:32+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 366,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-09-03",
+      "checked_at": "2026-09-03T07:16:04+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 366,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-09-02",
+      "checked_at": "2026-09-02T07:19:24+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 365,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-09-01",
+      "checked_at": "2026-09-01T07:22:55+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 365,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-31",
+      "checked_at": "2026-08-31T07:24:47+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 365,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-28",
+      "checked_at": "2026-08-28T07:20:04+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 365,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-27",
+      "checked_at": "2026-08-27T07:21:34+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 365,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-26",
+      "checked_at": "2026-08-26T07:23:48+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 365,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-25",
+      "checked_at": "2026-08-25T07:21:10+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 365,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-24",
+      "checked_at": "2026-08-24T07:20:13+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 364,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-21",
+      "checked_at": "2026-08-21T07:17:58+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 364,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-21",
+      "count": 0,
+      "bodies": [],
+      "event": "Baseline established. First run; this snapshot is the reference point. legislationId 167953 and notificationStatusId 1 = Active verified via site filter dropdowns."
+    },
+    {
+      "date": "2026-06-22",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. API request recipe derived and recorded. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-23",
+      "checked_at": "2026-06-23T18:04:07+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-23",
+      "checked_at": "2026-06-23T21:14:09+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-24",
+      "checked_at": "2026-06-24T06:05:06+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-24",
+      "checked_at": "2026-06-24T10:04:12+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-24",
+      "checked_at": "2026-06-24T14:04:23+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-24",
+      "checked_at": "2026-06-24T18:03:56+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-25",
+      "checked_at": "2026-06-25T06:05:08+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-25",
+      "checked_at": "2026-06-25T10:03:50+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-25",
+      "checked_at": "2026-06-25T14:05:12+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-25",
+      "checked_at": "2026-06-25T18:04:06+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-26",
+      "checked_at": "2026-06-26T07:05:31+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-29",
+      "checked_at": "2026-06-29T07:05:33+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-06-30",
+      "checked_at": "2026-06-30T07:05:23+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-01",
+      "checked_at": "2026-07-01T07:04:14+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-02",
+      "checked_at": "2026-07-02T07:04:46+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-03",
+      "checked_at": "2026-07-03T07:05:04+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-06",
+      "checked_at": "2026-07-06T07:05:52+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-07",
+      "checked_at": "2026-07-07T07:05:26+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-08",
+      "checked_at": "2026-07-08T07:04:42+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-09",
+      "checked_at": "2026-07-09T07:04:48+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-10",
+      "checked_at": "2026-07-10T07:05:29+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-13",
+      "checked_at": "2026-07-13T07:05:26+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-14",
+      "checked_at": "2026-07-14T07:04:44+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-15",
+      "checked_at": "2026-07-15T07:06:01+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-16",
+      "checked_at": "2026-07-16T07:05:24+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-17",
+      "checked_at": "2026-07-17T07:05:23+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-20",
+      "checked_at": "2026-07-20T07:05:03+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-21",
+      "checked_at": "2026-07-21T07:05:47+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-22",
+      "checked_at": "2026-07-22T07:06:11+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 360,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-23",
+      "checked_at": "2026-07-23T07:06:18+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 362,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-24",
+      "checked_at": "2026-07-24T07:05:04+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 362,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-27",
+      "checked_at": "2026-07-27T07:06:37+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 362,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-28",
+      "checked_at": "2026-07-28T07:06:03+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 362,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-29",
+      "checked_at": "2026-07-29T07:06:19+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 362,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-30",
+      "checked_at": "2026-07-30T07:05:41+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 362,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-07-31",
+      "checked_at": "2026-07-31T07:05:45+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 362,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-03",
+      "checked_at": "2026-08-03T07:07:48+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 362,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-04",
+      "checked_at": "2026-08-04T07:11:29+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 363,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-05",
+      "checked_at": "2026-08-05T07:12:12+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 363,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-06",
+      "checked_at": "2026-08-06T07:11:39+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 363,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-07",
+      "checked_at": "2026-08-07T07:09:06+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 363,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-10",
+      "checked_at": "2026-08-10T07:29:56+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 363,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-11",
+      "checked_at": "2026-08-11T07:08:38+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 364,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-12",
+      "checked_at": "2026-08-12T07:22:42+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 364,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-13",
+      "checked_at": "2026-08-13T07:23:12+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 364,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-14",
+      "checked_at": "2026-08-14T07:54:05+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 364,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-17",
+      "checked_at": "2026-08-17T07:34:57+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 364,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-18",
+      "checked_at": "2026-08-18T07:11:33+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 364,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-19",
+      "checked_at": "2026-08-19T07:09:54+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 364,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-08-20",
+      "checked_at": "2026-08-20T07:17:15+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 364,
+      "event": "No change. Canary (RED) OK."
+    }
+  ]
+}
