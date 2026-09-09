@@ -176,3 +176,138 @@
     apply(current() === 'dark' ? 'light' : 'dark');
   });
 })();
+
+/* ---- field reference: jump from a phase table to the full entry ----------
+   The phase tables link a field number to its entry in "Every field,
+   explained". The entries are <details>, so a plain anchor would scroll to a
+   closed box; open it first, and switch to the cards view if the table view
+   is showing. */
+(function () {
+  function reveal(hash) {
+    if (!hash || hash.charAt(0) !== '#') return;
+    var el;
+    try { el = document.querySelector(hash); } catch (e) { return; }
+    if (!el || el.tagName !== 'DETAILS') return;
+    var sw = document.querySelector('.viewswitch .vsbtn[data-view="cards"]');
+    if (sw && sw.getAttribute('aria-pressed') === 'false') sw.click();
+    el.open = true;
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el.classList.add('flash');
+    setTimeout(function () { el.classList.remove('flash'); }, 1400);
+  }
+
+  document.querySelectorAll('a.fieldref').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var hash = a.getAttribute('href');
+      if (history.replaceState) history.replaceState(null, '', hash);
+      reveal(hash);
+    });
+  });
+
+  window.addEventListener('hashchange', function () { reveal(location.hash); });
+  if (location.hash) reveal(location.hash);
+})();
+
+/* ---- field reference: cards <-> full table ------------------------------
+   The table is generated from the cards, so there is one copy of the text and
+   the two views cannot drift apart. */
+(function () {
+  var sw = document.querySelector('.viewswitch');
+  var cards = document.getElementById('fieldcards');
+  var table = document.getElementById('fieldtable');
+  if (!sw || !cards || !table) return;
+
+  var built = false;
+
+  function textAfterStrong(body, label) {
+    var ps = body.querySelectorAll('p');
+    for (var i = 0; i < ps.length; i++) {
+      var st = ps[i].querySelector('strong');
+      if (st && st.textContent.indexOf(label) === 0) {
+        var clone = ps[i].cloneNode(true);
+        clone.removeChild(clone.querySelector('strong'));
+        return clone.innerHTML.trim();
+      }
+    }
+    return '';
+  }
+
+  var STAGES = ['EW', '72\u2009h', 'FR'];
+  function stageCell(chips) {
+    if (!chips) return '';
+    var out = '';
+    Array.prototype.forEach.call(chips.children, function (c, i) {
+      out += '<span class="ft-stage"><b>' + (STAGES[i] || '') + '</b>' + c.outerHTML + '</span>';
+    });
+    return out;
+  }
+
+  function build() {
+    var html = '';
+    var groups = cards.querySelectorAll('.faq-wrap');
+    groups.forEach(function (wrap) {
+      // the group's own heading and subtitle sit just before the wrapper
+      var label = '', sub = '';
+      var p = wrap.previousElementSibling;
+      while (p) {
+        if (p.classList.contains('fieldgroup-sub')) sub = p.textContent;
+        else if (p.classList.contains('seclabel')) {
+          var t = p.querySelector('.seclabel-text');
+          label = t ? t.textContent : '';
+          break;
+        }
+        p = p.previousElementSibling;
+      }
+
+      html += '<div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">' +
+              label + '</span></div>';
+      if (sub) html += '<p class="fieldgroup-sub">' + sub + '</p>';
+      html += '<div class="table-wrap"><table class="data fieldtable">' +
+              '<colgroup><col class="ft-num"><col class="ft-name"><col class="ft-mean">' +
+              '<col class="ft-how"><col class="ft-st"></colgroup>' +
+              '<thead><tr><th>#</th><th>Field</th><th>What it means</th>' +
+              '<th>How ENISA says to complete it</th>' +
+              '<th>EW · 72&nbsp;h · FR</th></tr></thead><tbody>';
+
+      wrap.querySelectorAll('details.field').forEach(function (d) {
+        var num = d.querySelector('.faq-num').textContent;
+        var name = d.querySelector('.faq-qwrap span:last-child').textContent;
+        var body = d.querySelector('.faq-body');
+        var src = body.querySelector('.field-src');
+        var chips = d.querySelector('.field-chips');
+        var ex = textAfterStrong(body, 'ENISA\u2019s example');
+        var fmt = textAfterStrong(body, 'Format');
+        var foot = body.querySelector('.field-foot');
+
+        html += '<tr id="ft-' + num + '">' +
+                '<td class="ft-num"><span class="faq-num">' + num + '</span></td>' +
+                '<td class="ft-name"><strong>' + name + '</strong>' +
+                (src ? '<span class="ft-src">' + src.innerHTML + '</span>' : '') + '</td>' +
+                '<td>' + textAfterStrong(body, 'What it means') + '</td>' +
+                '<td>' + textAfterStrong(body, 'How to complete it') +
+                (ex ? '<span class="ft-sub"><b>Example</b> ' + ex + '</span>' : '') +
+                (fmt ? '<span class="ft-sub"><b>Format</b> ' + fmt + '</span>' : '') +
+                (foot ? '<span class="ft-sub note">' + foot.innerHTML + '</span>' : '') +
+                '</td>' +
+                '<td class="ft-st">' + stageCell(chips) + '</td>' +
+                '</tr>';
+      });
+      html += '</tbody></table></div>';
+    });
+    table.innerHTML = html;
+    built = true;
+  }
+
+  sw.querySelectorAll('.vsbtn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var wantTable = btn.dataset.view === 'table';
+      if (wantTable && !built) build();
+      cards.hidden = wantTable;
+      table.hidden = !wantTable;
+      sw.querySelectorAll('.vsbtn').forEach(function (b) {
+        b.setAttribute('aria-pressed', String((b.dataset.view === 'table') === wantTable));
+      });
+    });
+  });
+})();
