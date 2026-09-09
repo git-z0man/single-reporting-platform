@@ -16,7 +16,7 @@ glossary_retrieved: 2026-09-07
 csirt_list_retrieved: 2026-09-08
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the new Glossary and CSIRT-list subpages, and the four guidance subpages listed in `guidance_urls` — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation — it is not yet listed as a card in the main page's own "User guidance" section, unlike the other three.
-last_check: 2026-09-08
+last_check: 2026-09-09
 last_change: 2026-09-08
 ---
 
