@@ -355,7 +355,7 @@
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
               <tbody>
-              <tr><td class="c-field">AR Note</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Free text. The screen carries its own warning: <strong>&ldquo;This field will be shared during the dissemination&rdquo;</strong> &mdash; whatever you write here travels with the notification.</td></tr>
+              <tr><td class="c-field">AR Note</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Free text. <strong>Writable only by the AR who created the notification</strong> &mdash; every other AR of the same manufacturer opens it read-only and cannot add to it. The screen carries its own warning: <strong>&ldquo;This field will be shared during the dissemination&rdquo;</strong> &mdash; whatever you write here travels with the notification.</td></tr>
               </tbody></table>
             </div>
             <p class="ownnote"><strong>From practice.</strong> Treat Additional Notes as public to every CSIRT that receives the dissemination &mdash; the banner on the screen says so, and there is no way to send a note only to your own CDaC. Anything you would not want in fifteen national inboxes belongs in a direct call instead.</p>
@@ -612,7 +612,7 @@
         </ol>
 
         <div class="callout amber">
-          <p><strong class="lead-in">Drafts are private.</strong> A saved draft is visible only to the AR who created it — not to the other ARs of the same manufacturer. Plan for that: a draft left behind by an absent colleague cannot be picked up by someone else.</p>
+          <p><strong class="lead-in">Drafts are private.</strong> A saved draft is visible only to the AR who created it — not to the other ARs of the same manufacturer. Plan for that: a draft left behind by an absent colleague cannot be picked up by someone else. The <em>AR Note</em> on a submitted notification works the same way: the other ARs can read it, but only its author can write to it.</p>
         </div>
 
         <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-interface-functions" target="_blank" rel="noopener">CRA SRP guidance — AR Interface functions</a>, retrieved 7 September 2026. Reproduced with acknowledgement per the ENISA Legal Notice.</p>
@@ -1444,6 +1444,10 @@
 
       <!-- ===================== FOOTER ===================== -->
       <footer class="foot">
+        <div class="footer-label">Abbreviations</div>
+        <p class="abbr-hint">Every one of these is explained where it appears &mdash; hover it, or tap it on a phone. Listed here as well, in one place.</p>
+        <dl class="facts" id="abbrlist"></dl>
+
         <p class="footer-legal">Cyber Resilience Act, Articles 14–17 · Delegated Regulation (EU) C(2025)&nbsp;8407 of 11 December 2025. Platform operated by ENISA. <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp" target="_blank" rel="noopener">ENISA official SRP pages ↗</a></p>
         <p class="footer-disc">Unofficial community guide. Not affiliated with ENISA. Built from ENISA&rsquo;s published guidance, glossary and FAQ, retrieved 7&nbsp;September&nbsp;2026 &mdash; all three are being edited actively, so check the source for anything you rely on.</p>
       </footer>
