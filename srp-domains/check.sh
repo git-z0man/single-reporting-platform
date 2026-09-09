@@ -46,7 +46,19 @@
 #   exit 35/28/7/52/56*     -> PROVISIONED   (connected, upstream dropped)
 #   exit 56 + "403"         -> BLOCKED       (egress policy; check is blind,
 #                                             never a statement about the SRP)
-#   no DNS                  -> NXDOMAIN
+#   no DNS, fast negative   -> NXDOMAIN      (resolver said no such name/record)
+#   no DNS, timed out       -> DNS_TIMEOUT   (resolver never answered; check is
+#                                             blind, never a statement about the
+#                                             SRP -- see resolve() below)
+#
+# resolve() bounds every lookup with `timeout` and tells a genuine negative
+# answer apart from a hang. Discovered 2026-09-08: a nonexistent name under
+# this zone (e.g. www.cra-srp.enisa.europa.eu) comes back in under a second,
+# while portal/auth/all 27 country hosts -- which had resolved fine hours
+# earlier -- hung for 40+ seconds with no answer at all. The unbounded
+# getent/python3 calls this script used to run turned that hang into a
+# false NXDOMAIN for the entire zone. A hang is a monitoring problem, exactly
+# like BLOCKED, and must never overwrite the last confirmed platform state.
 #
 # Usage:  bash srp-domains/check.sh [--quiet]
 # Exit:   0 = no state change, 1 = at least one host changed state, 2 = error
@@ -84,20 +96,34 @@ else
 fi
 
 # --- DNS --------------------------------------------------------------------
+# Prints "TIMEOUT" if every method that ran hung rather than answering, so the
+# caller can tell that apart from a genuine negative response (empty output,
+# no timeout). Never let a hung resolver read as NXDOMAIN.
 resolve() {
-  local h="$1" out=""
+  local h="$1" out="" rc tmp saw_timeout=0
+  tmp="$(mktemp)"
+
   if command -v dig >/dev/null 2>&1; then
-    out="$(dig +short +time=3 +tries=1 A "$h" 2>/dev/null | grep -E '^[0-9.]+$' || true)"
+    timeout 8 dig +short +time=3 +tries=1 A "$h" >"$tmp" 2>/dev/null; rc=$?
+    if [ $rc -eq 124 ]; then saw_timeout=1; else out="$(grep -E '^[0-9.]+$' "$tmp" || true)"; fi
   fi
   if [ -z "$out" ] && command -v getent >/dev/null 2>&1; then
-    out="$(getent ahostsv4 "$h" 2>/dev/null | awk '{print $1}' | sort -u || true)"
+    timeout 10 getent ahostsv4 "$h" >"$tmp" 2>/dev/null; rc=$?
+    if [ $rc -eq 124 ]; then saw_timeout=1; else out="$(awk '{print $1}' "$tmp" | sort -u || true)"; fi
   fi
   if [ -z "$out" ] && command -v python3 >/dev/null 2>&1; then
-    out="$(python3 -c 'import socket,sys
+    timeout 10 python3 -c 'import socket,sys
 try: print("\n".join(sorted({r[4][0] for r in socket.getaddrinfo(sys.argv[1],None,socket.AF_INET)})))
-except Exception: pass' "$h" 2>/dev/null || true)"
+except Exception: pass' "$h" >"$tmp" 2>/dev/null; rc=$?
+    if [ $rc -eq 124 ]; then saw_timeout=1; else out="$(cat "$tmp")"; fi
   fi
-  printf '%s' "$(echo "$out" | sort -u | paste -sd' ' -)"
+  rm -f "$tmp"
+
+  if [ -z "$out" ] && [ "$saw_timeout" -eq 1 ]; then
+    printf 'TIMEOUT'
+  else
+    printf '%s' "$(echo "$out" | sort -u | paste -sd' ' -)"
+  fi
 }
 
 # --- probes -----------------------------------------------------------------
@@ -112,10 +138,17 @@ probe_tls() {  # $1 host -> ok|fail
 [ -f "$LOG" ] || echo "timestamp_utc,host,dns,tcp443,tls,http_code,note" > "$LOG"
 
 declare -A ST HTTP DNSIP NOTE
-live=0; blocked=0; nxdomain=0
+live=0; blocked=0; nxdomain=0; dns_timeout=0
 
 for h in "${HOSTS[@]}"; do
   ips="$(resolve "$h")"
+  if [ "$ips" = "TIMEOUT" ]; then
+    ST[$h]=DNS_TIMEOUT; HTTP[$h]=000; DNSIP[$h]=""; NOTE[$h]="DNS never answered - check was blind, not a platform statement"
+    dns_timeout=$((dns_timeout+1))
+    echo "$NOW,$h,timeout,-,-,000,DNS_TIMEOUT" >> "$LOG"
+    say "  DNS_TIMEOUT  $h"
+    continue
+  fi
   if [ -z "$ips" ]; then
     ST[$h]=NXDOMAIN; HTTP[$h]=000; DNSIP[$h]=""; NOTE[$h]="no A record"
     nxdomain=$((nxdomain+1))
@@ -152,7 +185,7 @@ for h in "${HOSTS[@]}"; do
 done
 
 say ""
-say "$live/$TOTAL live   (trust=$TRUST, blocked=$blocked, nxdomain=$nxdomain)"
+say "$live/$TOTAL live   (trust=$TRUST, blocked=$blocked, nxdomain=$nxdomain, dns_timeout=$dns_timeout)"
 
 # --- status.md (overwritten each run) ---------------------------------------
 {
@@ -169,6 +202,7 @@ say "$live/$TOTAL live   (trust=$TRUST, blocked=$blocked, nxdomain=$nxdomain)"
     echo
   fi
   [ "$blocked" -gt 0 ] && { echo "> $blocked host(s) BLOCKED by egress policy — the check was blind for those,"; echo "> which says nothing about the platform."; echo; }
+  [ "$dns_timeout" -gt 0 ] && { echo "> $dns_timeout host(s) had DNS_TIMEOUT — the resolver never answered, which"; echo "> says nothing about the platform. The last confirmed state stands."; echo; }
   echo "| Host | Status | HTTP | Resolves to | Last checked |"
   echo "|---|---|---|---|---|"
   for h in "${HOSTS[@]}"; do
@@ -191,13 +225,26 @@ m = json.load(open("srp-domains/manifest.json"))
 now, today = os.environ["_NOW"], os.environ["_TODAY"]
 by = {h["host"]: h for h in m.get("hosts", [])}
 changed = []
+# BLOCKED and DNS_TIMEOUT mean the check couldn't get a real answer this run
+# (egress policy, or a resolver that never responded). Neither is ever a
+# platform statement: they must not overwrite the last confirmed state and
+# must not count as a change, or a monitoring hiccup reads as a go-live or
+# a zone-wide removal. See check.sh's header for the 2026-09-08 incident.
+INCONCLUSIVE = {"BLOCKED", "DNS_TIMEOUT"}
 for line in os.environ["_ROWS"].strip().splitlines():
     host, state, code, ips = line.split("|", 3)
     e = by.get(host)
+    if state in INCONCLUSIVE:
+        # Wait for a confirmed answer before recording an unseen host as new.
+        if e is not None:
+            e["last_checked"] = now
+            e[f"last_{state.lower()}_at"] = now
+        continue
     if e is None:
         e = {"host": host, "role": "country", "first_live": None}
         m.setdefault("hosts", []).append(e); by[host] = e
         changed.append(f"new host in zone: {host}")
+    e["last_checked"] = now
     prev = e.get("state")
     if prev != state:
         changed.append(f"{host}: {prev or 'unknown'} -> {state}")
@@ -206,7 +253,6 @@ for line in os.environ["_ROWS"].strip().splitlines():
     e["tcp443"] = "unreliable" if os.environ["_TRUST"] == "proxied" else e.get("tcp443")
     e["tls"] = "unreliable" if os.environ["_TRUST"] == "proxied" else e.get("tls")
     e["http_code"] = code
-    e["last_checked"] = now
     # first_live is set ONLY from a real upstream HTTP response.
     if state == "LIVE" and not e.get("first_live"):
         e["first_live"] = now

@@ -43,12 +43,26 @@ classifies by curl's exit code:
 |---|---|---|
 | HTTP status returned | `LIVE` | upstream answered — go-live |
 | exit 35 / 28 / 7 / 52 | `PROVISIONED` | connected, upstream dropped |
-| DNS failure | `NXDOMAIN` | not in the zone |
+| DNS: fast negative answer | `NXDOMAIN` | resolver confirmed no such name/record |
+| DNS: resolver never answered | `DNS_TIMEOUT` | the check was blind, not a platform statement |
 | exit 56 + `403` | `BLOCKED` | egress policy denied CONNECT — the check was blind |
 
-`BLOCKED` is kept distinct on purpose: it means the monitor could not see, and
-must never be recorded as a platform state. `first_live` is only ever set from
-an HTTP response, so a proxied run cannot manufacture a go-live.
+`BLOCKED` and `DNS_TIMEOUT` are kept distinct on purpose: both mean the
+monitor could not see, and must never be recorded as a platform state or
+overwrite the last confirmed one. `first_live` is only ever set from an HTTP
+response, so a proxied run cannot manufacture a go-live.
+
+`DNS_TIMEOUT` exists because of a 2026-09-08 incident: `resolve()` used to
+call `getent`/`python3` with no timeout, and a resolver that hangs instead of
+answering read as an empty result — indistinguishable from a genuine
+NXDOMAIN. That run reported all 29 hosts newly NXDOMAIN, which looked like
+the entire production zone had vanished. A quick check of a name that
+actually doesn't exist under the zone (`www.cra-srp.enisa.europa.eu`)
+answered in under a second, while the 29 monitored hosts — which had
+resolved fine hours earlier — hung for 40+ seconds with nothing back. That
+distinguishes a real negative answer from a resolver that never responded.
+`resolve()` now bounds every lookup with `timeout` and reports `TIMEOUT`
+separately when nothing answered in time.
 
 When it detects a proxy (`HTTPS_PROXY` set, or an `Anthropic` certificate
 issuer) the run records `trust=proxied` and reports the TCP and TLS columns as
