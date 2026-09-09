@@ -326,8 +326,11 @@ li.wstep:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; 
   font: 600 12px/24px 'IBM Plex Mono', monospace; text-align: center;
 }
 .wstep-head h3 { margin: 0; font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.4; }
-li.wstep > figure { margin: 0 0 14px; }
-li.wstep > figure img.shot { width: 100%; }
+/* 720px is the measure the field-card bodies already use, so a screenshot
+   sits at the guide's reading width rather than the full 928px column */
+li.wstep > figure { margin: 0 0 14px; max-width: 720px; }
+li.wstep > figure.wide { max-width: 100%; }     /* a wide screen, shown wide: at 720px its type went below the guidance's */
+li.wstep > figure.narrow { max-width: 400px; }  /* a zoomed crop: at its own 445px its type towered over the guidance's */
 li.wstep > figure figcaption { margin-top: 8px; font-size: 13px; line-height: 1.6; color: var(--faint); }
 .wstep-lede { margin: 0 0 14px; font-size: 14px; line-height: 1.7; color: var(--body); }
 .wstep-lede a, .wstep-more a, .ownnote a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
@@ -427,16 +430,14 @@ li.step strong { color: var(--ink); font-weight: 600; }
 .callout li:last-child { margin-bottom: 0; }
 
 /* ---------- screenshot grid ------------------------------------------- */
-.imggrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
-.imggrid figure { margin: 0; }
+/* screenshots render at their capture size at most: stretching them past it
+   blew the UI type up past the guidance type around it, and made the inline
+   image larger than the lightbox, which opens at natural size */
 .shot {
-  display: block; width: 100%; height: auto;
+  display: block; width: auto; max-width: 100%; height: auto;
   border: 1px solid var(--hairline); border-radius: 8px;
   background: var(--card);
   cursor: zoom-in;
-}
-.imggrid figcaption {
-  margin-top: 9px; font: 400 12px/1.4 'IBM Plex Mono', monospace; color: var(--faint);
 }
 /* fallback box when a screenshot is missing */
 figure.missing .shot { display: none; }
@@ -627,7 +628,6 @@ dl.facts dd { margin: 0; padding: 11px 0; border-top: 1px solid var(--hairline-s
   .sidefoot p { display: none; }
   .main { margin-left: 0; }
   .rail { grid-template-columns: repeat(2, 1fr); row-gap: 24px; }
-  .imggrid { grid-template-columns: 1fr; }
   .content { padding-left: 24px; padding-right: 24px; }
   h1 { font-size: 31px; }
   .floatbar { display: flex; }
