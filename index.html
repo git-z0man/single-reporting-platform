@@ -237,6 +237,18 @@
             <div class="wstep-head"><span class="wstep-num">5</span><h3>If you were invited: accept instead</h3></div>
             <figure><img class="shot" src="img/enisa/reg-05-invited-personal-details.png" alt="Personal details screen reached through an invitation link"><figcaption>The Secondary AR path: the same details, reached from an invitation e-mail.</figcaption></figure>
             <p class="wstep-lede">A Secondary AR does not choose a role or a CSIRT. The link in the invitation leads here, the manufacturer details are already filled in, and the last button says &ldquo;Accept invitation&rdquo;. The link expires after <strong>seven days</strong>; after that the record turns to &ldquo;Invitation Expired&rdquo;.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
+              <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">First Name</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">From your EU Login account, as on the Primary path.</td></tr>
+              <tr><td class="c-field">Last Name</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">From your EU Login account.</td></tr>
+              <tr><td class="c-field">Email</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">The address the invitation was sent to. It cannot be swapped for another one here.</td></tr>
+              <tr><td class="c-field">Legal name (for legal entities)</td><td class="c-status"><span class="chip optional">Editable</span></td><td class="c-note">Still undocumented: re-checked against ENISA on 9&nbsp;September&nbsp;2026 &mdash; the term appears in no glossary entry and in no FAQ answer, so the screen&rsquo;s own parenthesis remains the only explanation. Note that the guidance calls all four fields non-editable, while this one accepts input.</td></tr>
+              <tr class="group"><td colspan="3">Step 2 of 2 &mdash; manufacturer details</td></tr>
+              <tr><td class="c-field">Name, CDaC, Additional Information</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">All three arrive from the Primary AR&rsquo;s registration. You confirm them; the button reads &ldquo;Accept invitation&rdquo; rather than &ldquo;Continue&rdquo;.</td></tr>
+              </tbody></table>
+            </div>
             <!-- OWN-NOTE reg-invited: your own practical note here, as <p class="ownnote">…</p> -->
           </li>
         </ol>
@@ -260,18 +272,18 @@
             <thead><tr><th>Field</th><th class="c-status">Status</th><th>Note</th></tr></thead>
             <tbody>
               <tr class="group"><td colspan="3">Both notification types</td></tr>
-              <tr><td class="c-field">Notification type (Vulnerability/Incident)<span class="fieldref">1</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Chooses which set of fields the form shows from here on.</td></tr>
-              <tr><td class="c-field">Title<span class="fieldref">7</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 255 characters. Enough to recognise product and issue, no confidential detail.</td></tr>
-              <tr><td class="c-field">Summary<span class="fieldref">8</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters: what happened, affected product or version, known impact, current mitigation status.</td></tr>
-              <tr><td class="c-field">Manufacturer name<span class="fieldref">9</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Read-only. The platform fills this in from your registration; you only check that it is the right manufacturer.</td></tr>
-              <tr><td class="c-field">Member States where product available (Concerned CSIRT)<span class="fieldref">10</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Your own CSIRT is pre-selected; add every other Member State where the product is available. This is what decides who else gets the notification.</td></tr>
-              <tr><td class="c-field">Product Name<span class="fieldref">11</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Commercial name as it appears to users.</td></tr>
-              <tr><td class="c-field">Product version<span class="fieldref">12</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Version, release, build or model. A range is acceptable.</td></tr>
+              <tr><td class="c-field">Notification type (Vulnerability/Incident)<a class="fieldref" href="#f-1" title="Open field 1 in the reference">1</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Chooses which set of fields the form shows from here on.</td></tr>
+              <tr><td class="c-field">Title<a class="fieldref" href="#f-7" title="Open field 7 in the reference">7</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 255 characters. Enough to recognise product and issue, no confidential detail.</td></tr>
+              <tr><td class="c-field">Summary<a class="fieldref" href="#f-8" title="Open field 8 in the reference">8</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters: what happened, affected product or version, known impact, current mitigation status.</td></tr>
+              <tr><td class="c-field">Manufacturer name<a class="fieldref" href="#f-9" title="Open field 9 in the reference">9</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Read-only. The platform fills this in from your registration; you only check that it is the right manufacturer.</td></tr>
+              <tr><td class="c-field">Member States where product available (Concerned CSIRT)<a class="fieldref" href="#f-10" title="Open field 10 in the reference">10</a></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Your own CSIRT is pre-selected; add every other Member State where the product is available. This is what decides who else gets the notification.</td></tr>
+              <tr><td class="c-field">Product Name<a class="fieldref" href="#f-11" title="Open field 11 in the reference">11</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Commercial name as it appears to users.</td></tr>
+              <tr><td class="c-field">Product version<a class="fieldref" href="#f-12" title="Open field 12 in the reference">12</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Version, release, build or model. A range is acceptable.</td></tr>
               <tr class="group"><td colspan="3">Vulnerability only</td></tr>
-              <tr><td class="c-field">Date/time when you become aware of the Actively Exploited Vulnerability [1]<span class="fieldref">v30</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The date and time your 24 h, 72 h and Final Report deadlines are counted from. Estimate if you must, and say so in the description.</td></tr>
+              <tr><td class="c-field">Date/time when you become aware of the Actively Exploited Vulnerability [1]<a class="fieldref" href="#f-v30" title="Open field v30 in the reference">v30</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The date and time your 24 h, 72 h and Final Report deadlines are counted from. Estimate if you must, and say so in the description.</td></tr>
               <tr class="group"><td colspan="3">Incident only</td></tr>
-              <tr><td class="c-field">Incident is suspected of unlawful or malicious acts<span class="fieldref">i35</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Yes/No. Whether the incident is suspected of resulting from unlawful or malicious acts.</td></tr>
-              <tr><td class="c-field">Date/time when you become aware of the incident [2]<span class="fieldref">i41</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">As above, for incidents. Currently still labelled “Date/time the incident was detected” in the platform.</td></tr>
+              <tr><td class="c-field">Incident is suspected of unlawful or malicious acts<a class="fieldref" href="#f-i35" title="Open field i35 in the reference">i35</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Yes/No. Whether the incident is suspected of resulting from unlawful or malicious acts.</td></tr>
+              <tr><td class="c-field">Date/time when you become aware of the incident [2]<a class="fieldref" href="#f-i41" title="Open field i41 in the reference">i41</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">As above, for incidents. Currently still labelled “Date/time the incident was detected” in the platform.</td></tr>
             </tbody>
           </table>
         </div>
@@ -302,9 +314,9 @@
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
               <tbody>
-              <tr><td class="c-field">Notification Type (Vulnerability / Incident)<span class="fieldref">1</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">&ldquo;I want to report a Vulnerability&rdquo; or &ldquo;I want to report an Incident&rdquo;. Everything below adapts to this choice.</td></tr>
-              <tr><td class="c-field">Title<span class="fieldref">7</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 255 characters. Enough to recognise the product and the issue; no confidential detail that is not needed for identification.</td></tr>
-              <tr><td class="c-field">Summary<span class="fieldref">8</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters: what happened, the affected product or version, the known impact, the current mitigation status.</td></tr>
+              <tr><td class="c-field">Notification Type (Vulnerability / Incident)<a class="fieldref" href="#f-1" title="Open field 1 in the reference">1</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">&ldquo;I want to report a Vulnerability&rdquo; or &ldquo;I want to report an Incident&rdquo;. Everything below adapts to this choice.</td></tr>
+              <tr><td class="c-field">Title<a class="fieldref" href="#f-7" title="Open field 7 in the reference">7</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 255 characters. Enough to recognise the product and the issue; no confidential detail that is not needed for identification.</td></tr>
+              <tr><td class="c-field">Summary<a class="fieldref" href="#f-8" title="Open field 8 in the reference">8</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters: what happened, the affected product or version, the known impact, the current mitigation status.</td></tr>
               </tbody></table>
             </div>
             <p class="wstep-more">The screenshot is cropped here. The rest of this form &mdash; product, Member States, dates, and the type-specific fields &mdash; is in <a href="#fields">Every field, explained</a>.</p>
@@ -318,7 +330,7 @@
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
               <tbody>
-              <tr><td class="c-field">Manufacturer<span class="fieldref">9</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Select one you are associated with, or &ldquo;+ Add Manufacturer&rdquo; to create another association on the spot.</td></tr>
+              <tr><td class="c-field">Manufacturer<a class="fieldref" href="#f-9" title="Open field 9 in the reference">9</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Select one you are associated with, or &ldquo;+ Add Manufacturer&rdquo; to create another association on the spot.</td></tr>
               </tbody></table>
             </div>
             <!-- OWN-NOTE ew-manufacturer: your own practical note here, as <p class="ownnote">…</p> -->
@@ -369,15 +381,15 @@
             <thead><tr><th>Field</th><th class="c-status">Status</th><th>Note</th></tr></thead>
             <tbody>
               <tr class="group"><td colspan="3">Both notification types</td></tr>
-              <tr><td class="c-field">Considered sensitivity of information<span class="fieldref">20</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Free text, not a confidentiality label: name the sensitive element and what premature disclosure would cause.</td></tr>
-              <tr><td class="c-field">Corrective or mitigating measures taken<span class="fieldref">21</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What you have already done — containment, configuration changes, withdrawal, credential rotation, monitoring. Max. 2,000 characters.</td></tr>
-              <tr><td class="c-field">Corrective or mitigating measures users can take<span class="fieldref">22</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What users should do themselves: update, workaround, configuration change, with the version that fixes it.</td></tr>
+              <tr><td class="c-field">Considered sensitivity of information<a class="fieldref" href="#f-20" title="Open field 20 in the reference">20</a></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Free text, not a confidentiality label: name the sensitive element and what premature disclosure would cause.</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures taken<a class="fieldref" href="#f-21" title="Open field 21 in the reference">21</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What you have already done — containment, configuration changes, withdrawal, credential rotation, monitoring. Max. 2,000 characters.</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures users can take<a class="fieldref" href="#f-22" title="Open field 22 in the reference">22</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What users should do themselves: update, workaround, configuration change, with the version that fixes it.</td></tr>
               <tr class="group"><td colspan="3">Vulnerability only</td></tr>
-              <tr><td class="c-field">General information<span class="fieldref">v26</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">General information about the vulnerability and its exploitation.</td></tr>
-              <tr><td class="c-field">Particular Exceptional Circumstances (PEC)<span class="fieldref">v32</span></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Only selectable at this stage — see the PEC note below.</td></tr>
+              <tr><td class="c-field">General information<a class="fieldref" href="#f-v26" title="Open field v26 in the reference">v26</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">General information about the vulnerability and its exploitation.</td></tr>
+              <tr><td class="c-field">Particular Exceptional Circumstances (PEC)<a class="fieldref" href="#f-v32" title="Open field v32 in the reference">v32</a></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Only selectable at this stage — see the PEC note below.</td></tr>
               <tr class="group"><td colspan="3">Incident only</td></tr>
-              <tr><td class="c-field">General information about nature of incident<span class="fieldref">i36</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">General information on the nature of the incident.</td></tr>
-              <tr><td class="c-field">Initial assessment of the incident<span class="fieldref">i43</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Preliminary assessment: severity, scope, affected functions or data. Distinguish confirmed findings from what is still under investigation.</td></tr>
+              <tr><td class="c-field">General information about nature of incident<a class="fieldref" href="#f-i36" title="Open field i36 in the reference">i36</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">General information on the nature of the incident.</td></tr>
+              <tr><td class="c-field">Initial assessment of the incident<a class="fieldref" href="#f-i43" title="Open field i43 in the reference">i43</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Preliminary assessment: severity, scope, affected functions or data. Distinguish confirmed findings from what is still under investigation.</td></tr>
             </tbody>
           </table>
         </div>
@@ -409,12 +421,12 @@
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
               <tbody>
-              <tr><td class="c-field">Considered sensitivity of information<span class="fieldref">20</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Free text, not a confidentiality label: name the sensitive element and what premature disclosure would cause.</td></tr>
-              <tr><td class="c-field">Corrective or mitigating measures taken<span class="fieldref">21</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What you have already done &mdash; containment, configuration changes, withdrawal, credential rotation, monitoring. Max. 2,000 characters.</td></tr>
-              <tr><td class="c-field">Corrective or mitigating measures that user can take<span class="fieldref">22</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What users should do themselves, with the version that fixes it.</td></tr>
-              <tr><td class="c-field">General information<span class="fieldref">v26</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Vulnerability only: the vulnerability and its exploitation.</td></tr>
-              <tr><td class="c-field">General information about nature of incident<span class="fieldref">i36</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only.</td></tr>
-              <tr><td class="c-field">Initial assessment of the incident<span class="fieldref">i43</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only: severity, scope, affected functions or data. Separate what is confirmed from what is still under investigation.</td></tr>
+              <tr><td class="c-field">Considered sensitivity of information<a class="fieldref" href="#f-20" title="Open field 20 in the reference">20</a></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Free text, not a confidentiality label: name the sensitive element and what premature disclosure would cause.</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures taken<a class="fieldref" href="#f-21" title="Open field 21 in the reference">21</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What you have already done &mdash; containment, configuration changes, withdrawal, credential rotation, monitoring. Max. 2,000 characters.</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures that user can take<a class="fieldref" href="#f-22" title="Open field 22 in the reference">22</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What users should do themselves, with the version that fixes it.</td></tr>
+              <tr><td class="c-field">General information<a class="fieldref" href="#f-v26" title="Open field v26 in the reference">v26</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Vulnerability only: the vulnerability and its exploitation.</td></tr>
+              <tr><td class="c-field">General information about nature of incident<a class="fieldref" href="#f-i36" title="Open field i36 in the reference">i36</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only.</td></tr>
+              <tr><td class="c-field">Initial assessment of the incident<a class="fieldref" href="#f-i43" title="Open field i43 in the reference">i43</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only: severity, scope, affected functions or data. Separate what is confirmed from what is still under investigation.</td></tr>
               </tbody></table>
             </div>
             <!-- OWN-NOTE n72-fields: your own practical note here, as <p class="ownnote">…</p> -->
@@ -427,8 +439,8 @@
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
               <tbody>
-              <tr><td class="c-field">Malicious actor that has exploited / is exploiting the vulnerability<span class="fieldref">v31</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Visible just above the toggle. Both the screen and the glossary state the limit: <strong>max. 100 characters</strong>.</td></tr>
-              <tr><td class="c-field">Particular Exceptional Circumstances (PEC)<span class="fieldref">v32</span></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">A toggle, off by default. Turning it on reveals the reasons below.</td></tr>
+              <tr><td class="c-field">Malicious actor that has exploited / is exploiting the vulnerability<a class="fieldref" href="#f-v31" title="Open field v31 in the reference">v31</a></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Visible just above the toggle. Both the screen and the glossary state the limit: <strong>max. 100 characters</strong>.</td></tr>
+              <tr><td class="c-field">Particular Exceptional Circumstances (PEC)<a class="fieldref" href="#f-v32" title="Open field v32 in the reference">v32</a></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">A toggle, off by default. Turning it on reveals the reasons below.</td></tr>
               </tbody></table>
             </div>
             <!-- OWN-NOTE pec-toggle: your own practical note here, as <p class="ownnote">…</p> -->
@@ -441,8 +453,8 @@
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
               <tbody>
-              <tr><td class="c-field">PEC Delay Reason<span class="fieldref">v33</span></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Three checkboxes, one per legal ground: exploitation confined to the CDaC&rsquo;s own Member State; dissemination contrary to that Member State&rsquo;s essential interests; imminent high cybersecurity risk from dissemination.</td></tr>
-              <tr><td class="c-field">Please provide further information<span class="fieldref">v34</span></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Justification for the CDaC. The screen states <strong>max. 800 characters</strong> &mdash; a limit that appears nowhere in the glossary.</td></tr>
+              <tr><td class="c-field">PEC Delay Reason<a class="fieldref" href="#f-v33" title="Open field v33 in the reference">v33</a></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Three checkboxes, one per legal ground: exploitation confined to the CDaC&rsquo;s own Member State; dissemination contrary to that Member State&rsquo;s essential interests; imminent high cybersecurity risk from dissemination.</td></tr>
+              <tr><td class="c-field">Please provide further information<a class="fieldref" href="#f-v34" title="Open field v34 in the reference">v34</a></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Justification for the CDaC. The screen states <strong>max. 800 characters</strong> &mdash; a limit that appears nowhere in the glossary.</td></tr>
               </tbody></table>
             </div>
             <div class="callout neutral"><p><strong>Three ENISA spellings, one field.</strong> The guidance page writes &ldquo;PEC Delay <strong>Reson</strong>&rdquo; in its text while the screenshot shows &ldquo;Reason&rdquo;; the platform labels the toggle &ldquo;Particular Exceptional Circumstances(PEC)&rdquo; without a space; the FAQ calls the concept &ldquo;particularly exceptional circumstances&rdquo;. The second checkbox reads &ldquo;essential <strong>intrests</strong>&rdquo; on screen. All reproduced as found.</p></div>
@@ -472,18 +484,18 @@
             <thead><tr><th>Field</th><th class="c-status">Status</th><th>Note</th></tr></thead>
             <tbody>
               <tr class="group"><td colspan="3">Both notification types</td></tr>
-              <tr><td class="c-field">Corrective or mitigating measures taken<span class="fieldref">21</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Carried over from the 72-hour notification and updated with what has happened since.</td></tr>
-              <tr><td class="c-field">Corrective or mitigating measures users can take<span class="fieldref">22</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Same field, updated.</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures taken<a class="fieldref" href="#f-21" title="Open field 21 in the reference">21</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Carried over from the 72-hour notification and updated with what has happened since.</td></tr>
+              <tr><td class="c-field">Corrective or mitigating measures users can take<a class="fieldref" href="#f-22" title="Open field 22 in the reference">22</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Same field, updated.</td></tr>
               <tr class="group"><td colspan="3">Vulnerability only</td></tr>
-              <tr><td class="c-field">Date when corrective or mitigating measure has been available<span class="fieldref">v27</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The date a corrective or mitigating measure became available — this is what the 14-day deadline runs from.</td></tr>
-              <tr><td class="c-field">Full description of the severity of the vulnerability<span class="fieldref">v28</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters. ENISA calls the incident equivalent “Detailed description of the Severity”.</td></tr>
-              <tr><td class="c-field">Full description of the impact of the vulnerability<span class="fieldref">v29</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Separate field from the severity description above.</td></tr>
-              <tr><td class="c-field">Malicious actor that has exploited/is exploiting the vulnerability<span class="fieldref">v31</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Mandatory if you know it; do not speculate about attribution.</td></tr>
+              <tr><td class="c-field">Date when corrective or mitigating measure has been available<a class="fieldref" href="#f-v27" title="Open field v27 in the reference">v27</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The date a corrective or mitigating measure became available — this is what the 14-day deadline runs from.</td></tr>
+              <tr><td class="c-field">Full description of the severity of the vulnerability<a class="fieldref" href="#f-v28" title="Open field v28 in the reference">v28</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters. ENISA calls the incident equivalent “Detailed description of the Severity”.</td></tr>
+              <tr><td class="c-field">Full description of the impact of the vulnerability<a class="fieldref" href="#f-v29" title="Open field v29 in the reference">v29</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Separate field from the severity description above.</td></tr>
+              <tr><td class="c-field">Malicious actor that has exploited/is exploiting the vulnerability<a class="fieldref" href="#f-v31" title="Open field v31 in the reference">v31</a></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Mandatory if you know it; do not speculate about attribution.</td></tr>
               <tr class="group"><td colspan="3">Incident only</td></tr>
-              <tr><td class="c-field">Applied or ongoing mitigation measures<span class="fieldref">i37</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Measures applied and still running. The FAQ writes “applied and ongoing”, the glossary “applied or ongoing”.</td></tr>
-              <tr><td class="c-field">Detailed description of the Severity of the incident<span class="fieldref">i38</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters.</td></tr>
-              <tr><td class="c-field">Detailed description of the Impact of the incident<span class="fieldref">i39</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">A second, separate description field — impact, not severity.</td></tr>
-              <tr><td class="c-field">Type of Threat or root cause likely to have triggered incident<span class="fieldref">i40</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The type of threat or root cause likely to have triggered the incident.</td></tr>
+              <tr><td class="c-field">Applied or ongoing mitigation measures<a class="fieldref" href="#f-i37" title="Open field i37 in the reference">i37</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Measures applied and still running. The FAQ writes “applied and ongoing”, the glossary “applied or ongoing”.</td></tr>
+              <tr><td class="c-field">Detailed description of the Severity of the incident<a class="fieldref" href="#f-i38" title="Open field i38 in the reference">i38</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters.</td></tr>
+              <tr><td class="c-field">Detailed description of the Impact of the incident<a class="fieldref" href="#f-i39" title="Open field i39 in the reference">i39</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">A second, separate description field — impact, not severity.</td></tr>
+              <tr><td class="c-field">Type of Threat or root cause likely to have triggered incident<a class="fieldref" href="#f-i40" title="Open field i40 in the reference">i40</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The type of threat or root cause likely to have triggered the incident.</td></tr>
             </tbody>
           </table>
         </div>
@@ -510,14 +522,14 @@
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
               <tbody>
-              <tr><td class="c-field">Date when corrective or mitigating measure has been available<span class="fieldref">v27</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Vulnerability only &mdash; and the date the 14-day deadline runs from.</td></tr>
-              <tr><td class="c-field">Full description of the severity of the vulnerability<span class="fieldref">v28</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters. ENISA calls the incident equivalent &ldquo;Detailed description of the Severity&rdquo;.</td></tr>
-              <tr><td class="c-field">Full description of the impact of the vulnerability<span class="fieldref">v29</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">A separate field from the severity description.</td></tr>
-              <tr><td class="c-field">Malicious actor that has exploited / is exploiting the vulnerability<span class="fieldref">v31</span></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Mandatory if known. Do not speculate about attribution.</td></tr>
-              <tr><td class="c-field">Applied and ongoing mitigation measures<span class="fieldref">i37</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only. The FAQ writes &ldquo;applied <em>and</em> ongoing&rdquo;, the glossary &ldquo;applied <em>or</em> ongoing&rdquo;.</td></tr>
-              <tr><td class="c-field">Detailed description of the Severity of the incident<span class="fieldref">i38</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only. Max. 4,000 characters.</td></tr>
-              <tr><td class="c-field">Detailed description of the Impact of the incident<span class="fieldref">I39</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only. Separate from severity.</td></tr>
-              <tr><td class="c-field">Type of threat or root cause that is likely to have triggered the incident<span class="fieldref">i40</span></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only.</td></tr>
+              <tr><td class="c-field">Date when corrective or mitigating measure has been available<a class="fieldref" href="#f-v27" title="Open field v27 in the reference">v27</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Vulnerability only &mdash; and the date the 14-day deadline runs from.</td></tr>
+              <tr><td class="c-field">Full description of the severity of the vulnerability<a class="fieldref" href="#f-v28" title="Open field v28 in the reference">v28</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters. ENISA calls the incident equivalent &ldquo;Detailed description of the Severity&rdquo;.</td></tr>
+              <tr><td class="c-field">Full description of the impact of the vulnerability<a class="fieldref" href="#f-v29" title="Open field v29 in the reference">v29</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">A separate field from the severity description.</td></tr>
+              <tr><td class="c-field">Malicious actor that has exploited / is exploiting the vulnerability<a class="fieldref" href="#f-v31" title="Open field v31 in the reference">v31</a></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Mandatory if known. Do not speculate about attribution.</td></tr>
+              <tr><td class="c-field">Applied and ongoing mitigation measures<a class="fieldref" href="#f-i37" title="Open field i37 in the reference">i37</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only. The FAQ writes &ldquo;applied <em>and</em> ongoing&rdquo;, the glossary &ldquo;applied <em>or</em> ongoing&rdquo;.</td></tr>
+              <tr><td class="c-field">Detailed description of the Severity of the incident<a class="fieldref" href="#f-i38" title="Open field i38 in the reference">i38</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only. Max. 4,000 characters.</td></tr>
+              <tr><td class="c-field">Detailed description of the Impact of the incident<a class="fieldref" href="#f-i39" title="Open field i39 in the reference">i39</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only. Separate from severity.</td></tr>
+              <tr><td class="c-field">Type of threat or root cause that is likely to have triggered the incident<a class="fieldref" href="#f-i40" title="Open field i40 in the reference">i40</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only.</td></tr>
               </tbody></table>
             </div>
             <!-- OWN-NOTE fin-fields: your own practical note here, as <p class="ownnote">…</p> -->
@@ -541,45 +553,68 @@
         <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Who may do what</span></div>
         <div class="table-wrap">
           <table class="data">
-            <thead><tr><th>Function</th><th>Primary AR</th><th>Secondary AR</th></tr></thead>
+            <colgroup><col><col class="col-perm"><col class="col-perm"></colgroup>
+            <thead><tr><th>Function</th><th class="c-perm">Primary AR</th><th class="c-perm">Secondary AR</th></tr></thead>
             <tbody>
-              <tr><td>Submit notifications</td><td>Yes</td><td>Yes</td></tr>
-              <tr><td>Manage the manufacturer entity</td><td>Yes</td><td>No</td></tr>
-              <tr><td>Invite a Secondary AR</td><td>Yes</td><td>No</td></tr>
-              <tr><td>Remove a Secondary AR’s association</td><td>Yes</td><td>No</td></tr>
-              <tr><td>Remove own association</td><td>Yes</td><td>Yes</td></tr>
-              <tr><td>Claim the Primary role</td><td>—</td><td>Yes, by request</td></tr>
-              <tr><td>Associate with a further manufacturer</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td class="c-func">Submit notifications</td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td></tr>
+              <tr><td class="c-func">Manage the manufacturer entity</td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td><td class="c-perm"><span class="perm no"><span class="perm-ic" aria-hidden="true">✕</span>No</span></td></tr>
+              <tr><td class="c-func">Invite a Secondary AR</td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td><td class="c-perm"><span class="perm no"><span class="perm-ic" aria-hidden="true">✕</span>No</span></td></tr>
+              <tr><td class="c-func">Remove a Secondary AR’s association</td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td><td class="c-perm"><span class="perm no"><span class="perm-ic" aria-hidden="true">✕</span>No</span></td></tr>
+              <tr><td class="c-func">Remove own association</td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td></tr>
+              <tr><td class="c-func">Claim the Primary role</td><td class="c-perm"><span class="perm na"><span class="perm-ic" aria-hidden="true">—</span><span class="perm-nalabel">n/a</span></span></td><td class="c-perm"><span class="perm req"><span class="perm-ic" aria-hidden="true">→</span>By request</span></td></tr>
+              <tr><td class="c-func">Associate with a further manufacturer</td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td></tr>
             </tbody>
           </table>
         </div>
 
-        <div class="seclabel proc"><span class="seclabel-bar"></span><span class="seclabel-text">Procedure</span></div>
-        <ol class="steps">
-          <li class="step"><span class="step-num">1</span><strong>Invite a Secondary AR.</strong> Primary only. In <em>Settings</em>, add a Secondary AR for the manufacturer you represent and enter their email address. The invitee must not already be registered on the SRP. They receive an invitation and complete registration with the manufacturer details pre-filled.</li>
-          <li class="step"><span class="step-num">2</span><strong>Claim the Primary role.</strong> A Secondary AR can request to become the Primary AR from <em>Settings</em>. This matters when the Primary leaves: without it, an account nobody controls would hold the manufacturer entity.</li>
-          <li class="step"><span class="step-num">3</span><strong>Remove an association.</strong> The Primary can remove their own association or that of a Secondary; a Secondary can remove their own. Use this when someone leaves, rather than abandoning the account.</li>
-          <li class="step"><span class="step-num">4</span><strong>Add another manufacturer.</strong> One account can represent several manufacturers — <em>Settings</em> → <em>Association Management</em> → <em>Add Manufacturer</em>. Each association is validated by the CSIRT of that manufacturer’s Member State.</li>
-          <li class="step"><span class="step-num">5</span><strong>Check your details.</strong> <em>Settings</em> shows personal details and lets you update manufacturer details, using the same form as registration.</li>
-          <li class="step"><span class="step-num">6</span><strong>Watch the dashboard.</strong> The dashboard lists every notification for the manufacturers you represent, with its state. The <em>Alerts</em> tab collects the platform’s notifications to you — submissions are confirmed by both email and an alert, to you and to all other ARs of that manufacturer.</li>
+        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">Screen by screen</span><span class="seclabel-hint">every function, with the screen it lives on</span></div>
+        <ol class="walk">
+          <li class="wstep" id="step-role-invite">
+            <div class="wstep-head"><span class="wstep-num">1</span><h3>Invite a Secondary AR</h3></div>
+            <figure><img class="shot" src="img/enisa/if-05-invite-secondary.png" alt="Settings dialog for entering a Secondary AR email address and sending the invitation"><figcaption>&ldquo;Invite Backup AR&rdquo; in <em>Settings</em> &mdash; an email address and &ldquo;Send Invitation&rdquo;.</figcaption></figure>
+            <p class="wstep-lede">Primary AR only. The invitee must not already be registered on the SRP; they receive the invitation and complete registration with the manufacturer details pre-filled &mdash; see <a href="#step-reg-invited">Registration, step&nbsp;5</a>.</p>
+            <figure><img class="shot" src="img/enisa/if-06-invite-confirmation.png" alt="Confirmation that the invitation has been sent, with the new representative listed as Pending"><figcaption>Confirmation. The new representative appears under <em>Representatives</em> as &ldquo;Pending&rdquo;, Backup AR.</figcaption></figure>
+            <p class="wstep-more">Until they accept, the record holds only their email address and the manufacturer, with no role assigned. The link expires after seven days.</p>
+            <!-- OWN-NOTE role-invite: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-role-claim">
+            <div class="wstep-head"><span class="wstep-num">2</span><h3>Claim the Primary role</h3></div>
+            <figure><img class="shot" src="img/enisa/if-08-claim-primary-role.png" alt="Manufacturer details with the Claim Primary AR Role action next to the current user"><figcaption>&ldquo;Claim Primary AR Role&rdquo;, offered to a Secondary AR on the manufacturer record.</figcaption></figure>
+            <p class="wstep-lede">This is the succession path. Without it, an account nobody controls would keep hold of the manufacturer entity when the Primary AR leaves &mdash; so agree in advance who claims it.</p>
+            <!-- OWN-NOTE role-claim: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-role-remove">
+            <div class="wstep-head"><span class="wstep-num">3</span><h3>Remove an association</h3></div>
+            <figure><img class="shot" src="img/enisa/if-09-remove-association.png" alt="Manufacturer details with the Remove Association action highlighted"><figcaption>&ldquo;Remove Association&rdquo;. The Primary can remove a Secondary&rsquo;s or their own; a Secondary only their own.</figcaption></figure>
+            <p class="wstep-lede">Use this when someone leaves, rather than abandoning the account. Removing the last association leaves the manufacturer without a representative, so hand the Primary role over first.</p>
+            <!-- OWN-NOTE role-remove: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-role-addmfr">
+            <div class="wstep-head"><span class="wstep-num">4</span><h3>Add another manufacturer</h3></div>
+            <figure><img class="shot" src="img/enisa/if-07-add-manufacturer.png" alt="Association Management tab in Settings with the Add Manufacturer button"><figcaption><em>Settings</em> &rarr; <em>Association Management</em> &rarr; <em>Add Manufacturer</em>, with each association&rsquo;s status and role.</figcaption></figure>
+            <p class="wstep-lede">One account can represent several manufacturers. Each new association is verified separately by the CSIRT of that manufacturer&rsquo;s Member State, and starts out &ldquo;Unverified&rdquo;.</p>
+            <!-- OWN-NOTE role-addmfr: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-role-details">
+            <div class="wstep-head"><span class="wstep-num">5</span><h3>Check your details</h3></div>
+            <figure><img class="shot" src="img/enisa/if-01-personal-details.png" alt="Settings, Personal Details tab showing First Name, Last Name, Email and Legal name"><figcaption><em>Personal Details</em> &mdash; the same four fields as registration.</figcaption></figure>
+            <figure><img class="shot" src="img/enisa/if-03-manufacturer-details.png" alt="Association Management with Show Details next to a verified manufacturer"><figcaption>&ldquo;Show Details&rdquo; opens the manufacturer record, editable through the registration form.</figcaption></figure>
+            <p class="wstep-lede">Worth doing before a deadline rather than during one: this is where you confirm the manufacturer is verified and the CDaC is the one you expect.</p>
+            <!-- OWN-NOTE role-details: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
+          <li class="wstep" id="step-role-dashboard">
+            <div class="wstep-head"><span class="wstep-num">6</span><h3>Watch the dashboard and the alerts</h3></div>
+            <figure><img class="shot" src="img/enisa/if-04-dashboard.png" alt="Dashboard listing notifications with tabs for All, Needs Submission, Corrective Measures Required, Draft and Archive"><figcaption>The Dashboard, with a tab and a count for each state, and search by ID, title or manufacturer.</figcaption></figure>
+            <figure><img class="shot" src="img/enisa/if-02-alerts-tab.png" alt="Alerts tab listing action-required and notification-updated messages"><figcaption>The <em>Alerts</em> tab: deadlines approaching, and notifications invalidated by a CSIRT.</figcaption></figure>
+            <p class="wstep-lede">Every submission is confirmed twice &mdash; by email and by an alert &mdash; to you and to all other ARs of that manufacturer. An invalidated notification shows up here, not in your inbox alone.</p>
+            <!-- OWN-NOTE role-dashboard: your own practical note here, as <p class="ownnote">…</p> -->
+          </li>
         </ol>
 
         <div class="callout amber">
           <p><strong class="lead-in">Drafts are private.</strong> A saved draft is visible only to the AR who created it — not to the other ARs of the same manufacturer. Plan for that: a draft left behind by an absent colleague cannot be picked up by someone else.</p>
         </div>
 
-        <div class="seclabel shots"><span class="seclabel-bar"></span><span class="seclabel-text">From the platform</span></div>
-        <div class="imggrid">
-          <figure><img class="shot" src="img/enisa/if-05-invite-secondary.png" alt="Settings dialog for entering a Secondary AR email address and sending the invitation"><figcaption>Inviting a Secondary AR (Primary only).</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/if-06-invite-confirmation.png" alt="Pop-up confirming that the invitation has been sent"><figcaption>Confirmation that the invitation was sent.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/if-08-claim-primary-role.png" alt="Settings option to claim the Primary AR role for a manufacturer"><figcaption>A Secondary AR claiming the Primary role.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/if-09-remove-association.png" alt="Confirmation dialog for removing an AR to manufacturer association"><figcaption>Removing an AR–manufacturer association.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/if-07-add-manufacturer.png" alt="Association management screen with the Add Manufacturer action"><figcaption>Associating with a further manufacturer.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/if-01-personal-details.png" alt="Settings view showing the AR personal details"><figcaption>Personal details under Settings.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/if-03-manufacturer-details.png" alt="Settings view showing the manufacturer details"><figcaption>Manufacturer details under Settings.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/if-04-dashboard.png" alt="Dashboard listing notifications and their states"><figcaption>The dashboard, listing notifications and their states.</figcaption></figure>
-          <figure><img class="shot" src="img/enisa/if-02-alerts-tab.png" alt="Alerts tab listing platform notifications to the user"><figcaption>The Alerts tab.</figcaption></figure>
-        </div>
         <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-interface-functions" target="_blank" rel="noopener">CRA SRP guidance — AR Interface functions</a>, retrieved 7 September 2026. Reproduced with acknowledgement per the ENISA Legal Notice.</p>
 
       </section>
@@ -589,7 +624,7 @@
       <section id="fields" class="phase divider">
         <div class="phase-eyebrow">Reference &middot; the reporting template</div>
         <h2>Every field, explained</h2>
-        <p class="intro">The phase tables above show what each stage <em>requires</em>. This is the whole form: all 38 fields ENISA itemises, with what each one means, how ENISA says to complete it, its worked example and its expected format. Open a field to read it. The source is ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">CRA SRP Glossary</a>, retrieved 7&nbsp;September&nbsp;2026; the meanings, instructions and examples are quoted from it.</p>
+        <p class="intro">The phase tables above show what each stage <em>requires</em>. This is the whole form: all 38 fields ENISA itemises, with what each one means, how ENISA says to complete it, its worked example and its expected format. Read it as cards, one field at a time, or switch to the full table below. The source is ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">CRA SRP Glossary</a>, retrieved 7&nbsp;September&nbsp;2026; the meanings, instructions and examples are quoted from it.</p>
 
         <div class="callout">
           <p><strong class="lead-in">Two numbering systems, both ENISA&rsquo;s.</strong> The FAQ counts <strong>43</strong> fields, the Glossary itemises <strong>38</strong>. Nothing is missing from either: the FAQ additionally lists five fields the platform fills in by itself (notification level, three reporting timestamps, and the reporter), which the Glossary does not describe because you never type them. This page uses the FAQ number as the field&rsquo;s label and names the Glossary number inside each entry, so a field stays findable in both.</p>
@@ -609,10 +644,18 @@
           <p><strong class="lead-in">Read the examples as examples.</strong> On 7&nbsp;September&nbsp;2026 ENISA rewrote 29 of the 38 completion instructions from an instruction into an illustration &mdash; &ldquo;Enter a short, specific title&hellip;&rdquo; became &ldquo;<em>For example,</em> enter a short, specific title&hellip;&rdquo;. Nothing else in those sentences changed. They are quoted below as they now stand, so what looks like hedging is ENISA&rsquo;s wording, not ours. Where the glossary contradicts itself, this page says so in the field rather than quietly smoothing it over.</p>
         </div>
 
+        <div class="viewswitch" role="group" aria-label="How to display the field reference">
+          <span class="viewswitch-label">Show as</span>
+          <button type="button" class="vsbtn" data-view="cards" aria-pressed="true">Cards</button>
+          <button type="button" class="vsbtn" data-view="table" aria-pressed="false">Full table</button>
+          <span class="viewswitch-hint">Cards open one field at a time. The full table lays all 38 out at once &mdash; wide, and it scrolls sideways on a phone.</span>
+        </div>
+
+        <div id="fieldcards">
         <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Common fields</span></div>
         <p class="fieldgroup-sub">Apply to both an actively exploited vulnerability and a severe incident.</p>
         <div class="faq-wrap">
-          <details class="faq field">
+          <details class="faq field" id="f-1">
             <summary><span class="faq-qwrap"><span class="faq-num">1</span><span>Notification type (Vulnerability/Incident)</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 1</span> &middot; applies to Both</p>
@@ -623,7 +666,7 @@
               <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-7">
             <summary><span class="faq-qwrap"><span class="faq-num">7</span><span>Title</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 2</span> &middot; applies to Both</p>
@@ -634,7 +677,7 @@
               <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-8">
             <summary><span class="faq-qwrap"><span class="faq-num">8</span><span>Summary</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 3</span> &middot; applies to Both</p>
@@ -645,7 +688,7 @@
               <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-9">
             <summary><span class="faq-qwrap"><span class="faq-num">9</span><span>Manufacturer name</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 4</span> &middot; applies to Both</p>
@@ -656,7 +699,7 @@
               <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-10">
             <summary><span class="faq-qwrap"><span class="faq-num">10</span><span>Member States where product available (Concerned CSIRT)</span></span><span class="field-chips"><span class="chip conditional">If available</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 5</span> &middot; applies to Both</p>
@@ -667,7 +710,7 @@
               <p class="field-status">Early Warning <span class="chip conditional">If available</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-11">
             <summary><span class="faq-qwrap"><span class="faq-num">11</span><span>Product Name</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 6</span> &middot; applies to Both</p>
@@ -678,7 +721,7 @@
               <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-12">
             <summary><span class="faq-qwrap"><span class="faq-num">12</span><span>Product version</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 7</span> &middot; applies to Both</p>
@@ -689,7 +732,7 @@
               <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-13">
             <summary><span class="faq-qwrap"><span class="faq-num">13</span><span>Product Type (Default/Important/Critical)</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 8</span> &middot; applies to Both</p>
@@ -700,7 +743,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-14">
             <summary><span class="faq-qwrap"><span class="faq-num">14</span><span>Product Class</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 9</span> &middot; applies to Both</p>
@@ -711,7 +754,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-15">
             <summary><span class="faq-qwrap"><span class="faq-num">15</span><span>Product Category</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 10</span> &middot; applies to Both</p>
@@ -722,7 +765,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-16">
             <summary><span class="faq-qwrap"><span class="faq-num">16</span><span>End of support indicator</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 11</span> &middot; applies to Both</p>
@@ -734,7 +777,7 @@
               <div class="faq-amend"><p><strong>ENISA’s own text contradicts itself here.</strong> The <em>meaning</em> above describes the CRA duty to <em>inform</em> users that support has ended — whether the product has a user interface for doing so. The completion instruction, the format and the example all ask something else: has the support period ended, Yes or No. The workable reading is the Yes/No one; it is the only one the field can hold. (ENISA also writes “or No when is doesn’t”.) Reported unchanged through two editing passes of the glossary.</p></div>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-17">
             <summary><span class="faq-qwrap"><span class="faq-num">17</span><span>Component name</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 12</span> &middot; applies to Both</p>
@@ -745,7 +788,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-18">
             <summary><span class="faq-qwrap"><span class="faq-num">18</span><span>Mitigating measure expected shortly</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 13</span> &middot; applies to Both</p>
@@ -756,7 +799,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-19">
             <summary><span class="faq-qwrap"><span class="faq-num">19</span><span>User Action able to reduce impact</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 14</span> &middot; applies to Both</p>
@@ -767,7 +810,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-20">
             <summary><span class="faq-qwrap"><span class="faq-num">20</span><span>Considered sensitivity of information</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip conditional">If available</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 15</span> &middot; applies to Both</p>
@@ -778,7 +821,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip conditional">If available</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-21">
             <summary><span class="faq-qwrap"><span class="faq-num">21</span><span>Corrective or mitigating measures taken</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 16</span> &middot; applies to Both</p>
@@ -789,7 +832,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-22">
             <summary><span class="faq-qwrap"><span class="faq-num">22</span><span>Corrective or mitigating measures users can take</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 17</span> &middot; applies to Both</p>
@@ -801,7 +844,7 @@
               <div class="faq-amend"><p>The FAQ writes this field “Corrective or mitigating measures that <em>users</em> can take”; the glossary and the current FAQ table say “<em>user</em>”. Same field.</p></div>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-23">
             <summary><span class="faq-qwrap"><span class="faq-num">23</span><span>Attack vector</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip optional">Optional</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary 18</span> &middot; applies to Both</p>
@@ -816,7 +859,7 @@
         <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Actively exploited vulnerability</span></div>
         <p class="fieldgroup-sub">Shown only when the notification type is <em>Vulnerability</em>.</p>
         <div class="faq-wrap">
-          <details class="faq field">
+          <details class="faq field" id="f-v24">
             <summary><span class="faq-qwrap"><span class="faq-num">v24</span><span>CVE ID</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary v19</span> &middot; applies to AEV</p>
@@ -827,7 +870,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-v25">
             <summary><span class="faq-qwrap"><span class="faq-num">v25</span><span>EUVD ID</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary v20</span> &middot; applies to AEV</p>
@@ -838,7 +881,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-v26">
             <summary><span class="faq-qwrap"><span class="faq-num">v26</span><span>General information</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary v21</span> &middot; applies to AEV</p>
@@ -849,7 +892,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-v27">
             <summary><span class="faq-qwrap"><span class="faq-num">v27</span><span>Date when corrective or mitigating measure has been available</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary v22</span> &middot; applies to AEV</p>
@@ -860,7 +903,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-v28">
             <summary><span class="faq-qwrap"><span class="faq-num">v28</span><span>Full description of the severity of the vulnerability</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary v23</span> &middot; applies to AEV</p>
@@ -872,7 +915,7 @@
               <div class="faq-amend"><p>The FAQ calls the AEV pair “Full description of the severity / impact” and the SI pair “Detailed description of the Severity / Impact”. Same kind of field, two names — both spellings are given here so you recognise them in the portal.</p></div>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-v29">
             <summary><span class="faq-qwrap"><span class="faq-num">v29</span><span>Full description of the impact of the vulnerability</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary v24</span> &middot; applies to AEV</p>
@@ -883,7 +926,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-v30">
             <summary><span class="faq-qwrap"><span class="faq-num">v30</span><span>Date/time when you become aware of the Actively Exploited Vulnerability [1]</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary v25</span> &middot; applies to AEV</p>
@@ -895,7 +938,7 @@
               <p class="field-foot">ENISA footnote [1]: “This field will be available in the next release of the Platform.”</p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-v31">
             <summary><span class="faq-qwrap"><span class="faq-num">v31</span><span>Malicious actor that has exploited/is exploiting the vulnerability</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip conditional">If available</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary v26</span> &middot; applies to AEV</p>
@@ -906,7 +949,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip conditional">If available</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-v32">
             <summary><span class="faq-qwrap"><span class="faq-num">v32</span><span>Particular Exceptional Circumstances (PEC)</span></span><span class="field-chips"><span class="chip na">n/a</span><span class="chip optional">Optional</span><span class="chip na">n/a</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary v27</span> &middot; applies to AEV</p>
@@ -917,7 +960,7 @@
               <div class="faq-amend"><p>Only reachable in the 72-hour notification — not at the Early Warning, not in the Final Report.</p></div>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-v33">
             <summary><span class="faq-qwrap"><span class="faq-num">v33</span><span>PEC Delay Reason</span></span><span class="field-chips"><span class="chip na">n/a</span><span class="chip optional">Optional</span><span class="chip na">n/a</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary v28</span> &middot; applies to AEV</p>
@@ -929,7 +972,7 @@
               <div class="faq-amend"><p><strong>Inconsistent since 7 September 2026.</strong> The meaning says “one of the three” while the completion instruction says “at least one of the three”. The three grounds themselves are those of the third subparagraph of Art. 16(2) CRA and have not changed.</p></div>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-v34">
             <summary><span class="faq-qwrap"><span class="faq-num">v34</span><span>Please provide further information</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary v29</span> &middot; applies to AEV</p>
@@ -944,7 +987,7 @@
         <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Severe incident</span></div>
         <p class="fieldgroup-sub">Shown only when the notification type is <em>Incident</em>.</p>
         <div class="faq-wrap">
-          <details class="faq field">
+          <details class="faq field" id="f-i35">
             <summary><span class="faq-qwrap"><span class="faq-num">i35</span><span>Incident is suspected of unlawful or malicious acts</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary i30</span> &middot; applies to SI</p>
@@ -955,7 +998,7 @@
               <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-i36">
             <summary><span class="faq-qwrap"><span class="faq-num">i36</span><span>General information about nature of incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary i31</span> &middot; applies to SI</p>
@@ -966,7 +1009,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-i37">
             <summary><span class="faq-qwrap"><span class="faq-num">i37</span><span>Applied or ongoing mitigation measures</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary i32</span> &middot; applies to SI</p>
@@ -978,7 +1021,7 @@
               <div class="faq-amend"><p>The FAQ writes “Applied <strong>and</strong> ongoing mitigation measures”, the glossary “Applied <strong>or</strong> ongoing”. Not a pure style difference; the FAQ wording is the wider one.</p></div>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-i38">
             <summary><span class="faq-qwrap"><span class="faq-num">i38</span><span>Detailed description of the Severity of the incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary i33</span> &middot; applies to SI</p>
@@ -990,7 +1033,7 @@
               <div class="faq-amend"><p>Two separate description fields, not a duplicate: this one is severity, the next one is impact. Both up to 4,000 characters, both required in the Final Report.</p></div>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-i39">
             <summary><span class="faq-qwrap"><span class="faq-num">i39</span><span>Detailed description of the Impact of the incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary i34</span> &middot; applies to SI</p>
@@ -1002,7 +1045,7 @@
               <div class="faq-amend"><p>ENISA numbers this row <code>I39.</code> in the FAQ table — a capital I where every other row uses a lowercase prefix.</p></div>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-i40">
             <summary><span class="faq-qwrap"><span class="faq-num">i40</span><span>Type of Threat or root cause likely to have triggered incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary i35</span> &middot; applies to SI</p>
@@ -1013,7 +1056,7 @@
               <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-i41">
             <summary><span class="faq-qwrap"><span class="faq-num">i41</span><span>Date/time when you become aware of the incident [2]</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary i36</span> &middot; applies to SI</p>
@@ -1026,7 +1069,7 @@
               <div class="faq-amend"><p>Required. This is the field the deadlines run from. If the exact time is unknown, enter your best supported estimate and say in the description that it is an estimate.</p></div>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-i42">
             <summary><span class="faq-qwrap"><span class="faq-num">i42</span><span>Date/time incident occurred</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip optional">Optional</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary i37</span> &middot; applies to SI</p>
@@ -1038,7 +1081,7 @@
               <div class="faq-amend"><p>Optional — and a different field from the one above. “When you became aware” is mandatory, “when the incident occurred” is not.</p></div>
             </div>
           </details>
-          <details class="faq field">
+          <details class="faq field" id="f-i43">
             <summary><span class="faq-qwrap"><span class="faq-num">i43</span><span>Initial assessment of the incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-src"><span class="field-gl">Glossary i38</span> &middot; applies to SI</p>
@@ -1050,6 +1093,9 @@
             </div>
           </details>
         </div>
+        </div>
+
+        <div id="fieldtable" hidden></div>
 
         <p class="imgsrc">Field meanings, completion instructions, examples and formats: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">CRA SRP Glossary</a>, version&nbsp;1.1, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Field numbers follow ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions" target="_blank" rel="noopener">SRP FAQ</a>, question&nbsp;16.</p>
       </section>
@@ -1128,7 +1174,7 @@
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q8</span><span>How does the Single Reporting Platform operate?</span><span class="faq-tag">UPDATED</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q8</span><span>How does the Single Reporting Platform operate?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p>Manufacturers and open-source software stewards submit notifications electronically through the SRP and select the relevant CSIRT designated as coordinator. Manufacturers and, once applicable, open-source software stewards are responsible for identifying the relevant CSIRT designated as coordinator in accordance with Art. 14(7) of the CRA and submitting their notification accordingly.</p>
               <p>Only one notification is required for any given actively exploited vulnerability (AEV) or severe incident (SI), even when a manufacturer has multiple branches or subsidiaries in the EU and/or its parent company is headquartered outside the EU. It is the manufacturer’s responsibility to coordinate internally across its corporate structure and ensure that the required notification is submitted through the SRP.</p>
@@ -1137,7 +1183,7 @@
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q9</span><span>How is the platform accessible and how does the registration process work?</span><span class="faq-tag">UPDATED</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q9</span><span>How is the platform accessible and how does the registration process work?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p>The SRP will be available at <a href="https://portal.cra-srp.enisa.europa.eu" target="_blank" rel="noopener">https://portal.cra-srp.enisa.europa.eu</a>.</p>
               <p>Assigned Representatives (ARs) of manufacturers and, once applicable, open-source stewards must have an EU Login account with multi-factor authentication (MFA) enabled and use it to register on the SRP. An EU Login account can be created in advance at the following link: <a href="https://ecas.ec.europa.eu/cas/login" target="_blank" rel="noopener">https://ecas.ec.europa.eu/cas/login</a>. No additional corporate entity authentication mechanism is currently used by the SRP.</p>
@@ -1206,7 +1252,7 @@
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q18</span><span>How do I know which national CSIRT I should report to through the CRA SRP?</span><span class="faq-tag">UPDATED</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q18</span><span>How do I know which national CSIRT I should report to through the CRA SRP?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p>Manufacturers and, once applicable, open-source software stewards are responsible for identifying the correct CSIRT designated as coordinator (CDaC) in accordance with Art. 14(7) of the CRA and selecting it when submitting a notification through the SRP. If the wrong CDaC is selected, the notification may be invalidated and will need to be resubmitted to the correct CDaC.</p>
               <p>In general, you should report to the CDaC in the Member State of your main establishment in the EU. Under the CRA, the main establishment is the place where decisions related to the cybersecurity of your products with digital elements are predominantly taken.</p>
@@ -1255,7 +1301,7 @@
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q22</span><span>How does the platform ensure security?</span><span class="faq-tag">UPDATED</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q22</span><span>How does the platform ensure security?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p>ENISA is legally required to take appropriate technical and organisational measures to manage risks to the platform's security and must notify the CSIRTs Network and the European Commission of any security incidents affecting the platform itself.</p>
               <p>Before launch, the platform underwent several user, security and technical testing exercises with selected stakeholders, including national CSIRTs, the CRA Expert Group, selected manufacturers and other users. Their feedback helped strengthen the platform’s functionality, security and usability. ENISA does not currently foresee additional testing before go-live.</p>
@@ -1303,7 +1349,7 @@
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q28</span><span>How do I connect to the CRA Single Reporting Platform?</span><span class="faq-tag">NEW</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q28</span><span>How do I connect to the CRA Single Reporting Platform?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p>The SRP will be available at <a href="https://portal.cra-srp.enisa.europa.eu" target="_blank" rel="noopener">https://portal.cra-srp.enisa.europa.eu</a>.</p>
               <p>From there, select "Assigned Representative" and log in using your EU Login account.</p>
@@ -1311,7 +1357,7 @@
             </div>
           </details>
           <details class="faq">
-            <summary><span class="faq-qwrap"><span class="faq-num">Q29</span><span>When do the reporting obligations start?</span><span class="faq-tag">NEW</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">Q29</span><span>When do the reporting obligations start?</span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p>The CRA reporting obligations under Art. 14 apply to manufacturers of products with digital elements from 11 September 2026.</p>
               <p>In accordance with Art. 71(2) of the CRA, the reporting obligations for open-source software stewards under Art. 24(3) apply from 11 December 2027.</p>

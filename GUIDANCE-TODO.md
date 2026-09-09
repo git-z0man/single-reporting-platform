@@ -48,7 +48,7 @@ Fields on this screen: **Name**, **CSIRT Designated as Coordinator (CDaC)**, **A
 
 ### `reg-invited` — Phase 01 · Registration: If you were invited: accept instead
 
-No field table on this step — a note here would be about the screen or the flow.
+Fields on this screen: **First Name**, **Last Name**, **Email**, **Legal name (for legal entities)**, and, on step 2 of 2, **Name / CDaC / Additional Information** pre-filled from the Primary AR
 
 
 ### `ew-start` — Phase 02 · Early Warning: Start the notification
@@ -108,4 +108,34 @@ No field table on this step — a note here would be about the screen or the flo
 
 ### `fin-fields` — Phase 04 · Final Report: The closing fields
 
-Fields on this screen: **Date when corrective or mitigating measure has been available** (v27), **Full description of the severity of the vulnerability** (v28), **Full description of the impact of the vulnerability** (v29), **Malicious actor that has exploited / is exploiting the vulnerability** (v31), **Applied and ongoing mitigation measures** (i37), **Detailed description of the Severity of the incident** (i38), **Detailed description of the Impact of the incident** (I39), **Type of threat or root cause that is likely to have triggered the incident** (i40)
+Fields on this screen: **Date when corrective or mitigating measure has been available** (v27), **Full description of the severity of the vulnerability** (v28), **Full description of the impact of the vulnerability** (v29), **Malicious actor that has exploited / is exploiting the vulnerability** (v31), **Applied and ongoing mitigation measures** (i37), **Detailed description of the Severity of the incident** (i38), **Detailed description of the Impact of the incident** (i39), **Type of threat or root cause that is likely to have triggered the incident** (i40)
+
+
+### `role-invite` — Accounts and roles: Invite a Secondary AR
+
+No field table — a note here would be about who to invite, and when.
+
+
+### `role-claim` — Accounts and roles: Claim the Primary role
+
+No field table — the succession question: who takes over, and how it is agreed in advance.
+
+
+### `role-remove` — Accounts and roles: Remove an association
+
+No field table — what to do before someone leaves.
+
+
+### `role-addmfr` — Accounts and roles: Add another manufacturer
+
+No field table — how it works when one AR represents several manufacturers.
+
+
+### `role-details` — Accounts and roles: Check your details
+
+No field table — what is worth checking, and when.
+
+
+### `role-dashboard` — Accounts and roles: Watch the dashboard and the alerts
+
+No field table — how you notice a deadline or an invalidated notification in time.
