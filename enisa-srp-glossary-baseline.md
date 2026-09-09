@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.1 (page footer: last update 05/09/2026)"
-retrieved: 2026-09-09 (fetched 12:19 UTC)
+retrieved: 2026-09-09 (fetched 21:07 UTC)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -38,6 +38,14 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-09 21:07 UTC (vs. 2026-09-09 12:19 UTC)
+
+Page still returns HTTP 200 at `cra-srp-glossary2`, fetched alongside all seven other tracked SRP pages in the same run (two of which did change this time — see `enisa-srp-faq-baseline.md`). All 38 fields re-verified row by row: no field name, meaning, how-to-complete text, example, format, or per-stage status moved. Footer still verbatim lowercase "version 1.1, last update: 05/09/2026".
+
+**Unchanged**
+
+All 38 rows, including every previously tracked defect: field 11's contradictory meaning and its "is doesn't" typo, v26's doubled full stop, v29's missing space in "(CDaC)taking", i36's and i37's broken grammar, v28's three grounds and its "one" vs "at least one" inconsistency, and i32's "or" against the FAQ's "and". Both footnotes unchanged.
 
 ### 2026-09-09 12:19 UTC (vs. 2026-09-09 03:09 UTC)
 
@@ -201,3 +209,4 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 
 - 2026-09-09 (03:09 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other tracked SRP pages in the same run (all HTTP 200, all re-verified unchanged — see `enisa-srp-faq-baseline.md`). All 38 fields re-verified row-by-row — no field, meaning, example, format or status moved. One capture correction: the footer's raw HTML is verbatim lowercase "version 1.1, last update: 05/09/2026", where this file had written "Version 1.1" throughout; corrected as a baseline-fidelity fix, not counted as an ENISA change since it could not be determined whether the case was ever verified byte-for-byte before. See the change log entry at the top. `last_check` (already bumped to today by the day's earlier heartbeat run) and `retrieved` updated; `last_change` left at 2026-09-07.
 - 2026-09-09 (12:19 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other tracked SRP pages in the same run — three of those seven did change this time (FAQ Q9 and its Q8 tag, AR User Registration's General Notes, and the PEC guidance page; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 38 fields re-verified row-by-row, footer unchanged. `retrieved` updated; `last_check` and `last_change` unchanged (already today's date / 2026-09-07 respectively).
+- 2026-09-09 (21:07 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other tracked SRP pages in the same run — two of those seven changed this time (AR Interface Functions and the PEC guidance page, both rewritten again; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 38 fields re-verified row-by-row, footer still "version 1.1, last update: 05/09/2026". `retrieved` updated; `last_check` and `last_change` unchanged (already today's date / 2026-09-07 respectively).
