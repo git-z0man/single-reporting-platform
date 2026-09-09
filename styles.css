@@ -844,3 +844,46 @@ figure.field-example p {
   /* the summary wraps: title (with the chevron beside it), then the markers,
      then the stage chips — each on its own line rather than fighting for one */
 }
+
+/* ---------- abbreviations: hover / focus for the meaning ---------------
+   Wrapped by app.js from one definitions map. The tooltip is CSS, not the
+   browser's title bubble, so it appears at once and works on focus — which
+   a tap gives on a phone, since each abbr is focusable. */
+abbr.ab {
+  position: relative; cursor: help;
+  text-decoration: underline dotted; text-decoration-color: var(--faintest);
+  text-underline-offset: 3px; text-decoration-thickness: 1px;
+  border-radius: 2px;
+}
+abbr.ab:hover, abbr.ab:focus-visible { text-decoration-color: var(--accent); outline: none; }
+abbr.ab:focus-visible { box-shadow: 0 0 0 2px var(--accent-tint); }
+abbr.ab::after {
+  content: attr(data-def);
+  position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translateX(-50%);
+  width: max-content; max-width: min(320px, 80vw);
+  padding: 8px 11px; border-radius: 7px;
+  background: var(--ink); color: var(--bg);
+  font: 400 12.5px/1.5 'IBM Plex Sans', sans-serif; text-align: left; white-space: normal;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+  display: none; pointer-events: none; z-index: 20;
+}
+abbr.ab::before {
+  content: ''; position: absolute; left: 50%; bottom: calc(100% + 3px); transform: translateX(-50%);
+  border: 5px solid transparent; border-top-color: var(--ink);
+  display: none; pointer-events: none; z-index: 20;
+}
+abbr.ab:hover::after, abbr.ab:focus-visible::after,
+abbr.ab:hover::before, abbr.ab:focus-visible::before { display: block; }
+
+/* a table cell or card near the top of the viewport has no room above;
+   the tooltip of an abbr inside a table header or the first table row would
+   clip — let those open below instead */
+thead abbr.ab::after, tr:first-child abbr.ab::after { bottom: auto; top: calc(100% + 8px); }
+thead abbr.ab::before, tr:first-child abbr.ab::before { bottom: auto; top: calc(100% + 3px); border-top-color: transparent; border-bottom-color: var(--ink); }
+
+/* footer list, filled from the same map */
+.abbr-hint { margin: -6px 0 14px; font-size: 12.5px; line-height: 1.6; color: var(--faint); }
+#abbrlist { margin-bottom: 28px; }
+#abbrlist dt { font: 500 13px/1.5 'IBM Plex Mono', monospace; color: var(--ink); }
+#abbrlist dd { font-weight: 400; color: var(--body); line-height: 1.55; }
+#abbrlist dd strong { font-weight: 600; color: var(--ink); }

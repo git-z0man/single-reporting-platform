@@ -350,3 +350,78 @@
     });
   });
 })();
+
+/* ---- abbreviations: hover or focus any ENISA acronym for its meaning ------
+   One map, used twice: to wrap every occurrence in the running text, and to
+   fill the footer list. Wrapping is done here rather than in the markup so
+   a definition is written once and cannot drift between 140 occurrences. */
+(function () {
+  var DEFS = {
+    SRP:   ['Single Reporting Platform', 'ENISA’s platform through which manufacturers file CRA notifications (Art. 16).'],
+    CRA:   ['Cyber Resilience Act', 'Regulation (EU) 2024/2847, the law that creates the reporting obligation.'],
+    ENISA: ['European Union Agency for Cybersecurity', 'Operates the SRP and receives a copy of most notifications.'],
+    CSIRT: ['Computer Security Incident Response Team', 'The national bodies that receive and process notifications.'],
+    CDaC:  ['CSIRT Designated as Coordinator', 'The national CSIRT of the Member State where the manufacturer has its main establishment. It receives your notification first and validates your association.'],
+    AR:    ['Assigned Representative', 'The person registered on the SRP to report for a manufacturer. Not the CRA’s “authorised representative”, which is a different role (Art. 3(13)).'],
+    AEV:   ['Actively Exploited Vulnerability', 'One of the two notification types (Art. 14(1)).'],
+    SI:    ['Severe Incident', 'The other notification type: a severe incident having an impact on the security of the product (Art. 14(3)).'],
+    PEC:   ['Particular Exceptional Circumstances', 'Grounds under Art. 16(2) for delaying wider dissemination of a 72-hour AEV notification.'],
+    EW:    ['Early Warning', 'The first reporting stage, within 24 hours of becoming aware.'],
+    FR:    ['Final Report', 'The last reporting stage, closing the notification.'],
+    EUVD:  ['European Vulnerability Database', 'ENISA’s public vulnerability database (Art. 12).'],
+    CVE:   ['Common Vulnerabilities and Exposures', 'The public identifier scheme for vulnerabilities, e.g. CVE-2026-12345.'],
+    CNA:   ['CVE Numbering Authority', 'An organisation authorised to assign CVE identifiers.'],
+    MFA:   ['Multi-factor authentication', 'Required on the EU Login account used to sign in to the SRP.'],
+    MS:    ['Member State', 'A Member State of the European Union.']
+  };
+  var keys = Object.keys(DEFS).sort(function (a, b) { return b.length - a.length; });
+  var RX = new RegExp('\\b(' + keys.join('|') + ')\\b', 'g');
+
+  // where not to touch: headings, navigation, chips and anything already a link
+  var SKIP = 'h1, h2, h3, summary, a, abbr, code, script, style, .side, .floatbar, .chip, .fchip, .notemark, .notemarks, .seclabel, .faq-num, .phase-tag, .chip-deadline, #abbrlist';
+
+  function wrap(root) {
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (!RX.test(n.nodeValue)) return NodeFilter.FILTER_REJECT;
+        RX.lastIndex = 0;
+        return n.parentElement && n.parentElement.closest(SKIP) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var nodes = [], n;
+    while ((n = walker.nextNode())) nodes.push(n);
+    nodes.forEach(function (node) {
+      var frag = document.createDocumentFragment(), last = 0, m;
+      var text = node.nodeValue;
+      RX.lastIndex = 0;
+      while ((m = RX.exec(text))) {
+        if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+        var d = DEFS[m[1]];
+        var ab = document.createElement('abbr');
+        ab.className = 'ab';
+        ab.textContent = m[1];
+        ab.setAttribute('data-def', d[0] + ' — ' + d[1]);
+        ab.setAttribute('aria-label', m[1] + ': ' + d[0] + '. ' + d[1]);
+        ab.setAttribute('tabindex', '0');
+        frag.appendChild(ab);
+        last = m.index + m[0].length;
+      }
+      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+
+  var main = document.querySelector('.main');
+  if (main) wrap(main);
+
+  // the same definitions as a plain list, for readers who would rather look it up
+  var list = document.getElementById('abbrlist');
+  if (list) {
+    Object.keys(DEFS).sort().forEach(function (k) {
+      var dt = document.createElement('dt'); dt.textContent = k;
+      var dd = document.createElement('dd');
+      dd.innerHTML = '<strong>' + DEFS[k][0] + '</strong> — ' + DEFS[k][1];
+      list.appendChild(dt); list.appendChild(dd);
+    });
+  }
+})();
