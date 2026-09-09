@@ -652,444 +652,519 @@
         </div>
 
         <div id="fieldcards">
-        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Common fields</span></div>
+        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Common fields</span><button type="button" class="openall" data-open="false">Open all</button></div>
         <p class="fieldgroup-sub">Apply to both an actively exploited vulnerability and a severe incident.</p>
         <div class="faq-wrap">
           <details class="faq field" id="f-1">
-            <summary><span class="faq-qwrap"><span class="faq-num">1</span><span>Notification type (Vulnerability/Incident)</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">1</span><span>Notification type (Vulnerability/Incident)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one: Vulnerability or Incident</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Indicates whether the notification concerns an actively exploited vulnerability (AEV) or a severe incident (SI) having an impact on the security of a product with digital elements.</dd>
+                <dt>How to complete it</dt><dd data-k="how">Select Actively Exploited Vulnerability when reporting an AEV. Select Severe Incident when reporting a SI having an impact on the security of a product with digital elements.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Vulnerability</p></figure>
+              <!-- OWN-NOTE field-1: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 1</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Indicates whether the notification concerns an actively exploited vulnerability (AEV) or a severe incident (SI) having an impact on the security of a product with digital elements.</p>
-              <p><strong>How to complete it.</strong> Select Actively Exploited Vulnerability when reporting an AEV. Select Severe Incident when reporting a SI having an impact on the security of a product with digital elements.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Vulnerability</span></p>
-              <p><strong>Format.</strong> Select one: Vulnerability or Incident</p>
-              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-7">
-            <summary><span class="faq-qwrap"><span class="faq-num">7</span><span>Title</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">7</span><span>Title</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Plain text; concise title</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Short human-readable name for the notification.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, enter a short, specific title that allows users to recognise the affected product and the reported issue. Do not include confidential technical detail that is unnecessary for identification (max. 255 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Active exploitation affecting Product X version 4.2.</p></figure>
+              <!-- OWN-NOTE field-7: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 2</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Short human-readable name for the notification.</p>
-              <p><strong>How to complete it.</strong> For example, enter a short, specific title that allows users to recognise the affected product and the reported issue. Do not include confidential technical detail that is unnecessary for identification (max. 255 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Active exploitation affecting Product X version 4.2.</span></p>
-              <p><strong>Format.</strong> Plain text; concise title</p>
-              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-8">
-            <summary><span class="faq-qwrap"><span class="faq-num">8</span><span>Summary</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">8</span><span>Summary</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Short paragraph</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Concise overview of the facts, affected product, and issue being notified.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, provide a concise overview of what happened, the affected product or version, the known impact, and the current mitigation status. Use factual information available at the reporting stage (max. 4000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">An actively exploited vulnerability affects Product X 4.2. A temporary workaround is available, and a security update is being prepared.</p></figure>
+              <!-- OWN-NOTE field-8: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 3</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Concise overview of the facts, affected product, and issue being notified.</p>
-              <p><strong>How to complete it.</strong> For example, provide a concise overview of what happened, the affected product or version, the known impact, and the current mitigation status. Use factual information available at the reporting stage (max. 4000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">An actively exploited vulnerability affects Product X 4.2. A temporary workaround is available, and a security update is being prepared.</span></p>
-              <p><strong>Format.</strong> Short paragraph</p>
-              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-9">
-            <summary><span class="faq-qwrap"><span class="faq-num">9</span><span>Manufacturer name</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">9</span><span>Manufacturer name</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">System-generated / read-only</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Name of the natural or legal person who develops or manufactures the product with digital elements or has the product with digital elements designed, developed or manufactured, and markets it under its name or trademark, whether for payment, monetisation or free of charge.</dd>
+                <dt>How to complete it</dt><dd data-k="how">No user action is required. The platform creates or updates this value automatically based on what you wrote when you registered to the Platform or added at a later stage. You may review it only to confirm that the displayed information is consistent with the notification history.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Automatically populated by the platform during the notification submission or free text during manufacturer registration [Name of the company].</p></figure>
+              <!-- OWN-NOTE field-9: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 4</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Name of the natural or legal person who develops or manufactures the product with digital elements or has the product with digital elements designed, developed or manufactured, and markets it under its name or trademark, whether for payment, monetisation or free of charge.</p>
-              <p><strong>How to complete it.</strong> No user action is required. The platform creates or updates this value automatically based on what you wrote when you registered to the Platform or added at a later stage. You may review it only to confirm that the displayed information is consistent with the notification history.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Automatically populated by the platform during the notification submission or free text during manufacturer registration [Name of the company].</span></p>
-              <p><strong>Format.</strong> System-generated / read-only</p>
-              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-10">
-            <summary><span class="faq-qwrap"><span class="faq-num">10</span><span>Member States where product available (Concerned CSIRT)</span></span><span class="field-chips"><span class="chip conditional">If available</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">10</span><span>Member States where product available (Concerned CSIRT)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip conditional">If available</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one or more Member States</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Member States in which territory the manufacturer is aware that the affected product has been made available; used to determine concerned CSIRTs.</dd>
+                <dt>How to complete it</dt><dd data-k="how">The Platform will automatically show you CDaC, however, you may select other Member States (MS) where the affected product has been made available, based on the information currently known to the manufacturer. Update the selection if new distribution information becomes available.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Belgium as your CDaC, automatically populated by the platform and you may add Greece and Italy and MS where the affected product has been made available</p></figure>
+              <!-- OWN-NOTE field-10: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 5</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Member States in which territory the manufacturer is aware that the affected product has been made available; used to determine concerned CSIRTs.</p>
-              <p><strong>How to complete it.</strong> The Platform will automatically show you CDaC, however, you may select other Member States (MS) where the affected product has been made available, based on the information currently known to the manufacturer. Update the selection if new distribution information becomes available.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Belgium as your CDaC, automatically populated by the platform and you may add Greece and Italy and MS where the affected product has been made available</span></p>
-              <p><strong>Format.</strong> Select one or more Member States</p>
-              <p class="field-status">Early Warning <span class="chip conditional">If available</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-11">
-            <summary><span class="faq-qwrap"><span class="faq-num">11</span><span>Product Name</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">11</span><span>Product Name</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Official product name</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Name that identifies the affected product with digital elements.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, enter the official commercial or technical name of the affected product with digital elements. Use the same name that appears in product technical documentation or market information (max. 255 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Product X</p></figure>
+              <!-- OWN-NOTE field-11: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 6</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Name that identifies the affected product with digital elements.</p>
-              <p><strong>How to complete it.</strong> For example, enter the official commercial or technical name of the affected product with digital elements. Use the same name that appears in product technical documentation or market information (max. 255 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Product X</span></p>
-              <p><strong>Format.</strong> Official product name</p>
-              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-12">
-            <summary><span class="faq-qwrap"><span class="faq-num">12</span><span>Product version</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">12</span><span>Product version</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Version or version range</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Version, release, build, model, or other revision information required to identify the affected product instance.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, enter every affected version, release, build, model, or firmware revision. Use exact identifiers and clearly state a range when multiple versions are affected (max. 255 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">4.0 to 4.2.1</p></figure>
+              <!-- OWN-NOTE field-12: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 7</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Version, release, build, model, or other revision information required to identify the affected product instance.</p>
-              <p><strong>How to complete it.</strong> For example, enter every affected version, release, build, model, or firmware revision. Use exact identifiers and clearly state a range when multiple versions are affected (max. 255 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">4.0 to 4.2.1</span></p>
-              <p><strong>Format.</strong> Version or version range</p>
-              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-13">
-            <summary><span class="faq-qwrap"><span class="faq-num">13</span><span>Product Type (Default/Important/Critical)</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">13</span><span>Product Type (Default/Important/Critical)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one: Default, Important, Critical</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Regulatory category indicating whether the product is default, important, or critical under the CRA classification framework.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, select the CRA regulatory type applicable to the product. Choose Important or Critical only where the product falls within the relevant CRA category (Annexes III and IV); otherwise select Default.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Important</p></figure>
+              <!-- OWN-NOTE field-13: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 8</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Regulatory category indicating whether the product is default, important, or critical under the CRA classification framework.</p>
-              <p><strong>How to complete it.</strong> For example, select the CRA regulatory type applicable to the product. Choose Important or Critical only where the product falls within the relevant CRA category (Annexes III and IV); otherwise select Default.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Important</span></p>
-              <p><strong>Format.</strong> Select one: Default, Important, Critical</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-14">
-            <summary><span class="faq-qwrap"><span class="faq-num">14</span><span>Product Class</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">14</span><span>Product Class</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one configured class</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">For an important product, the applicable Class I or Class II category used for conformity-assessment treatment.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, for an important product, select the applicable CRA class. Leave the field empty when the product is not classified as an important product or when no class applies.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Class II</p></figure>
+              <!-- OWN-NOTE field-14: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 9</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> For an important product, the applicable Class I or Class II category used for conformity-assessment treatment.</p>
-              <p><strong>How to complete it.</strong> For example, for an important product, select the applicable CRA class. Leave the field empty when the product is not classified as an important product or when no class applies.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Class II</span></p>
-              <p><strong>Format.</strong> Select one configured class</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-15">
-            <summary><span class="faq-qwrap"><span class="faq-num">15</span><span>Product Category</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">15</span><span>Product Category</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one configured category</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">The applicable CRA product category, normally selected from the relevant category list in CRA Annexes III or IV.</dd>
+                <dt>How to complete it</dt><dd data-k="how">You may select the category that best matches the affected product under the applicable CRA category list. Use the product’s core functionality, not only its commercial name.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Choose between: Hardware devices with Security Boxes; Smart meter gateways within smart metering systems and other devices for advanced security purposes, including secure cryptoprocessing devices; or Smartcards or similar devices, including secure elements.</p></figure>
+              <!-- OWN-NOTE field-15: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 10</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> The applicable CRA product category, normally selected from the relevant category list in CRA Annexes III or IV.</p>
-              <p><strong>How to complete it.</strong> You may select the category that best matches the affected product under the applicable CRA category list. Use the product’s core functionality, not only its commercial name.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Choose between: Hardware devices with Security Boxes; Smart meter gateways within smart metering systems and other devices for advanced security purposes, including secure cryptoprocessing devices; or Smartcards or similar devices, including secure elements.</span></p>
-              <p><strong>Format.</strong> Select one configured category</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-16">
-            <summary><span class="faq-qwrap"><span class="faq-num">16</span><span>End of support indicator</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">16</span><span>End of support indicator</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one: Yes or No</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Indicates whether the product with digital elements has a user interface or similar technical means allowing direct interaction with its users and the manufacturer should make use of such features to inform users that their product with digital elements has reached the end of the support period.</dd>
+                <dt>How to complete it</dt><dd data-k="how">You may select one: Yes when the product with digital elements has reached the end of the support period or No when is doesn’t.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Yes</p></figure>
+              <div class="faq-amend"><span class="amend-label">Note on ENISA’s text</span><p><strong>ENISA’s own text contradicts itself here.</strong> The <em>meaning</em> above describes the CRA duty to <em>inform</em> users that support has ended — whether the product has a user interface for doing so. The completion instruction, the format and the example all ask something else: has the support period ended, Yes or No. The workable reading is the Yes/No one; it is the only one the field can hold. (ENISA also writes “or No when is doesn’t”.) Reported unchanged through two editing passes of the glossary.</p></div>
+              <!-- OWN-NOTE field-16: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 11</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Indicates whether the product with digital elements has a user interface or similar technical means allowing direct interaction with its users and the manufacturer should make use of such features to inform users that their product with digital elements has reached the end of the support period.</p>
-              <p><strong>How to complete it.</strong> You may select one: Yes when the product with digital elements has reached the end of the support period or No when is doesn’t.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Yes</span></p>
-              <p><strong>Format.</strong> Select one: Yes or No</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
-              <div class="faq-amend"><p><strong>ENISA’s own text contradicts itself here.</strong> The <em>meaning</em> above describes the CRA duty to <em>inform</em> users that support has ended — whether the product has a user interface for doing so. The completion instruction, the format and the example all ask something else: has the support period ended, Yes or No. The workable reading is the Yes/No one; it is the only one the field can hold. (ENISA also writes “or No when is doesn’t”.) Reported unchanged through two editing passes of the glossary.</p></div>
             </div>
           </details>
           <details class="faq field" id="f-17">
-            <summary><span class="faq-qwrap"><span class="faq-num">17</span><span>Component name</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">17</span><span>Component name</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Component name and optional version</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Name of the software or hardware component in which the vulnerability or incident is located or observed.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, enter the name of the affected hardware or software component. You may include the component version when known. Leave empty if the issue cannot be attributed to a component (max. 255 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Authentication module 3.1</p></figure>
+              <!-- OWN-NOTE field-17: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 12</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Name of the software or hardware component in which the vulnerability or incident is located or observed.</p>
-              <p><strong>How to complete it.</strong> For example, enter the name of the affected hardware or software component. You may include the component version when known. Leave empty if the issue cannot be attributed to a component (max. 255 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Authentication module 3.1</span></p>
-              <p><strong>Format.</strong> Component name and optional version</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-18">
-            <summary><span class="faq-qwrap"><span class="faq-num">18</span><span>Mitigating measure expected shortly</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">18</span><span>Mitigating measure expected shortly</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one: Yes, No, Unknown</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Indicates whether an effective risk-mitigation measure, such as a security update or user guidance, is expected to become available.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, select Yes only when an effective security update, workaround, or user guidance is expected shortly and the expectation is supported by the remediation plan. Otherwise select No or Unknown.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Yes</p></figure>
+              <!-- OWN-NOTE field-18: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 13</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Indicates whether an effective risk-mitigation measure, such as a security update or user guidance, is expected to become available.</p>
-              <p><strong>How to complete it.</strong> For example, select Yes only when an effective security update, workaround, or user guidance is expected shortly and the expectation is supported by the remediation plan. Otherwise select No or Unknown.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Yes</span></p>
-              <p><strong>Format.</strong> Select one: Yes, No, Unknown</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-19">
-            <summary><span class="faq-qwrap"><span class="faq-num">19</span><span>User Action able to reduce impact</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">19</span><span>User Action able to reduce impact</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Action-oriented text</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Action that product users can take to prevent, reduce, or contain the impact of the vulnerability or incident.</dd>
+                <dt>How to complete it</dt><dd data-k="how">You may describe the immediate action a user can take to reduce the likelihood or impact of exploitation or the incident. Provide clear, practical instructions and identify any limitation or prerequisite (max. 4000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Disable the affected interface until the security update is installed.</p></figure>
+              <!-- OWN-NOTE field-19: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 14</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Action that product users can take to prevent, reduce, or contain the impact of the vulnerability or incident.</p>
-              <p><strong>How to complete it.</strong> You may describe the immediate action a user can take to reduce the likelihood or impact of exploitation or the incident. Provide clear, practical instructions and identify any limitation or prerequisite (max. 4000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Disable the affected interface until the security update is installed.</span></p>
-              <p><strong>Format.</strong> Action-oriented text</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-20">
-            <summary><span class="faq-qwrap"><span class="faq-num">20</span><span>Considered sensitivity of information</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip conditional">If available</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">20</span><span>Considered sensitivity of information</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip conditional">If available</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Concise justification</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Manufacturer's assessment of how sensitive the notified information is, to inform secure handling and dissemination decisions.</dd>
+                <dt>How to complete it</dt><dd data-k="how">You may describe why any submitted information requires restricted handling. Identify the sensitive element and the potential consequence of premature or wider disclosure. Do not use a generic confidentiality statement (max. 255 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">The technical details reveal an unpatched exploitation path that is not yet publicly known.</p></figure>
+              <!-- OWN-NOTE field-20: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 15</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Manufacturer's assessment of how sensitive the notified information is, to inform secure handling and dissemination decisions.</p>
-              <p><strong>How to complete it.</strong> You may describe why any submitted information requires restricted handling. Identify the sensitive element and the potential consequence of premature or wider disclosure. Do not use a generic confidentiality statement (max. 255 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">The technical details reveal an unpatched exploitation path that is not yet publicly known.</span></p>
-              <p><strong>Format.</strong> Concise justification</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip conditional">If available</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-21">
-            <summary><span class="faq-qwrap"><span class="faq-num">21</span><span>Corrective or mitigating measures taken</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">21</span><span>Corrective or mitigating measures taken</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Bulleted list or structured text</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Actions already implemented by the manufacturer or other responsible party to correct the issue or reduce its risk or impact.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, list the actions already taken to correct the issue or to reduce the risk. You may include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful. (max. 2000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Disabled the affected service; revoked exposed credentials; increased monitoring.</p></figure>
+              <!-- OWN-NOTE field-21: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 16</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Actions already implemented by the manufacturer or other responsible party to correct the issue or reduce its risk or impact.</p>
-              <p><strong>How to complete it.</strong> For example, list the actions already taken to correct the issue or to reduce the risk. You may include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful. (max. 2000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Disabled the affected service; revoked exposed credentials; increased monitoring.</span></p>
-              <p><strong>Format.</strong> Bulleted list or structured text</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
           <details class="faq field" id="f-22">
-            <summary><span class="faq-qwrap"><span class="faq-num">22</span><span>Corrective or mitigating measures users can take</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">22</span><span>Corrective or mitigating measures users can take</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Action-oriented text</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Instructions or actions users can apply to reduce exposure or impact, including workarounds, configuration changes, patches, or isolation measures.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, provide step-oriented guidance that users can apply. Prioritise the effective fix, then state temporary workarounds and any operational impact. Clearly identify actions that are no longer recommended (max. 4000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Install version 4.2.2. Until installation, restrict management-interface access to trusted networks.</p></figure>
+              <div class="faq-amend"><span class="amend-label">Note on ENISA’s text</span><p>The FAQ writes this field “Corrective or mitigating measures that <em>users</em> can take”; the glossary and the current FAQ table say “<em>user</em>”. Same field.</p></div>
+              <!-- OWN-NOTE field-22: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 17</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Instructions or actions users can apply to reduce exposure or impact, including workarounds, configuration changes, patches, or isolation measures.</p>
-              <p><strong>How to complete it.</strong> For example, provide step-oriented guidance that users can apply. Prioritise the effective fix, then state temporary workarounds and any operational impact. Clearly identify actions that are no longer recommended (max. 4000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Install version 4.2.2. Until installation, restrict management-interface access to trusted networks.</span></p>
-              <p><strong>Format.</strong> Action-oriented text</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
-              <div class="faq-amend"><p>The FAQ writes this field “Corrective or mitigating measures that <em>users</em> can take”; the glossary and the current FAQ table say “<em>user</em>”. Same field.</p></div>
             </div>
           </details>
           <details class="faq field" id="f-23">
-            <summary><span class="faq-qwrap"><span class="faq-num">23</span><span>Attack vector</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip optional">Optional</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">23</span><span>Attack vector</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip optional">Optional</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Short, structured description or configured classification</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Description or structured classification of the path or means by which exploitation or compromise can occur.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, describe how the vulnerability may be exploited or how the incident reached the affected product. State the relevant interface, access path, protocol, or user interaction. Avoid unsupported assumptions (max. 255 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Remote network access through an exposed API.</p></figure>
+              <!-- OWN-NOTE field-23: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 18</span> &middot; applies to Both</p>
-              <p><strong>What it means.</strong> Description or structured classification of the path or means by which exploitation or compromise can occur.</p>
-              <p><strong>How to complete it.</strong> For example, describe how the vulnerability may be exploited or how the incident reached the affected product. State the relevant interface, access path, protocol, or user interaction. Avoid unsupported assumptions (max. 255 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Remote network access through an exposed API.</span></p>
-              <p><strong>Format.</strong> Short, structured description or configured classification</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip optional">Optional</span></p>
             </div>
           </details>
         </div>
-        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Actively exploited vulnerability</span></div>
+        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Actively exploited vulnerability</span><button type="button" class="openall" data-open="false">Open all</button></div>
         <p class="fieldgroup-sub">Shown only when the notification type is <em>Vulnerability</em>.</p>
         <div class="faq-wrap">
           <details class="faq field" id="f-v24">
-            <summary><span class="faq-qwrap"><span class="faq-num">v24</span><span>CVE ID</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v24</span><span>CVE ID</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">CVE identifier</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">CVE Identifier (CVE ID) assigned to the publicly disclosed vulnerability under the Common Vulnerabilities and Exposures (CVE) Program.</dd>
+                <dt>How to complete it</dt><dd data-k="how">You may enter the official CVE ID only if one has been assigned by the competent CNA. Copy the ID exactly as published. Leave the field empty if no ID exists (max. 255 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">CVE-2026-12345</p></figure>
+              <!-- OWN-NOTE field-v24: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary v19</span> &middot; applies to AEV</p>
-              <p><strong>What it means.</strong> CVE Identifier (CVE ID) assigned to the publicly disclosed vulnerability under the Common Vulnerabilities and Exposures (CVE) Program.</p>
-              <p><strong>How to complete it.</strong> You may enter the official CVE ID only if one has been assigned by the competent CNA. Copy the ID exactly as published. Leave the field empty if no ID exists (max. 255 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">CVE-2026-12345</span></p>
-              <p><strong>Format.</strong> CVE identifier</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-v25">
-            <summary><span class="faq-qwrap"><span class="faq-num">v25</span><span>EUVD ID</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v25</span><span>EUVD ID</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">EUVD identifier</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Identifier of the vulnerability record in the European Vulnerability Database (EUVD).</dd>
+                <dt>How to complete it</dt><dd data-k="how">You may enter the official EUVD ID if one has been assigned by ENISA. Copy the ID exactly as published. Leave the field empty if no ID exists (max. 255 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">EUVD-2026-12345</p></figure>
+              <!-- OWN-NOTE field-v25: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary v20</span> &middot; applies to AEV</p>
-              <p><strong>What it means.</strong> Identifier of the vulnerability record in the European Vulnerability Database (EUVD).</p>
-              <p><strong>How to complete it.</strong> You may enter the official EUVD ID if one has been assigned by ENISA. Copy the ID exactly as published. Leave the field empty if no ID exists (max. 255 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">EUVD-2026-12345</span></p>
-              <p><strong>Format.</strong> EUVD identifier</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-v26">
-            <summary><span class="faq-qwrap"><span class="faq-num">v26</span><span>General information</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v26</span><span>General information</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Structured narrative</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">High-level description of the vulnerability and, where known, how exploitation works, without requiring the full final technical analysis.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, describe the vulnerability at a high level and explain how the known exploit operates. Include the affected function, required access, and observed exploitation behaviour. Do not include unverified attribution (max. 4000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">An authentication bypass in the management interface allows a remote actor with network access to execute privileged actions.</p></figure>
+              <!-- OWN-NOTE field-v26: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary v21</span> &middot; applies to AEV</p>
-              <p><strong>What it means.</strong> High-level description of the vulnerability and, where known, how exploitation works, without requiring the full final technical analysis.</p>
-              <p><strong>How to complete it.</strong> For example, describe the vulnerability at a high level and explain how the known exploit operates. Include the affected function, required access, and observed exploitation behaviour. Do not include unverified attribution (max. 4000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">An authentication bypass in the management interface allows a remote actor with network access to execute privileged actions.</span></p>
-              <p><strong>Format.</strong> Structured narrative</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-v27">
-            <summary><span class="faq-qwrap"><span class="faq-num">v27</span><span>Date when corrective or mitigating measure has been available</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v27</span><span>Date when corrective or mitigating measure has been available</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Date and time</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Date and time when the mitigating measure has been available.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, enter the date and time when the mitigating measure has been available.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">2026-09-02 09:15 UTC</p></figure>
+              <!-- OWN-NOTE field-v27: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary v22</span> &middot; applies to AEV</p>
-              <p><strong>What it means.</strong> Date and time when the mitigating measure has been available.</p>
-              <p><strong>How to complete it.</strong> For example, enter the date and time when the mitigating measure has been available.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-09-02 09:15 UTC</span></p>
-              <p><strong>Format.</strong> Date and time</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
           <details class="faq field" id="f-v28">
-            <summary><span class="faq-qwrap"><span class="faq-num">v28</span><span>Full description of the severity of the vulnerability</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v28</span><span>Full description of the severity of the vulnerability</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Detailed structured narrative</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Complete description of the vulnerability, including at least its severity.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, provide the completed technical description of the vulnerability. Including the assessed severity rating, classification, rationale for the assessment and other relevant factors or criteria supporting the assigned severity level (max. 4000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Authentication validation is missing in endpoint X... Severity: High... Affected versions: 4.0–4.2.1...</p></figure>
+              <div class="faq-amend"><span class="amend-label">Note on ENISA’s text</span><p>The FAQ calls the AEV pair “Full description of the severity / impact” and the SI pair “Detailed description of the Severity / Impact”. Same kind of field, two names — both spellings are given here so you recognise them in the portal.</p></div>
+              <!-- OWN-NOTE field-v28: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary v23</span> &middot; applies to AEV</p>
-              <p><strong>What it means.</strong> Complete description of the vulnerability, including at least its severity.</p>
-              <p><strong>How to complete it.</strong> For example, provide the completed technical description of the vulnerability. Including the assessed severity rating, classification, rationale for the assessment and other relevant factors or criteria supporting the assigned severity level (max. 4000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Authentication validation is missing in endpoint X... Severity: High... Affected versions: 4.0–4.2.1...</span></p>
-              <p><strong>Format.</strong> Detailed structured narrative</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
-              <div class="faq-amend"><p>The FAQ calls the AEV pair “Full description of the severity / impact” and the SI pair “Detailed description of the Severity / Impact”. Same kind of field, two names — both spellings are given here so you recognise them in the portal.</p></div>
             </div>
           </details>
           <details class="faq field" id="f-v29">
-            <summary><span class="faq-qwrap"><span class="faq-num">v29</span><span>Full description of the impact of the vulnerability</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v29</span><span>Full description of the impact of the vulnerability</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Detailed structured narrative</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Complete description of the vulnerability, including at least its impact.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, provide the completed technical description of the vulnerability. Including the potential or actual impact of the vulnerability, the affected systems, components, data, users or services, as applicable (max. 4000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Authentication validation is missing in endpoint X... Impact: High... Affected versions: 4.0–4.2.1...</p></figure>
+              <!-- OWN-NOTE field-v29: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary v24</span> &middot; applies to AEV</p>
-              <p><strong>What it means.</strong> Complete description of the vulnerability, including at least its impact.</p>
-              <p><strong>How to complete it.</strong> For example, provide the completed technical description of the vulnerability. Including the potential or actual impact of the vulnerability, the affected systems, components, data, users or services, as applicable (max. 4000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Authentication validation is missing in endpoint X... Impact: High... Affected versions: 4.0–4.2.1...</span></p>
-              <p><strong>Format.</strong> Detailed structured narrative</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
           <details class="faq field" id="f-v30">
-            <summary><span class="faq-qwrap"><span class="faq-num">v30</span><span>Date/time when you become aware of the Actively Exploited Vulnerability [1]</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v30</span><span>Date/time when you become aware of the Actively Exploited Vulnerability [1]</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p class="field-src"><span class="field-gl">Glossary v25</span> &middot; applies to AEV</p>
-              <p><strong>What it means.</strong> Date and time when the manufacturer or another relevant party first detected the vulnerability.</p>
-              <p><strong>How to complete it.</strong> For example, enter the date and time when the vulnerability was first detected. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-08-24 09:15 UTC</span></p>
-              <p><strong>Format.</strong> Date and time</p>
-              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Date and time</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Date and time when the manufacturer or another relevant party first detected the vulnerability.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, enter the date and time when the vulnerability was first detected. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">2026-08-24 09:15 UTC</p></figure>
               <p class="field-foot">ENISA footnote [1]: “This field will be available in the next release of the Platform.”</p>
+              <!-- OWN-NOTE field-v30: your own practical note here, as <p class="ownnote">…</p> -->
+              <p class="field-src"><span class="field-gl">Glossary v25</span> &middot; applies to AEV</p>
             </div>
           </details>
           <details class="faq field" id="f-v31">
-            <summary><span class="faq-qwrap"><span class="faq-num">v31</span><span>Malicious actor that has exploited/is exploiting the vulnerability</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip conditional">If available</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v31</span><span>Malicious actor that has exploited/is exploiting the vulnerability</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip conditional">If available</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Free text</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Available information about the actor that exploited or is exploiting the vulnerability, without requiring attribution where information is unavailable.</dd>
+                <dt>How to complete it</dt><dd data-k="how">You may enter confirmed information about the malicious actor or observed activity. If attribution is unconfirmed, describe the observed indicators and state that attribution is unknown (max. 100 characters)..</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Unknown actor; observed infrastructure includes the indicators listed in Reference REF-2026-18.</p></figure>
+              <!-- OWN-NOTE field-v31: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary v26</span> &middot; applies to AEV</p>
-              <p><strong>What it means.</strong> Available information about the actor that exploited or is exploiting the vulnerability, without requiring attribution where information is unavailable.</p>
-              <p><strong>How to complete it.</strong> You may enter confirmed information about the malicious actor or observed activity. If attribution is unconfirmed, describe the observed indicators and state that attribution is unknown (max. 100 characters)..</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Unknown actor; observed infrastructure includes the indicators listed in Reference REF-2026-18.</span></p>
-              <p><strong>Format.</strong> Free text</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip conditional">If available</span></p>
             </div>
           </details>
           <details class="faq field" id="f-v32">
-            <summary><span class="faq-qwrap"><span class="faq-num">v32</span><span>Particular Exceptional Circumstances (PEC)</span></span><span class="field-chips"><span class="chip na">n/a</span><span class="chip optional">Optional</span><span class="chip na">n/a</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v32</span><span>Particular Exceptional Circumstances (PEC)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip na">n/a</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select applicable PEC option(s)</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Selection indicating that one or more legally specified circumstances in the third subparagraph of Article 16 (2) of CRA justify withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination.</dd>
+                <dt>How to complete it</dt><dd data-k="how">You may select the applicable exceptional circumstance only when the corresponding legal condition is met.</dd>
+              </dl>
+              <div class="faq-amend"><span class="amend-label">Note on ENISA’s text</span><p>Only reachable in the 72-hour notification — not at the Early Warning, not in the Final Report.</p></div>
+              <!-- OWN-NOTE field-v32: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary v27</span> &middot; applies to AEV</p>
-              <p><strong>What it means.</strong> Selection indicating that one or more legally specified circumstances in the third subparagraph of Article 16 (2) of CRA justify withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination.</p>
-              <p><strong>How to complete it.</strong> You may select the applicable exceptional circumstance only when the corresponding legal condition is met.</p>
-              <p><strong>Format.</strong> Select applicable PEC option(s)</p>
-              <p class="field-status">Early Warning <span class="chip na">n/a</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip na">n/a</span></p>
-              <div class="faq-amend"><p>Only reachable in the 72-hour notification — not at the Early Warning, not in the Final Report.</p></div>
             </div>
           </details>
           <details class="faq field" id="f-v33">
-            <summary><span class="faq-qwrap"><span class="faq-num">v33</span><span>PEC Delay Reason</span></span><span class="field-chips"><span class="chip na">n/a</span><span class="chip optional">Optional</span><span class="chip na">n/a</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v33</span><span>PEC Delay Reason</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip na">n/a</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select applicable check box</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">You may select one of the three of the legally specified circumstances justifying withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination.</dd>
+                <dt>How to complete it</dt><dd data-k="how">Support the selection with specific facts in PEC Delay Reason and indicate the requested dissemination delay. You may select at least one of the three options.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">You may choose: the notified vulnerability has been actively exploited by a malicious actor and, according to the information available, it has been exploited in no other Member State than the one of the CSIRT designated as coordinator to which the manufacturer has notified the vulnerability; or&lt;br&gt;N/A&lt;br&gt;that any immediate further dissemination of the notified vulnerability would likely result in the supply of information the disclosure of which would be contrary to the essential interests of that Member State; or</p></figure>
+              <div class="faq-amend"><span class="amend-label">Note on ENISA’s text</span><p><strong>Inconsistent since 7 September 2026.</strong> The meaning says “one of the three” while the completion instruction says “at least one of the three”. The three grounds themselves are those of the third subparagraph of Art. 16(2) CRA and have not changed.</p></div>
+              <!-- OWN-NOTE field-v33: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary v28</span> &middot; applies to AEV</p>
-              <p><strong>What it means.</strong> You may select one of the three of the legally specified circumstances justifying withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination.</p>
-              <p><strong>How to complete it.</strong> Support the selection with specific facts in PEC Delay Reason and indicate the requested dissemination delay. You may select at least one of the three options.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">You may choose: the notified vulnerability has been actively exploited by a malicious actor and, according to the information available, it has been exploited in no other Member State than the one of the CSIRT designated as coordinator to which the manufacturer has notified the vulnerability; or&lt;br&gt;N/A&lt;br&gt;that any immediate further dissemination of the notified vulnerability would likely result in the supply of information the disclosure of which would be contrary to the essential interests of that Member State; or</span></p>
-              <p><strong>Format.</strong> Select applicable check box</p>
-              <p class="field-status">Early Warning <span class="chip na">n/a</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip na">n/a</span></p>
-              <div class="faq-amend"><p><strong>Inconsistent since 7 September 2026.</strong> The meaning says “one of the three” while the completion instruction says “at least one of the three”. The three grounds themselves are those of the third subparagraph of Art. 16(2) CRA and have not changed.</p></div>
             </div>
           </details>
           <details class="faq field" id="f-v34">
-            <summary><span class="faq-qwrap"><span class="faq-num">v34</span><span>Please provide further information</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v34</span><span>Please provide further information</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Free text</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Description of anything that should be helpful for CSIRT Designated as Coordinator (CDaC)taking their decision.</dd>
+                <dt>How to complete it</dt><dd data-k="how">You may provide additional information(s).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">We consider it very important for national security.</p></figure>
+              <!-- OWN-NOTE field-v34: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary v29</span> &middot; applies to AEV</p>
-              <p><strong>What it means.</strong> Description of anything that should be helpful for CSIRT Designated as Coordinator (CDaC)taking their decision.</p>
-              <p><strong>How to complete it.</strong> You may provide additional information(s).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">We consider it very important for national security.</span></p>
-              <p><strong>Format.</strong> Free text</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
         </div>
-        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Severe incident</span></div>
+        <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">Severe incident</span><button type="button" class="openall" data-open="false">Open all</button></div>
         <p class="fieldgroup-sub">Shown only when the notification type is <em>Incident</em>.</p>
         <div class="faq-wrap">
           <details class="faq field" id="f-i35">
-            <summary><span class="faq-qwrap"><span class="faq-num">i35</span><span>Incident is suspected of unlawful or malicious acts</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i35</span><span>Incident is suspected of unlawful or malicious acts</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one: Yes, No, Unknown</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Boolean indication of whether available evidence suggests the incident resulted from unlawful or malicious activity.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, select Yes when available evidence indicates intentional unlawful or malicious activity. Select No when the event is assessed as non-malicious. Select Unknown while the cause remains unresolved.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Yes</p></figure>
+              <!-- OWN-NOTE field-i35: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary i30</span> &middot; applies to SI</p>
-              <p><strong>What it means.</strong> Boolean indication of whether available evidence suggests the incident resulted from unlawful or malicious activity.</p>
-              <p><strong>How to complete it.</strong> For example, select Yes when available evidence indicates intentional unlawful or malicious activity. Select No when the event is assessed as non-malicious. Select Unknown while the cause remains unresolved.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Yes</span></p>
-              <p><strong>Format.</strong> Select one: Yes, No, Unknown</p>
-              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-i36">
-            <summary><span class="faq-qwrap"><span class="faq-num">i36</span><span>General information about nature of incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i36</span><span>General information about nature of incident</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Structured narrative</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">High-level account of what happened, how the incident manifested, and the affected security properties or functions.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, describe what occurred, the affected product functions or security properties, and the currently known scope. Focus on confirmed facts available at the 72-hour stage (max. 4000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Malicious code executed through the update service and affected the integrity of locally stored configuration data.</p></figure>
+              <!-- OWN-NOTE field-i36: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary i31</span> &middot; applies to SI</p>
-              <p><strong>What it means.</strong> High-level account of what happened, how the incident manifested, and the affected security properties or functions.</p>
-              <p><strong>How to complete it.</strong> For example, describe what occurred, the affected product functions or security properties, and the currently known scope. Focus on confirmed facts available at the 72-hour stage (max. 4000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Malicious code executed through the update service and affected the integrity of locally stored configuration data.</span></p>
-              <p><strong>Format.</strong> Structured narrative</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
           <details class="faq field" id="f-i37">
-            <summary><span class="faq-qwrap"><span class="faq-num">i37</span><span>Applied or ongoing mitigation measures</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i37</span><span>Applied or ongoing mitigation measures</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Structured narrative</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Actions that have been taken by the manufacturer or other responsible party or are still ongoing to correct the issue or reduce its risk or impact.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, list the actions already applied or ongoing to correct the issue or reduce risk. Include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful (max. 4000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Disabled the affected service; revoked exposed credentials; increased monitoring.</p></figure>
+              <div class="faq-amend"><span class="amend-label">Note on ENISA’s text</span><p>The FAQ writes “Applied <strong>and</strong> ongoing mitigation measures”, the glossary “Applied <strong>or</strong> ongoing”. Not a pure style difference; the FAQ wording is the wider one.</p></div>
+              <!-- OWN-NOTE field-i37: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary i32</span> &middot; applies to SI</p>
-              <p><strong>What it means.</strong> Actions that have been taken by the manufacturer or other responsible party or are still ongoing to correct the issue or reduce its risk or impact.</p>
-              <p><strong>How to complete it.</strong> For example, list the actions already applied or ongoing to correct the issue or reduce risk. Include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful (max. 4000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Disabled the affected service; revoked exposed credentials; increased monitoring.</span></p>
-              <p><strong>Format.</strong> Structured narrative</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
-              <div class="faq-amend"><p>The FAQ writes “Applied <strong>and</strong> ongoing mitigation measures”, the glossary “Applied <strong>or</strong> ongoing”. Not a pure style difference; the FAQ wording is the wider one.</p></div>
             </div>
           </details>
           <details class="faq field" id="f-i38">
-            <summary><span class="faq-qwrap"><span class="faq-num">i38</span><span>Detailed description of the Severity of the incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i38</span><span>Detailed description of the Severity of the incident</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Structured narrative</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Complete the detailed description of the severity of the incident.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, provide the completed description of the severity of the incident. Include the sequence of events, affected products and functions, severity, scope, evidence, root cause, response measures, and recovery status (max. 4000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Low – limited impact, no significant disruption to operation.</p></figure>
+              <div class="faq-amend"><span class="amend-label">Note on ENISA’s text</span><p>Two separate description fields, not a duplicate: this one is severity, the next one is impact. Both up to 4,000 characters, both required in the Final Report.</p></div>
+              <!-- OWN-NOTE field-i38: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary i33</span> &middot; applies to SI</p>
-              <p><strong>What it means.</strong> Complete the detailed description of the severity of the incident.</p>
-              <p><strong>How to complete it.</strong> For example, provide the completed description of the severity of the incident. Include the sequence of events, affected products and functions, severity, scope, evidence, root cause, response measures, and recovery status (max. 4000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Low – limited impact, no significant disruption to operation.</span></p>
-              <p><strong>Format.</strong> Structured narrative</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
-              <div class="faq-amend"><p>Two separate description fields, not a duplicate: this one is severity, the next one is impact. Both up to 4,000 characters, both required in the Final Report.</p></div>
             </div>
           </details>
           <details class="faq field" id="f-i39">
-            <summary><span class="faq-qwrap"><span class="faq-num">i39</span><span>Detailed description of the Impact of the incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i39</span><span>Detailed description of the Impact of the incident</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Structured narrative</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Complete the detailed description of the impact of the incident.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, provide the completed description of the impact of the incident, including the impact on the product, data, functions, users, or connected systems (max. 4000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Minimal – no material impact of operations, users or data.</p></figure>
+              <!-- OWN-NOTE field-i39: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary i34</span> &middot; applies to SI</p>
-              <p><strong>What it means.</strong> Complete the detailed description of the impact of the incident.</p>
-              <p><strong>How to complete it.</strong> For example, provide the completed description of the impact of the incident, including the impact on the product, data, functions, users, or connected systems (max. 4000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Minimal – no material impact of operations, users or data.</span></p>
-              <p><strong>Format.</strong> Structured narrative</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
-              <div class="faq-amend"><p>ENISA numbers this row <code>I39.</code> in the FAQ table — a capital I where every other row uses a lowercase prefix.</p></div>
             </div>
           </details>
           <details class="faq field" id="f-i40">
-            <summary><span class="faq-qwrap"><span class="faq-num">i40</span><span>Type of Threat or root cause likely to have triggered incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip mandatory">Required</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i40</span><span>Type of Threat or root cause likely to have triggered incident</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Classification plus short explanation</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Most likely threat category, initiating event, weakness, failure, or root cause that triggered the incident.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, state the most likely threat type and root cause supported by the investigation. Explain the evidence briefly and mark the conclusion as preliminary when analysis is incomplete (max. 255 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Supply-chain compromise caused by an unauthorised modification to the update package.</p></figure>
+              <!-- OWN-NOTE field-i40: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary i35</span> &middot; applies to SI</p>
-              <p><strong>What it means.</strong> Most likely threat category, initiating event, weakness, failure, or root cause that triggered the incident.</p>
-              <p><strong>How to complete it.</strong> For example, state the most likely threat type and root cause supported by the investigation. Explain the evidence briefly and mark the conclusion as preliminary when analysis is incomplete (max. 255 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Supply-chain compromise caused by an unauthorised modification to the update package.</span></p>
-              <p><strong>Format.</strong> Classification plus short explanation</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip mandatory">Required</span></p>
             </div>
           </details>
           <details class="faq field" id="f-i41">
-            <summary><span class="faq-qwrap"><span class="faq-num">i41</span><span>Date/time when you become aware of the incident [2]</span></span><span class="field-chips"><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i41</span><span>Date/time when you become aware of the incident [2]</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
-              <p class="field-src"><span class="field-gl">Glossary i36</span> &middot; applies to SI</p>
-              <p><strong>What it means.</strong> Date and time when the manufacturer or another relevant become aware of the incident.</p>
-              <p><strong>How to complete it.</strong> For example, enter the date and time you become aware of the incident. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-08-24 09:15 UTC</span></p>
-              <p><strong>Format.</strong> Date and time</p>
-              <p class="field-status">Early Warning <span class="chip mandatory">Required</span> &middot; 72&nbsp;h <span class="chip carried">Carried over</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Date and time</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Date and time when the manufacturer or another relevant become aware of the incident.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, enter the date and time you become aware of the incident. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">2026-08-24 09:15 UTC</p></figure>
               <p class="field-foot">ENISA footnote [2]: “In the current release this field is named: ‘Date/time the incident was detected’.”</p>
-              <div class="faq-amend"><p>Required. This is the field the deadlines run from. If the exact time is unknown, enter your best supported estimate and say in the description that it is an estimate.</p></div>
+              <div class="faq-amend"><span class="amend-label">Note on ENISA’s text</span><p>Required. This is the field the deadlines run from. If the exact time is unknown, enter your best supported estimate and say in the description that it is an estimate.</p></div>
+              <!-- OWN-NOTE field-i41: your own practical note here, as <p class="ownnote">…</p> -->
+              <p class="field-src"><span class="field-gl">Glossary i36</span> &middot; applies to SI</p>
             </div>
           </details>
           <details class="faq field" id="f-i42">
-            <summary><span class="faq-qwrap"><span class="faq-num">i42</span><span>Date/time incident occurred</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip optional">Optional</span><span class="chip optional">Optional</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i42</span><span>Date/time incident occurred</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip optional">Optional</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Date and time</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Known or estimated date and time when the incident began or took place.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, enter the date and time when the incident was began or occurred. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description.</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">2026-08-24 09:15 UTC</p></figure>
+              <div class="faq-amend"><span class="amend-label">Note on ENISA’s text</span><p>Optional — and a different field from the one above. “When you became aware” is mandatory, “when the incident occurred” is not.</p></div>
+              <!-- OWN-NOTE field-i42: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary i37</span> &middot; applies to SI</p>
-              <p><strong>What it means.</strong> Known or estimated date and time when the incident began or took place.</p>
-              <p><strong>How to complete it.</strong> For example, enter the date and time when the incident was began or occurred. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description.</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">2026-08-24 09:15 UTC</span></p>
-              <p><strong>Format.</strong> Date and time</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip optional">Optional</span> &middot; Final Report <span class="chip optional">Optional</span></p>
-              <div class="faq-amend"><p>Optional — and a different field from the one above. “When you became aware” is mandatory, “when the incident occurred” is not.</p></div>
             </div>
           </details>
           <details class="faq field" id="f-i43">
-            <summary><span class="faq-qwrap"><span class="faq-num">i43</span><span>Initial assessment of the incident</span></span><span class="field-chips"><span class="chip optional">Optional</span><span class="chip mandatory">Required</span><span class="chip carried">Carried over</span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i43</span><span>Initial assessment of the incident</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Structured narrative</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Preliminary analysis of the incident's severity, scope, likely impact, affected functions or data, and immediate implications.</dd>
+                <dt>How to complete it</dt><dd data-k="how">For example, provide the preliminary assessment of severity, scope, affected security properties, products or users, and likely impact. Clearly distinguish confirmed findings from matters still under investigation (max. 4000 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Confirmed impact is limited to integrity of configuration data on three product instances; broader exposure remains under investigation.</p></figure>
+              <!-- OWN-NOTE field-i43: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary i38</span> &middot; applies to SI</p>
-              <p><strong>What it means.</strong> Preliminary analysis of the incident's severity, scope, likely impact, affected functions or data, and immediate implications.</p>
-              <p><strong>How to complete it.</strong> For example, provide the preliminary assessment of severity, scope, affected security properties, products or users, and likely impact. Clearly distinguish confirmed findings from matters still under investigation (max. 4000 characters).</p>
-              <p><strong>ENISA’s example.</strong> <span class="field-ex">Confirmed impact is limited to integrity of configuration data on three product instances; broader exposure remains under investigation.</span></p>
-              <p><strong>Format.</strong> Structured narrative</p>
-              <p class="field-status">Early Warning <span class="chip optional">Optional</span> &middot; 72&nbsp;h <span class="chip mandatory">Required</span> &middot; Final Report <span class="chip carried">Carried over</span></p>
             </div>
           </details>
         </div>

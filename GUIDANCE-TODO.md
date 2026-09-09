@@ -23,7 +23,7 @@ order.
 For a note about one field rather than the whole screen, the same paragraph
 works: name the field in bold at the start.
 
-## The slots
+## The slots — walkthrough steps
 
 
 ### `reg-role` — Phase 01 · Registration: Choose your role
@@ -139,3 +139,65 @@ No field table — what is worth checking, and when.
 ### `role-dashboard` — Accounts and roles: Watch the dashboard and the alerts
 
 No field table — how you notice a deadline or an invalidated notification in time.
+
+
+## Field slots — `Every field, explained`
+
+One slot per field card, on top of the 23 walkthrough slots above. The
+marker in the card header follows the content: write a note and **✱ From
+practice** appears by itself. **⚑ Source note** marks the cards that already
+carry a remark on ENISA’s text — those are the fields most likely to need a
+practical note as well.
+
+### Common fields
+
+| Slot | Field | Already flagged |
+|---|---|---|
+| `field-1` | Notification type (Vulnerability/Incident) |  |
+| `field-7` | Title |  |
+| `field-8` | Summary |  |
+| `field-9` | Manufacturer name |  |
+| `field-10` | Member States where product available (Concerned CSIRT) |  |
+| `field-11` | Product Name |  |
+| `field-12` | Product version |  |
+| `field-13` | Product Type (Default/Important/Critical) |  |
+| `field-14` | Product Class |  |
+| `field-15` | Product Category |  |
+| `field-16` | End of support indicator | ⚑ source note |
+| `field-17` | Component name |  |
+| `field-18` | Mitigating measure expected shortly |  |
+| `field-19` | User Action able to reduce impact |  |
+| `field-20` | Considered sensitivity of information |  |
+| `field-21` | Corrective or mitigating measures taken |  |
+| `field-22` | Corrective or mitigating measures users can take | ⚑ source note |
+| `field-23` | Attack vector |  |
+
+### Actively exploited vulnerability
+
+| Slot | Field | Already flagged |
+|---|---|---|
+| `field-v24` | CVE ID |  |
+| `field-v25` | EUVD ID |  |
+| `field-v26` | General information |  |
+| `field-v27` | Date when corrective or mitigating measure has been available |  |
+| `field-v28` | Full description of the severity of the vulnerability | ⚑ source note |
+| `field-v29` | Full description of the impact of the vulnerability |  |
+| `field-v30` | Date/time when you become aware of the Actively Exploited Vulnerability [1] |  |
+| `field-v31` | Malicious actor that has exploited/is exploiting the vulnerability |  |
+| `field-v32` | Particular Exceptional Circumstances (PEC) | ⚑ source note |
+| `field-v33` | PEC Delay Reason | ⚑ source note |
+| `field-v34` | Please provide further information |  |
+
+### Severe incident
+
+| Slot | Field | Already flagged |
+|---|---|---|
+| `field-i35` | Incident is suspected of unlawful or malicious acts |  |
+| `field-i36` | General information about nature of incident |  |
+| `field-i37` | Applied or ongoing mitigation measures | ⚑ source note |
+| `field-i38` | Detailed description of the Severity of the incident | ⚑ source note |
+| `field-i39` | Detailed description of the Impact of the incident |  |
+| `field-i40` | Type of Threat or root cause likely to have triggered incident |  |
+| `field-i41` | Date/time when you become aware of the incident [2] | ⚑ source note |
+| `field-i42` | Date/time incident occurred | ⚑ source note |
+| `field-i43` | Initial assessment of the incident |  |
