@@ -33,11 +33,12 @@ quietly tidies its source cannot be diffed against it.
 
 | File | Tracks | Notes |
 |---|---|---|
-| [`enisa-srp-faq-baseline.md`](enisa-srp-faq-baseline.md) | ENISA's SRP pages: main page, FAQ (27 entries), CSIRT coordinator list, three AR guidance pages | The FAQ went from 23 to 27 entries in a single September rewrite |
-| [`enisa-srp-glossary-baseline.md`](enisa-srp-glossary-baseline.md) | The CRA SRP Glossary — every reporting field, its meaning, format and per-stage status | The live page returned HTTP 403 hours after capture; this is currently the only record of its contents |
+| [`enisa-srp-faq-baseline.md`](enisa-srp-faq-baseline.md) | ENISA's SRP pages: main page, FAQ (30 entries), CSIRT coordinator list, four AR guidance pages | The FAQ went from 23 to 27 entries in a single September rewrite |
+| [`enisa-srp-glossary-baseline.md`](enisa-srp-glossary-baseline.md) | The CRA SRP Glossary — every reporting field, its meaning, format and per-stage status | The page moved without a redirect — the old URL still returns HTTP 403 — and its content has been edited without the version stamp moving |
 | [`commission-cra-faq-baseline.md`](commission-cra-faq-baseline.md) | The Commission's *FAQs on the CRA*, a versioned 66-page document (now v1.4) | Four versions archived verbatim under [`commission-faq/`](commission-faq/), with side-by-side diffs |
 | [`srp-domains-baseline.md`](srp-domains-baseline.md) | The production DNS zone `cra-srp.enisa.europa.eu` — 29 hosts | Country → CSIRT mapping verified against ENISA's official list; reachability history under [`srp-domains/`](srp-domains/) |
 | [`notified-bodies-baseline.md`](notified-bodies-baseline.md) | Conformity assessment bodies notified under the CRA | **Still zero**, on every working day since 21 June 2026 — 65 checks. Machine state under [`notified-bodies/`](notified-bodies/) |
+| [`enisa-defect-report.md`](enisa-defect-report.md) | Errors, contradictions and gaps found in ENISA's own SRP pages, written to be handed to ENISA | 37 findings verified against the live pages on 9 September 2026 |
 
 ### Things in here you may not find elsewhere
 
