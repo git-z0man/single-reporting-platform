@@ -43,6 +43,8 @@ Retrieved 2026-09-07 from `https://www.enisa.europa.eu/sites/default/files/inlin
 | `if-07-add-manufacturer.png` | `image_27.png` | Interface | [AR Interface functions](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-interface-functions) | 38,951 | `e676739e3cc70a4e` |
 | `if-08-claim-primary-role.png` | `image_28.png` | Interface | [AR Interface functions](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-interface-functions) | 57,388 | `299879a90b653366` |
 | `if-09-remove-association.png` | `image_29.png` | Interface | [AR Interface functions](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-interface-functions) | 58,917 | `c77705c9a8de6d0e` |
+| `pec-01-toggle.png` | `Screenshot 2026-09-08 161726.png` | PEC | [PEC guidance](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-particular-exceptional-circumstances-pec) | 54,083 | `578667fe310c48e0` |
+| `pec-02-delay-reasons.png` | `Screenshot 2026-09-08 161924.png` | PEC | [PEC guidance](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-particular-exceptional-circumstances-pec) | 151,361 | `c763218d67f3c5ce` |
 
 ## What each screenshot illustrates
 
@@ -70,8 +72,16 @@ The step from the guidance page that each image accompanies, quoted:
 - **`if-07-add-manufacturer.png`** — and click on “Save”.
 - **`if-08-claim-primary-role.png`** — role for the manufacturer.
 - **`if-09-remove-association.png`** — and confirm the action.
+- **`pec-01-toggle.png`** — in the 72hrs report template scroll down and toggle the Particular Exceptional Circumstances (PEC) indicator.
+- **`pec-02-delay-reasons.png`** — By toggling the indicator, the PEC Delay Reson options will be displayed.
 
 ## Note on numbering
 
 ENISA's own filenames run `image_7`–`image_29` with `image_15` absent from
 all three pages. The gap is ENISA's; nothing is missing here.
+
+The two PEC images, added 2026-09-08 with the fourth guidance page, break that
+scheme entirely: ENISA uploaded them as `Screenshot 2026-09-08 161726.png` and
+`Screenshot 2026-09-08 161924.png`, timestamps and all. Downloaded without the
+`styles/large` derivative, so these are the originals — 1089×322 and 1122×531,
+large enough to read every field label.

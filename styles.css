@@ -315,6 +315,45 @@ tr.group td {
 .chip.carried     { background: var(--card-alt);     color: var(--faint); }
 .chip.na          { background: transparent;         color: var(--faintest); border: 1px dashed var(--hairline); padding: 3px 9px; }
 
+/* ---------- guided walkthrough ---------------------------------------- */
+ol.walk { margin: 0; padding: 0; list-style: none; counter-reset: wstep; }
+li.wstep { padding: 0 0 26px; border-bottom: 1px solid var(--hairline-soft); margin-bottom: 26px; }
+li.wstep:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.wstep-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+.wstep-num {
+  flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  font: 600 12px/24px 'IBM Plex Mono', monospace; text-align: center;
+}
+.wstep-head h3 { margin: 0; font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.4; }
+li.wstep > figure { margin: 0 0 14px; }
+li.wstep > figure img.shot { width: 100%; }
+li.wstep > figure figcaption { margin-top: 8px; font-size: 13px; line-height: 1.6; color: var(--faint); }
+.wstep-lede { margin: 0 0 14px; font-size: 14px; line-height: 1.7; color: var(--body); }
+.wstep-lede a, .wstep-more a, .ownnote a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.wstep-more { margin: 12px 0 0; font-size: 13px; line-height: 1.6; color: var(--faint); }
+li.wstep .table-wrap { margin-bottom: 0; }
+li.wstep .callout { margin-top: 14px; }
+.ownnote {
+  margin: 14px 0 0; padding: 12px 16px; font-size: 14px; line-height: 1.7;
+  color: var(--body); background: var(--card-alt);
+  border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0;
+}
+
+/* narrow screens: the three-column field table becomes stacked cards, or the
+   prose column ends up one word wide */
+@media (max-width: 620px) {
+  li.wstep table.data thead { display: none; }
+  li.wstep table.data, li.wstep table.data tbody, li.wstep table.data tr, li.wstep table.data td { display: block; width: auto; }
+  li.wstep table.data tr { padding: 14px 16px; border-top: 1px solid var(--hairline-soft); }
+  li.wstep table.data tr:first-child { border-top: none; }
+  li.wstep table.data td { padding: 0; border: none; }
+  li.wstep td.c-field { margin-bottom: 8px; }
+  li.wstep td.c-status { display: inline-block; margin-bottom: 8px; }
+  li.wstep td.c-note { line-height: 1.65; }
+  li.wstep .col-field, li.wstep .col-status { width: auto; }
+}
+
 /* ---------- field reference ------------------------------------------- */
 .fieldgroup-sub { margin: -6px 0 12px; font-size: 13px; line-height: 1.6; color: var(--faint); }
 details.faq.field > summary { gap: 12px; }

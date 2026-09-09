@@ -14,8 +14,10 @@ mid-flight, and another was rewritten without its version stamp moving.
 ## The guide
 
 [`index.html`](index.html) — a manufacturer's walkthrough of the four stages:
-registration, early warning (24 h), notification (72 h), and final report,
-plus every reporting field explained from ENISA's Glossary and its FAQ in full. Published via GitHub Pages at
+registration, early warning (24 h), notification (72 h), and final report.
+Each stage runs screen by screen: ENISA's own screenshot, the fields as that
+screen labels them, and what goes in each — with every reporting field
+explained from ENISA's Glossary, and its FAQ in full. Published via GitHub Pages at
 <https://git-z0man.github.io/single-reporting-platform/>.
 
 The archive below is served from the same site, so anything in it can be linked
