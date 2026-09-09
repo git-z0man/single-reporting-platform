@@ -8,7 +8,7 @@ notification_status: "1 (Active)"
 machine_state: notified-bodies/manifest.json
 active_bodies: 0
 canary: Directive 2014/53/EU (RED), legislationId 154428 — must return rows, else the check is broken
-last_check: 2026-09-08
+last_check: 2026-09-09
 last_change: never — no body has ever been listed under the CRA
 purpose: >-
   Detect the moment a conformity assessment body is first notified under the
@@ -19,7 +19,7 @@ purpose: >-
 
 # CRA Notified Bodies — Baseline
 
-**0 bodies are notified under the Cyber Resilience Act.** Checked 2026-09-08, and on every working day since 21 June 2026 — 65 checks, never anything but zero.
+**0 bodies are notified under the Cyber Resilience Act.** Checked 2026-09-09, and on every working day since 21 June 2026 — 66 checks, never anything but zero.
 
 That is a finding, not an absence of one. Regulation (EU) 2024/2847 requires third-party conformity assessment for important (Annex III) and critical (Annex IV) products with digital elements. No notified body means nobody is authorised to perform it. The Commission's own implementation timeline expects "sufficient CABs designated" by **11 December 2026**.
 
@@ -28,9 +28,9 @@ That is a finding, not an absence of one. Regulation (EU) 2024/2847 requires thi
 | | |
 |---|---|
 | Active notified bodies (CRA) | **0** |
-| Last successful check | 2026-09-08T07:15:03+00:00 |
+| Last successful check | 2026-09-09T07:14:35+00:00 |
 | Last change | none — zero since monitoring began |
-| Checks recorded | 65, from 2026-06-21 to 2026-09-08 |
+| Checks recorded | 66, from 2026-06-21 to 2026-09-09 |
 | Canary (RED) | 366 rows, OK |
 
 ## Why there is a canary
@@ -114,6 +114,7 @@ One row per day; "Checks" is filled in only where a day had more than one run.
 | 2026-09-04 | 0 | — | 366 |
 | 2026-09-07 | 0 | — | 366 |
 | 2026-09-08 | 0 | — | 366 |
+| 2026-09-09 | 0 | — | 366 |
 
 ## Change log
 
