@@ -23,7 +23,7 @@ status: >-
   consistent with a move, and that is what happened. Content verified identical
   after the move: 38 fields, same numbering, no name changed. Re-verify the URL on
   every future check, not just the status code.
-last_check: 2026-09-08
+last_check: 2026-09-09
 last_change: 2026-09-07
 note: >-
   One row per field, one table per group (Common / AEV / SI), matching the live page's own
