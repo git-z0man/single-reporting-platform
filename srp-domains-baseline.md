@@ -31,7 +31,7 @@ when that changes.
 | Edge | `185.8.236.7`, `185.8.236.8` (WEDOS Global, CZ) |
 | State | provisioned, not yet released |
 | Expected go-live | in the coming days, at the latest **11 September 2026** |
-| Last check | 2026-09-08 |
+| Last check | 2026-09-09 |
 | Last change | 2026-09-07 (country → CSIRT mapping verified) |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
@@ -222,6 +222,28 @@ login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-09-09 02:04 UTC (vs. the DNS_TIMEOUT reading, 2026-09-09 00:22 UTC)
+
+Follow-up to yesterday's `DNS_TIMEOUT` fix: bounding the local resolver calls
+stopped the false NXDOMAIN, but `getent`/`socket.getaddrinfo` (the fallback
+used since `dig` is absent from this image) kept hanging on every one of the
+29 hosts regardless, so two consecutive runs recorded `DNS_TIMEOUT` across the
+board and the monitor stayed blind. `curl`, run directly against the same
+hosts in the same sessions, resolved and connected to all 29 in about a
+second every time.
+
+**Fixed** — `check.sh` no longer lets a hung local lookup skip the probe: it
+always attempts the `curl` HTTP fetch that already decides `LIVE`/
+`PROVISIONED`/`BLOCKED`, and now also decides `NXDOMAIN` (curl exit 6) from
+that same attempt. `DNS_TIMEOUT` still exists as a fallback, but only fires
+when curl's own attempt times out too (exit 28) — it is no longer the default
+outcome whenever the local resolver hangs. `resolve()`/`getent`/`python3` are
+kept only to populate the informational "Resolves to" column.
+**Unchanged** — reachability itself: still 0/29 live, all `PROVISIONED`, with
+this run's `last_checked` timestamps now genuinely current rather than stale
+behind two days of `DNS_TIMEOUT`. CSIRT coordinator list re-checked against
+ENISA's page (200 OK, 27 rows) — matches the table above exactly, no changes.
 
 ### 2026-09-08 23:54 UTC (vs. the last confirmed reading, 2026-09-08 00:30 UTC)
 
