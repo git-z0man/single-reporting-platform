@@ -43,22 +43,41 @@ classifies by curl's exit code:
 |---|---|---|
 | HTTP status returned | `LIVE` | upstream answered — go-live |
 | exit 35 / 28 / 7 / 52 | `PROVISIONED` | connected, upstream dropped |
-| DNS failure | `NXDOMAIN` | not in the zone |
+| exit 6 | `NXDOMAIN` | curl itself could not resolve the host |
+| exit 28, local DNS also hung | `DNS_TIMEOUT` | nothing answered in time — the check was blind |
 | exit 56 + `403` | `BLOCKED` | egress policy denied CONNECT — the check was blind |
 
-`BLOCKED` is kept distinct on purpose: it means the monitor could not see, and
-must never be recorded as a platform state. `first_live` is only ever set from
-an HTTP response, so a proxied run cannot manufacture a go-live.
+`BLOCKED` and `DNS_TIMEOUT` are kept distinct on purpose: both mean the
+monitor could not see, and must never be recorded as a platform state or
+overwrite the last confirmed one. `first_live` is only ever set from an HTTP
+response, so a proxied run cannot manufacture a go-live.
 
-`NXDOMAIN` is decided the same way, from curl's own resolution failure (exit
-6) during that same HTTP probe — not from a separate DNS lookup. A standalone
-`getent`/`socket.getaddrinfo()` call (the fallback used when `dig` is absent
-from the image, as of 2026-09-09) has been observed to hang for minutes
-against this zone while curl resolves the identical name in about a second in
-the same run. Gating NXDOMAIN on that separate lookup previously turned one
-hung resolver into a false "all 29 hosts gone" reading. `resolve()` still runs
-for the informational "Resolves to" column, but every method it tries is
-`timeout`-bounded so it can no longer stall the check or the classification.
+Both `NXDOMAIN` and `DNS_TIMEOUT` are decided from curl's own attempt during
+the same HTTP probe that already decides `LIVE`/`PROVISIONED`/`BLOCKED` — not
+from a separate DNS lookup gating the whole host. Two incidents established
+why:
+
+- **2026-09-08** — `resolve()` called `getent`/`python3` with no timeout at
+  all. When this run's environment stopped getting an answer for the zone's
+  real records, the hang silently read as an empty result, indistinguishable
+  from a genuine negative, and all 29 hosts were recorded NXDOMAIN — as if
+  the entire production zone had vanished overnight. It had not: a control
+  lookup of a name confirmed not to exist under the zone answered in under a
+  second, while the 29 monitored hosts (which had resolved fine hours
+  earlier) hung for 40+ seconds with nothing back.
+- **2026-09-09**, the day after that fix landed — bounding `resolve()` with
+  `timeout` and adding the distinct `DNS_TIMEOUT` state stopped the false
+  NXDOMAIN, but `getent`/`python3` (the fallback used since `dig` is absent
+  from this image) kept hanging on every host regardless, so two consecutive
+  runs recorded `DNS_TIMEOUT` across the board and the monitor stayed blind.
+  `curl`, run directly against the same 29 hosts in the same sessions,
+  resolved and connected to all of them in about a second every time.
+
+So the check now always attempts the `curl` probe, even when `resolve()`
+itself timed out, and only falls back to `DNS_TIMEOUT` when curl's own
+attempt also fails to get an answer (exit 28). `resolve()` still runs,
+`timeout`-bounded, purely to populate the informational "Resolves to"
+column — it never gates classification.
 
 When it detects a proxy (`HTTPS_PROXY` set, or an `Anthropic` certificate
 issuer) the run records `trust=proxied` and reports the TCP and TLS columns as

@@ -40,19 +40,42 @@
 # meaningful when this runs from a normal network, but they are marked
 # trust=proxied and never set first_live.
 #
-# curl's exit code separates the three states that matter:
+# curl's exit code separates the states that matter:
 #
 #   HTTP code returned      -> LIVE          (upstream answered)
 #   exit 35/28/7/52/56*     -> PROVISIONED   (connected, upstream dropped)
 #   exit 56 + "403"         -> BLOCKED       (egress policy; check is blind,
 #                                             never a statement about the SRP)
 #   exit 6                  -> NXDOMAIN      (curl itself could not resolve)
+#   exit 28, and the local
+#   DNS step also hung      -> DNS_TIMEOUT   (nothing answered in time;
+#                                             check is blind, never a
+#                                             statement about the SRP)
 #
-# NXDOMAIN is decided from curl's own resolution, not from a separate DNS
-# lookup: a standalone `getent`/glibc lookup has been observed to hang for
-# minutes against this zone while curl resolves the same name in ~1s, which
-# previously produced a false "whole zone gone" reading. See resolve()
-# below.
+# NXDOMAIN and DNS_TIMEOUT are both decided primarily from curl's own attempt
+# during the same HTTP probe that decides LIVE/PROVISIONED/BLOCKED -- not from
+# a separate DNS lookup gating the whole host. Two incidents established why:
+#
+# 2026-09-08: resolve() called getent/python3 with no timeout at all. When
+# this zone's real records stopped answering, the hang silently read as an
+# empty result -- indistinguishable from a genuine negative -- and the whole
+# 29-host zone was recorded NXDOMAIN, as if the entire production zone had
+# vanished overnight. A control lookup of a name known not to exist under the
+# same zone answered in under a second, while the 29 monitored hosts (which
+# had resolved fine hours earlier) never answered at all: a resolver timeout,
+# not a negative DNS response.
+#
+# 2026-09-09, same day the above fix landed: bounding resolve() with `timeout`
+# and introducing a distinct DNS_TIMEOUT state stopped the false NXDOMAIN, but
+# the local resolvers (getent, then python3's socket.getaddrinfo -- dig is
+# absent from this image) kept hanging for minutes on every host regardless,
+# so every run kept reporting DNS_TIMEOUT and never got a fresh reading. In
+# the same runs, curl resolved and connected to every one of the same 29
+# hosts in about a second. So the check now always attempts the curl probe
+# -- even when resolve() itself timed out -- and only falls back to
+# DNS_TIMEOUT when curl's own attempt also fails to get an answer (exit 28).
+# resolve() still runs, bounded, purely to populate the informational
+# "Resolves to" column; it never gates classification.
 #
 # Usage:  bash srp-domains/check.sh [--quiet]
 # Exit:   0 = no state change, 1 = at least one host changed state, 2 = error
@@ -89,30 +112,36 @@ else
   case "$issuer" in *Anthropic*|*"Egress Gateway"*) TRUST="proxied" ;; esac
 fi
 
-# --- DNS --------------------------------------------------------------------
-# Informational only -- see below for why classification does not gate on it.
-# `getent`/`socket.getaddrinfo()` go through glibc's resolver (NSS "dns"
-# module), which on this zone has been observed to hang for a long time
-# (confirmed 2026-09-09: killed manually after 2+ minutes) rather than
-# returning promptly, when `dig` is absent from the image. curl resolves the
-# same names in ~1s in the same run, so this is a glibc/NSS resolution path
-# problem, not a real DNS failure. Every call here is `timeout`-bounded so a
-# hang can cost at most a few seconds per host instead of stalling resolve()
-# -- and, before the fix below, silently turning the whole zone NXDOMAIN.
+# --- DNS ----------------------------------------------------------------
+# Informational only -- classification never gates on this (see header).
+# Prints "TIMEOUT" if every method that ran hung rather than answering, so
+# the caller can tell that apart from a genuine negative response (empty
+# output, no timeout).
 resolve() {
-  local h="$1" out=""
+  local h="$1" out="" rc tmp saw_timeout=0
+  tmp="$(mktemp)"
+
   if command -v dig >/dev/null 2>&1; then
-    out="$(timeout 5 dig +short +time=3 +tries=1 A "$h" 2>/dev/null | grep -E '^[0-9.]+$' || true)"
+    timeout 5 dig +short +time=3 +tries=1 A "$h" >"$tmp" 2>/dev/null; rc=$?
+    if [ $rc -eq 124 ]; then saw_timeout=1; else out="$(grep -E '^[0-9.]+$' "$tmp" || true)"; fi
   fi
   if [ -z "$out" ] && command -v getent >/dev/null 2>&1; then
-    out="$(timeout 5 getent ahostsv4 "$h" 2>/dev/null | awk '{print $1}' | sort -u || true)"
+    timeout 5 getent ahostsv4 "$h" >"$tmp" 2>/dev/null; rc=$?
+    if [ $rc -eq 124 ]; then saw_timeout=1; else out="$(awk '{print $1}' "$tmp" | sort -u || true)"; fi
   fi
   if [ -z "$out" ] && command -v python3 >/dev/null 2>&1; then
-    out="$(timeout 5 python3 -c 'import socket,sys
+    timeout 5 python3 -c 'import socket,sys
 try: print("\n".join(sorted({r[4][0] for r in socket.getaddrinfo(sys.argv[1],None,socket.AF_INET)})))
-except Exception: pass' "$h" 2>/dev/null || true)"
+except Exception: pass' "$h" >"$tmp" 2>/dev/null; rc=$?
+    if [ $rc -eq 124 ]; then saw_timeout=1; else out="$(cat "$tmp")"; fi
   fi
-  printf '%s' "$(echo "$out" | sort -u | paste -sd' ' -)"
+  rm -f "$tmp"
+
+  if [ -z "$out" ] && [ "$saw_timeout" -eq 1 ]; then
+    printf 'TIMEOUT'
+  else
+    printf '%s' "$(echo "$out" | sort -u | paste -sd' ' -)"
+  fi
 }
 
 # --- probes -----------------------------------------------------------------
@@ -127,17 +156,21 @@ probe_tls() {  # $1 host -> ok|fail
 [ -f "$LOG" ] || echo "timestamp_utc,host,dns,tcp443,tls,http_code,note" > "$LOG"
 
 declare -A ST HTTP DNSIP NOTE
-live=0; blocked=0; nxdomain=0
+live=0; blocked=0; nxdomain=0; dns_timeout=0
 
 for h in "${HOSTS[@]}"; do
-  # DNS classification comes from curl's own resolution (exit 6 = could not
-  # resolve), not from the resolve() helper above: that helper can only ever
-  # be informational (see its header) because its resolvers have hung on
-  # this zone in practice, and gating NXDOMAIN on a hung lookup previously
-  # produced a false "whole zone gone" result while curl itself resolved
-  # every host fine. resolve() still runs, bounded, to populate DNSIP for
-  # the status table.
+  # resolve() is informational only (see its header): its local resolvers
+  # have hung on this zone in practice. So its result never gates the probe
+  # below -- curl always gets a chance, since curl has proven far more
+  # reliable at resolving these hosts than getent/python3 in this
+  # environment. dns_hung just remembers whether resolve() itself timed out,
+  # for the DNS_TIMEOUT fallback if curl times out too.
   ips="$(resolve "$h")"
+  dns_hung=0
+  if [ "$ips" = "TIMEOUT" ]; then
+    dns_hung=1
+    ips=""
+  fi
   DNSIP[$h]="$ips"
 
   if [ "$TRUST" = "proxied" ]; then
@@ -160,18 +193,22 @@ for h in "${HOSTS[@]}"; do
   elif [ $rc -eq 56 ] && printf '%s' "$msg" | grep -q '403'; then
     ST[$h]=BLOCKED; HTTP[$h]=000; NOTE[$h]="egress policy denied CONNECT: $msg"
     blocked=$((blocked+1))
+  elif [ $rc -eq 28 ] && [ "$dns_hung" -eq 1 ]; then
+    ST[$h]=DNS_TIMEOUT; HTTP[$h]=000; NOTE[$h]="DNS never answered (local resolver and curl both timed out) - check was blind"
+    dns_timeout=$((dns_timeout+1))
   else
     ST[$h]=PROVISIONED; HTTP[$h]=000; NOTE[$h]="curl exit $rc: $msg"
   fi
 
-  dnscol="ok"; [ "${ST[$h]}" = "NXDOMAIN" ] && dnscol="fail"
+  dnscol="ok"
+  case "${ST[$h]}" in NXDOMAIN) dnscol="fail" ;; DNS_TIMEOUT) dnscol="timeout" ;; esac
   echo "$NOW,$h,$dnscol,$tcp,$tls,${HTTP[$h]},${ST[$h]} ${NOTE[$h]}" >> "$LOG"
   printf -v line '  %-12s %-34s %s' "${ST[$h]}" "$h" "${NOTE[$h]}"
   say "$line"
 done
 
 say ""
-say "$live/$TOTAL live   (trust=$TRUST, blocked=$blocked, nxdomain=$nxdomain)"
+say "$live/$TOTAL live   (trust=$TRUST, blocked=$blocked, nxdomain=$nxdomain, dns_timeout=$dns_timeout)"
 
 # --- status.md (overwritten each run) ---------------------------------------
 {
@@ -188,6 +225,7 @@ say "$live/$TOTAL live   (trust=$TRUST, blocked=$blocked, nxdomain=$nxdomain)"
     echo
   fi
   [ "$blocked" -gt 0 ] && { echo "> $blocked host(s) BLOCKED by egress policy — the check was blind for those,"; echo "> which says nothing about the platform."; echo; }
+  [ "$dns_timeout" -gt 0 ] && { echo "> $dns_timeout host(s) had DNS_TIMEOUT — neither the local resolver nor curl"; echo "> got an answer in time. Says nothing about the platform; the last"; echo "> confirmed state stands."; echo; }
   echo "| Host | Status | HTTP | Resolves to | Last checked |"
   echo "|---|---|---|---|---|"
   for h in "${HOSTS[@]}"; do
@@ -210,13 +248,26 @@ m = json.load(open("srp-domains/manifest.json"))
 now, today = os.environ["_NOW"], os.environ["_TODAY"]
 by = {h["host"]: h for h in m.get("hosts", [])}
 changed = []
+# BLOCKED and DNS_TIMEOUT mean the check couldn't get a real answer this run
+# (egress policy, or nothing answering in time). Neither is ever a platform
+# statement: they must not overwrite the last confirmed state and must not
+# count as a change, or a monitoring hiccup reads as a go-live or a
+# zone-wide removal. See check.sh's header for the 2026-09-08/09 incidents.
+INCONCLUSIVE = {"BLOCKED", "DNS_TIMEOUT"}
 for line in os.environ["_ROWS"].strip().splitlines():
     host, state, code, ips = line.split("|", 3)
     e = by.get(host)
+    if state in INCONCLUSIVE:
+        # Wait for a confirmed answer before recording an unseen host as new.
+        if e is not None:
+            e["last_checked"] = now
+            e[f"last_{state.lower()}_at"] = now
+        continue
     if e is None:
         e = {"host": host, "role": "country", "first_live": None}
         m.setdefault("hosts", []).append(e); by[host] = e
         changed.append(f"new host in zone: {host}")
+    e["last_checked"] = now
     prev = e.get("state")
     if prev != state:
         changed.append(f"{host}: {prev or 'unknown'} -> {state}")
@@ -225,7 +276,6 @@ for line in os.environ["_ROWS"].strip().splitlines():
     e["tcp443"] = "unreliable" if os.environ["_TRUST"] == "proxied" else e.get("tcp443")
     e["tls"] = "unreliable" if os.environ["_TRUST"] == "proxied" else e.get("tls")
     e["http_code"] = code
-    e["last_checked"] = now
     # first_live is set ONLY from a real upstream HTTP response.
     if state == "LIVE" and not e.get("first_live"):
         e["first_live"] = now

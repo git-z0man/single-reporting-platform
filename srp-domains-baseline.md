@@ -166,11 +166,14 @@ on curl's exit code:
 |---|---|---|
 | HTTP status returned | `LIVE` | upstream answered — go-live |
 | exit 35 / 28 / 7 / 52 | `PROVISIONED` | connected, upstream dropped the handshake |
-| DNS failure | `NXDOMAIN` | host not in the zone |
+| DNS: fast negative answer | `NXDOMAIN` | resolver confirmed no such name/record |
+| DNS: resolver never answered | `DNS_TIMEOUT` | the check was blind; **not** a statement about the platform |
 | exit 56 + `403` | `BLOCKED` | egress policy denied CONNECT — the check was blind; **not** a statement about the platform |
 
-`BLOCKED` is deliberately distinct: it means the monitor could not see, which
-must never be recorded as "the SRP is down" or as a go-live.
+`BLOCKED` and `DNS_TIMEOUT` are deliberately distinct: both mean the monitor
+could not see, which must never be recorded as "the SRP is down" or as a
+go-live. See the 2026-09-08 delta history entry below for the incident that
+made this distinction necessary.
 
 ## Test environment
 
@@ -220,26 +223,49 @@ login attempts, no form input, no authentication**:
 
 ## Delta history
 
-### 2026-09-09 — reachability check bug fixed: false zone-wide NXDOMAIN averted
+### 2026-09-09 02:04 UTC (vs. the DNS_TIMEOUT reading, 2026-09-09 00:22 UTC)
 
-The scheduled run's DNS step (`resolve()` in `check.sh`) hung against this
-zone instead of returning promptly — `dig` is absent from the monitoring
-image, so it fell to `getent`, which took over two minutes per host without
-answering. The unfixed script treated that hang as "no A record" and would
-have logged and committed all 29 hosts as `NXDOMAIN`, i.e. the platform
-apparently vanishing from DNS overnight. `curl` resolved every one of the
-same 29 hosts in ~1–2 s in the same run, confirming the hang was a resolver
-artifact of this environment, not a real DNS change.
+Follow-up to yesterday's `DNS_TIMEOUT` fix: bounding the local resolver calls
+stopped the false NXDOMAIN, but `getent`/`socket.getaddrinfo` (the fallback
+used since `dig` is absent from this image) kept hanging on every one of the
+29 hosts regardless, so two consecutive runs recorded `DNS_TIMEOUT` across the
+board and the monitor stayed blind. `curl`, run directly against the same
+hosts in the same sessions, resolved and connected to all 29 in about a
+second every time.
 
-**Fixed** — `check.sh` now decides `NXDOMAIN` from curl's own resolution
-failure (exit 6) during the HTTP probe, the same probe that already decides
-`LIVE`/`PROVISIONED`/`BLOCKED`, rather than from a separate DNS lookup.
-`resolve()` is now timeout-bounded (5 s per method) and used only to
-populate the informational "Resolves to" column.
-
-**Unchanged** — reachability itself: still 0/29 live, all `PROVISIONED`, no
-host newly dark or newly present. CSIRT coordinator list re-checked against
+**Fixed** — `check.sh` no longer lets a hung local lookup skip the probe: it
+always attempts the `curl` HTTP fetch that already decides `LIVE`/
+`PROVISIONED`/`BLOCKED`, and now also decides `NXDOMAIN` (curl exit 6) from
+that same attempt. `DNS_TIMEOUT` still exists as a fallback, but only fires
+when curl's own attempt times out too (exit 28) — it is no longer the default
+outcome whenever the local resolver hangs. `resolve()`/`getent`/`python3` are
+kept only to populate the informational "Resolves to" column.
+**Unchanged** — reachability itself: still 0/29 live, all `PROVISIONED`, with
+this run's `last_checked` timestamps now genuinely current rather than stale
+behind two days of `DNS_TIMEOUT`. CSIRT coordinator list re-checked against
 ENISA's page (200 OK, 27 rows) — matches the table above exactly, no changes.
+
+### 2026-09-08 23:54 UTC (vs. the last confirmed reading, 2026-09-08 00:30 UTC)
+
+`check.sh`'s DNS resolver calls had no timeout. When this run's monitoring
+environment stopped getting an answer for the zone's real records, that
+silently read as NXDOMAIN for all 29 hosts, and the run looked like the
+entire production zone had vanished. It had not.
+
+**Fixed** — `resolve()` now bounds every DNS lookup with `timeout` and
+reports `DNS_TIMEOUT` distinctly from a genuine negative answer;
+`manifest.json` now excludes `BLOCKED`/`DNS_TIMEOUT` from ever overwriting a
+host's last confirmed state or counting as a platform change.
+**Watch** — with the fix applied, all 29 hosts still read `DNS_TIMEOUT` this
+run. A confirmed nonexistent name under the same zone
+(`www.cra-srp.enisa.europa.eu`) answers in under a second; the 29 monitored
+hosts, which had resolved fine 23 hours earlier, do not answer at all. This
+looks like a resolution problem specific to this monitoring environment's
+path to the zone's real records, not a platform withdrawal — but it has now
+held across two consecutive runs and needs watching.
+**Unchanged** — reachability per host: still 0/29 live, all `PROVISIONED`,
+same as 2026-09-06. Country → CSIRT mapping: re-checked against ENISA's list
+(still dated 04/09/2026), no discrepancies.
 
 ### 2026-09-07 — country → CSIRT mapping verified against ENISA's official list
 
