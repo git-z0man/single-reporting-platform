@@ -220,24 +220,19 @@
 
   var built = false;
 
-  function textAfterStrong(body, label) {
-    var ps = body.querySelectorAll('p');
-    for (var i = 0; i < ps.length; i++) {
-      var st = ps[i].querySelector('strong');
-      if (st && st.textContent.indexOf(label) === 0) {
-        var clone = ps[i].cloneNode(true);
-        clone.removeChild(clone.querySelector('strong'));
-        return clone.innerHTML.trim();
-      }
-    }
-    return '';
+  // each block of a field card is tagged with data-k; read it by key rather
+  // than by matching a label's text, which broke the moment labels moved out
+  // of the paragraph they introduced.
+  function part(body, key) {
+    var el = body.querySelector('[data-k="' + key + '"]');
+    return el ? el.innerHTML.trim() : '';
   }
 
   var STAGES = ['EW', '72\u2009h', 'FR'];
   function stageCell(chips) {
     if (!chips) return '';
     var out = '';
-    Array.prototype.forEach.call(chips.children, function (c, i) {
+    Array.prototype.forEach.call(chips.querySelectorAll('.chip'), function (c, i) {
       out += '<span class="ft-stage"><b>' + (STAGES[i] || '') + '</b>' + c.outerHTML + '</span>';
     });
     return out;
@@ -276,16 +271,16 @@
         var body = d.querySelector('.faq-body');
         var src = body.querySelector('.field-src');
         var chips = d.querySelector('.field-chips');
-        var ex = textAfterStrong(body, 'ENISA\u2019s example');
-        var fmt = textAfterStrong(body, 'Format');
+        var ex = part(body, 'ex');
+        var fmt = part(body, 'fmt');
         var foot = body.querySelector('.field-foot');
 
         html += '<tr id="ft-' + num + '">' +
                 '<td class="ft-num"><span class="faq-num">' + num + '</span></td>' +
                 '<td class="ft-name"><strong>' + name + '</strong>' +
                 (src ? '<span class="ft-src">' + src.innerHTML + '</span>' : '') + '</td>' +
-                '<td>' + textAfterStrong(body, 'What it means') + '</td>' +
-                '<td>' + textAfterStrong(body, 'How to complete it') +
+                '<td>' + part(body, 'means') + '</td>' +
+                '<td>' + part(body, 'how') +
                 (ex ? '<span class="ft-sub"><b>Example</b> ' + ex + '</span>' : '') +
                 (fmt ? '<span class="ft-sub"><b>Format</b> ' + fmt + '</span>' : '') +
                 (foot ? '<span class="ft-sub note">' + foot.innerHTML + '</span>' : '') +
@@ -308,6 +303,50 @@
       sw.querySelectorAll('.vsbtn').forEach(function (b) {
         b.setAttribute('aria-pressed', String((b.dataset.view === 'table') === wantTable));
       });
+    });
+  });
+})();
+
+/* ---- field cards: note markers and open-all ------------------------------
+   The header marker says which kinds of note a card holds, so a reader can
+   see it without opening all 38. It is derived from the card's own content,
+   never written into the markup: add or remove a note and the marker follows
+   by itself. */
+(function () {
+  var cards = document.querySelectorAll('#fieldcards details.field');
+  if (!cards.length) return;
+
+  cards.forEach(function (d) {
+    var marks = [];
+    if (d.querySelector('.ownnote')) {
+      marks.push('<span class="notemark own" title="Carries a note from practice">' +
+                 '<span class="notemark-ic" aria-hidden="true">✱</span>From practice</span>');
+    }
+    if (d.querySelector('.faq-amend')) {
+      marks.push('<span class="notemark src" title="Carries a remark on ENISA’s own text">' +
+                 '<span class="notemark-ic" aria-hidden="true">⚑</span>Source note</span>');
+    }
+    if (!marks.length) return;
+    var wrap = document.createElement('span');
+    wrap.className = 'notemarks';
+    wrap.innerHTML = marks.join('');
+    // as a sibling of the title block, not inside it: nested in .faq-qwrap the
+    // marker competes with the field name for width and shreds it on a phone
+    var sum = d.querySelector('summary');
+    sum.insertBefore(wrap, sum.querySelector('.field-chips'));
+  });
+
+  // "Open all" / "Close all", one per field group
+  document.querySelectorAll('#fieldcards .openall').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var label = btn.closest('.seclabel');
+      var wrap = label && label.nextElementSibling;
+      while (wrap && !wrap.classList.contains('faq-wrap')) wrap = wrap.nextElementSibling;
+      if (!wrap) return;
+      var open = btn.dataset.open !== 'true';
+      wrap.querySelectorAll('details.field').forEach(function (d) { d.open = open; });
+      btn.dataset.open = String(open);
+      btn.textContent = open ? 'Close all' : 'Open all';
     });
   });
 })();

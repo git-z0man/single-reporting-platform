@@ -388,8 +388,14 @@ a.fieldref::after { content: '\2197'; margin-left: 3px; opacity: .55; }
 details.field.flash > summary { background: var(--accent-tint); }
 details.field.flash { border-left: 3px solid var(--accent); }
 details.field { border-left: 3px solid transparent; transition: border-color .3s ease; }
+/* the stage chips wrap under the field name on narrow screens rather than
+   disappearing — they are the only place the per-stage status is stated */
 @media (max-width: 720px) {
-  .field-chips { display: none; }
+  details.faq.field > summary { flex-wrap: wrap; gap: 10px 16px; }
+  .field .faq-qwrap { order: 0; }
+  .field .faq-chev { order: 1; }   /* stays on the title's line */
+  .field .notemarks { order: 2; flex-basis: 100%; }
+  .field .field-chips { order: 3; flex-basis: 100%; }
 }
 
 /* ---------- procedure steps ------------------------------------------- */
@@ -743,4 +749,98 @@ table.fieldtable .faq-num { font: 500 12px/1 'IBM Plex Mono', monospace; color: 
 
 @media (max-width: 860px) {
   table.fieldtable { min-width: 820px; }
+}
+
+/* ---------- field cards: structured explanation ------------------------
+   Scoped to .field throughout: details.faq, summary and .faq-body are
+   shared with the 29 Q&A entries, which this must not touch. */
+
+/* the collapsed row: stage chips carry their stage name, as in the table view */
+.field-chips { display: flex; flex-wrap: wrap; gap: 6px; flex: 0 0 auto; }
+.fchip { display: inline-flex; align-items: center; gap: 5px; }
+.fchip > b {
+  font: 500 10.5px/1 'IBM Plex Mono', monospace; letter-spacing: .02em;
+  color: var(--faintest); font-weight: 500;
+}
+
+/* note markers, generated from the card's content by app.js */
+.notemarks { display: inline-flex; flex-wrap: wrap; gap: 6px; flex: none; }
+.notemark {
+  display: inline-flex; align-items: center; gap: 5px;
+  font: 500 11px/1 'IBM Plex Sans', sans-serif; white-space: nowrap;
+  padding: 4px 9px 4px 7px; border-radius: 5px;
+}
+.notemark-ic { font-size: 11px; line-height: 1; }
+.notemark.own { background: var(--accent-tint); color: var(--accent-strong); }
+.notemark.src { background: var(--amber-chip-bg); color: var(--amber-text); }
+
+/* the open card, told apart from the closed rows around it */
+details.faq.field[open] { border-left-color: var(--accent); background: var(--card-alt); }
+details.faq.field[open] > summary { color: var(--ink); }
+
+/* body: one eyebrow per block instead of an inline bold run-in */
+.fdef-label {
+  display: block; margin-bottom: 5px;
+  font: 500 10.5px/1 'IBM Plex Mono', monospace; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--faintest);
+}
+.field .faq-body { padding-top: 4px; }
+
+/* format first: what kind of control this is, in one line */
+p.field-format {
+  margin: 0 0 16px; padding: 10px 12px;
+  background: var(--card); border: 1px solid var(--hairline); border-radius: 7px;
+}
+details.faq.field[open] p.field-format { background: var(--card); }
+p.field-format > span[data-k] {
+  font: 500 13.5px/1.5 'IBM Plex Mono', monospace; color: var(--ink);
+}
+
+dl.fdef { margin: 0 0 16px; }
+dl.fdef dt {
+  margin-bottom: 5px;
+  font: 500 10.5px/1 'IBM Plex Mono', monospace; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--faintest);
+}
+dl.fdef dd {
+  margin: 0 0 16px; font-size: 14px; line-height: 1.66; color: var(--body);
+}
+dl.fdef dd:last-child { margin-bottom: 0; }
+
+/* the example reads as quoted, because it is */
+figure.field-example {
+  margin: 0 0 16px; padding: 10px 14px;
+  border-left: 3px solid var(--accent); background: var(--accent-tint);
+  border-radius: 0 7px 7px 0;
+}
+figure.field-example .fdef-label { color: var(--accent-strong); opacity: .8; }
+figure.field-example p {
+  margin: 0;
+  font: 400 13px/1.6 'IBM Plex Mono', monospace; color: var(--ink);
+}
+
+/* your own note, last thing in the card */
+.field .ownnote { margin: 16px 0 0; }
+
+/* the cross-reference, demoted to a footer line */
+.field p.field-src {
+  margin: 16px 0 0; padding-top: 12px;
+  border-top: 1px solid var(--hairline-soft);
+}
+
+.field p.field-foot { margin: 0 0 16px; }
+.field .faq-amend { margin: 0 0 16px; }
+
+/* open all / close all, one per group */
+.seclabel .openall {
+  margin-left: auto; cursor: pointer;
+  font: 500 11.5px/1 'IBM Plex Sans', sans-serif;
+  padding: 5px 10px; border-radius: 5px;
+  border: 1px solid var(--hairline); background: var(--card); color: var(--faint);
+}
+.seclabel .openall:hover { border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 720px) {
+  /* the summary wraps: title (with the chevron beside it), then the markers,
+     then the stage chips — each on its own line rather than fighting for one */
 }
