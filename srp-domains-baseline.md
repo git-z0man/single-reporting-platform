@@ -9,7 +9,7 @@ expected_go_live: 2026-09-11
 retrieved: 2026-09-06
 purpose: Reachability baseline for the SRP production environment. The routine re-checks all 29 hosts, records the first successful HTTP response per host, detects new hosts appearing in the zone, and verifies the assumed country-to-CSIRT mapping once the platform answers.
 note: Only an HTTP status code relayed from upstream counts as live. TCP and TLS are recorded but are forged by an intercepting egress proxy in the monitoring environment — see "Why a TLS handshake is not evidence" below.
-last_check: 2026-09-08
+last_check: 2026-09-09
 last_change: 2026-09-06
 ---
 
@@ -31,7 +31,7 @@ when that changes.
 | Edge | `185.8.236.7`, `185.8.236.8` (WEDOS Global, CZ) |
 | State | provisioned, not yet released |
 | Expected go-live | in the coming days, at the latest **11 September 2026** |
-| Last check | 2026-09-07 |
+| Last check | 2026-09-09 |
 | Last change | 2026-09-07 (country → CSIRT mapping verified) |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
@@ -219,6 +219,27 @@ login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-09-09 — reachability check bug fixed: false zone-wide NXDOMAIN averted
+
+The scheduled run's DNS step (`resolve()` in `check.sh`) hung against this
+zone instead of returning promptly — `dig` is absent from the monitoring
+image, so it fell to `getent`, which took over two minutes per host without
+answering. The unfixed script treated that hang as "no A record" and would
+have logged and committed all 29 hosts as `NXDOMAIN`, i.e. the platform
+apparently vanishing from DNS overnight. `curl` resolved every one of the
+same 29 hosts in ~1–2 s in the same run, confirming the hang was a resolver
+artifact of this environment, not a real DNS change.
+
+**Fixed** — `check.sh` now decides `NXDOMAIN` from curl's own resolution
+failure (exit 6) during the HTTP probe, the same probe that already decides
+`LIVE`/`PROVISIONED`/`BLOCKED`, rather than from a separate DNS lookup.
+`resolve()` is now timeout-bounded (5 s per method) and used only to
+populate the informational "Resolves to" column.
+
+**Unchanged** — reachability itself: still 0/29 live, all `PROVISIONED`, no
+host newly dark or newly present. CSIRT coordinator list re-checked against
+ENISA's page (200 OK, 27 rows) — matches the table above exactly, no changes.
 
 ### 2026-09-07 — country → CSIRT mapping verified against ENISA's official list
 

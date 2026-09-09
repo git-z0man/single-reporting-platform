@@ -46,7 +46,13 @@
 #   exit 35/28/7/52/56*     -> PROVISIONED   (connected, upstream dropped)
 #   exit 56 + "403"         -> BLOCKED       (egress policy; check is blind,
 #                                             never a statement about the SRP)
-#   no DNS                  -> NXDOMAIN
+#   exit 6                  -> NXDOMAIN      (curl itself could not resolve)
+#
+# NXDOMAIN is decided from curl's own resolution, not from a separate DNS
+# lookup: a standalone `getent`/glibc lookup has been observed to hang for
+# minutes against this zone while curl resolves the same name in ~1s, which
+# previously produced a false "whole zone gone" reading. See resolve()
+# below.
 #
 # Usage:  bash srp-domains/check.sh [--quiet]
 # Exit:   0 = no state change, 1 = at least one host changed state, 2 = error
@@ -84,16 +90,25 @@ else
 fi
 
 # --- DNS --------------------------------------------------------------------
+# Informational only -- see below for why classification does not gate on it.
+# `getent`/`socket.getaddrinfo()` go through glibc's resolver (NSS "dns"
+# module), which on this zone has been observed to hang for a long time
+# (confirmed 2026-09-09: killed manually after 2+ minutes) rather than
+# returning promptly, when `dig` is absent from the image. curl resolves the
+# same names in ~1s in the same run, so this is a glibc/NSS resolution path
+# problem, not a real DNS failure. Every call here is `timeout`-bounded so a
+# hang can cost at most a few seconds per host instead of stalling resolve()
+# -- and, before the fix below, silently turning the whole zone NXDOMAIN.
 resolve() {
   local h="$1" out=""
   if command -v dig >/dev/null 2>&1; then
-    out="$(dig +short +time=3 +tries=1 A "$h" 2>/dev/null | grep -E '^[0-9.]+$' || true)"
+    out="$(timeout 5 dig +short +time=3 +tries=1 A "$h" 2>/dev/null | grep -E '^[0-9.]+$' || true)"
   fi
   if [ -z "$out" ] && command -v getent >/dev/null 2>&1; then
-    out="$(getent ahostsv4 "$h" 2>/dev/null | awk '{print $1}' | sort -u || true)"
+    out="$(timeout 5 getent ahostsv4 "$h" 2>/dev/null | awk '{print $1}' | sort -u || true)"
   fi
   if [ -z "$out" ] && command -v python3 >/dev/null 2>&1; then
-    out="$(python3 -c 'import socket,sys
+    out="$(timeout 5 python3 -c 'import socket,sys
 try: print("\n".join(sorted({r[4][0] for r in socket.getaddrinfo(sys.argv[1],None,socket.AF_INET)})))
 except Exception: pass' "$h" 2>/dev/null || true)"
   fi
@@ -115,14 +130,14 @@ declare -A ST HTTP DNSIP NOTE
 live=0; blocked=0; nxdomain=0
 
 for h in "${HOSTS[@]}"; do
+  # DNS classification comes from curl's own resolution (exit 6 = could not
+  # resolve), not from the resolve() helper above: that helper can only ever
+  # be informational (see its header) because its resolvers have hung on
+  # this zone in practice, and gating NXDOMAIN on a hung lookup previously
+  # produced a false "whole zone gone" result while curl itself resolved
+  # every host fine. resolve() still runs, bounded, to populate DNSIP for
+  # the status table.
   ips="$(resolve "$h")"
-  if [ -z "$ips" ]; then
-    ST[$h]=NXDOMAIN; HTTP[$h]=000; DNSIP[$h]=""; NOTE[$h]="no A record"
-    nxdomain=$((nxdomain+1))
-    echo "$NOW,$h,fail,-,-,000,NXDOMAIN" >> "$LOG"
-    say "  NXDOMAIN     $h"
-    continue
-  fi
   DNSIP[$h]="$ips"
 
   if [ "$TRUST" = "proxied" ]; then
@@ -139,6 +154,9 @@ for h in "${HOSTS[@]}"; do
 
   if [ $rc -eq 0 ] && [ "$code" != "000" ]; then
     ST[$h]=LIVE; HTTP[$h]="$code"; NOTE[$h]="http $code"; live=$((live+1))
+  elif [ $rc -eq 6 ]; then
+    ST[$h]=NXDOMAIN; HTTP[$h]=000; NOTE[$h]="curl could not resolve host"
+    nxdomain=$((nxdomain+1))
   elif [ $rc -eq 56 ] && printf '%s' "$msg" | grep -q '403'; then
     ST[$h]=BLOCKED; HTTP[$h]=000; NOTE[$h]="egress policy denied CONNECT: $msg"
     blocked=$((blocked+1))
@@ -146,7 +164,8 @@ for h in "${HOSTS[@]}"; do
     ST[$h]=PROVISIONED; HTTP[$h]=000; NOTE[$h]="curl exit $rc: $msg"
   fi
 
-  echo "$NOW,$h,ok,$tcp,$tls,${HTTP[$h]},${ST[$h]} ${NOTE[$h]}" >> "$LOG"
+  dnscol="ok"; [ "${ST[$h]}" = "NXDOMAIN" ] && dnscol="fail"
+  echo "$NOW,$h,$dnscol,$tcp,$tls,${HTTP[$h]},${ST[$h]} ${NOTE[$h]}" >> "$LOG"
   printf -v line '  %-12s %-34s %s' "${ST[$h]}" "$h" "${NOTE[$h]}"
   say "$line"
 done

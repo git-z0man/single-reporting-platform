@@ -50,6 +50,16 @@ classifies by curl's exit code:
 must never be recorded as a platform state. `first_live` is only ever set from
 an HTTP response, so a proxied run cannot manufacture a go-live.
 
+`NXDOMAIN` is decided the same way, from curl's own resolution failure (exit
+6) during that same HTTP probe — not from a separate DNS lookup. A standalone
+`getent`/`socket.getaddrinfo()` call (the fallback used when `dig` is absent
+from the image, as of 2026-09-09) has been observed to hang for minutes
+against this zone while curl resolves the identical name in about a second in
+the same run. Gating NXDOMAIN on that separate lookup previously turned one
+hung resolver into a false "all 29 hosts gone" reading. `resolve()` still runs
+for the informational "Resolves to" column, but every method it tries is
+`timeout`-bounded so it can no longer stall the check or the classification.
+
 When it detects a proxy (`HTTPS_PROXY` set, or an `Anthropic` certificate
 issuer) the run records `trust=proxied` and reports the TCP and TLS columns as
 `unreliable` rather than pretending they mean something.
