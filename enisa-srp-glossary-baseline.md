@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.1 (page footer: last update 05/09/2026)"
-retrieved: 2026-09-08 (fetched 00:14 UTC)
+retrieved: 2026-09-09 (fetched 03:09 UTC)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -38,6 +38,18 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-09 03:09 UTC (vs. 2026-09-08 00:14 UTC)
+
+Page still returns HTTP 200 at `cra-srp-glossary2`. All 38 fields re-verified row by row: no field name, meaning, how-to-complete text, example, format, or per-stage status moved. One correction to this record, not to ENISA's page.
+
+**Fixed (this baseline, not the page)**
+
+- The footer's raw HTML (`<em>version 1.1, last update: 05/09/2026</em>`) is verbatim **lowercase** "version", where this file's own prose has written it as "Version 1.1" throughout. Whether ENISA's capitalisation changed or this file simply never checked the byte-level case before could not be determined from this run alone — treated as pre-existing either way and not counted against `last_change`.
+
+**Unchanged**
+
+All 38 rows, including every previously tracked defect: field 11's contradictory meaning and its "is doesn't" typo, v26's doubled full stop, v29's missing space in "(CDaC)taking", i36's and i37's broken grammar, v28's three grounds and its "one" vs "at least one" inconsistency, and i32's "or" against the FAQ's "and". Both footnotes unchanged.
 
 ### 2026-09-08 00:14 UTC (vs. 2026-09-07 22:0x)
 
@@ -178,3 +190,5 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 - 2026-09-07 (second check): page fetched at its new address, HTTP 200. Content edited without a version bump — footer still reads "Version 1.1, last update: 05/09/2026". 29 of 38 rows reworded ("How to complete" recast as "For example, …"), v28 PEC Delay Reason substantively changed and internally inconsistent, four new typos, field 11 still contradictory. Tables above updated; see the change log.
 
 - 2026-09-08: page fetched at `cra-srp-glossary2`, HTTP 200. All 38 fields re-verified row-by-row against this baseline — no change anywhere, footer still "Version 1.1, last update: 05/09/2026". Corrected a likely capture artifact in v28's Example cell (a stray "N/A" standing in for the second of three PEC grounds, traced to the live page's own 3-row rowspan table structure); see the change log entry at the top. `last_check` and `retrieved` updated to today; `last_change` left at 2026-09-07 since ENISA's content did not change.
+
+- 2026-09-09 (03:09 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other tracked SRP pages in the same run (all HTTP 200, all re-verified unchanged — see `enisa-srp-faq-baseline.md`). All 38 fields re-verified row-by-row — no field, meaning, example, format or status moved. One capture correction: the footer's raw HTML is verbatim lowercase "version 1.1, last update: 05/09/2026", where this file had written "Version 1.1" throughout; corrected as a baseline-fidelity fix, not counted as an ENISA change since it could not be determined whether the case was ever verified byte-for-byte before. See the change log entry at the top. `last_check` (already bumped to today by the day's earlier heartbeat run) and `retrieved` updated; `last_change` left at 2026-09-07.
