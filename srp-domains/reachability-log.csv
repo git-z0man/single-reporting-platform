@@ -173,3 +173,32 @@ timestamp_utc,host,dns,tcp443,tls,http_code,note
 2026-09-08T00:30:48Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to se.cra-srp.enisa.europa.eu:443  
 2026-09-08T00:30:48Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to si.cra-srp.enisa.europa.eu:443  
 2026-09-08T00:30:48Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to sk.cra-srp.enisa.europa.eu:443  
+2026-09-08T23:54:57Z,portal.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,auth.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,at.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,be.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,bg.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,cy.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,cz.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,de.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,dk.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,ee.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,es.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,fi.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,fr.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,gr.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,hr.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,hu.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,ie.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,it.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,lt.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,lu.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,lv.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,mt.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,nl.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,pl.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,pt.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,ro.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,se.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,si.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT
+2026-09-08T23:54:57Z,sk.cra-srp.enisa.europa.eu,timeout,-,-,000,DNS_TIMEOUT

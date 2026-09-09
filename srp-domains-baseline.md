@@ -31,7 +31,7 @@ when that changes.
 | Edge | `185.8.236.7`, `185.8.236.8` (WEDOS Global, CZ) |
 | State | provisioned, not yet released |
 | Expected go-live | in the coming days, at the latest **11 September 2026** |
-| Last check | 2026-09-07 |
+| Last check | 2026-09-08 |
 | Last change | 2026-09-07 (country → CSIRT mapping verified) |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
@@ -166,11 +166,14 @@ on curl's exit code:
 |---|---|---|
 | HTTP status returned | `LIVE` | upstream answered — go-live |
 | exit 35 / 28 / 7 / 52 | `PROVISIONED` | connected, upstream dropped the handshake |
-| DNS failure | `NXDOMAIN` | host not in the zone |
+| DNS: fast negative answer | `NXDOMAIN` | resolver confirmed no such name/record |
+| DNS: resolver never answered | `DNS_TIMEOUT` | the check was blind; **not** a statement about the platform |
 | exit 56 + `403` | `BLOCKED` | egress policy denied CONNECT — the check was blind; **not** a statement about the platform |
 
-`BLOCKED` is deliberately distinct: it means the monitor could not see, which
-must never be recorded as "the SRP is down" or as a go-live.
+`BLOCKED` and `DNS_TIMEOUT` are deliberately distinct: both mean the monitor
+could not see, which must never be recorded as "the SRP is down" or as a
+go-live. See the 2026-09-08 delta history entry below for the incident that
+made this distinction necessary.
 
 ## Test environment
 
@@ -219,6 +222,28 @@ login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-09-08 23:54 UTC (vs. the last confirmed reading, 2026-09-08 00:30 UTC)
+
+`check.sh`'s DNS resolver calls had no timeout. When this run's monitoring
+environment stopped getting an answer for the zone's real records, that
+silently read as NXDOMAIN for all 29 hosts, and the run looked like the
+entire production zone had vanished. It had not.
+
+**Fixed** — `resolve()` now bounds every DNS lookup with `timeout` and
+reports `DNS_TIMEOUT` distinctly from a genuine negative answer;
+`manifest.json` now excludes `BLOCKED`/`DNS_TIMEOUT` from ever overwriting a
+host's last confirmed state or counting as a platform change.
+**Watch** — with the fix applied, all 29 hosts still read `DNS_TIMEOUT` this
+run. A confirmed nonexistent name under the same zone
+(`www.cra-srp.enisa.europa.eu`) answers in under a second; the 29 monitored
+hosts, which had resolved fine 23 hours earlier, do not answer at all. This
+looks like a resolution problem specific to this monitoring environment's
+path to the zone's real records, not a platform withdrawal — but it has now
+held across two consecutive runs and needs watching.
+**Unchanged** — reachability per host: still 0/29 live, all `PROVISIONED`,
+same as 2026-09-06. Country → CSIRT mapping: re-checked against ENISA's list
+(still dated 04/09/2026), no discrepancies.
 
 ### 2026-09-07 — country → CSIRT mapping verified against ENISA's official list
 
