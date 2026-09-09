@@ -26,6 +26,26 @@ last_change: 2026-09-09
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
 
+### 2026-09-09 23:11 UTC (vs. 2026-09-09 22:12 UTC)
+
+All eight pages returned HTTP 200. Only the FAQ and CSIRT-list pages changed; the four guidance pages, the main page and the Glossary are all unchanged from the 22:12 UTC check.
+
+**Changed**
+
+- **Q9** (FAQ): "**Validation** takes place in parallel..." → "**Verification** takes place in parallel...", the same sentence still ending "...while validation is pending" — a new internal inconsistency, and the continuation of the validation→verification rewording already logged at 12:19 UTC, which missed this sentence.
+- **Q16 intro** (FAQ): the long-tracked "it explains **that** the field means" typo is fixed → "it explains **what** the field means".
+- **Q16 table, field 22** (FAQ): "Corrective or mitigating measures that **user** can take" typo fixed → "...that **users** can take".
+- **Q16 table, fields v28/v29** (FAQ): "**Full** description of the severity/impact of the vulnerability" → "**Detailed** description of the severity/impact of the vulnerability". This now matches the SI fields' wording (i38/i39) but creates a **new** FAQ/Glossary mismatch: the Glossary's own v23/v24 rows for these same two fields still read "Full description..." — not touched today.
+- **CSIRT list page note**: "This list provides the contacts **to the** CSIRTs Designated as Coordinators..." → "...contacts **of EU** CSIRTs Designated as Coordinators...". Flagged with a provenance caveat in the baseline text itself: every check since first capture (2026-09-07) recorded this page as "unchanged" without re-quoting the sentence, so whether this wording changed today or was simply never re-verified word-for-word before now cannot be determined from this run alone.
+
+**Watch**
+
+- FAQ Q16 and the Glossary now disagree on v28/v29's field name ("Detailed" vs. "Full") — previously in sync.
+
+**Unchanged**
+
+Main page (still 6 items in Content nav, no Glossary/9th entry; no PEC card in "User guidance"). AR User Registration (stamp "09/09/2026"). AR Notification Submission and Update (stamp "03 September 2026"). AR Interface Functions (stamp "09/09/2026", unmoved). PEC guidance (stamp "09 September 2026"). Glossary (all 38 fields re-verified, footer still "version 1.1, last update: 05/09/2026").
+
 ### 2026-09-09 22:12 UTC (vs. 2026-09-09 21:07 UTC)
 
 All eight pages returned HTTP 200. Three of the four guidance pages were rewritten again — the fourth, PEC, gained its first-ever date stamp — and one long-tracked bug and one long-tracked numeric inconsistency were both fixed in the same pass.
@@ -401,7 +421,7 @@ There can be only one Primary AR per manufacturer and up to 20 Secondary ARs. Th
 
 The AR–manufacturer association is validated by the designated CSIRT. The specific validation procedure and processing time may vary between CSIRTs and remain the responsibility of the relevant CSIRT.
 
-Validation takes place in parallel with the reporting process and does not prevent an AR from submitting notifications while validation is pending.
+Verification takes place in parallel with the reporting process and does not prevent an AR from submitting notifications while validation is pending. *(reworded 2026-09-09 23:11 UTC: "Validation" → "Verification" — only the sentence's first word changed, so it now contradicts itself by ending in "validation is pending"; continues the validation→verification rewording already logged for the neighbouring sentence at 2026-09-09 12:19 UTC, which missed this one.)*
 
 ARs whose manufacturer association has not yet been verified may submit up to 20 notifications for that manufacturer before verification becomes mandatory. *(reworded 2026-09-09 from "Non-validated ARs may submit up to 20 notifications for one manufacturer before validation becomes mandatory" — "validation"/"validated" → "verification"/"verified"; the 20-notification limit itself is unchanged.)*
 
@@ -447,7 +467,7 @@ Detailed information on the data fields to be completed at each reporting stage 
 
 ### Q16. What are the data fields to be filled in the reporting template?
 
-The [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2) and table provide detailed guidance on all fields available in the platform for both actively exploited vulnerabilities and severe incidents. For each field, it explains that the field means *(typo on the live page: "that" where "what" is meant, new on 2026-09-07)*, how it may be completed, the expected format, and at which reporting stage it applies. The Glossary also indicates whether each field is required (stemming directly from CRA obligations or identified by logical consequence), optional , mandatory if the information is available , or carried forward from a previous reporting stage.
+The [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2) and table provide detailed guidance on all fields available in the platform for both actively exploited vulnerabilities and severe incidents. For each field, it explains what the field means *(typo fixed 2026-09-09 23:11 UTC: was "that" where "what" was meant, since 2026-09-07)*, how it may be completed, the expected format, and at which reporting stage it applies. The Glossary also indicates whether each field is required (stemming directly from CRA obligations or identified by logical consequence), optional , mandatory if the information is available , or carried forward from a previous reporting stage.
 Please consult the [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2) for the complete and most up-to-date field-by-field guidance.
 
 **Common fields**
@@ -472,7 +492,7 @@ Please consult the [SRP Glossary](https://www.enisa.europa.eu/topics/product-sec
 19. User action able to reduce impact *(live page now reads "action", was "Action", new on 2026-09-08)*: Optional / copied-or-updated / copied-or-updated
 20. Considered sensitivity of information: Optional / Required-if-available / copied-or-updated
 21. Corrective or mitigating measures taken: Optional / Required / Required
-22. Corrective or mitigating measures that user can take *(live page now reads "user", was "users")*: Optional / Required / Required
+22. Corrective or mitigating measures that users can take *(typo fixed 2026-09-09 23:11 UTC: was "user", now "users")*: Optional / Required / Required
 23. Attack vector: Optional / Optional / Optional
 
 **Actively Exploited Vulnerability (AEV)**
@@ -480,8 +500,8 @@ v24. CVE ID: Optional / copied-or-updated / copied-or-updated
 v25. EUVD ID: Optional / copied-or-updated / copied-or-updated
 v26. General information: Optional / Required / copied-or-updated
 v27. Date when corrective or mitigating measure has been available: Optional / Optional / Required
-v28. Full description of the severity of the vulnerability: Optional / Optional / Required
-v29. Full description of the impact of the vulnerability: Optional / Optional / Required
+v28. Detailed description of the severity of the vulnerability *(live page now reads "Detailed", was "Full", new 2026-09-09 23:11 UTC — the Glossary's own v23 row for this field still reads "Full", a new FAQ/Glossary mismatch)*: Optional / Optional / Required
+v29. Detailed description of the impact of the vulnerability *(live page now reads "Detailed", was "Full", new 2026-09-09 23:11 UTC — the Glossary's own v24 row for this field still reads "Full", a new FAQ/Glossary mismatch)*: Optional / Optional / Required
 v30. Date/time when you become aware of the Actively Exploited Vulnerability: Required / copied-or-updated / copied-or-updated
 v31. Malicious actor that has exploited / is exploiting the vulnerability: Optional / Optional / Required-if-available
 v32. Particular Exceptional Circumstances (PEC): N/A / Optional / N/A
@@ -656,7 +676,7 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 
 ## List of CSIRTs Designated as Coordinators (new page, `csirt_list_url`)
 
-"Updated: 04/09/2026". Page note: "This list provides the contacts to the CSIRTs Designated as Coordinators, in the meaning of the Cyber Resilience Act (CRA)." One entry per EU Member State (27 total), each with one or more contact links:
+"Updated: 04/09/2026". Page note: "This list provides the contacts of EU CSIRTs Designated as Coordinators, in the meaning of the Cyber Resilience Act (CRA)." *(reads "of EU" 2026-09-09 23:11 UTC; this file had recorded "to the" since first capture on 2026-09-07, but no intervening check re-quoted the sentence — only ever noting "27 countries, same links, Updated stamp" — so it is not certain this wording changed today rather than being missed earlier.)* One entry per EU Member State (27 total), each with one or more contact links:
 
 - Austria: https://www.cert.at/de/ueber-uns/kontakt/ ; https://www.cert.at/en/about-us/contact/
 - Belgium: https://ccb.belgium.be/contacts
