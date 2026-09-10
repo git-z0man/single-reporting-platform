@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.3 (page footer: last update 10/09/2026)"
-retrieved: 2026-09-10 (fetched 15:10 UTC)
+retrieved: 2026-09-10 (fetched 17:13 UTC)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -41,6 +41,18 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-10 17:13 UTC (vs. 2026-09-10 15:10 UTC)
+
+Page still returns HTTP 200 at `cra-srp-glossary2`, footer unchanged ("Version 1.3. Last update: 10 September 2026"), field count unchanged (39). One field's wording changed without the stamp moving — the same pattern already established for this page.
+
+**Changed**
+
+- **Field 5, Member States where product available (Concerned CSIRT)**: three word-level edits to the How-to-complete text in the same sentence — "show **you** CDaC" → "show **your** CDaC" (grammar fix); "you may select" → "you may **also** select" (word inserted); "has been made available" → "is available" (tense simplified). Meaning, Example, Format and per-stage statuses are all unchanged.
+
+**Unchanged**
+
+All other 38 rows and both footnotes re-verified cell by cell against the raw `<table>` structure, including every previously tracked defect (v27's doubled full stop, v30's missing space in "(CDaC)taking", field 10's double-space typo, v28's empty Example, v29's three-item grounds list, field 11's "it doesn't" fix holding). No field added, removed, or renumbered.
 
 ### 2026-09-10 15:10 UTC (vs. 2026-09-10 14:07 UTC)
 
@@ -266,7 +278,7 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 | 2 | Title | Both | Short human-readable name for the notification. | For example, enter a short, specific title that allows users to recognise the affected product and the reported issue. Do not include confidential technical detail that is unnecessary for identification (max. 255 characters). | Active exploitation affecting Product X version 4.2. | Plain text; concise title | Required | copied-or-updated | copied-or-updated |
 | 3 | Summary | Both | Concise overview of the facts, affected product, and issue being notified. | For example, provide a concise overview of what happened, the affected product or version, the known impact, and the current mitigation status. Use factual information available at the reporting stage (max. 4000 characters). | An actively exploited vulnerability affects Product X 4.2. A temporary workaround is available, and a security update is being prepared. | Short paragraph | Required | copied-or-updated | copied-or-updated |
 | 4 | Manufacturer name | Both | Name of the natural or legal person who develops or manufactures the product with digital elements or has the product with digital elements designed, developed or manufactured, and markets it under its name or trademark, whether for payment, monetisation or free of charge. | No user action is required. The platform creates or updates this value automatically based on what you wrote when you registered to the Platform or added at a later stage. You may review it only to confirm that the displayed information is consistent with the notification history. | Automatically populated by the platform during the notification submission or free text during manufacturer registration [Name of the company]. | System-generated / read-only | Required | copied-or-updated | copied-or-updated |
-| 5 | Member States where product available (Concerned CSIRT) | Both | Member States in which territory the manufacturer is aware that the affected product has been made available; used to determine concerned CSIRTs. | The Platform will automatically show you CDaC, however, you may select other Member States (MS) where the affected product has been made available, based on the information currently known to the manufacturer. Update the selection if new distribution information becomes available. | Belgium as your CDaC, automatically populated by the platform and you may add Greece and Italy and MS where the affected product has been made available | Select one or more Member States | Required *(was "Required if such information available" until 2026-09-10 13:11 UTC)* | copied-or-updated | copied-or-updated |
+| 5 | Member States where product available (Concerned CSIRT) | Both | Member States in which territory the manufacturer is aware that the affected product has been made available; used to determine concerned CSIRTs. | The Platform will automatically show your CDaC, however, you may also select other Member States (MS) where the affected product is available *(three word-level edits 2026-09-10 17:13 UTC: "show you CDaC" → "show your CDaC"; "you may select" → "you may also select"; "has been made available" → "is available"; no meaning/status change)*, based on the information currently known to the manufacturer. Update the selection if new distribution information becomes available. | Belgium as your CDaC, automatically populated by the platform and you may add Greece and Italy and MS where the affected product has been made available | Select one or more Member States | Required *(was "Required if such information available" until 2026-09-10 13:11 UTC)* | copied-or-updated | copied-or-updated |
 | 6 | Product Name | Both | Name that identifies the affected product with digital elements. | For example, enter the official commercial or technical name of the affected product with digital elements. Use the same name that appears in product technical documentation or market information (max. 255 characters). | Product X | Official product name | Required | copied-or-updated | copied-or-updated |
 | 7 | Product Version | Both | Version, release, build, model, or other revision information required to identify the affected product instance. | For example, enter every affected version, release, build, model, or firmware revision. Use exact identifiers and clearly state a range when multiple versions are affected (max. 255 characters). | 4.0 to 4.2.1 | Version or version range | Required | copied-or-updated | copied-or-updated |
 | 8 | Product Type (Default/Important Product with Digital Elements/Critical Product with Digital Elements) *(names expanded 2026-09-10 13:11 UTC; was "(Default/Important/Critical)")* | Both | Regulatory category indicating whether the product is default, important, or critical under the CRA classification framework. | For example, select the CRA regulatory type applicable to the product. Choose Important or Critical only where the product falls within the relevant CRA category (Annexes III and IV); otherwise select Default. | Important Product with Digital Elements *(was "Important" until 2026-09-10 13:11 UTC)* | Select one: Default, Important, Critical | Optional | copied-or-updated | copied-or-updated |

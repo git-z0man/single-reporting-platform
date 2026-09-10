@@ -12,12 +12,12 @@ guidance_urls:
   - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-particular-exceptional-circumstances-pec
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
-retrieved: 2026-09-10 (fetched 15:10 UTC)
-guidance_retrieved: 2026-09-10 (fetched 15:10 UTC)
-glossary_retrieved: 2026-09-10 (fetched 15:10 UTC)
-csirt_list_retrieved: 2026-09-10 (fetched 15:10 UTC)
-ar_user_manual_retrieved: 2026-09-10 (fetched 15:10 UTC, unchanged since first capture at 10:12 UTC)
-terms_conditions_retrieved: 2026-09-10 (fetched 15:10 UTC, unchanged since the trailing space was lost at 14:07 UTC)
+retrieved: 2026-09-10 (fetched 17:13 UTC)
+guidance_retrieved: 2026-09-10 (fetched 17:13 UTC)
+glossary_retrieved: 2026-09-10 (fetched 17:13 UTC)
+csirt_list_retrieved: 2026-09-10 (fetched 17:13 UTC)
+ar_user_manual_retrieved: 2026-09-10 (fetched 17:13 UTC, unchanged since first capture at 10:12 UTC)
+terms_conditions_retrieved: 2026-09-10 (fetched 17:13 UTC, unchanged since the trailing space was lost at 14:07 UTC)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. **`ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC**, discovered the same way — the site's own "Content" navigation grew from 6 to 8 entries in this run (see the change log); this widens the routine's tracked-page count from eight to ten, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-10
@@ -29,6 +29,33 @@ last_change: 2026-09-10
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-10 17:13 UTC (vs. 2026-09-10 15:10 UTC)
+
+All ten pages returned HTTP 200. The FAQ page changed substantially — Q16 was rewritten and lost its own data-field table — plus two smaller FAQ edits; the Glossary changed one field's wording (recorded in `enisa-srp-glossary-baseline.md`). The other eight pages, the CSIRT list, and the main-page Content nav (still 8 entries, no new page) are unchanged.
+
+**Changed**
+
+- **Q16 retitled and reworded, tagged [UPDATED]**: "What are the data fields to be filled in the reporting template?" → "What information do I need to provide when submitting a notification through the SRP?" The answer is now 4 short paragraphs that defer entirely to the Glossary, replacing the 2-paragraph intro that used to sit above a table.
+- **Q17**: "AR User Manual" inserted as a live link into the list of published supporting materials, between "FAQs" and "and SRP Glossary".
+- **Q31**: the PGP-key reference changed from plain, non-hyperlinked text (`enisa.europa.eu/responsible-disclosure-pgp-key.txt`) to a working hyperlink pointing to a `.zip` file under a different path (`CRA-SRP_Security_Public_Key.zip`), with a stray space before the closing parenthesis.
+- **Glossary field 5** (Member States where product available): three word-level edits to the How-to-complete text — "show you CDaC" → "show your CDaC", "you may select" → "you may also select", "has been made available" → "is available". No meaning or status change. Full detail in `enisa-srp-glossary-baseline.md`.
+
+#### Q16's removed data-field table
+
+The FAQ page's own 43-row table (Common fields 1–23, AEV v24–v34, SI i35–i43), tracked field-by-field in this file since 2026-09-07, is gone from the live page — confirmed at the HTML level, `frequently-asked-questions` now contains zero `<table>` elements. The FAQ no longer states any field name, requirement level, or per-stage status itself. Its last known values, preserved here for the historical record:
+
+Common: 1 Notification type (Required/c-o-u/c-o-u); 2 Notification level 24hrs/72hrs/Final (Required/Required/Required); 3–5 Reporting time 24hrs/72hrs/Final (Automated/Automated/Automated each); 6 Reporter (Automated/Automated/Automated); 7 Title (Required/c-o-u/c-o-u); 8 Summary (Required/c-o-u/c-o-u); 9 Manufacturer name (Required/c-o-u/c-o-u); 10 Member States where product is available - concerned CSIRT (Required-if-available/c-o-u/c-o-u); 11 Product name (Required/c-o-u/c-o-u); 12 Product version (Required/c-o-u/c-o-u); 13 Product type Default/Important/Critical (Optional/c-o-u/c-o-u); 14 Product class (Optional/c-o-u/c-o-u); 15 Product category (Optional/c-o-u/c-o-u); 16 End of support indicator (Optional/c-o-u/c-o-u); 17 Component name (Optional/c-o-u/c-o-u); 18 Mitigating measure expected shortly (Optional/c-o-u/c-o-u); 19 User action able to reduce impact (Optional/c-o-u/c-o-u); 20 Considered sensitivity of information (Optional/Required-if-available/c-o-u); 21 Corrective or mitigating measures taken (Optional/Required/Required); 22 Corrective or mitigating measures that users can take (Optional/Required/Required); 23 Attack vector (Optional/Optional/Optional).
+
+AEV: v24 CVE ID (Optional/c-o-u/c-o-u); v25 EUVD ID (Optional/c-o-u/c-o-u); v26 General information (Optional/Required/c-o-u); v27 Date when corrective or mitigating measure has been available (Optional/Optional/Required); v28 Detailed description of the severity of the vulnerability (Optional/Optional/Required); v29 Detailed description of the impact of the vulnerability (Optional/Optional/Required); v30 Date/time when you become aware of the AEV (Required/c-o-u/c-o-u); v31 Malicious actor that has exploited/is exploiting the vulnerability (Optional/Optional/Required-if-available); v32 PEC (N/A/Optional/N/A); v33 PEC Delay Reason (N/A/Optional/N/A); v34 Please provide further information (Optional/Optional/c-o-u).
+
+SI: i35 Incident is suspected of unlawful or malicious acts (Required/c-o-u/c-o-u); i36 General information about nature of incident (Optional/Required/c-o-u); i37 Applied and ongoing mitigation measures (Optional/Optional/Required); i38 Detailed description of the Severity of the incident (Optional/Optional/Required); i39 Detailed description of the Impact of the incident (Optional/Optional/Required); i40 Type of threat or root cause likely to have triggered the incident (Optional/Optional/Required); i41 Date/time when you become aware of the incident (Required/c-o-u/c-o-u); i42 Date/time when the incident occurred (Optional/Optional/Optional); i43 Initial assessment of the incident (Optional/Required/c-o-u).
+
+("c-o-u" = copied-or-updated, this file's own shorthand, expanded above only in the legend.) The field-by-field authority going forward is `enisa-srp-glossary-baseline.md` alone; the "Widened divergence with Q16" tracking note in the Glossary cross-reference section below is now resolved rather than updated, since there is nothing left on the FAQ page to diverge.
+
+**Unchanged**
+
+Q1–Q15, Q18–Q30 and the closing note (all verbatim); main page (intro, Factsheet, resource cards, User Guidance cards, 8-entry Content nav); CSIRT list (27 countries, "Last updated: 10 September 2026"); all four guidance subpages; AR User Manual and Terms and Conditions pages (including their download hrefs); Glossary version stamp (still "1.3", 39 fields) and all rows other than field 5.
 
 ### 2026-09-10 15:10 UTC (vs. 2026-09-10 14:07 UTC)
 
@@ -631,63 +658,21 @@ Organisations may automate their internal reporting workflows and integrate CRA 
 
 Detailed information on the data fields to be completed at each reporting stage is available in FAQ 16 and the [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2).
 
-### Q16. What are the data fields to be filled in the reporting template?
+### Q16. What information do I need to provide when submitting a notification through the SRP? *(retitled, reworded and tagged [UPDATED] 2026-09-10 17:13 UTC; was "Q16. What are the data fields to be filled in the reporting template?", no tag)*
 
-The [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2) and table provide detailed guidance on all fields available in the platform for both actively exploited vulnerabilities and severe incidents. For each field, it explains what the field means *(typo fixed 2026-09-09 23:11 UTC: was "that" where "what" was meant, since 2026-09-07)*, how it may be completed, the expected format, and at which reporting stage it applies. The Glossary also indicates whether each field is required (stemming directly from CRA obligations or identified by logical consequence), optional , mandatory if the information is available , or carried forward from a previous reporting stage.
-Please consult the [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2) for the complete and most up-to-date field-by-field guidance.
+"The SRP Glossary provides detailed field-by-field guidance for notifications concerning actively exploited vulnerabilities (AEV) and severe incidents (SI). For each field, it explains what the field means, how it may be completed, the expected format, and at which reporting stage it applies: Early Warning, 72-Hours Notification, and Final Report.
 
-**Common fields**
-1. Notification type (Vulnerability/Incident): Required / copied-or-updated / copied-or-updated
-2. Notification level (24hrs/72hrs/Final): Required / Required / Required
-3. Reporting time - 24hrs: Automated / Automated / Automated
-4. Reporting time - 72hrs: Automated / Automated / Automated
-5. Reporting time - Final: Automated / Automated / Automated
-6. Reporter: Automated / Automated / Automated
-7. Title: Required / copied-or-updated / copied-or-updated
-8. Summary: Required / copied-or-updated / copied-or-updated
-9. Manufacturer name: Required / copied-or-updated / copied-or-updated
-10. Member States where product is available (concerned CSIRT): Required-if-available / copied-or-updated / copied-or-updated
-11. Product name *(live page now reads "name", was "Name", new on 2026-09-08)*: Required / copied-or-updated / copied-or-updated
-12. Product version *(live page now reads "version", was "Version", new on 2026-09-08)*: Required / copied-or-updated / copied-or-updated
-13. Product type (Default/Important/Critical) *(live page now reads "type", was "Type", new on 2026-09-08)*: Optional / copied-or-updated / copied-or-updated
-14. Product class *(live page now reads "class", was "Class", new on 2026-09-08)*: Optional / copied-or-updated / copied-or-updated
-15. Product category *(live page now reads "category", was "Category", new on 2026-09-08)*: Optional / copied-or-updated / copied-or-updated
-16. End of support indicator: Optional / copied-or-updated / copied-or-updated
-17. Component name: Optional / copied-or-updated / copied-or-updated
-18. Mitigating measure expected shortly: Optional / copied-or-updated / copied-or-updated
-19. User action able to reduce impact *(live page now reads "action", was "Action", new on 2026-09-08)*: Optional / copied-or-updated / copied-or-updated
-20. Considered sensitivity of information: Optional / Required-if-available / copied-or-updated
-21. Corrective or mitigating measures taken: Optional / Required / Required
-22. Corrective or mitigating measures that users can take *(typo fixed 2026-09-09 23:11 UTC: was "user", now "users")*: Optional / Required / Required
-23. Attack vector: Optional / Optional / Optional
+The Glossary also indicates whether a field is required (stemming directly from CRA obligations or identified by logical consequence), optional, mandatory if the information is available, or carried forward from a previous reporting stage and, when applicable, updated as additional information becomes available.
 
-**Actively Exploited Vulnerability (AEV)**
-v24. CVE ID: Optional / copied-or-updated / copied-or-updated
-v25. EUVD ID: Optional / copied-or-updated / copied-or-updated
-v26. General information: Optional / Required / copied-or-updated
-v27. Date when corrective or mitigating measure has been available: Optional / Optional / Required
-v28. Detailed description of the severity of the vulnerability *(live page now reads "Detailed", was "Full", new 2026-09-09 23:11 UTC — the Glossary's own v24 row for this field, renumbered from v23 on 2026-09-10 13:11 UTC, still reads "Full", a new FAQ/Glossary mismatch)*: Optional / Optional / Required
-v29. Detailed description of the impact of the vulnerability *(live page now reads "Detailed", was "Full", new 2026-09-09 23:11 UTC — the Glossary's own v25 row for this field, renumbered from v24 on 2026-09-10 13:11 UTC, still reads "Full", a new FAQ/Glossary mismatch)*: Optional / Optional / Required
-v30. Date/time when you become aware of the Actively Exploited Vulnerability: Required / copied-or-updated / copied-or-updated
-v31. Malicious actor that has exploited / is exploiting the vulnerability: Optional / Optional / Required-if-available
-v32. Particular Exceptional Circumstances (PEC): N/A / Optional / N/A
-v33. PEC Delay Reason: N/A / Optional / N/A
-v34. Please provide further information: Optional / Optional / copied-or-updated
+The fields displayed and their requirements may differ depending on the notification type and reporting stage. ARs should complete all required fields and provide additional information whenever it is available and relevant.
 
-**Severe Incidents (SI)**
-i35. Incident is suspected of unlawful or malicious acts: Required / copied-or-updated / copied-or-updated
-i36. General information about nature of incident: Optional / Required / copied-or-updated
-i37. Applied and ongoing mitigation measures: Optional / Optional / Required
-i38. Detailed description of the Severity of the incident: Optional / Optional / Required
-i39. Detailed description of the Impact of the incident *(live page now reads lowercase "i39.", fixed 2026-09-08; was capitalised "I39." since at least 2026-09-07)*: Optional / Optional / Required
-i40. Type of threat or root cause that is likely to have triggered the incident: Optional / Optional / Required
-i41. Date/time when you become aware of the incident: Required / copied-or-updated / copied-or-updated
-i42. Date/time when the incident occurred: Optional / Optional / Optional
-i43. Initial assessment of the incident: Optional / Required / copied-or-updated
+Please consult the [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2) for the complete and most up-to-date guidance on the information provided."
+
+**The 43-row data-field table this baseline had reproduced here since 2026-09-07 (Common fields 1–23, AEV v24–v34, SI i35–i43) is gone from the live page as of this check — confirmed at the HTML level, the page now contains zero `<table>` elements.** The answer no longer states any field name, requirement level, or per-stage status itself; it defers entirely to the Glossary. The last known table content is preserved in the 2026-09-10 17:13 UTC change log entry below for the historical record. Any future field-by-field check is against `enisa-srp-glossary-baseline.md` alone — see the updated "CRA SRP Glossary" section further down, whose "Widened divergence with Q16" note is now resolved rather than updated, since Q16 no longer carries field data to diverge from.
 
 ### Q17. What guidance material is available for the relevant parties?
 
-ENISA recognises the need to ensure that manufacturers, open-source software stewards, Assigned Representatives and other relevant reporting teams have clear and practical information to prepare for and use the CRA SRP. ENISA has published a range of supporting materials, including the SRP Factsheet, FAQs, and SRP Glossary. Additional operational materials, including a user manual and tutorial videos, will be published at the launch of the platform. These materials will be updated and expanded as necessary.
+ENISA recognises the need to ensure that manufacturers, open-source software stewards, Assigned Representatives and other relevant reporting teams have clear and practical information to prepare for and use the CRA SRP. ENISA has published a range of supporting materials, including the SRP Factsheet, FAQs, [AR User Manual](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual), and SRP Glossary *(AR User Manual inserted as a live link 2026-09-10 17:13 UTC, between "FAQs" and "and SRP Glossary")*. Additional operational materials, including a user manual and tutorial videos, will be published at the launch of the platform *(unresolved self-contradiction, now more visible with the User Manual named one sentence earlier — unchanged today)*.
 
 The [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2) provides detailed field-by-field guidance, including what each field means, how it may be completed, the expected format, and at which reporting stage it applies.
 
@@ -813,7 +798,7 @@ The current version of the platform supports only mandatory notifications submit
 
 ### Q31. How do I report a security issue? *(new question, tagged [NEW] on the live page, added 2026-09-10 10:12 UTC; count 30 → 31)*
 
-To report security incidents involving the platform, you can contact ENISA at cra-srp-security@enisa.europa.eu (PGP link: enisa.europa.eu/responsible-disclosure-pgp-key.txt). If you have found a vulnerability in the platform you can contact responsible-disclosure@enisa.europa.eu. More information at enisa.europa.eu/.well-known/security.txt.
+To report security incidents involving the platform, you can contact ENISA at cra-srp-security@enisa.europa.eu (PGP link: `https://www.enisa.europa.eu/sites/default/files/2026-09/CRA-SRP_Security_Public_Key.zip` ) *(changed 2026-09-10 17:13 UTC from plain, non-hyperlinked text "enisa.europa.eu/responsible-disclosure-pgp-key.txt" to a working hyperlink pointing to a `.zip` file under a different path; a stray space before the closing parenthesis is reproduced verbatim, the same "space before closing paren" pattern seen on the Terms and Conditions link before its 14:07 UTC fix)*. If you have found a vulnerability in the platform you can contact responsible-disclosure@enisa.europa.eu. More information at enisa.europa.eu/.well-known/security.txt.
 
 *Distinct from Q30: Q30 covers reporting a product vulnerability/incident when you are not a manufacturer (routes to the national CSIRT); Q31 covers reporting a security problem in the SRP platform itself (routes to ENISA directly). No CRA obligation, deadline, or SRP data field is implicated by this question — it documents a separate contact channel.*
 
@@ -854,7 +839,7 @@ Version 1.3, last update: 10 September 2026 *(bumped 2026-09-10 13:11 UTC from "
 
 **Scope note**: only field names, applies-to (Both/AEV/SI), and per-stage status are captured below, not the full descriptive text (meaning/how-to-complete/example/format) for each field — that level of detail lives in the dedicated **`enisa-srp-glossary-baseline.md`** file (added 2026-09-07, when the live Glossary page began returning HTTP 403 on its original path — it had moved, see `glossary_url`), which is the full-detail historical record and the one to diff against for wording-level changes. A future check should re-verify field names, counts, and statuses against this list, and flag if the page's own numbering or the field set changes.
 
-**Widened divergence with Q16, as of 2026-09-10 13:11 UTC**: Q16 (below) reflects only the FAQ page's own literal content, which this run confirmed unchanged. The Glossary's field set and several of its per-stage statuses have now moved without a matching edit on the FAQ page — most visibly, the Glossary added a field (v23, no Q16 counterpart yet) and several fields' 72h status flipped between "Required" and "Optional" on the Glossary while Q16 still shows the old value (e.g. Q16's field 20/Glossary field 15, Q16's field 21/Glossary field 16, Q16's field 22/Glossary field 17). This is a genuine new mismatch between the two pages, not a capture artifact — full field-by-field detail in `enisa-srp-glossary-baseline.md`.
+**Divergence with Q16 resolved, 2026-09-10 17:13 UTC**: Q16 was rewritten and its own 43-row data-field table removed from the live FAQ page this run (see the Q16 section below) — it no longer states any field name, requirement level, or per-stage status itself, so it can no longer disagree with the Glossary on those points. The mismatches tracked here since 2026-09-10 13:11 UTC (the extra v23 field, several flipped 72h statuses) are now moot rather than fixed: there is nothing on the FAQ page left to compare against the Glossary. This Glossary section remains the authoritative field-by-field source, cross-referenced from Q16 rather than duplicated by it.
 
 Common fields (1–18, "Both" AEV/SI): 1 Notification type, 2 Title, 3 Summary, 4 Manufacturer name, 5 Member States where product available (Concerned CSIRT), 6 Product Name, 7 Product Version, 8 Product Type (Default/Important Product with Digital Elements/Critical Product with Digital Elements) *(names expanded 2026-09-10 13:11 UTC, was "(Default/Important/Critical)")*, 9 Product class *(lowercase since 2026-09-10 13:11 UTC, was "Product Class")*, 10 Product category *(lowercase since 2026-09-10 13:11 UTC, was "Product Category")*, 11 End of support indicator *(Meaning rewritten 2026-09-10 13:11 UTC, fixing the long-tracked contradiction — see the Glossary baseline)*, 12 Component name, 13 Mitigating measure expected shortly *(lost its "Unknown" selectable option 2026-09-10 13:11 UTC)*, 14 User Action able to reduce impact, 15 Considered sensitivity of information, 16 Corrective or mitigating measures taken, 17 Corrective or mitigating measures that users can take, 18 Attack vector.
 
