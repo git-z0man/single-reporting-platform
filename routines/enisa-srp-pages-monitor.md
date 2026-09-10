@@ -48,18 +48,20 @@
 > it will keep re-discovering it from scratch every run instead of diffing it
 > against a baseline.
 >
-> **Pending in the Routines UI (added 2026-09-10 12:17 UTC): a ninth and
-> tenth tracked page.** The same "Content" navigation walk, one day before
-> go-live, turned up two more pages not in either baseline: "CRA SRP - AR
-> User Manual" and "CRA Single Reporting Platform - Terms and Conditions",
-> both dated 10 September 2026. Added to `enisa-srp-faq-baseline.md` as
-> `user_manual_url` and `terms_url`, with full content captured in new
-> sections at the end of that file; section 1 below updated to list them as
-> pages 9 and 10. The live Routine's stored prompt (the one that actually
-> fired this run) still says "all seven" — it was already two pages behind
-> before this run, and is now four behind. Paste the updated section 1 below
-> into the Routines UI so the next scheduled run checks both new pages
-> instead of re-discovering them from scratch every run.
+> **Pending in the Routines UI (added 2026-09-10 10:12 UTC): a ninth and
+> tenth tracked page.** The same "Content" navigation walk turned up two more
+> pages not in either baseline: "CRA SRP - AR User Manual" and "CRA Single
+> Reporting Platform - Terms and Conditions". Added to
+> `enisa-srp-faq-baseline.md` as `ar_user_manual_url` and
+> `terms_conditions_url`, and the section below updated to list them as pages
+> 9 and 10 (the Glossary stays page 8, since it lives in the other baseline
+> file and was already tracked). The live Routine's stored prompt still says
+> "all eight" and lists only eight items; paste the updated section 1 below
+> into the Routines UI so the next scheduled run checks both new pages too —
+> until then it will keep re-discovering them from scratch every run instead
+> of diffing them against a baseline. This is the same failure mode the
+> eighth-page note above already describes, now recurring with two more pages
+> at once.
 
 ---
 
@@ -95,12 +97,12 @@ Tracked in `enisa-srp-faq-baseline.md`:
 5. AR Notification Submission and Update guidance — `guidance_urls[1]`
 6. AR Interface Functions guidance — `guidance_urls[2]`
 7. Particular Exceptional Circumstances (PEC) guidance — `guidance_urls[3]` (added 2026-09-08, found via the "Content" navigation — see below)
-8. AR User Manual — `user_manual_url` (added 2026-09-10, found via the "Content" navigation; landing page only — the linked PDF is out of scope)
-9. Terms and Conditions — `terms_url` (added 2026-09-10, found via the "Content" navigation; landing page only — the linked PDF is out of scope)
+9. CRA SRP - AR User Manual — `ar_user_manual_url` (added 2026-09-10, found the same way)
+10. CRA Single Reporting Platform - Terms and Conditions — `terms_conditions_url` (added 2026-09-10, found the same way)
 
 Tracked in `enisa-srp-glossary-baseline.md`:
 
-10. CRA SRP Glossary — `url` in that file's frontmatter
+8. CRA SRP Glossary — `url` in that file's frontmatter
 
 Fetch raw HTML and diff word-for-word against the baseline. Do not rely on a rendered or summarised view — past checks caught wording-level edits that a summary would have hidden.
 
