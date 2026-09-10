@@ -9,7 +9,7 @@ expected_go_live: 2026-09-11
 retrieved: 2026-09-06
 purpose: Reachability baseline for the SRP production environment. The routine re-checks all 29 hosts, records the first successful HTTP response per host, detects new hosts appearing in the zone, and verifies the assumed country-to-CSIRT mapping once the platform answers.
 note: Only an HTTP status code relayed from upstream counts as live. TCP and TLS are recorded but are forged by an intercepting egress proxy in the monitoring environment — see "Why a TLS handshake is not evidence" below.
-last_check: 2026-09-09
+last_check: 2026-09-10
 last_change: 2026-09-06
 ---
 
