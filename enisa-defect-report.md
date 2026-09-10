@@ -144,7 +144,7 @@ was in fact sent to their Primary AR can lose the invitation.
 
 ### B6 — "Legal name" is described as non-editable but is editable
 
-**Status: partly · 2026-09-09 22:12 UTC** — the Primary AR flow now lists only "First Name, Last Name, Email", so its sentence is true. The Secondary AR flow still lists all four, Legal name included, as "retrieved from EU Login and cannot be edited". The two flows also now disagree with each other about which fields are shown.
+**Status: partly · 2026-09-09 22:12 UTC** — the Primary AR flow now lists only "First Name, Last Name, Email", so its sentence is true. The Secondary AR flow still lists all four, Legal name included, as "retrieved from EU Login and cannot be edited". The AR User Manual (10 September) settles which is current: its screenshots of both flows show three fields and no Legal name at all, so the Secondary-flow text and the guidance page's screenshot are stale (F13).
 
 Registration states that the pre-filled personal details "(First Name, Last
 Name, Email, Legal name) … are retrieved from EU Login and cannot be edited in
@@ -173,7 +173,7 @@ guidance to form labels word by word.
 
 ### D1 — No Glossary entry for "Legal name"
 
-**Status: open** — no Glossary entry on 10 September; the term does not occur in the new AR User Manual either (0 hits in 55 pages).
+**Status: partly · 2026-09-10 11:52 UTC** — resolved by removal rather than documentation: the AR User Manual's own screenshots of the personal-details step (Primary and invitation flows alike) show **three fields — First Name, Last Name, Email** — and its text lists the same three. The field appears to have been dropped from the platform. The guidance page's screenshot and its Secondary-AR text still show it, so the web page is now the stale one (F13).
 
 The registration form asks for **"Legal name (for legal entities)"** and
 Registration mentions it, but the Glossary has no entry for it (0 occurrences).
@@ -182,7 +182,7 @@ it empty.
 
 ### D2 — No Glossary entry for "Additional Information", which is mandatory
 
-**Status: open** — no Glossary or FAQ entry on 10 September. The new AR User Manual mentions the field once, as "Manufacturer Name and Additional Information **(optional)**" — while the form marks it **Required field**. See F10.
+**Status: partly · 2026-09-10 11:52 UTC** — still documented nowhere, but no longer mandatory: the AR User Manual calls it optional, and the manual's newer screenshot of the step shows the field **without** the "Required field" badge that ENISA's guidance-page screenshot carries. The badge on the guidance page is the older state (F13). What belongs in the field remains unexplained.
 
 The Manufacturer Details step of AR registration has a field
 **"Additional Information"** marked **"Required field"** *(screenshot)*. The
@@ -254,7 +254,7 @@ guidance has to navigate back to find it.
 
 ### E1 — The old Glossary URL returns 403 with no redirect
 
-**Status: open** — re-checked 10 September 2026, 11:52 UTC: HTTP 403, no `Location` header.
+**Status: open** — re-checked 10 September 2026, 11:52 UTC: HTTP 403, no `Location` header. Note that ENISA already operates a redirecting short address — the AR User Manual cites `https://www.enisa.europa.eu/cra-srp-glossary`, which answers 301 to `…/cra-srp-glossary2` — so the mechanism exists; the old path just isn't wired to it.
 
 The Glossary moved from
 `…/single-reporting-platform-srp/cra-srp-glossary` to
@@ -284,14 +284,14 @@ mandatory reporting fields.
 2. **B5** — 20 versus 10 notifications before verification becomes mandatory.
    *Fixed 9 September 22:12 UTC.*
 3. **D2** — a mandatory registration field with no documentation anywhere.
-   *Open — and the new User Manual now calls it optional (F10).*
+   *Partly — the manual and its newer screenshot make it optional; still undocumented.*
 4. **B1 / B2** — two Glossary fields whose meaning column contradicts their own
    instruction, format and form. *Both open.*
 5. **E1 / E2** — the Glossary is hard to cite: the old URL is dead without a
    redirect, and the version stamp does not move when the content does. *E1
    open; E2 partly — the stamp moved once, then lagged again two hours later.*
 
-Of the 37 findings, **13 are fixed, 5 partly addressed, 19 open** as of
+Of the 37 findings, **13 are fixed, 7 partly addressed, 17 open** as of
 10 September 2026, 11:52 UTC.
 
 ---
@@ -306,7 +306,7 @@ re-check, ahead of the monitor.
 | # | Page | Where | Text | Since (UTC) |
 |---|---|---|---|---|
 | F1 | Interface | "Claim the Primary AR role" step | "…**request to the Primary AR role** for a manufacturer" — a word is missing ("request to *take over* / *become*…) | 2026-09-09 22:12 |
-| F2 | Registration | Confirm-details step, both flows | Primary AR flow lists "First Name, Last Name, Email"; Secondary AR flow lists "First Name, Last Name, Email, Legal name". Same screen, two field lists. | 2026-09-09 22:12 |
+| F2 | Registration | Confirm-details step, both flows | Primary AR flow lists "First Name, Last Name, Email"; Secondary AR flow lists "First Name, Last Name, Email, Legal name". Same screen, two field lists. | 2026-09-09 22:12 **Superseded**: the manual shows three fields in both flows; the four-field Secondary text is the stale one (F13). |
 | F3 | PEC | Body text | The page's own term is spelled "**Particularly** Exceptional Circumstances (PEC)" in the opening sentence and "**Particular** Exceptional Circumstances (PEC)" seven times below it. | 2026-09-09 22:12 |
 | F4 | FAQ | Q9 | "**Verification** takes place in parallel with the reporting process and does not prevent an AR from submitting notifications while **validation** is pending." | 2026-09-09 23:11 |
 | F5 | FAQ / Glossary | Q16 v28/v29 vs Glossary v23/v24 | FAQ now "**Detailed** description of the severity/impact of the vulnerability"; Glossary still "**Full** description…". They agreed before this edit. | 2026-09-09 23:11 |
@@ -314,9 +314,10 @@ re-check, ahead of the monitor.
 | F7 | Glossary / FAQ | Field i35 vs FAQ i40 | Glossary: "Type of **Threat** or root cause that is likely to have triggered **incident**"; FAQ: "Type of threat or root cause that is likely to have triggered **the** incident". Brought closer on 10 September, not aligned. | 2026-09-10 07:11 |
 | F8 | Interface | Manufacturer-details screenshot *(screenshot)* | The manufacturer record is labelled "Manufacturer **Addresss**" (three s), and its *Manufacturer Address* row shows "Manufacturer Sector" as its value. The same screenshot shows the manufacturer record *does* have an address field — which the registration form lacks (D4). | on the page since at least 2026-09-07 |
 | F9 | Main | "User Guidance" block, User Manual card | The card's download link is `href="https://CRA SRP – AR User Manual"` — the document's title in place of a URL. The link is dead; the manual is reachable only through the Content navigation. | 2026-09-10 11:52 |
-| F10 | Manual / Registration form | Manual §2.1 step 6 vs the form *(screenshot)* | Manual: "Enter the manufacturer details, including Manufacturer Name and Additional Information **(optional)**". The form marks Additional Information **"Required field"**. Sharpens D2: the one place that now documents the field gets its status wrong. | 2026-09-10 11:52 |
+| F10 | Manual / Registration form | Manual §2.1 step 6 vs the form *(screenshot)* | Manual: "Enter the manufacturer details, including Manufacturer Name and Additional Information **(optional)**". The form marks Additional Information **"Required field"**. On closer reading not a contradiction but a version gap: the manual's own screenshot of the step shows the field **without** the badge. The guidance page's "Required field" screenshot is the older state (F13). **Partly** — D2 adjusted accordingly. | 2026-09-10 11:52 |
 | F11 | Manual | Cover and page headers vs Document History | Every page says "Version: 1.1"; the Document History table lists a single entry, "09/09/2026 v1.0 First version". Either the history is missing 1.1 or the stamp is wrong. | 2026-09-10 11:52 |
 | F12 | FAQ | Q9 vs Q28 | Q9's opening sentence regressed from "The SRP is available at: https://portal.cra-srp.enisa.europa.eu" to "**The SRP will be available in due time**" — the day before the 11 September go-live that Q4, Q28 and Q29 still commit to. Q28 still gives the URL. | 2026-09-10 09:09 |
+| F13 | Registration (guidance page) vs AR User Manual | Both screenshots of the registration steps | The guidance page's screenshots (uploaded 7 September) show a **"Legal name (for legal entities)"** field and Additional Information badged **"Required field"**. The manual's screenshots of the same steps (9 September) show neither: three personal fields, no badge. The manual's text matches its screenshots; the guidance page's Secondary-AR text still lists four fields. The guidance page is documenting a previous build of the form. | 2026-09-10 11:52 |
 
 ---
 
