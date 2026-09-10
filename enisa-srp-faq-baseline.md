@@ -26,6 +26,18 @@ last_change: 2026-09-10
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
 
+### 2026-09-10 02:08 UTC (vs. 2026-09-10 01:08 UTC)
+
+All eight pages returned HTTP 200. No content change anywhere; three pages moved their "Last updated" stamp from a slash date to a spelled-out one.
+
+**Editorial**
+
+- Date-stamp display format only, no date or content change: CSIRT list "Updated: 04/09/2026" → "Last updated: 04 September 2026"; AR User Registration and AR Interface Functions both "Last updated: 09/09/2026" → "Last updated: 09 September 2026". FAQ, AR Notification Submission and Update, and PEC already used the spelled-out form and are unaffected.
+
+**Unchanged**
+
+Main page (still 6 items in Content nav, no Glossary/9th entry; no PEC card in "User guidance"). FAQ (Q1–Q30, same tags, Q16 table, "Updated: 09 September 2026"). CSIRT list (27 countries, same links, "of EU CSIRTs..." wording). AR Notification Submission and Update (stamp "03 September 2026"). PEC guidance (stamp "09 September 2026"). Glossary (all 38 fields re-verified, footer still "version 1.1, last update: 05/09/2026").
+
 ### 2026-09-10 01:08 UTC (vs. 2026-09-10 00:10 UTC)
 
 All eight pages returned HTTP 200. One long-tracked FAQ typo was fixed; nothing else moved.
@@ -700,7 +712,7 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 
 ## List of CSIRTs Designated as Coordinators (new page, `csirt_list_url`)
 
-"Updated: 04/09/2026". Page note: "This list provides the contacts of EU CSIRTs Designated as Coordinators, in the meaning of the Cyber Resilience Act (CRA)." *(reads "of EU" 2026-09-09 23:11 UTC; this file had recorded "to the" since first capture on 2026-09-07, but no intervening check re-quoted the sentence — only ever noting "27 countries, same links, Updated stamp" — so it is not certain this wording changed today rather than being missed earlier.)* One entry per EU Member State (27 total), each with one or more contact links:
+"Last updated: 04 September 2026" *(format only, changed 2026-09-10 02:08 UTC from "Updated: 04/09/2026"; same date)*. Page note: "This list provides the contacts of EU CSIRTs Designated as Coordinators, in the meaning of the Cyber Resilience Act (CRA)." *(reads "of EU" 2026-09-09 23:11 UTC; this file had recorded "to the" since first capture on 2026-09-07, but no intervening check re-quoted the sentence — only ever noting "27 countries, same links, Updated stamp" — so it is not certain this wording changed today rather than being missed earlier.)* One entry per EU Member State (27 total), each with one or more contact links:
 
 - Austria: https://www.cert.at/de/ueber-uns/kontakt/ ; https://www.cert.at/en/about-us/contact/
 - Belgium: https://ccb.belgium.be/contacts
@@ -735,7 +747,7 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 The four guidance documents above are separate subpages (URLs in `guidance_urls` in the frontmatter). The first three carry a disclaimer of the form "The information on this page is provided according to our current best knowledge and may be subject to change. Please ensure [that] you consult the latest available guidance before applying these instructions." (the "that" is present on two of the three — AR User Registration and AR Notification Submission and Update — and absent on AR Interface Functions; a pre-existing wording difference, not a detected change). The fourth, PEC, carries the same disclaimer without "that", plus an additional access-precondition note not present on the other three (see below). All four have now been rewritten into a second-person "Follow these steps…" style with numbered steps and screenshots (AR Notification Submission and Update was the last to receive this treatment, on 2026-09-09 22:12 UTC). **As of 2026-09-09 22:12 UTC**: AR User Registration shows "Last updated: 09/09/2026"; AR Notification Submission and Update shows "Last updated: 03 September 2026" (its first move since 2026-09-02); AR Interface Functions shows "Last updated: 09/09/2026" (unmoved since 21:07 UTC despite a further same-day rewrite); PEC shows "Last updated: 09 September 2026" — its first date stamp ever, gained this run. None of the four stamps is a reliable change signal; diff the text on every check.
 
 ### Guidance: CRA SRP - AR User registration
-URL: see `guidance_urls`. Page note: "Last updated: 09/09/2026" *(unmoved since the 2026-09-09 22:12 UTC rewrite, despite the wording change below).*
+URL: see `guidance_urls`. Page note: "Last updated: 09 September 2026" *(format only, changed 2026-09-10 02:08 UTC from "09/09/2026"; same date, unmoved in substance since the 2026-09-09 22:12 UTC rewrite).*
 
 This page provides information on the Assigned Representative (AR) user registration in the SRP. It is intended for AR users (Primary and Secondary). *(singular "Representative", new 2026-09-10 00:10 UTC — was "Representatives"; the main page's own "User guidance" card blurb for this page still reads "Representatives", plural, so the two now disagree.)*
 
@@ -774,7 +786,7 @@ Purpose: Follow these steps to submit a new notification for an Actively Exploit
 Purpose: Follow these steps to update an existing notification for an AEV or SI. Pre-conditions: status "Active" and logged in; a notification has been previously submitted or saved as draft; notification is not closed (closed notifications cannot be updated); the Final Report is not submitted (the notification becomes non-editable after Final Report submission). Steps: open a notification and update the necessary fields under the Notification tab → click "Update" to save. Exception: omitting mandatory data on "Update" returns an error. The SRP automatically notifies the CDaC via alert and email, and automatically notifies ENISA and any concerned CSIRTs that previously received the notification through dissemination, via alert and email.
 
 ### Guidance: CRA SRP - AR Interface functions
-URL: see `guidance_urls`. Page note: "Last updated: 09/09/2026" *(unchanged from the 21:07 UTC rewrite, even though the page was rewritten a second time today — see change log; the stamp does not move on every edit)*.
+URL: see `guidance_urls`. Page note: "Last updated: 09 September 2026" *(format only, changed 2026-09-10 02:08 UTC from "09/09/2026"; same date — unchanged in substance from the 21:07 UTC rewrite, even though the page was rewritten a second time that day; the stamp does not move on every edit)*.
 
 This section explains the AR interface of the SRP for various functions that can be performed. Note: AR users can access the Dashboard only after successfully logging in and while their SRP user status is "Active", subject to applicable role and association restrictions.
 
