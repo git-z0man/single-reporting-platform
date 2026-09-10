@@ -12,12 +12,12 @@ guidance_urls:
   - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-particular-exceptional-circumstances-pec
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
-retrieved: 2026-09-10 (fetched 17:13 UTC)
-guidance_retrieved: 2026-09-10 (fetched 17:13 UTC)
-glossary_retrieved: 2026-09-10 (fetched 17:13 UTC)
-csirt_list_retrieved: 2026-09-10 (fetched 17:13 UTC)
-ar_user_manual_retrieved: 2026-09-10 (fetched 17:13 UTC, unchanged since first capture at 10:12 UTC)
-terms_conditions_retrieved: 2026-09-10 (fetched 17:13 UTC, unchanged since the trailing space was lost at 14:07 UTC)
+retrieved: 2026-09-10 (fetched 19:07 UTC)
+guidance_retrieved: 2026-09-10 (fetched 19:07 UTC)
+glossary_retrieved: 2026-09-10 (fetched 19:07 UTC)
+csirt_list_retrieved: 2026-09-10 (fetched 19:07 UTC)
+ar_user_manual_retrieved: 2026-09-10 (fetched 19:07 UTC, unchanged since first capture at 10:12 UTC)
+terms_conditions_retrieved: 2026-09-10 (fetched 19:07 UTC, unchanged since the trailing space was lost at 14:07 UTC)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. **`ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC**, discovered the same way — the site's own "Content" navigation grew from 6 to 8 entries in this run (see the change log); this widens the routine's tracked-page count from eight to ten, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-10
@@ -29,6 +29,22 @@ last_change: 2026-09-10
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-10 19:07 UTC (vs. 2026-09-10 17:13 UTC)
+
+All ten pages returned HTTP 200. No FAQ, guidance-subpage, CSIRT-list, or Glossary content changed — only the main page's "User Guidance" card section moved, resolving one previously-flagged lag and adding a date stamp that was missing before.
+
+**Fixed**
+
+- **AR User Registration card date caught up**: the main page's own card blurb for this guidance page read "Updated: 9 September 2026" since the 10:12 UTC refresh, disagreeing with the dedicated subpage's own stamp which had already moved to "10 September 2026" at 13:11 UTC. The main-page card now also reads "Updated: 10 September 2026" — the two agree again.
+
+**New**
+
+- **PEC guidance card gained a date for the first time**: the main page's "User Guidance" card for "CRA SRP Guidance - Particular Exceptional Circumstances (PEC)" showed no date at all from when it first gained a card (10:12 UTC) through the last check. It now reads "Updated: 10 September 2026" — note this does not match the dedicated PEC subpage's own stamp, still "Last updated: 09 September 2026" and unmoved; the subpage's own text is otherwise byte for byte unchanged, so this looks like the same lagging/independent card-date pattern already seen on the AR User Registration card, just with a value one day ahead of the subpage instead of behind it.
+
+**Unchanged**
+
+FAQ (all 31 entries, same tags and wording, "Updated: 10 September 2026"); main page intro, Factsheet card, Glossary card, and Content navigation (8 entries); the AR Notification Submission and Update and AR Interface Functions card dates ("9 September 2026", unmoved); all four guidance subpages byte for byte, including their own "Last updated" stamps; CSIRT list (27 countries, same links, "Last updated: 10 September 2026"); AR User Manual and Terms and Conditions pages; Glossary (still v1.3, 39 fields, all rows and both footnotes re-verified) — see `enisa-srp-glossary-baseline.md`.
 
 ### 2026-09-10 17:13 UTC (vs. 2026-09-10 15:10 UTC)
 
@@ -809,10 +825,10 @@ To report security incidents involving the platform, you can contact ENISA at cr
 
 ## Guidance documents (User guidance section, on the main SRP page)
 
-- "CRA SRP - AR User Registration" — Updated: 9 September 2026 *(the main-page card date has not moved; the subpage's own date bumped to "10 September 2026" on 2026-09-10 13:11 UTC — see the dedicated subpage section below — so the two now disagree, the same lagging-card pattern already seen before the 10:12 UTC refresh)*. "This page provides information for Assigned Representatives (ARs) on how to register for the SRP. It is intended for AR users (Primary and Secondary)."
+- "CRA SRP - AR User Registration" — Updated: 10 September 2026 *(caught up 2026-09-10 19:07 UTC to match the subpage's own stamp, which had moved to "10 September 2026" already at 13:11 UTC; the two cards had disagreed for almost six hours)*. "This page provides information for Assigned Representatives (ARs) on how to register for the SRP. It is intended for AR users (Primary and Secondary)."
 - "CRA SRP - AR Notification Submission and Update" — Updated: 9 September 2026. "This page provides information for Assigned Representatives (AR) on how to submit, view and update notifications on the SRP. It is intended for AR users (Primary and Secondary)."
 - "CRA SRP - AR Interface functions" — Updated: 9 September 2026. "This page explains the AR interface of the SRP and the various functions that can be performed."
-- "CRA SRP Guidance - Particular Exceptional Circumstances (PEC)" — no date shown on this card. "This section explains to ARs how and when to apply one of the three cases of Particularly Exceptional Circumstances (PEC), as described in the third subparagraph of Article 16(2) of the CRA." *(gained a card here 2026-09-10 10:12 UTC — previously listed only in the Content navigation, not in this section.)*
+- "CRA SRP Guidance - Particular Exceptional Circumstances (PEC)" — Updated: 10 September 2026 *(gained a date for the first time 2026-09-10 19:07 UTC; the dedicated subpage's own stamp is still "09 September 2026", unmoved — so this card now disagrees with its subpage the same way the AR User Registration card did until this run, just one day ahead instead of behind)*. "This section explains to ARs how and when to apply one of the three cases of Particularly Exceptional Circumstances (PEC), as described in the third subparagraph of Article 16(2) of the CRA." *(gained a card here 2026-09-10 10:12 UTC — previously listed only in the Content navigation, not in this section.)*
 - "CRA SRP – AR User Manual" *(new card, 2026-09-10 10:12 UTC)*: "Download the CRA SRP – AR User Manual for guidance on using the platform." The card's own "Download" button `href` was malformed on the live page from first capture until 2026-09-10 15:10 UTC — literally `https://CRA SRP – AR User Manual`, not a working URL — and now links correctly to the PDF, matching the dedicated subpage's (see below) own Download button, which has always worked.
 
 **Refreshed 2026-09-10 10:12 UTC**: the three original cards' long-stale dates (3/08/2026, 3/08/2026, 14/08/2026 — flagged stale since 2026-09-08) now match their subpages' own "09 September 2026" stamp, in a new one-digit-day format ("Updated: 9 September 2026") that matches neither the subpages' own "09 September 2026" nor their earlier slash-date form. Card blurbs were also reworded (see the change log for exact before/after wording); titles gained consistent capitalisation ("AR User registration" → "AR User Registration", "AR Notification submission and update" → "AR Notification Submission and Update").
