@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.1 (page footer: last update 05/09/2026)"
-retrieved: 2026-09-10 (fetched 01:08 UTC)
+retrieved: 2026-09-10 (fetched 02:08 UTC)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -38,6 +38,14 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-10 02:08 UTC (vs. 2026-09-10 01:08 UTC)
+
+Page still returns HTTP 200 at `cra-srp-glossary2`, fetched alongside all seven other tracked SRP pages in the same run (three of which changed their "Last updated" stamp format only — CSIRT list, AR User Registration, AR Interface Functions; see `enisa-srp-faq-baseline.md`). All 38 fields re-verified row by row: no field name, meaning, how-to-complete text, example, format, or per-stage status moved. Footer still verbatim lowercase "version 1.1, last update: 05/09/2026".
+
+**Unchanged**
+
+All 38 rows, including every previously tracked defect: field 11's contradictory meaning and its "is doesn't" typo, v26's doubled full stop, v29's missing space in "(CDaC)taking", i36's and i37's broken grammar, v28's three grounds and its "one" vs "at least one" inconsistency, and i32's "or" against the FAQ's "and". Both footnotes unchanged.
 
 ### 2026-09-10 01:08 UTC (vs. 2026-09-10 00:10 UTC)
 
