@@ -48,25 +48,20 @@
 > it will keep re-discovering it from scratch every run instead of diffing it
 > against a baseline.
 >
-> **Pending in the Routines UI (added 2026-09-10 11:12 UTC): a ninth and
-> tenth tracked page.** The same "Content" navigation walk, the day before
-> the 11 September go-live, turned up two more new pages not in either
-> baseline: **"CRA SRP - AR User Manual"** (a downloadable-PDF landing page,
-> now also promoted to a card in the main page's own "User Guidance"
-> section) and **"CRA Single Reporting Platform - Terms and Conditions"**
-> (a landing page linking out to a Terms and Conditions document,
-> nav-only). Both added to `enisa-srp-faq-baseline.md` as `user_manual_url`
-> and `terms_url`, and the section below updated to list them as pages 8 and
-> 9 (Glossary renumbered to 10). The live Routine's stored prompt still says
-> "all eight" and lists only seven items under `enisa-srp-faq-baseline.md`;
-> paste the updated section 1 below into the Routines UI so the next
-> scheduled run checks both new pages too — until then it will keep
-> re-discovering them from scratch every run instead of diffing them against
-> a baseline. This run also found several unrelated substantive changes on
-> already-tracked pages (Q9's URL restored, a new FAQ question, a full
-> rewrite of the main page's intro, a CSIRT coordinator-link change) — see
-> the change log in `enisa-srp-faq-baseline.md` for those; they do not
-> require a prompt change, only this page-count widening does.
+> **Pending in the Routines UI (added 2026-09-10 10:12 UTC): a ninth and
+> tenth tracked page.** The same "Content" navigation walk turned up two more
+> pages not in either baseline: "CRA SRP - AR User Manual" and "CRA Single
+> Reporting Platform - Terms and Conditions". Added to
+> `enisa-srp-faq-baseline.md` as `ar_user_manual_url` and
+> `terms_conditions_url`, and the section below updated to list them as pages
+> 9 and 10 (the Glossary stays page 8, since it lives in the other baseline
+> file and was already tracked). The live Routine's stored prompt still says
+> "all eight" and lists only eight items; paste the updated section 1 below
+> into the Routines UI so the next scheduled run checks both new pages too —
+> until then it will keep re-discovering them from scratch every run instead
+> of diffing them against a baseline. This is the same failure mode the
+> eighth-page note above already describes, now recurring with two more pages
+> at once.
 
 ---
 
@@ -102,12 +97,12 @@ Tracked in `enisa-srp-faq-baseline.md`:
 5. AR Notification Submission and Update guidance — `guidance_urls[1]`
 6. AR Interface Functions guidance — `guidance_urls[2]`
 7. Particular Exceptional Circumstances (PEC) guidance — `guidance_urls[3]` (added 2026-09-08, found via the "Content" navigation — see below)
-8. CRA SRP - AR User Manual — `user_manual_url` (added 2026-09-10, found via the "Content" navigation — a downloadable-PDF landing page)
-9. CRA Single Reporting Platform - Terms and Conditions — `terms_url` (added 2026-09-10, found via the "Content" navigation — a landing page linking out to a Terms and Conditions document)
+9. CRA SRP - AR User Manual — `ar_user_manual_url` (added 2026-09-10, found the same way)
+10. CRA Single Reporting Platform - Terms and Conditions — `terms_conditions_url` (added 2026-09-10, found the same way)
 
 Tracked in `enisa-srp-glossary-baseline.md`:
 
-10. CRA SRP Glossary — `url` in that file's frontmatter
+8. CRA SRP Glossary — `url` in that file's frontmatter
 
 Fetch raw HTML and diff word-for-word against the baseline. Do not rely on a rendered or summarised view — past checks caught wording-level edits that a summary would have hidden.
 
@@ -118,7 +113,7 @@ Then check what actually came back, and treat a bad fetch as a bad fetch:
 - **HTTP 429 or 5xx that survives the retries is a check failure, not a change.** Do not touch the baseline, never diff an error page as if it were content, and report the run as failed with the exact status. This is the same mistake class as reading a 403 as an unpublished page: an HTTP status tells you about the fetch, not about the page.
 - Confirm each response really is the page — a non-empty HTML body, not an error document — before diffing. Check the content, not just curl's exit code: on 2026-09-07 ten downloads returned error bodies with exit code 0 and were only caught by inspecting the files.
 
-Also walk the page navigation ("Content" subtopics list) on the main page. If a page appears there that is not in either baseline, that is itself a finding: ENISA added the Glossary and the CSIRT list this way on 2026-09-07, the PEC guidance page this way on 2026-09-08, and the AR User Manual and Terms and Conditions pages this way on 2026-09-10. Add it to the appropriate baseline and say so in the report. The AR User Manual and Terms and Conditions pages are landing pages for a downloadable PDF / an external document respectively — diff the landing page's own text and link on future checks; the linked document's own contents are out of scope for this baseline (same treatment as the SRP Factsheet).
+Also walk the page navigation ("Content" subtopics list) on the main page. If a page appears there that is not in either baseline, that is itself a finding: ENISA added the Glossary and the CSIRT list this way on 2026-09-07, the PEC guidance page this way on 2026-09-08, and the AR User Manual and Terms and Conditions pages this way on 2026-09-10. Add it to the appropriate baseline and say so in the report.
 
 ## 2. The Glossary needs specific handling
 

@@ -80,6 +80,7 @@
             <dt>Open-source stewards</dt><dd>Reporting obligations under Art. 24(3) apply from 11 December 2027, per Art. 71(2)</dd>
             <dt>Voluntary reporting</dt><dd>Not at launch; a later phase, no date given</dd>
             <dt>Portal address</dt><dd><a href="https://portal.cra-srp.enisa.europa.eu" target="_blank" rel="noopener">portal.cra-srp.enisa.europa.eu</a> · sign in with EU Login</dd>
+            <dt>AR User Manual</dt><dd>ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual" target="_blank" rel="noopener">AR User Manual</a> &mdash; PDF, 55 pages, published 9&nbsp;September&nbsp;2026. The fullest description of the platform so far, with a screenshot of every screen; this guide&rsquo;s walkthrough now draws on it. The platform&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions" target="_blank" rel="noopener">Terms and Conditions</a> were published the same day.</dd>
             <dt>Portal language</dt><dd>English only at launch; ENISA is translating the supporting material, not the platform</dd>
             <dt>Manufacturer-facing API</dt><dd>None at the initial release; ENISA says it may be considered in a future phase</dd>
             <dt>Built by</dt><dd>Uni Systems (lead), Wavestone &amp; Luxembourg House of Cybersecurity · €11M, four-year public tender</dd>
@@ -149,11 +150,11 @@
               <tr><td class="c-field">First name</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Pre-filled.</td></tr>
               <tr><td class="c-field">Last name</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Pre-filled.</td></tr>
               <tr><td class="c-field">Email</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Pre-filled from the EU Login account.</td></tr>
-              <tr><td class="c-field">Legal name</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Pre-filled. <strong>ENISA does not explain this field anywhere</strong> — it appears in the registration screenshots and in no glossary entry. Treat what EU Login supplies as authoritative until ENISA says otherwise.</td></tr>
+              <tr><td class="c-field">Legal name</td><td class="c-status"><span class="chip na">Dropped</span></td><td class="c-note">On ENISA&rsquo;s guidance screenshot of 7&nbsp;September, but <strong>absent from the AR User Manual</strong> of 9&nbsp;September &mdash; its screenshot of this step shows three fields, and its text lists only &ldquo;First Name, Last Name, Email&rdquo;. The field was never explained anywhere; <strong>ENISA has since confirmed it was dropped</strong> (10&nbsp;September).</td></tr>
               <tr class="group"><td colspan="3">Manufacturer details</td></tr>
               <tr><td class="c-field">Manufacturer name</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Omitting it returns an error and keeps “Continue” disabled.</td></tr>
-              <tr><td class="c-field">Additional information</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Mandatory alongside the name, per ENISA&rsquo;s own error case. The guidance does not say what belongs in it.</td></tr>
-              <tr><td class="c-field">Manufacturer address</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Not among the fields whose absence blocks “Continue”. ENISA&rsquo;s page spells it “adress”.</td></tr>
+              <tr><td class="c-field">Additional information</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">ENISA&rsquo;s guidance screenshot marked it &ldquo;Required field&rdquo;; the AR User Manual calls it optional and its newer screenshot carries no badge. What belongs in it is still documented nowhere &mdash; it is what the CSIRT sees when deciding whether to verify you, so treat it as the place to say who you are and why you represent this manufacturer.</td></tr>
+              <tr><td class="c-field">Manufacturer address</td><td class="c-status"><span class="chip na">Not on the form</span></td><td class="c-note">Listed in ENISA&rsquo;s guidance text, shown on neither ENISA&rsquo;s screenshot nor the manual&rsquo;s. The manufacturer <em>record</em> does carry an address later, under Settings.</td></tr>
             </tbody>
           </table>
         </div>
@@ -203,7 +204,9 @@
           </li>
           <li class="wstep" id="step-reg-personal">
             <div class="wstep-head"><span class="wstep-num">3</span><h3>Confirm your personal details</h3></div>
-            <figure><img class="shot" src="img/enisa/reg-03-personal-details.png" alt="Registration step 1 with First Name, Last Name, Email and Legal name pre-filled from EU Login"><figcaption>Step&nbsp;1 of&nbsp;2. Pre-filled from EU Login &mdash; you are confirming, not typing.</figcaption></figure>
+            <figure><img class="shot" src="img/enisa/man-reg-legal-agreement.png" alt="Legal Agreement dialog asking to read the Terms and Conditions, with I don't agree and I agree buttons"><figcaption>Before this step: EU Login, then the Legal Agreement. It links to the platform&rsquo;s Terms and Conditions; &ldquo;I don&rsquo;t agree&rdquo; ends the registration.</figcaption></figure>
+            <figure><img class="shot" src="img/enisa/reg-03-personal-details.png" alt="Registration step 1 with First Name, Last Name, Email and Legal name pre-filled from EU Login"><figcaption>Step&nbsp;1 of&nbsp;2 as ENISA&rsquo;s guidance page shows it (7&nbsp;September): four fields.</figcaption></figure>
+            <figure><img class="shot" src="img/enisa/man-reg-personal-details.png" alt="The same personal-details step in the AR User Manual, with only First Name, Last Name and Email"><figcaption>The same step in the AR User Manual (9&nbsp;September): three fields. <strong>Legal name is gone.</strong></figcaption></figure>
             <p class="wstep-lede">After the EU Login sign-in and the legal agreement. Everything here arrives filled in.</p>
             <div class="table-wrap">
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
@@ -212,22 +215,23 @@
               <tr><td class="c-field">First Name</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">From your EU Login account.</td></tr>
               <tr><td class="c-field">Last Name</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">From your EU Login account.</td></tr>
               <tr><td class="c-field">Email</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">From your EU Login account. This is where invitations and alerts go.</td></tr>
-              <tr><td class="c-field">Legal name (for legal entities)</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">The screen&rsquo;s own parenthesis is the only explanation ENISA gives of this field &mdash; it appears in no glossary entry. Read it as: the registered name of the entity you act for, where you act for one.</td></tr>
+              <tr><td class="c-field">Legal name (for legal entities)</td><td class="c-status"><span class="chip na">Dropped</span></td><td class="c-note">Present on the guidance page&rsquo;s screenshot, absent from the manual&rsquo;s newer one and from the manual&rsquo;s text &mdash; and ENISA has confirmed the field was dropped. If an older screen still shows it, leave it empty.</td></tr>
               </tbody></table>
             </div>
             <!-- OWN-NOTE reg-personal: your own practical note here, as <p class="ownnote">…</p> -->
           </li>
           <li class="wstep" id="step-reg-manufacturer">
             <div class="wstep-head"><span class="wstep-num">4</span><h3>Enter the manufacturer details</h3></div>
-            <figure><img class="shot" src="img/enisa/reg-04-manufacturer-details.png" alt="Registration step 2 with Name, a greyed-out CSIRT field and Additional Information"><figcaption>Step&nbsp;2 of&nbsp;2. Two required fields, and the CDaC shown read-only.</figcaption></figure>
-            <p class="wstep-lede">The manufacturer you will report for. Omitting either required field returns an error and leaves &ldquo;Continue&rdquo; disabled.</p>
+            <figure><img class="shot" src="img/enisa/reg-04-manufacturer-details.png" alt="Registration step 2 with Name, a greyed-out CSIRT field and Additional Information"><figcaption>Step&nbsp;2 of&nbsp;2 on the guidance page: Additional Information badged &ldquo;Required field&rdquo;.</figcaption></figure>
+            <figure><img class="shot" src="img/enisa/man-reg-manufacturer-details.png" alt="The same manufacturer-details step in the AR User Manual: Name required, CDaC read-only, Additional Information without a badge"><figcaption>The same step in the manual: only Name carries the badge.</figcaption></figure>
+            <p class="wstep-lede">The manufacturer you will report for. Omitting the name returns an error and leaves &ldquo;Continue&rdquo; disabled. The manual adds one thing the page does not: the CDaC is fixed by your choice in step&nbsp;2 and cannot be changed here.</p>
             <div class="table-wrap">
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
               <tbody>
               <tr><td class="c-field">Name</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The manufacturer&rsquo;s name.</td></tr>
               <tr><td class="c-field">CSIRT Designated as Coordinator (CDaC)</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">Greyed out &mdash; carried over from step&nbsp;2 above, not editable here.</td></tr>
-              <tr><td class="c-field">Additional Information</td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Required alongside the name. Neither the guidance nor the glossary says what belongs in it.</td></tr>
+              <tr><td class="c-field">Additional Information</td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">&ldquo;Required field&rdquo; on the guidance page&rsquo;s screenshot; optional in the manual, and unbadged on its screenshot. Still undocumented either way &mdash; and still what the CSIRT reads when verifying you.</td></tr>
               </tbody></table>
             </div>
             <div class="callout amber"><p><strong class="lead-in">ENISA&rsquo;s text and ENISA&rsquo;s screenshot disagree.</strong> The registration guidance lists &ldquo;manufacturer name, manufacturer adress, additional information&rdquo;; the screenshot above has no address field at all. Reproduced as found &mdash; if an address field exists, it is not on this screen.</p></div>
@@ -235,7 +239,8 @@
           </li>
           <li class="wstep" id="step-reg-invited">
             <div class="wstep-head"><span class="wstep-num">5</span><h3>If you were invited: accept instead</h3></div>
-            <figure><img class="shot" src="img/enisa/reg-05-invited-personal-details.png" alt="Personal details screen reached through an invitation link"><figcaption>The Secondary AR path: the same details, reached from an invitation e-mail.</figcaption></figure>
+            <figure><img class="shot" src="img/enisa/reg-05-invited-personal-details.png" alt="Personal details screen reached through an invitation link"><figcaption>The Secondary AR path as the guidance page shows it: the same four fields, reached from an invitation e-mail.</figcaption></figure>
+            <figure><img class="shot" src="img/enisa/man-reg-existing-user-accept.png" alt="Backup AR Invitation, step 2 of 2, with a Success dialog reading You have accepted the invitation"><figcaption>From the manual: the manufacturer details arrive pre-filled, and &ldquo;Accept invitation&rdquo; ends with this confirmation.</figcaption></figure>
             <p class="wstep-lede">A Secondary AR does not choose a role or a CSIRT. The link in the invitation leads here, the manufacturer details are already filled in, and the last button says &ldquo;Accept invitation&rdquo;. The link expires after <strong>seven days</strong>; after that the record turns to &ldquo;Invitation Expired&rdquo;.</p>
             <div class="table-wrap">
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
@@ -244,15 +249,16 @@
               <tr><td class="c-field">First Name</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">From your EU Login account, as on the Primary path.</td></tr>
               <tr><td class="c-field">Last Name</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">From your EU Login account.</td></tr>
               <tr><td class="c-field">Email</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">The address the invitation was sent to. It cannot be swapped for another one here.</td></tr>
-              <tr><td class="c-field">Legal name (for legal entities)</td><td class="c-status"><span class="chip optional">Editable</span></td><td class="c-note">Still undocumented: re-checked against ENISA on 9&nbsp;September&nbsp;2026 &mdash; the term appears in no glossary entry and in no FAQ answer, so the screen&rsquo;s own parenthesis remains the only explanation. Note that the guidance calls all four fields non-editable, while this one accepts input.</td></tr>
+              <tr><td class="c-field">Legal name (for legal entities)</td><td class="c-status"><span class="chip na">Dropped</span></td><td class="c-note">The manual&rsquo;s screenshot of this very screen (&ldquo;Backup AR Invitation&rdquo;) has three fields; its text lists three; ENISA has confirmed the field was dropped. The guidance page&rsquo;s text and screenshot still show four.</td></tr>
               <tr class="group"><td colspan="3">Step 2 of 2 &mdash; manufacturer details</td></tr>
               <tr><td class="c-field">Name, CDaC, Additional Information</td><td class="c-status"><span class="chip carried">Pre-filled</span></td><td class="c-note">All three arrive from the Primary AR&rsquo;s registration. You confirm them; the button reads &ldquo;Accept invitation&rdquo; rather than &ldquo;Continue&rdquo;.</td></tr>
               </tbody></table>
             </div>
+            <p class="wstep-more"><strong>Three things the manual adds.</strong> The invitation can only be sent by a Primary AR whose own association is already <em>Verified</em>. Open the link with the EU Login account the invitation was addressed to &mdash; a different account authenticates fine and is simply not associated with the manufacturer. And if you already have an SRP account, the same link works to add this manufacturer as a further association: you confirm the same details, click &ldquo;Accept invitation&rdquo;, and your existing account and associations are untouched. Seven days either way; after that the request reads &ldquo;Invitation Expired&rdquo;.</p>
             <!-- OWN-NOTE reg-invited: your own practical note here, as <p class="ownnote">…</p> -->
           </li>
         </ol>
-        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-user-registration" target="_blank" rel="noopener">CRA SRP guidance — AR User registration</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>.</p>
+        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-user-registration" target="_blank" rel="noopener">CRA SRP guidance — AR User registration</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Additional screenshots from ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual" target="_blank" rel="noopener">CRA SRP &ndash; AR User Manual</a> (PDF, Version&nbsp;1.1), retrieved 10&nbsp;September&nbsp;2026. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>.</p>
 
 
       </section>
@@ -345,6 +351,16 @@
             <div class="wstep-head"><span class="wstep-num">5</span><h3>After the CSIRT validates</h3></div>
             <figure><img class="shot" src="img/enisa/ew-06-after-csirt-validation.png" alt="The same notification after CSIRT validation"><figcaption>The same record once the association has been validated.</figcaption></figure>
             <p class="wstep-lede">Validation runs in parallel and never blocks a submission. How many notifications you may send before it becomes mandatory is a number ENISA gives twice, differently: the FAQ says <strong>20</strong> for a non-validated AR, while the interface guidance says <strong>10</strong> for an unverified AR who has just added a manufacturer. Both are reproduced here because neither can be shown to supersede the other.</p>
+            <div class="table-wrap">
+              <table class="data"><colgroup><col class="col-field"><col></colgroup>
+              <thead><tr><th>Status you will see</th><th>What it means, in the manual&rsquo;s words</th></tr></thead>
+              <tbody>
+              <tr><td class="c-field">Submitted</td><td class="c-note">Sent through the SRP and available for the next workflow step. The stage names are &ldquo;EW Submitted&rdquo;, &ldquo;72h Submitted&rdquo; (or &ldquo;72h Submitted under PEC&rdquo;) and &ldquo;FR Submitted&rdquo;.</td></tr>
+              <tr><td class="c-field">Valid</td><td class="c-note">The designated CSIRT has reviewed and accepted the notification. The SRP sends an alert or e-mail when this happens.</td></tr>
+              <tr><td class="c-field">Invalid</td><td class="c-note">The designated CSIRT has reviewed it and marked it as not valid. This is one of the red alerts.</td></tr>
+              <tr><td class="c-field">Closed</td><td class="c-note">No further action is expected for that notification in the current workflow.</td></tr>
+              </tbody></table>
+            </div>
             <!-- OWN-NOTE ew-validated: your own practical note here, as <p class="ownnote">…</p> -->
           </li>
           <li class="wstep" id="step-ew-notes">
@@ -362,7 +378,7 @@
             <!-- OWN-NOTE ew-notes: replace the example above, or delete it -->
           </li>
         </ol>
-        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>.</p>
+        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Additional screenshots from ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual" target="_blank" rel="noopener">CRA SRP &ndash; AR User Manual</a> (PDF, Version&nbsp;1.1), retrieved 10&nbsp;September&nbsp;2026. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>.</p>
 
 
       </section>
@@ -416,6 +432,8 @@
           </li>
           <li class="wstep" id="step-n72-fields">
             <div class="wstep-head"><span class="wstep-num">2</span><h3>The fields that become mandatory now</h3></div>
+            <figure><img class="shot" src="img/enisa/man-n72-form-top.png" alt="The 72h Notification tab of a severe-incident notification: General information about the nature of the incident and Initial assessment of the incident marked Required, Considered sensitivity of information below"><figcaption>The 72h tab, top, for a severe incident &mdash; from the manual, the first published capture of this form. The stage header shows the due date: &ldquo;To be submitted by &hellip;&rdquo;.</figcaption></figure>
+            <figure><img class="shot" src="img/enisa/man-n72-form-lower.png" alt="Lower part of the 72h tab: Attack vector, Detailed description of the Severity and of the Impact, Type of threat or root cause, Save draft and Submit 72h Notification"><figcaption>The same tab further down. The Final Report&rsquo;s description fields are already here, optional; &ldquo;Save draft&rdquo; and &ldquo;Submit 72h Notification&rdquo; close the form.</figcaption></figure>
             <p class="wstep-lede">Everything from the Early Warning is carried over and can be corrected. These are the ones that stop being optional.</p>
             <div class="table-wrap">
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
@@ -429,6 +447,7 @@
               <tr><td class="c-field">Initial assessment of the incident<a class="fieldref" href="#f-i43" title="Open field i43 in the reference">i43</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only: severity, scope, affected functions or data. Separate what is confirmed from what is still under investigation.</td></tr>
               </tbody></table>
             </div>
+            <p class="wstep-more"><strong>Seen on the form, stated nowhere else.</strong> The three measures fields &mdash; taken, users can take, applied and ongoing &mdash; are repeatable: &ldquo;+&nbsp;Add another&hellip;&rdquo; adds a further entry rather than making you list several in one box. Narrative fields cap at 4,000 characters; <em>Considered sensitivity of information</em>, <em>Attack vector</em> and <em>Type of threat or root cause</em> at 255. The two date-and-time fields are entered as date, hour and minute in separate controls, in UTC.</p>
             <!-- OWN-NOTE n72-fields: your own practical note here, as <p class="ownnote">…</p> -->
           </li>
           <li class="wstep" id="step-pec-toggle">
@@ -461,7 +480,7 @@
             <!-- OWN-NOTE pec-reasons: your own practical note here, as <p class="ownnote">…</p> -->
           </li>
         </ol>
-        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>. PEC screens: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-particular-exceptional-circumstances-pec" target="_blank" rel="noopener">CRA SRP guidance — Particular Exceptional Circumstances (PEC)</a>, retrieved 8&nbsp;September&nbsp;2026 — the page appeared that day. Reproduced with acknowledgement per the ENISA Legal Notice.</p>
+        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Additional screenshots from ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual" target="_blank" rel="noopener">CRA SRP &ndash; AR User Manual</a> (PDF, Version&nbsp;1.1), retrieved 10&nbsp;September&nbsp;2026. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>. PEC screens: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-particular-exceptional-circumstances-pec" target="_blank" rel="noopener">CRA SRP guidance — Particular Exceptional Circumstances (PEC)</a>, retrieved 8&nbsp;September&nbsp;2026 — the page appeared that day. Reproduced with acknowledgement per the ENISA Legal Notice.</p>
 
 
         <div class="callout neutral">
@@ -517,7 +536,9 @@
           </li>
           <li class="wstep" id="step-fin-fields">
             <div class="wstep-head"><span class="wstep-num">2</span><h3>The closing fields</h3></div>
-            <p class="wstep-lede">The substance of the report. The two description pairs are separate fields, not a duplicate.</p>
+            <figure><img class="shot" src="img/enisa/man-fin-form-top.png" alt="The Final Report tab of a severe-incident notification, with Detailed description of the Severity and of the Impact both marked Required"><figcaption>The Final Report tab for a severe incident, from the manual. The severity description&rsquo;s placeholder quotes the Article&nbsp;14 criteria back at you.</figcaption></figure>
+            <figure><img class="shot" src="img/enisa/man-fin-submit-confirm.png" alt="Confirmation dialog on Submit Final Report: Are you sure? After submission, you will not be able to update the notification"><figcaption>&ldquo;Submit Final Report&rdquo; asks once more. This is the last edit you get.</figcaption></figure>
+            <p class="wstep-lede">The substance of the report. The two description pairs are separate fields, not a duplicate. On this tab the measures fields that were optional at 72&nbsp;h &mdash; taken, users can take, applied and ongoing &mdash; carry the &ldquo;Required&rdquo; badge for an incident.</p>
             <div class="table-wrap">
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
@@ -532,10 +553,11 @@
               <tr><td class="c-field">Type of threat or root cause that is likely to have triggered the incident<a class="fieldref" href="#f-i40" title="Open field i40 in the reference">i40</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only.</td></tr>
               </tbody></table>
             </div>
+            <p class="wstep-more"><strong>After &ldquo;Proceed&rdquo; the notification is read-only for you.</strong> The manual is explicit: after the Final Report is submitted, the notification is no longer editable by the AR. Anything still wrong has to go through the CSIRT. Until then, every earlier stage can still be corrected with &ldquo;Update&rdquo;, and each update alerts the CDaC and whoever already has access.</p>
             <!-- OWN-NOTE fin-fields: your own practical note here, as <p class="ownnote">…</p> -->
           </li>
         </ol>
-        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>.</p>
+        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update" target="_blank" rel="noopener">CRA SRP guidance — AR Notification submission and update</a>, retrieved 7&nbsp;September&nbsp;2026. Reproduced with acknowledgement per the ENISA Legal Notice. Additional screenshots from ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual" target="_blank" rel="noopener">CRA SRP &ndash; AR User Manual</a> (PDF, Version&nbsp;1.1), retrieved 10&nbsp;September&nbsp;2026. Field meanings from the <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">SRP Glossary</a>.</p>
 
 
       </section>
@@ -556,6 +578,7 @@
             <colgroup><col><col class="col-perm"><col class="col-perm"></colgroup>
             <thead><tr><th>Function</th><th class="c-perm">Primary AR</th><th class="c-perm">Secondary AR</th></tr></thead>
             <tbody>
+              <tr><td class="c-func">See notifications submitted by other ARs of the manufacturer</td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td><td class="c-perm"><span class="perm no"><span class="perm-ic" aria-hidden="true">✕</span>No</span></td></tr>
               <tr><td class="c-func">Submit notifications</td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td></tr>
               <tr><td class="c-func">Manage the manufacturer entity</td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td><td class="c-perm"><span class="perm no"><span class="perm-ic" aria-hidden="true">✕</span>No</span></td></tr>
               <tr><td class="c-func">Invite a Secondary AR</td><td class="c-perm"><span class="perm yes"><span class="perm-ic" aria-hidden="true">✓</span>Yes</span></td><td class="c-perm"><span class="perm no"><span class="perm-ic" aria-hidden="true">✕</span>No</span></td></tr>
@@ -572,7 +595,7 @@
           <li class="wstep" id="step-role-invite">
             <div class="wstep-head"><span class="wstep-num">1</span><h3>Invite a Secondary AR</h3></div>
             <figure><img class="shot" src="img/enisa/if-05-invite-secondary.png" alt="Settings dialog for entering a Secondary AR email address and sending the invitation"><figcaption>&ldquo;Invite Backup AR&rdquo; in <em>Settings</em> &mdash; an email address and &ldquo;Send Invitation&rdquo;.</figcaption></figure>
-            <p class="wstep-lede">Primary AR only. The invitee must not already be registered on the SRP; they receive the invitation and complete registration with the manufacturer details pre-filled &mdash; see <a href="#step-reg-invited">Registration, step&nbsp;5</a>.</p>
+            <p class="wstep-lede">Primary AR only, and only once your own association shows <em>Verified</em> &mdash; the manual and the guidance page agree on that since 9&nbsp;September. The invitee receives the invitation and completes registration with the manufacturer details pre-filled; someone who already has an SRP account uses the same link to add the association &mdash; see <a href="#step-reg-invited">Registration, step&nbsp;5</a>.</p>
             <figure><img class="shot" src="img/enisa/if-06-invite-confirmation.png" alt="Confirmation that the invitation has been sent, with the new representative listed as Pending"><figcaption>Confirmation. The new representative appears under <em>Representatives</em> as &ldquo;Pending&rdquo;, Backup AR.</figcaption></figure>
             <p class="wstep-more">Until they accept, the record holds only their email address and the manufacturer, with no role assigned. The link expires after seven days.</p>
             <!-- OWN-NOTE role-invite: your own practical note here, as <p class="ownnote">…</p> -->
@@ -580,19 +603,20 @@
           <li class="wstep" id="step-role-claim">
             <div class="wstep-head"><span class="wstep-num">2</span><h3>Claim the Primary role</h3></div>
             <figure><img class="shot" src="img/enisa/if-08-claim-primary-role.png" alt="Manufacturer details with the Claim Primary AR Role action next to the current user"><figcaption>&ldquo;Claim Primary AR Role&rdquo;, offered to a Secondary AR on the manufacturer record.</figcaption></figure>
+            <figure><img class="shot" src="img/enisa/man-if-manufacturer-details-verified.png" alt="Manufacturer Details from the manual: both representatives Verified, the Backup AR row offering Claim Primary AR Role and Delete Association"><figcaption>From the manual, with both associations Verified: the Backup AR&rsquo;s row carries both actions. The claim goes to the CSIRT for approval; you stay Secondary until it is granted.</figcaption></figure>
             <p class="wstep-lede">This is the succession path. Without it, an account nobody controls would keep hold of the manufacturer entity when the Primary AR leaves &mdash; so agree in advance who claims it.</p>
             <!-- OWN-NOTE role-claim: your own practical note here, as <p class="ownnote">…</p> -->
           </li>
           <li class="wstep" id="step-role-remove">
             <div class="wstep-head"><span class="wstep-num">3</span><h3>Remove an association</h3></div>
-            <figure><img class="shot" src="img/enisa/if-09-remove-association.png" alt="Manufacturer details with the Remove Association action highlighted"><figcaption>&ldquo;Remove Association&rdquo;. The Primary can remove a Secondary&rsquo;s or their own; a Secondary only their own.</figcaption></figure>
-            <p class="wstep-lede">Use this when someone leaves, rather than abandoning the account. Removing the last association leaves the manufacturer without a representative, so hand the Primary role over first.</p>
+            <figure><img class="shot" src="img/enisa/if-09-remove-association.png" alt="Manufacturer details with the Remove Association action highlighted"><figcaption>&ldquo;Remove Association&rdquo; on the guidance page&rsquo;s screenshot; the button now reads &ldquo;<strong>Delete Association</strong>&rdquo;. The Primary can remove a Secondary&rsquo;s or their own; a Secondary only their own.</figcaption></figure>
+            <p class="wstep-lede">Available only while the association is <em>Verified</em>. Use this when someone leaves, rather than abandoning the account. Removing the last association leaves the manufacturer without a representative, so hand the Primary role over first.</p>
             <!-- OWN-NOTE role-remove: your own practical note here, as <p class="ownnote">…</p> -->
           </li>
           <li class="wstep" id="step-role-addmfr">
             <div class="wstep-head"><span class="wstep-num">4</span><h3>Add another manufacturer</h3></div>
             <figure><img class="shot" src="img/enisa/if-07-add-manufacturer.png" alt="Association Management tab in Settings with the Add Manufacturer button"><figcaption><em>Settings</em> &rarr; <em>Association Management</em> &rarr; <em>Add Manufacturer</em>, with each association&rsquo;s status and role.</figcaption></figure>
-            <p class="wstep-lede">One account can represent several manufacturers. Each new association is verified separately by the CSIRT of that manufacturer&rsquo;s Member State, and starts out &ldquo;Unverified&rdquo;.</p>
+            <p class="wstep-lede">One account can represent several manufacturers. Each new association is verified separately by the CSIRT of that manufacturer&rsquo;s Member State, and starts out &ldquo;Unverified&rdquo; &mdash; with the same 20-notification allowance while it is. The form ends with &ldquo;Save&rdquo;, and the SRP confirms the request by e-mail.</p>
             <!-- OWN-NOTE role-addmfr: your own practical note here, as <p class="ownnote">…</p> -->
           </li>
           <li class="wstep" id="step-role-details">
@@ -607,15 +631,16 @@
             <figure class="wide"><img class="shot" src="img/enisa/if-04-dashboard.png" alt="Dashboard listing notifications with tabs for All, Needs Submission, Corrective Measures Required, Draft and Archive"><figcaption>The Dashboard, with a tab and a count for each state, and search by ID, title or manufacturer.</figcaption></figure>
             <figure class="wide"><img class="shot" src="img/enisa/if-02-alerts-tab.png" alt="Alerts tab listing action-required and notification-updated messages"><figcaption>The <em>Alerts</em> tab: deadlines approaching, and notifications invalidated by a CSIRT.</figcaption></figure>
             <p class="wstep-lede">Every submission is confirmed twice &mdash; by email and by an alert &mdash; to you and to all other ARs of that manufacturer. An invalidated notification shows up here, not in your inbox alone.</p>
+            <p class="wstep-more"><strong>What the manual adds about the Dashboard.</strong> A Primary AR sees every notification of the manufacturer; <strong>a Secondary AR sees only the notifications they submitted and the drafts they created</strong>, not a colleague&rsquo;s. Search works on notification ID, manufacturer or title; the filters are Member State and type of submission, plus &ldquo;Action Required&rdquo; for anything carrying a label &mdash; &ldquo;Report is late&rdquo;, &ldquo;Report due soon&rdquo;. The default sort is last update, newest first. In the Alerts tab, light blue is unread, grey is read, and <strong>red is reserved for critical events such as a CSIRT invalidating a submission</strong>.</p>
             <!-- OWN-NOTE role-dashboard: your own practical note here, as <p class="ownnote">…</p> -->
           </li>
         </ol>
 
         <div class="callout amber">
-          <p><strong class="lead-in">Drafts are private.</strong> A saved draft is visible only to the AR who created it — not to the other ARs of the same manufacturer. Plan for that: a draft left behind by an absent colleague cannot be picked up by someone else. The <em>AR Note</em> on a submitted notification works the same way: the other ARs can read it, but only its author can write to it.</p>
+          <p><strong class="lead-in">Drafts are private.</strong> A saved draft is visible only to the AR who created it — not to the other ARs of the same manufacturer. Plan for that: a draft left behind by an absent colleague cannot be picked up by someone else. The <em>AR Note</em> on a submitted notification works the same way: the other ARs can read it, but only its author can write to it. And the Dashboard follows the same line for a Secondary AR: they see the notifications they submitted, not those of the other ARs &mdash; only the Primary sees the manufacturer&rsquo;s whole list.</p>
         </div>
 
-        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-interface-functions" target="_blank" rel="noopener">CRA SRP guidance — AR Interface functions</a>, retrieved 7 September 2026. Reproduced with acknowledgement per the ENISA Legal Notice.</p>
+        <p class="imgsrc">Screenshots: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-interface-functions" target="_blank" rel="noopener">CRA SRP guidance — AR Interface functions</a>, retrieved 7 September 2026. Reproduced with acknowledgement per the ENISA Legal Notice. Additional screenshots from ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual" target="_blank" rel="noopener">CRA SRP &ndash; AR User Manual</a> (PDF, Version&nbsp;1.1), retrieved 10&nbsp;September&nbsp;2026.</p>
 
       </section>
 
