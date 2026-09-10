@@ -10,7 +10,7 @@ retrieved: 2026-09-06
 purpose: Reachability baseline for the SRP production environment. The routine re-checks all 29 hosts, records the first successful HTTP response per host, detects new hosts appearing in the zone, and verifies the assumed country-to-CSIRT mapping once the platform answers.
 note: Only an HTTP status code relayed from upstream counts as live. TCP and TLS are recorded but are forged by an intercepting egress proxy in the monitoring environment — see "Why a TLS handshake is not evidence" below.
 last_check: 2026-09-10
-last_change: 2026-09-06
+last_change: 2026-09-10
 ---
 
 # CRA SRP — Production domain reachability baseline
@@ -31,8 +31,8 @@ when that changes.
 | Edge | `185.8.236.7`, `185.8.236.8` (WEDOS Global, CZ) |
 | State | provisioned, not yet released |
 | Expected go-live | in the coming days, at the latest **11 September 2026** |
-| Last check | 2026-09-09 |
-| Last change | 2026-09-07 (country → CSIRT mapping verified) |
+| Last check | 2026-09-10 |
+| Last change | 2026-09-10 (Croatia's coordinator contact link changed domain) |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
 
@@ -82,7 +82,7 @@ go-live, from behind the edge. Recorded as an open question, not an assumption.
 
 One host per Member State (EU-27). The CSIRT column is the **authoritative**
 operator, taken from ENISA's published [List of CSIRTs Designated as
-Coordinators](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators) (page dated 04/09/2026, retrieved 2026-09-07) — not from the
+Coordinators](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators) (page's own "Last updated" stamp: 10/09/2026, re-checked same day; first retrieved 2026-09-07) — not from the
 hosts themselves, which are still dark. `Status` is `verifiziert` where the
 official list confirms the value assumed when this baseline was created, and
 `korrigiert` where it does not; the superseded assumption is kept in a
@@ -102,7 +102,7 @@ footnote. Per-country evidence is in `srp-domains/evidence/<host>.txt`.
 | fi | Finnland | NCSC-FI (Traficom) | `fi.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
 | fr | Frankreich | CERT-FR (ANSSI) | `fr.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
 | gr | Griechenland | National Cybersecurity Authority (cyber.gov.gr)[^4] | `gr.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-07 |
-| hr | Kroatien | CERT.hr (CARNET)[^5] | `hr.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-07 |
+| hr | Kroatien | NCSC.HR[^5][^9] | `hr.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-10 |
 | hu | Ungarn | NCSC Hungary[^6] | `hu.cra-srp.enisa.europa.eu` | korrigiert | 2026-09-07 |
 | ie | Irland | NCSC-IE | `ie.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
 | it | Italien | CSIRT Italia (ACN) | `it.cra-srp.enisa.europa.eu` | verifiziert | 2026-09-07 |
@@ -133,6 +133,12 @@ Footnotes — the value assumed on 2026-09-06 and superseded by the official lis
 [^6]: was assumed to be *NKI (National Cyber Security Center Hungary)*.
 [^7]: was assumed to be *NKSC / CERT-LT*.
 [^8]: was assumed to be *CIRCL / GOVCERT.LU*.
+[^9]: ENISA's list changed Croatia's coordinator contact link from `cert.hr`
+    to `ncsc.hr` on 2026-09-10 (the page's own "Last updated" stamp moved the
+    same day). Was `CERT.hr (CARNET)`, confirmed 2026-09-07. The organisation
+    behind `ncsc.hr` is read off the domain only, not independently
+    confirmed — general web access outside `enisa.europa.eu` is
+    egress-blocked in this monitoring environment.
 
 ## Current reachability
 
@@ -222,6 +228,25 @@ login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-09-10 10:23 UTC (vs. 2026-09-09 02:04 UTC)
+
+The CSIRT coordinator list check (section 2 of the routine) found a real
+change for the first time since 2026-09-07; reachability itself is unchanged.
+
+**Changed** — ENISA's "List of CSIRTs Designated as Coordinators" moved
+Croatia's contact link from `cert.hr` to `ncsc.hr` on 2026-09-10 (its own
+"Last updated" stamp moved the same day, from 04/09/2026). Recorded in the
+table above as `NCSC.HR`, read off the new domain; the organisation itself is
+not independently confirmed since this environment can reach
+`enisa.europa.eu` but not third-party domains. See footnote 9 and
+`srp-domains/evidence/hr.cra-srp.enisa.europa.eu.txt`.
+**Editorial** — Malta and Slovakia's listed contact links upgraded scheme
+from `http://` to `https://` on the same domain and path; not treated as a
+coordinator change.
+**Unchanged** — reachability: still 0/29 live, all `PROVISIONED`, this run's
+`last_checked` timestamps refreshed. All other 26 Member State entries match
+the table above exactly.
 
 ### 2026-09-09 02:04 UTC (vs. the DNS_TIMEOUT reading, 2026-09-09 00:22 UTC)
 
