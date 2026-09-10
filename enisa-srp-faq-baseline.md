@@ -10,12 +10,16 @@ guidance_urls:
   - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-notification-submission-and-update
   - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-ar-interface-functions
   - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-particular-exceptional-circumstances-pec
-retrieved: 2026-09-10
-guidance_retrieved: 2026-09-10
-glossary_retrieved: 2026-09-10 (fetched 07:11 UTC)
-csirt_list_retrieved: 2026-09-10
-purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the new Glossary and CSIRT-list subpages, and the four guidance subpages listed in `guidance_urls` — against this file.
-note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation — it is not yet listed as a card in the main page's own "User guidance" section, unlike the other three. None of the four guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
+ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
+terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
+retrieved: 2026-09-10 (fetched 10:12 UTC)
+guidance_retrieved: 2026-09-10 (fetched 10:12 UTC)
+glossary_retrieved: 2026-09-10 (fetched 10:12 UTC)
+csirt_list_retrieved: 2026-09-10 (fetched 10:12 UTC)
+ar_user_manual_retrieved: 2026-09-10 (fetched 10:12 UTC, first capture)
+terms_conditions_retrieved: 2026-09-10 (fetched 10:12 UTC, first capture)
+purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages — against this file.
+note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. **`ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC**, discovered the same way — the site's own "Content" navigation grew from 6 to 8 entries in this run (see the change log); this widens the routine's tracked-page count from eight to ten, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-10
 last_change: 2026-09-10
 ---
@@ -25,6 +29,27 @@ last_change: 2026-09-10
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-10 10:12 UTC (vs. 2026-09-10 09:09 UTC)
+
+All ten pages returned HTTP 200 (eight previously tracked, plus two newly discovered ones — see below). Q9's production URL is back, a new FAQ entry appeared, the CSIRT list changed one country's link, and the main page's own navigation and "User Guidance" section grew substantially, one day before the 11 September go-live.
+
+**New pages**
+
+- Walking the "Content" navigation (now 8 entries, was 6) turned up two pages not in either baseline: **"CRA SRP - AR User Manual"** (`.../cra-srp-ar-user-manual`, dated "Last updated: 10 September 2026", links to a PDF: `.../sites/default/files/2026-09/CRA%20SRP%20--%20AR%20User%20Manual.pdf`) and **"CRA Single Reporting Platform - Terms and Conditions"** (`.../cra-single-reporting-platform-terms-and-conditions`, "Version 1.0. Last updated: 10/09/2026", links to `enisa.europa.eu/media/57353`). Added as `ar_user_manual_url` and `terms_conditions_url` in the frontmatter and captured below. This widens the routine's scope from eight tracked pages to ten; see the note on this in the frontmatter and `routines/enisa-srp-pages-monitor.md`, which needed the matching update in this same commit per `CLAUDE.md`.
+
+**Changed**
+
+- **Q9** reverted back to its pre-regression wording: "The SRP will be available in due time." → **"The SRP is available at: [https://portal.cra-srp.enisa.europa.eu](https://portal.cra-srp.enisa.europa.eu)."** — the concrete, hyperlinked production host is back, one day before go-live. Rest of Q9 unchanged.
+- **New Q31** "[NEW] How do I report a security issue?" added (count 30 → 31): "To report security incidents involving the platform, you can contact ENISA at cra-srp-security@enisa.europa.eu (PGP link: enisa.europa.eu/responsible-disclosure-pgp-key.txt). If you have found a vulnerability in the platform you can contact responsible-disclosure@enisa.europa.eu. More information at enisa.europa.eu/.well-known/security.txt."
+- FAQ page-level stamp "Updated: 09 September 2026" → **"Updated: 10 September 2026"** — this time correlating with the Q9 and Q31 edits.
+- **CSIRT list — Croatia's link changed**: `https://www.cert.hr/en/home-page/` → **`https://ncsc.hr/hr/kontakt`** (different domain and authority name; still one link, still reachable). Malta's link changed protocol only: `http://www.mita.gov.mt` → `https://www.mita.gov.mt`. CSIRT list page stamp "Last updated: 04 September 2026" → "Last updated: 10 September 2026". Still 27 countries, no country added or removed. (Note for cross-reference only, per the routine's instructions: this table is also fetched and maintained independently by the SRP domain reachability routine; not this repository's `srp-domains-baseline.md` to edit.)
+- **Main page — "User Guidance" section substantially refreshed**: the three existing guidance cards' long-stale dates (3/08/2026, 3/08/2026, 14/08/2026 — flagged stale since 2026-09-08) are finally refreshed to match their subpages, in a new one-digit-day format "Updated: 9 September 2026". Card blurbs reworded (e.g. AR User Registration: "information on the Assigned Representatives (AR) user registration in the SRP" → "information for Assigned Representatives (ARs) on how to register for the SRP"; AR Notification: adds "view" as a named capability; AR Interface: drops the "AR's" possessive). **PEC guidance now has its own card** in this section for the first time (previously listed only in the Content navigation, not here). A new **AR User Manual download card** was added ("Download the CRA SRP – AR User Manual for guidance on using the platform.") — its button `href` is malformed on ENISA's own page, literally `https://CRA SRP – AR User Manual` rather than a real URL; the actual PDF is linked correctly elsewhere on the dedicated subpage (see above).
+- **AR Notification Submission and Update guidance**: stamp "Last updated: 03 September 2026" → **"09 September 2026"**; the "Submit a New Notification" purpose sentence was split in two ("...for an AEV or a SI. The purpose of the notification is to inform...") from the previous single comma-joined sentence — same substance, no procedure, deadline or field affected.
+
+**Unchanged**
+
+FAQ Q1–Q8, Q10–Q30 (same tags, same wording), Q16 table (43 fields). AR User Registration, AR Interface Functions, and PEC guidance subpages byte-for-byte unchanged (all previously tracked typos and defects still present). Glossary unchanged (all 38 fields re-verified, footer still "version 1.2, last update: 09/09/2026").
 
 ### 2026-09-10 09:09 UTC (vs. 2026-09-10 07:11 UTC)
 
@@ -391,7 +416,7 @@ Groups three resource cards: the Factsheet (above), "Frequently asked questions"
 
 Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 09 September 2026". Intro text on the FAQ page: "All you need to know about the CRA Single Reporting Platform" (subtitle) — "This page provides answers to frequently asked questions about the Cyber Resilience Act Single Reporting Platform (CRA SRP), including its purpose, reporting process, registration and use. The FAQs are updated regularly to reflect the latest available information and guidance as the CRA SRP is implemented. For broader guidance on the interpretation and implementation of the CRA, please also consult the European Commission's "FAQs on the CRA Implementation"."
 
-30 entries (still 30). Q9, Q18, Q22 and Q27 carry an "[UPDATED]" tag on the live page, and Q28, Q29 and Q30 a "[NEW]" tag — but the untagged text changed as well, in earlier checks: see the change log above. **Q8 lost its "[UPDATED]" tag on 2026-09-09** (was tagged since at least 2026-09-08); its text is otherwise unchanged. The per-question tags are recorded in each heading below where present.
+31 entries (30 → 31 on 2026-09-10 10:12 UTC, new Q31). Q9, Q18, Q22 and Q27 carry an "[UPDATED]" tag on the live page, and Q28, Q29, Q30 and Q31 a "[NEW]" tag — but the untagged text changed as well, in earlier checks: see the change log above. **Q8 lost its "[UPDATED]" tag on 2026-09-09** (was tagged since at least 2026-09-08); its text is otherwise unchanged. The per-question tags are recorded in each heading below where present.
 
 **Glossary links fixed 2026-09-08**: all eight "SRP Glossary" links in the answers below now point to `.../cra-srp-glossary2` (see `glossary_url`) and resolve normally. Until this check they pointed at the dead `.../cra-srp-glossary` path (HTTP 403) since at least 2026-09-07; see the change log.
 
@@ -477,7 +502,7 @@ Information on the reporting workflow, the mandatory and optional fields and how
 
 ### Q9. How do I access and register on the SRP, and what are the roles of Primary and Secondary ARs? *(retitled 2026-09-09; tagged [UPDATED] on the live page; was "How is the platform accessible and how does the registration process work?")*
 
-The SRP will be available in due time. *(regressed 2026-09-10 09:09 UTC from "The SRP is available at: [https://portal.cra-srp.enisa.europa.eu](https://portal.cra-srp.enisa.europa.eu)." — the concrete, hyperlinked host is gone, replaced with vague placeholder wording, one day before the 11 September 2026 go-live; Q28's identical URL sentence is untouched.)*
+The SRP is available at: [https://portal.cra-srp.enisa.europa.eu](https://portal.cra-srp.enisa.europa.eu). *(reverted 2026-09-10 10:12 UTC to this wording — the concrete, hyperlinked production host is back, one day before the 11 September 2026 go-live. Had briefly regressed at 09:09 UTC the same day to "The SRP will be available in due time.", with the hyperlink and host both gone; that lasted roughly one hour.)*
 
 Assigned Representatives (ARs) of manufacturers and, once applicable, open-source software stewards must have an EU Login account with multi-factor authentication (MFA) enabled and use it to register on the SRP. An EU Login account can be created in advance at the following link: [https://ecas.ec.europa.eu/cas/login](https://ecas.ec.europa.eu/cas/login). No additional corporate entity authentication mechanism is currently used by the SRP.
 
@@ -717,6 +742,10 @@ Mandatory notifications must be submitted through the CRA Single Reporting Platf
 
 The current version of the platform supports only mandatory notifications submitted by manufacturers under Art. 14 of the CRA. If you are not a manufacturer and would like to report a vulnerability or other security issue, please contact the relevant national CSIRT directly. Your submission might be marked as 'invalid' in the SRP *(sentence ends without a full stop on the live page, reproduced verbatim)*.
 
+### Q31. How do I report a security issue? *(new question, tagged [NEW] on the live page, added 2026-09-10 10:12 UTC; count 30 → 31)*
+
+To report security incidents involving the platform, you can contact ENISA at cra-srp-security@enisa.europa.eu (PGP link: enisa.europa.eu/responsible-disclosure-pgp-key.txt). If you have found a vulnerability in the platform you can contact responsible-disclosure@enisa.europa.eu. More information at enisa.europa.eu/.well-known/security.txt.
+
 ### Closing note (end of FAQ page)
 
 "Did you not find the answer to your question above? For matters not covered in the FAQs, nor in the available supporting materials, please contact: cra-srp-helpdesk[@]enisa.europa.eu" — reworded on 2026-09-07 (was "You did not find above the answer to your question? For matters not covered by this FAQ, nor by available guidance pages, …"), and "available supporting materials" is now a link.
@@ -724,13 +753,29 @@ The current version of the platform supports only mandatory notifications submit
 
 ## Guidance documents (User guidance section, on the main SRP page)
 
-- "CRA SRP - AR User registration" — Updated: 3/08/2026. "This page provides information on the Assigned Representatives (AR) user registration in the SRP. It is intended for AR users (Primary and Secondary)."
-- "CRA SRP - AR Notification submission and update" — Updated: 3/08/2026. "This page provides information on the Assigned Representatives (AR) submission and update of notifications in the SRP. It is intended for AR users (Primary and Secondary)."
-- "CRA SRP - AR Interface functions" — Updated: 14/08/2026. "This page explains the AR's interface of the SRP for various functions that can be performed."
+- "CRA SRP - AR User Registration" — Updated: 9 September 2026. "This page provides information for Assigned Representatives (ARs) on how to register for the SRP. It is intended for AR users (Primary and Secondary)."
+- "CRA SRP - AR Notification Submission and Update" — Updated: 9 September 2026. "This page provides information for Assigned Representatives (AR) on how to submit, view and update notifications on the SRP. It is intended for AR users (Primary and Secondary)."
+- "CRA SRP - AR Interface functions" — Updated: 9 September 2026. "This page explains the AR interface of the SRP and the various functions that can be performed."
+- "CRA SRP Guidance - Particular Exceptional Circumstances (PEC)" — no date shown on this card. "This section explains to ARs how and when to apply one of the three cases of Particularly Exceptional Circumstances (PEC), as described in the third subparagraph of Article 16(2) of the CRA." *(gained a card here 2026-09-10 10:12 UTC — previously listed only in the Content navigation, not in this section.)*
+- "CRA SRP – AR User Manual" *(new card, 2026-09-10 10:12 UTC)*: "Download the CRA SRP – AR User Manual for guidance on using the platform." The card's own "Download" button `href` is malformed on the live page — literally `https://CRA SRP – AR User Manual`, not a working URL. The dedicated subpage (see below) links the actual PDF correctly.
 
-**Stale as of 2026-09-08**: this main-page card list still shows the pre-rewrite dates (3/08/2026, 14/08/2026) for the AR User Registration and AR Interface Functions cards, even though those two subpages themselves now say "Last updated: 07/09/2026" (see the "Guidance subpages — full content baseline" section and the change log). The main page's own card text was not refreshed to match; reproduced here as it stands, not corrected.
+**Refreshed 2026-09-10 10:12 UTC**: the three original cards' long-stale dates (3/08/2026, 3/08/2026, 14/08/2026 — flagged stale since 2026-09-08) now match their subpages' own "09 September 2026" stamp, in a new one-digit-day format ("Updated: 9 September 2026") that matches neither the subpages' own "09 September 2026" nor their earlier slash-date form. Card blurbs were also reworded (see the change log for exact before/after wording); titles gained consistent capitalisation ("AR User registration" → "AR User Registration", "AR Notification submission and update" → "AR Notification Submission and Update").
 
 The support-contact line previously listed here (cra-srp-helpdesk[@]enisa.europa.eu) has moved to the bottom of the FAQ page — see "Closing note" above.
+
+## CRA SRP - AR User Manual (new page, `ar_user_manual_url`)
+
+First captured 2026-09-10 10:12 UTC, discovered via the site's own "Content" navigation (which grew from 6 to 8 entries this run) and via a new download card in the main page's "User Guidance" section. "Last updated: 10 September 2026" — its first date stamp, presumably at first publication.
+
+Page text: "Download the CRA SRP – AR User Manual for guidance on using the platform. This user manual provides practical guidance for Assigned Representatives (ARs) of manufacturers and, once applicable, open-source software stewards on how to access the platform, navigate the interface, complete forms, and perform the main workflows required for registration, notification submission, notification updates, manufacturer and AR association management, viewing of reminders and alerts and dashboard monitoring. The manual is intended to help users understand what actions they can perform through the platform and how to complete them correctly, using step-by-step scenarios and screenshots. It focuses on the user-visible functionalities and operational workflows available to ARs through the platform interface."
+
+"Download" button links to a PDF: `https://www.enisa.europa.eu/sites/default/files/2026-09/CRA%20SRP%20--%20AR%20User%20Manual.pdf` (not fetched/archived by this routine; only the HTML landing page is tracked). Contents of the PDF itself are out of scope for this baseline unless a future check finds reason to open it.
+
+## CRA Single Reporting Platform - Terms and Conditions (new page, `terms_conditions_url`)
+
+First captured 2026-09-10 10:12 UTC, discovered the same way as the AR User Manual page above. "Version 1.0. Last updated: 10/09/2026" — its first version/date stamp.
+
+Page text, in full: "Please find the Terms and Conditions of the use of the SRP platform under this link: [CRA Single Reporting Platform - Terms and Conditions](https://www.enisa.europa.eu/media/57353)." The page itself carries no further body text — it is a thin landing page pointing to the actual Terms and Conditions document at `enisa.europa.eu/media/57353`, not fetched/archived by this routine. A future check should watch this page's own version/date stamp for a bump, and treat a changed `media/` link as a strong signal the underlying document itself changed.
 
 ## CRA SRP Glossary (new page, `glossary_url`)
 
@@ -748,12 +793,12 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 
 ## List of CSIRTs Designated as Coordinators (new page, `csirt_list_url`)
 
-"Last updated: 04 September 2026" *(format only, changed 2026-09-10 02:08 UTC from "Updated: 04/09/2026"; same date)*. Page note: "This list provides the contacts of EU CSIRTs Designated as Coordinators, in the meaning of the Cyber Resilience Act (CRA)." *(reads "of EU" 2026-09-09 23:11 UTC; this file had recorded "to the" since first capture on 2026-09-07, but no intervening check re-quoted the sentence — only ever noting "27 countries, same links, Updated stamp" — so it is not certain this wording changed today rather than being missed earlier.)* One entry per EU Member State (27 total), each with one or more contact links:
+"Last updated: 10 September 2026" *(bumped 2026-09-10 10:12 UTC from "04 September 2026", correlating with the Croatia link change below)*. Page note: "This list provides the contacts of EU CSIRTs Designated as Coordinators, in the meaning of the Cyber Resilience Act (CRA)." *(reads "of EU" 2026-09-09 23:11 UTC; this file had recorded "to the" since first capture on 2026-09-07, but no intervening check re-quoted the sentence — only ever noting "27 countries, same links, Updated stamp" — so it is not certain this wording changed today rather than being missed earlier.)* One entry per EU Member State (27 total), each with one or more contact links:
 
 - Austria: https://www.cert.at/de/ueber-uns/kontakt/ ; https://www.cert.at/en/about-us/contact/
 - Belgium: https://ccb.belgium.be/contacts
 - Bulgaria: https://www.govcert.bg/en/contact-us/
-- Croatia: https://www.cert.hr/en/home-page/
+- Croatia: https://ncsc.hr/hr/kontakt *(changed 2026-09-10 10:12 UTC from `https://www.cert.hr/en/home-page/` — different domain and authority name, from `cert.hr` to `ncsc.hr`)*
 - Cyprus: https://www.csirt.cy/en/contact-us
 - Czechia: https://nukib.gov.cz/cs/kontakty/
 - Denmark: https://www.fe-ddis.dk/da/arbejdsomrade-a/Cybertruslen/
@@ -768,7 +813,7 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 - Latvia: https://cert.lv/uploads/par-mums/RFC_2350_CERT-LV_21072025.pdf
 - Lithuania: https://www.nksc.lt/kontaktai.html
 - Luxembourg: https://www.circl.lu/pub/coordinated-vulnerability-disclosure/
-- Malta: http://www.mita.gov.mt
+- Malta: https://www.mita.gov.mt *(protocol only, changed 2026-09-10 10:12 UTC from `http://www.mita.gov.mt`)*
 - Netherlands: https://www.ncsc.nl/contact
 - Poland: https://cert.pl/en/cvd/
 - Portugal: https://www.cncs.gov.pt/pt/certpt/rfc-2350
@@ -804,14 +849,14 @@ Follow this procedure to register on the SRP as a Secondary AR using an email in
 - Expected result: "Registration is completed and you become a Secondary AR for the relevant manufacturer. Your system role is displayed as 'AR Backup User' and your status is set to 'Active'. If registration is not completed within 7 days of the invitation being sent, the invitation expires and the user status becomes 'Invitation Expired' in the SRP." *(reworded; same substance — still 7 days, same role/status names.)*
 
 ### Guidance: CRA SRP - AR Notification submission and update
-URL: see `guidance_urls`. Page note: "Last updated: 03 September 2026" *(moved for the first time since 2026-09-02, in the 2026-09-09 22:12 UTC rewrite that also restyled the page — see change log; was "3/08/2026")*.
+URL: see `guidance_urls`. Page note: "Last updated: 09 September 2026" *(bumped 2026-09-10 10:12 UTC from "03 September 2026"; was previously moved for the first time since 2026-09-02, in the 2026-09-09 22:12 UTC rewrite that also restyled the page — see change log)*.
 
 This page provides information on the Assigned Representatives (AR) submission and update of notifications in the SRP. It is intended for AR users (Primary and Secondary/Backup).
 
 *Rewritten into the second-person "Follow these steps…" style already used on the other guidance pages, with numbered steps and screenshots. Substance below is unchanged from the prior capture except where noted.*
 
 **Submit a New Notification**
-Purpose: Follow these steps to submit a new notification for an Actively Exploited Vulnerability (AEV) or a Severe Incident (SI), to inform the relevant users of the CSIRT Designated as Coordinator (CDaC) so they can review, disseminate and further process it. Pre-conditions: user status "Active", logged in, Dashboard opened.
+Purpose: Follow these steps to submit a new notification for an Actively Exploited Vulnerability (AEV) or a Severe Incident (SI). The purpose of the notification is to inform the relevant users of the CSIRT Designated as Coordinator (CDaC) so they can review, disseminate and further process it. *(reworded 2026-09-10 10:12 UTC from one comma-joined sentence — "...(SI), to inform the relevant users..." — into two sentences; same substance.)* Pre-conditions: user status "Active", logged in, Dashboard opened.
 
 - *Submit an Early Warning*: Click "Submit new notification" (auto-created, pre-filled with user type AR) → fill mandatory/optional fields under the Early Warning tab → select an existing manufacturer (approved or pending validation) or add a new one → submit or save as draft → optionally fill Additional Notes → notification listed on the Dashboard. Exception: omitting mandatory data returns an error naming the missing data.
 - *Submit a 72-hour Notification*: Pre-conditions: status "Active", logged in, Dashboard open, an Early Warning already submitted. Steps: click an existing notification on the Dashboard → fill mandatory/optional fields under the 72-hour Notification tab → submit or save as draft → notification listed on the Dashboard, subject to CSIRT validation. Exception: omitting mandatory data returns an error.
@@ -883,3 +928,6 @@ Cross-reference: this matches Q21's summary on the FAQ page and the Glossary's v
 - 2026-09-10 (01:08 UTC): checked all eight tracked pages again with retry backoff; all HTTP 200, confirmed as real page bodies (raw HTML parsed with a fresh word-for-word text extraction, not a prior summary). One real change: the long-tracked "72-hour Sever Incident Notification" typo in Q26 (present since at least 2026-09-07) is fixed to "Severe" — no deadline, counter logic, or obligation affected, and the page's own "Updated: 09 September 2026" stamp did not move. Main page (still 6-item Content nav, no Glossary/9th entry, no PEC card), CSIRT list (27 countries, "Updated: 04/09/2026"), all four guidance subpages (same stamps, same typos, byte for byte), and the Glossary (all 38 fields re-verified row by row in `enisa-srp-glossary-baseline.md`, footer unchanged) otherwise unchanged from the 00:10 UTC baseline. See the change log at the top of this file for detail. `last_check` and `last_change` both already 2026-09-10.
 - 2026-09-10 (02:08 UTC): checked all eight tracked pages again with retry backoff; all HTTP 200, confirmed as real page bodies. One cosmetic change: three pages moved their "Last updated" stamp from a slash date to a spelled-out one (CSIRT list, AR User Registration, AR Interface Functions), same dates, no content change. All other pages, including the Glossary (re-verified row by row in `enisa-srp-glossary-baseline.md`, footer unchanged), byte for byte unchanged from the 01:08 UTC baseline. `last_check` and `last_change` both already 2026-09-10.
 - 2026-09-10 (05:10 UTC): checked all eight tracked pages with retry backoff (raw HTML parsed with a fresh word-for-word text extraction and, for the Glossary, a structured table-cell parse to get a reliable field-by-field diff); all HTTP 200, confirmed as real page bodies. Only the Glossary changed: its footer version moved for the first time since first capture ("1.1, last update: 05/09/2026" → "1.2, last update: 09/09/2026"), and two field names changed with it — field 7 "Product version" → "Product Version", and field i32 "Applied or ongoing mitigation measures" → "Applied and ongoing mitigation measures" (the latter closes the long-tracked mismatch with this file's own Q16/i37 wording). Full detail and the row-by-row re-verification of the other 36 fields is in `enisa-srp-glossary-baseline.md`; the trimmed summary in this file's "CRA SRP Glossary" section was updated to match. Main page, FAQ (Q1–Q30, same tags, Q16 table, "Updated: 09 September 2026"), CSIRT list (27 countries, "of EU CSIRTs...", "Last updated: 04 September 2026"), and all four guidance subpages byte for byte unchanged from the 02:08 UTC baseline. See the change log at the top of this file for detail. `last_check` and `last_change` both already 2026-09-10.
+- 2026-09-10 (07:11 UTC): checked all eight tracked pages again with retry backoff; all HTTP 200, confirmed as real page bodies. Only the Glossary changed again — three field names this time (17, i35, i37); see `enisa-srp-glossary-baseline.md` for full detail and the change log at the top of this file for the summary cross-reference. Main page, FAQ, CSIRT list, and all four guidance subpages byte for byte unchanged from the 05:10 UTC baseline. `last_check` and `last_change` both already 2026-09-10.
+- 2026-09-10 (09:09 UTC): checked all eight tracked pages again with retry backoff; all HTTP 200, confirmed as real page bodies. One real change: Q9's opening sentence regressed from the concrete, hyperlinked production URL to vague "The SRP will be available in due time." wording, one day before go-live — see the change log at the top of this file. Main page, CSIRT list, all four guidance subpages, and the Glossary (re-verified separately, unchanged) all otherwise byte for byte unchanged from the 07:11 UTC baseline. `last_check` and `last_change` both already 2026-09-10.
+- 2026-09-10 (10:12 UTC): checked all eight previously-tracked pages plus, for the first time, two newly-discovered ones (see below), all with retry backoff; all ten returned HTTP 200 and were confirmed as real page bodies via title-tag checks. Walking the "Content" navigation (grown from 6 to 8 entries) turned up **"CRA SRP - AR User Manual"** and **"CRA Single Reporting Platform - Terms and Conditions"**, neither in either baseline; added as `ar_user_manual_url` and `terms_conditions_url` and captured in full — this widens the routine's scope from eight tracked pages to ten, so `routines/enisa-srp-pages-monitor.md` was updated in this same commit per `CLAUDE.md`, and the live Routine (trigger `trig_015C8QiJhXwkxPkDdoMbkHeD`) still needs the same update applied by a human in the Routines UI; this PR is therefore left open rather than auto-merged, since it touches a file besides the two baselines. Real content changes found on four of the eight previously-tracked pages: **Q9 reverted** to its concrete/hyperlinked production URL (the 09:09 UTC regression lasted about an hour); a **new Q31** "How do I report a security issue?" was added (count 30 → 31); the **CSIRT list**'s Croatia entry changed domain (`cert.hr` → `ncsc.hr`) and Malta's link gained `https`; the **main page's "User Guidance" section** was substantially refreshed (stale dates fixed, blurbs reworded, a PEC card and an AR User Manual download card both added, the latter's own button `href` malformed on ENISA's side); and the **AR Notification Submission and Update** guidance page's stamp moved (03→09 September) with one sentence split in two, same substance. AR User Registration, AR Interface Functions, PEC guidance, and the Glossary (re-verified separately in `enisa-srp-glossary-baseline.md`) were all otherwise byte for byte unchanged from the 09:09 UTC baseline. See the change log at the top of this file for full detail and exact quotes. `last_check` and `last_change` both already 2026-09-10.
