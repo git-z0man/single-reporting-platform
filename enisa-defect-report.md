@@ -144,7 +144,7 @@ was in fact sent to their Primary AR can lose the invitation.
 
 ### B6 — "Legal name" is described as non-editable but is editable
 
-**Status: partly · 2026-09-09 22:12 UTC** — the Primary AR flow now lists only "First Name, Last Name, Email", so its sentence is true. The Secondary AR flow still lists all four, Legal name included, as "retrieved from EU Login and cannot be edited". The AR User Manual (10 September) settles which is current: its screenshots of both flows show three fields and no Legal name at all, so the Secondary-flow text and the guidance page's screenshot are stale (F13).
+**Status: fixed · 2026-09-10** — moot: ENISA confirmed on 10 September that the Legal name field has been dropped, so there is no longer an editable field described as non-editable. What remains is the stale Secondary-flow text and screenshot on the guidance page, tracked as F13.
 
 Registration states that the pre-filled personal details "(First Name, Last
 Name, Email, Legal name) … are retrieved from EU Login and cannot be edited in
@@ -173,7 +173,7 @@ guidance to form labels word by word.
 
 ### D1 — No Glossary entry for "Legal name"
 
-**Status: partly · 2026-09-10 11:52 UTC** — resolved by removal rather than documentation: the AR User Manual's own screenshots of the personal-details step (Primary and invitation flows alike) show **three fields — First Name, Last Name, Email** — and its text lists the same three. The field appears to have been dropped from the platform. The guidance page's screenshot and its Secondary-AR text still show it, so the web page is now the stale one (F13).
+**Status: fixed · 2026-09-10** — resolved by removal, and **confirmed by ENISA on 10 September**: the field has been dropped from the platform. Evidence before the confirmation: the AR User Manual's own screenshots of the personal-details step (Primary and invitation flows alike) show **three fields — First Name, Last Name, Email** — and its text lists the same three. The field appears to have been dropped from the platform. The guidance page's screenshot and its Secondary-AR text still show it, so the web page is now the stale one (F13).
 
 The registration form asks for **"Legal name (for legal entities)"** and
 Registration mentions it, but the Glossary has no entry for it (0 occurrences).
@@ -291,8 +291,8 @@ mandatory reporting fields.
    redirect, and the version stamp does not move when the content does. *E1
    open; E2 partly — the stamp moved once, then lagged again two hours later.*
 
-Of the 37 findings, **13 are fixed, 7 partly addressed, 17 open** as of
-10 September 2026, 11:52 UTC.
+Of the 37 findings, **15 are fixed, 5 partly addressed, 17 open** as of
+10 September 2026 (D1 and B6 closed on ENISA's confirmation that Legal name was dropped).
 
 ---
 
