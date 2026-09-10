@@ -12,12 +12,12 @@ guidance_urls:
   - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-particular-exceptional-circumstances-pec
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
-retrieved: 2026-09-10 (fetched 10:12 UTC)
-guidance_retrieved: 2026-09-10 (fetched 10:12 UTC)
-glossary_retrieved: 2026-09-10 (fetched 10:12 UTC)
-csirt_list_retrieved: 2026-09-10 (fetched 10:12 UTC)
-ar_user_manual_retrieved: 2026-09-10 (fetched 10:12 UTC, first capture)
-terms_conditions_retrieved: 2026-09-10 (fetched 10:12 UTC, first capture)
+retrieved: 2026-09-10 (fetched 11:12 UTC)
+guidance_retrieved: 2026-09-10 (fetched 11:12 UTC)
+glossary_retrieved: 2026-09-10 (fetched 11:12 UTC)
+csirt_list_retrieved: 2026-09-10 (fetched 11:12 UTC)
+ar_user_manual_retrieved: 2026-09-10 (fetched 11:12 UTC, unchanged since first capture at 10:12 UTC)
+terms_conditions_retrieved: 2026-09-10 (fetched 11:12 UTC, unchanged since first capture at 10:12 UTC)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. **`ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC**, discovered the same way — the site's own "Content" navigation grew from 6 to 8 entries in this run (see the change log); this widens the routine's tracked-page count from eight to ten, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-10
@@ -29,6 +29,23 @@ last_change: 2026-09-10
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-10 11:12 UTC (vs. 2026-09-10 10:12 UTC)
+
+All ten pages returned HTTP 200. One substantive change the 10:12 run had missed — the main page's intro was rewritten — plus one cosmetic link change; the two pages discovered at 10:12 are unchanged on their first re-check.
+
+**Changed**
+
+- **Main page intro fully rewritten**, all four paragraphs. Was: "The Cyber Resilience Act (CRA) introduces the Single Reporting Platform (SRP) for cybersecurity incident reporting in the EU Digital Single Market." … Now: "The Cyber Resilience Act (CRA) introduces the Single Reporting Platform (SRP) for the reporting of actively exploited vulnerabilities and severe incidents in products with digital elements available in the EU market." followed by three new paragraphs — the SRP as "the online tool developed, operated and maintained by ENISA", the 11 September obligation stated directly, and a closing paragraph on EU-level coordination. The previous "throughout 2025 and 2026, ENISA is taking the necessary steps" and the voluntary-reporting sentence are gone. Full text under "Intro" below. Exact edit time unknown: it was live by 10:12 UTC but that run recorded only the "User Guidance" refresh on this page.
+- **CSIRT list, Slovakia**: `http://www.sk-cert.sk` → `https://www.sk-cert.sk` — scheme only, same host, alongside the Malta change already logged at 10:12.
+
+**Editorial**
+
+Q30's closing sentence uses curly quotes on the live page and straight quotes in this file; not counted as a defect until an earlier capture confirms which is a transcription artefact.
+
+**Unchanged**
+
+FAQ Q1–Q31 otherwise (same tags, Q9 still carries the portal URL, "Updated: 10 September 2026"), Q16 table (43 fields). AR User Manual and Terms and Conditions pages unchanged since their 10:12 first capture. CSIRT list otherwise unchanged ("Last updated: 10 September 2026", Croatia at `ncsc.hr`). All four guidance subpages byte for byte. Glossary (all 38 fields re-verified; footer "version 1.2, last update: 09/09/2026").
 
 ### 2026-09-10 10:12 UTC (vs. 2026-09-10 09:09 UTC)
 
@@ -392,17 +409,15 @@ The three guidance subpages in substance and date (3/08, 3/08, 14/08/2026), apar
 
 ## Intro
 
-The Cyber Resilience Act (CRA) introduces the Single Reporting Platform (SRP) for cybersecurity incident reporting in the EU Digital Single Market.
+*(Fully rewritten 2026-09-10 11:12 UTC; see the change log entry at the top of this file for the prior wording and the substantive difference. Exact time of the edit is unknown — see the same entry.)*
 
-The Single Reporting Platform (SRP) shall become a technical tool for the reporting of actively exploited vulnerabilities and incidents impacting products with digital elements in the EU Digital Single Market.
+The Cyber Resilience Act (CRA) introduces the Single Reporting Platform (SRP) for the reporting of actively exploited vulnerabilities and severe incidents in products with digital elements available in the EU market.
 
-Under the [Cyber Resilience Act](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) (CRA), manufacturers of products with digital elements are mandated to report actively exploited vulnerabilities and severe incidents having an impact on the security of the products.
+The Single Reporting Platform (SRP) is the online tool developed, operated and maintained by ENISA to enable manufacturers and, once applicable, open-source software stewards to meet their reporting obligations under the [Cyber Resilience Act](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) (CRA) for actively exploited vulnerabilities and severe incidents having an impact on the security of products with digital elements made available on the EU market.
 
-As of 11 September 2026 onwards, the SRP will be used by CSIRTs and manufacturers for mandatory reporting and could be used by any natural/legal persons for voluntary reporting.
+From 11 September 2026, manufacturers are required to submit these mandatory notifications through the SRP. Designed to simplify EU reporting obligations, the SRP allows users to report once through a single platform and communicate the relevant information to the appropriate authorities.
 
-Throughout 2025 and 2026, ENISA is taking the necessary steps to support the successful implementation of the platform.
-
-Overall, the CRA brings transparency to the vulnerability disclosure processes and strengthens how EU CSIRTs can mitigate risks stemming from vulnerabilities.
+The CRA and the SRP support a more coordinated EU approach to the reporting and handling of cybersecurity risks affecting products with digital elements. By enabling relevant national CSIRTs and other competent authorities to receive and act on reported information, the SRP supports more effective coordination and contributes to strengthening cybersecurity resilience across the EU.
 
 ### CRA Single Reporting Platform Factsheet
 
@@ -746,6 +761,8 @@ The current version of the platform supports only mandatory notifications submit
 
 To report security incidents involving the platform, you can contact ENISA at cra-srp-security@enisa.europa.eu (PGP link: enisa.europa.eu/responsible-disclosure-pgp-key.txt). If you have found a vulnerability in the platform you can contact responsible-disclosure@enisa.europa.eu. More information at enisa.europa.eu/.well-known/security.txt.
 
+*Distinct from Q30: Q30 covers reporting a product vulnerability/incident when you are not a manufacturer (routes to the national CSIRT); Q31 covers reporting a security problem in the SRP platform itself (routes to ENISA directly). No CRA obligation, deadline, or SRP data field is implicated by this question — it documents a separate contact channel.*
+
 ### Closing note (end of FAQ page)
 
 "Did you not find the answer to your question above? For matters not covered in the FAQs, nor in the available supporting materials, please contact: cra-srp-helpdesk[@]enisa.europa.eu" — reworded on 2026-09-07 (was "You did not find above the answer to your question? For matters not covered by this FAQ, nor by available guidance pages, …"), and "available supporting materials" is now a link.
@@ -818,7 +835,7 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 - Poland: https://cert.pl/en/cvd/
 - Portugal: https://www.cncs.gov.pt/pt/certpt/rfc-2350
 - Romania: https://www.dnsc.ro/contact
-- Slovakia: http://www.sk-cert.sk
+- Slovakia: https://www.sk-cert.sk *(scheme upgraded from http:// 2026-09-10 11:12 UTC — cosmetic, same host/path)*
 - Slovenia: https://www.cert.si/en/about-si-cert/
 - Spain: for incidents — https://www.incibe.es/incibe-cert/incidentes/respuesta-incidentes and https://www.incibe.es/en/incibe-cert/incidents/incident-handling ; for vulnerability coordination — https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/asignacion-publicacion-cve and https://www.incibe.es/en/incibe-cert/early-warning/vulnerabilities/cve-assignment-publication
 - Sweden: https://cert.se/rapportera/
