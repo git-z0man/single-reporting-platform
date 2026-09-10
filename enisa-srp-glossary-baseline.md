@@ -2,8 +2,8 @@
 source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
-page_version: "1.1 (page footer: last update 05/09/2026)"
-retrieved: 2026-09-10 (fetched 02:08 UTC)
+page_version: "1.2 (page footer: last update 09/09/2026)"
+retrieved: 2026-09-10 (fetched 05:10 UTC)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -24,7 +24,7 @@ status: >-
   after the move: 38 fields, same numbering, no name changed. Re-verify the URL on
   every future check, not just the status code.
 last_check: 2026-09-10
-last_change: 2026-09-07
+last_change: 2026-09-10
 note: >-
   One row per field, one table per group (Common / AEV / SI), matching the live page's own
   column order — Nr. | Field | Applies to | Meaning | How to complete | Example | Format |
@@ -38,6 +38,19 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-10 05:10 UTC (vs. 2026-09-10 02:08 UTC)
+
+The footer version stamp moved for the first time since tracking began — "version 1.1, last update: 05/09/2026" → "version 1.2, last update: 09/09/2026" — and this time it actually correlates with content: two field names changed. Still 38 fields, same numbering, no field added or removed.
+
+**Changed**
+
+- **Field 7**: "Product **version**" → "Product **Version**" (capitalisation only, no meaning/example/format change).
+- **Field i32**: "Applied **or** ongoing mitigation measures" → "Applied **and** ongoing mitigation measures". This resolves the long-tracked FAQ/Glossary mismatch: the FAQ's own Q16 table has read "Applied **and** ongoing mitigation measures" (its i37) since first capture, while the Glossary said "or" — the two now agree.
+
+**Unchanged**
+
+All other 36 rows, including every previously tracked defect: field 11's contradictory meaning and its "is doesn't" typo, v26's doubled full stop, v29's missing space in "(CDaC)taking", i36's and i37's broken grammar, v28's three grounds and its "one" vs "at least one" inconsistency, and v23/v24 still reading "Full description..." against the FAQ's "Detailed" (a mismatch that this run's i32 fix did not touch). Both footnotes unchanged.
 
 ### 2026-09-10 02:08 UTC (vs. 2026-09-10 01:08 UTC)
 
@@ -158,8 +171,8 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 
 ## Page metadata
 
-- Version: 1.1
-- Page's own "last update" footer: 05/09/2026
+- Version: 1.2 (moved from 1.1 on 2026-09-10 05:10 UTC)
+- Page's own "last update" footer: 09/09/2026 (moved from 05/09/2026 on 2026-09-10 05:10 UTC)
 - Columns on the live page, per field: Nr. | Field | Applies to AEV or SI | What this field means | How you may complete it | Example | Expected format | Early Warning (EW) 24h | 72h | Final Report (FR)
 
 ## Common fields (Both AEV and SI)
@@ -172,7 +185,7 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 | 4 | Manufacturer name | Both | Name of the natural or legal person who develops or manufactures the product with digital elements or has the product with digital elements designed, developed or manufactured, and markets it under its name or trademark, whether for payment, monetisation or free of charge. | No user action is required. The platform creates or updates this value automatically based on what you wrote when you registered to the Platform or added at a later stage. You may review it only to confirm that the displayed information is consistent with the notification history. | Automatically populated by the platform during the notification submission or free text during manufacturer registration [Name of the company]. | System-generated / read-only | Required | copied-or-updated | copied-or-updated |
 | 5 | Member States where product available (Concerned CSIRT) | Both | Member States in which territory the manufacturer is aware that the affected product has been made available; used to determine concerned CSIRTs. | The Platform will automatically show you CDaC, however, you may select other Member States (MS) where the affected product has been made available, based on the information currently known to the manufacturer. Update the selection if new distribution information becomes available. | Belgium as your CDaC, automatically populated by the platform and you may add Greece and Italy and MS where the affected product has been made available | Select one or more Member States | Required if such information available | copied-or-updated | copied-or-updated |
 | 6 | Product Name | Both | Name that identifies the affected product with digital elements. | For example, enter the official commercial or technical name of the affected product with digital elements. Use the same name that appears in product technical documentation or market information (max. 255 characters). | Product X | Official product name | Required | copied-or-updated | copied-or-updated |
-| 7 | Product version | Both | Version, release, build, model, or other revision information required to identify the affected product instance. | For example, enter every affected version, release, build, model, or firmware revision. Use exact identifiers and clearly state a range when multiple versions are affected (max. 255 characters). | 4.0 to 4.2.1 | Version or version range | Required | copied-or-updated | copied-or-updated |
+| 7 | Product Version | Both | Version, release, build, model, or other revision information required to identify the affected product instance. | For example, enter every affected version, release, build, model, or firmware revision. Use exact identifiers and clearly state a range when multiple versions are affected (max. 255 characters). | 4.0 to 4.2.1 | Version or version range | Required | copied-or-updated | copied-or-updated |
 | 8 | Product Type (Default/Important/Critical) | Both | Regulatory category indicating whether the product is default, important, or critical under the CRA classification framework. | For example, select the CRA regulatory type applicable to the product. Choose Important or Critical only where the product falls within the relevant CRA category (Annexes III and IV); otherwise select Default. | Important | Select one: Default, Important, Critical | Optional | copied-or-updated | copied-or-updated |
 | 9 | Product Class | Both | For an important product, the applicable Class I or Class II category used for conformity-assessment treatment. | For example, for an important product, select the applicable CRA class. Leave the field empty when the product is not classified as an important product or when no class applies. | Class II | Select one configured class | Optional | copied-or-updated | copied-or-updated |
 | 10 | Product Category | Both | The applicable CRA product category, normally selected from the relevant category list in CRA Annexes III or IV. | You may select the category that best matches the affected product under the applicable CRA category list. Use the product’s core functionality, not only its commercial name. | Choose between: Hardware devices with Security Boxes; Smart meter gateways within smart metering systems and other devices for advanced security purposes, including secure cryptoprocessing devices; or Smartcards or similar devices, including secure elements. | Select one configured category | Optional | copied-or-updated | copied-or-updated |
@@ -207,7 +220,7 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 |---|---|---|---|---|---|---|---|---|---|
 | i30 | Incident is suspected of unlawful or malicious acts | SI | Boolean indication of whether available evidence suggests the incident resulted from unlawful or malicious activity. | For example, select Yes when available evidence indicates intentional unlawful or malicious activity. Select No when the event is assessed as non-malicious. Select Unknown while the cause remains unresolved. | Yes | Select one: Yes, No, Unknown | Required | copied-or-updated | copied-or-updated |
 | i31 | General information about nature of incident | SI | High-level account of what happened, how the incident manifested, and the affected security properties or functions. | For example, describe what occurred, the affected product functions or security properties, and the currently known scope. Focus on confirmed facts available at the 72-hour stage (max. 4000 characters). | Malicious code executed through the update service and affected the integrity of locally stored configuration data. | Structured narrative | Optional | Required | copied-or-updated |
-| i32 | Applied or ongoing mitigation measures | SI | Actions that have been taken by the manufacturer or other responsible party or are still ongoing to correct the issue or reduce its risk or impact. | For example, list the actions already applied or ongoing to correct the issue or reduce risk. Include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful (max. 4000 characters). | Disabled the affected service; revoked exposed credentials; increased monitoring. | Structured narrative | Optional | Optional | Required |
+| i32 | Applied and ongoing mitigation measures | SI | Actions that have been taken by the manufacturer or other responsible party or are still ongoing to correct the issue or reduce its risk or impact. | For example, list the actions already applied or ongoing to correct the issue or reduce risk. Include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful (max. 4000 characters). | Disabled the affected service; revoked exposed credentials; increased monitoring. | Structured narrative | Optional | Optional | Required |
 | i33 | Detailed description of the Severity of the incident | SI | Complete the detailed description of the severity of the incident. | For example, provide the completed description of the severity of the incident. Include the sequence of events, affected products and functions, severity, scope, evidence, root cause, response measures, and recovery status (max. 4000 characters). | Low – limited impact, no significant disruption to operation. | Structured narrative | Optional | Optional | Required |
 | i34 | Detailed description of the Impact of the incident | SI | Complete the detailed description of the impact of the incident. | For example, provide the completed description of the impact of the incident, including the impact on the product, data, functions, users, or connected systems (max. 4000 characters). | Minimal – no material impact of operations, users or data. | Structured narrative | Optional | Optional | Required |
 | i35 | Type of Threat or root cause likely to have triggered incident | SI | Most likely threat category, initiating event, weakness, failure, or root cause that triggered the incident. | For example, state the most likely threat type and root cause supported by the investigation. Explain the evidence briefly and mark the conclusion as preliminary when analysis is incomplete (max. 255 characters). | Supply-chain compromise caused by an unauthorised modification to the update package. | Classification plus short explanation | Optional | Optional | Required |
@@ -246,3 +259,5 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 - 2026-09-09 (23:11 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other tracked SRP pages in the same run — the FAQ and CSIRT-list pages changed this time (see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 38 fields re-verified row-by-row, footer unchanged. `retrieved` updated; `last_check` and `last_change` unchanged.
 - 2026-09-10 (00:10 UTC): first check of the day. Page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other tracked SRP pages in the same run — one of those seven changed this time, a cosmetic wording tweak on the AR User Registration guidance page (see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 38 fields re-verified row-by-row, footer still "version 1.1, last update: 05/09/2026". `retrieved` and `last_check` updated to 2026-09-10; `last_change` left at 2026-09-07 since ENISA's Glossary content itself did not change.
 - 2026-09-10 (01:08 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other tracked SRP pages in the same run — the FAQ changed this time (Q26's "Sever" → "Severe" typo fixed; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 38 fields re-verified row-by-row, footer unchanged. `retrieved` updated; `last_check` and `last_change` unchanged.
+- 2026-09-10 (02:08 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other tracked SRP pages in the same run — three of those seven changed date-stamp format only this time (see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 38 fields re-verified row-by-row, footer unchanged. `retrieved` updated; `last_check` and `last_change` unchanged.
+- 2026-09-10 (05:10 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other tracked SRP pages in the same run — all seven other pages unchanged this run (see `enisa-srp-faq-baseline.md`). The Glossary itself moved for the first time since 2026-09-07: footer version bumped "1.1, last update: 05/09/2026" → "1.2, last update: 09/09/2026", and two field names changed accordingly — field 7 "Product version" → "Product Version", and field i32 "Applied or ongoing mitigation measures" → "Applied and ongoing mitigation measures" (the latter resolves the long-tracked FAQ/Glossary "or"/"and" mismatch). All other 36 rows and both footnotes re-verified unchanged, including every previously tracked defect. `retrieved`, `last_check`, and `last_change` all updated to 2026-09-10; `page_version` and the page-metadata section updated. See the change log entry at the top for detail.
