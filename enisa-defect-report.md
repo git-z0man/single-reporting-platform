@@ -62,7 +62,7 @@ Text quoted verbatim as it stood on 9 September.
 | A10 | PEC | Screenshot of the PEC block *(screenshot)* | "…would be contrary to the essential **intrests** of that Member State" | "interests". This is in the application UI, not only in the guidance. | **open** — a UI screenshot, not testable from page text; unchanged as far as can be seen |
 | A11 | Interface | "Access the Dashboard" step | "**Yo** can access the Dashboard by:" | "You". | **fixed** · 2026-09-09 21:07 UTC |
 | A12 | Interface | Section heading | "Add an **Association** with an Additional Manufacturer **Association** through Settings" | "Association" appears twice; drop the second. | **fixed** · 2026-09-09 21:07 UTC — heading now "Add Additional Manufacturer Association via Settings" |
-| A13 | Registration | Manufacturer details step | "Enter the manufacturer details (manufacturer name, manufacturer **adress**, additional information)" | "address" — but see D4: that field does not exist. | **fixed** · 2026-09-09 22:12 UTC — now "address"; the field itself is still missing, see D4 |
+| A13 | Registration | Manufacturer details step | "Enter the manufacturer details (manufacturer name, manufacturer **adress**, additional information)" | "address" — see D4: the field itself is being restored to the form. | **fixed** · 2026-09-09 22:12 UTC — now "address"; the field itself is still missing, see D4 |
 | A14 | Registration | Invitation registration, personal details step | "These fields **cannot be edited** but are retrieved from EU Login and **cannot be edited** in the SRP." | The clause is duplicated within one sentence. | **fixed** · 2026-09-09 22:12 UTC — now "These fields are retrieved from EU Login and cannot be edited in the SRP." |
 | A15 | Submission | Expected results, 72-hour Notification and Final Report | "…subject to **Particularly Exception** Circumstances (PEC)…" (twice) | "Particular Exceptional Circumstances" — "Exception" is not a valid form. See also C2. | **open** — three occurrences now, after the Submission page was rewritten on 9 September 22:12 UTC |
 | A16 | Submission | Pre-conditions, three occurrences | "you are **logged in into** the SRP" | "logged in to the SRP". | **open** — still three occurrences |
@@ -202,7 +202,7 @@ to know it will be truncated or rejected.
 
 ### D4 — Registration describes a manufacturer address field that does not exist
 
-**Status: open** — the typo is fixed (A13) but the text still lists "manufacturer address" for a screen that has no address field.
+**Status: partly · 2026-09-10** — ENISA confirmed on 10 September, on request, that the address field will be **restored to the form**. The guidance text, which never stopped listing it, will then be right; until the field ships, the form is the side that disagrees. Open until a capture shows the field. (The typo in the same sentence was fixed separately, A13.)
 
 Registration: "Enter the manufacturer details (manufacturer name, manufacturer
 adress, additional information)". The published screenshot of that very step
@@ -291,7 +291,7 @@ mandatory reporting fields.
    redirect, and the version stamp does not move when the content does. *E1
    open; E2 partly — the stamp moved once, then lagged again two hours later.*
 
-Of the 37 findings, **15 are fixed, 5 partly addressed, 17 open** as of
+Of the 37 findings, **15 are fixed, 6 partly addressed, 16 open** as of
 10 September 2026 (D1 and B6 closed on ENISA's confirmation that Legal name was dropped).
 
 ---
@@ -312,7 +312,7 @@ re-check, ahead of the monitor.
 | F5 | FAQ / Glossary | Q16 v28/v29 vs Glossary v23/v24 | FAQ now "**Detailed** description of the severity/impact of the vulnerability"; Glossary still "**Full** description…". They agreed before this edit. | 2026-09-09 23:11 |
 | F6 | Main / Registration | "User guidance" card vs the page | Card blurb: "the Assigned **Representatives** (AR) user registration"; the page itself now: "the Assigned **Representative** (AR)…". The card was reworded and re-dated in the 10 September main-page rewrite — "Updated: 9 September 2026" — but still says "Assigned Representatives (ARs)" against the page's singular. **Partly.** | 2026-09-10 00:10 |
 | F7 | Glossary / FAQ | Field i35 vs FAQ i40 | Glossary: "Type of **Threat** or root cause that is likely to have triggered **incident**"; FAQ: "Type of threat or root cause that is likely to have triggered **the** incident". Brought closer on 10 September, not aligned. | 2026-09-10 07:11 |
-| F8 | Interface | Manufacturer-details screenshot *(screenshot)* | The manufacturer record is labelled "Manufacturer **Addresss**" (three s), and its *Manufacturer Address* row shows "Manufacturer Sector" as its value. The same screenshot shows the manufacturer record *does* have an address field — which the registration form lacks (D4). | on the page since at least 2026-09-07 |
+| F8 | Interface | Manufacturer-details screenshot *(screenshot)* | The manufacturer record is labelled "Manufacturer **Addresss**" (three s), and its *Manufacturer Address* row shows "Manufacturer Sector" as its value. The same screenshot shows the manufacturer record *does* have an address field — which the registration form lacks (D4). | on the page since at least 2026-09-07 Consistent with ENISA's 10 September confirmation that the address field returns to the registration form (D4). |
 | F9 | Main | "User Guidance" block, User Manual card | The card's download link is `href="https://CRA SRP – AR User Manual"` — the document's title in place of a URL. The link is dead; the manual is reachable only through the Content navigation. | 2026-09-10 11:52 |
 | F10 | Manual / Registration form | Manual §2.1 step 6 vs the form *(screenshot)* | Manual: "Enter the manufacturer details, including Manufacturer Name and Additional Information **(optional)**". The form marks Additional Information **"Required field"**. On closer reading not a contradiction but a version gap: the manual's own screenshot of the step shows the field **without** the badge. The guidance page's "Required field" screenshot is the older state (F13). **Partly** — D2 adjusted accordingly. | 2026-09-10 11:52 |
 | F11 | Manual | Cover and page headers vs Document History | Every page says "Version: 1.1"; the Document History table lists a single entry, "09/09/2026 v1.0 First version". Either the history is missing 1.1 or the stamp is wrong. | 2026-09-10 11:52 |

@@ -38,7 +38,7 @@ quietly tidies its source cannot be diffed against it.
 | [`commission-cra-faq-baseline.md`](commission-cra-faq-baseline.md) | The Commission's *FAQs on the CRA*, a versioned 66-page document (now v1.4) | Four versions archived verbatim under [`commission-faq/`](commission-faq/), with side-by-side diffs |
 | [`srp-domains-baseline.md`](srp-domains-baseline.md) | The production DNS zone `cra-srp.enisa.europa.eu` — 29 hosts | Country → CSIRT mapping verified against ENISA's official list; reachability history under [`srp-domains/`](srp-domains/) |
 | [`notified-bodies-baseline.md`](notified-bodies-baseline.md) | Conformity assessment bodies notified under the CRA | **Still zero**, on every working day since 21 June 2026 — 65 checks. Machine state under [`notified-bodies/`](notified-bodies/) |
-| [`enisa-defect-report.md`](enisa-defect-report.md) | Errors, contradictions and gaps found in ENISA's own SRP pages, written to be handed to ENISA | 37 findings, tracked: within a day ENISA fixed 15, partly addressed 5, 17 open (re-checked 10 September 2026 against the pages, the new AR User Manual and ENISA's own confirmation) |
+| [`enisa-defect-report.md`](enisa-defect-report.md) | Errors, contradictions and gaps found in ENISA's own SRP pages, written to be handed to ENISA | 37 findings, tracked: within a day ENISA fixed 15, partly addressed 6, 16 open (re-checked 10 September 2026 against the pages, the new AR User Manual and ENISA's own confirmation) |
 
 ### Things in here you may not find elsewhere
 
