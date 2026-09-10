@@ -26,6 +26,18 @@ last_change: 2026-09-10
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
 
+### 2026-09-10 09:09 UTC (vs. 2026-09-10 07:11 UTC)
+
+All eight pages returned HTTP 200. Q9 lost its concrete platform URL, the day before the 11 September go-live; nothing else moved.
+
+**Changed**
+
+- **Q9** (FAQ) opening sentence regressed from "The SRP is available at: [https://portal.cra-srp.enisa.europa.eu](https://portal.cra-srp.enisa.europa.eu)." to **"The SRP will be available in due time."** — the hyperlink and the concrete host are both gone, replaced with vague placeholder wording, one day before the 11 September 2026 go-live the rest of the page (Q4, Q28, Q29) still commits to. Isolated to Q9: Q28's own identical URL sentence is untouched, and the rest of Q9 (MFA, Primary/Secondary AR roles, the "Verified" precondition, notification-access scope, the 20/20 limits, Settings &gt; Association Management, the verification-timing paragraph) is unchanged. Page stamp "Updated: 09 September 2026" did not move despite the edit.
+
+**Unchanged**
+
+Main page (still 6 items in Content nav, no Glossary/9th entry; no PEC card in "User guidance"). FAQ otherwise unchanged (Q1–Q8, Q10–Q30, same tags, Q16 table, "Updated: 09 September 2026"). CSIRT list (27 countries, same links, "of EU CSIRTs..." wording, "Last updated: 04 September 2026"). All four guidance subpages, byte for byte. Glossary unchanged (all 38 fields re-verified, footer still "version 1.2, last update: 09/09/2026").
+
 ### 2026-09-10 07:11 UTC (vs. 2026-09-10 05:10 UTC)
 
 All eight pages returned HTTP 200. Only the Glossary changed again — three field names this time, recorded in full in `enisa-srp-glossary-baseline.md`; the trimmed summary cross-referenced here (the "CRA SRP Glossary" section) is updated to match. Nothing on the FAQ page itself, the main page, the CSIRT list, or any of the four guidance subpages moved.
@@ -465,7 +477,7 @@ Information on the reporting workflow, the mandatory and optional fields and how
 
 ### Q9. How do I access and register on the SRP, and what are the roles of Primary and Secondary ARs? *(retitled 2026-09-09; tagged [UPDATED] on the live page; was "How is the platform accessible and how does the registration process work?")*
 
-The SRP is available at: [https://portal.cra-srp.enisa.europa.eu](https://portal.cra-srp.enisa.europa.eu).
+The SRP will be available in due time. *(regressed 2026-09-10 09:09 UTC from "The SRP is available at: [https://portal.cra-srp.enisa.europa.eu](https://portal.cra-srp.enisa.europa.eu)." — the concrete, hyperlinked host is gone, replaced with vague placeholder wording, one day before the 11 September 2026 go-live; Q28's identical URL sentence is untouched.)*
 
 Assigned Representatives (ARs) of manufacturers and, once applicable, open-source software stewards must have an EU Login account with multi-factor authentication (MFA) enabled and use it to register on the SRP. An EU Login account can be created in advance at the following link: [https://ecas.ec.europa.eu/cas/login](https://ecas.ec.europa.eu/cas/login). No additional corporate entity authentication mechanism is currently used by the SRP.
 

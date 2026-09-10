@@ -1,12 +1,12 @@
 host:        hr.cra-srp.enisa.europa.eu
 country:     Kroatien (HR)
-csirt:       CERT.hr (CARNET)
-contact:     https://www.cert.hr/en/home-page/
+csirt:       NCSC.HR (read off the domain only — not independently confirmed)
+contact:     https://ncsc.hr/hr/kontakt
 status:      korrigiert
-verified_on: 2026-09-07
+verified_on: 2026-09-10
 
 signal:
-  ENISA, "List of CSIRTs Designated as Coordinators" (Stand 04/09/2026)
+  ENISA, "List of CSIRTs Designated as Coordinators" (Last updated 10/09/2026)
   https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators
 
   The mapping is taken from ENISA's own published list of CSIRTs
@@ -14,5 +14,19 @@ signal:
   itself. The host is still dark (PROVISIONED), so no signal could be
   read from it; this source is authoritative regardless.
 
-previously assumed (superseded):
+  2026-09-10: the page's own "Last updated" stamp moved to 10/09/2026 (from
+  04/09/2026) and Croatia's contact link changed domain, from `cert.hr` to
+  `ncsc.hr`. Unlike the other seven corrections made on 2026-09-07, this is
+  not a same-domain path change — it is a different domain entirely, which
+  is why the CSIRT name above is inferred from the domain rather than
+  confirmed: this monitoring environment can reach `enisa.europa.eu` but
+  general web access to third-party domains (including `ncsc.hr` itself) is
+  egress-blocked, so the organisation behind the new domain could not be
+  visited to confirm its identity, branding, or relationship to CARNET's
+  former CERT.hr.
+
+previously confirmed (superseded 2026-09-10):
+  CERT.hr (CARNET) — https://www.cert.hr/en/home-page/ (verified 2026-09-07)
+
+previously assumed (superseded 2026-09-07):
   CERT.hr (CARNET) / ZSIS
