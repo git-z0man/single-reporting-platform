@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.2 (page footer: last update 09/09/2026)"
-retrieved: 2026-09-10 (fetched 10:12 UTC)
+retrieved: 2026-09-10 (fetched 12:17 UTC)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -38,6 +38,10 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-10 12:17 UTC (vs. 2026-09-10 10:12 UTC)
+
+Page still returns HTTP 200 at `cra-srp-glossary2`, fetched alongside all seven other originally-tracked SRP pages in the same run — most of which did change this time (FAQ Q9 reverted, a new Q31, refreshed main-page guidance cards, CSIRT list link/stamp changes, an AR Notification Submission stamp move, and two brand-new pages discovered via the Content navigation; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 38 fields re-verified row by row, footer still "version 1.2, last update: 09/09/2026". `retrieved` updated; `last_check` and `last_change` unchanged.
 
 ### 2026-09-10 10:12 UTC (vs. 2026-09-10 07:11 UTC)
 
@@ -286,3 +290,4 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 - 2026-09-10 (07:11 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other tracked SRP pages in the same run — all seven other pages unchanged this run (see `enisa-srp-faq-baseline.md`). Three field names changed: field 17 "Corrective or mitigating measures users can take" → "...that users can take" (now matches the FAQ's own field 22 exactly); field i35 "Type of Threat or root cause likely to have triggered incident" → "...that is likely to have triggered incident" (closer to, but not identical with, the FAQ's i40); field i37 "Date/time incident occurred" → "Date/time when the incident occurred" (now matches the FAQ's own i42 exactly). The footer stamp did not move — still "version 1.2, last update: 09/09/2026" — the same lagging-stamp pattern seen at every previous edit of this page. All other 35 rows, every other cell of the three changed rows, and both footnotes re-verified unchanged. `retrieved` updated to 2026-09-10 (07:11 UTC); `last_check` and `last_change` were already 2026-09-10 from the earlier run today and needed no further update. See the change log entry at the top for detail.
 - 2026-09-10 (09:09 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other tracked SRP pages in the same run — only the FAQ's Q9 changed this time (regressed to a placeholder URL sentence; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 38 fields re-verified row-by-row, footer unchanged. `retrieved` updated; `last_check` and `last_change` unchanged.
 - 2026-09-10 (10:12 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all nine other tracked SRP pages in the same run (two of them newly discovered this run — see `enisa-srp-faq-baseline.md`). Four of those nine other pages changed this time (Q9 reverted, a new FAQ entry, the CSIRT list's Croatia/Malta links, and the main page's navigation/User Guidance section). The Glossary itself was unaffected: all 38 fields re-verified row-by-row, footer still "version 1.2, last update: 09/09/2026". `retrieved` updated; `last_check` and `last_change` unchanged.
+- 2026-09-10 (12:17 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all seven other originally-tracked SRP pages in the same run — most of those seven changed this time, and two brand-new pages (AR User Manual, Terms and Conditions) were discovered via the main page's Content navigation; see `enisa-srp-faq-baseline.md`. The Glossary itself was unaffected: all 38 fields re-verified row by row, footer still "version 1.2, last update: 09/09/2026". `retrieved` updated to 2026-09-10 (12:17 UTC); `last_check` and `last_change` already 2026-09-10, no further update needed.

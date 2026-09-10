@@ -12,12 +12,12 @@ guidance_urls:
   - https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-guidance-particular-exceptional-circumstances-pec
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
-retrieved: 2026-09-10 (fetched 11:12 UTC)
-guidance_retrieved: 2026-09-10 (fetched 11:12 UTC)
-glossary_retrieved: 2026-09-10 (fetched 11:12 UTC)
-csirt_list_retrieved: 2026-09-10 (fetched 11:12 UTC)
-ar_user_manual_retrieved: 2026-09-10 (fetched 11:12 UTC, unchanged since first capture at 10:12 UTC)
-terms_conditions_retrieved: 2026-09-10 (fetched 11:12 UTC, unchanged since first capture at 10:12 UTC)
+retrieved: 2026-09-10 (fetched 12:17 UTC)
+guidance_retrieved: 2026-09-10 (fetched 12:17 UTC)
+glossary_retrieved: 2026-09-10 (fetched 12:17 UTC)
+csirt_list_retrieved: 2026-09-10 (fetched 12:17 UTC)
+ar_user_manual_retrieved: 2026-09-10 (fetched 12:17 UTC, unchanged since first capture at 10:12 UTC)
+terms_conditions_retrieved: 2026-09-10 (fetched 12:17 UTC, unchanged since first capture at 10:12 UTC)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. **`ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC**, discovered the same way — the site's own "Content" navigation grew from 6 to 8 entries in this run (see the change log); this widens the routine's tracked-page count from eight to ten, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-10
@@ -29,6 +29,22 @@ last_change: 2026-09-10
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-10 12:17 UTC (vs. 2026-09-10 11:12 UTC)
+
+All ten pages returned HTTP 200. Nothing new on the FAQ, the CSIRT list or the guidance pages; one link on the Terms and Conditions landing page reads differently from the 10:12 capture, and one main-page card was never logged.
+
+**Changed**
+
+- **Terms and Conditions page**: the link to the actual document now targets the PDF directly — `/sites/default/files/2026-09/Terms and conditions CRA SRP v1.0 20260910.pdf` — where the 10:12 capture recorded `enisa.europa.eu/media/57353`. Whether the link moved between the two runs or the earlier reading came from a media wrapper is not determinable from this run; the direct path is what the page serves now. The `href` carries a trailing space inside the attribute.
+
+**New**
+
+- **Main page, "User Guidance"**: besides the AR User Manual card logged at 10:12, the block also carries a card for the **PEC guidance page** — the page that was reachable only through the Content navigation until 10 September. Present at 10:12 too; first logged here.
+
+**Unchanged**
+
+FAQ Q1–Q31 (same tags, Q9 still carries the portal URL, "Updated: 10 September 2026"), Q16 table (43 fields). Main-page intro as captured at 11:12. AR User Manual page unchanged since first capture. CSIRT list ("Last updated: 10 September 2026", Croatia `ncsc.hr`, Malta and Slovakia on https). All four guidance subpages byte for byte. Glossary (all 38 fields re-verified; footer "version 1.2, last update: 09/09/2026").
 
 ### 2026-09-10 11:12 UTC (vs. 2026-09-10 10:12 UTC)
 
@@ -792,7 +808,7 @@ Page text: "Download the CRA SRP – AR User Manual for guidance on using the pl
 
 First captured 2026-09-10 10:12 UTC, discovered the same way as the AR User Manual page above. "Version 1.0. Last updated: 10/09/2026" — its first version/date stamp.
 
-Page text, in full: "Please find the Terms and Conditions of the use of the SRP platform under this link: [CRA Single Reporting Platform - Terms and Conditions](https://www.enisa.europa.eu/media/57353)." The page itself carries no further body text — it is a thin landing page pointing to the actual Terms and Conditions document at `enisa.europa.eu/media/57353`, not fetched/archived by this routine. A future check should watch this page's own version/date stamp for a bump, and treat a changed `media/` link as a strong signal the underlying document itself changed.
+Page text, in full: "Please find the Terms and Conditions of the use of the SRP platform under this link: [CRA Single Reporting Platform - Terms and Conditions](https://www.enisa.europa.eu/sites/default/files/2026-09/Terms%20and%20conditions%20CRA%20SRP%20v1.0%2020260910.pdf)." The page itself carries no further body text — it is a thin landing page pointing to the actual Terms and Conditions document, a PDF (`Terms and conditions CRA SRP v1.0 20260910.pdf`, not fetched/archived by this routine). The 10:12 capture recorded the target as `enisa.europa.eu/media/57353`; from 11:52 UTC at the latest the `href` is the direct file path — with a trailing space inside the attribute, reproduced by ENISA's page verbatim. A future check should watch this page's own version/date stamp for a bump, and treat a changed `media/` link as a strong signal the underlying document itself changed.
 
 ## CRA SRP Glossary (new page, `glossary_url`)
 
