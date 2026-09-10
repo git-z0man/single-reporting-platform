@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.3 (page footer: last update 10/09/2026)"
-retrieved: 2026-09-10 (fetched 19:07 UTC)
+retrieved: 2026-09-10 (fetched 22:13 UTC)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -41,6 +41,10 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-10 22:13 UTC (vs. 2026-09-10 19:07 UTC)
+
+Page still returns HTTP 200 at `cra-srp-glossary2`, fetched alongside all nine other tracked SRP pages in the same run (one of which — FAQ Q17 gaining a closing sentence — changed this time; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 39 fields re-verified row by row against the raw `<table>` structure, footer still "Version 1.3. Last update: 10 September 2026". `retrieved` updated; `last_check` and `last_change` unchanged (already 2026-09-10).
 
 ### 2026-09-10 19:07 UTC (vs. 2026-09-10 17:13 UTC)
 
@@ -368,3 +372,4 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 - 2026-09-10 (13:11 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all nine other tracked SRP pages in the same run (one of which, AR User Registration guidance, also changed — see `enisa-srp-faq-baseline.md`). The Glossary itself changed substantially for the first time since 2026-09-07: footer version bumped "1.2, last update: 09/09/2026" → "1.3, last update: 10 September 2026"; field count 38 → 39 with a new AEV field (v23) inserted, cascading v23–v29 to v24–v30 and i30–i38 to i31–i39; several long-tracked defects fixed (field 11's contradictory Meaning, i37/i38's broken grammar, v29's "one"/"at least one" inconsistency, i33's "or"/"and" mismatch); several per-stage status values changed (fields 5, 15, 16, 17, 18, and the renumbered i37/i38); field 13 lost its "Unknown" selectable option; two character limits were added (i31, v30) where none existed before. All row content re-verified field by field against the live page's raw table structure. `retrieved`, `last_check`, and `last_change` all updated to 2026-09-10 (13:11 UTC). See the change log entry at the top for full detail.
 - 2026-09-10 (14:07 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all nine other tracked SRP pages in the same run (two of which changed cosmetically this time — a main-page FAQ-card blurb quoted in full for the first time, and the Terms and Conditions link losing a trailing space; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 39 fields re-verified row by row, footer still "Version 1.3. Last update: 10 September 2026". `retrieved` updated; `last_check` and `last_change` unchanged.
 - 2026-09-10 (15:10 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all nine other tracked SRP pages in the same run (one of which changed cosmetically this time — the main page's AR User Manual download card `href`, malformed since first capture, was fixed; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 39 fields re-verified row by row against the raw table structure, footer still "Version 1.3. Last update: 10 September 2026". `retrieved` updated; `last_check` and `last_change` unchanged.
+- 2026-09-10 (22:13 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all nine other tracked SRP pages in the same run (one of which changed this time — FAQ Q17 gained a closing sentence; two editorial first-time transcriptions also noted on the main page; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 39 fields re-verified row by row against the raw table structure, footer still "Version 1.3. Last update: 10 September 2026". `retrieved` updated; `last_check` and `last_change` unchanged.
