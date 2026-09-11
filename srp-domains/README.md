@@ -129,12 +129,33 @@ authentication.**
 
 ## Not verified here
 
-The Azure DNS delegation and the `wedos.global` CNAME chain are
-operator-supplied. This image has no `dig`/`host` and the Python stdlib cannot
-query NS or CNAME records, so only the A records were verified. Confirm the
-rest from a machine with `dig`:
+This image has no `dig`/`host` and the Python stdlib cannot query NS or CNAME
+records, so this monitor's own `check.sh` only ever confirms A records
+(informationally) and HTTP status.
+
+On 2026-09-11, the delegation and edge pool were independently confirmed via
+[bgp.tools](https://bgp.tools) (an external, non-proxied resolver, reached
+with a descriptive User-Agent as its access policy requires) for
+`portal`/`auth`/`de.cra-srp.enisa.europa.eu`:
+
+- **Azure DNS delegation** — confirmed. All four nameservers
+  (`ns1-02.azure-dns.com`, `ns2-02.azure-dns.net`, `ns3-02.azure-dns.org`,
+  `ns4-02.azure-dns.info`) resolve under AS8075 (Microsoft Corporation).
+- **Edge IP pool** — corrected, not just confirmed. All three hosts resolve to
+  the *same* 45-address round-robin pool, `185.8.236.33`–`185.8.236.77`
+  (within `185.8.236.0/24`, AS208414 WEDOS Internet a.s., RPKI valid) — not
+  the two-address pair (`185.8.236.7`/`.8`) `manifest.json` recorded before.
+  That pair was never seen in this lookup; see `manifest.json`'s `edge.ips`
+  and `edge.ips_note`.
+- **`wedos.global` CNAME chain** — not observed. All three hosts returned
+  direct A records with no CNAME. The chain may not apply to this zone, or
+  bgp.tools may not surface it; either way, `cname_verified` stays `false`.
+  See `manifest.json`'s `edge.cname_check_2026_09_11`.
+
+Cross-check any of this from a machine with `dig`:
 
 ```bash
 dig NS cra-srp.enisa.europa.eu +short
 dig CNAME de.cra-srp.enisa.europa.eu +short
+dig A de.cra-srp.enisa.europa.eu +short
 ```

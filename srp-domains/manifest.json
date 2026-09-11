@@ -9,19 +9,33 @@
       "ns4-02.azure-dns.info"
     ],
     "provider": "Azure DNS",
-    "verified": false,
-    "note": "Operator-supplied. Not verified in the monitoring environment: no dig/host available and the Python stdlib cannot query NS records. Confirm with: dig NS cra-srp.enisa.europa.eu +short"
+    "verified": true,
+    "verified_on": "2026-09-11",
+    "verified_via": "bgp.tools (external, non-proxied resolver) for portal/auth/de.cra-srp.enisa.europa.eu; all four NS confirmed under AS8075 (Microsoft Corporation)",
+    "note": "Confirmed via bgp.tools from outside this environment, since this image still has no dig/host and the Python stdlib cannot query NS records itself. Cross-check anytime with: dig NS cra-srp.enisa.europa.eu +short"
   },
   "edge": {
     "ips": [
-      "185.8.236.7",
-      "185.8.236.8"
+      "185.8.236.33", "185.8.236.34", "185.8.236.35", "185.8.236.36", "185.8.236.37",
+      "185.8.236.38", "185.8.236.39", "185.8.236.40", "185.8.236.41", "185.8.236.42",
+      "185.8.236.43", "185.8.236.44", "185.8.236.45", "185.8.236.46", "185.8.236.47",
+      "185.8.236.48", "185.8.236.49", "185.8.236.50", "185.8.236.51", "185.8.236.52",
+      "185.8.236.53", "185.8.236.54", "185.8.236.55", "185.8.236.56", "185.8.236.57",
+      "185.8.236.58", "185.8.236.59", "185.8.236.60", "185.8.236.61", "185.8.236.62",
+      "185.8.236.63", "185.8.236.64", "185.8.236.65", "185.8.236.66", "185.8.236.67",
+      "185.8.236.68", "185.8.236.69", "185.8.236.70", "185.8.236.71", "185.8.236.72",
+      "185.8.236.73", "185.8.236.74", "185.8.236.75", "185.8.236.76", "185.8.236.77"
     ],
+    "ips_verified_on": "2026-09-11",
+    "ips_verified_via": "bgp.tools DNS lookup (external, non-proxied resolver) for portal/auth/de.cra-srp.enisa.europa.eu, all three returning the identical 45-address pool",
+    "ips_note": "Supersedes the earlier 185.8.236.7/.8 pair, which was never seen in this lookup. The two-IP figure came from a narrower sample; the real edge pool is a 45-address round-robin within 185.8.236.0/24.",
     "provider": "WEDOS Global (CZ)",
     "kind": "anycast proxy/CDN with access filtering",
+    "asn": "AS208414 - WEDOS Internet, a.s. (RPKI valid)",
     "cname_pattern": "<cc>.cra-srp.enisa.europa.eu -> <cc>.cra-srp.enisa.europa.eu.wedos.global",
     "cname_verified": false,
-    "note": "The edge pair is a filtering proxy, NOT the origin. All 29 host labels resolving to the same two IPs says nothing about whether each Member State has a separate backend; that is only determinable after go-live, from behind the edge."
+    "cname_check_2026_09_11": "bgp.tools showed no CNAME record for portal/auth/de.cra-srp.enisa.europa.eu — only direct A records to the pool above. The assumed wedos.global CNAME chain was not observed; it may not apply to this zone, or may exist only at a layer bgp.tools does not surface.",
+    "note": "The edge pool is a filtering proxy, NOT the origin. All 29 host labels resolving to the same pool says nothing about whether each Member State has a separate backend; that is only determinable after go-live, from behind the edge."
   },
   "test_environment": {
     "hosts": {
