@@ -241,7 +241,12 @@ for h in "${HOSTS[@]}"; do
   # "unknown" when nothing resolved and nothing positively failed. The zone's
   # IP pool has to be established by an external lookup, never from this
   # column reading ok.
-  if [ -n "${DNSIP[$h]}" ]; then dnscol="ok"; else dnscol="unknown"; fi
+  # Note that resolve() reports a lookup timeout as the sentinel string
+  # TIMEOUT, not as an address, so a bare -n test would read it as success.
+  case "${DNSIP[$h]}" in
+    ""|TIMEOUT) dnscol="unknown" ;;
+    *)          dnscol="ok" ;;
+  esac
   case "${ST[$h]}" in NXDOMAIN) dnscol="fail" ;; DNS_TIMEOUT) dnscol="timeout" ;; esac
   [ "$dnscol" = "ok" ] && resolved=$((resolved+1))
   echo "$NOW,$h,$dnscol,$tcp,$tls,${HTTP[$h]},${ST[$h]} ${NOTE[$h]}" >> "$LOG"
@@ -269,7 +274,7 @@ say "$live/$TOTAL live   (trust=$TRUST, blocked=$blocked, nxdomain=$nxdomain, dn
   [ "$blocked" -gt 0 ] && { echo "> $blocked host(s) BLOCKED by egress policy — the check was blind for those,"; echo "> which says nothing about the platform."; echo; }
   [ "$dns_timeout" -gt 0 ] && { echo "> $dns_timeout host(s) had DNS_TIMEOUT — neither the local resolver nor curl"; echo "> got an answer in time. Says nothing about the platform; the last"; echo "> confirmed state stands."; echo; }
   [ "$edge_blocked" -gt 0 ] && { echo "> $edge_blocked host(s) got a real HTTP response that was WEDOS's own"; echo "> branded error page (WEDOS.protection), not the SRP origin — an edge"; echo "> access rule answering instead of dropping the connection. Not a"; echo "> platform signal; see the header of \`check.sh\` (2026-09-11)."; echo; }
-  [ "$resolved" -eq 0 ] && { echo "> No host resolved to an address in this run, so the \"Resolves to\""; echo "> column is empty throughout and the log records \`dns,unknown\`. That is"; echo "> a property of this monitoring environment, not of the platform — the"; echo "> local resolver has been unavailable since 2026-09-09. Liveness above"; echo "> is unaffected; it is decided on the HTTP column alone."; echo; }
+  [ "$resolved" -eq 0 ] && [ "$nxdomain" -eq 0 ] && { echo "> No host resolved to an address in this run, so the \"Resolves to\""; echo "> column is empty throughout and the log records \`dns,unknown\`. That is"; echo "> a property of this monitoring environment, not of the platform — the"; echo "> local resolver has been unavailable since 2026-09-09. Liveness above"; echo "> is unaffected; it is decided on the HTTP column alone."; echo; }
   echo "| Host | Status | HTTP | Resolves to | Last checked |"
   echo "|---|---|---|---|---|"
   for h in "${HOSTS[@]}"; do

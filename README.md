@@ -70,7 +70,7 @@ quietly tidies its source cannot be diffed against it.
   non-allowlisted source and dropped the TLS handshake — through to the go-live
   itself on **11 September 2026 at 11:24 UTC**, when all 29 began serving the
   real application. The record includes the edge's own branded block page,
-  which briefly read like a launch three hours early and was not one.
+  which briefly read like a launch two hours early and was not one.
 
 ## How it is maintained
 
