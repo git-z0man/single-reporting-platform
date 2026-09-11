@@ -26,7 +26,7 @@ status: >-
   (1.2 → 1.3) and this time the correlation was large: 38 fields → 39, a new AEV
   field inserted as v23 cascading every later field's number up by one, and roughly
   a dozen wording/status fixes across the page. See the change log.
-last_check: 2026-09-10
+last_check: 2026-09-11
 last_change: 2026-09-10
 note: >-
   One row per field, one table per group (Common / AEV / SI), matching the live page's own
