@@ -138,12 +138,19 @@ from ENISA's published [List of CSIRTs Designated as
 Coordinators](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators)
 — 19 of the original 27 assumptions confirmed, 8 corrected. It did not need
 the platform to go live. Per-country evidence is in `evidence/`. What remains
-open at go-live is whether the running platform agrees with that list.
+open is whether the running platform's CSIRT assignment agrees with that list:
+the go-live check on 2026-09-11 confirmed the routing only — each host
+redirects to its own correctly-scoped country client, with no cross-wiring —
+because the CSIRT branding and imprint sit behind EU Login, where no publicly
+visible signal reaches them.
 
-It also settles the open infrastructure question: all 29 labels resolve to the
-same anycast pair, but that pair is a filtering proxy and not the origin, so
-whether each Member State has a separate backend is only answerable from behind
-the edge.
+It also settles the open infrastructure question: all 29 labels resolve into
+the same 45-address WEDOS pool (`185.8.236.33`-`.77`), but that pool is a
+filtering proxy and not the origin, so whether each Member State has a separate
+backend was only answerable once the platform answered. It did, on 2026-09-11:
+one shared frontend behind every label, with per-country separation expressed
+as per-country OAuth clients rather than separate deployments. The detail is in
+`srp-domains-baseline.md`.
 
 **Publicly visible signals only — no login attempts, no form input, no
 authentication.**

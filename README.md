@@ -65,9 +65,12 @@ quietly tidies its source cannot be diffed against it.
   States, checked against ENISA's published list — 19 confirmed, 8 corrected,
   with the superseded value kept in a footnote and per-country evidence under
   [`srp-domains/evidence/`](srp-domains/evidence/).
-- **A reachability record of the production zone** from before launch: all 29
-  hosts resolving to a filtering anycast edge which, from a non-allowlisted
-  source, accepts TCP and drops the TLS handshake.
+- **A reachability record of the production zone spanning the launch**: the 29
+  hosts behind a filtering WEDOS edge which, before launch, accepted TCP from a
+  non-allowlisted source and dropped the TLS handshake — through to the go-live
+  itself on **11 September 2026 at 11:24 UTC**, when all 29 began serving the
+  real application. The record includes the edge's own branded block page,
+  which briefly read like a launch two hours early and was not one.
 
 ## How it is maintained
 
