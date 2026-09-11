@@ -347,3 +347,90 @@ timestamp_utc,host,dns,tcp443,tls,http_code,note
 2026-09-11T00:22:38Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to se.cra-srp.enisa.europa.eu:443  
 2026-09-11T00:22:38Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to si.cra-srp.enisa.europa.eu:443  
 2026-09-11T00:22:38Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to sk.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:22:46Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,auth.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:22:46Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to sk.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,LIVE http 456
+2026-09-11T09:30:19Z,auth.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T09:30:19Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to at.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to be.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to bg.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cy.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cz.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to de.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to dk.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to ee.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to es.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to fi.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to fr.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to gr.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to hr.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to hu.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to ie.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to it.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to lt.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to lu.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to lv.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to mt.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to nl.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to pl.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to pt.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to ro.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to se.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to si.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:30:19Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to sk.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,EDGE_BLOCKED http 456 (WEDOS.protection edge page, not origin)
+2026-09-11T09:41:49Z,auth.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to auth.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to at.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to be.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to bg.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cy.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cz.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to de.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to dk.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to ee.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to es.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to fi.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,fr.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T09:41:49Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to gr.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to hr.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to hu.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to ie.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to it.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to lt.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to lu.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to lv.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to mt.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to nl.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to pl.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to pt.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to ro.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to se.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to si.cra-srp.enisa.europa.eu:443  
+2026-09-11T09:41:49Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to sk.cra-srp.enisa.europa.eu:443  
