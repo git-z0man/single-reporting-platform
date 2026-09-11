@@ -43,6 +43,10 @@
 # curl's exit code separates the states that matter:
 #
 #   HTTP code returned      -> LIVE          (upstream answered)
+#   HTTP code returned, but
+#   the body is WEDOS's own
+#   branded error page      -> EDGE_BLOCKED  (the WEDOS edge answered, not
+#                                             the SRP origin -- see below)
 #   exit 35/28/7/52/56*     -> PROVISIONED   (connected, upstream dropped)
 #   exit 56 + "403"         -> BLOCKED       (egress policy; check is blind,
 #                                             never a statement about the SRP)
@@ -51,6 +55,28 @@
 #   DNS step also hung      -> DNS_TIMEOUT   (nothing answered in time;
 #                                             check is blind, never a
 #                                             statement about the SRP)
+#
+# ---------------------------------------------------------------------------
+# WHY A RETURNED HTTP CODE CAN STILL BE EDGE_BLOCKED, NOT LIVE
+#
+# 2026-09-11: a run got a real HTTP response -- no forged cert, no proxy
+# artifact, a genuine Sectigo cert for the exact hostname -- from 28 of 29
+# hosts, all HTTP 456. That first looked like the go-live this monitor exists
+# to catch. Reading the body told a different story: every response was
+# WEDOS's own templated error page ("WEDOS.protection - 404 Not Found"),
+# generated entirely at the edge (its diagnostic block reads "Server: - /
+# ip_denied" -- an empty origin field, i.e. the request never reached the SRP
+# application at all) and branded throughout with WEDOS.protection /
+# WEDOS.delivery / WEDOS.status.online. A second run eight minutes later, and
+# several manual checks in between, mostly got the old TLS-drop
+# (PROVISIONED) for the same hosts, with only "portal" answering this way
+# consistently. A genuine public launch does not flap between 28/29 live and
+# 1/29 live within minutes with no origin content ever served; an edge access
+# rule that sometimes answers with a decoy 404 instead of dropping the
+# connection does. So this state is still counted as the check having seen
+# something real (unlike BLOCKED/DNS_TIMEOUT, which mean the check was
+# blind) -- it just isn't a platform signal, so it is barred from LIVE the
+# same way: it never sets first_live and never counts toward the live tally.
 #
 # NXDOMAIN and DNS_TIMEOUT are both decided primarily from curl's own attempt
 # during the same HTTP probe that decides LIVE/PROVISIONED/BLOCKED -- not from
@@ -156,7 +182,7 @@ probe_tls() {  # $1 host -> ok|fail
 [ -f "$LOG" ] || echo "timestamp_utc,host,dns,tcp443,tls,http_code,note" > "$LOG"
 
 declare -A ST HTTP DNSIP NOTE
-live=0; blocked=0; nxdomain=0; dns_timeout=0
+live=0; blocked=0; nxdomain=0; dns_timeout=0; edge_blocked=0
 
 for h in "${HOSTS[@]}"; do
   # resolve() is informational only (see its header): its local resolvers
@@ -179,13 +205,20 @@ for h in "${HOSTS[@]}"; do
     tcp="$(probe_tcp "$h")"; tls="$(probe_tls "$h")"
   fi
 
-  err="$(mktemp)"
-  code="$(curl -sS -o /dev/null -m 20 -w '%{http_code}' "https://$h/" 2>"$err")"
+  err="$(mktemp)"; hdr="$(mktemp)"; body="$(mktemp)"
+  code="$(curl -sS -D "$hdr" -o "$body" -m 20 --max-filesize 2000000 -w '%{http_code}' "https://$h/" 2>"$err")"
   rc=$?
   msg="$(tr -d '\r' < "$err" | tr '\n' ' ' | sed 's/,/;/g' | cut -c1-160)"
   rm -f "$err"
 
-  if [ $rc -eq 0 ] && [ "$code" != "000" ]; then
+  if [ $rc -eq 0 ] && [ "$code" != "000" ] \
+     && grep -qi 'x-protected-by:.*WEDOS' "$hdr" \
+     && grep -q 'WEDOS\.protection' "$body"; then
+    # The WEDOS edge answered with its own branded error page, not the SRP
+    # origin -- see the 2026-09-11 header note above. Real, but not a
+    # platform signal: never LIVE, never first_live, never in the live tally.
+    ST[$h]=EDGE_BLOCKED; HTTP[$h]="$code"; NOTE[$h]="http $code (WEDOS.protection edge page, not origin)"; edge_blocked=$((edge_blocked+1))
+  elif [ $rc -eq 0 ] && [ "$code" != "000" ]; then
     ST[$h]=LIVE; HTTP[$h]="$code"; NOTE[$h]="http $code"; live=$((live+1))
   elif [ $rc -eq 6 ]; then
     ST[$h]=NXDOMAIN; HTTP[$h]=000; NOTE[$h]="curl could not resolve host"
@@ -199,6 +232,7 @@ for h in "${HOSTS[@]}"; do
   else
     ST[$h]=PROVISIONED; HTTP[$h]=000; NOTE[$h]="curl exit $rc: $msg"
   fi
+  rm -f "$hdr" "$body"
 
   dnscol="ok"
   case "${ST[$h]}" in NXDOMAIN) dnscol="fail" ;; DNS_TIMEOUT) dnscol="timeout" ;; esac
@@ -208,7 +242,7 @@ for h in "${HOSTS[@]}"; do
 done
 
 say ""
-say "$live/$TOTAL live   (trust=$TRUST, blocked=$blocked, nxdomain=$nxdomain, dns_timeout=$dns_timeout)"
+say "$live/$TOTAL live   (trust=$TRUST, blocked=$blocked, nxdomain=$nxdomain, dns_timeout=$dns_timeout, edge_blocked=$edge_blocked)"
 
 # --- status.md (overwritten each run) ---------------------------------------
 {
@@ -226,6 +260,7 @@ say "$live/$TOTAL live   (trust=$TRUST, blocked=$blocked, nxdomain=$nxdomain, dn
   fi
   [ "$blocked" -gt 0 ] && { echo "> $blocked host(s) BLOCKED by egress policy — the check was blind for those,"; echo "> which says nothing about the platform."; echo; }
   [ "$dns_timeout" -gt 0 ] && { echo "> $dns_timeout host(s) had DNS_TIMEOUT — neither the local resolver nor curl"; echo "> got an answer in time. Says nothing about the platform; the last"; echo "> confirmed state stands."; echo; }
+  [ "$edge_blocked" -gt 0 ] && { echo "> $edge_blocked host(s) got a real HTTP response that was WEDOS's own"; echo "> branded error page (WEDOS.protection), not the SRP origin — an edge"; echo "> access rule answering instead of dropping the connection. Not a"; echo "> platform signal; see the header of \`check.sh\` (2026-09-11)."; echo; }
   echo "| Host | Status | HTTP | Resolves to | Last checked |"
   echo "|---|---|---|---|---|"
   for h in "${HOSTS[@]}"; do

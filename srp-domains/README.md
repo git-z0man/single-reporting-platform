@@ -41,7 +41,8 @@ classifies by curl's exit code:
 
 | curl result | State | Meaning |
 |---|---|---|
-| HTTP status returned | `LIVE` | upstream answered — go-live |
+| HTTP status returned, body is the SRP origin | `LIVE` | upstream answered — go-live |
+| HTTP status returned, body is WEDOS's own error page | `EDGE_BLOCKED` | the edge answered, not the SRP origin |
 | exit 35 / 28 / 7 / 52 | `PROVISIONED` | connected, upstream dropped |
 | exit 6 | `NXDOMAIN` | curl itself could not resolve the host |
 | exit 28, local DNS also hung | `DNS_TIMEOUT` | nothing answered in time — the check was blind |
@@ -50,7 +51,27 @@ classifies by curl's exit code:
 `BLOCKED` and `DNS_TIMEOUT` are kept distinct on purpose: both mean the
 monitor could not see, and must never be recorded as a platform state or
 overwrite the last confirmed one. `first_live` is only ever set from an HTTP
-response, so a proxied run cannot manufacture a go-live.
+response classified `LIVE`, so a proxied run cannot manufacture a go-live —
+and, since 2026-09-11, neither can the edge's own error page.
+
+**2026-09-11** — a run got a real HTTP response, with a genuine Sectigo
+certificate (no proxy forgery), from 28 of 29 hosts: HTTP 456 on all of them.
+That is exactly the signal this monitor exists to catch, and for a moment it
+looked like the go-live. The response body said otherwise: every one was
+WEDOS's own templated error page ("WEDOS.protection – 404 Not Found"),
+generated entirely at the edge — its diagnostic block read `Server: - /
+ip_denied`, an empty origin field, meaning the request never reached the SRP
+application. A second run eight minutes later, and several manual checks in
+between, mostly got the old TLS-drop (`PROVISIONED`) for the same hosts, with
+only `portal` answering this way consistently. A genuine public launch does
+not flap between 28/29 "live" and 0/29 within minutes with no origin content
+ever served; an edge access rule that sometimes answers with a decoy 404
+instead of dropping the connection does. So `check.sh` now inspects the body
+and headers of any HTTP response before trusting it: a response carrying the
+`x-protected-by: ... WEDOS ...` header and `WEDOS.protection` branding in the
+body is classified `EDGE_BLOCKED`, not `LIVE` — real (unlike `BLOCKED`/
+`DNS_TIMEOUT`, the check did see something), but not a platform signal, so it
+never sets `first_live` and never counts toward the live tally.
 
 Both `NXDOMAIN` and `DNS_TIMEOUT` are decided from curl's own attempt during
 the same HTTP probe that already decides `LIVE`/`PROVISIONED`/`BLOCKED` — not

@@ -10,7 +10,7 @@ retrieved: 2026-09-06
 purpose: Reachability baseline for the SRP production environment. The routine re-checks all 29 hosts, records the first successful HTTP response per host, detects new hosts appearing in the zone, and verifies the assumed country-to-CSIRT mapping once the platform answers.
 note: Only an HTTP status code relayed from upstream counts as live. TCP and TLS are recorded but are forged by an intercepting egress proxy in the monitoring environment — see "Why a TLS handshake is not evidence" below.
 last_check: 2026-09-11
-last_change: 2026-09-10
+last_change: 2026-09-11
 ---
 
 # CRA SRP — Production domain reachability baseline
@@ -31,8 +31,8 @@ when that changes.
 | Edge | `185.8.236.7`, `185.8.236.8` (WEDOS Global, CZ) |
 | State | provisioned, not yet released |
 | Expected go-live | in the coming days, at the latest **11 September 2026** |
-| Last check | 2026-09-10 |
-| Last change | 2026-09-10 (Croatia's coordinator contact link changed domain) |
+| Last check | 2026-09-11 |
+| Last change | 2026-09-11 (edge began answering some requests with its own branded block page instead of dropping the connection — not the platform; see Delta history) |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
 
@@ -228,6 +228,36 @@ login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-09-11 09:41 UTC (vs. 2026-09-10 10:23 UTC)
+
+An early run this morning (09:22 UTC) got a real, unforged HTTP response —
+genuine Sectigo certificate, no proxy artifact — from 28 of 29 hosts,
+momentarily reading as the go-live this monitor exists to catch. It was not.
+
+**Watch** — every one of those 28 responses (HTTP 456) was WEDOS's own
+templated error page ("WEDOS.protection – 404 Not Found"), generated entirely
+at the edge: its diagnostic block read `Server: - / ip_denied`, an empty
+origin field, meaning the request never reached the SRP application. A second
+run eight minutes later, and several manual checks in between, mostly got the
+old TLS-drop (`PROVISIONED`) for the same hosts, with only `portal`
+answering this way consistently — a genuine public launch does not flap
+between 28/29 "live" and 0/29 within minutes with no origin content ever
+served. Treat this as the edge occasionally answering access-denied requests
+with a decoy 404 instead of dropping the connection, not as any change to the
+platform's own availability.
+**Fixed** — `check.sh` now inspects the headers and body of any HTTP response
+before trusting it: WEDOS's own branding (`x-protected-by` header,
+`WEDOS.protection` in the body) is classified `EDGE_BLOCKED`, not `LIVE`. It
+never sets `first_live` and never counts toward the live tally, but — unlike
+`BLOCKED`/`DNS_TIMEOUT` — it is real information, so it does update `state`
+and is visible in `status.md`. See `srp-domains/check.sh`'s header and
+`srp-domains/README.md` for the full account.
+**Unchanged** — reachability under the corrected classification: 0/29 live,
+1 `EDGE_BLOCKED` (`portal`), the rest `PROVISIONED`/`DNS_TIMEOUT`. CSIRT
+coordinator list re-checked against ENISA's page (200 OK, "Last updated: 10
+September 2026" — unmoved since the last check) — matches the table above
+exactly, no changes.
 
 ### 2026-09-10 10:23 UTC (vs. 2026-09-09 02:04 UTC)
 
