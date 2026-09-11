@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.3 (page footer: last update 10/09/2026)"
-retrieved: 2026-09-10 (fetched 22:13 UTC)
+retrieved: 2026-09-11 (fetched 08:09 UTC)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -41,6 +41,10 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-11 08:09 UTC (vs. 2026-09-10 22:13 UTC)
+
+Page still returns HTTP 200 at `cra-srp-glossary2`, fetched alongside all nine other tracked SRP pages in the same run (one of which — the FAQ's Q31 PGP-key link changing file type — changed this time; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 39 fields re-verified row by row against the raw `<table>` structure, footer still "Version 1.3. Last update: 10 September 2026". `retrieved` updated; `last_check` and `last_change` unchanged (`last_check` already 2026-09-11, `last_change` stays 2026-09-10 since nothing here changed).
 
 ### 2026-09-10 22:13 UTC (vs. 2026-09-10 19:07 UTC)
 
@@ -373,3 +377,4 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 - 2026-09-10 (14:07 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all nine other tracked SRP pages in the same run (two of which changed cosmetically this time — a main-page FAQ-card blurb quoted in full for the first time, and the Terms and Conditions link losing a trailing space; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 39 fields re-verified row by row, footer still "Version 1.3. Last update: 10 September 2026". `retrieved` updated; `last_check` and `last_change` unchanged.
 - 2026-09-10 (15:10 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all nine other tracked SRP pages in the same run (one of which changed cosmetically this time — the main page's AR User Manual download card `href`, malformed since first capture, was fixed; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 39 fields re-verified row by row against the raw table structure, footer still "Version 1.3. Last update: 10 September 2026". `retrieved` updated; `last_check` and `last_change` unchanged.
 - 2026-09-10 (22:13 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all nine other tracked SRP pages in the same run (one of which changed this time — FAQ Q17 gained a closing sentence; two editorial first-time transcriptions also noted on the main page; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 39 fields re-verified row by row against the raw table structure, footer still "Version 1.3. Last update: 10 September 2026". `retrieved` updated; `last_check` and `last_change` unchanged.
+- 2026-09-11 (08:09 UTC): first check of the day. Page fetched at `cra-srp-glossary2`, HTTP 200, alongside all nine other tracked SRP pages in the same run (one of which changed this time — the FAQ's Q31 PGP-key link changed file extension from `.zip` to `.txt`; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 39 fields re-verified row by row against the raw table structure, footer still "Version 1.3. Last update: 10 September 2026". `retrieved` updated to 2026-09-11; `last_check` already 2026-09-11; `last_change` left at 2026-09-10 since nothing on this page changed.
