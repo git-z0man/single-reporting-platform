@@ -434,3 +434,32 @@ timestamp_utc,host,dns,tcp443,tls,http_code,note
 2026-09-11T09:41:49Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to se.cra-srp.enisa.europa.eu:443  
 2026-09-11T09:41:49Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to si.cra-srp.enisa.europa.eu:443  
 2026-09-11T09:41:49Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to sk.cra-srp.enisa.europa.eu:443  
+2026-09-11T10:35:24Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,EDGE_BLOCKED http 456 (WEDOS.protection edge page, not origin)
+2026-09-11T10:35:24Z,auth.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,EDGE_BLOCKED http 456 (WEDOS.protection edge page, not origin)
+2026-09-11T10:35:24Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,EDGE_BLOCKED http 456 (WEDOS.protection edge page, not origin)
+2026-09-11T10:35:24Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,EDGE_BLOCKED http 456 (WEDOS.protection edge page, not origin)
+2026-09-11T10:35:24Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,EDGE_BLOCKED http 456 (WEDOS.protection edge page, not origin)
+2026-09-11T10:35:24Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,EDGE_BLOCKED http 456 (WEDOS.protection edge page, not origin)
+2026-09-11T10:35:24Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,EDGE_BLOCKED http 456 (WEDOS.protection edge page, not origin)
+2026-09-11T10:35:24Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,456,EDGE_BLOCKED http 456 (WEDOS.protection edge page, not origin)
+2026-09-11T10:35:24Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T10:35:24Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,401,EDGE_BLOCKED http 401 (WEDOS.protection edge page, not origin)
+2026-09-11T10:35:24Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,401,EDGE_BLOCKED http 401 (WEDOS.protection edge page, not origin)
+2026-09-11T10:35:24Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T10:35:24Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,401,EDGE_BLOCKED http 401 (WEDOS.protection edge page, not origin)
+2026-09-11T10:35:24Z,gr.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,hr.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,hu.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,ie.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,it.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,lt.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,lu.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,lv.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,mt.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,nl.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,pl.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,pt.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,ro.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,se.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,si.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T10:35:24Z,sk.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind

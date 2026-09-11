@@ -26,13 +26,13 @@ when that changes.
 | | |
 |---|---|
 | Hosts watched | **29** (portal, auth, 27 Member State instances) |
-| Live | **0 / 29** |
+| Live | **0 / 29 confirmed** — `dk` and `fi` briefly read `LIVE` (HTTP 307) at 10:35:24 UTC and reverted to unreachable within the same run's follow-up checks; not treated as a confirmed launch, see Delta history |
 | Zone | `cra-srp.enisa.europa.eu` — independently delegated |
 | Edge | `185.8.236.7`, `185.8.236.8` (WEDOS Global, CZ) |
-| State | provisioned, not yet released |
+| State | provisioned, not yet released — edge behaviour unstable on the stated go-live date |
 | Expected go-live | in the coming days, at the latest **11 September 2026** |
 | Last check | 2026-09-11 |
-| Last change | 2026-09-11 (edge began answering some requests with its own branded block page instead of dropping the connection — not the platform; see Delta history) |
+| Last change | 2026-09-11 (two hosts briefly returned a genuine non-edge HTTP response and 19 others went dark to DNS; see Delta history) |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
 
@@ -228,6 +228,36 @@ login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-09-11 10:35 UTC (vs. 2026-09-11 09:41 UTC)
+
+For the first time, two hosts returned a genuine, non-WEDOS-branded HTTP
+response — but it did not hold, and 16 others went dark to DNS mid-run.
+
+**New** — `dk` and `fi` answered `HTTP 307` with no `WEDOS.protection`
+branding at 10:35:24 UTC; `check.sh` set `first_live` for both, since this is
+exactly the response shape the monitor exists to catch. Eleven follow-up
+requests to `dk`, `fi`, `portal` and `auth` over the following ~20 minutes
+found no repeat: all four reverted to a plain connection timeout
+(`PROVISIONED`), with `portal` briefly answering `502` (WEDOS-branded, see
+next) in between. A launch that flaps this way within minutes, with no stable
+content ever served, does not meet the bar this baseline applied to the
+2026-09-11 09:41 finding either — **not treated as a confirmed public
+launch**, though `first_live` is left exactly as the script recorded it. This
+needs the next run's close attention: today is ENISA's stated go-live date.
+**Watch** — `portal`'s WEDOS edge page changed shape: alongside the familiar
+`456`/`ip_denied` decoy it also answered `502 "Origin server error"` (still
+`WEDOS.protection`-branded, still `EDGE_BLOCKED`) — the diagnostic block this
+time names an actual, failing origin rather than an empty one. `ee`, `es`,
+`fr` also got a different WEDOS code (`401`) than the rest (`456`). Possible
+signs of a rollout in progress behind the edge, not a confirmed one.
+**Editorial** — 16 of 29 hosts (`gr` through `sk`) came back `DNS_TIMEOUT`
+this run; check was blind for them, prior states left untouched. CSIRT
+coordinator list re-checked (200 OK, "Last updated: 10 September 2026",
+unmoved) — matches the table above exactly, no changes.
+**Unchanged** — Section-4 verification (portal role, SSO identity,
+per-country cross-check, backend separation) could not be attempted: none of
+the entry points held still long enough for a second look.
 
 ### 2026-09-11 09:41 UTC (vs. 2026-09-10 10:23 UTC)
 
