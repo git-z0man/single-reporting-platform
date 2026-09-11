@@ -62,6 +62,16 @@
 > of diffing them against a baseline. This is the same failure mode the
 > eighth-page note above already describes, now recurring with two more pages
 > at once.
+>
+> **Pending in the Routines UI (added 2026-09-11 11:10 UTC): an eleventh
+> tracked page.** The same "Content" navigation walk turned up one more page
+> not in either baseline: "CRA SRP - AR User Tutorial Video". Added to
+> `enisa-srp-faq-baseline.md` as `ar_user_tutorial_video_url`, and the section
+> below updated to list it as page 11. The live Routine's stored prompt still
+> says "all ten" and lists only ten items; paste the updated section 1 below
+> into the Routines UI so the next scheduled run checks the new page too —
+> until then it will keep re-discovering it from scratch every run instead of
+> diffing it against a baseline. Same failure mode as the two notes above.
 
 ---
 
@@ -84,7 +94,7 @@ Do NOT hard-code a state branch name. The platform assigns this Routine's outcom
 
 Never push to `main`. Never create a new per-run branch when the session already gave you one.
 
-## 1. The pages to check — all ten
+## 1. The pages to check — all eleven
 
 Both baseline files carry the authoritative URL list in their frontmatter. Read them first and use the URLs recorded there; the list below is what it should be, but the files win if they disagree (they get updated when ENISA moves a page).
 
@@ -99,6 +109,7 @@ Tracked in `enisa-srp-faq-baseline.md`:
 7. Particular Exceptional Circumstances (PEC) guidance — `guidance_urls[3]` (added 2026-09-08, found via the "Content" navigation — see below)
 9. CRA SRP - AR User Manual — `ar_user_manual_url` (added 2026-09-10, found the same way)
 10. CRA Single Reporting Platform - Terms and Conditions — `terms_conditions_url` (added 2026-09-10, found the same way)
+11. CRA SRP - AR User Tutorial Video — `ar_user_tutorial_video_url` (added 2026-09-11, found the same way)
 
 Tracked in `enisa-srp-glossary-baseline.md`:
 
@@ -126,7 +137,7 @@ The Glossary page has already moved once: on 2026-09-07 the URL that had been tr
 - Only if no replacement address exists is the page genuinely unavailable. Record that in the `status:` line with the UTC timestamp, and report it. Both directions matter: 200 → non-200 and non-200 → 200.
 - Correct an earlier wrong diagnosis in `status:` rather than overwriting it silently. The frontmatter is what the next run reads; a stale wrong URL there produces a false reachability finding a week later.
 - Only when the page returns 200 do you diff its content and update the tables, `page_version`, and `retrieved`.
-- Check the other nine pages in the same run before concluding anything: a Glossary-only failure means ENISA moved, is editing, or unpublished that page; all ten failing means a site-wide outage.
+- Check the other ten pages in the same run before concluding anything: a Glossary-only failure means ENISA moved, is editing, or unpublished that page; all eleven failing means a site-wide outage.
 
 Note that `enisa-srp-faq-baseline.md` also carries a deliberately trimmed summary table of the Glossary fields (in Q16 and its "CRA SRP Glossary" section). That summary is NOT the record — never reconstruct the full baseline from it, and keep the two consistent when the Glossary changes. It also repeats the Glossary URL in prose — when the page moves, update those occurrences too.
 
@@ -191,7 +202,7 @@ Rules for it:
 
 ### Nothing changed anywhere
 
-Only when all ten pages came back unchanged. Read `last_check` as it stands on `origin/main`:
+Only when all eleven pages came back unchanged. Read `last_check` as it stands on `origin/main`:
 
     git show origin/main:enisa-srp-faq-baseline.md | sed -n 's/^last_check: //p' | head -1
 
