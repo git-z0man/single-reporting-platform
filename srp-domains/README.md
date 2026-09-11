@@ -140,10 +140,13 @@ Coordinators](https://www.enisa.europa.eu/topics/product-security/single-reporti
 the platform to go live. Per-country evidence is in `evidence/`. What remains
 open at go-live is whether the running platform agrees with that list.
 
-It also settles the open infrastructure question: all 29 labels resolve to the
-same anycast pair, but that pair is a filtering proxy and not the origin, so
-whether each Member State has a separate backend is only answerable from behind
-the edge.
+It also settles the open infrastructure question: all 29 labels resolve into
+the same 45-address WEDOS pool (`185.8.236.33`-`.77`), but that pool is a
+filtering proxy and not the origin, so whether each Member State has a separate
+backend was only answerable once the platform answered. It did, on 2026-09-11:
+one shared frontend behind every label, with per-country separation expressed
+as per-country OAuth clients rather than separate deployments. The detail is in
+`srp-domains-baseline.md`.
 
 **Publicly visible signals only — no login attempts, no form input, no
 authentication.**
