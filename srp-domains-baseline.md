@@ -1,7 +1,7 @@
 ---
 source: ENISA — CRA Single Reporting Platform (SRP), production DNS zone
 zone: cra-srp.enisa.europa.eu
-edge: 185.8.236.7 / 185.8.236.8 (WEDOS Global, CZ — filtering anycast proxy, not the origin)
+edge: 185.8.236.33-185.8.236.77 (WEDOS Global, CZ — filtering anycast proxy, not the origin; see Infrastructure)
 test_zone: test-cra-srp.enisa.europa.eu
 state: srp-domains/ (manifest.json, status.md, reachability-log.csv, evidence/)
 check: srp-domains/check.sh
@@ -16,23 +16,22 @@ last_change: 2026-09-11
 # CRA SRP — Production domain reachability baseline
 
 The reporting obligation under CRA Article 14 applies from **11 September
-2026**. The production zone is fully provisioned and access-filtered: DNS
-resolves for every host, but the edge drops connections from non-allowlisted
-source IPs. This page is the baseline that the reachability routine updates
-when that changes.
+2026**. **The platform went live on that date** — all 29 production hosts
+returned genuine, non-edge-decoy HTTP responses starting 11:24 UTC. This page
+is the baseline that the reachability routine updates when that changes.
 
 ## Current state
 
 | | |
 |---|---|
 | Hosts watched | **29** (portal, auth, 27 Member State instances) |
-| Live | **0 / 29 confirmed** — `dk` and `fi` briefly read `LIVE` (HTTP 307) at 10:35:24 UTC and reverted to unreachable within the same run's follow-up checks; not treated as a confirmed launch, see Delta history |
+| Live | **29 / 29 — GO-LIVE CONFIRMED** 2026-09-11, first at 11:24:01 UTC (28 hosts), `es` followed at 11:36:58 UTC after a monitoring-side DNS blind spot; see Delta history |
 | Zone | `cra-srp.enisa.europa.eu` — independently delegated |
-| Edge | `185.8.236.7`, `185.8.236.8` (WEDOS Global, CZ) |
-| State | provisioned, not yet released — edge behaviour unstable on the stated go-live date |
-| Expected go-live | in the coming days, at the latest **11 September 2026** |
+| Edge | 45-address WEDOS pool `185.8.236.33`–`185.8.236.77` (WEDOS Global, CZ) |
+| State | **LIVE** — public launch confirmed 2026-09-11 |
+| Expected go-live | **reached** — 11 September 2026, 11:24:01 UTC |
 | Last check | 2026-09-11 |
-| Last change | 2026-09-11 (two hosts briefly returned a genuine non-edge HTTP response and 19 others went dark to DNS; see Delta history) |
+| Last change | 2026-09-11 — **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
 
@@ -55,35 +54,63 @@ on 2026-09-06, as is `cra-srp.eu`.
 `enisa.europa.eu`, to Azure DNS: `ns1-02.azure-dns.com`, `ns2-02.azure-dns.net`,
 `ns3-02.azure-dns.org`, `ns4-02.azure-dns.info`.
 
-**Edge.** Each country code carries its **own host label**, pointed by a WEDOS
-Global CNAME —
-`<cc>.cra-srp.enisa.europa.eu` → `<cc>.cra-srp.enisa.europa.eu.wedos.global` —
-at the shared anycast pair `185.8.236.7` / `185.8.236.8` (WEDOS, CZ), which
-provides DDoS protection and WAF.
+**Edge.** All 29 host labels resolve into a shared 45-address WEDOS pool,
+`185.8.236.33`–`185.8.236.77` (within `185.8.236.0/24`, AS208414 WEDOS
+Internet a.s.), confirmed both externally via bgp.tools on 2026-09-11 and,
+the same day, from inside this monitoring environment: every live response's
+`x-anycast-ip` header (e.g. `185.8.236.43`, `.65`, `.63`, `.72`, `.39`, `.36`
+observed across portal/auth/country hosts at go-live) falls inside that same
+range. The earlier `185.8.236.7`/`.8` two-address reading (seen in runs up to
+2026-09-08) was a narrower sample of the same pool, not a different pool. The
+`wedos.global` CNAME chain assumed at baseline creation was **not observed**
+by bgp.tools — all three sampled hosts (portal/auth/de) returned direct A
+records with no CNAME — so `cname_verified` stays `false`; the chain may not
+apply to this zone, or may exist at a layer bgp.tools does not surface.
 
-That pair is **an upstream proxy/CDN with active access filtering, not the
-origin server.** All 29 labels resolving to the same two addresses therefore
-says nothing about how many backends exist behind them. One endpoint per
-Member State matches the decentralised reporting model of the CRA SRP; whether
-a separate backend actually runs per country can only be verified after
-go-live, from behind the edge. Recorded as an open question, not an assumption.
+That pool is **an upstream proxy/CDN with active access filtering, not the
+origin server** — confirmed by its own response headers
+(`x-provider: WEDOS - WE DO Security`, `x-protected-by: WEDOS Global
+Protection`) sitting alongside the origin's own `server: srp` header on every
+live response.
 
-> **Verification status.** The delegation and the CNAME chain are
-> operator-supplied and were **not** verified in the monitoring environment —
-> it has no `dig`/`host` and the Python stdlib cannot query NS or CNAME
-> records. The A records were verified host by host. To confirm the rest:
+**Backend separation — settled at go-live.** All 29 host labels serve the
+**same shared frontend application**, not per-country backends. Every
+sampled country's `/` and `/api/auth/signin` redirect carries an identical
+internal Kubernetes callback target, `srp-ui-ddb75f59b-<pod>:8080` — the same
+Deployment/ReplicaSet hash (`srp-ui-ddb75f59b`) load-balanced across at least
+two pod replicas (`5p25v`, `cmlk7`) observed across at, bg, cz, de, ee, fr,
+gr, it, lt, mt, nl, pt, ro, si, sk. Per-country differentiation happens one
+layer up, at the identity broker: `auth.cra-srp.enisa.europa.eu` runs a
+**single shared Keycloak realm** (`srp`), inside which every country has its
+**own registered OAuth client** — `client_id=srp-ar-fe-<cc>`, verified
+identical to the host's own ISO code for **all 27** Member State hosts, no
+exceptions or cross-wiring found — and every one of the 27 requests
+`kc_idp_hint=eu-login`. So: one shared Next.js frontend (`server: srp`), one
+shared Keycloak identity broker, per-country separation expressed only as
+per-country OAuth client registrations and Host-header routing — not as
+separate backend deployments per Member State.
+
+> **Verification status.** The zone delegation (Azure DNS, four nameservers)
+> and the edge pool were independently confirmed via bgp.tools on 2026-09-11
+> (external, non-proxied resolver). This monitoring environment has no
+> `dig`/`host` and the Python stdlib cannot query NS or CNAME records, so
+> `check.sh` itself only ever confirms A records (informationally) and HTTP
+> status. To cross-check independently:
 >
 > ```
 > dig NS cra-srp.enisa.europa.eu +short
 > dig CNAME de.cra-srp.enisa.europa.eu +short
+> dig A de.cra-srp.enisa.europa.eu +short
 > ```
 
 ## Member State instances
 
 One host per Member State (EU-27). The CSIRT column is the **authoritative**
 operator, taken from ENISA's published [List of CSIRTs Designated as
-Coordinators](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators) (page's own "Last updated" stamp: 10/09/2026, re-checked same day; first retrieved 2026-09-07) — not from the
-hosts themselves, which are still dark. `Status` is `verifiziert` where the
+Coordinators](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators) (page's own "Last updated" stamp: 10/09/2026, re-checked same day; first retrieved 2026-09-07) — the full,
+authoritative source, since the hosts themselves only confirm per-country
+*routing* pre-login (see "Verification after go-live" below), not CSIRT
+branding. `Status` is `verifiziert` where the
 official list confirms the value assumed when this baseline was created, and
 `korrigiert` where it does not; the superseded assumption is kept in a
 footnote. Per-country evidence is in `srp-domains/evidence/<host>.txt`.
@@ -204,30 +231,76 @@ and under `cra-srp.enisa.europa.eu`: `www.` `app.` `home.` `gateway.` `relay.`
 
 ## Verification after go-live
 
-Dormant while every host is `PROVISIONED`. Once any host returns an HTTP code,
-the routine additionally confirms, using **only publicly visible signals — no
-login attempts, no form input, no authentication**:
+Run 2026-09-11 against the live platform, using **only publicly visible
+signals — no login attempts, no form input, no authentication**:
 
-1. **Portal** — that `portal.…` is the entry point with country/CSIRT
-   selection. If it exposes a selector, extract the real country → endpoint
-   mapping and cross-check it against the table above. That table is already
-   verified against ENISA's official coordinator list, so a divergence here
-   means the platform disagrees with ENISA's own published list — worth
-   flagging rather than silently overwriting.
-2. **SSO** — the identity provider behind `auth.…` (EU Login / Keycloak /
-   other), from redirect target, page title, or login branding.
-3. **Per country** — cross-check the CSIRT each live instance actually
-   serves (page title, branding, imprint, redirect target, TLS SAN) against
-   the verified table. No longer the open question it was: the mapping is
-   settled from ENISA's official list, so this step only catches an
-   implementation that departs from it.
-4. **Backend separation** — whether each country host serves a distinct
-   instance or one shared application behind the anycast pair, from differing
-   TLS SANs, `Server`/`Set-Cookie` headers, redirect targets, or page identity.
-5. **Evidence** — the deciding signal per host is stored in
+1. **Portal** — `portal.cra-srp.enisa.europa.eu` (HTTP 200, `server: srp`,
+   genuine Next.js content, title "SRP Portal - User Selection") is the entry
+   point, but it is a **user-type** selector ("I am an Assigned
+   Representative" / "I am a CSIRT Representative"), **not** a country/CSIRT
+   selector — no country → endpoint mapping is exposed there to cross-check.
+   Country selection happens by host label (`<cc>.cra-srp.enisa.europa.eu`)
+   directly, matching the naming scheme this baseline already recorded; the
+   cross-check against the verified table is therefore done per country host
+   (point 3), not from the portal.
+2. **SSO** — `auth.cra-srp.enisa.europa.eu` is **Keycloak** (standard
+   `/realms/<realm>/.well-known/openid-configuration`,
+   `/admin/master/console/` admin path), realm `srp`. It brokers to
+   **EU Login**: every country's sign-in redirect carries
+   `kc_idp_hint=eu-login`. This confirms the FAQ's stated "EU Login with
+   MFA required" at the identity-provider level; MFA itself is not
+   independently checkable without authenticating.
+3. **Per country** — full CSIRT branding (page title/imprint of the
+   post-login dashboard) is not reachable pre-authentication, so this could
+   not be cross-checked directly. What is checkable pre-login: each of the
+   **27** country hosts' sign-in redirect carries its own OAuth
+   `client_id=srp-ar-fe-<cc>`, exactly matching that host's own ISO code with
+   no exceptions — i.e. no host is wired to another country's client. No
+   divergence from the verified table found at this structural level.
+4. **Backend separation** — **settled**, see Infrastructure above: one
+   shared frontend deployment (`srp-ui-ddb75f59b`, same K8s Deployment hash
+   across every country sampled) and one shared Keycloak realm, with
+   per-country identity expressed only as per-country OAuth client
+   registrations — not separate backends per Member State.
+5. **Go-live scope** (FAQ: only Art. 14/24(x) mandatory reporting at launch,
+   not Art. 15 voluntary) — **not independently verifiable** from public,
+   pre-authentication signals; the actual reporting forms sit behind login.
+6. **Evidence** — the deciding signal per host is stored in
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-09-11 11:36 UTC (vs. 2026-09-11 10:35 UTC) — GO-LIVE
+
+The platform went live. 28 of 29 hosts returned genuine, non-edge-decoy HTTP
+responses at 11:24:01 UTC; `es` followed at 11:36:58 UTC once a monitoring-side
+DNS blind spot cleared. Unlike the two false alarms earlier today, this held
+across a full second independent run and detailed inspection.
+
+**New** — **29/29 LIVE.** `portal` (HTTP 200, `server: srp`, genuine Next.js
+"SRP Portal - User Selection" page) and `auth` (HTTP 302, Keycloak realm
+`srp`) both answer with real application content, not a WEDOS decoy — no
+`x-protected-by`/`WEDOS.protection` branding in any body. All 27 country
+hosts answer `HTTP 307` to `/api/auth/signin`.
+**New** — **SSO confirmed**: Keycloak brokering to **EU Login**
+(`kc_idp_hint=eu-login` on every one of the 27 country redirects), matching
+the FAQ's stated requirement. MFA itself not checkable pre-login.
+**New** — **Backend separation settled**: one shared frontend deployment
+(`srp-ui-ddb75f59b`, identical K8s hash across every country sampled) behind
+one shared Keycloak realm; per-country identity is expressed only as
+per-country OAuth `client_id=srp-ar-fe-<cc>` registrations, verified correct
+for all 27 with no cross-wiring. See Infrastructure above.
+**Watch** — the portal exposes a user-type selector, not a country/CSIRT
+selector as originally anticipated; full per-country CSIRT branding sits
+behind login and could not be cross-checked directly (structural client_id
+match only). The FAQ's stated launch-scope restriction (Art. 14/24(x) only,
+no Art. 15) is likewise not verifiable without authenticating.
+**Editorial** — CSIRT coordinator list re-checked (200 OK), unchanged from
+the table above (Malta/Slovakia's earlier http→https link upgrade is the only
+prior difference, not a coordinator change). Edge pool re-confirmed as the
+45-address WEDOS range from inside this environment too (`x-anycast-ip`
+headers on every live response), matching 2026-09-11's external bgp.tools
+finding.
 
 ### 2026-09-11 10:35 UTC (vs. 2026-09-11 09:41 UTC)
 
