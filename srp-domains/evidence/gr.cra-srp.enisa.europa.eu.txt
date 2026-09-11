@@ -16,3 +16,13 @@ signal:
 
 previously assumed (superseded):
   National CSIRT Greece (NCSA)
+
+go_live_check_2026_09_11T11_36_58Z:
+  Host LIVE (HTTP 307, server: srp — genuine SRP application, not the WEDOS
+  edge decoy). Sign-in redirect: client_id=srp-ar-fe-gr, kc_idp_hint=eu-login
+  — matches this host's own ISO code exactly, no cross-wiring to another
+  country's client found. Structural (routing) confirmation only: full CSIRT
+  branding/imprint sits behind EU Login authentication and was not reachable
+  from public, pre-login signals, so this does not by itself confirm the
+  CSIRT named above — it confirms the platform routes this host to its own,
+  correctly-scoped country instance.

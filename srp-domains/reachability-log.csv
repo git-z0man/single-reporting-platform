@@ -459,7 +459,61 @@ timestamp_utc,host,dns,tcp443,tls,http_code,note
 2026-09-11T10:35:24Z,nl.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
 2026-09-11T10:35:24Z,pl.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
 2026-09-11T10:35:24Z,pt.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T11:24:01Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,200,LIVE http 200
+2026-09-11T11:24:01Z,auth.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,302,LIVE http 302
+2026-09-11T11:24:01Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,es.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T11:24:01Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:24:01Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
 2026-09-11T10:35:24Z,ro.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
 2026-09-11T10:35:24Z,se.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
 2026-09-11T10:35:24Z,si.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
 2026-09-11T10:35:24Z,sk.cra-srp.enisa.europa.eu,timeout,unreliable,unreliable,000,DNS_TIMEOUT DNS never answered (local resolver and curl both timed out) - check was blind
+2026-09-11T11:36:58Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-09-11T11:36:58Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
