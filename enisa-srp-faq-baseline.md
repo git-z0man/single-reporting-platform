@@ -13,17 +13,17 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-11 (fetched 16:08 UTC)
-guidance_retrieved: 2026-09-11 (fetched 16:08 UTC, unchanged since 11:10 UTC)
-glossary_retrieved: 2026-09-11 (fetched 16:08 UTC, unchanged since 10:09 UTC)
-csirt_list_retrieved: 2026-09-11 (fetched 16:08 UTC, unchanged since 11:10 UTC)
-ar_user_manual_retrieved: 2026-09-11 (fetched 16:08 UTC, unchanged since first capture at 10:12 UTC)
-terms_conditions_retrieved: 2026-09-11 (fetched 16:08 UTC, unchanged since the trailing space was lost at 14:07 UTC)
-ar_user_tutorial_video_retrieved: 2026-09-11 (fetched 16:08 UTC, unchanged since first capture at 11:10 UTC)
+retrieved: 2026-09-12 (fetched 01:13 UTC)
+guidance_retrieved: 2026-09-12 (fetched 01:13 UTC, unchanged since 11:10 UTC)
+glossary_retrieved: 2026-09-12 (fetched 01:13 UTC, unchanged since 10:09 UTC)
+csirt_list_retrieved: 2026-09-12 (fetched 01:13 UTC)
+ar_user_manual_retrieved: 2026-09-12 (fetched 01:13 UTC, unchanged since first capture at 10:12 UTC)
+terms_conditions_retrieved: 2026-09-12 (fetched 01:13 UTC, unchanged since the trailing space was lost at 14:07 UTC)
+ar_user_tutorial_video_retrieved: 2026-09-12 (fetched 01:13 UTC, unchanged since first capture at 11:10 UTC)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-12
-last_change: 2026-09-11
+last_change: 2026-09-12
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
@@ -31,6 +31,22 @@ last_change: 2026-09-11
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-12 01:13 UTC (vs. 2026-09-11 16:08 UTC)
+
+A single punctuation drop on the CSIRT list page; all ten other pages, including the Glossary's 39 fields re-verified cell by cell, are byte-for-byte unchanged.
+
+**Editorial**
+
+One punctuation fix: the CSIRT list page's descriptive note lost its trailing full stop, now reading "...in the meaning of the Cyber Resilience Act (CRA)" with no period — see the CSIRT-list section below for the full sentence and its wording history.
+
+**Watch**
+
+- AR Notification Submission and Update's Expected-results text for the 72-hour Notification state now shows a stray space before the closing quote in the raw HTML — `"72h Submitted under PEC "` — where this file's own quoted text has none. Not committed as a change: this guidance page has not previously been verified at this character-level precision, so it is unclear whether the space is new or was simply never caught. Re-check at this precision next run.
+
+**Unchanged**
+
+FAQ Q1–Q31 (only Q14 carries `[UPDATED]`, "Updated: 11 September 2026", Q27's `Art. 14(<s>3</s>1)` artifact and duplicated "under Art. 14 (3)" clause still present, zero `<table>` elements on Q16); CSIRT list otherwise unchanged (27 countries, same links, "Last updated: 10 September 2026"); all four guidance subpages (same stamps, same tracked defects); AR User Manual, Terms and Conditions, and AR User Tutorial Video pages byte for byte; main page (Content navigation still 9 entries, Resources cards incl. the NL Factsheet anomaly, "Access the CRA Single Reporting Platform" button); Glossary (still v1.3, 39 fields, re-verified field by field) — see `enisa-srp-glossary-baseline.md`.
 
 ### 2026-09-11 16:08 UTC (vs. 2026-09-11 15:10 UTC)
 
@@ -1032,7 +1048,7 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 
 ## List of CSIRTs Designated as Coordinators (new page, `csirt_list_url`)
 
-"Last updated: 10 September 2026" *(bumped 2026-09-10 10:12 UTC from "04 September 2026", correlating with the Croatia link change below)*. Page note: "This list provides the contacts of EU CSIRTs Designated as Coordinators, in the meaning of the Cyber Resilience Act (CRA)." *(reads "of EU" 2026-09-09 23:11 UTC; this file had recorded "to the" since first capture on 2026-09-07, but no intervening check re-quoted the sentence — only ever noting "27 countries, same links, Updated stamp" — so it is not certain this wording changed today rather than being missed earlier.)* One entry per EU Member State (27 total), each with one or more contact links:
+"Last updated: 10 September 2026" *(bumped 2026-09-10 10:12 UTC from "04 September 2026", correlating with the Croatia link change below)*. Page note: "This list provides the contacts of EU CSIRTs Designated as Coordinators, in the meaning of the Cyber Resilience Act (CRA)" *(trailing full stop dropped 2026-09-12 01:13 UTC; reads "of EU" since 2026-09-09 23:11 UTC — this file had recorded "to the" since first capture on 2026-09-07, but no intervening check re-quoted the sentence, so it is not certain that earlier wording change happened on 2026-09-09 rather than being missed sooner.)* One entry per EU Member State (27 total), each with one or more contact links:
 
 - Austria: https://www.cert.at/de/ueber-uns/kontakt/ ; https://www.cert.at/en/about-us/contact/
 - Belgium: https://ccb.belgium.be/contacts
