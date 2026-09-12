@@ -13,13 +13,13 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-12 (fetched 13:10 UTC, page-level stamp and six questions changed this run — see change log)
-guidance_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since 11:10 UTC on 2026-09-11)
-glossary_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since 06:11 UTC on 2026-09-12 — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since the Croatia markup change at 11:11 UTC)
-ar_user_manual_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since first capture at 10:12 UTC)
-terms_conditions_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since the trailing space was lost at 14:07 UTC)
-ar_user_tutorial_video_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since first capture at 11:10 UTC)
+retrieved: 2026-09-12 (fetched 17:11 UTC, unchanged since the go-live tense sweep at 13:10 UTC)
+guidance_retrieved: 2026-09-12 (fetched 17:11 UTC, AR User Registration and AR Notification Submission and Update stamps both moved to "12 September 2026" with no text change; AR Interface Functions and PEC unchanged since 11:10 UTC on 2026-09-11)
+glossary_retrieved: 2026-09-12 (fetched 17:11 UTC, unchanged since 06:11 UTC on 2026-09-12 — see `enisa-srp-glossary-baseline.md`)
+csirt_list_retrieved: 2026-09-12 (fetched 17:11 UTC, content unchanged since the Croatia markup change at 11:11 UTC; disclaimer sentence quoted for the first time this run)
+ar_user_manual_retrieved: 2026-09-12 (fetched 17:11 UTC, unchanged since first capture at 10:12 UTC)
+terms_conditions_retrieved: 2026-09-12 (fetched 17:11 UTC, unchanged since the trailing space was lost at 14:07 UTC)
+ar_user_tutorial_video_retrieved: 2026-09-12 (fetched 17:11 UTC, unchanged since first capture at 11:10 UTC)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-12
@@ -31,6 +31,22 @@ last_change: 2026-09-12
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-12 17:11 UTC (vs. 2026-09-12 13:10 UTC)
+
+Two guidance pages' own "Last updated" stamps jumped to today with no wording change anywhere on either page, and the CSIRT list's disclaimer sentence was quoted in this baseline for the first time; nothing else — main page, FAQ, the other two guidance pages, AR User Manual, Terms and Conditions, AR User Tutorial Video, and the Glossary — changed.
+
+**Watch**
+
+- AR User Registration's stamp moved "10 September 2026" → "12 September 2026", and AR Notification Submission and Update's moved "09 September 2026" → "12 September 2026"; word-for-word comparison found zero text changes on either page. Both subpages now disagree with their own still-unmoved main-page card dates (10 and 9 September respectively) — the same lagging-stamp pattern flagged repeatedly since first capture. Per this file's own note, a stamp move is a prompt to diff, not a signal on its own, and the diff came back clean.
+
+**Editorial**
+
+The CSIRT list carries a disclaimer sentence — "By clicking on these links, you will be redirected to an external website. Please note that external websites are subject to their own terms and privacy policies." — sitting directly under the page's date stamp in the raw HTML. This file had never quoted it; added now for fidelity. Provenance unclear, same as the Croatia markup finding: whether it is new or simply unrecorded until now cannot be determined from this run alone.
+
+**Unchanged**
+
+Main page (Content navigation still 9 entries, all cards and links as logged); FAQ Q1–Q31 wording and tags identical to the 13:10 UTC capture ("Updated: 12 September 2026", Q1 and Q27 artifacts intact); CSIRT list otherwise identical (27 countries, same links, "Last updated: 10 September 2026", Croatia and Germany cells exactly as logged); AR Interface Functions and PEC guidance pages (same stamps, same tracked defects); AR User Manual, Terms and Conditions, and AR User Tutorial Video pages byte for byte; Glossary unchanged (still v1.3, 39 fields, field 10's Example still `cryptoprocessing&nbsp; devices`, field v28's Example still empty, all other field content re-verified — see `enisa-srp-glossary-baseline.md`).
 
 ### 2026-09-12 13:10 UTC (vs. 2026-09-12 11:11 UTC)
 
@@ -1157,7 +1173,7 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 
 ## List of CSIRTs Designated as Coordinators (new page, `csirt_list_url`)
 
-"Last updated: 10 September 2026" *(bumped 2026-09-10 10:12 UTC from "04 September 2026", correlating with the Croatia link change below)*. Page note: "This list provides the contacts of EU CSIRTs Designated as Coordinators, in the meaning of the Cyber Resilience Act (CRA)" *(trailing full stop dropped 2026-09-12 01:13 UTC; reads "of EU" since 2026-09-09 23:11 UTC — this file had recorded "to the" since first capture on 2026-09-07, but no intervening check re-quoted the sentence, so it is not certain that earlier wording change happened on 2026-09-09 rather than being missed sooner.)* One entry per EU Member State (27 total), each with one or more contact links:
+"Last updated: 10 September 2026" *(bumped 2026-09-10 10:12 UTC from "04 September 2026", correlating with the Croatia link change below)*. Disclaimer *(noted for the first time 2026-09-12 17:11 UTC; present in the raw HTML immediately below the date stamp — provenance unclear, this file had not previously quoted it at this precision, so it cannot be said whether it is new or simply unrecorded until now)*: "By clicking on these links, you will be redirected to an external website. Please note that external websites are subject to their own terms and privacy policies." Page note: "This list provides the contacts of EU CSIRTs Designated as Coordinators, in the meaning of the Cyber Resilience Act (CRA)" *(trailing full stop dropped 2026-09-12 01:13 UTC; reads "of EU" since 2026-09-09 23:11 UTC — this file had recorded "to the" since first capture on 2026-09-07, but no intervening check re-quoted the sentence, so it is not certain that earlier wording change happened on 2026-09-09 rather than being missed sooner.)* One entry per EU Member State (27 total), each with one or more contact links:
 
 - Austria: https://www.cert.at/de/ueber-uns/kontakt/ ; https://www.cert.at/en/about-us/contact/
 - Belgium: https://ccb.belgium.be/contacts
@@ -1192,7 +1208,7 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 The four guidance documents above are separate subpages (URLs in `guidance_urls` in the frontmatter). The first three carry a disclaimer of the form "The information on this page is provided according to our current best knowledge and may be subject to change. Please ensure [that] you consult the latest available guidance before applying these instructions." (the "that" is present on two of the three — AR User Registration and AR Notification Submission and Update — and absent on AR Interface Functions; a pre-existing wording difference, not a detected change). The fourth, PEC, carries the same disclaimer without "that", plus an additional access-precondition note not present on the other three (see below). All four have now been rewritten into a second-person "Follow these steps…" style with numbered steps and screenshots (AR Notification Submission and Update was the last to receive this treatment, on 2026-09-09 22:12 UTC). **As of 2026-09-09 22:12 UTC**: AR User Registration shows "Last updated: 09/09/2026"; AR Notification Submission and Update shows "Last updated: 03 September 2026" (its first move since 2026-09-02); AR Interface Functions shows "Last updated: 09/09/2026" (unmoved since 21:07 UTC despite a further same-day rewrite); PEC shows "Last updated: 09 September 2026" — its first date stamp ever, gained this run. None of the four stamps is a reliable change signal; diff the text on every check.
 
 ### Guidance: CRA SRP - AR User registration
-URL: see `guidance_urls`. Page note: "Last updated: 10 September 2026" *(date moved 2026-09-10 13:11 UTC from "09 September 2026"; this time correlates with the two field drops below, unlike most of this page's earlier stamp moves).*
+URL: see `guidance_urls`. Page note: "Last updated: 12 September 2026" *(stamp moved 2026-09-12 17:11 UTC from "10 September 2026", with zero wording change anywhere on the page; the main page's own card for this guidance still reads "Updated: 10 September 2026", so the two now disagree — the same lagging-stamp pattern tracked since first capture).*
 
 This page provides information on the Assigned Representative (AR) user registration in the SRP. It is intended for AR users (Primary and Secondary). *(singular "Representative", new 2026-09-10 00:10 UTC — was "Representatives"; the main page's own "User guidance" card blurb for this page still reads "Representatives", plural, so the two now disagree.)*
 
@@ -1213,7 +1229,7 @@ Follow this procedure to register on the SRP as a Secondary AR using an email in
 - Expected result: "Registration is completed and you become a Secondary AR for the relevant manufacturer. Your system role is displayed as 'AR Backup User' and your status is set to 'Active'. If registration is not completed within 7 days of the invitation being sent, the invitation expires and the user status becomes 'Invitation Expired' in the SRP." *(reworded; same substance — still 7 days, same role/status names.)*
 
 ### Guidance: CRA SRP - AR Notification submission and update
-URL: see `guidance_urls`. Page note: "Last updated: 09 September 2026" *(bumped 2026-09-10 10:12 UTC from "03 September 2026"; was previously moved for the first time since 2026-09-02, in the 2026-09-09 22:12 UTC rewrite that also restyled the page — see change log)*.
+URL: see `guidance_urls`. Page note: "Last updated: 12 September 2026" *(stamp moved 2026-09-12 17:11 UTC from "09 September 2026", with zero wording change anywhere on the page; the main page's own card for this guidance still reads "Updated: 9 September 2026", so the two now disagree).*
 
 This page provides information on the Assigned Representatives (AR) submission and update of notifications in the SRP. It is intended for AR users (Primary and Secondary/Backup).
 
