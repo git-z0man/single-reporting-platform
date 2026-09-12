@@ -13,13 +13,13 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-12 (fetched 08:11 UTC, unchanged since the closing-note link drop at 07:12 UTC)
-guidance_retrieved: 2026-09-12 (fetched 08:11 UTC, unchanged since 11:10 UTC on 2026-09-11)
-glossary_retrieved: 2026-09-12 (fetched 08:11 UTC, unchanged since 06:11 UTC on 2026-09-12 — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-09-12 (fetched 08:11 UTC, stray `<br>&nbsp;` markup appeared after "Germany" this run — see change log)
-ar_user_manual_retrieved: 2026-09-12 (fetched 08:11 UTC, unchanged since first capture at 10:12 UTC)
-terms_conditions_retrieved: 2026-09-12 (fetched 08:11 UTC, unchanged since the trailing space was lost at 14:07 UTC)
-ar_user_tutorial_video_retrieved: 2026-09-12 (fetched 08:11 UTC, unchanged since first capture at 11:10 UTC)
+retrieved: 2026-09-12 (fetched 10:13 UTC, empty `<strong>&nbsp;</strong>` tag appeared in Q1 this run — see change log)
+guidance_retrieved: 2026-09-12 (fetched 10:13 UTC, unchanged since 11:10 UTC on 2026-09-11)
+glossary_retrieved: 2026-09-12 (fetched 10:13 UTC, unchanged since 06:11 UTC on 2026-09-12 — see `enisa-srp-glossary-baseline.md`)
+csirt_list_retrieved: 2026-09-12 (fetched 10:13 UTC, unchanged since the stray `<br>&nbsp;` markup at 08:11 UTC)
+ar_user_manual_retrieved: 2026-09-12 (fetched 10:13 UTC, unchanged since first capture at 10:12 UTC)
+terms_conditions_retrieved: 2026-09-12 (fetched 10:13 UTC, unchanged since the trailing space was lost at 14:07 UTC)
+ar_user_tutorial_video_retrieved: 2026-09-12 (fetched 10:13 UTC, unchanged since first capture at 11:10 UTC)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-12
@@ -31,6 +31,18 @@ last_change: 2026-09-12
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-12 10:13 UTC (vs. 2026-09-12 08:11 UTC)
+
+All eleven pages returned HTTP 200 and were confirmed as real page bodies. One markup-only change, on the FAQ page's Q1; everything else — main page, CSIRT list, all four guidance pages, AR User Manual, Terms and Conditions, AR User Tutorial Video, and the Glossary — unchanged.
+
+**Editorial**
+
+Q1 gained an empty `<strong>&nbsp;</strong>` tag between "(SRP)" and "is": `...Single Reporting Platform (SRP)<strong>&nbsp;</strong>is an online tool...`, was `...Single Reporting Platform (SRP) is an online tool...`. Invisible in rendering, no wording changed.
+
+**Unchanged**
+
+FAQ Q1–Q31 wording otherwise identical ("Updated: 11 September 2026", Q27's `Art. 14(<s>3</s>1)` artifact, zero `<table>` elements on Q16, closing note still unlinked); CSIRT list identical (27 countries, same links, "Last updated: 10 September 2026", Germany's `<br>&nbsp;` cell still exactly as logged at 08:11 UTC); all four guidance subpages (same stamps, same tracked defects, PEC's "Particularly"/"Particular" inconsistency and "Reason" fix both still in place); AR User Manual, Terms and Conditions, and AR User Tutorial Video pages byte for byte; main page (Content navigation still 9 entries, Get Started/Resources cards, guidance-section dates all matching); Glossary unchanged (still v1.3, 39 fields, field 10's Example still `cryptoprocessing&nbsp; devices`, field v28's Example still empty, all other field content re-verified — see `enisa-srp-glossary-baseline.md`).
 
 ### 2026-09-12 08:11 UTC (vs. 2026-09-12 07:12 UTC)
 
@@ -753,7 +765,7 @@ Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 
 
 ### Q1. What is the Cyber Resilience Act’s Single Reporting Platform (CRA SRP)?
 
-The CRA Single Reporting Platform (SRP) is an online tool for manufacturers and open-source software stewards to meet their obligation to report actively exploited vulnerabilities and severe incidents having an impact on the security of products with digital elements under the Cyber Resilience Act (CRA). Designed to simplify EU reporting obligations, the SRP enables manufacturers and open-source software stewards to report only once, rather than having to notify multiple national authorities individually. The platform incorporates security measures to protect confidentiality.
+The CRA Single Reporting Platform (SRP)<strong>&nbsp;</strong>is an online tool for manufacturers and open-source software stewards to meet their obligation to report actively exploited vulnerabilities and severe incidents having an impact on the security of products with digital elements under the Cyber Resilience Act (CRA). Designed to simplify EU reporting obligations, the SRP enables manufacturers and open-source software stewards to report only once, rather than having to notify multiple national authorities individually. The platform incorporates security measures to protect confidentiality. *(An empty `<strong>&nbsp;</strong>` tag appeared between "(SRP)" and "is" on 2026-09-12 10:13 UTC; invisible in rendering, no wording changed.)*
 
 Manufacturers and open-source software stewards submit notifications electronically through the SRP and select the relevant CSIRT designated as coordinator. In general, the national CSIRT to which the notification should be submitted is primarily determined by the manufacturer’s main location of establishment, in accordance with Art. 14(7) of the CRA.
 
