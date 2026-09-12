@@ -13,13 +13,13 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-12 (fetched 11:11 UTC, unchanged since the Q1 `<strong>&nbsp;</strong>` tag appeared at 10:13 UTC)
-guidance_retrieved: 2026-09-12 (fetched 11:11 UTC, unchanged since 11:10 UTC on 2026-09-11)
-glossary_retrieved: 2026-09-12 (fetched 11:11 UTC, unchanged since 06:11 UTC on 2026-09-12 — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-09-12 (fetched 11:11 UTC, Croatia's link cell markup changed this run — see change log)
-ar_user_manual_retrieved: 2026-09-12 (fetched 11:11 UTC, unchanged since first capture at 10:12 UTC)
-terms_conditions_retrieved: 2026-09-12 (fetched 11:11 UTC, unchanged since the trailing space was lost at 14:07 UTC)
-ar_user_tutorial_video_retrieved: 2026-09-12 (fetched 11:11 UTC, unchanged since first capture at 11:10 UTC)
+retrieved: 2026-09-12 (fetched 13:10 UTC, page-level stamp and six questions changed this run — see change log)
+guidance_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since 11:10 UTC on 2026-09-11)
+glossary_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since 06:11 UTC on 2026-09-12 — see `enisa-srp-glossary-baseline.md`)
+csirt_list_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since the Croatia markup change at 11:11 UTC)
+ar_user_manual_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since first capture at 10:12 UTC)
+terms_conditions_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since the trailing space was lost at 14:07 UTC)
+ar_user_tutorial_video_retrieved: 2026-09-12 (fetched 13:10 UTC, unchanged since first capture at 11:10 UTC)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-12
@@ -31,6 +31,33 @@ last_change: 2026-09-12
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-12 13:10 UTC (vs. 2026-09-12 11:11 UTC)
+
+The FAQ page's own "Updated" stamp moved to 12 September, and six questions picked up a cluster of go-live tense/wording fixes; nothing else — main page, CSIRT list, all four guidance pages, AR User Manual, Terms and Conditions, AR User Tutorial Video, and the Glossary — changed.
+
+**Changed**
+
+- FAQ page-level stamp: "Updated: 11 September 2026" → "Updated: 12 September 2026".
+- **Q4 rewritten, re-tagged [UPDATED]**: switched from future to past/present tense now that the platform is live — "is scheduled to be operational from 11 September 2026...become applicable" → "has become operational on 11 September 2026...are applicable"; "At launch, the platform will support only mandatory reporting..." → "The platform supports the mandatory reporting..."; closing sentence drops "will not be available at launch and", now reading "Voluntary reporting under Art. 15 will be introduced in a future phase of the platform."
+- **Q7 re-tagged [UPDATED]**: the Final Report bullet for AEVs gained "or mitigating" — "a corrective measure (e.g., patch)" → "a corrective or mitigating measure (e.g., patch)", matching the phrasing already used elsewhere on the page.
+- **Q17 rewritten, re-tagged [UPDATED]**: drops "prepare for and" ("...information to use the CRA SRP"); the materials list gains "User Guidance" and now ends "...SRP Glossary and a video tutorial" instead of "...AR User Manual, and SRP Glossary".
+- **Q22 re-tagged [UPDATED]**: drops "ENISA does not currently foresee additional testing before go-live." with no replacement text.
+- **Q29 retitled, re-tagged [UPDATED]**: "When do the reporting obligations start?" → "When did the reporting obligations start?" (tense only; body text unchanged).
+
+**Fixed**
+
+- Q17's long-tracked self-contradiction — naming the AR User Manual while a nearby sentence said a user manual "will be published at the launch" — is gone along with the sentence that caused it.
+- Q22's "does not currently foresee additional testing before go-live" line, obsolete now that go-live has happened, is gone.
+
+**Watch**
+
+- Q14 lost its own [UPDATED] tag this run with no wording change on the page — tag churn since the 2026-09-11 go-live sweep continues; a tag appearing or disappearing is a prompt to diff, not a signal on its own.
+- Q28 still reads "The SRP will be available at..." / "will be available from 11 September 2026" in future tense, now visibly out of step with Q4's freshly past-tensed wording for the same fact.
+
+**Unchanged**
+
+Main page (Access button, Get Started/Resources cards incl. Factsheet translations and NL anomaly, Terms and Conditions card, User Support and Guidance with Manual/Tutorial/Guidance subsections, Content navigation still 9 entries); FAQ Q1–Q3, Q5, Q6, Q8–Q13, Q15, Q16, Q18–Q21, Q23–Q28, Q30–Q31, and the closing note (Q1's `<strong>&nbsp;</strong>` artifact and Q27's `Art. 14(<s>3</s>1)` artifact both still present); CSIRT list (27 countries, same links, "Last updated: 10 September 2026", Croatia and Germany cells exactly as logged); all four guidance subpages (same stamps, same tracked defects); AR User Manual, Terms and Conditions, and AR User Tutorial Video pages byte for byte; Glossary unchanged (still v1.3, 39 fields, field 10's Example still `cryptoprocessing&nbsp; devices`, field v28's Example still empty, all other field content re-verified — see `enisa-srp-glossary-baseline.md`).
 
 ### 2026-09-12 11:11 UTC (vs. 2026-09-12 10:13 UTC)
 
@@ -769,9 +796,9 @@ Groups four resource cards *(three until 2026-09-11 15:10 UTC)*: the Factsheet (
 
 ## FAQ entries
 
-Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 11 September 2026" *(moved from "10 September 2026" 2026-09-11 13:17 UTC — this body line had not been kept current since first capture; see the change log for the stamp's actual move history)*. Intro text on the FAQ page: "All you need to know about the CRA Single Reporting Platform" (subtitle) — "This page provides answers to frequently asked questions about the Cyber Resilience Act Single Reporting Platform (CRA SRP), including its purpose, reporting process, registration and use. The FAQs are updated regularly to reflect the latest available information and guidance as the CRA SRP is implemented. For broader guidance on the interpretation and implementation of the CRA, please also consult the European Commission's "FAQs on the CRA Implementation"."
+Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 12 September 2026" *(moved from "11 September 2026" 2026-09-12 13:10 UTC, alongside the Q4/Q7/Q17/Q22/Q29 wording changes below — see the change log)*. Intro text on the FAQ page: "All you need to know about the CRA Single Reporting Platform" (subtitle) — "This page provides answers to frequently asked questions about the Cyber Resilience Act Single Reporting Platform (CRA SRP), including its purpose, reporting process, registration and use. The FAQs are updated regularly to reflect the latest available information and guidance as the CRA SRP is implemented. For broader guidance on the interpretation and implementation of the CRA, please also consult the European Commission's "FAQs on the CRA Implementation"."
 
-31 entries (30 → 31 on 2026-09-10 10:12 UTC, new Q31). **As of 2026-09-11 13:17 UTC, only Q14 carries a tag** ("[UPDATED]", gained this run). Q9, Q18, Q22, Q27, Q28, Q29, Q30 and Q31 all lost the "[UPDATED]"/"[NEW]" tags they carried through the previous check, the same way **Q8 lost its "[UPDATED]" tag on 2026-09-09**; read as a go-live tag sweep rather than a per-question content signal — see the change log. The per-question tags are recorded in each heading below where present.
+31 entries (30 → 31 on 2026-09-10 10:12 UTC, new Q31). Tags have moved twice since go-live: **2026-09-11 13:17 UTC** swept "[UPDATED]"/"[NEW]" off Q9, Q18, Q22, Q27, Q28, Q29, Q30 and Q31 (the same way Q8 lost its tag on 2026-09-09), leaving only the newly-tagged Q14; **2026-09-12 13:10 UTC** then tagged Q4, Q7, Q17, Q22 and Q29 [UPDATED] (each with a real wording or title change, see the change log) while Q14 lost its tag with no wording change. Read tag movement as a prompt to diff, not a content signal on its own — it has moved without content changing at least as often as it has moved with it. The per-question tags are recorded in each heading below where present.
 
 **Glossary links fixed 2026-09-08**: all eight "SRP Glossary" links in the answers below now point to `.../cra-srp-glossary2` (see `glossary_url`) and resolve normally. Until this check they pointed at the dead `.../cra-srp-glossary` path (HTTP 403) since at least 2026-09-07; see the change log.
 
@@ -793,13 +820,13 @@ Articles 14-17 of the CRA provide the relevant framework for the reporting and d
 
 ENISA is responsible for establishing the CRA SRP and for managing and maintaining its day-to-day operations. ENISA must also ensure the platform's security and implement appropriate technical and organizational measures to protect the information submitted.
 
-### Q4. When will the Single Reporting Platform be operational?
+### Q4. [UPDATED] When will the Single Reporting Platform be operational? *(re-tagged and rewritten into past/present tense 2026-09-12 13:10 UTC, reflecting the actual launch; was untagged, future tense throughout — see the change log for the exact before/after wording)*
 
-The platform is scheduled to be operational from 11 September 2026, coinciding with the date on which the CRA reporting obligations under Art.14 become applicable.
+The platform has become operational on 11 September 2026, coinciding with the date on which the CRA reporting obligations under Art.14 are applicable.
 
-At launch, the platform will support only mandatory reporting of actively exploited vulnerabilities and severe incidents under Art. 14 of the CRA. The corresponding reporting obligations for open-source software stewards under Art. 24(3) will apply from 11 December 2027, in accordance with Art. 71(2) of the CRA.
+The platform supports the mandatory reporting of actively exploited vulnerabilities and severe incidents under Art. 14 of the CRA. The corresponding reporting obligations for open-source software stewards under Art. 24(3) will apply from 11 December 2027, in accordance with Art. 71(2) of the CRA.
 
-Voluntary reporting under Art. 15 will not be available at launch and will be introduced in a future phase of the platform.
+Voluntary reporting under Art. 15 will be introduced in a future phase of the platform.
 
 ### Q5. What must be reported via the platform?
 
@@ -825,7 +852,7 @@ Any natural or legal person may voluntarily notify:
 
 - Near misses that could have resulted in an incident.
 
-### Q7. What are the deadlines for reporting? *(opening sentence typo fixed 2026-09-11 14:13 UTC; was "actively exploitation vulnerability")*
+### Q7. [UPDATED] What are the deadlines for reporting? *(re-tagged 2026-09-12 13:10 UTC — see "or mitigating" in the Final Report bullet below; opening sentence typo fixed 2026-09-11 14:13 UTC, was "actively exploitation vulnerability")*
 
 The reporting process starts when a manufacturer or open-source steward becomes aware of an actively exploited vulnerability or severe incident.
 
@@ -841,7 +868,7 @@ Manufacturers and, once applicable, open-source software stewards must adhere to
 
 - Final Report:
 
-- For actively exploited vulnerabilities : No later than 14 days after a corrective measure (e.g., patch) becomes available.
+- For actively exploited vulnerabilities : No later than 14 days after a corrective or mitigating measure (e.g., patch) becomes available. *("or mitigating" inserted 2026-09-12 13:10 UTC)*
 
 - For severe incidents : Within 1 month after the 72-hour notification.
 
@@ -907,7 +934,7 @@ Please refer to the European Commission’s “[FAQs on the CRA Implementation](
 
 The manufacturer’s obligation to report actively exploited vulnerabilities is triggered when the manufacturer becomes aware of them. According to the European Commission’s “[FAQs on the CRA Implementation](https://ec.europa.eu/newsroom/dae/redirection/document/122331)” a manufacturer is not required to retrospectively report an actively exploited vulnerability where it was already aware of the active exploitation before 11 September 2026 (subsections 5.1 & 5.3). However, where the manufacturer becomes aware of the active exploitation after that date, the reporting obligation applies, including where the underlying vulnerability existed or was previously known.
 
-### Q14. If an actively exploited vulnerability is contained in a third-party component, are all manufacturers integrating that component required to notify it? *(retitled and tagged [UPDATED] 2026-09-11 13:17 UTC; was "If an actively exploited vulnerability in my product originates from a third-party component, am I still required to notify it?", untagged)*
+### Q14. If an actively exploited vulnerability is contained in a third-party component, are all manufacturers integrating that component required to notify it? *(lost its "[UPDATED]" tag 2026-09-12 13:10 UTC with no wording change — tag churn, not a content signal; retitled and tagged [UPDATED] 2026-09-11 13:17 UTC, was "If an actively exploited vulnerability in my product originates from a third-party component, am I still required to notify it?", untagged)*
 
 Please refer to the [European Commission’s FAQ](https://ec.europa.eu/newsroom/dae/redirection/document/122331), in particular Section 5.4 on the reporting obligations for actively exploited vulnerability contained in a third-party component, as well [C(2026) 5252 - Annex - Commission guidance](https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation) on the application of the Cyber Resilience Act (CRA) paragraph 218. *(second sentence new 2026-09-11 13:17 UTC; "as well" is missing "as" on the live page, reproduced verbatim. The new link is the same Commission guidance document already cited from Q10.)*
 
@@ -929,9 +956,11 @@ Please consult the [SRP Glossary](https://www.enisa.europa.eu/topics/product-sec
 
 **The 43-row data-field table this baseline had reproduced here since 2026-09-07 (Common fields 1–23, AEV v24–v34, SI i35–i43) is gone from the live page as of this check — confirmed at the HTML level, the page now contains zero `<table>` elements.** The answer no longer states any field name, requirement level, or per-stage status itself; it defers entirely to the Glossary. The last known table content is preserved in the 2026-09-10 17:13 UTC change log entry below for the historical record. Any future field-by-field check is against `enisa-srp-glossary-baseline.md` alone — see the updated "CRA SRP Glossary" section further down, whose "Widened divergence with Q16" note is now resolved rather than updated, since Q16 no longer carries field data to diverge from.
 
-### Q17. What guidance material is available for the relevant parties?
+### Q17. [UPDATED] What guidance material is available for the relevant parties? *(re-tagged and reworded 2026-09-12 13:10 UTC — see below)*
 
-ENISA recognises the need to ensure that manufacturers, open-source software stewards, Assigned Representatives and other relevant reporting teams have clear and practical information to prepare for and use the CRA SRP. ENISA has published a range of supporting materials, including the SRP Factsheet, FAQs, [AR User Manual](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual), and SRP Glossary *(AR User Manual inserted as a live link 2026-09-10 17:13 UTC, between "FAQs" and "and SRP Glossary")*. Additional operational materials, including a user manual and tutorial videos, will be published at the launch of the platform *(unresolved self-contradiction, now more visible with the User Manual named one sentence earlier — unchanged today)*. **These materials will be updated and expanded as necessary.** *(new closing sentence, 2026-09-10 22:13 UTC)*
+ENISA recognises the need to ensure that manufacturers, open-source software stewards, Assigned Representatives and other relevant reporting teams have clear and practical information to use the CRA SRP *(dropped "prepare for and" 2026-09-12 13:10 UTC)*. ENISA has published a range of supporting materials, including the SRP Factsheet, FAQs, User Guidance, [AR User Manual](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual), SRP Glossary and a video tutorial *(list reworded 2026-09-12 13:10 UTC — gained "User Guidance" and "a video tutorial", lost the Oxford comma before "and SRP Glossary"; was "...FAQs, AR User Manual, and SRP Glossary")*. **These materials will be updated and expanded as necessary.** *(closing sentence, new 2026-09-10 22:13 UTC)*
+
+**Fixed 2026-09-12 13:10 UTC**: the long-tracked self-contradiction — a sentence here said a user manual "will be published at the launch of the platform" one sentence after the AR User Manual was named and linked — is gone; the sentence ("Additional operational materials, including a user manual and tutorial videos, will be published at the launch of the platform.") has been removed rather than reworded.
 
 The [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2) provides detailed field-by-field guidance, including what each field means, how it may be completed, the expected format, and at which reporting stage it applies.
 
@@ -989,11 +1018,11 @@ During the first 72-hour window, you should assess, where applicable, whether PE
 
 Where PEC is invoked in the 72-hour Notification, ENISA will not receive the full content of the notification immediately. This applies only where the manufacturer actively marks that at least one of the conditions listed in points (a) to (c) of Art. 16(2) applies. In such a case, ENISA receives only partial information until the receiving CSIRT makes the full notification available.
 
-### Q22. How does the platform ensure security? *(lost its "[UPDATED]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above)*
+### Q22. [UPDATED] How does the platform ensure security? *(re-tagged 2026-09-12 13:10 UTC; had lost its "[UPDATED]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above)*
 
 ENISA is legally required to take appropriate technical and organisational measures to manage risks to the platform's security and must notify the CSIRTs Network and the European Commission of any security incidents affecting the platform itself.
 
-Before launch, the platform underwent several user, security and technical testing exercises with selected stakeholders, including national CSIRTs, the CRA Expert Group, selected manufacturers and other users. Their feedback helped strengthen the platform’s functionality, security and usability. ENISA does not currently foresee additional testing before go-live.
+Before launch, the platform underwent several user, security and technical testing exercises with selected stakeholders, including national CSIRTs, the CRA Expert Group, selected manufacturers and other users. Their feedback helped strengthen the platform’s functionality, security and usability. *(the closing sentence of this paragraph, "ENISA does not currently foresee additional testing before go-live.", was removed 2026-09-12 13:10 UTC — obsolete now that go-live has happened, not replaced.)*
 
 The platform will also be periodically reviewed and re-tested as necessary after launch.
 
@@ -1043,7 +1072,7 @@ From there, select "Assigned Representative" and log in using your EU Login acco
 
 The portal will be available from 11 September 2026.
 
-### Q29. When do the reporting obligations start? *(lost its "[NEW]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above)*
+### Q29. [UPDATED] When did the reporting obligations start? *(retitled and re-tagged 2026-09-12 13:10 UTC — "do" → "did", tense only, body text unchanged; had lost its "[NEW]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above)*
 
 The CRA reporting obligations under Art. 14 apply to manufacturers of products with digital elements from 11 September 2026.
 

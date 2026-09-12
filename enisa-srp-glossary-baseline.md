@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.3 (page footer: last update 10/09/2026)"
-retrieved: 2026-09-12 (fetched 06:11 UTC)
+retrieved: 2026-09-12 (fetched 13:10 UTC)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -41,6 +41,10 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-12 13:10 UTC (vs. 2026-09-12 06:11 UTC)
+
+Page still returns HTTP 200 at `cra-srp-glossary2`, fetched alongside all ten other tracked SRP pages in the same run (the FAQ page changed this time — its own stamp and six questions — see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: footer still "Version 1.3. Last update: 10 September 2026", field count unchanged (39), the 42 "By default copied from previous step, or updated" cells, field 10's `cryptoprocessing&nbsp; devices` gap, and v28's empty Example all re-verified. `retrieved` updated; `last_check` and `last_change` unchanged (both already 2026-09-12).
 
 ### 2026-09-12 06:11 UTC (vs. 2026-09-12 05:12 UTC)
 
