@@ -72,6 +72,7 @@ Text quoted verbatim as it stood on 9 September.
 | A14 | Registration | Invitation registration, personal details step | "These fields **cannot be edited** but are retrieved from EU Login and **cannot be edited** in the SRP." | The clause is duplicated within one sentence. | **fixed** · 2026-09-09 22:12 UTC — now "These fields are retrieved from EU Login and cannot be edited in the SRP." |
 | A15 | Submission | Expected results, 72-hour Notification and Final Report | "…subject to **Particularly Exception** Circumstances (PEC)…" (twice) | "Particular Exceptional Circumstances" — "Exception" is not a valid form. See also C2. | **open** — three occurrences now, after the Submission page was rewritten on 9 September 22:12 UTC |
 | A16 | Submission | Pre-conditions, three occurrences | "you are **logged in into** the SRP" | "logged in to the SRP". | **open** — still three occurrences |
+| A17 | AR User Manual | §1.4 "How to Use the Manual" (p. 7) | "Section 5 presents other functionalities available on the platform, including reminders and alerts. Section 6 provides FAQs…" | There is no standalone Section 5 — reminders/alerts is §4.9, and the FAQ section's own divider page is titled "SECTION 5", not 6. | **open** — the manual's own table of contents (p. 3-4) agrees with the divider pages, not with §1.4's description |
 
 ---
 
@@ -660,6 +661,32 @@ first-time reader following only this page has no documented way to log out.
 
 **Status: open — guide gap, not a platform defect.** Source: AR User Manual
 pp. 17-20 (PDF pages 18-21).
+
+### G24 — What "Closed" actually means, and the rest of the status vocabulary G17 left unexplained
+
+The manual's own FAQ (p. 53-54) defines the four notification-status words
+verbatim, and nothing in this guide or in the Glossary/FAQ baselines defines
+any of them:
+
+- *"Submitted"* — "the notification has been sent through the SRP and is
+  available for the next workflow step."
+- *"Valid"* — "the designated CSIRT has reviewed and accepted the
+  notification."
+- *"Invalid"* — "the designated CSIRT has reviewed the notification and
+  marked it as not valid."
+- *"Closed"* — "no further action is expected for that notification in the
+  current workflow."
+
+This is the missing explanation for G17's two Dashboard tabs, "Closed
+(Previously Valid)" and "Closed (Previously Invalid)": a notification is
+first judged Valid or Invalid by the CDaC, and then separately becomes
+Closed once nothing further is expected of it — the tab name records both
+facts at once. Read on its own, G17's tab list gives no hint that "Closed"
+is a second, independent axis rather than a third outcome alongside Valid
+and Invalid.
+
+**Status: open.** Source: AR User Manual p. 53-54 (PDF pages 54-55), section 6
+FAQ.
 
 ### G5 — Confirmed, not defects
 
