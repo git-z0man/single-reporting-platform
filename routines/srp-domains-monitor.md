@@ -1,7 +1,7 @@
 # SRP domain reachability monitor
 
 - **Trigger**: `trig_01426ap5KJGGrY4Fk2pbTm8s`
-- **Schedule**: `22 * * * *` (hourly; section 5 switches it to `0 6 * * *` from 12 September 2026)
+- **Schedule**: `0 6 * * *` (daily; switched 2026-09-13 17:38 UTC per section 5 — the Routine's own sessions run without connector tools, so it could not make the change itself)
 - **Writes**: `srp-domains-baseline.md`, `srp-domains/`
 - **Also reads**: ENISA's List of CSIRTs Designated as Coordinators — it owns
   the country table, so it applies changes to that list itself rather than
