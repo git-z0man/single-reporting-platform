@@ -91,7 +91,7 @@ large enough to read every field label.
 ENISA published a *CRA SRP – AR User Manual* on 9 September 2026 (PDF, 55
 pages, "Version: 1.1" on every page, document history listing only v1.0):
 <https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual>.
-The nine images below are extracted from that PDF unchanged (the embedded
+The ten images below are extracted from that PDF unchanged (the embedded
 bitmaps, not page renders). Same licence as above — ENISA material, source
 acknowledged beside each image on the guide. They show a test tenant
 ("Test Test", "CSIRT Greece"); the manual's own redaction of an e-mail
@@ -104,6 +104,7 @@ Information no longer carries a "Required field" badge.
 - **`man-reg-legal-agreement.png`** — p. 12: the Legal Agreement dialog between EU Login and the personal details, linking to the Terms and Conditions.
 - **`man-reg-personal-details.png`** — p. 13: Personal Details, step 1 of 2 — First Name, Last Name, Email only.
 - **`man-reg-manufacturer-details.png`** — p. 13: Manufacturer Details, step 2 of 2 — Name (Required), CDaC read-only, Additional Information unbadged.
+- **`man-reg-invited-personal-details.png`** — p. 14: "Backup AR Invitation" step 1 of 2 — First Name, Last Name, Email only, reached from an invitation e-mail.
 - **`man-reg-existing-user-accept.png`** — p. 16: "Backup AR Invitation" step 2 with the "You have accepted the invitation" confirmation.
 - **`man-if-manufacturer-details-verified.png`** — p. 32: Manufacturer Details with both representatives Verified, "Claim Primary AR Role" and "Delete Association".
 - **`man-n72-form-top.png`** — p. 43: the 72h Notification tab (severe incident), top: the stage header with the due date, the two Required narrative fields, Considered sensitivity.
