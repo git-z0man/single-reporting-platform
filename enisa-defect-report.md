@@ -409,9 +409,10 @@ options are.
 
 ### G4 — Two blocks of the form repeat, and no published source says so
 
-The form offers **"+ Add another product"** and **"+ Add another corrective
-measure"**, so a single notification can carry several products and several
-corrective measures. Neither the Glossary, the FAQ nor the guidance pages
+The form offers **"+ Add another product"**, **"+ Add another corrective
+measure"** and **"+ Add another corrective measure that user can take"**, so a
+single notification can carry several products, several corrective measures
+taken, and several measures for users. Neither the Glossary, the FAQ nor the guidance pages
 mention repetition: every field is documented as though it occurred once. This
 changes how a multi-product notification is prepared, and it is not a detail an
 AR can infer.
@@ -443,6 +444,70 @@ an AR should record a time known only to the hour, is unstated.
 **Status: open.** Minor on its own; it compounds G6, since the field feeding the
 deadline is also the one whose required precision is undocumented.
 
+### G9 — The Glossary says "leave the field empty"; the control cannot be emptied
+
+**Product class** is documented as optional, and its completion instruction
+reads: "Leave the field empty when the product is not classified as important
+or critical." In the form it is a pair of **radio buttons**, Class I and
+Class II. A radio group has no null state once a button has been pressed: an AR
+who clicks the wrong one, or who clicks to see the options, cannot get back to
+empty without abandoning the draft.
+
+The same shape applies to **Product type** (Default / Important Product with
+Digital Elements / Critical Product with Digital Elements), **End of support
+indicator** (Yes / No) and **Mitigating measure expected shortly** (Yes / No) —
+all optional per the Glossary, all radio groups, none of them clearable. A
+captured form shows "End of support indicator: Yes" selected, and that
+selection cannot be withdrawn.
+
+An optional field that cannot be returned to "not answered" is not optional in
+practice, and for End of support the difference between "No" and "not stated"
+is a statement about the product's support status that the AR may not be in a
+position to make.
+
+**Status: open.**
+
+### G10 — The malicious-actor field holds 100 characters and asks for a description
+
+**v27, "Malicious actor that has exploited/is exploiting the vulnerability"**,
+is capped at **100 characters** in the form — the tightest limit anywhere in
+the notification, and four times tighter than the next.
+
+The Glossary gives its Format as "Free text" and instructs: "You may enter
+confirmed information about the malicious actor or observed activity. **If
+attribution is unconfirmed, describe the observed activity**…". Describing
+observed activity in 100 characters is not possible in any useful sense, and
+unconfirmed attribution is the normal case at the 24-hour mark.
+
+Neither the limit nor the tension with the instruction is documented.
+
+**Status: open.**
+
+### G11 — The form carries drafting guidance that exists nowhere else
+
+The **General information** field's placeholder is structured, and prescribes
+the answer's shape:
+
+> General information, in particular:
+> a. General nature of the vulnerability
+> b. General nature of the exploit
+
+That a/b structure appears in no Glossary entry, no FAQ answer and no guidance
+page. It is real instruction — arguably the clearest ENISA gives for that
+field — and it is visible only to someone already looking at the form, which is
+exactly the person who no longer needs to prepare.
+
+**Status: open.** The same applies more weakly to every placeholder carrying a
+character limit; see G7 and G10.
+
+### G12 — "Add another corrective measure that user can take"
+
+The repeat control under field 17 reads **"Add another corrective measure that
+user can take"** — singular "user", no article, where the field above it reads
+"measures that users can take".
+
+**Status: open.** Cosmetic.
+
 ### G5 — Confirmed, not defects
 
 Recorded so the record shows what was checked rather than only what was wrong:
@@ -465,6 +530,16 @@ Recorded so the record shows what was checked rather than only what was wrong:
 - **i39**, "Initial assessment of the incident", carries no Required badge at
   Early Warning, matching the Glossary's "Optional" for that stage, and its
   4000-character limit is consistent with the other narrative fields.
+- **Field 17**'s name on the form, "Corrective or mitigating measures that
+  users can take", matches the Glossary exactly. An earlier note in this
+  repository had the Glossary and the FAQ differing on the word "that"; the
+  Glossary now carries it.
+- **Member States where product available** is a multi-select, matching the
+  Glossary's "Select one or more Member States", and pre-fills the AR's own
+  CDaC as the completion instruction describes.
+- **CVE ID** and **EUVD ID** are plain text fields, as the Glossary implies; no
+  format validation is applied at entry, so "Copy the ID exactly as published"
+  is advice the form does not enforce.
 
 ---
 
