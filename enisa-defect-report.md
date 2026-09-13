@@ -7,6 +7,12 @@ passed to ENISA for correction.
 **Checked against**: all eight SRP pages plus the CSIRT list, fetched
 **9 September 2026, 16:08 UTC** — i.e. after ENISA's edits earlier that day.
 
+**Verified in the running platform**: **13 September 2026**, by a registered
+Assigned Representative with an account on the live SRP, who reported what the
+form shows. That is the source of **section G**, and the only part of this
+document that could see the form rather than the published pages. No
+credential, session or account detail is reproduced anywhere here.
+
 **Status re-checked**: **10 September 2026, 07:13 UTC** and again at
 **11:52 UTC**, each time against a fresh fetch of every page. ENISA edited the
 pages eight more times before the first re-check and rewrote the main page,
@@ -332,6 +338,36 @@ this document comes from ENISA's public pages; this section is the only part
 that could see the form itself, and it settles questions the published material
 left open. No credential, session or account detail is reproduced.
 
+### G6 — The form asks for the detection time; the Glossary and Art. 14 ask for awareness
+
+**The most serious item in this section.** Three sources name one timestamp
+three different ways:
+
+| Source | Wording |
+|---|---|
+| CRA Art. 14 | the 24- and 72-hour deadlines run from **becoming aware** |
+| Glossary i37, field name | "Date and time when you **become aware** of the incident (UTC time)" |
+| Glossary i37, meaning | "Date and time when the manufacturer or another relevant entity **becomes aware** of the incident." |
+| **The running form** | "Date and time when the incident **was detected** (UTC time)" |
+
+Detection and awareness are not the same moment and routinely differ by hours:
+a monitoring system detects at 02:00, the people responsible for reporting
+learn of it at 09:00. An AR who reads the on-screen label literally enters the
+earlier one.
+
+That matters because this is the field the deadline is computed from. ENISA's
+own known-issues text says so, naming the field by its Glossary name: the
+72-hour counter "will be updated in a future release to calculate the deadline
+using the 'Date/Time when you became aware of the incident/actively exploited
+vulnerability' field". The label on the field that release will read says
+something else.
+
+Which side moves is ENISA's to decide — the defect is that the running form,
+the Glossary and the legal trigger use three different words for one timestamp,
+and the one on screen is the one an AR will act on.
+
+**Status: open.**
+
 ### G1 — The Glossary describes field i31 as a Yes/No/Unknown choice; the form is a free-text box
 
 The Glossary's entry for **i31, "Incident is suspected of unlawful or malicious
@@ -382,6 +418,31 @@ AR can infer.
 
 **Status: open.**
 
+### G7 — i36 is capped at 255 characters for an answer the Glossary asks to be two things
+
+The form limits **i36, "Type of threat or root cause that is likely to have
+triggered the incident"**, to 255 characters. The Glossary's Format for the
+same field is **"Classification plus short explanation"**, and its completion
+instruction asks the AR to "state the most likely threat type and root cause
+supported by the investigation. Explain the evidence briefly and mark the
+conclusion as preliminary when analysis is ongoing."
+
+Classification, evidence and a preliminary-status caveat in 255 characters is
+tight. The limit appears nowhere in the Glossary, so an AR drafting from the
+published guidance has no way to size the answer before meeting the field.
+
+**Status: open.**
+
+### G8 — The Glossary does not say how precise a timestamp has to be
+
+Both date fields offer **Date, HH and MM** — no seconds. The Glossary's Format
+for i37 and i38 is the bare phrase "Date and time". For a field that drives a
+24- and 72-hour deadline, whether minutes are the intended granularity, and how
+an AR should record a time known only to the hour, is unstated.
+
+**Status: open.** Minor on its own; it compounds G6, since the field feeding the
+deadline is also the one whose required precision is undocumented.
+
 ### G5 — Confirmed, not defects
 
 Recorded so the record shows what was checked rather than only what was wrong:
@@ -399,6 +460,11 @@ Recorded so the record shows what was checked rather than only what was wrong:
 - Field **i32**'s odd comma — "General information, about the nature of the
   incident" — is ENISA's, consistently, in the Glossary and on the form. Not a
   divergence.
+- **i38**, "Date and time when the incident occurred (UTC time)", matches the
+  Glossary exactly, name and all.
+- **i39**, "Initial assessment of the incident", carries no Required badge at
+  Early Warning, matching the Glossary's "Optional" for that stage, and its
+  4000-character limit is consistent with the other narrative fields.
 
 ---
 
