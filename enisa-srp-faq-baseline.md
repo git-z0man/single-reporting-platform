@@ -13,13 +13,13 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-13 (fetched 22:13 UTC, Q7's Final Report bullets and Q9/Q17's compliance-emphasis bold both lost spacing/markup — see change log)
-guidance_retrieved: 2026-09-13 (fetched 22:13 UTC, AR User Registration's Secondary-AR-invitation intro sentence lost its trailing full stop — see change log)
-glossary_retrieved: 2026-09-13 (fetched 22:13 UTC, unchanged since 13:10 UTC on 2026-09-12 — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-09-13 (fetched 22:13 UTC, unchanged since 17:11 UTC on 2026-09-12)
-ar_user_manual_retrieved: 2026-09-13 (fetched 22:13 UTC, wording unchanged since first capture at 10:12 UTC on 2026-09-10; a cover-image thumbnail is present on the live page that this baseline's text-only capture had never recorded either way — see change log)
-terms_conditions_retrieved: 2026-09-13 (fetched 22:13 UTC, unchanged since the trailing space was lost at 14:07 UTC on 2026-09-10)
-ar_user_tutorial_video_retrieved: 2026-09-13 (fetched 22:13 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
+retrieved: 2026-09-13 (fetched 23:15 UTC, a bold-emphasis pass hit ten FAQ questions and Q16 lost its quote-wrapping — see change log)
+guidance_retrieved: 2026-09-13 (fetched 23:15 UTC, the same bold-emphasis pass hit all four guidance subpages, and AR User Registration's "Verified" Secondary-AR precondition quote lost both its bold and its trailing full stop — see change log)
+glossary_retrieved: 2026-09-13 (fetched 23:15 UTC, unchanged since 13:10 UTC on 2026-09-12 — see `enisa-srp-glossary-baseline.md`)
+csirt_list_retrieved: 2026-09-13 (fetched 23:15 UTC, unchanged since 17:11 UTC on 2026-09-12)
+ar_user_manual_retrieved: 2026-09-13 (fetched 23:15 UTC, wording unchanged since first capture at 10:12 UTC on 2026-09-10)
+terms_conditions_retrieved: 2026-09-13 (fetched 23:15 UTC, unchanged since the trailing space was lost at 14:07 UTC on 2026-09-10)
+ar_user_tutorial_video_retrieved: 2026-09-13 (fetched 23:15 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-13
@@ -31,6 +31,27 @@ last_change: 2026-09-13
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-13 23:15 UTC (vs. 2026-09-13 22:13 UTC)
+
+A broad bold-emphasis pass hit the FAQ page and all four guidance subpages, plus one structural change on Q16; no wording, deadline, or obligation changed anywhere, and none of the affected "Last updated" stamps moved.
+
+**Changed**
+
+- **Q16's answer is no longer wrapped in literal quotation marks.** This baseline had quoted the whole answer, opening and closing `"`, verbatim since 2026-09-07; the live page now renders the same text with no quote marks at all. Wording unchanged.
+
+**Editorial**
+
+- New `<strong>` emphasis appeared on ten FAQ questions — Q4, Q5, Q6, Q7, Q9, Q16, Q19, Q20, Q21 and Q28 (roughly 45 new spans: key dates, list lead-in terms, whole sentences) — and on all four guidance subpages (roughly 90 more spans combined, mostly step-lead phrases and sub-headings). Q19's and Q26's list items also lost the stray space before their colon, the same fix already applied to Q7's bullets on 2026-09-13 22:13 UTC. Q4 and Q9 each had two or three previously separate paragraphs merged into one via `<br>` instead of `</p><p>`. No word changed in any of these passages.
+
+**Watch**
+
+- **AR User Registration's Secondary-AR precondition quote lost its emphasis and its full stop**: "The feature to invite a Secondary AR is available only to a 'Verified' Primary AR." was bold and ended in a period; on the live page it is now plain text with no trailing period. The words themselves are unchanged.
+- None of today's affected "Last updated" stamps moved (FAQ still "12 September 2026"; AR User Registration, AR Notification Submission and Update, AR Interface Functions still "12 September 2026"; PEC still "09 September 2026") despite this page-wide formatting pass — continuing the pattern that these stamps are not a reliable change signal.
+
+**Unchanged**
+
+Main page (Content navigation still 9 entries, all cards, dates, and the Access button); CSIRT list (27 countries, same links, "Last updated: 10 September 2026"); AR User Manual, Terms and Conditions, and AR User Tutorial Video pages byte for byte; Glossary (still v1.3, 39 fields, every field's Meaning/How-to-complete/Example/Format/status re-verified row by row, including field 10's `cryptoprocessing&nbsp; devices` gap, v27's doubled full stop, v28's empty Example, and v30's missing space in "(CDaC)taking") — see `enisa-srp-glossary-baseline.md`.
 
 ### 2026-09-13 22:13 UTC (vs. 2026-09-13 18:10 UTC)
 
@@ -880,19 +901,17 @@ ENISA is responsible for establishing the CRA SRP and for managing and maintaini
 
 ### Q4. [UPDATED] When will the Single Reporting Platform be operational? *(re-tagged and rewritten into past/present tense 2026-09-12 13:10 UTC, reflecting the actual launch; was untagged, future tense throughout — see the change log for the exact before/after wording)*
 
-The platform has become operational on 11 September 2026, coinciding with the date on which the CRA reporting obligations under Art.14 are applicable.
+The platform has become operational on **11 September 2026,** coinciding with the date on which the CRA **reporting** **obligations** under Art.14 are applicable. *(bold added 2026-09-13 23:15 UTC to the date and, oddly split into two separate `<strong>` tags, "reporting"/"obligations "; no wording change.)*
 
-The platform supports the mandatory reporting of actively exploited vulnerabilities and severe incidents under Art. 14 of the CRA. The corresponding reporting obligations for open-source software stewards under Art. 24(3) will apply from 11 December 2027, in accordance with Art. 71(2) of the CRA.
-
-Voluntary reporting under Art. 15 will be introduced in a future phase of the platform.
+The platform supports the mandatory reporting of actively exploited vulnerabilities and severe incidents under Art. 14 of the CRA. The corresponding reporting obligations for open-source software stewards under Art. 24(3) will apply from 11 December 2027, in accordance with Art. 71(2) of the CRA.<br>Voluntary reporting under Art. 15 will be introduced in a future phase of the platform. *(merged into the paragraph above via `<br>` 2026-09-13 23:15 UTC — was a separate `<p>`; no wording change.)*
 
 ### Q5. What must be reported via the platform?
 
 Under the CRA, manufacturers are required to notify two specific types of events:
 
-- Actively Exploited Vulnerabilities: vulnerabilities in products with digital elements for which there is reliable evidence that they have been exploited by a malicious actor;
+- **Actively Exploited Vulnerabilities:** vulnerabilities in products with digital elements for which there is reliable evidence that they have been exploited by a malicious actor;
 
-- Severe Incidents: incidents having a severe impact on the security of a product with digital elements (e.g., compromising its availability, authenticity, integrity, or confidentiality). The criteria for severity are set out in Art. 14(5).
+- **Severe Incidents:** incidents having a severe impact on the security of a product with digital elements (e.g., compromising its availability, authenticity, integrity, or confidentiality). The criteria for severity are set out in Art. 14(5). *(both list lead-ins bolded 2026-09-13 23:15 UTC; no wording change.)*
 
 Open-source software stewards will also be subject to reporting obligations, starting from 11 December 2027, to the extent that they are involved in the deployment of products with digital elements, in accordance with Art. 24(3) of CRA.
 
@@ -902,13 +921,13 @@ In a future phase, the SRP will also offer functionality for voluntary notificat
 
 Any natural or legal person may voluntarily notify:
 
-- Vulnerabilities contained in a product with digital elements;
+- **Vulnerabilities** contained in a product with digital elements;
 
-- Cyber threats that could affect the risk profile of a product with digital elements;
+- **Cyber threats** that could affect the risk profile of a product with digital elements;
 
-- Incidents having an impact on the security of a product with digital elements;
+- **Incidents** having an impact on the security of a product with digital elements;
 
-- Near misses that could have resulted in an incident.
+- **Near misses** that could have resulted in an incident. *(all four lead-ins bolded 2026-09-13 23:15 UTC; no wording change.)*
 
 ### Q7. [UPDATED] What are the deadlines for reporting? *(re-tagged 2026-09-12 13:10 UTC — see "or mitigating" in the Final Report bullet below; opening sentence typo fixed 2026-09-11 14:13 UTC, was "actively exploitation vulnerability")*
 
@@ -920,15 +939,15 @@ The reporting process starts when a manufacturer or open-source steward becomes 
 
 Manufacturers and, once applicable, open-source software stewards must adhere to the following reporting deadlines:
 
-- Early Warning: Without undue delay and in any case within 24 hours of becoming aware of the actively exploited vulnerability or severe incident;
+- **Early Warning:** Without undue delay and in any case within **24 hours** of becoming aware of the actively exploited vulnerability or severe incident;
 
-- Actively Exploited Vulnerability/Severe Incident Notification: Without undue delay and in any case within 72 hours of becoming aware, providing general information and an initial assessment;
+- **Actively Exploited Vulnerability/Severe Incident Notification:** Without undue delay and in any case within **72 hours** of becoming aware, providing general information and an initial assessment;
 
-- Final Report:
+- **Final Report:**
 
-- For actively exploited vulnerabilities: No later than 14 days after a corrective or mitigating measure (e.g., patch) becomes available. *("or mitigating" inserted 2026-09-12 13:10 UTC; space before the colon dropped 2026-09-13 22:13 UTC, was "vulnerabilities :")*
+- For **actively exploited vulnerabilities**: No later than **14 days** after a corrective or mitigating measure (e.g., patch) becomes available. *("or mitigating" inserted 2026-09-12 13:10 UTC; space before the colon dropped 2026-09-13 22:13 UTC, was "vulnerabilities :"; bold added throughout this bullet list 2026-09-13 23:15 UTC — deadline labels and figures now bold, no wording change.)*
 
-- For severe incidents: Within 1 month after the 72-hour notification. *(space before the colon dropped 2026-09-13 22:13 UTC, was "incidents :")*
+- For **severe incidents**: Within **1 month** after the 72-hour notification. *(space before the colon dropped 2026-09-13 22:13 UTC, was "incidents :")*
 
 ### Q8. How does the Single Reporting Platform operate? *(no tag on the live page since 2026-09-09; was tagged [UPDATED])*
 
@@ -944,11 +963,11 @@ Information on the reporting workflow, the mandatory and optional fields and how
 
 The SRP is available at: [https://portal.cra-srp.enisa.europa.eu](https://portal.cra-srp.enisa.europa.eu). *(reverted 2026-09-10 10:12 UTC to this wording — the concrete, hyperlinked production host is back, one day before the 11 September 2026 go-live. Had briefly regressed at 09:09 UTC the same day to "The SRP will be available in due time.", with the hyperlink and host both gone; that lasted roughly one hour.)*
 
-Assigned Representatives (ARs) of manufacturers and, once applicable, open-source software stewards must have an EU Login account with multi-factor authentication (MFA) enabled and use it to register on the SRP. An EU Login account can be created in advance at the following link: [https://ecas.ec.europa.eu/cas/login](https://ecas.ec.europa.eu/cas/login). No additional corporate entity authentication mechanism is currently used by the SRP.
+Assigned Representatives (ARs) of manufacturers and, once applicable, open-source software stewards must have an **EU Login account with multi-factor authentication (MFA) enabled** and use it to register on the SRP. *(bolded 2026-09-13 23:15 UTC)* An EU Login account can be created in advance at the following link: [https://ecas.ec.europa.eu/cas/login](https://ecas.ec.europa.eu/cas/login). No additional corporate entity authentication mechanism is currently used by the SRP.
 
 EU Login accounts are personal, and MFA is required to access the platform. Therefore, ARs submitting notifications should use their own EU Login accounts.
 
-A Primary AR can register directly on the SRP by selecting the relevant CSIRT Designated as Coordinator (CDaC), providing the required manufacturer information, and creating the initial association with the manufacturer. A Secondary AR can register on the SRP and be associated with a manufacturer after receiving an invitation from the Primary AR and confirming the pre-filled manufacturer information.
+A **Primary AR** can register directly on the SRP by selecting the relevant **CSIRT Designated as Coordinator (CDaC)**, providing the required manufacturer information, and creating the initial association with the manufacturer. A **Secondary AR** can register on the SRP and be associated with a manufacturer after receiving an invitation from the Primary AR and confirming the pre-filled manufacturer information. *("Primary AR", "CSIRT Designated as Coordinator (CDaC)" and "Secondary AR" all bolded 2026-09-13 23:15 UTC.)*
 
 There can be only one Primary AR per manufacturer and up to 20 Secondary ARs. The Primary AR is the main administrative representative for the manufacturer in the SRP and has additional administrative permissions, including managing the manufacturer association and inviting or removing Secondary ARs. A Primary AR must first have a validated AR–manufacturer association, displayed as "**Verified**", before inviting Secondary ARs. *(new 2026-09-09 — formalises on the FAQ page the precondition previously stated only in the AR User Registration guidance's Secondary-AR preconditions, "The Primary AR is a validated user"; bold narrowed 2026-09-13 22:13 UTC from the whole sentence to just "Verified".)* Both Primary and Secondary ARs can submit and update notifications for the manufacturer, subject to their respective access permissions.
 
@@ -956,13 +975,9 @@ The Primary AR can access all notifications associated with the manufacturer, wh
 
 ARs can check their current role and manufacturer association status under **Settings > Association Management**. *(new 2026-09-09; bold narrowed 2026-09-13 22:13 UTC from the whole sentence to just "Settings > Association Management")*
 
-The AR–manufacturer association is validated by the designated CSIRT. The specific validation procedure and processing time may vary between CSIRTs and remain the responsibility of the relevant CSIRT.
+The AR–manufacturer association is validated by the designated CSIRT. The specific validation procedure and processing time may vary between CSIRTs and remain the responsibility of the relevant CSIRT. **Verification takes place in parallel with the reporting process and does not prevent an AR from submitting notifications while validation is pending. **ARs whose manufacturer association has not yet been verified may submit up to 20 notifications for that manufacturer before verification becomes mandatory. *(these three previously separate paragraphs merged into one 2026-09-13 23:15 UTC, and the middle sentence gained bold it did not have before — "Verification takes place..." was reworded 2026-09-09 23:11 UTC: "Validation" → "Verification" — only the sentence's first word changed, so it now contradicts itself by ending in "validation is pending"; the third sentence was reworded 2026-09-09 from "Non-validated ARs may submit up to 20 notifications for one manufacturer before validation becomes mandatory" — "validation"/"validated" → "verification"/"verified"; the 20-notification limit itself is unchanged.)*
 
-Verification takes place in parallel with the reporting process and does not prevent an AR from submitting notifications while validation is pending. *(reworded 2026-09-09 23:11 UTC: "Validation" → "Verification" — only the sentence's first word changed, so it now contradicts itself by ending in "validation is pending"; continues the validation→verification rewording already logged for the neighbouring sentence at 2026-09-09 12:19 UTC, which missed this one.)*
-
-ARs whose manufacturer association has not yet been verified may submit up to 20 notifications for that manufacturer before verification becomes mandatory. *(reworded 2026-09-09 from "Non-validated ARs may submit up to 20 notifications for one manufacturer before validation becomes mandatory" — "validation"/"validated" → "verification"/"verified"; the 20-notification limit itself is unchanged.)*
-
-To limit the validation workload for designated CSIRTs, manufacturers and, once applicable, open-source software stewards are advised to register and initiate the validation process only when they need to submit a notification. Provided that the AR already has an active EU Login account, registration on the SRP takes just a few minutes.
+To limit the validation workload for designated CSIRTs, manufacturers and, once applicable, open-source software stewards are advised to **register and initiate the validation process only when they need to submit a notification**. Provided that the AR already has an active EU Login account, registration on the SRP takes just a few minutes. *(bolded 2026-09-13 23:15 UTC.)*
 
 More information on registration, AR roles, and use of the platform is available in the regularly updated ENISA guidance materials.
 
@@ -1004,13 +1019,13 @@ Detailed information on the data fields to be completed at each reporting stage 
 
 ### Q16. What information do I need to provide when submitting a notification through the SRP? *(retitled, reworded and tagged [UPDATED] 2026-09-10 17:13 UTC; was "Q16. What are the data fields to be filled in the reporting template?", no tag)*
 
-"The SRP Glossary provides detailed field-by-field guidance for notifications concerning actively exploited vulnerabilities (AEV) and severe incidents (SI). For each field, it explains what the field means, how it may be completed, the expected format, and at which reporting stage it applies: Early Warning, 72-Hours Notification, and Final Report.
+The SRP Glossary provides detailed field-by-field guidance for notifications concerning actively exploited vulnerabilities (AEV) and severe incidents (SI). For each field, it explains what the field means, how it may be completed, the expected format, and at which reporting stage it applies: Early Warning, 72-Hours Notification, and Final Report. *(the literal opening quotation mark this baseline had reproduced here since 2026-09-07 is gone from the live page as of 2026-09-13 23:15 UTC; wording unchanged.)*
 
-The Glossary also indicates whether a field is required (stemming directly from CRA obligations or identified by logical consequence), optional, mandatory if the information is available, or carried forward from a previous reporting stage and, when applicable, updated as additional information becomes available.
+The Glossary also indicates whether a field is **required** (stemming directly from CRA obligations or identified by logical consequence), **optional**, **mandatory if the information is available**, or **carried forward** from a previous reporting stage and, when applicable, updated as additional information becomes available. *(the four status labels bolded 2026-09-13 23:15 UTC; no wording change.)*
 
 The fields displayed and their requirements may differ depending on the notification type and reporting stage. ARs should complete all required fields and provide additional information whenever it is available and relevant.
 
-Please consult the [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2) for the complete and most up-to-date guidance on the information provided."
+Please consult the [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2) for the complete and most up-to-date guidance on the information provided. *(the closing quotation mark is likewise gone as of 2026-09-13 23:15 UTC.)*
 
 **The 43-row data-field table this baseline had reproduced here since 2026-09-07 (Common fields 1–23, AEV v24–v34, SI i35–i43) is gone from the live page as of this check — confirmed at the HTML level, the page now contains zero `<table>` elements.** The answer no longer states any field name, requirement level, or per-stage status itself; it defers entirely to the Glossary. The last known table content is preserved in the 2026-09-10 17:13 UTC change log entry below for the historical record. Any future field-by-field check is against `enisa-srp-glossary-baseline.md` alone — see the updated "CRA SRP Glossary" section further down, whose "Widened divergence with Q16" note is now resolved rather than updated, since Q16 no longer carries field data to diverge from.
 
@@ -1044,25 +1059,25 @@ You should then select the corresponding CDaC when submitting your notification 
 
 ### Q19. What are the responsibilities of key entities involved with the CRA SRP?
 
-- Manufacturers : Submit timely notifications and comply with the other obligations established by the CRA, as per Art. 14;
+- **Manufacturers**: Submit timely notifications and comply with the other obligations established by the CRA, as per Art. 14;
 
-- Open-source software stewards : Submit timely notifications to the extent that they are involved with products with digital elements, as per Art. 24(3);
+- **Open-source software stewards**: Submit timely notifications to the extent that they are involved with products with digital elements, as per Art. 24(3);
 
-- ENISA : Manages the platform, processes reports, prepares biennial trend reports (first due within 24 months of the reporting obligations starting), operates a helpdesk (especially for SMEs), and discloses fixed vulnerabilities to the European Vulnerability Database (EUVD);
+- **ENISA**: Manages the platform, processes reports, prepares biennial trend reports (first due within 24 months of the reporting obligations starting), operates a helpdesk (especially for SMEs), and discloses fixed vulnerabilities to the European Vulnerability Database (EUVD);
 
-- CSIRTs Designated as Coordinators : Receive and assess reports, decide on dissemination delays, inform market surveillance authorities and the public, if necessary, and provide helpdesk support alongside ENISA;
+- **CSIRTs Designated as Coordinators**: Receive and assess reports, decide on dissemination delays, inform market surveillance authorities and the public, if necessary, and provide helpdesk support alongside ENISA;
 
-- European Commission : Adopts delegated and implementing acts (e.g., for delay criteria and report formats), evaluates the platform's effectiveness, and supports coordination of enforcement activities;
+- **European Commission**: Adopts delegated and implementing acts (e.g., for delay criteria and report formats), evaluates the platform's effectiveness, and supports coordination of enforcement activities;
 
-- Market Surveillance Authorities : Receive information from the CSIRT designated as coordinator and enforce compliance, such as through investigations or corrective actions.
+- **Market Surveillance Authorities**: Receive information from the CSIRT designated as coordinator and enforce compliance, such as through investigations or corrective actions. *(all six lead-ins bolded and the stray space before each colon dropped, 2026-09-13 23:15 UTC — was "Manufacturers :" etc.; no wording change.)*
 
 ### Q20. Who receives the reports submitted through the platform?
 
 As a general rule, when a manufacturer submits a notification through the CRA SRP, it is simultaneously made available to:
 
-- The CSIRT (Computer Security Incident Response Team) designated as coordinator in the relevant Member State; and
+- The **CSIRT** (Computer Security Incident Response Team) designated as coordinator in the relevant Member State; and
 
-- ENISA (unless particularly exceptional circumstances apply).
+- **ENISA** (unless particularly exceptional circumstances apply). *(both bolded 2026-09-13 23:15 UTC; no wording change.)*
 
 The CSIRT designated as coordinator that initially receives the notification is then responsible for disseminating it without delay to other relevant CSIRTs across the EU via the platform.
 
@@ -1070,9 +1085,9 @@ The CSIRT designated as coordinator that initially receives the notification is 
 
 Yes. In **particular exceptional circumstances (PEC)**, the receiving CSIRT may delay or withhold the dissemination of a notification to other Member States, including at the request of the manufacturer or open-source software steward. *(gained `<strong>` emphasis and lost the stray space before the comma 2026-09-13 18:10 UTC; provenance of the space loss unclear — see the change log.)*
 
-The European Commission adopted a [Delegated Act](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=PI_COM:C(2025)8407%20) on 11 December 2025 to further specify the terms and conditions for applying these grounds.
+The European Commission adopted a [Delegated Act](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=PI_COM:C(2025)8407%20) on **11 December 2025** to further specify the terms and conditions for applying these grounds. *(date bolded 2026-09-13 23:15 UTC; no wording change.)*
 
-During the first 72-hour window, you should assess, where applicable, whether PEC applies. PEC may be invoked only where at least one of the conditions under Art. 16(2) of the CRA is met. It is intended for exceptional situations in which the dissemination of information may need to be delayed to avoid security-related risks.
+During the first 72-hour window, you should assess, where applicable, whether **PEC** applies. PEC may be invoked only where at least one of the conditions under Art. 16(2) of the CRA is met. *(first "PEC" in this sentence bolded 2026-09-13 23:15 UTC; no wording change.)* It is intended for exceptional situations in which the dissemination of information may need to be delayed to avoid security-related risks.
 
 Where PEC is invoked in the 72-hour Notification, ENISA will not receive the full content of the notification immediately. This applies only where the manufacturer actively marks that at least one of the conditions listed in points (a) to (c) of Art. 16(2) applies. In such a case, ENISA receives only partial information until the receiving CSIRT makes the full notification available.
 
@@ -1110,9 +1125,9 @@ The counters for the 72-hour Notification and Final Report are used as a referen
 
 These counters are intended to provide visibility but do not replace the responsibility of manufacturers and open-source software stewards to comply with the obligations laid down in CRA, including the requirement to report upon becoming aware, without undue delay and in any event within the timelines set out in Art. 14.
 
-- 72-hour counter : In the current release, the 72-hour counter displays a due date/time 48hrs after submission of the 24-hour Early Warning. As a result, in some cases, a notification may be displayed as overdue before 72 hours have elapsed since the manufacturer or open-source software steward became aware of the event. This logic will be updated in a future release to calculate the deadline using the "Date/Time when you became aware of the incident/actively exploited vulnerability" field for both AEVs and SIs.
+- **72-hour counter**: In the current release, the 72-hour counter displays a due date/time 48hrs after submission of the 24-hour Early Warning. As a result, in some cases, a notification may be displayed as overdue before 72 hours have elapsed since the manufacturer or open-source software steward became aware of the event. This logic will be updated in a future release to calculate the deadline using the "Date/Time when you became aware of the incident/actively exploited vulnerability" field for both AEVs and SIs.
 
-- Final Report : The Final Report deadline is calculated differently for AEVs and SIs, reflecting the different requirements under Art. 14. For AEVs, no counter is currently implemented, as the Final Report deadline depends on the date and time when a corrective or mitigating measure becomes available. For SIs, the counter displays a due date one month after submission of the 72-hour Severe Incident Notification *(typo fixed 2026-09-10 01:08 UTC — was "Sever Incident Notification" since at least 2026-09-07)*.
+- **Final Report**: The Final Report deadline is calculated differently for AEVs and SIs, reflecting the different requirements under Art. 14. For AEVs, no counter is currently implemented, as the Final Report deadline depends on the date and time when a corrective or mitigating measure becomes available. For SIs, the counter displays a due date one month after submission of the 72-hour Severe Incident Notification *(typo fixed 2026-09-10 01:08 UTC — was "Sever Incident Notification" since at least 2026-09-07; both lead-ins bolded and the stray space before each colon dropped 2026-09-13 23:15 UTC.)*
 
 ### Q27. Can I report vulnerabilities even if they are not actively exploited? *(lost its "[UPDATED]" tag 2026-09-11 13:17 UTC, part of a wider tag sweep — see the "FAQ entries" note above; tagged since 2026-09-08)*
 
@@ -1128,7 +1143,7 @@ The SRP will be available at [https://portal.cra-srp.enisa.europa.eu](https://po
 
 From there, select "Assigned Representative" and log in using your EU Login account.
 
-The portal will be available from 11 September 2026.
+**The portal will be available from 11 September 2026.** *(whole sentence bolded 2026-09-13 23:15 UTC; no wording change.)*
 
 ### Q29. [UPDATED] When did the reporting obligations start? *(retitled and re-tagged 2026-09-12 13:10 UTC — "do" → "did", tense only, body text unchanged; had lost its "[NEW]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above)*
 
@@ -1249,6 +1264,8 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 
 The four guidance documents above are separate subpages (URLs in `guidance_urls` in the frontmatter). The first three carry a disclaimer of the form "The information on this page is provided according to our current best knowledge and may be subject to change. Please ensure [that] you consult the latest available guidance before applying these instructions." (the "that" is present on two of the three — AR User Registration and AR Notification Submission and Update — and absent on AR Interface Functions; a pre-existing wording difference, not a detected change). The fourth, PEC, carries the same disclaimer without "that", plus an additional access-precondition note not present on the other three (see below). All four have now been rewritten into a second-person "Follow these steps…" style with numbered steps and screenshots (AR Notification Submission and Update was the last to receive this treatment, on 2026-09-09 22:12 UTC). **As of 2026-09-09 22:12 UTC**: AR User Registration shows "Last updated: 09/09/2026"; AR Notification Submission and Update shows "Last updated: 03 September 2026" (its first move since 2026-09-02); AR Interface Functions shows "Last updated: 09/09/2026" (unmoved since 21:07 UTC despite a further same-day rewrite); PEC shows "Last updated: 09 September 2026" — its first date stamp ever, gained this run. None of the four stamps is a reliable change signal; diff the text on every check.
 
+**Bold-emphasis pass, 2026-09-13 23:15 UTC**: all four pages gained substantial new `<strong>` emphasis this run — mostly step-lead phrases, sub-headings, and disclaimer/purpose sentences that previously carried none, with roughly 19 new spans on AR User Registration, 26 on AR Notification Submission and Update, 42 on AR Interface Functions, and 4 on PEC. None of it is annotated inline below (the prior captures did not track bold at this precision on these pages either, beyond the specific quoted phrases noted); the wording of every sentence is unchanged. The one exception, called out inline above, is AR User Registration's Secondary-AR "Verified" precondition, which lost bold rather than gaining it. None of the four "Last updated" stamps moved.
+
 ### Guidance: CRA SRP - AR User registration
 URL: see `guidance_urls`. Page note: "Last updated: 12 September 2026" *(stamp moved 2026-09-12 17:11 UTC from "10 September 2026", with zero wording change anywhere on the page; the main page's own card for this guidance still reads "Updated: 10 September 2026", so the two now disagree — the same lagging-stamp pattern tracked since first capture).*
 
@@ -1266,7 +1283,7 @@ Follow this procedure to register on the SRP as a Primary Assigned Representativ
 
 **Registration as a Secondary AR via Invitation** *(retitled from "Registration via Invitation (Secondary AR)")*
 Follow this procedure to register on the SRP as a Secondary AR using an email invitation sent by the Primary AR *(trailing full stop dropped 2026-09-13 22:13 UTC)*
-- Pre-conditions: You are not already registered as an SRP user; you have an active EU Login account with MFA enabled; you have received a valid SRP email invitation initiated by a Primary AR; and **"The feature to invite a Secondary AR is available only to a 'Verified' Primary AR."** *(reworded in this rewrite from "The Primary AR is a validated user" — now uses the same "Verified" term as Q9 and AR Interface Functions' own "Invite Secondary AR" precondition, closing the terminology gap flagged since 2026-09-08 21:06 UTC.)*
+- Pre-conditions: You are not already registered as an SRP user; you have an active EU Login account with MFA enabled; you have received a valid SRP email invitation initiated by a Primary AR; and the feature to invite a Secondary AR is available only to a "Verified" Primary AR *(reworded in this rewrite from "The Primary AR is a validated user" — now uses the same "Verified" term as Q9 and AR Interface Functions' own "Invite Secondary AR" precondition, closing the terminology gap flagged since 2026-09-08 21:06 UTC. As of 2026-09-13 23:15 UTC this bullet has lost the bold and the outer quotation marks/trailing full stop this baseline had recorded around it — the sentence now reads as plain text with only "Verified" itself quoted; no wording change.)*
 - Steps: "Click the link in the email invitation. You will be prompted to authenticate through EU Login, which completes the authentication successfully." Exceptions: "If the invitation link has expired because more than 7 days have passed since the SRP sent the invitation, you will be redirected to a page displaying an error message." *(causal "because" replaces the parenthetical, no meaning change)* → Review and confirm the accuracy of your pre-filled personal details **(First Name, Last Name, Email)** *(dropped "Legal name" 2026-09-10 13:11 UTC — this list now matches the Primary AR flow's own three-field list above)* and click "Continue". **"These fields are retrieved from EU Login and cannot be edited in the SRP."** *(the previously-tracked redundant/self-contradictory phrasing — "These fields cannot be edited but are retrieved from EU Login and cannot be edited in the SRP" — is fixed in this rewrite.)* → Review and confirm the accuracy of the pre-filled manufacturer details for the manufacturer associated with the Primary AR who initiated the invitation and click "Accept invitation".
 - Expected result: "Registration is completed and you become a Secondary AR for the relevant manufacturer. Your system role is displayed as 'AR Backup User' and your status is set to 'Active'. If registration is not completed within 7 days of the invitation being sent, the invitation expires and the user status becomes 'Invitation Expired' in the SRP." *(reworded; same substance — still 7 days, same role/status names.)*
 
