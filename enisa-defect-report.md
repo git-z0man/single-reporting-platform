@@ -561,6 +561,106 @@ second, independent source: an official ENISA video published the same
 morning as the AR User Manual screenshots. Folded into G5 rather than restated
 here.
 
+### G17 — The Dashboard's tabs are not what the guide's own screenshot shows
+
+The guide's Dashboard screenshot (`if-04-dashboard.png`) is a stale, pre-launch
+build — placeholder `(n)` counts and a status badge reading "Approved" rather
+than "Active" — and its tabs read **All, Needs Submission, Corrective Measures
+Required, Draft, Archive**. The AR User Manual's own Dashboard screenshots
+(pp. 32, 34, all showing "Active" status and real dates) carry a different set
+entirely: **All, Needs Submission, Corrective Measures Required, Closed
+(Previously Valid), Closed (Previously Invalid), Draft**. There is no
+"Overdue" tab and no "Archive" tab in the manual's screenshots at all — instead
+there are two "Closed" states the guide does not mention anywhere.
+
+**Status: open.** Source: AR User Manual pp. 32, 34 (PDF pages 33, 35), vs.
+`img/enisa/if-04-dashboard.png` and the guide's own prose at the Dashboard
+step.
+
+### G18 — A two-tier storage split the Glossary and FAQ never mention
+
+Section 4.8 (Update Existing Notification) states plainly that where a
+notification lands depends on whether the designated CSIRT has disseminated
+it yet: *"If the Notification has not yet been disseminated by the designated
+CSIRT, the updated notification data (all fields) are automatically stored
+only in the SRP National Endpoint Data Layer and remain only visible to the
+designated CSIRT"* — versus, once disseminated, *"stored in the SRP ENISA
+Master Data Layer and automatically made visible to ENISA and the concerned
+CSIRTs."* Neither "National Endpoint Data Layer" nor "ENISA Master Data
+Layer" appears in the Glossary, the FAQ, or anywhere in this guide. An AR has
+no way of knowing, from the published sources, that pre-dissemination data
+lives in a different store than post-dissemination data.
+
+**Status: open.** Source: AR User Manual p. 48 (PDF page 49), section 4.8.
+
+### G19 — A CSIRT-side screenshot leaked into the AR manual, and it shows more than the AR manual meant to
+
+One screenshot (p. 50, PDF page 51) is not an AR view at all: the profile
+badge reads "csirt Greece", and the top nav carries a **"User Management"**
+item that never appears in any AR screenshot anywhere else in this manual or
+in the guide. Its Alerts list gives the actual alert-text templates, not
+paraphrased:
+
+- *"[SRP] Notification Disseminated - SRP-GR-V-2026-00001751 — Notification
+  SRP-GR-V-2026-00001751 has been disseminated under CRG by the Designated
+  CSIRT GR. The concerned CSIRTs are: CSIRT_FR,CSIRT_IT. The CSIRTs that
+  applied a delay are: N/A."*
+- *"[SRP] Notification Submitted - SRP-GR-V-2026-00001751 - REPORT_72H — The
+  Notification SRP-GR-V-2026-00001751 was submitted."*
+
+The phrase "CSIRTs that applied a delay" confirms a per-CSIRT dissemination
+delay mechanism that neither the Glossary nor the FAQ names.
+
+**Status: open.** Source: AR User Manual p. 50 (PDF page 51).
+
+### G20 — Two system role strings, distinct from the guide's own terminology
+
+Registration success sets the account's system role to exactly **"AR Primary
+User"**; completing a Secondary/Backup AR registration sets it to exactly
+**"AR Backup User"** — both quoted verbatim from the manual (pp. 13, 16-17).
+This guide, like the manual's own running prose, otherwise says "Primary AR"
+and "Secondary AR" throughout; a report-filer checking their own account
+against either published source would not recognise the other pair of terms
+as the same thing.
+
+**Status: open.** Source: AR User Manual pp. 13, 16-17 (PDF pages 14, 17-18).
+
+### G21 — An internal user identifier, never screenshotted before, sits in the profile menu
+
+The profile/user dropdown (top right, on every logged-in screen) shows an
+"n"-prefixed identifier above the menu items — **"ID: n5590879"** in this
+manual's demo account — followed by, in order: **Settings, FAQ, Contact
+Support, Logout**. Confirmed identically across three separate screenshots
+(pp. 20, 22, 24). Neither the ID nor the menu's existence and item order
+appears anywhere in the guide.
+
+**Status: open.** Source: AR User Manual pp. 20, 22, 24 (PDF pages 21, 23, 25).
+
+### G22 — The "You are not Authorised" error screen, verbatim, in both its trigger contexts
+
+Both Section 2 (Registration, p. 12) and Section 3 (Login, p. 19) point to
+the same error screen when authentication fails, quoted here in full for the
+first time:
+
+> **You are not Authorised**
+> It seems like you don't have permission to use this portal. Please sign in
+> with a different account.
+> [Login a different user]
+> If this is an error please Contact Support to report the problem.
+
+**Status: open.** Source: AR User Manual pp. 12, 19 (PDF pages 13, 20).
+
+### G23 — Section 3, "AR User Login & Logout", is not referenced anywhere in this guide
+
+Manual pages 17-20 (PDF pages 18-21) document a whole procedure this guide
+has never covered: signing back in to an existing account, and logging out
+— *"Click your user identifier or profile menu and select Log Out."* Nothing
+here is a defect in the platform; it is a gap in the guide, since a
+first-time reader following only this page has no documented way to log out.
+
+**Status: open — guide gap, not a platform defect.** Source: AR User Manual
+pp. 17-20 (PDF pages 18-21).
+
 ### G5 — Confirmed, not defects
 
 Recorded so the record shows what was checked rather than only what was wrong:
