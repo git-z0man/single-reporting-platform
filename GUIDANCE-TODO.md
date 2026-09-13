@@ -158,50 +158,51 @@ practical note as well.
 | Slot | Field | Already flagged |
 |---|---|---|
 | `field-1` | Notification type (Vulnerability/Incident) |  |
-| `field-7` | Title |  |
-| `field-8` | Summary |  |
-| `field-9` | Manufacturer name |  |
-| `field-10` | Member States where product available (Concerned CSIRT) |  |
-| `field-11` | Product Name |  |
-| `field-12` | Product version |  |
-| `field-13` | Product Type (Default/Important/Critical) |  |
-| `field-14` | Product Class |  |
-| `field-15` | Product Category |  |
-| `field-16` | End of support indicator | ⚑ source note |
-| `field-17` | Component name |  |
-| `field-18` | Mitigating measure expected shortly |  |
-| `field-19` | User Action able to reduce impact |  |
-| `field-20` | Considered sensitivity of information |  |
-| `field-21` | Corrective or mitigating measures taken | — **written** |
-| `field-22` | Corrective or mitigating measures users can take | ⚑ source note — **written** |
-| `field-23` | Attack vector |  |
+| `field-2` | Title |  |
+| `field-3` | Summary |  |
+| `field-4` | Manufacturer name |  |
+| `field-5` | Member States where product available (Concerned CSIRT) |  |
+| `field-6` | Product Name |  |
+| `field-7` | Product version |  |
+| `field-8` | Product Type (Default/Important/Critical) |  |
+| `field-9` | Product Class |  |
+| `field-10` | Product Category |  |
+| `field-11` | End of support indicator | ⚑ source note |
+| `field-12` | Component name |  |
+| `field-13` | Mitigating measure expected shortly |  |
+| `field-14` | User Action able to reduce impact |  |
+| `field-15` | Considered sensitivity of information |  |
+| `field-16` | Corrective or mitigating measures taken | — **written** |
+| `field-17` | Corrective or mitigating measures users can take | ⚑ source note — **written** |
+| `field-18` | Attack vector |  |
 
 ### Actively exploited vulnerability
 
 | Slot | Field | Already flagged |
 |---|---|---|
-| `field-v24` | CVE ID |  |
-| `field-v25` | EUVD ID |  |
-| `field-v26` | General information |  |
-| `field-v27` | Date when corrective or mitigating measure has been available |  |
-| `field-v28` | Full description of the severity of the vulnerability | ⚑ source note |
-| `field-v29` | Full description of the impact of the vulnerability |  |
-| `field-v30` | Date/time when you become aware of the Actively Exploited Vulnerability [1] | — **written** |
-| `field-v31` | Malicious actor that has exploited/is exploiting the vulnerability |  |
-| `field-v32` | Particular Exceptional Circumstances (PEC) | ⚑ source note |
-| `field-v33` | PEC Delay Reason | ⚑ source note |
-| `field-v34` | Please provide further information |  |
+| `field-v19` | CVE ID |  |
+| `field-v20` | EUVD ID |  |
+| `field-v21` | General information |  |
+| `field-v22` | Date when corrective or mitigating measure has been available |  |
+| `field-v23` | Details about the security update/corrective measure available | new field, ENISA added it 10 Sep 2026 |
+| `field-v24` | Full description of the severity of the vulnerability | ⚑ source note |
+| `field-v25` | Full description of the impact of the vulnerability |  |
+| `field-v26` | Date/time when you become aware of the Actively Exploited Vulnerability [1] | — **written** |
+| `field-v27` | Malicious actor that has exploited/is exploiting the vulnerability |  |
+| `field-v28` | Particular Exceptional Circumstances (PEC) | ⚑ source note |
+| `field-v29` | PEC Delay Reason | ⚑ source note |
+| `field-v30` | Please provide further information |  |
 
 ### Severe incident
 
 | Slot | Field | Already flagged |
 |---|---|---|
-| `field-i35` | Incident is suspected of unlawful or malicious acts |  |
-| `field-i36` | General information about nature of incident |  |
-| `field-i37` | Applied or ongoing mitigation measures | ⚑ source note — **written** |
-| `field-i38` | Detailed description of the Severity of the incident | ⚑ source note |
-| `field-i39` | Detailed description of the Impact of the incident |  |
-| `field-i40` | Type of Threat or root cause likely to have triggered incident |  |
-| `field-i41` | Date/time when you become aware of the incident [2] | ⚑ source note — **written** |
-| `field-i42` | Date/time incident occurred | ⚑ source note |
-| `field-i43` | Initial assessment of the incident |  |
+| `field-i31` | Incident is suspected of unlawful or malicious acts |  |
+| `field-i32` | General information about nature of incident |  |
+| `field-i33` | Applied or ongoing mitigation measures | ⚑ source note — **written** |
+| `field-i34` | Detailed description of the Severity of the incident | ⚑ source note |
+| `field-i35` | Detailed description of the Impact of the incident |  |
+| `field-i36` | Type of Threat or root cause likely to have triggered incident |  |
+| `field-i37` | Date/time when you become aware of the incident [2] | ⚑ source note — **written** |
+| `field-i38` | Date/time incident occurred | ⚑ source note |
+| `field-i39` | Initial assessment of the incident |  |

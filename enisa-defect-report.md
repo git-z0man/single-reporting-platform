@@ -76,7 +76,7 @@ than the typos: a reporter acting on one of them acts wrongly.
 
 ### B1 — Glossary field 11: the meaning column describes a different field
 
-**Status: open** — meaning column unchanged on 10 September.
+**Status: fixed** · *2026-09-10 13:11 UTC* — rewritten with the Glossary's v1.2 → v1.3 move. The meaning column now reads "Indicates whether the product with digital elements has reached the end of the support period", describing this field's actual Yes/No content instead of a user-interface indicator. The "is doesn't" typo went with it.
 
 Field 11 is named **"End of support indicator"**. Its instruction, format and
 example columns are consistent with that ("You may select one: Yes … or No",
@@ -92,7 +92,7 @@ reader trying to decide what "Yes" means here gets two different answers.
 
 ### B2 — Glossary field v28: "one" versus "at least one" versus the form
 
-**Status: open** — both columns unchanged on 10 September.
+**Status: fixed** · *2026-09-10 13:11 UTC* — "select one of the three of the legally specified circumstances" became "select at least one of the three legally specified circumstances", matching the field's own completion instruction. Note the field is **now numbered v29**: the same Glossary release inserted a new AEV field as v23 and shifted every later number up by one.
 
 Three statements about the same PEC field disagree:
 
