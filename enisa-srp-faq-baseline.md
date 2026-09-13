@@ -13,13 +13,13 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-13 (fetched 18:10 UTC, Q21 gains bold emphasis around its defined term and drops a stray space before a comma — see change log)
-guidance_retrieved: 2026-09-13 (fetched 18:10 UTC, unchanged since 18:10 UTC on 2026-09-12)
-glossary_retrieved: 2026-09-13 (fetched 18:10 UTC, unchanged since 13:10 UTC on 2026-09-12 — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-09-13 (fetched 18:10 UTC, unchanged since 17:11 UTC on 2026-09-12)
-ar_user_manual_retrieved: 2026-09-13 (fetched 18:10 UTC, unchanged since first capture at 10:12 UTC on 2026-09-10)
-terms_conditions_retrieved: 2026-09-13 (fetched 18:10 UTC, unchanged since the trailing space was lost at 14:07 UTC on 2026-09-10)
-ar_user_tutorial_video_retrieved: 2026-09-13 (fetched 18:10 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
+retrieved: 2026-09-13 (fetched 22:13 UTC, Q7's Final Report bullets and Q9/Q17's compliance-emphasis bold both lost spacing/markup — see change log)
+guidance_retrieved: 2026-09-13 (fetched 22:13 UTC, AR User Registration's Secondary-AR-invitation intro sentence lost its trailing full stop — see change log)
+glossary_retrieved: 2026-09-13 (fetched 22:13 UTC, unchanged since 13:10 UTC on 2026-09-12 — see `enisa-srp-glossary-baseline.md`)
+csirt_list_retrieved: 2026-09-13 (fetched 22:13 UTC, unchanged since 17:11 UTC on 2026-09-12)
+ar_user_manual_retrieved: 2026-09-13 (fetched 22:13 UTC, wording unchanged since first capture at 10:12 UTC on 2026-09-10; a cover-image thumbnail is present on the live page that this baseline's text-only capture had never recorded either way — see change log)
+terms_conditions_retrieved: 2026-09-13 (fetched 22:13 UTC, unchanged since the trailing space was lost at 14:07 UTC on 2026-09-10)
+ar_user_tutorial_video_retrieved: 2026-09-13 (fetched 22:13 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-13
@@ -31,6 +31,24 @@ last_change: 2026-09-13
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-13 22:13 UTC (vs. 2026-09-13 18:10 UTC)
+
+A markup-only pass over three FAQ questions and a punctuation drop on one guidance page; all other pages, including the Glossary's 39 fields and the CSIRT list's 27 countries, are byte-for-byte unchanged.
+
+**Editorial**
+
+- **FAQ Q7's Final Report bullets lost the space before their colon**: "For actively exploited vulnerabilities : No later than 14 days..." → "For actively exploited vulnerabilities: No later than 14 days...", and likewise for "For severe incidents : Within 1 month..." → "...severe incidents: Within 1 month...". Wording and deadlines unchanged.
+- **FAQ Q9 and Q17 lose compliance-emphasis bold**: the three Q9 sentences added 2026-09-09 to formalise the AR precondition, notification-visibility, and role-check rules, and Q17's 2026-09-10 closing sentence, were each previously wrapped in full-sentence `<strong>`. Now only a fragment of the first Q9 sentence ("Verified") and of the third ("Settings > Association Management") stays bold, the second Q9 sentence and the Q17 sentence carry no bold at all. No word changed in any of the four sentences.
+- **AR User Registration guidance loses a full stop**: the "Registration as a Secondary AR via Invitation" intro sentence — "Follow this procedure to register on the SRP as a Secondary AR using an email invitation sent by the Primary AR." — now has no trailing period on the live page.
+
+**Watch**
+
+- The AR User Manual page now carries a cover-image thumbnail (a screenshot dated 2026-09-10 in its filename) above the body text. This baseline has only ever captured the page's text, so whether the image is newly added or was simply never recorded is not determinable from this run alone.
+
+**Unchanged**
+
+Main page (Content navigation still 9 entries, Access button, all Resources/Guidance cards, Factsheet translations incl. the NL anomaly); FAQ Q1–Q31 wording and tags otherwise identical (5× [UPDATED]: Q4, Q7, Q17, Q22, Q29; "Updated: 12 September 2026"; Q1's `<strong>&nbsp;</strong>` and Q27's `Art. 14(<s>3</s>1)` artifacts intact); CSIRT list (27 countries, same links, "Last updated: 10 September 2026", Croatia's `<u>`-wrapped cell and disclaimer sentence as logged); the other three guidance subpages (same stamps — AR Notification/Interface Functions "12 September 2026", PEC "09 September 2026" — same tracked defects); Terms and Conditions and AR User Tutorial Video pages byte for byte; Glossary unchanged (still v1.3, 39 fields, field 10's Example still `cryptoprocessing&nbsp; devices`, field v28's Example still empty, v27's doubled full stop, v30's missing space in "(CDaC)taking", the 42 "By default copied from previous step, or updated" cells, and all other field content re-verified — see `enisa-srp-glossary-baseline.md`).
 
 ### 2026-09-13 18:10 UTC (vs. 2026-09-12 18:10 UTC)
 
@@ -908,9 +926,9 @@ Manufacturers and, once applicable, open-source software stewards must adhere to
 
 - Final Report:
 
-- For actively exploited vulnerabilities : No later than 14 days after a corrective or mitigating measure (e.g., patch) becomes available. *("or mitigating" inserted 2026-09-12 13:10 UTC)*
+- For actively exploited vulnerabilities: No later than 14 days after a corrective or mitigating measure (e.g., patch) becomes available. *("or mitigating" inserted 2026-09-12 13:10 UTC; space before the colon dropped 2026-09-13 22:13 UTC, was "vulnerabilities :")*
 
-- For severe incidents : Within 1 month after the 72-hour notification.
+- For severe incidents: Within 1 month after the 72-hour notification. *(space before the colon dropped 2026-09-13 22:13 UTC, was "incidents :")*
 
 ### Q8. How does the Single Reporting Platform operate? *(no tag on the live page since 2026-09-09; was tagged [UPDATED])*
 
@@ -932,11 +950,11 @@ EU Login accounts are personal, and MFA is required to access the platform. Ther
 
 A Primary AR can register directly on the SRP by selecting the relevant CSIRT Designated as Coordinator (CDaC), providing the required manufacturer information, and creating the initial association with the manufacturer. A Secondary AR can register on the SRP and be associated with a manufacturer after receiving an invitation from the Primary AR and confirming the pre-filled manufacturer information.
 
-There can be only one Primary AR per manufacturer and up to 20 Secondary ARs. The Primary AR is the main administrative representative for the manufacturer in the SRP and has additional administrative permissions, including managing the manufacturer association and inviting or removing Secondary ARs. **A Primary AR must first have a validated AR–manufacturer association, displayed as "Verified", before inviting Secondary ARs.** *(new 2026-09-09 — formalises on the FAQ page the precondition previously stated only in the AR User Registration guidance's Secondary-AR preconditions, "The Primary AR is a validated user".)* Both Primary and Secondary ARs can submit and update notifications for the manufacturer, subject to their respective access permissions.
+There can be only one Primary AR per manufacturer and up to 20 Secondary ARs. The Primary AR is the main administrative representative for the manufacturer in the SRP and has additional administrative permissions, including managing the manufacturer association and inviting or removing Secondary ARs. A Primary AR must first have a validated AR–manufacturer association, displayed as "**Verified**", before inviting Secondary ARs. *(new 2026-09-09 — formalises on the FAQ page the precondition previously stated only in the AR User Registration guidance's Secondary-AR preconditions, "The Primary AR is a validated user"; bold narrowed 2026-09-13 22:13 UTC from the whole sentence to just "Verified".)* Both Primary and Secondary ARs can submit and update notifications for the manufacturer, subject to their respective access permissions.
 
-**The Primary AR can access all notifications associated with the manufacturer, whereas a Secondary AR can access only the notifications they submitted themselves.** *(new 2026-09-09)* A Secondary AR does not have the same administrative permissions as the Primary AR but may claim the Primary AR role, subject to review and approval by the designated CSIRT.
+The Primary AR can access all notifications associated with the manufacturer, whereas a Secondary AR can access only the notifications they submitted themselves. *(new 2026-09-09; lost its full-sentence bold 2026-09-13 22:13 UTC)* A Secondary AR does not have the same administrative permissions as the Primary AR but may claim the Primary AR role, subject to review and approval by the designated CSIRT.
 
-**ARs can check their current role and manufacturer association status under Settings > Association Management.** *(new 2026-09-09)*
+ARs can check their current role and manufacturer association status under **Settings > Association Management**. *(new 2026-09-09; bold narrowed 2026-09-13 22:13 UTC from the whole sentence to just "Settings > Association Management")*
 
 The AR–manufacturer association is validated by the designated CSIRT. The specific validation procedure and processing time may vary between CSIRTs and remain the responsibility of the relevant CSIRT.
 
@@ -998,7 +1016,7 @@ Please consult the [SRP Glossary](https://www.enisa.europa.eu/topics/product-sec
 
 ### Q17. [UPDATED] What guidance material is available for the relevant parties? *(re-tagged and reworded 2026-09-12 13:10 UTC — see below)*
 
-ENISA recognises the need to ensure that manufacturers, open-source software stewards, Assigned Representatives and other relevant reporting teams have clear and practical information to use the CRA SRP *(dropped "prepare for and" 2026-09-12 13:10 UTC)*. ENISA has published a range of supporting materials, including the SRP Factsheet, FAQs, User Guidance, [AR User Manual](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual), SRP Glossary and a video tutorial *(list reworded 2026-09-12 13:10 UTC — gained "User Guidance" and "a video tutorial", lost the Oxford comma before "and SRP Glossary"; was "...FAQs, AR User Manual, and SRP Glossary")*. **These materials will be updated and expanded as necessary.** *(closing sentence, new 2026-09-10 22:13 UTC)*
+ENISA recognises the need to ensure that manufacturers, open-source software stewards, Assigned Representatives and other relevant reporting teams have clear and practical information to use the CRA SRP *(dropped "prepare for and" 2026-09-12 13:10 UTC)*. ENISA has published a range of supporting materials, including the SRP Factsheet, FAQs, User Guidance, [AR User Manual](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual), SRP Glossary and a video tutorial *(list reworded 2026-09-12 13:10 UTC — gained "User Guidance" and "a video tutorial", lost the Oxford comma before "and SRP Glossary"; was "...FAQs, AR User Manual, and SRP Glossary")*. These materials will be updated and expanded as necessary. *(closing sentence, new 2026-09-10 22:13 UTC; lost its bold 2026-09-13 22:13 UTC)*
 
 **Fixed 2026-09-12 13:10 UTC**: the long-tracked self-contradiction — a sentence here said a user manual "will be published at the launch of the platform" one sentence after the AR User Manual was named and linked — is gone; the sentence ("Additional operational materials, including a user manual and tutorial videos, will be published at the launch of the platform.") has been removed rather than reworded.
 
@@ -1247,7 +1265,7 @@ Follow this procedure to register on the SRP as a Primary Assigned Representativ
 **Fixed**: the "Watch" flagged since the previous rewrite — this flow's personal-details list reading three fields against the Secondary AR flow's four — is resolved as of 2026-09-10 13:11 UTC, but by subtraction rather than addition: the Secondary AR flow below dropped its own "Legal name" field (see below), not by this flow regaining "manufacturer address". Both flows' data-field lists are shorter than they were 24 hours ago.
 
 **Registration as a Secondary AR via Invitation** *(retitled from "Registration via Invitation (Secondary AR)")*
-Follow this procedure to register on the SRP as a Secondary AR using an email invitation sent by the Primary AR.
+Follow this procedure to register on the SRP as a Secondary AR using an email invitation sent by the Primary AR *(trailing full stop dropped 2026-09-13 22:13 UTC)*
 - Pre-conditions: You are not already registered as an SRP user; you have an active EU Login account with MFA enabled; you have received a valid SRP email invitation initiated by a Primary AR; and **"The feature to invite a Secondary AR is available only to a 'Verified' Primary AR."** *(reworded in this rewrite from "The Primary AR is a validated user" — now uses the same "Verified" term as Q9 and AR Interface Functions' own "Invite Secondary AR" precondition, closing the terminology gap flagged since 2026-09-08 21:06 UTC.)*
 - Steps: "Click the link in the email invitation. You will be prompted to authenticate through EU Login, which completes the authentication successfully." Exceptions: "If the invitation link has expired because more than 7 days have passed since the SRP sent the invitation, you will be redirected to a page displaying an error message." *(causal "because" replaces the parenthetical, no meaning change)* → Review and confirm the accuracy of your pre-filled personal details **(First Name, Last Name, Email)** *(dropped "Legal name" 2026-09-10 13:11 UTC — this list now matches the Primary AR flow's own three-field list above)* and click "Continue". **"These fields are retrieved from EU Login and cannot be edited in the SRP."** *(the previously-tracked redundant/self-contradictory phrasing — "These fields cannot be edited but are retrieved from EU Login and cannot be edited in the SRP" — is fixed in this rewrite.)* → Review and confirm the accuracy of the pre-filled manufacturer details for the manufacturer associated with the Primary AR who initiated the invitation and click "Accept invitation".
 - Expected result: "Registration is completed and you become a Secondary AR for the relevant manufacturer. Your system role is displayed as 'AR Backup User' and your status is set to 'Active'. If registration is not completed within 7 days of the invitation being sent, the invitation expires and the user status becomes 'Invitation Expired' in the SRP." *(reworded; same substance — still 7 days, same role/status names.)*
