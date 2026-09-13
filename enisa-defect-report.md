@@ -62,7 +62,7 @@ Text quoted verbatim as it stood on 9 September.
 | A10 | PEC | Screenshot of the PEC block *(screenshot)* | "…would be contrary to the essential **intrests** of that Member State" | "interests". This is in the application UI, not only in the guidance. | **open** — a UI screenshot, not testable from page text; unchanged as far as can be seen |
 | A11 | Interface | "Access the Dashboard" step | "**Yo** can access the Dashboard by:" | "You". | **fixed** · 2026-09-09 21:07 UTC |
 | A12 | Interface | Section heading | "Add an **Association** with an Additional Manufacturer **Association** through Settings" | "Association" appears twice; drop the second. | **fixed** · 2026-09-09 21:07 UTC — heading now "Add Additional Manufacturer Association via Settings" |
-| A13 | Registration | Manufacturer details step | "Enter the manufacturer details (manufacturer name, manufacturer **adress**, additional information)" | "address" — see D4: the field itself is being restored to the form. | **fixed** · 2026-09-09 22:12 UTC — now "address"; the field itself is still missing, see D4 |
+| A13 | Registration | Manufacturer details step | "Enter the manufacturer details (manufacturer name, manufacturer **adress**, additional information)" | "address" — see D4: the field is absent from the live form, so the guidance text is wrong on both counts. | **fixed** · 2026-09-09 22:12 UTC — now "address"; the field itself is still missing, see D4 |
 | A14 | Registration | Invitation registration, personal details step | "These fields **cannot be edited** but are retrieved from EU Login and **cannot be edited** in the SRP." | The clause is duplicated within one sentence. | **fixed** · 2026-09-09 22:12 UTC — now "These fields are retrieved from EU Login and cannot be edited in the SRP." |
 | A15 | Submission | Expected results, 72-hour Notification and Final Report | "…subject to **Particularly Exception** Circumstances (PEC)…" (twice) | "Particular Exceptional Circumstances" — "Exception" is not a valid form. See also C2. | **open** — three occurrences now, after the Submission page was rewritten on 9 September 22:12 UTC |
 | A16 | Submission | Pre-conditions, three occurrences | "you are **logged in into** the SRP" | "logged in to the SRP". | **open** — still three occurrences |
@@ -182,13 +182,15 @@ it empty.
 
 ### D2 — No Glossary entry for "Additional Information", which is mandatory
 
-**Status: partly · 2026-09-10 11:52 UTC** — still documented nowhere, but no longer mandatory: the AR User Manual calls it optional, and the manual's newer screenshot of the step shows the field **without** the "Required field" badge that ENISA's guidance-page screenshot carries. The badge on the guidance page is the older state (F13). What belongs in the field remains unexplained.
+**Status: partly** · *the mandatory half settled 2026-09-13 in the running platform* — the field is **not** required. The live *Manufacturer Details* dialog shows **Name** carrying a *Required* badge and **Additional Information** carrying none, with the placeholder "Additional information (max 255 characters)". That closes the question the AR User Manual and the guidance page disagreed on (F13): the manual, which called it optional, was right, and the guidance page's "Required field" screenshot documents a build that is no longer running.
+
+What remains open is the documentation half: the term still appears nowhere in the Glossary or the FAQ, and nothing states what belongs in the field — which matters because this is the information the CSIRT uses to decide whether to verify the association. A 255-character limit is now known, from the placeholder, and is documented nowhere either.
 
 The Manufacturer Details step of AR registration has a field
-**"Additional Information"** marked **"Required field"** *(screenshot)*. The
-term does not appear in the Glossary or the FAQ at all. Users must fill in a
-mandatory free-text field with no statement of what belongs in it — and this is
-the information the CSIRT uses to decide whether to verify the association.
+**"Additional Information"**, which ENISA's guidance-page screenshot marks
+**"Required field"** *(screenshot)*. The term does not appear in the Glossary
+or the FAQ at all. As built, the field is optional and capped at 255
+characters, and no published source says either.
 
 ### D3 — The 800-character limit on the PEC justification is not documented
 
@@ -202,7 +204,9 @@ to know it will be truncated or rejected.
 
 ### D4 — Registration describes a manufacturer address field that does not exist
 
-**Status: partly · 2026-09-10** — ENISA confirmed on 10 September, on request, that the address field will be **restored to the form**. The guidance text, which never stopped listing it, will then be right; until the field ships, the form is the side that disagrees. Open until a capture shows the field. (The typo in the same sentence was fixed separately, A13.)
+**Status: open** · *re-verified 2026-09-13 in the running platform* — the field is **not** in the form. The live *Manufacturer Details* dialog offers **Name** (Required), **CSIRT Designated as Coordinator** (read-only, pre-filled) and **Additional Information** (no Required badge), and nothing else.
+
+**Withdrawn:** this entry previously reported, on the strength of a statement made to us on 10 September, that ENISA would restore the address field, and was marked *partly* on that basis. Two days after go-live the field has not appeared and there is no present indication that it will, so the claim is withdrawn rather than left standing — the guidance text is the side that is wrong. Anyone who acted on the earlier note should disregard it. (The typo in the same sentence was fixed separately, A13.)
 
 Registration: "Enter the manufacturer details (manufacturer name, manufacturer
 adress, additional information)". The published screenshot of that very step
@@ -318,6 +322,83 @@ re-check, ahead of the monitor.
 | F11 | Manual | Cover and page headers vs Document History | Every page says "Version: 1.1"; the Document History table lists a single entry, "09/09/2026 v1.0 First version". Either the history is missing 1.1 or the stamp is wrong. | 2026-09-10 11:52 |
 | F12 | FAQ | Q9 vs Q28 | Q9's opening sentence regressed from "The SRP is available at: https://portal.cra-srp.enisa.europa.eu" to "**The SRP will be available in due time**" — the day before the 11 September go-live that Q4, Q28 and Q29 still commit to. Q28 still gives the URL. | 2026-09-10 09:09 |
 | F13 | Registration (guidance page) vs AR User Manual | Both screenshots of the registration steps | The guidance page's screenshots (uploaded 7 September) show a **"Legal name (for legal entities)"** field and Additional Information badged **"Required field"**. The manual's screenshots of the same steps (9 September) show neither: three personal fields, no badge. The manual's text matches its screenshots; the guidance page's Secondary-AR text still lists four fields. The guidance page is documenting a previous build of the form. | 2026-09-10 11:52 |
+
+
+## G. Verified against the running platform
+
+Findings from the **live SRP**, checked on **13 September 2026** by a registered
+Assigned Representative with an account, and reported here. Everything else in
+this document comes from ENISA's public pages; this section is the only part
+that could see the form itself, and it settles questions the published material
+left open. No credential, session or account detail is reproduced.
+
+### G1 — The Glossary describes field i31 as a Yes/No/Unknown choice; the form is a free-text box
+
+The Glossary's entry for **i31, "Incident is suspected of unlawful or malicious
+acts"** gives Format **"Select one: Yes, No, Unknown"** and Meaning "Boolean
+indication of whether available evidence suggests the incident resulted from
+unlawful or malicious activity."
+
+The running form presents a **free-text area** with the placeholder "Incident is
+suspected by unlawful or malicious acts (max 255 characters)". There is no
+Yes/No/Unknown control, and no 255-character limit is stated anywhere in the
+Glossary.
+
+This is the one field where preparing from the published guidance produces the
+wrong answer: an AR who drafts "Yes" plus reasoning elsewhere will find a text
+box expecting prose, and an AR who drafts prose has no way to know it fits in
+255 characters. Either the Glossary or the form needs to move.
+
+**Status: open.**
+
+### G2 — The same field's label reads "suspected by", not "suspected of"
+
+The form's label and placeholder both read **"Incident is suspected **by**
+unlawful or malicious acts"**. The Glossary, the FAQ and this guide all use
+**"of"**. "Suspected by" reverses the sense — it reads as though the acts did
+the suspecting.
+
+**Status: open.**
+
+### G3 — Field 8's Format cell was not updated when the field name was
+
+On 10 September ENISA expanded the name of field 8 to "Product Type
+(Default/**Important Product with Digital Elements**/**Critical Product with
+Digital Elements**)", and the form's radio buttons use those expanded labels.
+The Glossary's own **Format** cell for the same field still reads "Select one:
+Default, Important, Critical".
+
+**Status: open.** Cosmetic, but it is the cell an AR reads to know what the
+options are.
+
+### G4 — Two blocks of the form repeat, and no published source says so
+
+The form offers **"+ Add another product"** and **"+ Add another corrective
+measure"**, so a single notification can carry several products and several
+corrective measures. Neither the Glossary, the FAQ nor the guidance pages
+mention repetition: every field is documented as though it occurred once. This
+changes how a multi-product notification is prepared, and it is not a detail an
+AR can infer.
+
+**Status: open.**
+
+### G5 — Confirmed, not defects
+
+Recorded so the record shows what was checked rather than only what was wrong:
+
+- **Additional Information** is optional and capped at 255 characters — see D2.
+  The AR User Manual was right and the guidance-page screenshot is a stale
+  build.
+- **The manufacturer address field is absent** — see D4, and note the
+  withdrawal recorded there.
+- **CSIRT Designated as Coordinator** is pre-filled and read-only in the
+  Manufacturer Details dialog, as the manual describes.
+- **Product type** carries no Required badge, matching the Glossary's "Optional"
+  at Early Warning.
+- **The optional fourth tab, Additional Notes**, is present as documented.
+- Field **i32**'s odd comma — "General information, about the nature of the
+  incident" — is ENISA's, consistently, in the Glossary and on the form. Not a
+  divergence.
 
 ---
 
