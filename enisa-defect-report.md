@@ -508,6 +508,59 @@ user can take"** — singular "user", no article, where the field above it reads
 
 **Status: open.** Cosmetic.
 
+### G13 — A required field with no documentation anywhere: "Prerequisites (conditions for exploitation)"
+
+**The most serious item found in the tutorial video.** The running AEV form
+carries a field labelled **"Prerequisites (conditions for exploitation)"**,
+capped at 4000 characters. It does not appear in the Glossary's 39 fields, the
+FAQ, or any guidance page — searched and confirmed absent. Observed twice, on
+two separate demo notifications:
+
+- At **Early Warning**, the field carries no Required badge (optional).
+- At **72h Notification**, the same field is marked **Required** — confirmed
+  on both `SRP-GR-V-2026-00000018` and `SRP-GR-V-2026-00000021`, independently.
+
+An AR preparing a 72-hour notification from the Glossary alone has no way to
+know this field exists, let alone that it becomes mandatory. This is a bigger
+gap than a wrong label or a tight character limit (compare G1, G6): it is a
+whole required field with zero published guidance on what belongs in it.
+
+**Source**: ENISA, *CRA SRP - AR User Tutorial Video*, published 11 September
+2026, <https://videos.enisa.europa.eu/w/wS9DBDDiX2mHQZpK85QXNh>, ~03:50
+(Early Warning) and ~04:40 / ~07:10 (72h Notification, two notifications).
+
+**Status: open.**
+
+### G14 — A Glossary field documented as "Date and time" offers a date-only control
+
+**v22, "Date when corrective or mitigating measure has been available"**, has
+Format **"Date and time"** in the Glossary. The Final Report form offers a
+plain calendar date picker — day, month, year — with no time component at all,
+unlike i37/i38 (Date, HH, MM) a few fields away in the same form family.
+
+**Status: open.** Source: same tutorial video, ~07:20.
+
+### G15 — "Required if such information available" is indistinguishable from optional on screen
+
+**v27, "Malicious actor..."**, carries the Glossary status **"Required if such
+information available"** at Final Report — a third category, distinct from
+both "Optional" and plain "Required". On screen it carries **no badge at all**,
+the same as an ordinary optional field. An AR cannot tell from the form itself
+that this field is meant to be filled whenever the information exists, rather
+than left blank at will.
+
+**Status: open.** Source: same tutorial video, ~07:00.
+
+### G16 — Two independent Field 8 confirmations agree; noted for completeness
+
+Not a defect. The tutorial video's registration and product-type screens match
+what G3 already reported (the CRA classification names spelled out in full,
+the Glossary's Format cell still abbreviated) and the three-field Personal
+Details step (no Legal name) already established in F13 — now confirmed by a
+second, independent source: an official ENISA video published the same
+morning as the AR User Manual screenshots. Folded into G5 rather than restated
+here.
+
 ### G5 — Confirmed, not defects
 
 Recorded so the record shows what was checked rather than only what was wrong:
@@ -530,6 +583,37 @@ Recorded so the record shows what was checked rather than only what was wrong:
 - **i39**, "Initial assessment of the incident", carries no Required badge at
   Early Warning, matching the Glossary's "Optional" for that stage, and its
   4000-character limit is consistent with the other narrative fields.
+- **The user-type entry screen** offers two tiles, "I am an Assigned
+  Representative" and "I am a CSIRT Representative", before the country
+  selector — matching this guide's step&nbsp;2, now confirmed on video rather
+  than inferred from a screenshot alone.
+- **The three-field Personal Details step** (First Name, Last Name, Email — no
+  Legal name) is confirmed a second time, by ENISA's own tutorial video, not
+  only the AR User Manual (F13).
+- **Notification identifiers** follow the pattern
+  `SRP-<country>-<V|I>-<year>-<sequence>`, e.g. `SRP-GR-V-2026-00000018` for a
+  vulnerability from Greece. Published nowhere, but consistent across all four
+  demo notifications shown.
+- **The 48-hours-not-72 counter defect ENISA itself documents** (quoted in
+  this guide's own FAQ known-issues section) is not just a documented risk:
+  the tutorial video shows it happening twice with real timestamps —
+  `SRP-GR-V-2026-00000018`'s Early Warning submitted 04.09.2026 06:00 UTC,
+  its 72h Notification shown due 06.09.2026 06:00 UTC (48 hours, not 72); the
+  same gap recurs exactly on `SRP-GR-V-2026-00000021` (06:22 UTC to 06:22 UTC
+  two days later).
+- **The dashboard's "All Filters" panel** offers a Member State multi-select
+  plus three checkboxes — Early Warnings, 72h Notifications, Final Reports —
+  in addition to the "All Types" dropdown and the tab bar. Not previously
+  distinguished from "type of submission" in this guide's own Dashboard note.
+- **A PEC submission carries its own status label**, "Submitted Under PEC",
+  replacing the plain "Submitted" checkmark on both the dashboard list and the
+  notification's own stage tracker — matches this guide's existing PEC
+  documentation.
+- **The Alerts page's actual wording**, confirmed for the first time:
+  "[SRP] AR Association Request - Accepted" / "Your association request with
+  a manufacturer has been accepted by the Designated CSIRT." Read state is
+  toggled per-alert with "Mark as Read", which greys the icon and clears the
+  unread count on the Alerts tab — matching the manual's colour description.
 - **Field 17**'s name on the form, "Corrective or mitigating measures that
   users can take", matches the Glossary exactly. An earlier note in this
   repository had the Glossary and the FAQ differing on the word "that"; the
