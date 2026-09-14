@@ -688,6 +688,33 @@ and Invalid.
 **Status: open.** Source: AR User Manual p. 53-54 (PDF pages 54-55), section 6
 FAQ.
 
+### G25 — The role-selection landing screen dropped its hover tooltips for a footnote
+
+This guide's own screenshot of the "What User are you?" landing screen
+(`reg-01-role-select.png`, captured before go-live) shows each role card
+carrying an "(i)" icon; hovering it reveals a short tooltip — "Appointed to
+represent the manufacturer for regulations and paperwork." for Assigned
+Representative. A live capture of the same screen on 2026-09-14 shows no
+hover icons at all: instead, "Assigned Representative" carries an asterisk,
+and a single footnote is printed under both cards:
+
+> "For the purposes of the Single Reporting Platform (SRP), an Assigned
+> Representative (AR) is the individual who submits notifications according
+> to the Cyber Resilience Act (CRA) mandatory reporting obligations set out
+> in Articles 14, 16 and/or 24(3) on behalf of the manufacturer or the
+> open-source software steward."
+
+Not a wording tweak — a different explanation mechanism (hover vs. static
+footnote) and a materially more precise one, citing the specific CRA
+articles rather than paraphrasing them. This is a running-platform UI
+change, not an ENISA guidance-page edit, so it falls outside everything the
+automated monitors track; it surfaced only because it was captured directly.
+The exact date of the change between first capture and 2026-09-14 is not
+known.
+
+**Status: open** (guide text updated to note the discrepancy; the original
+screenshot is kept as the historical capture, not replaced).
+
 ### G5 — Confirmed, not defects
 
 Recorded so the record shows what was checked rather than only what was wrong:
