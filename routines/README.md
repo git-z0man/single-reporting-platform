@@ -18,7 +18,7 @@ for which ones an agent may update and which need a human.
 
 | Prompt file | Name in the Routines UI | Trigger ID | Schedule |
 |---|---|---|---|
-| `enisa-srp-pages-monitor.md` | **Single Reporting FAQ monitor** | `trig_015C8QiJhXwkxPkDdoMbkHeD` | `0 * * * *` (temporary, see below) |
+| `enisa-srp-pages-monitor.md` | **Single Reporting FAQ monitor** | `trig_015C8QiJhXwkxPkDdoMbkHeD` | `0 5 * * 1` |
 | `commission-cra-faq-monitor.md` | **Commission CRA FAQ monitor** | `trig_012AzfKXKrPnRCEjXXYWBgY4` | `0 5 * * 1` |
 | `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `22 * * * *` |
 | `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
@@ -37,16 +37,20 @@ below), so the UI still shows its original name. Go by the trigger ID.
 Other Routines on this account (`FuFA Reisen`, `absence.io Zeiterfassung`) do
 not write to this repository and are not mirrored here.
 
-## The ENISA monitor is hourly until 2026-09-14
+## The ENISA monitor ran hourly from 2026-09-07 to 2026-09-14
 
-Weekly by design, and weekly again from 14 September. In between it runs
-`0 * * * *`: ENISA signalled frequent edits in the run-up to the 11 September
-go-live, and a Tuesday change would otherwise sit unnoticed until the following
-Monday. The revert date is in the prompt file's header note as well, so it does
-not depend on anyone remembering.
+Weekly by design. For that one week it ran `0 * * * *` instead: ENISA
+signalled frequent edits in the run-up to the 11 September go-live, and a
+Tuesday change would otherwise have sat unnoticed until the following Monday.
+It earned its keep — 89 dated change-log entries accumulated in
+`enisa-srp-faq-baseline.md` over the week, 38 of them in the last five days
+alone, with no long silent stretch — and reverted to `0 5 * * 1` on schedule
+on 2026-09-14, per the revert note recorded in the prompt file's header at
+the time.
 
-Hourly is not just a cron change. Three rules had to go into the prompt first,
-or the faster beat would have been a downgrade:
+Hourly was not just a cron change. Three rules had to go into the prompt
+first, or the faster beat would have been a downgrade — and all three stayed
+in the prompt after the revert, since they hold at any cadence:
 
 - **Silence when nothing changed.** Without it, 23 notifications a day saying
   nothing happened. The rule is the one the domain monitor already uses: read
@@ -69,15 +73,16 @@ production zone and classifies whether they answer. Same subject, different
 signal — and normally a different cadence: weekly for pages that change every
 few weeks, hourly for a go-live that has to be caught when it happens.
 
-They happen to share a cadence right now (see above), and that changes nothing:
-the reason to keep them apart was never only the schedule. They fail
-differently — a 403 on an ENISA page and a dark production host mean opposite
-things, and each needs its own reading. Their auto-merge scopes are disjoint,
-so a combined run touching both files would fall out of auto-merge entirely.
-And the shared cadence is temporary: on 14 September the pages monitor goes
-back to weekly, while the domain monitor stays hourly for as long as go-live
-detection matters. A merged routine would then be stuck picking one of the two
-beats, which is exactly the bind this separation avoids.
+They shared a cadence for one week (see above), and that changed nothing: the
+reason to keep them apart was never only the schedule. They fail differently —
+a 403 on an ENISA page and a dark production host mean opposite things, and
+each needs its own reading. Their auto-merge scopes are disjoint, so a
+combined run touching both files would fall out of auto-merge entirely. The
+shared cadence was also temporary on only one side: the pages monitor reverted
+to weekly on 14 September, while the domain monitor stays hourly for as long
+as go-live detection matters. A merged routine would then have been stuck
+picking one of the two beats, which is exactly the bind this separation
+avoids.
 
 **Where they did overlap, ownership decides, not merging.** ENISA's CSIRT
 coordinator list is both a page to diff and the source of the country table in

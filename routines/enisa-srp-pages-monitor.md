@@ -1,29 +1,20 @@
 # ENISA SRP pages monitor
 
 - **Trigger**: `trig_015C8QiJhXwkxPkDdoMbkHeD`
-- **Schedule**: `0 * * * *` — **hourly, temporarily**, for the run-up to go-live. Back to `0 5 * * 1` (Mondays 05:00 UTC) on **2026-09-14**.
+- **Schedule**: `0 5 * * 1` (Mondays 05:00 UTC).
 - **Writes**: `enisa-srp-faq-baseline.md`, `enisa-srp-glossary-baseline.md`
 - **Updatable by an agent**: **no** — created via `http_api`, so the prompt below
   must be pasted into the Routines UI by hand.
 
-> **Pending in the Routines UI: an hourly schedule and this prompt.** ENISA has
-> signalled frequent changes in the run-up to the 11 September go-live, so the
-> monitor moves from Mondays 05:00 UTC to `0 * * * *` until **2026-09-14**,
-> when it goes back to weekly. Set the cron and paste the prompt below in the
-> same visit.
->
-> Two things to know when saving: the platform anchors `0 * * * *` to the
-> **minute you save**, and the domain monitor already sits at `:22` fetching
-> the same CSIRT list — so save at a minute well away from it, say `:05`–`:15`
-> or `:35`–`:50`. And every edit reassigns the Routine's outcome branch name;
-> harmless here, since this prompt pushes with `git push -u origin HEAD`.
->
-> **Hourly needed three prompt changes first**, all from problems seen on
-> 2026-09-07 rather than imagined: runs that find nothing changed now end
-> silently (section 4, the pattern the domain monitor already uses), a second
-> change log section on the same day carries a UTC time (section 4), and a 429
-> or 5xx that survives the retries is reported as a failed check instead of
-> being diffed as content (section 1).
+> **Pending in the Routines UI (2026-09-14): back to weekly.** The monitor ran
+> hourly (`0 * * * *`) from 2026-09-07 through 2026-09-14, to catch frequent
+> ENISA edits in the run-up to and just after the 11 September go-live — it
+> did: 89 dated change-log entries accumulated in that window, 38 of them in
+> the last five days alone, with no long silent stretch at any point. Set the
+> cron back to `0 5 * * 1` (Mondays 05:00 UTC) in the Routines UI; the rest of
+> this prompt needs no change for the cadence switch — the silence-on-
+> no-change rule, the UTC time in a same-day heading, and 429/5xx-as-failure
+> (sections 1 and 4) are good practice at either cadence, not hourly-specific.
 >
 > **The 2026-09-07 paste is otherwise live and verified** — read back from the
 > Routine and diffed against this file: same sections, same rules, 0.998
@@ -197,7 +188,7 @@ Rules for it:
 - **Quote verbatim only where the wording is the finding**: a changed obligation, a new field name, a corrected legal reference. Otherwise point at the content sections further down, which already carry the page text in full. Do not reproduce it twice.
 - **Editorial means summarised.** Typos, punctuation, capitalisation, link markup, house-style shifts ("Article" → "Art.") get counted, not enumerated: "three new typos and two stray full stops on the rewritten pages, verbatim in the text below". The defects themselves stay marked in the content sections, so nothing is lost by not listing them here.
 - **Aim for 250 words.** Not a hard limit — a day like 2026-09-07, with a published platform URL and two new questions, earns more. But an entry over budget is usually one that spelled out editorial work.
-- **The heading carries a UTC time** whenever the day already has an entry, which running hourly is normal.
+- **The heading carries a UTC time** whenever the day already has an entry — rare at a weekly cadence, but still possible if a run is repeated or triggered manually.
 - Separate substantive changes (a question added, deleted or reworded; a changed date, obligation, field, or legal reference) from cosmetic ones (link markup, page numbering) — that separation is what the rubrics are for.
 
 ### Nothing changed anywhere
@@ -206,7 +197,7 @@ Only when all eleven pages came back unchanged. Read `last_check` as it stands o
 
     git show origin/main:enisa-srp-faq-baseline.md | sed -n 's/^last_check: //p' | head -1
 
-- If it is **today's date** → today's measurement point is already recorded. Do NOT commit, do NOT open a PR, do NOT report anything. End the run silently. Running hourly, this is the normal outcome for 23 of the 24 daily runs.
+- If it is **today's date** → today's measurement point is already recorded (this run is a repeat or a manual trigger, not the week's scheduled one). Do NOT commit, do NOT open a PR, do NOT report anything. End the run silently.
 - If it is an **earlier date** → this is the first run of the day. Update `last_check` in the frontmatter of both baseline files to today, leave `last_change` alone, then commit, PR and merge per section 5. Do NOT report — a routine heartbeat is not worth a notification.
 
 Never invent a change and never open an empty PR. This silence applies only when nothing changed: **any** substantive change is committed and reported immediately, whatever the time of day and whether or not today already has a measurement point.
@@ -238,7 +229,7 @@ What earns a mention at all:
 - **The CSIRT list changed** — prominently, with the affected countries (see section 3).
 - **A Glossary reachability transition or move** — state the direction or the new address, and that the baseline content was left intact.
 - **A fetch failed** (429 or 5xx after the retries) — say which page and which status, and that the baseline was left untouched.
-- **Nothing changed** — report nothing at all, whether or not this run wrote the day's heartbeat commit. See "Nothing changed anywhere" in section 4. Running hourly, silence is the normal outcome and the only signal worth sending is a real one.
+- **Nothing changed** — report nothing at all, whether or not this run wrote the day's heartbeat commit. See "Nothing changed anywhere" in section 4. Silence is the normal outcome and the only signal worth sending is a real one.
 
 When you report, end with exactly one line (a silent run reports nothing, this line included):
 ENISA SRP: [n] Seiten geprüft | geändert: [Seiten oder keine] | Glossary: [HTTP-Code] | push: [OK/FAIL/nichts zu pushen]

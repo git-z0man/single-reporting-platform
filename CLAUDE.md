@@ -90,12 +90,13 @@ This auto-merge behavior applies only to PRs from this routine that touch
 Any other change to this repository follows the normal review-and-confirm
 flow.
 
-The check normally runs weekly. **Until 2026-09-14 it runs hourly**, because
+The check runs weekly. It ran hourly from 2026-09-07 to 2026-09-14, because
 ENISA signalled frequent edits in the run-up to the 11 September go-live and a
-Tuesday change would otherwise wait until the following Monday. The same
-daily-rhythm rule as the domain routine applies while it does: the repository
-keeps **one measurement point per day** plus every real change. A run that
-finds nothing changed and sees today's date in `last_check` on `main` ends
+Tuesday change would otherwise have waited until the following Monday; see
+`routines/README.md` for what that week actually caught. The same
+daily-rhythm rule as the domain routine still applies: the repository keeps
+**one measurement point per day** plus every real change. A run that finds
+nothing changed and sees today's date in `last_check` on `main` ends
 silently — no commit, no PR, no notification — and that is the normal outcome
 for most runs. Any substantive change is committed and reported immediately,
 whatever the time of day.
