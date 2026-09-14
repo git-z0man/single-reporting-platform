@@ -13,13 +13,13 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-14 (fetched 10:19 UTC, unchanged since 05:17 UTC — see change log)
-guidance_retrieved: 2026-09-14 (fetched 10:19 UTC — AR Interface Functions' last four flowing-prose sections restructured into headed Steps blocks, completing the page-wide conversion; AR Notification Submission and Update split a closing sentence into two bullets and lost three more trailing full stops; AR User Registration and PEC unchanged; see change log)
-glossary_retrieved: 2026-09-14 (fetched 10:19 UTC, unchanged since 23:15 UTC on 2026-09-13 — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-09-14 (fetched 10:19 UTC, unchanged since 17:11 UTC on 2026-09-12)
-ar_user_manual_retrieved: 2026-09-14 (fetched 10:19 UTC, wording unchanged since first capture at 10:12 UTC on 2026-09-10)
-terms_conditions_retrieved: 2026-09-14 (fetched 10:19 UTC, unchanged since the trailing space was lost at 14:07 UTC on 2026-09-10)
-ar_user_tutorial_video_retrieved: 2026-09-14 (fetched 10:19 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
+retrieved: 2026-09-14 (fetched 12:22 UTC, unchanged since 10:19 UTC — see change log)
+guidance_retrieved: 2026-09-14 (fetched 12:22 UTC — AR User Registration and AR Interface Functions each had one flowing precondition sentence turned into a genuine bulleted list (one nested as a sub-bullet, two as new top-level/single-item lists); no wording, deadline, obligation, or field changed. AR Notification Submission and Update and PEC unchanged; see change log)
+glossary_retrieved: 2026-09-14 (fetched 12:22 UTC, unchanged since 23:15 UTC on 2026-09-13 — see `enisa-srp-glossary-baseline.md`)
+csirt_list_retrieved: 2026-09-14 (fetched 12:22 UTC, unchanged since 17:11 UTC on 2026-09-12)
+ar_user_manual_retrieved: 2026-09-14 (fetched 12:22 UTC, wording unchanged since first capture at 10:12 UTC on 2026-09-10)
+terms_conditions_retrieved: 2026-09-14 (fetched 12:22 UTC, unchanged since the trailing space was lost at 14:07 UTC on 2026-09-10)
+ar_user_tutorial_video_retrieved: 2026-09-14 (fetched 12:22 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-14
@@ -31,6 +31,27 @@ last_change: 2026-09-14
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-14 12:22 UTC (vs. 2026-09-14 10:19 UTC)
+
+Three more flowing precondition sentences on two guidance pages turned into genuine bulleted lists — the same restructuring pattern tracked all day — with no wording, deadline, obligation, or field changed anywhere. All other pages (main, FAQ, CSIRT list, Glossary, AR User Manual, Terms and Conditions, AR User Tutorial Video, AR Notification Submission and Update, PEC) are unchanged.
+
+**Changed**
+
+- **AR User Registration's Secondary-AR invitation precondition re-nested.** "The feature to invite a Secondary AR is available only to a 'Verified' Primary AR" — a sibling bullet since the previous check — is now nested one level down, as a sub-bullet under the "valid SRP email invitation" precondition above it. Same four preconditions, same wording.
+- **AR Interface Functions' Dashboard precondition and View Alerts preconditions became genuine bulleted lists.** The top-level Dashboard section's single precondition sentence ("your user status is 'Active', and you are logged in to the SRP") is now a 1-item bulleted list; View Alerts' two semicolon-joined preconditions ("you are registered as a user in the SRP; you have a valid account with EU Login (for AR) and can authenticate successfully") are now a 2-item bulleted list. No condition added, removed, or reworded.
+
+**Watch**
+
+- The FAQ page's question headings (`<dt>` tags) show a stray `&nbsp;` next to the number on ten of the thirty-one questions (Q6, Q9, Q10, Q16, Q18, Q27, Q28, Q29, Q30, Q31) — never checked at this precision before, so it cannot be said whether this is new today or simply unrecorded until now. Same caveat as the still-open intro-paragraph `&nbsp;`/curly-quote note from the previous check; flagged for the record, not counted as a change.
+
+**Editorial**
+
+None beyond the two structural bullets above; no quote-style, capitalisation, or punctuation shifts found on any page this check.
+
+**Unchanged**
+
+Main page (Content navigation still 9 entries; intro, Get Started, and all resource/guidance cards byte for byte); FAQ Q1–Q31 word-for-word ("Updated: 12 September 2026"); CSIRT list (27 countries, "Last updated: 10 September 2026", Croatia's `<u>`-wrapped cell and all); Glossary (still v1.3, 39 fields, every row re-verified) — see `enisa-srp-glossary-baseline.md`; AR Notification Submission and Update and PEC byte for byte; AR User Manual, Terms and Conditions, and AR User Tutorial Video byte for byte; all four guidance pages' "Last updated" stamps unmoved ("12 September 2026" ×3, PEC "09 September 2026").
 
 ### 2026-09-14 10:19 UTC (vs. 2026-09-14 09:14 UTC)
 
@@ -1406,7 +1427,7 @@ Follow this procedure to register on the SRP as a Secondary AR using an email in
 - You are not already registered as an SRP user
 - You have an active EU Login account with MFA enabled
 - You have received a valid SRP email invitation initiated by a Primary AR
-- The feature to invite a Secondary AR is available only to a "Verified" Primary AR *(reworded in the 2026-09-09 rewrite from "The Primary AR is a validated user"; lost its bold and outer quotation marks/trailing full stop 2026-09-13 23:15 UTC — only "Verified" itself stays quoted, with straight quotes on this page. Now its own bullet since 2026-09-14, previously the last clause of the semicolon-joined sentence; no further wording change.)*
+- The feature to invite a Secondary AR is available only to a "Verified" Primary AR *(reworded in the 2026-09-09 rewrite from "The Primary AR is a validated user"; lost its bold and outer quotation marks/trailing full stop 2026-09-13 23:15 UTC — only "Verified" itself stays quoted, with straight quotes on this page. Became its own top-level bullet 2026-09-14 10:19 UTC, previously the last clause of the semicolon-joined sentence; as of 2026-09-14 12:22 UTC it is nested one level down, as a sub-bullet under the "valid SRP email invitation" precondition above rather than a sibling bullet — same four preconditions, same wording, only the nesting moved.)*
 
 **Steps**:
 - Click the link in the email invitation. You will be prompted to authenticate through EU Login, which completes the authentication successfully.
@@ -1540,7 +1561,7 @@ Purpose: Use the Dashboard to view accessible notifications, search, sort and fi
 - accessing the Dashboard URL while logged in
 - selecting a Notification Alert, where available
 
-Precondition: your user status is “Active”, and you are logged in to the SRP. *(straight quotes around "Active" now curly, 2026-09-14 09:14 UTC; no wording change.)*
+Precondition *(rendered as a genuine 1-item bulleted list since 2026-09-14 12:22 UTC, was an inline sentence; same wording)*: your user status is “Active”, and you are logged in to the SRP. *(straight quotes around "Active" now curly, 2026-09-14 09:14 UTC; no wording change.)*
 
 *View the Dashboard* — Purpose: Follow these steps to view the list of notifications accessible to you. Preconditions: your user status is “Active” and you are logged in to the SRP. *(straight quotes around "Active" now curly, 2026-09-14 09:14 UTC; no wording change.)* Steps *(own `<h4>Steps:</h4>` heading and single-item bullet since 2026-09-14 10:19 UTC, was a flowing "Steps: ..." sentence; same wording)*: Open the Dashboard. The content displayed depends on the notifications created by the logged-in AR. Expected result: A Primary AR can access all notifications associated with their manufacturer, whereas a Secondary AR can only access notifications they submitted and drafts they created. Secondary ARs cannot view notifications submitted by another AR associated with the same manufacturer. *(outer quotation marks gone, 2026-09-14 09:14 UTC; no wording change.)*
 
@@ -1549,7 +1570,7 @@ Precondition: your user status is “Active”, and you are logged in to the SRP
 *View Notification Details* — Purpose: Follow these steps to view the details of notifications accessible to you. Steps *(own `<h4>Steps</h4>` heading and single-item bullet since 2026-09-14 10:19 UTC, was a flowing "Steps: ..." sentence)*: Click on a notification to view its details. *(also gained a capital "Click", was lowercase "click"; no other wording change.)* Expected result: you can view the notification details. *(outer quotation marks gone, 2026-09-14 09:14 UTC; no wording change.)*
 
 **View Alerts**
-Purpose: Follow these steps to review alerts generated by the system. Preconditions: you are registered as a user in the SRP; you have a valid account with EU Login (for AR) and can authenticate successfully. Steps *(own `<h4>Steps</h4>` heading and single-item bullet since 2026-09-14 10:19 UTC, was a flowing "Steps: ..." sentence)*: Open the Alerts tab *(also gained a capital "Open" and lost its trailing full stop — was lowercase "open the Alerts tab."; no other wording change)*. Alerts are triggered by an action that requires the attention of the AR user. Unread alerts appear in blue *(rephrased from "'blue' = unread"; same fact)*. When an alert is opened, it is marked as "read" (turns grey) *(reordered from "turns grey ('read')"; same fact)*. Red alerts appear only when an exceptional or critical action has occurred (e.g., a designated CSIRT has invalidated a submission). Expected result: The selected alert is marked as “Read”, and you can review its details. *(outer quotation marks around this sentence gone and the straight single quotes around 'Read' now curly double, 2026-09-14 09:14 UTC; no wording change.)*
+Purpose: Follow these steps to review alerts generated by the system. Preconditions *(rendered as a genuine 2-item bulleted list since 2026-09-14 12:22 UTC, was a semicolon-joined sentence; same two conditions)*: you are registered as a user in the SRP; you have a valid account with EU Login (for AR) and can authenticate successfully. Steps *(own `<h4>Steps</h4>` heading and single-item bullet since 2026-09-14 10:19 UTC, was a flowing "Steps: ..." sentence)*: Open the Alerts tab *(also gained a capital "Open" and lost its trailing full stop — was lowercase "open the Alerts tab."; no other wording change)*. Alerts are triggered by an action that requires the attention of the AR user. Unread alerts appear in blue *(rephrased from "'blue' = unread"; same fact)*. When an alert is opened, it is marked as "read" (turns grey) *(reordered from "turns grey ('read')"; same fact)*. Red alerts appear only when an exceptional or critical action has occurred (e.g., a designated CSIRT has invalidated a submission). Expected result: The selected alert is marked as “Read”, and you can review its details. *(outer quotation marks around this sentence gone and the straight single quotes around 'Read' now curly double, 2026-09-14 09:14 UTC; no wording change.)*
 
 ### Guidance: CRA SRP guidance - Particular Exceptional Circumstances (PEC)
 URL: see `guidance_urls[3]`. First captured 2026-09-08 14:10 UTC, discovered via the site's own "Content" navigation (not yet listed as a card in the main page's "User guidance" section). **Page note: "Last updated: 09 September 2026"** — its first date stamp ever, gained in the 2026-09-09 22:12 UTC check, after weeks (and two rewordings on 2026-09-09 alone, at 12:19 and 21:07 UTC) with no date at all.
