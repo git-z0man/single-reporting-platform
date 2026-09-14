@@ -13,13 +13,13 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-14 (fetched 12:22 UTC, unchanged since 10:19 UTC — see change log)
-guidance_retrieved: 2026-09-14 (fetched 12:22 UTC — AR User Registration and AR Interface Functions each had one flowing precondition sentence turned into a genuine bulleted list (one nested as a sub-bullet, two as new top-level/single-item lists); no wording, deadline, obligation, or field changed. AR Notification Submission and Update and PEC unchanged; see change log)
-glossary_retrieved: 2026-09-14 (fetched 12:22 UTC, unchanged since 23:15 UTC on 2026-09-13 — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-09-14 (fetched 12:22 UTC, unchanged since 17:11 UTC on 2026-09-12)
-ar_user_manual_retrieved: 2026-09-14 (fetched 12:22 UTC, wording unchanged since first capture at 10:12 UTC on 2026-09-10)
-terms_conditions_retrieved: 2026-09-14 (fetched 12:22 UTC, unchanged since the trailing space was lost at 14:07 UTC on 2026-09-10)
-ar_user_tutorial_video_retrieved: 2026-09-14 (fetched 12:22 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
+retrieved: 2026-09-14 (fetched 17:06 UTC, Q30's quote style changed since 12:22 UTC — see change log)
+guidance_retrieved: 2026-09-14 (fetched 17:06 UTC, unchanged since 12:22 UTC — all four guidance subpages re-verified against the full-content baseline)
+glossary_retrieved: 2026-09-14 (fetched 17:06 UTC, unchanged since 23:15 UTC on 2026-09-13 — see `enisa-srp-glossary-baseline.md`)
+csirt_list_retrieved: 2026-09-14 (fetched 17:06 UTC, unchanged since 17:11 UTC on 2026-09-12)
+ar_user_manual_retrieved: 2026-09-14 (fetched 17:06 UTC, wording unchanged since first capture at 10:12 UTC on 2026-09-10)
+terms_conditions_retrieved: 2026-09-14 (fetched 17:06 UTC, unchanged since the trailing space was lost at 14:07 UTC on 2026-09-10)
+ar_user_tutorial_video_retrieved: 2026-09-14 (fetched 17:06 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-09-14
@@ -31,6 +31,18 @@ last_change: 2026-09-14
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-14 17:06 UTC (vs. 2026-09-14 12:22 UTC)
+
+One purely typographic change found across all eleven tracked pages: FAQ Q30's single quotes around "invalid" turned from straight to curly. No wording, deadline, obligation, or field changed anywhere.
+
+**Editorial**
+
+- **FAQ Q30's "might be marked as 'invalid'" now reads "‘invalid’"** — straight single quotes replaced by curly ones; no other change to the sentence.
+
+**Unchanged**
+
+Main page (Content navigation still 9 entries; intro, Get Started, and all resource/guidance cards byte for byte); FAQ Q1–Q29 and Q31 word-for-word ("Updated: 12 September 2026"); CSIRT list (27 countries, "Last updated: 10 September 2026", Croatia's `<u>`-wrapped cell and all); Glossary (still v1.3, 39 fields, footer and field 10/v30 defects re-verified) — see `enisa-srp-glossary-baseline.md`; all four guidance subpages re-verified against their full-content baseline byte for byte, "Last updated" stamps unmoved ("12 September 2026" ×3, PEC "09 September 2026"); AR User Manual, Terms and Conditions, and AR User Tutorial Video byte for byte.
 
 ### 2026-09-14 12:22 UTC (vs. 2026-09-14 10:19 UTC)
 
@@ -1274,7 +1286,7 @@ Mandatory notifications must be submitted through the CRA Single Reporting Platf
 
 ### Q30. I am not a manufacturer. How can I report a vulnerability or security issue? *(new question, added 2026-09-08; lost its "[NEW]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above)*
 
-The current version of the platform supports only mandatory notifications submitted by manufacturers under Art. 14 of the CRA. If you are not a manufacturer and would like to report a vulnerability or other security issue, please contact the relevant national CSIRT directly. Your submission might be marked as 'invalid' in the SRP. *(fixed 2026-09-11 13:17 UTC — the sentence now ends with a full stop, missing since first capture)*
+The current version of the platform supports only mandatory notifications submitted by manufacturers under Art. 14 of the CRA. If you are not a manufacturer and would like to report a vulnerability or other security issue, please contact the relevant national CSIRT directly. Your submission might be marked as ‘invalid’ in the SRP. *(fixed 2026-09-11 13:17 UTC — the sentence now ends with a full stop, missing since first capture; straight quotes around 'invalid' turned curly 2026-09-14 17:06 UTC — no wording change.)*
 
 ### Q31. How do I report a security issue? *(new question, added 2026-09-10 10:12 UTC; count 30 → 31; lost its "[NEW]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above)*
 
