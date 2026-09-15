@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.3 (page footer: last update 10/09/2026)"
-retrieved: 2026-09-14 (fetched 19:10 UTC, unchanged since 13:10 UTC on 2026-09-12)
+retrieved: 2026-09-15 (fetched 06:11 UTC, unchanged since 13:10 UTC on 2026-09-12)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -26,7 +26,7 @@ status: >-
   (1.2 → 1.3) and this time the correlation was large: 38 fields → 39, a new AEV
   field inserted as v23 cascading every later field's number up by one, and roughly
   a dozen wording/status fixes across the page. See the change log.
-last_check: 2026-09-14
+last_check: 2026-09-15
 last_change: 2026-09-12
 note: >-
   One row per field, one table per group (Common / AEV / SI), matching the live page's own
@@ -41,6 +41,10 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-15 06:11 UTC (vs. 2026-09-13 23:15 UTC)
+
+Page still returns HTTP 200 at `cra-srp-glossary2`, fetched alongside all ten other tracked SRP pages in the same run (one of which — AR Interface Functions, a single invisible `&nbsp;` insertion — changed this time; see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: footer still "Version 1.3. Last update: 10 September 2026", field count unchanged (39), all 39 rows re-verified cell by cell against the raw `<table>` structure, including field 10's `cryptoprocessing&nbsp; devices` gap, v27's doubled full stop, v28's empty Example, and v30's missing space in "(CDaC)taking". `retrieved` and `last_check` updated; `last_change` unchanged (still 2026-09-12).
 
 ### 2026-09-13 23:15 UTC (vs. 2026-09-12 13:10 UTC)
 
