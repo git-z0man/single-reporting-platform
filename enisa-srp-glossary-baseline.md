@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.3 (page footer: last update 10/09/2026)"
-retrieved: 2026-09-15 (fetched 06:11 UTC, unchanged since 13:10 UTC on 2026-09-12)
+retrieved: 2026-09-17 (fetched 09:00 UTC, gained new nbsp insertions across many field-name/status cells, including two 32-nbsp footnote runs, since 13:10 UTC on 2026-09-12 — see change log)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -26,8 +26,8 @@ status: >-
   (1.2 → 1.3) and this time the correlation was large: 38 fields → 39, a new AEV
   field inserted as v23 cascading every later field's number up by one, and roughly
   a dozen wording/status fixes across the page. See the change log.
-last_check: 2026-09-16
-last_change: 2026-09-12
+last_check: 2026-09-17
+last_change: 2026-09-17
 note: >-
   One row per field, one table per group (Common / AEV / SI), matching the live page's own
   column order — Nr. | Field | Applies to | Meaning | How to complete | Example | Format |
@@ -41,6 +41,22 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-09-17 09:00 UTC (vs. 2026-09-15 06:11 UTC)
+
+Page still returns HTTP 200 at `cra-srp-glossary2`, fetched alongside all ten other tracked SRP pages in the same run (most of which picked up the same pattern; see `enisa-srp-faq-baseline.md`). Footer unchanged, still "Version 1.3. Last update: 10 September 2026"; field count unchanged (39, no field added/removed/renumbered); no field name, meaning, how-to-complete text, example, format, or per-stage status *value* changed anywhere.
+
+**Editorial**
+
+A page-wide non-breaking-space pass hit many field-name and status cells across all three tables (most visibly the "Optional" EW24h cells and several field names, e.g. "Notification type...)&nbsp;", "Title&nbsp;", "Manufacturer name&nbsp;") — invisible in rendering, no value changed. All previously tracked defects re-verified unchanged: field 10's `cryptoprocessing&nbsp; devices` gap, v27's doubled full stop, v28's empty Example, v30's missing space in "(CDaC)taking".
+
+**Watch**
+
+Both page footnotes — [1] and [2], text unchanged — each gained a run of 32 consecutive `&nbsp;` entities appended after them, a markedly more extreme instance of this run's nbsp pattern than anywhere else on the page or on any of the other ten tracked pages (see the "Footnotes" section below for the exact text). Worth a closer look next check in case it signals a migration/export artifact.
+
+**Unchanged**
+
+All 39 rows' substantive content, both footnotes' wording, version footer, field count. `retrieved`, `last_check`, and `last_change` all updated to 2026-09-17.
 
 ### 2026-09-15 06:11 UTC (vs. 2026-09-13 23:15 UTC)
 
@@ -330,6 +346,8 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 - Columns on the live page, per field: Nr. | Field | Applies to AEV or SI | What this field means | How you may complete it | Example | Expected format | Early Warning (EW) 24h | 72h | Final Report (FR)
 - Field count: 39 (was 38 before 2026-09-10 13:11 UTC) — 18 Common, 12 AEV (v19–v30), 9 SI (i31–i39)
 
+**Non-breaking-space pass, 2026-09-17 09:00 UTC**: a page-wide `&nbsp;` insertion pass (the same pattern hitting most of the other ten tracked SRP pages this run — see `enisa-srp-faq-baseline.md`) added invisible trailing nbsp to many cells across all three tables below, most visibly to most "Optional" EW24h-column cells and to several field names (e.g. field 1 "Notification type (Vulnerability/Incident)&nbsp;", field 2 "Title&nbsp;", field 4 "Manufacturer name&nbsp;"). Not tracked cell-by-cell here to keep the tables scannable — no field name, meaning, how-to-complete text, example, format, or status *value* changed anywhere; only the two footnotes below, which each gained a much larger 32-entity run, are called out individually.
+
 ## Common fields (Both AEV and SI)
 
 | Nr. | Field | Applies to | Meaning | How to complete | Example | Format | EW 24h | 72h | Final Report |
@@ -386,8 +404,8 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 
 ## Footnotes (from the live page)
 
-- [1] This field will be available in the next release of the Platform. (attached to field v26, was v25 before the 2026-09-10 13:11 UTC renumbering)
-- [2] In the current release this field is named: "Date and time when the incident was detected (UTC time)". *(reworded 2026-09-10 13:11 UTC; was "Date/time the incident was detected")* (attached to field i37, was i36 before the renumbering)
+- [1] This field will be available in the next release of the Platform. (attached to field v26, was v25 before the 2026-09-10 13:11 UTC renumbering) *(gained a run of 32 consecutive `&nbsp;` entities right after this sentence, before the `<br>` to footnote [2], 2026-09-17 09:00 UTC; invisible in rendering, no wording change.)*
+- [2] In the current release this field is named: "Date and time when the incident was detected (UTC time)". *(reworded 2026-09-10 13:11 UTC; was "Date/time the incident was detected")* (attached to field i37, was i36 before the renumbering) *(gained a second run of 32 consecutive `&nbsp;` entities right after this sentence, followed by a `<br>` and one more standalone `&nbsp;` closing the `<p>`, 2026-09-17 09:00 UTC; invisible in rendering, no wording change.)*
 
 ## Check log
 
