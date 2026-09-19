@@ -1,8 +1,9 @@
 ---
 source: ENISA — Single Reporting Platform (SRP)
-url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp
-old_url: https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp (now redirects to `url` above, first seen 2026-08-31)
-faq_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions
+url: https://www.enisa.europa.eu/topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp (moved 2026-09-19, see `old_url`)
+old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp (returns HTTP 301 to `url` above since at least 2026-09-19; itself had superseded `https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp`, first seen redirecting 2026-08-31)
+faq_url: https://www.enisa.europa.eu/topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp/frequently-asked-questions (moved 2026-09-19, see `old_faq_url`)
+old_faq_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions (returns HTTP 301 to `faq_url` above since at least 2026-09-19)
 glossary_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 csirt_list_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators
 guidance_urls:
@@ -13,17 +14,17 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-18 (fetched 06:12 UTC, main page unchanged since 2026-09-17; FAQ gained a substantive change to Q9's notification-access wording plus one further stray nbsp on Q7 — see change log)
-guidance_retrieved: 2026-09-18 (fetched 06:12 UTC, all four guidance subpages unchanged word-for-word since 2026-09-17; AR Interface Functions' own unchanged "View the Dashboard" section now contradicts today's revised FAQ Q9 on who can see whose notifications — see change log)
-glossary_retrieved: 2026-09-18 (fetched 06:12 UTC, unchanged since 2026-09-17 09:00 UTC — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-09-18 (fetched 06:12 UTC, unchanged since 17:11 UTC on 2026-09-12)
-ar_user_manual_retrieved: 2026-09-18 (fetched 06:12 UTC, unchanged since 2026-09-17)
-terms_conditions_retrieved: 2026-09-18 (fetched 06:12 UTC, unchanged since 2026-09-17)
-ar_user_tutorial_video_retrieved: 2026-09-18 (fetched 06:12 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
+retrieved: 2026-09-19 (fetched 06:09 UTC; content unchanged word-for-word since 2026-09-18, but the page itself moved — see `url`/`old_url` and change log)
+guidance_retrieved: 2026-09-19 (fetched 06:09 UTC, all four guidance subpages unchanged word-for-word since 2026-09-18)
+glossary_retrieved: 2026-09-19 (fetched 06:09 UTC, unchanged since 2026-09-17 09:00 UTC — see `enisa-srp-glossary-baseline.md`)
+csirt_list_retrieved: 2026-09-19 (fetched 06:09 UTC, unchanged since 17:11 UTC on 2026-09-12)
+ar_user_manual_retrieved: 2026-09-19 (fetched 06:09 UTC, unchanged since 2026-09-17)
+terms_conditions_retrieved: 2026-09-19 (fetched 06:09 UTC, unchanged since 2026-09-17)
+ar_user_tutorial_video_retrieved: 2026-09-19 (fetched 06:09 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-09-18
-last_change: 2026-09-18
+last_check: 2026-09-19
+last_change: 2026-09-19
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
@@ -31,6 +32,22 @@ last_change: 2026-09-18
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-19 06:09 UTC (vs. 2026-09-18 06:12 UTC)
+
+The main SRP page and its FAQ subpage moved to a new address under a reorganised topic taxonomy; both old addresses now genuinely 301-redirect (not the ambiguous 403 the Glossary saw on 2026-09-07). Every page's content — main, FAQ, all four guidance subpages, the CSIRT list, the AR User Manual, Terms and Conditions, and the AR User Tutorial Video pages, and the 39-field Glossary — is unchanged word-for-word/field-for-field since the last check.
+
+**Changed**
+- The main page moved from `.../topics/product-security/single-reporting-platform-srp` to `.../topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp`; the FAQ subpage moved the same way, to `.../frequently-asked-questions` under the new path. Both old paths return a genuine HTTP 301 to the new address. `url` and `faq_url` updated, prior addresses kept as `old_url`/`old_faq_url`.
+
+**Watch**
+- None of the other nine tracked subpages moved — every link on both the old and the new main-page copy still points at the unmoved `.../topics/product-security/single-reporting-platform-srp/...` prefix for the guidance pages, Glossary, CSIRT list, AR User Manual, Terms and Conditions, and Tutorial Video. Only the top-level topic page and its direct FAQ child moved; a future check should watch whether the rest follow.
+
+**Editorial**
+No wording, typo, or formatting changes anywhere; every previously tracked defect (Q9's "regardless of with AR" grammar slip, the FAQ/AR-Interface-Functions Secondary-AR contradiction, the guidance pages' quirks) is unchanged.
+
+**Unchanged**
+FAQ Q1–Q32 word-for-word ("Updated: 17 September 2026"); all four guidance subpages byte for byte ("12 September 2026" ×3, PEC "09 September 2026"); CSIRT list (27 countries, same links, "Last updated: 10 September 2026"); AR User Manual, Terms and Conditions, and AR User Tutorial Video pages byte for byte; Glossary (still v1.3, 39 fields, all rows re-verified) — see `enisa-srp-glossary-baseline.md`. Content navigation still 9 entries.
 
 ### 2026-09-18 06:12 UTC (vs. 2026-09-17 09:00 UTC)
 
