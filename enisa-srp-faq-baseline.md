@@ -19,6 +19,8 @@ guidance_retrieved: 2026-09-21 (fetched 06:14 UTC, all four guidance subpages un
 glossary_retrieved: 2026-09-21 (fetched 06:14 UTC, unchanged since 2026-09-17 09:00 UTC — see `enisa-srp-glossary-baseline.md`)
 csirt_list_retrieved: 2026-09-21 (fetched 06:14 UTC, unchanged since 17:11 UTC on 2026-09-12)
 ar_user_manual_retrieved: 2026-09-21 (fetched 06:14 UTC, unchanged since 2026-09-17)
+ar_user_manual_pdf_sha256: e2afc96031eceff4bebd9790256183e4ce6b835d9a1c44f9864e4f3995998f86 (the PDF itself, not the landing page; seeded 2026-09-21. The copy captured 2026-09-10 was 3,119,968 bytes; this one is 3,190,657 and reverses the AR notification-visibility rule — see `enisa-defect-report.md` G26. Both are stamped "Version: 1.1" with an unchanged Document History table, so **this hash is the only reliable change signal for this document**.)
+ar_user_manual_pdf_last_modified: Thu, 17 Sep 2026 14:30:33 GMT
 terms_conditions_retrieved: 2026-09-21 (fetched 06:14 UTC, unchanged since 2026-09-17)
 ar_user_tutorial_video_retrieved: 2026-09-21 (fetched 06:14 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.

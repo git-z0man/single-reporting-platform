@@ -90,11 +90,13 @@ This auto-merge behavior applies only to PRs from this routine that touch
 Any other change to this repository follows the normal review-and-confirm
 flow.
 
-The check runs weekly. It ran hourly from 2026-09-07 to 2026-09-14, because
-ENISA signalled frequent edits in the run-up to the 11 September go-live and a
-Tuesday change would otherwise have waited until the following Monday; see
-`routines/README.md` for what that week actually caught. The same
-daily-rhythm rule as the domain routine still applies: the repository keeps
+The check runs daily, at 06:04 UTC. It ran hourly from 2026-09-07 to
+2026-09-14, because ENISA signalled frequent edits in the run-up to the
+11 September go-live; a revert to weekly was documented at the time but never
+applied to the live Routine, and daily has since been confirmed as the
+intended cadence — it is what caught the new FAQ Q32 within hours on
+21 September. See `routines/README.md` for what these cadences actually
+caught. The same daily-rhythm rule as the domain routine still applies: the repository keeps
 **one measurement point per day** plus every real change. A run that finds
 nothing changed and sees today's date in `last_check` on `main` ends
 silently — no commit, no PR, no notification — and that is the normal outcome
@@ -178,18 +180,21 @@ This auto-merge behavior applies only to PRs from this routine that touch
 `srp-domains-baseline.md` and `srp-domains/` alone. Any other change to this
 repository follows the normal review-and-confirm flow.
 
-The check runs hourly to catch the go-live quickly, but the repository keeps
-only **one measurement point per day** plus every real event. A run that finds
+The check runs daily, at 06:00 UTC. It ran hourly until 13 September 2026 to
+catch the go-live quickly; the routine switched itself to daily once that had
+happened, on its own prompt's instruction. The repository keeps
+**one measurement point per day** plus every real event. A run that finds
 no change and sees today's date already in `srp-domains/manifest.json` on
 `main` ends silently: no commit, no PR, no notification. That is the normal
 outcome for most runs. Anything substantive — a host going live, a new host in
 the zone, a host falling away — is committed and reported immediately,
 regardless of the daily rhythm.
 
-This is why `srp-domains/reachability-log.csv` holds roughly one set of 29 rows
-per day rather than 24: the hourly runs still happen, they just stay quiet.
-Each run gets a fresh container, so a run that does not commit discards its
-result by design.
+`srp-domains/reachability-log.csv` therefore holds one set of 29 rows per day.
+Under the hourly cadence it held the same one set per day rather than 24, since
+the silent runs committed nothing — the log's shape did not change when the
+schedule did. Each run gets a fresh container, so a run that does not commit
+discards its result by design.
 
 The routine does not hard-code its state branch. The platform assigns the
 Routine's outcome branch a new name whenever the Routine is edited, so the

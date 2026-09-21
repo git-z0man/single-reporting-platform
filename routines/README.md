@@ -18,9 +18,9 @@ for which ones an agent may update and which need a human.
 
 | Prompt file | Name in the Routines UI | Trigger ID | Schedule |
 |---|---|---|---|
-| `enisa-srp-pages-monitor.md` | **Single Reporting FAQ monitor** | `trig_015C8QiJhXwkxPkDdoMbkHeD` | `0 5 * * 1` |
+| `enisa-srp-pages-monitor.md` | **Single Reporting FAQ monitor** | `trig_015C8QiJhXwkxPkDdoMbkHeD` | `4 6 * * *` |
 | `commission-cra-faq-monitor.md` | **Commission CRA FAQ monitor** | `trig_012AzfKXKrPnRCEjXXYWBgY4` | `0 5 * * 1` |
-| `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `22 * * * *` |
+| `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `0 6 * * *` |
 | `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
 
 The UI name and the file name differ for the first one: an attempt to rename it
@@ -44,9 +44,52 @@ signalled frequent edits in the run-up to the 11 September go-live, and a
 Tuesday change would otherwise have sat unnoticed until the following Monday.
 It earned its keep — 89 dated change-log entries accumulated in
 `enisa-srp-faq-baseline.md` over the week, 38 of them in the last five days
-alone, with no long silent stretch — and reverted to `0 5 * * 1` on schedule
-on 2026-09-14, per the revert note recorded in the prompt file's header at
-the time.
+alone, with no long silent stretch. The documented revert to `0 5 * * 1` on
+2026-09-14 was written into these files but never applied to the Routine; see
+the section below for how that was found and resolved.
+
+## The weekly revert never happened, and daily is now the intended cadence
+
+The 2026-09-14 revert updated these mirrored files to `0 5 * * 1`. The live cron
+was never changed to match — it is `4 6 * * *`, daily at 06:04 UTC, confirmed by
+reading the Routine back on 2026-09-21. The mirror said weekly for a week while
+the monitor ran daily.
+
+Resolved in favour of what was running. Daily is what caught FAQ Q32 within
+hours of publication on 21 September, and ENISA has been editing at a pace
+weekly cadence would badly under-sample — the hourly week alone produced 89
+change-log entries. The table above now records `4 6 * * *`; no cron change is
+outstanding.
+
+The lesson is narrower than "keep the docs in sync": **a cron written here is a
+claim about someone else's system, and it goes stale the moment a paste is
+skipped.** Read the Routine back with `list_triggers` rather than trusting this
+file, the same way the paste-path section below says to verify a pasted prompt.
+That check is what found this, and it found the domain monitor's mismatch in the
+same pass.
+
+## The domain monitor switched its own schedule, as designed
+
+Not drift, and worth distinguishing from the case above. Hourly was only ever
+for catching the go-live. Section 5 of `srp-domains-monitor.md` therefore told
+the run to switch itself: call `update_trigger` on
+`trig_01426ap5KJGGrY4Fk2pbTm8s` with `0 6 * * *`, once, on or after
+12 September, and skip it if already set — with a fallback line to report the
+switch as outstanding if the tool was unavailable, which in that Routine's
+sessions it normally is. The switch was applied on 2026-09-13 17:38 UTC and the
+cron has read `0 6 * * *` since. The instruction did its job; only this file
+never caught up, and claimed `22 * * * *` for another eight days.
+
+The instruction has now been removed from both the mirror and the live prompt,
+because a completed one-shot task left in a prompt is not harmless: every run
+re-read it, and its own fallback line said to report "Zeitplanumstellung auf
+täglich steht noch aus" whenever `update_trigger` was unavailable — which that
+Routine's sessions normally are. It was one unlucky run away from reporting an
+outstanding task that had been done days earlier.
+
+**So: a self-modifying instruction needs a removal step, and the removal is not
+optional.** If a prompt tells a routine to change something once, whoever
+confirms it happened also deletes the instruction and corrects this file.
 
 Hourly was not just a cron change. Three rules had to go into the prompt
 first, or the faster beat would have been a downgrade — and all three stayed
@@ -62,27 +105,59 @@ in the prompt after the revert, since they hold at any cadence:
   on 2026-09-07 and was disentangled by hand into "morning" and "evening".
 - **429 and 5xx are check failures, not changes.** ENISA rate-limited a burst
   of requests that day. Seven pages an hour, on top of the domain monitor's own
-  hourly fetch of the CSIRT list, makes that likelier — and an error page
-  diffed as content would corrupt the baseline.
+  fetch of the CSIRT list, made that likelier — and an error page diffed as
+  content would corrupt the baseline. Both monitors are daily now, so the
+  request volume is far lower, but the rule stands: a 429 is a failed check,
+  never a change.
+
+## Watching a page is not watching the PDF it links to (added 2026-09-21)
+
+The AR User Manual entered this routine's scope on 2026-09-10 as page 9 of
+eleven — meaning its **landing page** was diffed every run. The document that
+page exists to distribute was never fetched at all.
+
+On 2026-09-17 ENISA republished the PDF at the same URL with a reversed
+permission rule: the sentence saying a Secondary AR cannot see another AR's
+notifications was deleted and replaced by one saying every AR of the
+manufacturer can access and update all of them. The landing page did not
+change, so the monitor reported the manual unchanged for four consecutive
+days. The change was found by hand on 21 September, and only because someone
+went looking.
+
+What makes this worse than an ordinary miss is that the document's own change
+signals are inert: both copies are stamped "Version: 1.1", and the Document
+History table lists only "09/09/2026 v1.0 First version" in both. Size and PDF
+ModDate are the only honest evidence. So the prompt now carries section 1a:
+hash the PDF every run, compare against `ar_user_manual_pdf_sha256` in
+`enisa-srp-faq-baseline.md`'s frontmatter, and diff the extracted text when
+the hash moves.
+
+The general lesson, worth applying to any document this or another routine
+picks up: **if a tracked page's purpose is to hand out a file, the file needs
+its own checksum.** Diffing the wrapper proves nothing about the contents.
+
+Note this did not widen the routine's auto-merge scope — it still writes only
+`enisa-srp-faq-baseline.md` and `enisa-srp-glossary-baseline.md`, so `CLAUDE.md`
+needed no change. Archiving PDF copies *would* have widened it, and was
+deliberately not done.
 
 ## Two routines watch the SRP — on purpose
 
 `Single Reporting FAQ monitor` reads ENISA's **web pages** and diffs their
 wording. `SRP domain reachability monitor` probes the 29 **hosts** of the
 production zone and classifies whether they answer. Same subject, different
-signal — and normally a different cadence: weekly for pages that change every
-few weeks, hourly for a go-live that has to be caught when it happens.
+signal.
 
-They shared a cadence for one week (see above), and that changed nothing: the
-reason to keep them apart was never only the schedule. They fail differently —
-a 403 on an ENISA page and a dark production host mean opposite things, and
-each needs its own reading. Their auto-merge scopes are disjoint, so a
-combined run touching both files would fall out of auto-merge entirely. The
-shared cadence was also temporary on only one side: the pages monitor reverted
-to weekly on 14 September, while the domain monitor stays hourly for as long
-as go-live detection matters. A merged routine would then have been stuck
-picking one of the two beats, which is exactly the bind this separation
-avoids.
+They now also run at nearly the same time — `4 6 * * *` and `0 6 * * *`, four
+minutes apart — so the cadence argument for keeping them separate has
+evaporated entirely. It was never the real one. They fail differently: a 403 on
+an ENISA page and a dark production host mean opposite things, and each needs
+its own reading. Their auto-merge scopes are disjoint, so a combined run
+touching both files would fall out of auto-merge altogether. And each is free
+to change beat without dragging the other along, which is precisely what
+happened — the domain monitor went hourly-to-daily on 13 September and the
+pages monitor hourly-to-daily on its own schedule, neither affecting the other.
+Keep them apart for those reasons, not for the clock.
 
 **Where they did overlap, ownership decides, not merging.** ENISA's CSIRT
 coordinator list is both a page to diff and the source of the country table in
