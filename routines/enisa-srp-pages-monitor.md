@@ -1,20 +1,28 @@
 # ENISA SRP pages monitor
 
 - **Trigger**: `trig_015C8QiJhXwkxPkDdoMbkHeD`
-- **Schedule**: `0 5 * * 1` (Mondays 05:00 UTC).
+- **Schedule**: `4 6 * * *` (daily, 06:04 UTC).
 - **Writes**: `enisa-srp-faq-baseline.md`, `enisa-srp-glossary-baseline.md`
 - **Updatable by an agent**: **no** — created via `http_api`, so the prompt below
   must be pasted into the Routines UI by hand.
 
-> **Pending in the Routines UI (2026-09-14): back to weekly.** The monitor ran
-> hourly (`0 * * * *`) from 2026-09-07 through 2026-09-14, to catch frequent
-> ENISA edits in the run-up to and just after the 11 September go-live — it
-> did: 89 dated change-log entries accumulated in that window, 38 of them in
-> the last five days alone, with no long silent stretch at any point. Set the
-> cron back to `0 5 * * 1` (Mondays 05:00 UTC) in the Routines UI; the rest of
-> this prompt needs no change for the cadence switch — the silence-on-
-> no-change rule, the UTC time in a same-day heading, and 429/5xx-as-failure
-> (sections 1 and 4) are good practice at either cadence, not hourly-specific.
+> **Outstanding paste (2026-09-21): the PDF checksum, and the eleventh page.**
+> Section 1a below is new and is **not** in the live prompt — read back on
+> 2026-09-21, the stored text contains no occurrence of `sha256`, `checksum` or
+> `PDF`. Until it is pasted, the manual's PDF is still not being checked, which
+> is how a reversed permission rule went unnoticed for four days (see
+> `enisa-defect-report.md` G26). The same paste also carries the eleventh page
+> below, and one stale word in section 4 ("hourly" → "daily", describing the
+> domain routine's cadence). Section 1a was checked for angle brackets and has
+> none, so the paste-path stripping described further down does not apply.
+>
+> **Cadence: resolved, nothing outstanding.** The monitor ran hourly
+> (`0 * * * *`) from 2026-09-07 through 2026-09-14 — 89 dated change-log
+> entries in that window, 38 in the last five days. A revert to `0 5 * * 1` was
+> documented on 2026-09-14 but never applied; the live cron has been
+> `4 6 * * *` throughout, and daily is now the intended cadence. No cron change
+> is pending. The silence-on-no-change rule, the UTC time in a same-day
+> heading, and 429/5xx-as-failure (sections 1 and 4) hold at any cadence.
 >
 > **The 2026-09-07 paste is otherwise live and verified** — read back from the
 > Routine and diffed against this file: same sections, same rules, 0.998
@@ -27,42 +35,25 @@
 > both refuse it, because it was created via `http_api`. Prompt and schedule
 > alike are a manual step.
 >
-> **Pending in the Routines UI (added 2026-09-08 14:10 UTC): an eighth
-> tracked page.** Walking the main page's "Content" navigation, as section 1
-> requires, turned up a new guidance subpage — "CRA SRP guidance - Particular
-> Exceptional Circumstances (PEC)" — not in either baseline. It has been added
-> to `enisa-srp-faq-baseline.md` as `guidance_urls[3]`, and the section below
-> updated to list it as page 7 (Glossary renumbered to 8). The live Routine's
-> stored prompt still says "all seven" and lists only six items under
-> `enisa-srp-faq-baseline.md`; paste the updated section 1 below into the
-> Routines UI so the next scheduled run checks the new page too — until then
-> it will keep re-discovering it from scratch every run instead of diffing it
-> against a baseline.
+> **Pages 7, 9 and 10 are live — those pastes were done.** This file carried
+> three "pending" notes for the PEC guidance page (found 2026-09-08) and the
+> AR User Manual and Terms and Conditions pages (found 2026-09-10). Reading the
+> Routine back on 2026-09-21 shows all three listed in the stored prompt, which
+> now reads "all ten". The notes were stale and have been removed.
 >
-> **Pending in the Routines UI (added 2026-09-10 10:12 UTC): a ninth and
-> tenth tracked page.** The same "Content" navigation walk turned up two more
-> pages not in either baseline: "CRA SRP - AR User Manual" and "CRA Single
-> Reporting Platform - Terms and Conditions". Added to
-> `enisa-srp-faq-baseline.md` as `ar_user_manual_url` and
-> `terms_conditions_url`, and the section below updated to list them as pages
-> 9 and 10 (the Glossary stays page 8, since it lives in the other baseline
-> file and was already tracked). The live Routine's stored prompt still says
-> "all eight" and lists only eight items; paste the updated section 1 below
-> into the Routines UI so the next scheduled run checks both new pages too —
-> until then it will keep re-discovering them from scratch every run instead
-> of diffing them against a baseline. This is the same failure mode the
-> eighth-page note above already describes, now recurring with two more pages
-> at once.
+> **The eleventh page is genuinely still missing from the live prompt.** "CRA
+> SRP - AR User Tutorial Video" (found 2026-09-11) is in
+> `enisa-srp-faq-baseline.md` as `ar_user_tutorial_video_url` and is listed as
+> page 11 in section 1 below, but the stored prompt still says "all ten" and
+> does not name it. In practice this has cost nothing: section 1 tells the run
+> that the frontmatter URL list wins over its own list, and the runs do report
+> 11/11 pages checked. It rides along with the section 1a paste above.
 >
-> **Pending in the Routines UI (added 2026-09-11 11:10 UTC): an eleventh
-> tracked page.** The same "Content" navigation walk turned up one more page
-> not in either baseline: "CRA SRP - AR User Tutorial Video". Added to
-> `enisa-srp-faq-baseline.md` as `ar_user_tutorial_video_url`, and the section
-> below updated to list it as page 11. The live Routine's stored prompt still
-> says "all ten" and lists only ten items; paste the updated section 1 below
-> into the Routines UI so the next scheduled run checks the new page too —
-> until then it will keep re-discovering it from scratch every run instead of
-> diffing it against a baseline. Same failure mode as the two notes above.
+> That self-healing is worth not over-trusting. It works because every page so
+> far has been reachable from a frontmatter key the prompt already knows to
+> read. A change that is *not* just a new URL — a new rule, a new file to
+> check, section 1a being the case in point — does not heal itself and stays
+> broken until pasted.
 
 ---
 
@@ -155,7 +146,7 @@ mapping. Diff it word-for-word like every other page and record changes in
 
 Do **not** edit `srp-domains-baseline.md` or anything under `srp-domains/`.
 That table is owned by the SRP domain reachability routine, which fetches this
-same list on its own hourly run and applies changes to its country table
+same list on its own daily run and applies changes to its country table
 itself — so no handoff is needed and nothing is waiting on you. Touching those
 paths would also put your PR outside this routine's auto-merge scope.
 

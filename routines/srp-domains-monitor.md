@@ -1,7 +1,7 @@
 # SRP domain reachability monitor
 
 - **Trigger**: `trig_01426ap5KJGGrY4Fk2pbTm8s`
-- **Schedule**: `0 6 * * *` (daily; switched 2026-09-13 17:38 UTC per section 5 — the Routine's own sessions run without connector tools, so it could not make the change itself)
+- **Schedule**: `0 6 * * *` (daily since 2026-09-13 17:38 UTC; hourly before that, to catch the go-live)
 - **Writes**: `srp-domains-baseline.md`, `srp-domains/`
 - **Also reads**: ENISA's List of CSIRTs Designated as Coordinators — it owns
   the country table, so it applies changes to that list itself rather than
@@ -16,6 +16,15 @@
 > the go-live happened at 11:24 UTC the same day, so section 4 became a drift
 > check against the settled architecture instead of a go-live verification,
 > and a host going dark — not a host coming up — is now the headline event.
+>
+> **2026-09-21: the schedule-switch section was removed.** A former section 5
+> told the run to switch this Routine's own cron from hourly to `0 6 * * *`,
+> once, on or after 12 September. That switch was applied on 2026-09-13 and the
+> instruction became dead weight — worse than dead, since its fallback line told
+> a run whose session lacked `update_trigger` (the normal case here) to report
+> the switch as still outstanding. It would eventually have reported a task
+> completed days earlier as pending. Removed here and applied with
+> `update_trigger`; sections renumbered.
 
 ---
 
@@ -109,7 +118,7 @@ Only when BOTH the reachability check and the CSIRT list came back unchanged. Re
     git show origin/main:srp-domains/manifest.json | python3 -c "import json,sys; print(json.load(sys.stdin)['last_check'])"
 
 - If it is **today's date** → today's measurement point is already recorded. Do NOT commit, do NOT open a PR, do NOT report anything. End the run silently. This is the normal outcome for almost every run.
-- If it is an **earlier date** → this is the first run of the day. Update `last_check` in the frontmatter of `srp-domains-baseline.md` to today AND the "Last check" row of its "Current state" table, leave `last_change` alone, then commit, PR and merge per section 6. Do NOT report — a routine heartbeat is not worth a notification.
+- If it is an **earlier date** → this is the first run of the day. Update `last_check` in the frontmatter of `srp-domains-baseline.md` to today AND the "Last check" row of its "Current state" table, leave `last_change` alone, then commit, PR and merge per section 5. Do NOT report — a routine heartbeat is not worth a notification.
 
 ### 3c. Exit 2 — the check itself failed
 
@@ -134,15 +143,7 @@ Report drift from that architecture, which means any of:
 
 Also note whether the platform still matches the scope ENISA stated for launch: mandatory reporting under Art 14 and 24(x) only, with voluntary reporting under Art 15 not available.
 
-## 5. Switch to the daily schedule
-
-This Routine still runs hourly. That cadence was for catching the go-live, which has happened, so hourly no longer earns its keep once the launch has settled.
-
-Try to switch it yourself: call update_trigger on trigger `trig_01426ap5KJGGrY4Fk2pbTm8s` with cron_expression `0 6 * * *`. Do this once, on or after 12 September 2026, and skip it if the schedule already is `0 6 * * *`.
-
-If the update_trigger tool is not available in your session (this Routine runs without connector tools, so it very likely is not), do NOT treat that as an error and do NOT try to work around it. Just add one line to your report: "Zeitplanumstellung auf täglich steht noch aus — bitte in der Routines-UI auf `0 6 * * *` ändern (trig_01426ap5KJGGrY4Fk2pbTm8s)."
-
-## 6. Commit, PR, merge
+## 5. Commit, PR, merge
 
 Only when section 3 says to commit. Commit with a message naming what changed. Push with `git push -u origin HEAD`, retrying up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network errors only.
 
@@ -150,7 +151,7 @@ If the push fails for lack of credentials (403), do NOT try to route around it �
 
 Otherwise open a pull request as a draft, then mark it ready for review and merge it yourself immediately. This is the standing convention for this routine, recorded in CLAUDE.md — do not leave the PR waiting for approval. It applies only to PRs that touch `srp-domains-baseline.md` and `srp-domains/` alone; if your change touches anything else, leave that PR open and say so.
 
-## 7. Report — only when there is something to say
+## 6. Report — only when there is something to say
 
 Stay SILENT for a run that changed nothing, including the daily heartbeat commit. No summary line, no "check ran" message. Silence is the expected output most of the time.
 
