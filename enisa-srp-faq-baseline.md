@@ -14,17 +14,17 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-19 (fetched 06:09 UTC; content unchanged word-for-word since 2026-09-18, but the page itself moved — see `url`/`old_url` and change log)
-guidance_retrieved: 2026-09-19 (fetched 06:09 UTC, all four guidance subpages unchanged word-for-word since 2026-09-18)
-glossary_retrieved: 2026-09-19 (fetched 06:09 UTC, unchanged since 2026-09-17 09:00 UTC — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-09-19 (fetched 06:09 UTC, unchanged since 17:11 UTC on 2026-09-12)
-ar_user_manual_retrieved: 2026-09-19 (fetched 06:09 UTC, unchanged since 2026-09-17)
-terms_conditions_retrieved: 2026-09-19 (fetched 06:09 UTC, unchanged since 2026-09-17)
-ar_user_tutorial_video_retrieved: 2026-09-19 (fetched 06:09 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
+retrieved: 2026-09-21 (fetched 06:14 UTC; content changed since 2026-09-19 — new FAQ Q32 and a rewritten Q9 closing sentence, see change log)
+guidance_retrieved: 2026-09-21 (fetched 06:14 UTC, all four guidance subpages unchanged word-for-word since 2026-09-19)
+glossary_retrieved: 2026-09-21 (fetched 06:14 UTC, unchanged since 2026-09-17 09:00 UTC — see `enisa-srp-glossary-baseline.md`)
+csirt_list_retrieved: 2026-09-21 (fetched 06:14 UTC, unchanged since 17:11 UTC on 2026-09-12)
+ar_user_manual_retrieved: 2026-09-21 (fetched 06:14 UTC, unchanged since 2026-09-17)
+terms_conditions_retrieved: 2026-09-21 (fetched 06:14 UTC, unchanged since 2026-09-17)
+ar_user_tutorial_video_retrieved: 2026-09-21 (fetched 06:14 UTC, unchanged since first capture at 11:10 UTC on 2026-09-11)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-09-20
-last_change: 2026-09-19
+last_check: 2026-09-21
+last_change: 2026-09-21
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
@@ -32,6 +32,26 @@ last_change: 2026-09-19
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-21 06:14 UTC (vs. 2026-09-19 06:09 UTC)
+
+A new FAQ entry, Q32, was added — the first genuinely new question since Q31 on 2026-09-10 — covering what to do about a wrong manufacturer name at registration or removing an AR–manufacturer association; Q9's closing sentence was replaced with a pointer to it. All ten other pages (main, the four guidance subpages, CSIRT list, AR User Manual, Terms and Conditions, AR User Tutorial Video, and the 39-field Glossary) are unchanged word-for-word/field-for-field. Content navigation still 9 entries — no new page.
+
+**New**
+- **Q32. [NEW] What should I do if I entered the wrong manufacturer name during registration or want to remove an AR–manufacturer association?** Three paragraphs: (1) a manufacturer-name typo at registration needs no correction of the old entry — just re-register with the right name; if the wrong entity is inadvertently "Verified" by the CDaC, contact the CDaC to have it rejected. (2) Removing an AR–manufacturer association: doable directly once the manufacturer is "Verified"; if not yet verified, either wait for verification and then remove it, or ask the CDaC to reject the association. (3) Points to "Section 4.5 'Manage Manufacturer Association'" of the AR User Manual (PDF, not fetched by this routine) for the full procedure, and states the permission split explicitly for the first time on the FAQ page: a Primary AR can remove their own association or a Secondary AR's; a Secondary AR can only remove their own.
+
+**Changed**
+- Q9's final paragraph — "More information on registration, AR roles, and use of the platform is available in the regularly updated ENISA guidance materials." — was replaced by "For additional guidance on what to do if you **enter the wrong manufacturer name during registration or wish to remove an AR–manufacturer association**, please refer to **FAQ 32** below." A cross-reference forward to the new question, not a substantive change to Q9's own subject matter (AR access and roles).
+- Q31's second sentence was reworded: "If you have found a vulnerability in the platform you can contact responsible-disclosure@enisa.europa.eu." → "If you find a vulnerability in the platform, you can contact responsible-disclosure@enisa.europa.eu." Tense and a comma only, same substance.
+
+**Watch**
+- The FAQ page-level "Updated:" stamp is still "17 September 2026", unmoved despite this content change — the same unreliable-stamp pattern tracked since first capture; diff the text, not the date.
+
+**Editorial**
+No typo, punctuation, or formatting changes found elsewhere; every previously tracked defect (Q9's "regardless of with AR" grammar slip now sitting one paragraph above the new cross-reference, the FAQ/AR-Interface-Functions Secondary-AR contradiction, the guidance pages' quirks, the Glossary's tracked cell defects) is unchanged.
+
+**Unchanged**
+FAQ Q1–Q31 word-for-word aside from Q9's closing sentence and Q31's second sentence, both noted above; all four guidance subpages byte for byte ("12 September 2026" ×3, PEC "09 September 2026"); CSIRT list (27 countries, same links, "Last updated: 10 September 2026"); AR User Manual, Terms and Conditions, and AR User Tutorial Video pages byte for byte; Glossary (still v1.3, 39 fields, all rows re-verified) — see `enisa-srp-glossary-baseline.md`.
 
 ### 2026-09-19 06:09 UTC (vs. 2026-09-18 06:12 UTC)
 
@@ -1087,7 +1107,7 @@ Groups four resource cards *(three until 2026-09-11 15:10 UTC)*: the Factsheet (
 
 Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 17 September 2026" *(moved from "12 September 2026" 2026-09-18 06:12 UTC, this time correlating with the Q9 rewrite below — see the change log; before that, moved from "11 September 2026" 2026-09-12 13:10 UTC alongside the Q4/Q7/Q17/Q22/Q29 wording changes; wrapped in `<em>` since 2026-09-14 04:13 UTC, no wording change)*. Intro text on the FAQ page: "All you need to know about the CRA Single Reporting Platform" (subtitle) — "This page provides answers to frequently asked questions about the Cyber Resilience Act Single Reporting Platform (CRA SRP), including its purpose, reporting process, registration and use. The FAQs are updated regularly to reflect the latest available information and guidance as the CRA SRP is implemented. For broader guidance on the interpretation and implementation of the CRA, please also consult the European Commission's "FAQs on the CRA Implementation"." *(Watch, 2026-09-14 10:19 UTC: the raw HTML actually splits this into two `<p>` tags, uses curly quotes/apostrophe ("Commission's "FAQs...""), and carries three `&nbsp;` artifacts not reproduced above — before "The FAQs", after "is implemented.", and after the closing quote mark. This sentence has never been checked at Q1–Q31's character-level precision before, so it cannot be said whether any of this is new today or simply unrecorded until now; flagged for the record, not counted as a change.)*
 
-31 entries (30 → 31 on 2026-09-10 10:12 UTC, new Q31). Tags have moved three times since go-live: **2026-09-11 13:17 UTC** swept "[UPDATED]"/"[NEW]" off Q9, Q18, Q22, Q27, Q28, Q29, Q30 and Q31 (the same way Q8 lost its tag on 2026-09-09), leaving only the newly-tagged Q14; **2026-09-12 13:10 UTC** then tagged Q4, Q7, Q17, Q22 and Q29 [UPDATED] (each with a real wording or title change, see the change log) while Q14 lost its tag with no wording change; **2026-09-18 06:12 UTC** re-tagged Q9 [UPDATED], this time with a real, substantive wording change (see the change log). Read tag movement as a prompt to diff, not a content signal on its own — it has moved without content changing at least as often as it has moved with it. The per-question tags are recorded in each heading below where present.
+32 entries (31 → 32 on 2026-09-21 06:14 UTC, new Q32 — see the change log). Tags have moved three times since go-live: **2026-09-11 13:17 UTC** swept "[UPDATED]"/"[NEW]" off Q9, Q18, Q22, Q27, Q28, Q29, Q30 and Q31 (the same way Q8 lost its tag on 2026-09-09), leaving only the newly-tagged Q14; **2026-09-12 13:10 UTC** then tagged Q4, Q7, Q17, Q22 and Q29 [UPDATED] (each with a real wording or title change, see the change log) while Q14 lost its tag with no wording change; **2026-09-18 06:12 UTC** re-tagged Q9 [UPDATED], this time with a real, substantive wording change (see the change log). Read tag movement as a prompt to diff, not a content signal on its own — it has moved without content changing at least as often as it has moved with it. The per-question tags are recorded in each heading below where present.
 
 **Glossary links fixed 2026-09-08**: all eight "SRP Glossary" links in the answers below now point to `.../cra-srp-glossary2` (see `glossary_url`) and resolve normally. Until this check they pointed at the dead `.../cra-srp-glossary` path (HTTP 403) since at least 2026-09-07; see the change log.
 
@@ -1193,7 +1213,7 @@ The AR–manufacturer association is validated by the designated CSIRT. The spec
 
 To limit the validation workload for designated CSIRTs, manufacturers and, once applicable, open-source software stewards are advised to** register and initiate the validation process only when they need to submit a notification**. Provided that the AR already has an active EU Login account, registration on the SRP takes just a few minutes. *(bolded 2026-09-13 23:15 UTC; gained a leading space inside the `<strong>` tag 2026-09-14 09:14 UTC, no wording change.)*
 
-More information on registration, AR roles, and use of the platform is available in the regularly updated ENISA guidance materials.
+For additional guidance on what to do if you **enter the wrong manufacturer name during registration or wish to remove an AR–manufacturer association**, please refer to **FAQ 32** below. *(Replaced 2026-09-21 06:14 UTC — this paragraph previously read "More information on registration, AR roles, and use of the platform is available in the regularly updated ENISA guidance materials."; the closing paragraph is now a forward cross-reference to the new Q32 rather than a general pointer to the guidance materials. Q9's own subject matter — AR access and roles — is otherwise unchanged; see the change log.)*
 
 ### Q10. Where can I get further information on the application of the CRA?
 
@@ -1373,9 +1393,19 @@ The current version of the platform supports only mandatory notifications submit
 
 ### Q31. How do I report a security issue? *(new question, added 2026-09-10 10:12 UTC; count 30 → 31; lost its "[NEW]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above)*
 
-To report security incidents involving the platform, you can contact ENISA at cra-srp-security@enisa.europa.eu (PGP link: `https://www.enisa.europa.eu/sites/default/files/2026-09/CRA-SRP_Security_Public_Key.txt`) *(file type changed 2026-09-11 08:09 UTC from a `.zip` archive to a `.txt` file at the same filename stem, under the same `2026-09/` folder; the stray space before the closing parenthesis, present since the link was hyperlinked on 2026-09-10 17:13 UTC, is also gone. Before that: changed 2026-09-10 17:13 UTC from plain, non-hyperlinked text "enisa.europa.eu/responsible-disclosure-pgp-key.txt" to a working hyperlink)*. If you have found a vulnerability in the platform you can contact responsible-disclosure@enisa.europa.eu. More information at [enisa.europa.eu/.well-known/security.txt](https://www.enisa.europa.eu/.well-known/security.txt) *(live hyperlink as of 2026-09-11, with a stray space before the trailing full stop; this file had recorded it as plain text — not determinable from this run alone whether the link markup is new)*.
+To report security incidents involving the platform, you can contact ENISA at cra-srp-security@enisa.europa.eu (PGP link: `https://www.enisa.europa.eu/sites/default/files/2026-09/CRA-SRP_Security_Public_Key.txt`) *(file type changed 2026-09-11 08:09 UTC from a `.zip` archive to a `.txt` file at the same filename stem, under the same `2026-09/` folder; the stray space before the closing parenthesis, present since the link was hyperlinked on 2026-09-10 17:13 UTC, is also gone. Before that: changed 2026-09-10 17:13 UTC from plain, non-hyperlinked text "enisa.europa.eu/responsible-disclosure-pgp-key.txt" to a working hyperlink)*. If you find a vulnerability in the platform, you can contact responsible-disclosure@enisa.europa.eu. *(Reworded 2026-09-21 06:14 UTC — was "If you have found a vulnerability in the platform you can contact responsible-disclosure@enisa.europa.eu.": tense changed from "have found" to "find", and a comma added after "platform". Same substance.)* More information at [enisa.europa.eu/.well-known/security.txt](https://www.enisa.europa.eu/.well-known/security.txt) *(live hyperlink as of 2026-09-11, with a stray space before the trailing full stop; this file had recorded it as plain text — not determinable from this run alone whether the link markup is new)*.
 
 *Distinct from Q30: Q30 covers reporting a product vulnerability/incident when you are not a manufacturer (routes to the national CSIRT); Q31 covers reporting a security problem in the SRP platform itself (routes to ENISA directly). No CRA obligation, deadline, or SRP data field is implicated by this question — it documents a separate contact channel.*
+
+### Q32. [NEW] What should I do if I entered the wrong manufacturer name during registration or want to remove an AR–manufacturer association? *(new question, added 2026-09-21 06:14 UTC; count 31 → 32)*
+
+If you make a mistake when entering the manufacturer name during registration, for example a spelling error, you can register the manufacturer again using the correct name. You do not need to take any further action regarding the incorrectly entered manufacturer. If the incorrectly named manufacturer is inadvertently **"Verified"** by the relevant CSIRT Designated as Coordinator (CDaC), please contact the CDaC and ask them to reject the incorrectly registered entity.
+
+If a **Primary or Secondary AR wishes to remove their association with a manufacturer**, they can do so directly if the manufacturer has already been "Verified" by the relevant CDaC. If the manufacturer has not yet been verified, the AR can either wait until verification is completed and then remove the association themselves, or contact the relevant CDaC and ask them to reject the AR–manufacturer association.
+
+For further guidance, please consult Section 4.5 "Manage Manufacturer Association" of the [CRA Single Reporting Platform – AR User Manual](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual), which explains how AR users can manage their association with a manufacturer, including removal of an AR–manufacturer association or, where applicable, removal of a Secondary AR association. A **Primary AR can remove their own association or remove a Secondary AR association** for the manufacturer, while a **Secondary AR can only remove their own association**. The AR User Manual is available here: [CRA SRP - AR User Manual.pdf](https://www.enisa.europa.eu/sites/default/files/2026-09/CRA%20SRP%20--%20AR%20User%20Manual.pdf)
+
+*Cross-referenced from Q9, whose own closing paragraph now points here instead of to the general guidance materials — see the change log. Section 4.5 of the AR User Manual PDF itself is not fetched/archived by this routine (PDF contents are out of scope, per the AR User Manual page's own scope note above); this entry cannot confirm whether that section is itself new or pre-existing in the manual.*
 
 ### Closing note (end of FAQ page)
 
