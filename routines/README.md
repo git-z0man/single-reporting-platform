@@ -18,7 +18,7 @@ for which ones an agent may update and which need a human.
 
 | Prompt file | Name in the Routines UI | Trigger ID | Schedule |
 |---|---|---|---|
-| `enisa-srp-pages-monitor.md` | **Single Reporting FAQ monitor** | `trig_015C8QiJhXwkxPkDdoMbkHeD` | `0 5 * * 1` |
+| `enisa-srp-pages-monitor.md` | **Single Reporting FAQ monitor** | `trig_015C8QiJhXwkxPkDdoMbkHeD` | `0 5 * * 1` recorded — **but it is observably running daily**, see below |
 | `commission-cra-faq-monitor.md` | **Commission CRA FAQ monitor** | `trig_012AzfKXKrPnRCEjXXYWBgY4` | `0 5 * * 1` |
 | `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `22 * * * *` |
 | `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
@@ -48,6 +48,22 @@ alone, with no long silent stretch — and reverted to `0 5 * * 1` on schedule
 on 2026-09-14, per the revert note recorded in the prompt file's header at
 the time.
 
+## The recorded weekly schedule is not what is running (noted 2026-09-21)
+
+The revert above updated these mirrored files to `0 5 * * 1`. The live cron on
+`trig_015C8QiJhXwkxPkDdoMbkHeD` was evidently never changed to match: the
+monitor has produced a check every day since, at roughly 06:10 UTC — change
+entries on 15, 17, 18, 19 and 21 September and silent heartbeat commits on the
+16th and 20th. That is neither the day nor the hour this table records.
+
+Do not "fix" this by slowing the routine down without thinking about it. Daily
+is what caught FAQ Q32 within hours of publication on 21 September, and ENISA
+has kept editing at a pace weekly cadence would badly under-sample. The honest
+options are to update this mirror to match the daily reality, or to set the
+cron to the weekly value recorded here — the first is recommended, and either
+way the two should agree. Changing the cron is a manual step in the Routines
+UI; see "Who can update which" below.
+
 Hourly was not just a cron change. Three rules had to go into the prompt
 first, or the faster beat would have been a downgrade — and all three stayed
 in the prompt after the revert, since they hold at any cadence:
@@ -64,6 +80,37 @@ in the prompt after the revert, since they hold at any cadence:
   of requests that day. Seven pages an hour, on top of the domain monitor's own
   hourly fetch of the CSIRT list, makes that likelier — and an error page
   diffed as content would corrupt the baseline.
+
+## Watching a page is not watching the PDF it links to (added 2026-09-21)
+
+The AR User Manual entered this routine's scope on 2026-09-10 as page 9 of
+eleven — meaning its **landing page** was diffed every run. The document that
+page exists to distribute was never fetched at all.
+
+On 2026-09-17 ENISA republished the PDF at the same URL with a reversed
+permission rule: the sentence saying a Secondary AR cannot see another AR's
+notifications was deleted and replaced by one saying every AR of the
+manufacturer can access and update all of them. The landing page did not
+change, so the monitor reported the manual unchanged for four consecutive
+days. The change was found by hand on 21 September, and only because someone
+went looking.
+
+What makes this worse than an ordinary miss is that the document's own change
+signals are inert: both copies are stamped "Version: 1.1", and the Document
+History table lists only "09/09/2026 v1.0 First version" in both. Size and PDF
+ModDate are the only honest evidence. So the prompt now carries section 1a:
+hash the PDF every run, compare against `ar_user_manual_pdf_sha256` in
+`enisa-srp-faq-baseline.md`'s frontmatter, and diff the extracted text when
+the hash moves.
+
+The general lesson, worth applying to any document this or another routine
+picks up: **if a tracked page's purpose is to hand out a file, the file needs
+its own checksum.** Diffing the wrapper proves nothing about the contents.
+
+Note this did not widen the routine's auto-merge scope — it still writes only
+`enisa-srp-faq-baseline.md` and `enisa-srp-glossary-baseline.md`, so `CLAUDE.md`
+needed no change. Archiving PDF copies *would* have widened it, and was
+deliberately not done.
 
 ## Two routines watch the SRP — on purpose
 

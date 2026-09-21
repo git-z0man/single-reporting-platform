@@ -117,6 +117,21 @@ Then check what actually came back, and treat a bad fetch as a bad fetch:
 
 Also walk the page navigation ("Content" subtopics list) on the main page. If a page appears there that is not in either baseline, that is itself a finding: ENISA added the Glossary and the CSIRT list this way on 2026-09-07, the PEC guidance page this way on 2026-09-08, and the AR User Manual and Terms and Conditions pages this way on 2026-09-10. Add it to the appropriate baseline and say so in the report.
 
+## 1a. The AR User Manual PDF — checksum it, do not trust its version stamp
+
+Page 9 above is the manual's **landing page**. Diffing that page tells you nothing about the PDF it links to, and the PDF is where the content actually is.
+
+Every run, additionally:
+
+1. Fetch the PDF itself (the `Download` link on `ar_user_manual_url`; as of 2026-09-21 it is `https://www.enisa.europa.eu/sites/default/files/2026-09/CRA%20SRP%20--%20AR%20User%20Manual.pdf`), with the same backoff as any other fetch.
+2. Compute its **SHA-256** and note the **HTTP `Last-Modified`** header. Compare both against `ar_user_manual_pdf_sha256` and `ar_user_manual_pdf_last_modified` in `enisa-srp-faq-baseline.md`'s frontmatter.
+3. If the hash matches, say so in one line and move on — no further work.
+4. If the hash differs, this is a change even when every visible stamp says otherwise. Extract the text (`pdftotext -layout`), diff it against the previous run's text, and report the substantive differences the way any other content change is reported. Then update both frontmatter values.
+
+**Do not use the version stamp or the Document History table to decide whether this document changed.** They do not track it. On 2026-09-17 ENISA republished the manual with a reversed AR notification-visibility rule (a permission model inverted — see `enisa-defect-report.md` G26 and B7), a retitled section, a new typo, and redactions lifted from four screenshots, while leaving the header stamp at "Version: 1.1" and the Document History table showing nothing but "09/09/2026 v1.0 First version". The file size and ModDate moved; nothing a reader would look at did. That change went unnoticed for four days precisely because this routine was watching the landing page and not the file.
+
+If `pdftotext` is unavailable in the run environment, still record the hash and report that the content diff could not be produced — a detected-but-undiffed change is a finding; a missed change is not.
+
 ## 2. The Glossary needs specific handling
 
 `enisa-srp-glossary-baseline.md` is the full-detail, field-by-field historical record of the Glossary page, kept as one table row per field (Common / AEV / SI groups) so a single changed field shows up as a single-row diff.

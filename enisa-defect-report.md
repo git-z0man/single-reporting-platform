@@ -73,6 +73,7 @@ Text quoted verbatim as it stood on 9 September.
 | A15 | Submission | Expected results, 72-hour Notification and Final Report | "…subject to **Particularly Exception** Circumstances (PEC)…" (twice) | "Particular Exceptional Circumstances" — "Exception" is not a valid form. See also C2. | **open** — three occurrences now, after the Submission page was rewritten on 9 September 22:12 UTC |
 | A16 | Submission | Pre-conditions, three occurrences | "you are **logged in into** the SRP" | "logged in to the SRP". | **open** — still three occurrences |
 | A17 | AR User Manual | §1.4 "How to Use the Manual" (p. 7) | "Section 5 presents other functionalities available on the platform, including reminders and alerts. Section 6 provides FAQs…" | There is no standalone Section 5 — reminders/alerts is §4.9, and the FAQ section's own divider page is titled "SECTION 5", not 6. | **open** — the manual's own table of contents (p. 3-4) agrees with the divider pages, not with §1.4's description |
+| A18 | AR User Manual | §4.6.2 (printed p. 33) | "Exceptions and error **hadling**:" | "handling". | **open** — a regression: the word was correct in the 9 September copy and was broken by the 17 September republication (see G26) |
 
 ---
 
@@ -158,6 +159,48 @@ Name, Email, Legal name) … are retrieved from EU Login and cannot be edited in
 the SRP". In the published screenshot of that step *(screenshot)*, First Name,
 Last Name and Email are greyed out, while **Legal name is an editable input
 field**. Either the text or the form is wrong.
+
+### B7 — Who can see another AR's notifications: two sources say one thing, one says the opposite
+
+**Status: open · opened 2026-09-21.** Until mid-September every ENISA source
+agreed that a Secondary AR could see only what they had submitted. Two of the
+three have since reversed; the third has not been touched.
+
+**The new rule** — AR User Manual §4.6.1 "Exceptions and access limitations"
+(printed p. 32), in the copy republished 2026-09-17, and FAQ Q9 as rewritten
+2026-09-18:
+
+> "Primary and Secondary ARs associated with the same manufacturer can access,
+> view, and update notifications associated with that manufacturer, regardless
+> of which AR originally submitted them. This allows another AR associated
+> with the same manufacturer to continue the reporting process, including
+> subsequent reporting stages and updates, as applicable. The only exception
+> concerns draft notifications: drafts are stored locally in the individual
+> AR's account and are therefore not visible to other ARs, including other
+> Secondary ARs associated with the same manufacturer."
+
+**The old rule**, still live verbatim on the *AR Interface functions* guidance
+page, "View the Dashboard" → Expected result, re-fetched 2026-09-21:
+
+> "A Primary AR can access all notifications associated with their
+> manufacturer, whereas a Secondary AR can only access notifications they
+> submitted and drafts they created. Secondary ARs cannot view notifications
+> submitted by another AR associated with the same manufacturer."
+
+This is not a wording difference. The two describe incompatible permission
+models, and an AR planning deputy cover for a 24-hour deadline gets opposite
+answers depending on which page they read.
+
+The manual's own FAQ (printed p. 52) said "Both Primary and Secondary ARs can
+open, review, and edit the notification(s) associated with their manufacturer"
+in *both* the 9 September and 17 September copies — so the manual was
+internally inconsistent before, and the 17 September edit resolved it in favour
+of the permissive rule rather than introducing a new position. That, plus the
+fact that ENISA mirrored the change into Q9 a day later, is why this guide
+follows the newer two. See also G26 for how the manual change was made.
+
+One point is not in dispute: drafts never leave the account that created them,
+and the Primary AR is not exempt from that.
 
 ---
 
@@ -659,12 +702,17 @@ has never covered: signing back in to an existing account, and logging out
 here is a defect in the platform; it is a gap in the guide, since a
 first-time reader following only this page has no documented way to log out.
 
+*Title note, 2026-09-21:* the 17 September republication (G26) retitled this
+section "User Login & Logout" → "**AR** User Login & Logout" in both the table
+of contents and the body, so the heading recorded here now matches the body
+text. The gap itself is unaffected.
+
 **Status: open — guide gap, not a platform defect.** Source: AR User Manual
 pp. 17-20 (PDF pages 18-21).
 
 ### G24 — What "Closed" actually means, and the rest of the status vocabulary G17 left unexplained
 
-The manual's own FAQ (p. 53-54) defines the four notification-status words
+The manual's own FAQ (printed p. 53) defines the four notification-status words
 verbatim, and nothing in this guide or in the Glossary/FAQ baselines defines
 any of them:
 
@@ -685,7 +733,7 @@ facts at once. Read on its own, G17's tab list gives no hint that "Closed"
 is a second, independent axis rather than a third outcome alongside Valid
 and Invalid.
 
-**Status: open.** Source: AR User Manual p. 53-54 (PDF pages 54-55), section 6
+**Status: open.** Source: AR User Manual printed p. 53 (PDF page 54), section 6
 FAQ.
 
 ### G25 — The role-selection landing screen dropped its hover tooltips for a footnote
@@ -714,6 +762,50 @@ known.
 
 **Status: open** (guide text updated to note the discrepancy; the original
 screenshot is kept as the historical capture, not replaced).
+
+### G26 — The AR User Manual was republished with a reversed rule, under the same version number
+
+**Status: open · found 2026-09-21.** The manual at the same unchanged URL is
+not the document this repository captured on 10 September:
+
+| | 10 September copy | current copy |
+|---|---|---|
+| Size | 3,119,968 bytes | **3,190,657 bytes** |
+| PDF ModDate | 2026-09-10 11:10:11 UTC | **2026-09-17 14:28:12 UTC** |
+| HTTP Last-Modified | — | **Thu, 17 Sep 2026 14:30:33 GMT** |
+| Header stamp | Version: 1.1 | **Version: 1.1 — unchanged** |
+| Document History (p. 1) | "09/09/2026 v1.0 First version" | **identical, still the only row** |
+| Pages | 55 | 55 |
+
+The content change is not cosmetic. §4.6.1 previously read "Secondary ARs
+cannot view notifications submitted by another AR associated with the same
+manufacturer"; it now says every AR of the manufacturer can access, view and
+update all of its notifications, drafts excepted. A permission model was
+inverted. Both quotes and the resulting cross-source conflict are in B7.
+
+Three further differences in the same republication:
+
+- **§3 retitled** "User Login & Logout" → "**AR** User Login & Logout" in
+  both the table of contents and the body, matching its divider page. G23's
+  recorded title now agrees with the body text.
+- **New typo**, §4.6.2 (printed p. 33): "Exceptions and error **hadling**"
+  (was "handling"). Recorded as A18.
+- **Redactions removed from four screenshots** (printed pp. 13, 15, 20/31,
+  41): black bars over Email, Manufacturer Name and notification
+  Title/Summary now show the test value "Test". A stray duplicate banner
+  fragment was deleted from printed p. 30. The manual screenshots reproduced
+  in this guide came from the 10 September copy and are therefore no longer
+  pixel-identical to a fresh download, though nothing they show has changed.
+
+**What this means for F11.** F11 recorded that the header stamp and the
+Document History table disagreed. This is the stronger finding: the document
+has now been materially revised twice under one version number, with no
+history row added either time. Neither the stamp nor the history table is a
+usable change signal for this document, and anyone citing the manual should
+record the date they downloaded it. This repository's own monitor did not
+catch the change for four days, because it diffs the manual's landing page and
+never the PDF — see `routines/enisa-srp-pages-monitor.md`, where a checksum
+step has since been added.
 
 ### G5 — Confirmed, not defects
 
