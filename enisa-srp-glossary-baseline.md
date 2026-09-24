@@ -3,7 +3,7 @@ source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
 page_version: "1.3 (page footer: last update 10/09/2026)"
-retrieved: 2026-09-19 (fetched 06:09 UTC, unchanged since 2026-09-17 09:00 UTC — see check log)
+retrieved: 2026-09-24 (fetched 06:10 UTC, unchanged since 2026-09-17 09:00 UTC — see check log)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -26,7 +26,7 @@ status: >-
   (1.2 → 1.3) and this time the correlation was large: 38 fields → 39, a new AEV
   field inserted as v23 cascading every later field's number up by one, and roughly
   a dozen wording/status fixes across the page. See the change log.
-last_check: 2026-09-23
+last_check: 2026-09-24
 last_change: 2026-09-17
 note: >-
   One row per field, one table per group (Common / AEV / SI), matching the live page's own
@@ -451,3 +451,4 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 - 2026-09-11 (10:09 UTC): page fetched at `cra-srp-glossary2`, HTTP 200, alongside all nine other tracked SRP pages in the same run (none of which changed this time — see `enisa-srp-faq-baseline.md`). One real, punctuation-only change on the Glossary itself: field v23's "How to complete" text lost its trailing full stop after "(max. 2000 characters)". All other 38 rows re-verified row by row against the raw table structure, footer still "Version 1.3. Last update: 10 September 2026". `retrieved`, `last_check`, and `last_change` all updated to 2026-09-11.
 - 2026-09-14 (03:15 UTC): first check of the day. Page fetched at `cra-srp-glossary2`, HTTP 200, alongside all ten other tracked SRP pages in the same run — three of the four guidance subpages were restructured this time (see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 39 fields re-verified row by row against the raw table structure (including the rowspan-split PEC Delay Reason Example cell), footer still "Version 1.3. Last update: 10 September 2026". `retrieved` and `last_check` updated to 2026-09-14; `last_change` left at 2026-09-12 since nothing on this page changed.
 - 2026-09-19 (06:09 UTC): first check of the day. Page fetched at `cra-srp-glossary2`, HTTP 200 — this page's own address is unaffected by today's main-page/FAQ move (see `enisa-srp-faq-baseline.md`), still `.../topics/product-security/single-reporting-platform-srp/cra-srp-glossary2`, not the new taxonomy path those two pages moved to. All 39 fields re-verified row by row against the raw table structure, footer still "Version 1.3. Last update: 10 September 2026". `retrieved` and `last_check` updated to 2026-09-19; `last_change` left at 2026-09-17 since nothing on this page changed.
+- 2026-09-24 (06:10 UTC): first check of the day. Page fetched at `cra-srp-glossary2`, HTTP 200, alongside all ten other tracked SRP pages in the same run — the FAQ page changed this time, a tag sweep across five questions plus Q29's title gaining "CRA" (see `enisa-srp-faq-baseline.md`). The Glossary itself was unaffected: all 39 fields re-verified row by row against the raw table structure (field 10's `cryptoprocessing&nbsp; devices` gap, v27's doubled full stop, v30's missing space in "(CDaC)taking", and the other tracked defects all confirmed present), footer still "Version 1.3. Last update: 10 September 2026". `retrieved` and `last_check` updated to 2026-09-24; `last_change` left at 2026-09-17 since nothing on this page changed.
