@@ -14,19 +14,19 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-24 (fetched 06:10 UTC; content changed since 2026-09-23 — five [UPDATED] tags swept off the FAQ page and Q29's title gained "CRA", see change log)
-guidance_retrieved: 2026-09-24 (fetched 06:10 UTC, all four guidance subpages unchanged word-for-word since 2026-09-19)
-glossary_retrieved: 2026-09-24 (fetched 06:10 UTC, unchanged since 2026-09-17 09:00 UTC — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-09-24 (fetched 06:10 UTC, unchanged since 17:11 UTC on 2026-09-12)
-ar_user_manual_retrieved: 2026-09-24 (fetched 06:10 UTC, unchanged since 2026-09-17)
+retrieved: 2026-09-26 (fetched 06:13 UTC; content changed since 2026-09-24 — Q28's wording caught up to present tense, see change log)
+guidance_retrieved: 2026-09-26 (fetched 06:13 UTC, all four guidance subpages unchanged word-for-word since 2026-09-19)
+glossary_retrieved: 2026-09-26 (fetched 06:13 UTC, changed since 2026-09-17 09:00 UTC — new AEV field v26a, see `enisa-srp-glossary-baseline.md`)
+csirt_list_retrieved: 2026-09-26 (fetched 06:13 UTC, unchanged since 17:11 UTC on 2026-09-12)
+ar_user_manual_retrieved: 2026-09-26 (fetched 06:13 UTC, unchanged since 2026-09-17)
 ar_user_manual_pdf_sha256: e2afc96031eceff4bebd9790256183e4ce6b835d9a1c44f9864e4f3995998f86 (the PDF itself, not the landing page; unchanged since 2026-09-21 — hash, size (3,190,657 bytes) and Last-Modified all match. The copy captured 2026-09-10 was 3,119,968 bytes and reversed the AR notification-visibility rule — see `enisa-defect-report.md` G26. Both are stamped "Version: 1.1" with an unchanged Document History table, so **this hash is the only reliable change signal for this document**.)
 ar_user_manual_pdf_last_modified: Thu, 17 Sep 2026 14:30:33 GMT
-terms_conditions_retrieved: 2026-09-24 (fetched 06:10 UTC, unchanged since 2026-09-17)
-ar_user_tutorial_video_retrieved: 2026-09-24 (fetched 06:10 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
+terms_conditions_retrieved: 2026-09-26 (fetched 06:13 UTC, unchanged since 2026-09-17)
+ar_user_tutorial_video_retrieved: 2026-09-26 (fetched 06:13 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-09-25
-last_change: 2026-09-24
+last_check: 2026-09-26
+last_change: 2026-09-26
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
@@ -34,6 +34,22 @@ last_change: 2026-09-24
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-09-26 06:13 UTC (vs. 2026-09-24 06:10 UTC)
+
+Two small items, one on the FAQ and one on the Glossary (see `enisa-srp-glossary-baseline.md` for its own full entry): Q28 finally caught up to present tense two weeks after go-live, and the Glossary's AEV table gained a new field. 2026-09-25 was a silent heartbeat (no change, `last_check` bumped only).
+
+**Changed**
+- **Q28 wording caught up to present tense**: "The SRP will be available at [https://portal.cra-srp.enisa.europa.eu](...)." → "The SRP is available at: [https://portal.cra-srp.enisa.europa.eu](...)." — future tense to present, and a colon added after "at". The closing bolded sentence, "**The portal will be available from 11 September 2026.**", is gone entirely — both changes are overdue cleanup now that the 11 September go-live is two weeks past, not a new commitment or obligation. No other wording on this question changed.
+
+**New**
+- **Glossary AEV field v26a added**: "Date and time when the Actively Exploited Vulnerability occurred (UTC time)", required at the 72-hour stage — see `enisa-srp-glossary-baseline.md` for the full entry and the "CRA SRP Glossary" section below for the updated summary.
+
+**Editorial**
+One "occured" typo on the new Glossary field, tracked in the full-detail baseline rather than here.
+
+**Unchanged**
+FAQ's other 31 questions word-for-word, including tags (Q9 [UPDATED], Q32 [NEW]); Content navigation still 9 entries; all four guidance subpages byte for byte; CSIRT list (27 countries, same links, "Last updated: 10 September 2026"); AR User Manual page and PDF (hash `e2afc960…`), Terms and Conditions, and AR User Tutorial Video (same iframe `tFTcnj2zTHEgHq1vryGNmH`) byte for byte; Glossary's other 39 fields — see `enisa-srp-glossary-baseline.md`.
 
 ### 2026-09-24 06:10 UTC (vs. 2026-09-23 06:10 UTC)
 
@@ -1406,13 +1422,13 @@ The corresponding reporting obligations for open-source software stewards, set o
 
 The platform will be enhanced at a later stage to support voluntary reporting under Art.15.
 
-### Q28. How do I connect to the CRA Single Reporting Platform? *(lost its "[NEW]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above)*
+### Q28. How do I connect to the CRA Single Reporting Platform? *(rewritten to present tense 2026-09-26 — see below; lost its "[NEW]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above)*
 
-The SRP will be available at [https://portal.cra-srp.enisa.europa.eu](https://portal.cra-srp.enisa.europa.eu). &nbsp; *(gained a trailing space plus nbsp after the period, 2026-09-17 09:00 UTC; no wording change.)*
+The SRP is available at: [https://portal.cra-srp.enisa.europa.eu](https://portal.cra-srp.enisa.europa.eu). &nbsp; *(Changed 2026-09-26 — was "The SRP will be available at [...]." with no colon; now present tense with a colon after "at". Overdue: go-live was 11 September 2026, two weeks before this run caught the tense change.)*
 
 From there, select "Assigned Representative" and log in using your EU Login account.
 
-**The portal will be available from 11 September 2026.** *(whole sentence bolded 2026-09-13 23:15 UTC; no wording change.)*
+*(The closing bolded sentence, "**The portal will be available from 11 September 2026.**", tracked here since 2026-09-13 23:15 UTC, is gone as of 2026-09-26 — removed rather than reworded, consistent with the tense change above.)*
 
 ### Q29. When did the CRA reporting obligations start? *(retitled again 2026-09-24 06:10 UTC — gained "CRA" before "reporting obligations"; body text unchanged. Also lost its "[UPDATED]" tag the same run, with no wording change — the third tag sweep since go-live. Previously retitled and re-tagged 2026-09-12 13:10 UTC — "do" → "did", tense only; had lost its "[NEW]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above)*
 
@@ -1493,7 +1509,7 @@ Video: embedded via a PeerTube `<iframe>`, `src="https://videos.enisa.europa.eu/
 
 ## CRA SRP Glossary (new page, `glossary_url`)
 
-Version 1.3, last update: 10 September 2026 *(bumped 2026-09-10 13:11 UTC from "1.2, last update: 09/09/2026" — by far the largest correlated change since first capture: a new field inserted (38 → 39) and roughly a dozen fields reworded or restatused — see the change log in `enisa-srp-glossary-baseline.md`)*. The authoritative field-by-field reference for the reporting template: for each field it gives the meaning, how to complete it, a worked example, the expected format, and its per-stage status (Early Warning 24h / 72h / Final Report). Its own field numbering differs from the FAQ's Q16 table — it does not itemize the 5 automated/system common fields (Notification level, the three Reporting-time fields, Reporter) that Q16 lists explicitly, so its common-field numbering runs 1–18 instead of 1–23; the AEV and SI fields (same substance as Q16's v24–v35 and i36–i44) are renumbered v19–v30 and i31–i39 respectively.
+Version 1.3, last update: 25 September 2026 *(date bumped 2026-09-26 from "10 September 2026" — version number unchanged — correlating with the new v26a field below; the previous move was 2026-09-10 13:11 UTC, "1.2, last update: 09/09/2026" → "1.3, last update: 10 September 2026", by far the largest correlated change since first capture at that point — see the change log in `enisa-srp-glossary-baseline.md`)*. The authoritative field-by-field reference for the reporting template: for each field it gives the meaning, how to complete it, a worked example, the expected format, and its per-stage status (Early Warning 24h / 72h / Final Report). Its own field numbering differs from the FAQ's Q16 table — it does not itemize the 5 automated/system common fields (Notification level, the three Reporting-time fields, Reporter) that Q16 lists explicitly, so its common-field numbering runs 1–18 instead of 1–23; the AEV and SI fields (same substance as Q16's v24–v35 and i36–i44) are renumbered v19–v30 (plus v26a, since 2026-09-26) and i31–i39 respectively.
 
 **Scope note**: only field names, applies-to (Both/AEV/SI), and per-stage status are captured below, not the full descriptive text (meaning/how-to-complete/example/format) for each field — that level of detail lives in the dedicated **`enisa-srp-glossary-baseline.md`** file (added 2026-09-07, when the live Glossary page began returning HTTP 403 on its original path — it had moved, see `glossary_url`), which is the full-detail historical record and the one to diff against for wording-level changes. A future check should re-verify field names, counts, and statuses against this list, and flag if the page's own numbering or the field set changes.
 
@@ -1501,7 +1517,7 @@ Version 1.3, last update: 10 September 2026 *(bumped 2026-09-10 13:11 UTC from "
 
 Common fields (1–18, "Both" AEV/SI): 1 Notification type, 2 Title, 3 Summary, 4 Manufacturer name, 5 Member States where product available (Concerned CSIRT), 6 Product Name, 7 Product Version, 8 Product Type (Default/Important Product with Digital Elements/Critical Product with Digital Elements) *(names expanded 2026-09-10 13:11 UTC, was "(Default/Important/Critical)")*, 9 Product class *(lowercase since 2026-09-10 13:11 UTC, was "Product Class")*, 10 Product category *(lowercase since 2026-09-10 13:11 UTC, was "Product Category")*, 11 End of support indicator *(Meaning rewritten 2026-09-10 13:11 UTC, fixing the long-tracked contradiction — see the Glossary baseline)*, 12 Component name, 13 Mitigating measure expected shortly *(lost its "Unknown" selectable option 2026-09-10 13:11 UTC)*, 14 User Action able to reduce impact, 15 Considered sensitivity of information, 16 Corrective or mitigating measures taken, 17 Corrective or mitigating measures that users can take, 18 Attack vector.
 
-AEV fields (v19–v30, was v19–v29): v19 CVE ID, v20 EUVD ID, v21 General information, v22 Date when corrective or mitigating measure has been available, **v23 Details about the security update/corrective measure available** *(new field, since 2026-09-10 13:11 UTC — no Q16 counterpart yet)*, v24 Full description of the Severity of the vulnerability *(was v23 before this run's renumbering)*, v25 Full description of the Impact of the vulnerability *(was v24)*, v26 Date and time when you become aware of the Actively Exploited Vulnerability [1] *(was v25)*, v27 Malicious actor that has exploited/is exploiting the vulnerability *(was v26)*, v28 Particular Exceptional Circumstances (PEC) *(was v27)*, v29 PEC Delay Reason *(was v28; Meaning fixed to "at least one of the three", resolving the tracked "one"/"at least one" inconsistency)*, v30 Please provide further information *(was v29; how-to-complete gained a "max. 800 characters" limit)*.
+AEV fields (v19–v30 plus v26a, was v19–v29): v19 CVE ID, v20 EUVD ID, v21 General information, v22 Date when corrective or mitigating measure has been available, **v23 Details about the security update/corrective measure available** *(new field, since 2026-09-10 13:11 UTC — no Q16 counterpart yet)*, v24 Full description of the Severity of the vulnerability *(was v23 before this run's renumbering)*, v25 Full description of the Impact of the vulnerability *(was v24)*, v26 Date and time when you become aware of the Actively Exploited Vulnerability [1] *(was v25)*, **v26a Date and time when the Actively Exploited Vulnerability occurred (UTC time)** *(new field, since 2026-09-26 — inserted between v26 and v27 without renumbering either; required at 72h; carries an "occured" typo — see `enisa-srp-glossary-baseline.md`)*, v27 Malicious actor that has exploited/is exploiting the vulnerability *(was v26)*, v28 Particular Exceptional Circumstances (PEC) *(was v27)*, v29 PEC Delay Reason *(was v28; Meaning fixed to "at least one of the three", resolving the tracked "one"/"at least one" inconsistency)*, v30 Please provide further information *(was v29; how-to-complete gained a "max. 800 characters" limit)*.
 
 SI fields (i31–i39, was i30–i38): i31 Incident is suspected of unlawful or malicious acts *(was i30)*, i32 General information, about the nature of the incident *(was i31, gained a comma)*, i33 Applied and ongoing mitigation measures *(was i32; Meaning fixed from "or" to "and", now matching the field name)*, i34 Detailed description of the Severity of the incident *(was i33)*, i35 Detailed description of the Impact of the incident *(was i34)*, i36 Type of Threat or root cause that is likely to have triggered incident *(was i35)*, i37 Date and time when you become aware of the incident (UTC time) [2] *(was i36; broken grammar fixed — see the Glossary baseline; 72h status now "Required", was "copied-or-updated")*, i38 Date and time when the incident occurred (UTC time) *(was i37; broken grammar fixed; 72h status now "Required", was "Optional")*, i39 Initial assessment of the incident *(was i38)*.
 
