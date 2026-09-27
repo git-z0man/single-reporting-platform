@@ -9,7 +9,7 @@ expected_go_live: 2026-09-11
 retrieved: 2026-09-06
 purpose: Reachability baseline for the SRP production environment. The routine re-checks all 29 hosts, records the first successful HTTP response per host, detects new hosts appearing in the zone, and verifies the assumed country-to-CSIRT mapping once the platform answers.
 note: Only an HTTP status code relayed from upstream counts as live. TCP and TLS are recorded but are forged by an intercepting egress proxy in the monitoring environment — see "Why a TLS handshake is not evidence" below.
-last_check: 2026-09-26
+last_check: 2026-09-27
 last_change: 2026-09-11
 ---
 
@@ -30,7 +30,7 @@ is the baseline that the reachability routine updates when that changes.
 | Edge | 45-address WEDOS pool `185.8.236.33`–`185.8.236.77` (WEDOS Global, CZ) |
 | State | **LIVE** — public launch confirmed 2026-09-11 |
 | Expected go-live | **reached** — 11 September 2026, 11:24:01 UTC |
-| Last check | 2026-09-26 |
+| Last check | 2026-09-27 |
 | Last change | 2026-09-11 — **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
@@ -89,6 +89,11 @@ exceptions or cross-wiring found — and every one of the 27 requests
 shared Keycloak identity broker, per-country separation expressed only as
 per-country OAuth client registrations and Host-header routing — not as
 separate backend deployments per Member State.
+
+**2026-09-27** — spot-check on `de`/`fr` found the callback's ReplicaSet hash
+now `srp-ui-6fd6bcbc49` (was `srp-ui-ddb75f59b`): an ordinary redeployment,
+not an incident. Realm, `client_id=srp-ar-fe-<cc>`, and `kc_idp_hint=eu-login`
+all unchanged.
 
 > **Verification status.** The zone delegation (Azure DNS, four nameservers)
 > and the edge pool were independently confirmed via bgp.tools on 2026-09-11
