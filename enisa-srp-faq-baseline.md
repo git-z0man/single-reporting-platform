@@ -14,19 +14,19 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-09-30 (fetched 06:06 UTC; content changed since 2026-09-28 — new maintenance notice on the main page, see change log)
-guidance_retrieved: 2026-09-28 (fetched 06:26 UTC, all four guidance subpages unchanged word-for-word since 2026-09-19)
-glossary_retrieved: 2026-09-28 (fetched 06:26 UTC, unchanged since 2026-09-26 — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-09-28 (fetched 06:26 UTC, unchanged since 17:11 UTC on 2026-09-12)
-ar_user_manual_retrieved: 2026-09-28 (fetched 06:26 UTC, unchanged since 2026-09-17)
+retrieved: 2026-10-01 (fetched 06:15 UTC; content changed since 2026-09-30 — new FAQ Q33, page stamp moved to 30 September 2026, see change log)
+guidance_retrieved: 2026-10-01 (fetched 06:15 UTC, all four guidance subpages unchanged word-for-word since 2026-09-19)
+glossary_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 2026-09-26 — see `enisa-srp-glossary-baseline.md`)
+csirt_list_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 17:11 UTC on 2026-09-12)
+ar_user_manual_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 2026-09-17)
 ar_user_manual_pdf_sha256: e2afc96031eceff4bebd9790256183e4ce6b835d9a1c44f9864e4f3995998f86 (the PDF itself, not the landing page; unchanged since 2026-09-21 — hash, size (3,190,657 bytes) and Last-Modified all match. The copy captured 2026-09-10 was 3,119,968 bytes and reversed the AR notification-visibility rule — see `enisa-defect-report.md` G26. Both are stamped "Version: 1.1" with an unchanged Document History table, so **this hash is the only reliable change signal for this document**.)
 ar_user_manual_pdf_last_modified: Thu, 17 Sep 2026 14:30:33 GMT
-terms_conditions_retrieved: 2026-09-28 (fetched 06:26 UTC, unchanged since 2026-09-17)
-ar_user_tutorial_video_retrieved: 2026-09-28 (fetched 06:26 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
+terms_conditions_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 2026-09-17)
+ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-09-30
-last_change: 2026-09-30
+last_check: 2026-10-01
+last_change: 2026-10-01
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
@@ -34,6 +34,23 @@ last_change: 2026-09-30
 ## Change log
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
+
+### 2026-10-01 06:15 UTC (vs. 2026-09-30 06:06 UTC)
+
+The FAQ gained a 33rd question on rejected AR association requests, and its page-level stamp moved from 17 to 30 September 2026. Nothing else changed on the eleven tracked pages.
+
+**New**
+- **FAQ Q33** (tagged "[NEW]"), count 32 → 33: "I received an email "Your AR association request with a manufacturer has been rejected by the Designated CSIRT". What should I do?" Answer: "The CSIRTs designated as coordinators verify the ARs, ENISA is not intervening in this process. You can find the list of contacts of these CSIRTs on our website." Full text in the FAQ entries below.
+
+**Changed**
+- FAQ page stamp "Updated: 17 September 2026" → "Updated: 30 September 2026". The stamp moved with a content change this time, but the other 32 questions showed no wording difference.
+
+**Watch**
+- Q33's answer points to "the list of contacts of these CSIRTs on our website" without linking it (the CSIRT-list page is unchanged). Q33 itself says "Designated CSIRT" where ENISA elsewhere says "CSIRT Designated as Coordinator".
+- The 30 September maintenance notice on the main page is still there after the window; a later run should record its removal.
+
+**Unchanged**
+Main page otherwise; all four guidance subpages ("12 September 2026" ×3, PEC "09 September 2026"); CSIRT list (27 countries, "Last updated: 10 September 2026"); AR User Manual page and PDF (hash `e2afc960…`, 3,190,657 bytes), Terms and Conditions, Tutorial Video; Glossary (v1.3, last update 25 September 2026).
 
 ### 2026-09-30 06:06 UTC (vs. 2026-09-28 06:26 UTC)
 
@@ -1179,7 +1196,7 @@ Groups four resource cards *(three until 2026-09-11 15:10 UTC)*: the Factsheet (
 
 ## FAQ entries
 
-Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 17 September 2026" *(moved from "12 September 2026" 2026-09-18 06:12 UTC, this time correlating with the Q9 rewrite below — see the change log; before that, moved from "11 September 2026" 2026-09-12 13:10 UTC alongside the Q4/Q7/Q17/Q22/Q29 wording changes; wrapped in `<em>` since 2026-09-14 04:13 UTC, no wording change)*. Intro text on the FAQ page: "All you need to know about the CRA Single Reporting Platform" (subtitle) — "This page provides answers to frequently asked questions about the Cyber Resilience Act Single Reporting Platform (CRA SRP), including its purpose, reporting process, registration and use. The FAQs are updated regularly to reflect the latest available information and guidance as the CRA SRP is implemented. For broader guidance on the interpretation and implementation of the CRA, please also consult the European Commission's "FAQs on the CRA Implementation"." *(Watch, 2026-09-14 10:19 UTC: the raw HTML actually splits this into two `<p>` tags, uses curly quotes/apostrophe ("Commission's "FAQs...""), and carries three `&nbsp;` artifacts not reproduced above — before "The FAQs", after "is implemented.", and after the closing quote mark. This sentence has never been checked at Q1–Q31's character-level precision before, so it cannot be said whether any of this is new today or simply unrecorded until now; flagged for the record, not counted as a change.)*
+Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 30 September 2026" *(moved from "17 September 2026" 2026-10-01 06:15 UTC, with the new Q33)* — earlier: "Updated: 17 September 2026" *(moved from "12 September 2026" 2026-09-18 06:12 UTC, this time correlating with the Q9 rewrite below — see the change log; before that, moved from "11 September 2026" 2026-09-12 13:10 UTC alongside the Q4/Q7/Q17/Q22/Q29 wording changes; wrapped in `<em>` since 2026-09-14 04:13 UTC, no wording change)*. Intro text on the FAQ page: "All you need to know about the CRA Single Reporting Platform" (subtitle) — "This page provides answers to frequently asked questions about the Cyber Resilience Act Single Reporting Platform (CRA SRP), including its purpose, reporting process, registration and use. The FAQs are updated regularly to reflect the latest available information and guidance as the CRA SRP is implemented. For broader guidance on the interpretation and implementation of the CRA, please also consult the European Commission's "FAQs on the CRA Implementation"." *(Watch, 2026-09-14 10:19 UTC: the raw HTML actually splits this into two `<p>` tags, uses curly quotes/apostrophe ("Commission's "FAQs...""), and carries three `&nbsp;` artifacts not reproduced above — before "The FAQs", after "is implemented.", and after the closing quote mark. This sentence has never been checked at Q1–Q31's character-level precision before, so it cannot be said whether any of this is new today or simply unrecorded until now; flagged for the record, not counted as a change.)*
 
 32 entries (31 → 32 on 2026-09-21 06:14 UTC, new Q32 — see the change log). Tags have moved four times since go-live: **2026-09-11 13:17 UTC** swept "[UPDATED]"/"[NEW]" off Q9, Q18, Q22, Q27, Q28, Q29, Q30 and Q31 (the same way Q8 lost its tag on 2026-09-09), leaving only the newly-tagged Q14; **2026-09-12 13:10 UTC** then tagged Q4, Q7, Q17, Q22 and Q29 [UPDATED] (each with a real wording or title change, see the change log) while Q14 lost its tag with no wording change; **2026-09-18 06:12 UTC** re-tagged Q9 [UPDATED], this time with a real, substantive wording change (see the change log); **2026-09-24 06:10 UTC** swept "[UPDATED]" back off Q4, Q7, Q17, Q22 and Q29, leaving only Q9 [UPDATED] and Q32 [NEW] tagged — Q29's title changed in the same run (gained "CRA"), the other four with no wording change. Read tag movement as a prompt to diff, not a content signal on its own — it has moved without content changing at least as often as it has moved with it. The per-question tags are recorded in each heading below where present.
 
@@ -1480,6 +1497,10 @@ If a **Primary or Secondary AR wishes to remove their association with a manufac
 For further guidance, please consult Section 4.5 "Manage Manufacturer Association" of the [**CRA Single Reporting Platform – AR User Manual**](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual), which explains how AR users can manage their association with a manufacturer, including removal of an AR–manufacturer association or, where applicable, removal of a Secondary AR association. A **Primary AR** **can remove their own association or remove a Secondary AR association** for the manufacturer, while a **Secondary AR can only remove their own association**. The AR User Manual is available here: [CRA SRP - AR User Manual.pdf](https://www.enisa.europa.eu/sites/default/files/2026-09/CRA%20SRP%20--%20AR%20User%20Manual.pdf) *(markup-only pass 2026-09-28 06:26 UTC: the AR User Manual link text is now itself bold; two new empty `<strong> </strong>` tags appeared around "of the" just before it (not reproduced above, invisible in rendering); and "Primary AR can remove their own association or remove a Secondary AR association" split into two separate `<strong>` spans, "Primary AR"/"can remove...association" — the same split-bold pattern already seen elsewhere in this file's history (Q4's "reporting"/"obligations", Q7's "actively exploited"/"vulnerabilities"). No wording changed.)*
 
 *Cross-referenced from Q9, whose own closing paragraph now points here instead of to the general guidance materials — see the change log. Section 4.5 of the AR User Manual PDF itself is not fetched/archived by this routine (PDF contents are out of scope, per the AR User Manual page's own scope note above); this entry cannot confirm whether that section is itself new or pre-existing in the manual.*
+
+### Q33. [NEW] I received an email “Your AR association request with a manufacturer has been rejected by the Designated CSIRT”. What should I do? *(new question, added 2026-10-01 06:15 UTC; count 32 → 33)*
+
+The CSIRTs designated as coordinators verify the ARs, ENISA is not intervening in this process. You can find the list of contacts of these CSIRTs on our website.
 
 ### Closing note (end of FAQ page)
 
