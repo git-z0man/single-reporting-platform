@@ -2,8 +2,8 @@
 source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
-page_version: "1.3 (page footer: last update 25 September 2026, moved from 10 September 2026 on 2026-09-26 — version number itself unchanged)"
-retrieved: 2026-09-26 (fetched 06:13 UTC, changed since 2026-09-17 09:00 UTC — new AEV field v26a, see check log)
+page_version: "1.4 (page footer: Version 1.4, last update 01 October 2026 — version number moved 1.3 → 1.4 on 2026-10-02 check; was 1.3 / 25 September 2026)"
+retrieved: 2026-10-02 (fetched UTC morning run, changed since 2026-09-26 — two new fields 40/41, v28 conditions listed, version 1.4; see change log)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -26,8 +26,8 @@ status: >-
   (1.2 → 1.3) and this time the correlation was large: 38 fields → 39, a new AEV
   field inserted as v23 cascading every later field's number up by one, and roughly
   a dozen wording/status fixes across the page. See the change log.
-last_check: 2026-10-01
-last_change: 2026-09-26
+last_check: 2026-10-02
+last_change: 2026-10-02
 note: >-
   One row per field, one table per group (Common / AEV / SI), matching the live page's own
   column order — Nr. | Field | Applies to | Meaning | How to complete | Example | Format |
@@ -41,6 +41,23 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-10-02 06:07 UTC (vs. 2026-09-26 06:13 UTC)
+
+Glossary moved to Version 1.4 (last update 01 October 2026) and gained two free-text note fields; the PEC row now lists the three legal conditions. Page still HTTP 200 at `cra-srp-glossary2`.
+
+**New**
+- **Field 40, AR Note** and **field 41, CSIRT Note** (both applies to "Both", Free text, Optional in all three stages): appended after i39, numbered 40/41 rather than continuing the Common/AEV/SI scheme. Field count 40 → 42. Rows in the SI table below; verbatim wording there.
+
+**Changed**
+- **v28 PEC, How to complete**: the sentence now ends in a colon and is followed by the three Art. 16(2) conditions a) to c) (confined to the coordinating CSIRT's Member State; national security/defence; imminent high cybersecurity risk). Previously a full stop and no list.
+- **Footer**: "Version 1.4. Last update: 01 October 2026" (was 1.3 / 25 September 2026).
+
+**Watch**
+- Field 41's "How to complete" has no closing full stop; fields 40/41 break the group numbering.
+
+**Unchanged**
+Other 40 fields and both footnotes (checked sentence by sentence against this file).
 
 ### 2026-09-26 06:13 UTC (vs. 2026-09-17 09:00 UTC)
 
@@ -402,7 +419,7 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 | v26 | Date and time when you become aware of the Actively Exploited Vulnerability [1] *(was "v25", "Date/time"; renumbered and reworded since 2026-09-10 13:11 UTC)* | AEV | Date and time when the manufacturer or another relevant party first detected the vulnerability. | For example, enter the date and time when the vulnerability was first detected. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description. | 2026-08-24 09:15 UTC | Date and time | Required | By default copied from previous step, or updated | By default copied from previous step, or updated |
 | v26a | Date and time when the Actively Exploited Vulnerability occurred (UTC time) *(new field, inserted between v26 and v27 2026-09-26, without renumbering either — mirrors the SI table's i38)* | AEV | Known or estimated date and time when the actively exploited vulnerability occured. *("occured" typo on the live page, reproduced verbatim — missing the second "r")* | For example, enter the date and time since when the vulnerability exists. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description. | 2026-08-24 09:15 UTC | Date and time | Optional | Required | By default copied from previous step, or updated |
 | v27 | Malicious actor that has exploited/is exploiting the vulnerability *(was "v26"; renumbering only, since 2026-09-10 13:11 UTC)* | AEV | Available information about the actor that exploited or is exploiting the vulnerability, without requiring attribution where information is unavailable. | You may enter confirmed information about the malicious actor or observed activity. If attribution is unconfirmed, describe the observed indicators and state that attribution is unknown (max. 100 characters).. | Unknown actor; observed infrastructure includes the indicators listed in Reference REF-2026-18. | Free text | Optional | Optional | Required if such information available |
-| v28 | Particular Exceptional Circumstances (PEC) *(was "v27"; renumbering only, since 2026-09-10 13:11 UTC)* | AEV | Selection indicating that one or more legally specified circumstances in the third subparagraph of Article 16 (2) of CRA justify withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination. | You may select the applicable exceptional circumstance only when the corresponding legal condition is met. | *(empty since 2026-09-12 05:12 UTC; was "—")* | Select applicable PEC option(s) | N/A | Optional | N/A |
+| v28 | Particular Exceptional Circumstances (PEC) *(was "v27"; renumbering only, since 2026-09-10 13:11 UTC)* | AEV | Selection indicating that one or more legally specified circumstances in the third subparagraph of Article 16 (2) of CRA justify withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination. | You may select the applicable exceptional circumstance only when the corresponding legal condition is met: *(colon, not full stop, and a three-item list added 2026-10-02)*<br>a) The vulnerability is actively exploited but confined to the coordinating CSIRT's Member State.<br>b) Further dissemination would compromise essential national security or defence interests.<br>c) Further dissemination poses an imminent high cybersecurity risk that cannot yet be mitigated. | *(empty since 2026-09-12 05:12 UTC; was "—")* | Select applicable PEC option(s) | N/A | Optional | N/A |
 | v29 | PEC Delay Reason *(was "v28"; renumbering since 2026-09-10 13:11 UTC)* | AEV | You may select at least one of the three legally specified circumstances justifying withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination. *(Meaning fixed 2026-09-10 13:11 UTC; was "one of the three of the" — now matches this row's own How-to-complete, resolving the tracked inconsistency)* | Support the selection with specific facts in PEC Delay Reason and indicate the requested dissemination delay. You may select at least one of the three options. | You may choose: the notified vulnerability has been actively exploited by a malicious actor and, according to the information available, it has been exploited in no other Member State than the one of the CSIRT designated as coordinator to which the manufacturer has notified the vulnerability; or<br>that any immediate further dissemination of the notified vulnerability would likely result in the supply of information the disclosure of which would be contrary to the essential interests of that Member State; or<br>that the notified vulnerability poses an imminent high cybersecurity risk stemming from the further dissemination; | Select applicable check box | N/A | Optional | N/A |
 | v30 | Please provide further information *(was "v29"; renumbering since 2026-09-10 13:11 UTC)* | AEV | Description of anything that should be helpful for CSIRT Designated as Coordinator (CDaC)taking *(missing space on the live page, since 2026-09-07)* their decision. | You may provide additional information (max. 800 characters). *(character limit added 2026-09-10 13:11 UTC; was "You may provide additional information(s)." with no stated limit)* | We consider it very important for national security. | Free text | Optional | Optional | By default copied from previous step, or updated |
 
@@ -419,6 +436,8 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 | i37 | Date and time when you become aware of the incident (UTC time) [2] *(was "i36", "Date/time when you become aware..."; renumbered and reworded since 2026-09-10 13:11 UTC)* | SI | Date and time when the manufacturer or another relevant entity becomes aware of the incident. *(broken grammar fixed 2026-09-10 13:11 UTC; was "another relevant become aware")* | For example, enter the date and time you became aware of the incident. *(tense fixed 2026-09-10 13:11 UTC; was "you become aware")* If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description. | 2026-08-24 09:15 UTC | Date and time | Required | Required *(was "copied-or-updated" until 2026-09-10 13:11 UTC)* | By default copied from previous step, or updated |
 | i38 | Date and time when the incident occurred (UTC time) *(was "i37", "Date/time when the incident occurred"; renumbered and reworded since 2026-09-10 13:11 UTC)* | SI | Known or estimated date and time when the incident began or took place. | For example, enter the date and time when the incident began or occurred. *(broken grammar fixed 2026-09-10 13:11 UTC; was "the incident was began or occurred")* If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description. | 2026-08-24 09:15 UTC | Date and time | Optional | Required *(was "Optional" until 2026-09-10 13:11 UTC)* | Optional |
 | i39 | Initial assessment of the incident *(was "i38"; renumbering only, since 2026-09-10 13:11 UTC)* | SI | Preliminary analysis of the incident's severity, scope, likely impact, affected functions or data, and immediate implications. | For example, provide the preliminary assessment of severity, scope, affected security properties, products or users, and likely impact. Clearly distinguish confirmed findings from matters still under investigation (max. 4000 characters). | Confirmed impact is limited to integrity of configuration data on three product instances; broader exposure remains under investigation. | Structured narrative | Optional | Required | By default copied from previous step, or updated |
+| 40 *(new 2026-10-02; numbered 40, not in the Common/AEV/SI numbering scheme, appended after i39 in the live table)* | AR Note | Both | Free-text note entered by the authorised representative to supplement the notification outside the structured report fields. | Enter supplementary information from the authorised representative that does not fit another field. Use the relevant structured field whenever one is available. | The manufacturer will provide the remaining forensic evidence through the secure channel. | Free text | Optional | Optional | Optional |
+| 41 *(new 2026-10-02; same placement as 40)* | CSIRT Note | Both | Free-text note entered by the designated CSIRT for review, coordination, or case-management purposes. | Enter information needed by CSIRT users for coordination, validation, dissemination, or case handling. Keep the note factual and avoid duplicating data already captured in structured fields *(no closing full stop on the live page)* | Product distribution information confirmed with the reporting party. | Free text | Optional | Optional | Optional |
 
 ## Footnotes (from the live page)
 
