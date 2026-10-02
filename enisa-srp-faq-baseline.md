@@ -16,7 +16,7 @@ terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
 retrieved: 2026-10-01 (fetched 06:15 UTC; content changed since 2026-09-30 — new FAQ Q33, page stamp moved to 30 September 2026, see change log)
 guidance_retrieved: 2026-10-01 (fetched 06:15 UTC, all four guidance subpages unchanged word-for-word since 2026-09-19)
-glossary_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 2026-09-26 — see `enisa-srp-glossary-baseline.md`)
+glossary_retrieved: 2026-10-02 (fetched UTC morning run; changed — Version 1.4, two new fields 40/41 — see `enisa-srp-glossary-baseline.md`)
 csirt_list_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 17:11 UTC on 2026-09-12)
 ar_user_manual_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 2026-09-17)
 ar_user_manual_pdf_sha256: e2afc96031eceff4bebd9790256183e4ce6b835d9a1c44f9864e4f3995998f86 (the PDF itself, not the landing page; unchanged since 2026-09-21 — hash, size (3,190,657 bytes) and Last-Modified all match. The copy captured 2026-09-10 was 3,119,968 bytes and reversed the AR notification-visibility rule — see `enisa-defect-report.md` G26. Both are stamped "Version: 1.1" with an unchanged Document History table, so **this hash is the only reliable change signal for this document**.)
@@ -25,13 +25,20 @@ terms_conditions_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 2026-
 ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-10-01
+last_check: 2026-10-02
 last_change: 2026-10-01
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-10-02 06:07 UTC (vs. 2026-10-01 06:15 UTC)
+
+Only the Glossary changed: Version 1.4 (last update 01 October 2026) with two new free-text fields, 40 AR Note and 41 CSIRT Note, and a three-condition list under PEC field v28. Full detail in `enisa-srp-glossary-baseline.md`; the trimmed summary below is updated to match.
+
+**Unchanged**
+Main page, FAQ (Q1–Q33), all four guidance subpages, CSIRT list, AR User Manual page and PDF, Terms and Conditions, AR User Tutorial Video. Content navigation unchanged.
 
 Newest first. One entry per check that found something; runs that find nothing changed leave no entry.
 
@@ -1553,7 +1560,7 @@ Video: embedded via a PeerTube `<iframe>`, `src="https://videos.enisa.europa.eu/
 
 ## CRA SRP Glossary (new page, `glossary_url`)
 
-Version 1.3, last update: 25 September 2026 *(date bumped 2026-09-26 from "10 September 2026" — version number unchanged — correlating with the new v26a field below; the previous move was 2026-09-10 13:11 UTC, "1.2, last update: 09/09/2026" → "1.3, last update: 10 September 2026", by far the largest correlated change since first capture at that point — see the change log in `enisa-srp-glossary-baseline.md`)*. The authoritative field-by-field reference for the reporting template: for each field it gives the meaning, how to complete it, a worked example, the expected format, and its per-stage status (Early Warning 24h / 72h / Final Report). Its own field numbering differs from the FAQ's Q16 table — it does not itemize the 5 automated/system common fields (Notification level, the three Reporting-time fields, Reporter) that Q16 lists explicitly, so its common-field numbering runs 1–18 instead of 1–23; the AEV and SI fields (same substance as Q16's v24–v35 and i36–i44) are renumbered v19–v30 (plus v26a, since 2026-09-26) and i31–i39 respectively.
+Version 1.4, last update: 01 October 2026 *(was 1.3 / 25 September 2026 until the 2026-10-02 check, which also added Common-group fields 40 AR Note and 41 CSIRT Note, both Both/Free text/Optional at all stages; earlier history: date bumped 2026-09-26 from "10 September 2026" — version number unchanged — correlating with the new v26a field below; the previous move was 2026-09-10 13:11 UTC, "1.2, last update: 09/09/2026" → "1.3, last update: 10 September 2026", by far the largest correlated change since first capture at that point — see the change log in `enisa-srp-glossary-baseline.md`)*. The authoritative field-by-field reference for the reporting template: for each field it gives the meaning, how to complete it, a worked example, the expected format, and its per-stage status (Early Warning 24h / 72h / Final Report). Its own field numbering differs from the FAQ's Q16 table — it does not itemize the 5 automated/system common fields (Notification level, the three Reporting-time fields, Reporter) that Q16 lists explicitly, so its common-field numbering runs 1–18 instead of 1–23; the AEV and SI fields (same substance as Q16's v24–v35 and i36–i44) are renumbered v19–v30 (plus v26a, since 2026-09-26) and i31–i39 respectively.
 
 **Scope note**: only field names, applies-to (Both/AEV/SI), and per-stage status are captured below, not the full descriptive text (meaning/how-to-complete/example/format) for each field — that level of detail lives in the dedicated **`enisa-srp-glossary-baseline.md`** file (added 2026-09-07, when the live Glossary page began returning HTTP 403 on its original path — it had moved, see `glossary_url`), which is the full-detail historical record and the one to diff against for wording-level changes. A future check should re-verify field names, counts, and statuses against this list, and flag if the page's own numbering or the field set changes.
 
