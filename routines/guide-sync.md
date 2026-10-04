@@ -1,11 +1,11 @@
 # Guide sync
 
-- **Trigger**: not created yet - see "Guide sync" in `routines/README.md`; its ID goes here once it exists
+- **Trigger**: `trig_01SB5rkv7M4VXgtRtNzPeNYD`, created 2026-10-04 **disabled** and with no repository attached - see "Guide sync" in `routines/README.md`
 - **Schedule**: `30 7 * * *` (daily, 07:30 UTC - after the ENISA monitor at 06:04 and the domain monitor at 06:00, so any baseline PR they opened is already merged)
 - **Writes**: `index.html`, `guide-sync/`
 - **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt.
-- **Loader status**: **Routine not created yet** (2026-10-04).
-- **Updatable by an agent**: **yes** once created, because an agent will create it (`meta_mcp`). An agent cannot attach the repository, though: `create_trigger` takes no sources or outcomes, so a person does that once in the Routines UI before enabling it.
+- **Loader status**: **applied** at creation (2026-10-04), read back and equal to the loader in `routines/README.md`.
+- **Updatable by an agent**: **yes**, it was created by an agent (`meta_mcp`). An agent cannot attach the repository, though: `create_trigger` takes no sources or outcomes, so a person does that once in the Routines UI before enabling it.
 - **Canary**: while `tools/guide-sync.paused` exists on `main` this Routine opens **draft** pull requests only and never merges. Deleting that file arms auto-merge.
 
 > **What it is for.** The monitors record what ENISA changed; they never touch the guide, and until now nothing did except a person in a session. Between 15 and 21 September the guide fell behind on a reversed access rule, a new FAQ question and three Glossary fields, and a full audit on 4 October found its field cross-references mostly broken. This Routine closes that gap for everything a script can decide, and hands the rest to a person with the question already framed.

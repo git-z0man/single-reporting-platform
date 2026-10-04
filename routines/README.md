@@ -17,7 +17,7 @@ says which of the two it is.
 | `commission-cra-faq-monitor.md` | **Commission CRA FAQ monitor** | `trig_012AzfKXKrPnRCEjXXYWBgY4` | `0 5 * * 1` |
 | `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `0 6 * * *` |
 | `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
-| `guide-sync.md` | **Guide sync** (not created yet) | see the file's header | `30 7 * * *` |
+| `guide-sync.md` | **Guide sync** (disabled until the repo is attached) | `trig_01SB5rkv7M4VXgtRtNzPeNYD` | `30 7 * * *` |
 
 The UI name and the file name differ for the first one: an attempt to rename it
 to "ENISA SRP pages monitor" was refused along with the prompt update (see

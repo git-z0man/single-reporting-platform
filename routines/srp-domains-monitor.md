@@ -7,7 +7,7 @@
   the country table, so it applies changes to that list itself rather than
   waiting on a handoff from the ENISA pages monitor.
 - **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt; editing it changes the next run, with no paste in between.
-- **Loader status**: **not applied yet** (2026-10-04). Until it is, this file is only a mirror of the full text the Routine runs.
+- **Loader status**: **applied 2026-10-04**, read back from the Routine and equal to the loader in `routines/README.md`. This file is the prompt.
 - **Updatable by an agent**: **yes** - created via `meta_mcp`, so `update_trigger` works; an agent applies the loader.
 
 > Until the loader is applied this file is a mirror: editing it changes nothing on its own. Once it is applied, this file is the prompt.
