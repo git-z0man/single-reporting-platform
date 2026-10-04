@@ -1,41 +1,38 @@
 # Repository conventions for Claude Code
 
-## Routine prompts must be kept in sync with the repository
+## Routine prompts are files in this repository
 
-Each of the four monitors below is driven by a scheduled Routine. What a
-Routine executes is its **prompt**, held by the platform — not anything in
-this repository. A copy of each prompt is mirrored under `routines/`, together
-with its trigger ID and whether an agent may update it.
+Each Routine runs a scheduled **prompt**, held by the platform. The live prompt
+of every Routine is meant to be a short **loader** that reads the real prompt
+from `routines/<name>.md` on `main`; where the loader is applied, that file *is*
+the prompt, and editing it changes the next run. Where it is not applied yet, the
+file's header says so and the file is only a mirror. `routines/README.md` has the
+loader text, the status of each Routine and the rollback.
 
 **Whenever a change widens what a monitor covers — a new page to watch, a new
-baseline file, a new output path — the prompt must be updated in the same
-change.** Otherwise the next scheduled run silently reverts to the narrower
-job, and the wider scope survives only as long as the session that invented it.
+baseline file, a new output path — update its file in `routines/` in the same
+commit**, and then:
 
-Concretely, in this order:
+1. If the loader is not applied to that Routine yet, apply the full text to the
+   live Routine (`update_trigger` where the Routine was created by an agent,
+   otherwise paste it into the Routines UI) and read it back.
+2. Update the auto-merge paths in this file if the routine now writes somewhere
+   new.
 
-1. Update the mirrored prompt in `routines/`, in the same commit as the
-   repository change.
-2. **Apply it to the live Routine** — `update_trigger` where the routine was
-   created by an agent, otherwise paste it into the Routines UI. This is the
-   step that actually takes effect; the other two are documentation.
-3. Update the auto-merge paths in this file if the routine now writes
-   somewhere new.
+Trust note: because a loader executes whatever is on `main`, `routines/` is in
+**no** auto-merge scope. Every change to a prompt goes through review.
 
-This is not hypothetical. On 2026-09-07 the ENISA run discovered ENISA's new
-CRA SRP Glossary page, built `enisa-srp-glossary-baseline.md`, and updated
-this file — while its own prompt still described a single page and a single
-file. The routine was more thorough than its instructions, and nothing carried
-that forward to the next run.
+This is not hypothetical. On 2026-09-07 the ENISA run discovered ENISA's new CRA
+SRP Glossary page, built `enisa-srp-glossary-baseline.md`, and updated this
+file, while its own prompt still described a single page and a single file. The
+routine was more thorough than its instructions, and nothing carried that
+forward to the next run. Loaders end that class of drift; they do not remove the
+one manual step each `http_api`-created Routine (ENISA, notified bodies) needs,
+the first paste of the loader.
 
-Note that an agent can only update a Routine it created itself. The ENISA
-monitor and the notified-bodies monitor were created through the API, so their
-prompt changes are a manual step in the Routines UI; see `routines/README.md`.
-
-Which repositories a Routine may read and write is separate again — session
-config, not prompt — and no agent tool can set it. Moving a monitor to another
-repository is therefore config first, prompt second; the reverse order only
-produces runs that cannot find their files. `routines/README.md` has the detail.
+Which repositories a Routine may read and write is separate again: session
+config, not prompt, and no agent tool can set it. Moving a monitor to another
+repository is config first, prompt second. `routines/README.md` has the detail.
 
 ## How a change log entry is written
 
@@ -206,3 +203,28 @@ status code and deliberately **not** on the TLS handshake. Behind an
 intercepting egress proxy both TCP and TLS succeed against every host while the
 platform is dark, so the obvious simplification silently breaks the monitor.
 The reasoning is in the script's header comment.
+
+## Guide sync routine
+
+`index.html` (the guide) and everything under `guide-sync/` are maintained by a
+scheduled task that runs `tools/fetch_enisa.py`, `tools/check_guide.py` and
+`tools/sync_guide.py` daily at 07:30 UTC, after the ENISA and domain monitors.
+The prompt is `routines/guide-sync.md`; the rules for what is mechanical are in
+`tools/README.md`.
+
+Unlike the monitors, this one auto-merges only under a narrow gate: the pull
+request touches `index.html` and `guide-sync/` alone, `tools/verify_mechanical.py
+origin/main` exits 0 (the change is exactly what the script produces, byte for
+byte), `tools/scope_guard.py index.html guide-sync/` exits 0,
+`tools/check_guide.py` exits 0, and `tools/guide-sync.paused` does not exist on
+`main`. Anything that needs judgment (a rewritten answer, a changed stage, a new
+Required field) stays a draft pull request for a person, as does any other change
+to `index.html`.
+
+While `tools/guide-sync.paused` exists, this Routine opens drafts only. It ships
+present; deleting it arms auto-merge.
+
+The same daily rule applies: a run that finds the guide matching ENISA ends
+silently, with no commit, no PR and no notification. A fetch that fails (HTTP 429
+or 5xx, or a page that no longer parses) is a failed check, never a content
+change.

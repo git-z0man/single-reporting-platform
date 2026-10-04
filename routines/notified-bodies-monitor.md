@@ -3,30 +3,21 @@
 - **Trigger**: `trig_01V74LWJSJ7QETodKUS5DojP` (UI name: **CRA notified body alert**)
 - **Schedule**: `0 7 * * 1-5` (weekdays 07:00 UTC)
 - **Writes**: `notified-bodies-baseline.md`, `notified-bodies/manifest.json`
-- **Updatable by an agent**: **no** — created via `http_api`, so the prompt below
-  must be pasted into the Routines UI by hand.
+- **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt; editing it changes the next run, with no paste in between.
+- **Loader status**: **not applied yet** (2026-10-04). Until it is, this file is only a mirror of the full text the Routine runs.
+- **Updatable by an agent**: **no** - created via `http_api`; the loader is a one-time manual paste, after which nothing about this prompt is pasted again.
 
-> **Live since 2026-09-08.** Pasted into the Routines UI and read back from the
-> Routine: 1.0000 word-level match with this file, all four square-bracket
-> placeholders intact, cron `0 7 * * 1-5`, next run 2026-09-09 07:03 UTC.
->
-> Both repositories are attached to the Routine, as sources and as outcomes:
+> **Two repositories are attached to this Routine**, as sources and as outcomes:
 >
 > ```
 > sources:  git-z0man/notified-bodies, git-z0man/single-reporting-platform
-> outcomes: git-z0man/notified-bodies      → claude/fervent-hamilton
->           git-z0man/single-reporting-platform → claude/nifty-pasteur
+> outcomes: git-z0man/notified-bodies      -> claude/fervent-hamilton
+>           git-z0man/single-reporting-platform -> claude/nifty-pasteur
 > ```
 >
-> That is why section 0 picks its working tree by remote instead of assuming
-> there is only one: with two checkouts, a `git push` from the wrong directory
-> updates the wrong repository and reports success. The old repository stays
-> attached but is no longer written to — removing it from the config is tidying,
-> not a fix.
+> That is why section 0 picks its working tree by remote instead of assuming there is only one: with two checkouts, a `git push` from the wrong directory updates the wrong repository and reports success. **The loader does the same**, for the same reason - it must find this repository before it can read this file. The old repository stays attached but is no longer written to; removing it from the config is tidying, not a fix.
 >
-> An agent cannot update this Routine: it was created via `http_api`, so every
-> future change to this prompt needs the same manual paste. Use square brackets
-> for placeholders — the paste path strips anything that looks like an HTML tag.
+> Live since 2026-09-08 (read back: 1.0000 word-level match with this file). Placeholders are in square brackets because the Routines UI paste path strips anything that looks like an HTML tag.
 
 ---
 
@@ -107,6 +98,8 @@ Only when the set of bodies is unchanged and the canary is healthy. Read `last_c
 Only if something actually changed. Commit with a message naming what changed. Push with `git push -u origin HEAD`, retrying up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network errors only.
 
 If the push fails for lack of credentials (403), do NOT try to route around it — no workarounds, no alternate remotes, no GitHub MCP fallback. Leave the commit on the local branch and report that the push failed, with the exact error AND the branch name you pushed to, so a mismatch with this Routine's configured repository outcome can be spotted. A 403 here most likely means you are pushing from the wrong checkout — confirm `git remote -v` names `single-reporting-platform`.
+
+Before merging, run `python3 tools/scope_guard.py notified-bodies-baseline.md notified-bodies/` from this repository's checkout. If it exits 1 your change touches something outside this routine's scope: leave the PR open, do not merge it, and say so.
 
 Otherwise open a pull request as a draft, then mark it ready for review and merge it yourself immediately. This is the standing convention recorded in CLAUDE.md. It applies only to PRs that touch `notified-bodies-baseline.md` and/or `notified-bodies/` alone. If your change touches anything else, leave that PR open, do not merge it, and say so.
 

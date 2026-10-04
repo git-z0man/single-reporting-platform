@@ -1,18 +1,13 @@
 # Scheduled routine prompts
 
-The four monitors in this repository are driven by scheduled Routines. What a
-Routine actually executes is its **prompt**, held by the platform — not
-anything in this repository. This directory keeps a copy of each prompt under
-version control so that:
-
-- drift between what a routine *does* and what the repository *says* is visible
-  in a diff rather than discovered by accident;
-- a prompt can be reviewed, and its history read, like any other file;
-- the text is ready to paste back into the Routines UI.
-
-**These files are a mirror, not the source of truth.** Editing one here changes
-nothing on its own. The corresponding Routine must be updated too — see below
-for which ones an agent may update and which need a human.
+Five scheduled Routines work on this repository: four monitors and the Guide
+sync. What a Routine executes is its **prompt**, held by the platform. To stop
+that prompt drifting from the repository, each live prompt is meant to be a
+short **loader** that reads the real prompt from the file in this directory on
+`main` (see "Loader prompts" below). Where the loader is applied, **the file
+here is the prompt**: editing it changes the next run, with no paste in between.
+Where it is not applied yet, the file is only a mirror, and each file's header
+says which of the two it is.
 
 ## The routines
 
@@ -22,6 +17,7 @@ for which ones an agent may update and which need a human.
 | `commission-cra-faq-monitor.md` | **Commission CRA FAQ monitor** | `trig_012AzfKXKrPnRCEjXXYWBgY4` | `0 5 * * 1` |
 | `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `0 6 * * *` |
 | `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
+| `guide-sync.md` | **Guide sync** (not created yet) | see the file's header | `30 7 * * *` |
 
 The UI name and the file name differ for the first one: an attempt to rename it
 to "ENISA SRP pages monitor" was refused along with the prompt update (see
@@ -33,6 +29,7 @@ below), so the UI still shows its original name. Go by the trigger ID.
 | `commission-cra-faq-monitor.md` | `commission-cra-faq-baseline.md`, `commission-faq/` |
 | `srp-domains-monitor.md` | `srp-domains-baseline.md`, `srp-domains/` |
 | `notified-bodies-monitor.md` | `notified-bodies-baseline.md`, `notified-bodies/` |
+| `guide-sync.md` | `index.html`, `guide-sync/` |
 
 Other Routines on this account (`FuFA Reisen`, `absence.io Zeiterfassung`) do
 not write to this repository and are not mirrored here.
@@ -182,6 +179,11 @@ Agents can only update routines they created (via create_trigger).
 | Commission CRA FAQ monitor | `meta_mcp` | Yes |
 | SRP domain reachability monitor | `meta_mcp` | Yes |
 | CRA notified body alert | `http_api` | **No — paste it in the Routines UI** |
+| Guide sync | `meta_mcp` (once created) | Yes |
+
+With loaders this matters far less: an `http_api` Routine needs **one** paste,
+of the loader, and never again. Every later change to what it does is a commit
+to its file here.
 
 ## The paste path eats angle brackets
 
@@ -256,28 +258,83 @@ Two consequences worth knowing before writing a prompt for such a Routine:
 Leaving the old repository attached does no harm once the prompt stops writing
 to it. Removing it later is tidying, not a fix.
 
+## Loader prompts
+
+The live prompt of each Routine is the loader below, with `[FILE]` replaced by
+the file from the table above (`enisa-srp-pages-monitor.md` and so on). It has
+no angle brackets, because the paste path strips them (previous section).
+
+```
+Loader. The instructions for this Routine are kept in the repository, not in this prompt.
+
+1. Find the working tree of git-z0man/single-reporting-platform by its remote (git remote get-url origin in each checked-out directory). If it is not checked out, clone https://github.com/git-z0man/single-reporting-platform.
+2. Run: git fetch origin main
+3. Read the instructions with: git show origin/main:routines/[FILE]
+4. If that file is missing or empty, report that in one line and stop. Change nothing.
+5. Follow everything below the first line that consists only of three dashes, exactly as written there. Everything above that line is documentation about the file, not instructions.
+```
+
+What this buys: a change to a prompt is a reviewed commit with a diff, the
+paste step disappears, and the `http_api` Routines (which no agent can update)
+need one paste each and are then as maintainable as the others. It ends the
+drift class this directory documents above.
+
+What it costs, stated plainly: **a Routine now executes whatever is on `main`
+in `routines/`.** No auto-merge scope covers that directory, so every change to
+it goes through review. Anyone who can merge to `main` can change what the
+Routines do; that was already true of `tools/` and the baselines, and it is now
+true of the prompts too.
+
+Rollback: paste the last full prompt from git history (`git log -p --
+routines/[FILE]`) into the Routine. The loader is one prompt, replaced by one
+paste.
+
+| Routine | Loader status |
+|---|---|
+| Commission, SRP domains | applied by an agent with `update_trigger`; the file header records the date |
+| ENISA pages, notified bodies | **manual paste** of the loader in the Routines UI; the file header says "not applied yet" until someone has |
+| Guide sync | created with the loader from the start |
+
+After applying, read the Routine back (`get_trigger`) and check that the stored
+text equals the loader with the right file name.
+
+## Guide sync
+
+A fifth Routine, `guide-sync.md`, keeps `index.html` in line with ENISA's FAQ and
+Glossary. The monitors record what ENISA changed; this is the first thing that
+acts on it. The work is done by scripts under `tools/` (see `tools/README.md`),
+not by the model: the Routine runs them, and merges only when the result is
+provably mechanical (`tools/verify_mechanical.py` recomputes the change and
+demands byte equality) and `tools/guide-sync.paused` is absent from `main`.
+Everything else becomes a draft pull request with the judgment items listed.
+
+Two things an agent cannot do here, so a person does them once:
+
+- **Attach the repository.** `create_trigger` takes no sources or outcomes. In
+  the Routines UI, add `single-reporting-platform` as source and outcome, then
+  enable the Routine. Without that its push comes back 403.
+- **Arm auto-merge**, optionally, by deleting `tools/guide-sync.paused`. It ships
+  present, so the first runs produce drafts to inspect.
+
 ## Keeping a prompt in sync
 
 A monitor's scope grows over time — a new page appears, a new baseline file is
 added. When that happens the prompt must grow with it, or the next run silently
-reverts to the narrower job.
+reverts to the narrower job. On 2026-09-07 the ENISA run discovered ENISA's new
+Glossary page and built a baseline for it while its own prompt still described a
+single page.
 
-This is not hypothetical. On 2026-09-07 the ENISA run discovered ENISA's new
-CRA SRP Glossary page, built `enisa-srp-glossary-baseline.md`, and updated
-`CLAUDE.md` — while its own prompt still described a single page and a single
-file. The routine was more thorough than its instructions, and nothing would
-have carried that forward to the next run.
+With loaders the rule is short. Whenever a change widens what a monitor covers:
 
-So, whenever a change widens what a monitor covers:
+1. Update its file here, in the same commit as the repository change. For a
+   Routine whose loader is applied, that **is** the live change, once merged.
+2. If the loader is **not** applied yet, apply the full text to the live Routine
+   (`update_trigger` where allowed, otherwise paste it) and read it back.
+3. Update the auto-merge paths in `CLAUDE.md` if the routine now writes
+   somewhere new.
 
-1. Update the prompt file here, in the same commit as the repository change.
-2. Apply it to the live Routine — `update_trigger` where allowed, otherwise
-   paste it into the Routines UI.
-3. Update `CLAUDE.md` if the auto-merge scope changed (it lists the exact paths
-   each routine may self-merge).
-
-Step 2 is the one that actually takes effect. Steps 1 and 3 are documentation:
-useful, but a routine does not read them at run time.
+Whatever is changed here, `tools/scope_guard.py` is the enforcement of scope: the
+monitors and the Guide sync call it before merging.
 
 ## The outcome branch is reassigned
 

@@ -6,10 +6,11 @@
 - **Also reads**: ENISA's List of CSIRTs Designated as Coordinators — it owns
   the country table, so it applies changes to that list itself rather than
   waiting on a handoff from the ENISA pages monitor.
-- **Updatable by an agent**: **yes** — created via `meta_mcp`, so `update_trigger` works.
+- **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt; editing it changes the next run, with no paste in between.
+- **Loader status**: **not applied yet** (2026-10-04). Until it is, this file is only a mirror of the full text the Routine runs.
+- **Updatable by an agent**: **yes** - created via `meta_mcp`, so `update_trigger` works; an agent applies the loader.
 
-> Mirror of the live prompt. Editing this file changes nothing on its own;
-> apply it with `update_trigger` in the same change.
+> Until the loader is applied this file is a mirror: editing it changes nothing on its own. Once it is applied, this file is the prompt.
 >
 > **Live since 2026-09-11 12:54 UTC**, applied with `update_trigger` and read
 > back word-for-word. That update rewrote the prompt for a *running* platform:
@@ -148,6 +149,8 @@ Also note whether the platform still matches the scope ENISA stated for launch: 
 Only when section 3 says to commit. Commit with a message naming what changed. Push with `git push -u origin HEAD`, retrying up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network errors only.
 
 If the push fails for lack of credentials (403), do NOT try to route around it — no workarounds, no alternate remotes, no GitHub MCP fallback. Leave the commit on the local branch and report that the push failed, with the exact error AND the branch name you pushed to, so a mismatch with the Routine's configured repository outcome can be spotted.
+
+Before merging, run `python3 tools/scope_guard.py srp-domains-baseline.md srp-domains/`. If it exits 1 your change touches something outside this routine's scope: leave the PR open and say so.
 
 Otherwise open a pull request as a draft, then mark it ready for review and merge it yourself immediately. This is the standing convention for this routine, recorded in CLAUDE.md — do not leave the PR waiting for approval. It applies only to PRs that touch `srp-domains-baseline.md` and `srp-domains/` alone; if your change touches anything else, leave that PR open and say so.
 
