@@ -4,7 +4,7 @@
 - **Schedule**: `4 6 * * *` (daily, 06:04 UTC)
 - **Writes**: `enisa-srp-faq-baseline.md`, `enisa-srp-glossary-baseline.md`
 - **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt; editing it changes the next run, with no paste in between.
-- **Loader status**: **not applied yet** (2026-10-04). Until it is, this file is only a mirror, and the live Routine still runs the full text pasted on 2026-09-14: it says "all ten", has no section 1a (the PDF checksum), and says "hourly" in section 4 where it means the domain routine's daily run.
+- **Loader status**: **applied 2026-10-04** by hand in the Routines UI, read back and equal to the loader in `routines/README.md`. This file is the prompt.
 - **Updatable by an agent**: **no** - created via `http_api`; `update_trigger` and `fire_trigger` both refuse it. The loader is a one-time manual paste, after which nothing about this prompt is pasted again.
 
 > **Why the loader exists.** This prompt drifted from its mirror four times in four weeks: three stale "pending" notes, an eleventh page and a whole section that were never pasted, and a cron documented wrongly for a week. Every one was the same fault - the text that runs lives on the platform and a copy lives here. The loader removes the second copy.

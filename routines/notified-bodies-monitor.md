@@ -4,7 +4,7 @@
 - **Schedule**: `0 7 * * 1-5` (weekdays 07:00 UTC)
 - **Writes**: `notified-bodies-baseline.md`, `notified-bodies/manifest.json`
 - **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt; editing it changes the next run, with no paste in between.
-- **Loader status**: **not applied yet** (2026-10-04). Until it is, this file is only a mirror of the full text the Routine runs.
+- **Loader status**: **applied 2026-10-04** by hand in the Routines UI, read back and equal to the loader in `routines/README.md`. This file is the prompt.
 - **Updatable by an agent**: **no** - created via `http_api`; the loader is a one-time manual paste, after which nothing about this prompt is pasted again.
 
 > **Two repositories are attached to this Routine**, as sources and as outcomes:
