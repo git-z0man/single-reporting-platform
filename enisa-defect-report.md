@@ -74,6 +74,7 @@ Text quoted verbatim as it stood on 9 September.
 | A16 | Submission | Pre-conditions, three occurrences | "you are **logged in into** the SRP" | "logged in to the SRP". | **open** — still three occurrences |
 | A17 | AR User Manual | §1.4 "How to Use the Manual" (p. 7) | "Section 5 presents other functionalities available on the platform, including reminders and alerts. Section 6 provides FAQs…" | There is no standalone Section 5 — reminders/alerts is §4.9, and the FAQ section's own divider page is titled "SECTION 5", not 6. | **open** — the manual's own table of contents (p. 3-4) agrees with the divider pages, not with §1.4's description |
 | A18 | AR User Manual | §4.6.2 (printed p. 33) | "Exceptions and error **hadling**:" | "handling". | **open** — a regression: the word was correct in the 9 September copy and was broken by the 17 September republication (see G26) |
+| A19 | FAQ | Q27, first paragraph | "…concerning actively exploited vulnerabilities (AEVs) under Art. 14(<s>3</s>1) and severe incidents (SIs) under Art. 14 (3) having an impact on the security of products with digital elements under Art. 14(3)…" | A struck-through "3" followed by "1" reads "Art. 14(31)" wherever the strikethrough is lost, and the sentence cites Art. 14(3) twice more, once with a stray space. It looks like an unfinished edit from 3 to 1 on the AEV citation; a legal FAQ should not leave a citation in that state. | **open** — first recorded 2026-09-11 13:17 UTC, still live 2026-10-04 |
 
 ---
 
@@ -162,7 +163,7 @@ field**. Either the text or the form is wrong.
 
 ### B7 — Who can see another AR's notifications: two sources say one thing, one says the opposite
 
-**Status: open · opened 2026-09-21.** Until mid-September every ENISA source
+**Status: open · opened 2026-09-21, re-confirmed 2026-10-04** — the AR Interface functions page still carries the old sentence; the Manual (byte-identical to its 17 September copy) and FAQ Q9 still carry the new one. Until mid-September every ENISA source
 agreed that a Secondary AR could see only what they had submitted. Two of the
 three have since reversed; the third has not been touched.
 
@@ -216,6 +217,8 @@ guidance to form labels word by word.
 | C3 | "Particular Exceptional Circumstances**(PEC)**" — no space before the bracket *(screenshot)* | The toggle label in the notification form | Insert a space, to match every guidance page. | **open** — UI label, not testable from page text |
 | C4 | "validation" vs. "verification" of the AR–manufacturer association | FAQ Q9 uses both in one paragraph ("validation … before **verification** becomes mandatory"); Registration uses "validation"; Interface uses "Unverified" as the status | One term for the act, matching the status name shown in the platform. | **open** — Q9 now reads "Verification takes place … while validation is pending" (23:11 UTC): both words in one sentence. The new AR User Manual leans the other way: "validation" 12 times, "verification" once |
 | C5 | Date formats: "3/08/2026", "07/09/2026", "08/09/2026", "09 September 2026", "05/09/2026", "04/09/2026" | Guidance pages, FAQ, Glossary, CSIRT list | Mixed unpadded numeric, padded numeric and long form. Numeric DD/MM is ambiguous to non-European readers; the FAQ's "09 September 2026" is unambiguous. | **partly** · 2026-09-09 22:12 / 2026-09-10 02:08 UTC — six pages now spell the month out; the main-page cards moved to "Updated: 9 September 2026" in the 10 September main-page rewrite (seen 11:52 UTC); only the Glossary footer still reads "09/09/2026" |
+| C6 | "authorised representative" (Glossary field 40) vs. "Assigned Representative" | Glossary field 40 "AR Note": both the meaning and the completion instruction, as of Glossary version 1.4 (2026-10-02) | Everywhere else on the SRP pages, and in the platform's own role screen, AR means the *Assigned* Representative; "authorised representative" is the different Art. 3(13) CRA concept, and the guide has a warning against confusing the two. Use the platform's term. | **open** — first recorded 2026-10-02 |
+| C7 | Field numbers "v26a", "40", "41" | Glossary version 1.4: **v26a** was inserted between v26 and v27 on 2026-09-26 without renumbering either; **40** and **41** were appended after i39 on 2026-10-02 | The table is numbered 1–18, v19–v30, i31–i39, and then three fields that follow no part of that scheme. A reader cannot tell from the number alone which group, or which notification type, a field belongs to; the "Applies to" column is the only clue. Number them in sequence with their group, or say in the Glossary that the lettered and numbered additions are deliberate. | **open** — v26a first recorded 2026-09-26, 40/41 2026-10-02 |
 
 ---
 
