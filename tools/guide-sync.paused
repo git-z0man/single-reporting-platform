@@ -1,0 +1,3 @@
+Canary. While this file exists on main, the Guide sync Routine opens draft pull
+requests only and never merges. Delete it to arm auto-merge of mechanical edits.
+See tools/README.md.

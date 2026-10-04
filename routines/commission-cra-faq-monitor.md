@@ -3,10 +3,11 @@
 - **Trigger**: `trig_012AzfKXKrPnRCEjXXYWBgY4`
 - **Schedule**: `0 5 * * 1`
 - **Writes**: `commission-cra-faq-baseline.md`, `commission-faq/`
-- **Updatable by an agent**: **yes** — created via `meta_mcp`, so `update_trigger` works.
+- **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt; editing it changes the next run, with no paste in between.
+- **Loader status**: **not applied yet** (2026-10-04). Until it is, this file is only a mirror of the full text the Routine runs.
+- **Updatable by an agent**: **yes** - created via `meta_mcp`, so `update_trigger` works; an agent applies the loader.
 
-> Mirror of the live prompt. Editing this file changes nothing on its own;
-> apply it with `update_trigger` in the same change.
+> Until the loader is applied this file is a mirror: editing it changes nothing on its own. Once it is applied, this file is the prompt.
 
 ---
 
@@ -106,6 +107,8 @@ Fetch https://digital-strategy.ec.europa.eu/en/factpages/cyber-resilience-act-im
 Only if something actually changed. Commit with a message naming what changed. Push with `git push -u origin HEAD`, retrying up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network errors only.
 
 If the push fails for lack of credentials (403), do NOT try to route around it — no workarounds, no alternate remotes, no GitHub MCP fallback. Leave the commit on the local branch and report that the push failed, with the exact error AND the branch name you pushed to, so a mismatch with the Routine's configured repository outcome can be spotted. That means this Routine is missing its repository outcome configuration and a human needs to attach it.
+
+Before merging, run `python3 tools/scope_guard.py commission-cra-faq-baseline.md commission-faq/`. If it exits 1 your change touches something outside this routine's scope: leave the PR open and say so.
 
 Otherwise open a pull request as a draft, then mark it ready for review and merge it yourself immediately. This is the standing convention for this routine, recorded in CLAUDE.md — do not leave the PR waiting for approval. It applies only to PRs that touch `commission-cra-faq-baseline.md` and `commission-faq/` alone; if for any reason your change touches anything else, leave that PR open and say so.
 

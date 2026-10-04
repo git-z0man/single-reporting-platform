@@ -1,0 +1,554 @@
+<table class="table">
+<tbody>
+<tr>
+<td><strong>Nr.</strong></td>
+<td><strong>Field</strong></td>
+<td><strong>Applies to AEV or SI</strong></td>
+<td><strong>What this field means</strong></td>
+<td><strong>How you may complete it</strong></td>
+<td><strong>Example</strong></td>
+<td><strong>Expected format</strong></td>
+<td><strong>Early Warning (EW) 24h</strong></td>
+<td><strong>72h</strong></td>
+<td><strong>Final Report (FR)</strong></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td colspan="9">
+<p class="text-align-center"><strong>Common fields</strong></p>
+</td>
+</tr>
+<tr>
+<td><strong>1.</strong></td>
+<td><strong>Notification type (Vulnerability/Incident)&nbsp;</strong></td>
+<td>Both</td>
+<td>Indicates whether the notification concerns an actively exploited vulnerability (AEV) or a severe incident (SI) having an impact on the security of a product with digital elements.</td>
+<td>Select Actively Exploited Vulnerability when reporting an AEV. Select Severe Incident when reporting a SI having an impact on the security of a product with digital elements.</td>
+<td>Vulnerability</td>
+<td>Select one: Vulnerability or Incident</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>2.</strong></td>
+<td><strong>Title&nbsp;</strong></td>
+<td>Both</td>
+<td>Short human-readable name for the notification.</td>
+<td>For example, enter a short, specific title that allows users to recognise the affected product and the reported issue. Do not include confidential technical detail that is unnecessary for identification (max. 255 characters).</td>
+<td>Active exploitation affecting Product X version 4.2.</td>
+<td>Plain text; concise title</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>3.</strong></td>
+<td><strong>Summary</strong></td>
+<td>Both</td>
+<td>Concise overview of the facts, affected product, and issue being notified.</td>
+<td>For example, provide a concise overview of what happened, the affected product or version, the known impact, and the current mitigation status. Use factual information available at the reporting stage (max. 4000 characters).</td>
+<td>An actively exploited vulnerability affects Product X 4.2. A temporary workaround is available, and a security update is being prepared.</td>
+<td>Short paragraph</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>4.</strong></td>
+<td><strong>Manufacturer name&nbsp;</strong></td>
+<td>Both</td>
+<td>Name of the natural or legal person who develops or manufactures the product with digital elements or has the product with digital elements designed, developed or manufactured, and markets it under its name or trademark, whether for payment, monetisation or free of charge.</td>
+<td>No user action is required. The platform creates or updates this value automatically based on what you wrote when you registered to the Platform or added at a later stage. You may review it only to confirm that the displayed information is consistent with the notification history.</td>
+<td>Automatically populated by the platform during the notification submission or free text during manufacturer registration [Name of the company].</td>
+<td>System-generated / read-only</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>5.</strong></td>
+<td><strong>Member States where product available (Concerned CSIRT)</strong></td>
+<td>Both</td>
+<td>Member States in which territory the manufacturer is aware that the affected product has been made available; used to determine concerned CSIRTs.</td>
+<td>The Platform will automatically show your CDaC, however, you may also select other Member States (MS) where the affected product is available, based on the information currently known to the manufacturer. Update the selection if new distribution information becomes available.</td>
+<td>Belgium as your CDaC, automatically populated by the platform and you may add Greece and Italy and MS where the affected product has been made available</td>
+<td>Select one or more Member States</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>6.</strong></td>
+<td><strong>Product Name</strong></td>
+<td>Both</td>
+<td>Name that identifies the affected product with digital elements.</td>
+<td>For example, enter the official commercial or technical name of the affected product with digital elements. Use the same name that appears in product technical documentation or market information (max. 255 characters).</td>
+<td>Product X</td>
+<td>Official product name</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>7.</strong></td>
+<td><strong>Product Version</strong></td>
+<td>Both</td>
+<td>Version, release, build, model, or other revision information required to identify the affected product instance.</td>
+<td>For example, enter every affected version, release, build, model, or firmware revision. Use exact identifiers and clearly state a range when multiple versions are affected (max. 255 characters).</td>
+<td>4.0 to 4.2.1</td>
+<td>Version or version range</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>8.</strong></td>
+<td><strong>Product Type (Default/Important Product with Digital Elements/Critical Product with Digital Elements)</strong></td>
+<td>Both</td>
+<td>Regulatory category indicating whether the product is default, important, or critical under the CRA classification framework.</td>
+<td>For example, select the CRA regulatory type applicable to the product. Choose Important or Critical only where the product falls within the relevant CRA category (Annexes III and IV); otherwise select Default.</td>
+<td>Important Product with Digital Elements</td>
+<td>Select one: Default, Important, Critical</td>
+<td>Optional&nbsp;</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>9.</strong></td>
+<td><strong>Product class</strong></td>
+<td>Both</td>
+<td>For an Important Product with Digital Elements, the applicable Class I or Class II category used for conformity-assessment treatment.</td>
+<td>For example, for an important product, select the applicable CRA class. Leave the field empty when the product is not classified as an important product or when no class applies.</td>
+<td>Class II</td>
+<td>Select one configured Class</td>
+<td>Optional&nbsp;</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>10.</strong></td>
+<td><strong>Product category</strong></td>
+<td>Both</td>
+<td>The applicable CRA product category, normally selected from the relevant category list, as mentioned in the CRA Annexes III or IV.</td>
+<td>You may select the category that best matches the affected product under the applicable CRA category list. You may use the product’s core functionality, not only its commercial name.</td>
+<td>Choose between: Hardware devices with Security Boxes; Smart meter gateways within smart metering systems and other devices for advanced security purposes, including secure cryptoprocessing&nbsp; devices; or Smartcards or similar devices, including secure elements.</td>
+<td>Select one configured category</td>
+<td>Optional&nbsp;</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>11.</strong></td>
+<td><strong>End of support indicator</strong></td>
+<td>Both</td>
+<td>Indicates whether the product with digital elements has reached the end of the support period.&nbsp;</td>
+<td>You may select one: "Yes" when the product with digital elements has reached the end of the support period or "No" when it doesn’t.</td>
+<td>Yes</td>
+<td>Select one: Yes or No</td>
+<td>Optional&nbsp;</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>12.</strong></td>
+<td><strong>Component name</strong></td>
+<td>Both</td>
+<td>Name of the software or hardware component in which the vulnerability or incident is located or observed.</td>
+<td>For example, enter the name of the affected hardware or software component. You may include the component version when known. Leave empty if the issue cannot be attributed to a component (max. 255 characters).</td>
+<td>Authentication module 3.1</td>
+<td>Component name and optional version</td>
+<td>Optional&nbsp;</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>13.</strong></td>
+<td><strong>Mitigating measure expected shortly</strong></td>
+<td>Both</td>
+<td>Indicates whether an effective risk-mitigation measure, such as a security update or user guidance, is expected to become available.</td>
+<td>For example, select "Yes" when an effective security update, workaround, or user guidance is expected shortly and the expectation is supported by a remediation plan. Otherwise select "No".</td>
+<td>Yes</td>
+<td>Select one: "Yes" or "No"</td>
+<td>Optional&nbsp;</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>14.</strong></td>
+<td><strong>User Action able to reduce impact</strong></td>
+<td>Both</td>
+<td>Action that product users can take to prevent, reduce, or contain the impact of the actively exploited vulnerability or severe incident.</td>
+<td>You may describe the immediate action a user can take to reduce the likelihood or impact of the vulnerability exploited or the incident. You may provide clear, practical instructions and identify any limitation or prerequisite (max. 4000 characters).</td>
+<td>Disable the affected interface until the security update is installed.</td>
+<td>Action-oriented text</td>
+<td>Optional&nbsp;</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>15.</strong></td>
+<td><strong>Considered sensitivity of information</strong></td>
+<td>Both</td>
+<td>Manufacturer's assessment of how sensitive the notified information is to inform secure handling and dissemination decisions.</td>
+<td>You may describe why any submitted information requires restricted handling. Identify the sensitive element and the potential consequence of premature or wider disclosure. Do not use a generic confidentiality statement (max. 255 characters).</td>
+<td>The technical details reveal an unpatched exploitation path that is not yet publicly known.</td>
+<td>Concise justification</td>
+<td>Optional&nbsp;</td>
+<td>Optional</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>16.</strong></td>
+<td><strong>Corrective or mitigating measures taken</strong></td>
+<td>Both</td>
+<td>Actions already implemented by the manufacturer or other responsible party to correct the issue or reduce its risk or impact.</td>
+<td>For example, list the actions already taken to correct the issue or to reduce the risk. You may include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful. (max. 2000 characters).</td>
+<td>Disabled the affected service; revoked exposed credentials; increased monitoring.</td>
+<td>Bulleted list or structured text</td>
+<td>Optional&nbsp;</td>
+<td>Optional</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><strong>17.</strong></td>
+<td><strong>Corrective or mitigating measures that users can take</strong></td>
+<td>Both</td>
+<td>Instructions or actions users can apply to reduce exposure or impact, including workarounds, configuration changes, patches, or isolation measures.</td>
+<td>For example, provide step-oriented guidance that users can apply. Prioritise the effective fix, then state temporary workarounds and any operational impact. Clearly identify actions that are no longer recommended (max. 4000 characters).</td>
+<td>Install version 4.2.2. Until installation, restrict management-interface access to trusted networks.</td>
+<td>Action-oriented text</td>
+<td>Optional&nbsp;</td>
+<td>Optional</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><strong>18.</strong></td>
+<td><strong>Attack vector</strong></td>
+<td>Both</td>
+<td>Description or structured classification of the path or means by which exploitation or compromise can occur.</td>
+<td>For example, describe how the vulnerability may be exploited or how the incident reached the affected product. State the relevant interface, access path, protocol, or user interaction. Avoid unsupported assumptions (max. 255 characters).</td>
+<td>Remote network access through an exposed API.</td>
+<td>Short, structured description or configured classification</td>
+<td>N/A&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td colspan="9">
+<p class="text-align-center"><strong>Actively Exploited Vulnerability</strong></p>
+</td>
+</tr>
+<tr>
+<td><strong>v19.</strong></td>
+<td><strong>CVE ID</strong></td>
+<td>AEV</td>
+<td>CVE Identifier (CVE ID) assigned to the publicly disclosed vulnerability under the Common Vulnerabilities and Exposures (CVE) Program.</td>
+<td>You may enter the official CVE ID only if one has been assigned by the competent CNA. Copy the ID exactly as published. Leave the field empty if no ID exists (max. 255 characters).</td>
+<td>CVE-2026-12345</td>
+<td>CVE identifier</td>
+<td>Optional&nbsp;</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>v20.</strong></td>
+<td><strong>EUVD ID</strong></td>
+<td>AEV</td>
+<td>Identifier of the vulnerability record in the European Vulnerability Database (EUVD).</td>
+<td>You may enter the official EUVD ID if one has been assigned by ENISA. Copy the ID exactly as published. Leave the field empty if no ID exists (max. 255 characters).</td>
+<td>EUVD-2026-12345</td>
+<td>EUVD identifier</td>
+<td>Optional&nbsp;</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>v21.</strong></td>
+<td><strong>General information</strong></td>
+<td>AEV</td>
+<td>High-level description of the vulnerability and, where known, how exploitation works, without requiring the full final technical analysis.</td>
+<td>For example, describe the vulnerability at a high level and explain how the known exploit operates. Include the affected function, required access, and observed exploitation behaviour. Do not include unverified attribution (max. 4000 characters).</td>
+<td>An authentication bypass in the management interface allows a remote actor with network access to execute privileged actions.</td>
+<td>Structured narrative</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>v22.</strong></td>
+<td><strong>Date when corrective or mitigating measure has been available</strong></td>
+<td>AEV</td>
+<td>Date and time when the mitigating measure has been available.</td>
+<td>For example, enter the date and time when the mitigating measure has been available.</td>
+<td>2026-09-02 09:15 UTC</td>
+<td>Date and time</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><strong>v23.</strong></td>
+<td><strong>Details about the security update/corrective measure available</strong></td>
+<td>AEV</td>
+<td>Information on available corrective measures and security updates.</td>
+<td>You may add the available corrective measures and security updates. For example, security patches or software updates (max. 2000 characters)</td>
+<td>Security patches</td>
+<td>Detailed structured narrative</td>
+<td>Optional</td>
+<td>Optional</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><strong>v24.</strong></td>
+<td><strong>Full description of the Severity of the vulnerability</strong></td>
+<td>AEV</td>
+<td>Complete description of the actively exploited vulnerability, including at least its severity.</td>
+<td>For example, provide the completed technical description of the vulnerability. Including the assessed severity rating, classification, rationale for the assessment and other relevant factors or criteria supporting the assigned severity level (max. 4000 characters).</td>
+<td>Authentication validation is missing in endpoint X... Severity: High... Affected versions: 4.0–4.2.1...</td>
+<td>Detailed structured narrative</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><strong>v25.</strong></td>
+<td><strong>Full description of the Impact of the vulnerability</strong></td>
+<td>AEV</td>
+<td>Complete description of the actively exploited vulnerability, including at least its impact.</td>
+<td>For example, provide the completed technical description of the vulnerability. Including the potential or actual impact of the vulnerability, the affected systems, components, data, users or services, as applicable (max. 4000 characters).</td>
+<td>Authentication validation is missing in endpoint X... Impact: High... Affected versions: 4.0–4.2.1...</td>
+<td>Detailed structured narrative</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><strong>v26.</strong></td>
+<td><strong>Date and time when you become aware of the Actively Exploited Vulnerability [1]</strong></td>
+<td>AEV</td>
+<td>Date and time when the manufacturer or another relevant party first detected the vulnerability.</td>
+<td>For example, enter the date and time when the vulnerability was first detected. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description.</td>
+<td>2026-08-24 09:15 UTC</td>
+<td>Date and time</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>v26a</strong>.</td>
+<td><strong>Date and time when the Actively Exploited Vulnerability occurred (UTC time)</strong></td>
+<td>AEV</td>
+<td>Known or estimated date and time when the actively exploited vulnerability occured.</td>
+<td>For example, enter the date and time since when the vulnerability exists. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description.</td>
+<td>2026-08-24 09:15 UTC</td>
+<td>Date and time</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>v27.</strong></td>
+<td><strong>Malicious actor that has exploited/is exploiting the vulnerability</strong></td>
+<td>AEV</td>
+<td>Available information about the actor that exploited or is exploiting the vulnerability, without requiring attribution where information is unavailable.</td>
+<td>You may enter confirmed information about the malicious actor or observed activity. If attribution is unconfirmed, describe the observed indicators and state that attribution is unknown (max. 100 characters)..</td>
+<td>Unknown actor; observed infrastructure includes the indicators listed in Reference REF-2026-18.</td>
+<td>Free text</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>Required if such information available</td>
+</tr>
+<tr>
+<td><strong>v28.</strong></td>
+<td><strong>Particular Exceptional Circumstances (PEC)</strong></td>
+<td>AEV</td>
+<td>Selection indicating that one or more legally specified circumstances in the third subparagraph of Article 16 (2) of CRA justify withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination.</td>
+<td>
+<p>You may select the applicable exceptional circumstance only when the corresponding legal condition is met:</p>
+<p>a) The vulnerability is actively exploited but confined to the coordinating CSIRT's Member State.&nbsp;</p>
+<p>b) Further dissemination would compromise essential national security or defence interests.&nbsp;</p>
+<p>c) Further dissemination poses an imminent high cybersecurity risk that cannot yet be mitigated.</p>
+</td>
+<td>&nbsp;</td>
+<td>Select applicable PEC option(s)</td>
+<td>N/A</td>
+<td>Optional&nbsp;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td rowspan="3"><strong>v29.</strong></td>
+<td rowspan="3"><strong>PEC Delay Reason</strong></td>
+<td rowspan="3">AEV</td>
+<td rowspan="3">You may select at least one of the three legally specified circumstances justifying withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination.</td>
+<td rowspan="3">Support the selection with specific facts in PEC Delay Reason and indicate the requested dissemination delay. You may select at least one of the three options.</td>
+<td>You may choose: the notified vulnerability has been actively exploited by a malicious actor and, according to the information available, it has been exploited in no other Member State than the one of the CSIRT designated as coordinator to which the manufacturer has notified the vulnerability; or</td>
+<td rowspan="3">Select applicable check box</td>
+<td rowspan="3">N/A</td>
+<td rowspan="3">Optional&nbsp;</td>
+<td rowspan="3">N/A</td>
+</tr>
+<tr>
+<td>that any immediate further dissemination of the notified vulnerability would likely result in the supply of information the disclosure of which would be contrary to the essential interests of that Member State; or</td>
+</tr>
+<tr>
+<td>that the notified vulnerability poses an imminent high cybersecurity risk stemming from the further dissemination;</td>
+</tr>
+<tr>
+<td><strong>v30.</strong></td>
+<td><strong>Please provide further information</strong></td>
+<td>AEV</td>
+<td>Description of anything that should be helpful for CSIRT Designated as Coordinator (CDaC)taking their decision.</td>
+<td>You may provide additional information (max. 800 characters).&nbsp;</td>
+<td>We consider it very important for national security.</td>
+<td>Free text</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td colspan="10">
+<p class="text-align-center"><strong>Severe Incident</strong></p>
+</td>
+</tr>
+<tr>
+<td><strong>i31.</strong></td>
+<td><strong>Incident is suspected of unlawful or malicious acts</strong></td>
+<td>SI</td>
+<td>Boolean indication of whether available evidence suggests the incident resulted from unlawful or malicious activity.</td>
+<td>For example, select Yes when available evidence indicates intentional unlawful or malicious activity. Select No when the event is assessed as non-malicious. Select Unknown while the cause remains unresolved (max. 255 characters).</td>
+<td>Yes</td>
+<td>Select one: Yes, No, Unknown</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>i32.</strong></td>
+<td><strong>General information, about the nature of the incident</strong></td>
+<td>SI</td>
+<td>High-level account of what happened, how the incident manifested, and the affected security properties or functions.</td>
+<td>For example, describe what occurred, the affected product functions or security properties, and the currently known scope. Focus on confirmed facts available at the 72-hour stage (max. 4000 characters).</td>
+<td>Malicious code executed through the update service and affected the integrity of locally stored configuration data.</td>
+<td>Structured narrative</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>i33.</strong></td>
+<td><strong>Applied and ongoing mitigation measures</strong></td>
+<td>SI</td>
+<td>Actions that have been taken by the manufacturer or other responsible party and are still ongoing to correct the issue or reduce its risk or impact.</td>
+<td>For example, list the actions already applied or ongoing to correct the issue or reduce risk. Include containment, configuration changes, update withdrawal, credential rotation, monitoring, or other completed measures, with dates where useful (max. 4000 characters).</td>
+<td>Disabled the affected service; revoked exposed credentials; increased monitoring.</td>
+<td>Structured narrative</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><strong>i34.</strong></td>
+<td><strong>Detailed description of the Severity of the incident</strong></td>
+<td>SI</td>
+<td>Complete the detailed description of the severity of the incident.</td>
+<td>For example, provide the completed description of the severity of the incident. Include the sequence of events, affected products and functions, severity, scope, evidence, root cause, response measures, and recovery status (max. 4000 characters).</td>
+<td>Low – limited impact, no significant disruption to operation.</td>
+<td>Structured narrative</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><strong>i35.</strong></td>
+<td><strong>Detailed description of the Impact of the incident</strong></td>
+<td>SI</td>
+<td>Complete the detailed description of the impact of the incident.</td>
+<td>For example, provide the completed description of the impact of the incident, including the impact on the product, data, functions, users, or connected systems (max. 4000 characters).</td>
+<td>Minimal – no material impact of operations, users or data.</td>
+<td>Structured narrative</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><strong>i36.</strong></td>
+<td><strong>Type of Threat or root cause that is likely to have triggered incident</strong></td>
+<td>SI</td>
+<td>Most likely threat category, initiating event, weakness, failure, or root cause that triggered the incident.</td>
+<td>For example, state the most likely threat type and root cause supported by the investigation. Explain the evidence briefly and mark the conclusion as preliminary when analysis is incomplete (max. 255 characters).</td>
+<td>Supply-chain compromise caused by an unauthorised modification to the update package.</td>
+<td>Classification plus short explanation</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><strong>i37.</strong></td>
+<td><strong>Date and time when you become aware of the incident (UTC time) [2]</strong></td>
+<td>SI</td>
+<td>Date and time when the manufacturer or another relevant entity becomes aware of the incident.&nbsp;</td>
+<td>For example, enter the date and time you became aware of the incident. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description.</td>
+<td>2026-08-24 09:15 UTC</td>
+<td>Date and time</td>
+<td>Required</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td><strong>i38.</strong></td>
+<td><strong>Date and time when the incident occurred (UTC time)</strong></td>
+<td>SI</td>
+<td>Known or estimated date and time when the incident began or took place.</td>
+<td>For example, enter the date and time when the incident began or occurred. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description.</td>
+<td>2026-08-24 09:15 UTC</td>
+<td>Date and time</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+<td>Optional&nbsp;</td>
+</tr>
+<tr>
+<td><strong>i39.</strong></td>
+<td><strong>Initial assessment of the incident</strong></td>
+<td>SI</td>
+<td>Preliminary analysis of the incident's severity, scope, likely impact, affected functions or data, and immediate implications.</td>
+<td>For example, provide the preliminary assessment of severity, scope, affected security properties, products or users, and likely impact. Clearly distinguish confirmed findings from matters still under investigation (max. 4000 characters).</td>
+<td>Confirmed impact is limited to integrity of configuration data on three product instances; broader exposure remains under investigation.</td>
+<td>Structured narrative</td>
+<td>Optional&nbsp;</td>
+<td>Required</td>
+<td>By default copied from previous step, or updated</td>
+</tr>
+<tr>
+<td colspan="10">
+<p class="text-align-center"><strong>Common fields</strong></p>
+</td>
+</tr>
+<tr>
+<td><strong>40.</strong></td>
+<td><strong>AR Note</strong></td>
+<td>Both</td>
+<td>Free-text note entered by the authorised representative to supplement the notification outside the structured report fields.</td>
+<td>Enter supplementary information from the authorised representative that does not fit another field. Use the relevant structured field whenever one is available.</td>
+<td>The manufacturer will provide the remaining forensic evidence through the secure channel.</td>
+<td>Free text</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+</tr>
+<tr>
+<td><strong>41.</strong></td>
+<td><strong>CSIRT Note</strong></td>
+<td>Both</td>
+<td>Free-text note entered by the designated CSIRT for review, coordination, or case-management purposes.</td>
+<td>Enter information needed by CSIRT users for coordination, validation, dissemination, or case handling. Keep the note factual and avoid duplicating data already captured in structured fields.</td>
+<td>Product distribution information confirmed with the reporting party.</td>
+<td>Free text</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+<td>Optional&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Version 1.4. Last update: 01 October 2026</p>

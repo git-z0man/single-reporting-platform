@@ -1,59 +1,15 @@
 # ENISA SRP pages monitor
 
-- **Trigger**: `trig_015C8QiJhXwkxPkDdoMbkHeD`
-- **Schedule**: `4 6 * * *` (daily, 06:04 UTC).
+- **Trigger**: `trig_015C8QiJhXwkxPkDdoMbkHeD` (UI name: **Single Reporting FAQ monitor**)
+- **Schedule**: `4 6 * * *` (daily, 06:04 UTC)
 - **Writes**: `enisa-srp-faq-baseline.md`, `enisa-srp-glossary-baseline.md`
-- **Updatable by an agent**: **no** — created via `http_api`, so the prompt below
-  must be pasted into the Routines UI by hand.
+- **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt; editing it changes the next run, with no paste in between.
+- **Loader status**: **not applied yet** (2026-10-04). Until it is, this file is only a mirror, and the live Routine still runs the full text pasted on 2026-09-14: it says "all ten", has no section 1a (the PDF checksum), and says "hourly" in section 4 where it means the domain routine's daily run.
+- **Updatable by an agent**: **no** - created via `http_api`; `update_trigger` and `fire_trigger` both refuse it. The loader is a one-time manual paste, after which nothing about this prompt is pasted again.
 
-> **Outstanding paste (2026-09-21): the PDF checksum, and the eleventh page.**
-> Section 1a below is new and is **not** in the live prompt — read back on
-> 2026-09-21, the stored text contains no occurrence of `sha256`, `checksum` or
-> `PDF`. Until it is pasted, the manual's PDF is still not being checked, which
-> is how a reversed permission rule went unnoticed for four days (see
-> `enisa-defect-report.md` G26). The same paste also carries the eleventh page
-> below, and one stale word in section 4 ("hourly" → "daily", describing the
-> domain routine's cadence). Section 1a was checked for angle brackets and has
-> none, so the paste-path stripping described further down does not apply.
+> **Why the loader exists.** This prompt drifted from its mirror four times in four weeks: three stale "pending" notes, an eleventh page and a whole section that were never pasted, and a cron documented wrongly for a week. Every one was the same fault - the text that runs lives on the platform and a copy lives here. The loader removes the second copy.
 >
-> **Cadence: resolved, nothing outstanding.** The monitor ran hourly
-> (`0 * * * *`) from 2026-09-07 through 2026-09-14 — 89 dated change-log
-> entries in that window, 38 in the last five days. A revert to `0 5 * * 1` was
-> documented on 2026-09-14 but never applied; the live cron has been
-> `4 6 * * *` throughout, and daily is now the intended cadence. No cron change
-> is pending. The silence-on-no-change rule, the UTC time in a same-day
-> heading, and 429/5xx-as-failure (sections 1 and 4) hold at any cadence.
->
-> **The 2026-09-07 paste is otherwise live and verified** — read back from the
-> Routine and diffed against this file: same sections, same rules, 0.998
-> word-level match, the remainder being markdown the UI strips. The one loss
-> was three `<placeholder>` markers in the closing report line, eaten as if
-> they were HTML tags; the placeholders here are square brackets now, which
-> survive.
->
-> An agent cannot update this Routine — `update_trigger` and `fire_trigger`
-> both refuse it, because it was created via `http_api`. Prompt and schedule
-> alike are a manual step.
->
-> **Pages 7, 9 and 10 are live — those pastes were done.** This file carried
-> three "pending" notes for the PEC guidance page (found 2026-09-08) and the
-> AR User Manual and Terms and Conditions pages (found 2026-09-10). Reading the
-> Routine back on 2026-09-21 shows all three listed in the stored prompt, which
-> now reads "all ten". The notes were stale and have been removed.
->
-> **The eleventh page is genuinely still missing from the live prompt.** "CRA
-> SRP - AR User Tutorial Video" (found 2026-09-11) is in
-> `enisa-srp-faq-baseline.md` as `ar_user_tutorial_video_url` and is listed as
-> page 11 in section 1 below, but the stored prompt still says "all ten" and
-> does not name it. In practice this has cost nothing: section 1 tells the run
-> that the frontmatter URL list wins over its own list, and the runs do report
-> 11/11 pages checked. It rides along with the section 1a paste above.
->
-> That self-healing is worth not over-trusting. It works because every page so
-> far has been reachable from a frontmatter key the prompt already knows to
-> read. A change that is *not* just a new URL — a new rule, a new file to
-> check, section 1a being the case in point — does not heal itself and stays
-> broken until pasted.
+> **History worth keeping.** The cadence was hourly from 2026-09-07 to 2026-09-14 (89 change-log entries, 38 in the last five days). A revert to weekly was documented and never applied, and daily was confirmed as intended on 2026-09-21 - it is what caught FAQ Q32 within hours. The silence-on-no-change rule, the UTC time in a same-day heading, and 429/5xx-as-failure hold at any cadence. Placeholders are written in square brackets because the Routines UI paste path strips anything that looks like an HTML tag.
 
 ---
 
@@ -213,6 +169,8 @@ Never invent a change and never open an empty PR. This silence applies only when
 Only if something actually changed. Commit with a message naming what changed. Push with `git push -u origin HEAD`, retrying up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network errors only.
 
 If the push fails for lack of credentials (403), do NOT try to route around it — no workarounds, no alternate remotes, no GitHub MCP fallback. Leave the commit on the local branch and report that the push failed, with the exact error AND the branch name you pushed to, so a mismatch with this Routine's configured repository outcome can be spotted.
+
+Before merging, run `python3 tools/scope_guard.py enisa-srp-faq-baseline.md enisa-srp-glossary-baseline.md`. If it exits 1 your change touches something outside this routine's scope: leave the PR open, do not merge it, and say so.
 
 Otherwise open a pull request as a draft, then mark it ready for review and merge it yourself immediately. This is the standing convention recorded in CLAUDE.md — do not leave the PR waiting for approval. It applies only to PRs that touch `enisa-srp-faq-baseline.md` and/or `enisa-srp-glossary-baseline.md` alone. If your change touches anything else — including `CLAUDE.md` or anything under `srp-domains/` — leave that PR open, do not merge it, and say so.
 
