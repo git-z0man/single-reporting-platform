@@ -1,0 +1,311 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42016"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-42016",
+  "cwes": [
+   "CWE-863"
+  ],
+  "dateAdded": "2026-09-11",
+  "dueDate": "2026-09-25",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories ; https://docs.jfrog.com/releases/docs/artifactory-self-managed-releases ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-42016",
+  "product": "Artifactory",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "JFrog Artifactory contains an incorrect authorization vulnerability that leads to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+  "vendorProject": "JFrog",
+  "vulnerabilityName": "JFrog Artifactory Incorrect Authorization Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-42016\nGHSA-58cv-8cfm-c8r8\n",
+  "assigner": "JFROG",
+  "baseScore": 8.1,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Jul 27, 2026, 7:20:56 PM",
+  "dateUpdated": "Sep 12, 2026, 3:55:20 AM",
+  "description": "JFrog Artifactory (Self Hosted) versions before 7.133.11 are vulnerable to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "4f481187-6603-3368-bef0-0be8e0b28db3",
+       "product": {
+        "name": "Artifactory",
+        "vendor": {
+         "name": "JFrog"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-42016\nCVE-2026-42017\nCVE-2026-65616\nCVE-2026-65617\nCVE-2026-65618\nCVE-2026-65921\nCVE-2026-65922\nCVE-2026-65923\nCVE-2026-65924\nCVE-2026-65925\nCVE-2026-66014\nCVE-2026-66015\nCVE-2026-66018\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 31, 2026, 8:51:36 AM",
+     "dateUpdated": "Jul 31, 2026, 8:51:36 AM",
+     "description": "Kwetsbaarheden verholpen in JFrog Artifactory",
+     "id": "NCSC-2026-0272",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "4b1f8516-0e88-301c-8237-051587eb2b96"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "5a0fcfc7-e7f3-3055-ae36-bdb2c208712b",
+    "product": {
+     "name": "Artifactory",
+     "vendor": {
+      "name": "JFrog"
+     }
+    },
+    "product_version": "0 <7.133.11"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "e4c0db7c-3f7a-3a6a-a6c4-23c56c975b1a",
+    "vendor": {
+     "name": "JFrog"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "0ec09a19-2339-399c-9b3c-d3aa1a4ea7d1",
+    "vulnerability": {
+     "assigner": "JFROG",
+     "baseScore": 8.1,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:33:08 AM",
+     "datePublished": "Jul 27, 2026, 7:20:56 PM",
+     "dateUpdated": "Sep 12, 2026, 3:55:20 AM",
+     "description": "JFrog Artifactory (Self Hosted) versions before 7.133.11 are vulnerable to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+     "enisa_id": "EUVD-2026-49566\n",
+     "epss": 8.64,
+     "exploitedSince": "Sep 11, 2026, 12:00:00 AM",
+     "id": "CVE-2026-42016",
+     "references": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories\nhttps://docs.jfrog.com/releases/docs/artifactory-self-managed-releases\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "ad6c76dc-c788-3bb7-86a4-c86053b6e0f9",
+       "product": {
+        "name": "Artifactory",
+        "vendor": {
+         "name": "JFrog"
+        }
+       },
+       "product_version": "0 <7.133.11"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "2d2ba15b-c849-3707-bc5b-79fcd8348afe",
+       "vendor": {
+        "name": "JFrog"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "805b9ee7-eca2-34ec-b5a2-fbca6e6b3925",
+    "vulnerability": {
+     "aliases": "CVE-2026-42016\nGHSA-58cv-8cfm-c8r8\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:53:46 AM",
+     "datePublished": "Jul 27, 2026, 9:31:21 PM",
+     "dateUpdated": "Sep 11, 2026, 9:31:06 PM",
+     "description": "JFrog Artifactory (Self Hosted) versions before 7.133.11 are vulnerable to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+     "enisa_id": "EUVD-2026-49566\n",
+     "epss": 0.0,
+     "id": "GHSA-58cv-8cfm-c8r8",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-42016\nhttps://docs.jfrog.com/releases/docs/artifactory-self-managed-releases\nhttps://docs.jfrog.com/releases/docs/jfrog-security-advisories\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42016\nhttps://www.wiz.io/blog/artifactory-under-attack-in-the-wild-exploitation-of-cve-2026-42016-cve-2026-4201\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "7e2f0ed6-19d3-3670-bc2a-e2f240ef18cd",
+  "epss": 8.64,
+  "exploitedSince": "Sep 11, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-49566",
+  "references": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories\nhttps://docs.jfrog.com/releases/docs/artifactory-self-managed-releases\n"
+ },
+ "id": "EUVD-2026-49566",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "artifactory",
+      "vendor": "jfrog",
+      "versions": [
+       {
+        "lessThan": "7.133.11",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "reefs@jfrog.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-25",
+  "cisaExploitAdd": "2026-09-11",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "JFrog Artifactory Incorrect Authorization Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
+        "matchCriteriaId": "817DC3BE-A8A2-42D7-9407-2BA24639E9A0",
+        "versionEndExcluding": "7.133.11",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "JFrog Artifactory (Self Hosted) versions before 7.133.11 are vulnerable to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope."
+   }
+  ],
+  "id": "CVE-2026-42016",
+  "lastModified": "2026-09-12T04:16:32.483",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 8.1,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.2,
+     "source": "reefs@jfrog.com",
+     "type": "Secondary"
+    },
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-42016",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-11T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-07-27T20:16:39.613",
+  "references": [
+   {
+    "source": "reefs@jfrog.com",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://docs.jfrog.com/releases/docs/artifactory-self-managed-releases"
+   },
+   {
+    "source": "reefs@jfrog.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42016"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://www.wiz.io/blog/artifactory-under-attack-in-the-wild-exploitation-of-cve-2026-42016-cve-2026-4201"
+   }
+  ],
+  "sourceIdentifier": "reefs@jfrog.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-863"
+     }
+    ],
+    "source": "reefs@jfrog.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

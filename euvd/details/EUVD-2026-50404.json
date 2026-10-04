@@ -1,0 +1,2026 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20316"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-20316",
+  "cwes": [
+   "CWE-259"
+  ],
+  "dateAdded": "2026-07-29",
+  "dueDate": "2026-08-01",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Known",
+  "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-BET3Cjh ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-20316",
+  "product": "Secure Firewall Management Center (FMC)",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Cisco Secure Firewall Management Center (FMC) formerly known as Firepower Management Center contains a use of hard-coded password vulnerability that could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.",
+  "vendorProject": "Cisco",
+  "vulnerabilityName": "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-20316\nGHSA-x85f-hvgg-4944\n",
+  "assigner": "cisco",
+  "baseScore": 5.3,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Jul 29, 2026, 4:22:08 PM",
+  "dateUpdated": "Sep 16, 2026, 8:14:18 PM",
+  "description": "A vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.\r\n\r\nThis vulnerability is due to the presence of static user credentials for a low-privileged&nbsp;account. An attacker could exploit this vulnerability by using the account to log in to an affected system. A successful exploit could allow the attacker to log in to the affected system and access sensitive data as the low-privileged user.&nbsp;\r\nNote:&nbsp;If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced.&nbsp;&nbsp;\r\nCisco has assigned this security advisory a Security Impact Rating (SIR) of High rather than Medium as the score indicates. The reason is that this vulnerability can be used with other Cisco Secure FMC Software vulnerabilities to elevate privileges.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "367aa434-f935-35f6-9a9d-30217f01badb",
+       "product": {
+        "name": "7.3",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
+       "id": "3c7e9ef7-94f7-3cbe-a23f-02abf2ba645b",
+       "product": {
+        "name": "7.0",
+        "vendor": {
+         "name": "Automated Logic"
+        }
+       }
+      },
+      {
+       "id": "4a066f7e-85a0-3569-805a-b8f02c421874",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC) Appliances",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "4d0ca91a-ed8b-32a2-ae46-c042b4ccd9d5",
+       "product": {
+        "name": "7.4",
+        "vendor": {
+         "name": "AVEVA Software, LLC"
+        }
+       }
+      },
+      {
+       "id": "5b801e04-e6b5-3d07-b82b-6d2bd0a31764",
+       "product": {
+        "name": "7.6",
+        "vendor": {
+         "name": "OpenBSD"
+        }
+       }
+      },
+      {
+       "id": "9e6b8d07-00de-3bfe-b4a3-4b5feeaa9d61",
+       "product": {
+        "name": "7.7",
+        "vendor": {
+         "name": "OpenBSD"
+        }
+       }
+      },
+      {
+       "id": "a21b2f71-95a3-340f-80e4-a65d2135a28d",
+       "product": {
+        "name": "10.0",
+        "vendor": {
+         "name": "General Electric (GE)"
+        }
+       }
+      },
+      {
+       "id": "ea528982-c05d-3a42-8c4e-8e4c0a615f1a",
+       "product": {
+        "name": "7.2",
+        "vendor": {
+         "name": "Advantech"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-20316\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 29, 2026, 4:00:00 PM",
+     "dateUpdated": "Sep 16, 2026, 4:05:47 PM",
+     "description": "Cisco Secure Firewall Management Center Software Static Credential Vulnerability",
+     "id": "cisco-sa-fmc-static-cred-BET3Cjh",
+     "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-BET3Cjh\n",
+     "source": {
+      "id": 10,
+      "name": "csaf_cisco"
+     },
+     "summary": "A vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.\r\n\r\nThis vulnerability is due to the presence of static user credentials for a low-privileged account. An attacker could exploit this vulnerability by using the account to log in to an affected system. A successful exploit could allow the attacker to log in to the affected system and access sensitive data as the low-privileged user.\r\n\r\nNote: If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced.\r\n\r\nCisco has assigned this security advisory a Security Impact Rating (SIR) of High rather than Medium as the score indicates. The reason is that this vulnerability can be used with other Cisco Secure FMC Software vulnerabilities to elevate privileges.\r\n\r\nCisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.\r\n\r\n\r\n\r\nThis advisory is part of a group of advisories. For a complete list of the advisories and links to them, see Cisco Advance Notification for Publication of September 16, 2026, Security Advisories [\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-notice-jfxK98ZP\"]. In addition, for further documentation of improvements and fixes in Cisco Secure Firewall products, see Cisco Secure Firewall Adaptive Security Appliance Software, Secure Firewall Threat Defense Software, and Secure Firewall Management Center Software Hardening Release: September 2026 [\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-asaftdfmc-uvpPROhN\"]."
+    },
+    "id": "df72e621-ad06-3fce-b51c-fc8bb00bfe9c"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "b1db65a4-d283-31b0-b0ff-107aaf940942",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "ba6772c1-238a-3168-88ad-f0f7f8c284f4",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC) Appliances",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-20316\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 30, 2026, 6:20:48 AM",
+     "dateUpdated": "Sep 11, 2026, 2:54:01 PM",
+     "description": "Kwetsbaarheid verholpen in Cisco Secure Firewall Management Center",
+     "id": "NCSC-2026-0271",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "ed060ba0-3dc3-34f4-b02d-88f10ebaa668"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "061c9d7e-ca96-3a04-9e18-5bd9fecabeff",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.4.1"
+   },
+   {
+    "id": "073ea4cb-855e-3542-a854-f5d868d2303e",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.8"
+   },
+   {
+    "id": "0abca5d0-546a-3932-9a61-6dc998d5a70b",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.6.2"
+   },
+   {
+    "id": "107003d4-aa7a-3e13-8e05-d7f459dbe00f",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.2.1"
+   },
+   {
+    "id": "15996c7d-a4d5-37be-8bb4-a8c448ecf5c7",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.7.12"
+   },
+   {
+    "id": "163712ef-28d0-3c82-96a2-ea9d0dacf368",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.4"
+   },
+   {
+    "id": "170fbe5d-fb90-30bc-9b41-b08a230eef89",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.10.2"
+   },
+   {
+    "id": "17980e9e-f2d9-3ac4-a1e2-3413572930e2",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.2.4"
+   },
+   {
+    "id": "2b66d740-6371-33b7-80f2-f12c43e39551",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.6"
+   },
+   {
+    "id": "345cbe2e-b549-3722-a0af-d1397fbc4813",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.3.1"
+   },
+   {
+    "id": "35758190-8181-3bf8-930f-78ade3568b3e",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.3"
+   },
+   {
+    "id": "3742749c-0427-30c3-bc95-ca0783785494",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.3"
+   },
+   {
+    "id": "3e5e021b-48d8-30bf-884f-777ceb643e08",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.9"
+   },
+   {
+    "id": "3f052ac1-bab4-3103-aabc-9b43afb2d81f",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.10.1"
+   },
+   {
+    "id": "4c167874-7e77-35ab-8309-c7a2996b1b05",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.3.1"
+   },
+   {
+    "id": "4c9432d3-4d8b-3df5-80c4-aac5158f08e3",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.7.10.1"
+   },
+   {
+    "id": "4cc10673-8b19-3bfb-9eff-4710f1b7f9dd",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.0.1"
+   },
+   {
+    "id": "4e5302c6-082c-32c6-81ca-d471c6115dcc",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.7.11"
+   },
+   {
+    "id": "5036d5f5-b703-3672-9308-ab976ffe79c0",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.0"
+   },
+   {
+    "id": "5301eec7-cf0e-33f8-845f-19d31baa89a5",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.7"
+   },
+   {
+    "id": "546abdfa-1a6a-32a4-b3f9-abd29d82d57d",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.1.1"
+   },
+   {
+    "id": "5516b127-1960-3372-938e-b2b1ad795425",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "10.0.0"
+   },
+   {
+    "id": "59d7e989-8431-38fe-a4f1-e5b40b8b5f0c",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.1"
+   },
+   {
+    "id": "63fec3e5-d1ce-32c0-8032-5eb78f66aeae",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.2.1"
+   },
+   {
+    "id": "645fe58d-ad71-3106-b1c9-54255f9f6878",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.2.1"
+   },
+   {
+    "id": "67cb7c58-e6ea-3fcd-9fa7-1c5df0efdfb6",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.1"
+   },
+   {
+    "id": "68ee598f-0e42-335a-b4b5-9d2a13abe7ad",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.4"
+   },
+   {
+    "id": "6a47c126-cdef-32d5-be4f-818091eec555",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.0"
+   },
+   {
+    "id": "6ff20803-0587-3822-aafd-f63018569c99",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.2.3"
+   },
+   {
+    "id": "702f73aa-d46d-3850-a42f-2052e58aac27",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.5"
+   },
+   {
+    "id": "73556af6-8688-3879-99ef-f10041fc1e46",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.10"
+   },
+   {
+    "id": "73a638c1-09f1-3522-8bc9-6a9fa752e336",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.6.1"
+   },
+   {
+    "id": "7605e477-72d0-3091-822f-f0ab3394122c",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.3"
+   },
+   {
+    "id": "79de5aab-162b-30db-b1d4-27f9b7a9dfe9",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.1"
+   },
+   {
+    "id": "7aadb2c8-a75f-3609-b3ab-e59de2fa2729",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.2"
+   },
+   {
+    "id": "7cc69aba-6453-33c9-9a60-59e5a7e2c75e",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.3.0"
+   },
+   {
+    "id": "850c147d-991e-33c1-8b97-cdac6891bb73",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.2"
+   },
+   {
+    "id": "86340ade-97bc-380c-b5f5-df601c17289f",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.2.2"
+   },
+   {
+    "id": "86bd8321-7bd2-3154-93a6-76023d348c3f",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.0.1"
+   },
+   {
+    "id": "9a2ac516-ec01-33a9-b690-cb5f29226473",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.5.1"
+   },
+   {
+    "id": "9b41fbea-21e1-3e51-9291-279a92627c2d",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.6"
+   },
+   {
+    "id": "9e1562db-4d9e-3d62-a7ff-812b4518c889",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.1.1"
+   },
+   {
+    "id": "a0ba9052-c155-3570-a29f-05c55ca8abdb",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.8.1"
+   },
+   {
+    "id": "a202f5c4-0489-3aa3-bec8-69fe9c71b102",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.8.1"
+   },
+   {
+    "id": "a2dc6149-4e3a-3c88-b671-52ca355be35c",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.4"
+   },
+   {
+    "id": "a55b9187-28c7-33d9-bc44-64e5c585e9d0",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.5"
+   },
+   {
+    "id": "ae448408-2709-3779-8b04-3b35f442f216",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.3"
+   },
+   {
+    "id": "aea06df2-ea43-3a96-9efc-a1e2d7945422",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.6"
+   },
+   {
+    "id": "b93e098a-ac06-3cd2-8a86-7a5b6abdf23f",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "10.0.1"
+   },
+   {
+    "id": "b9c7b775-b669-3c2b-8daa-89cf65ee6a1f",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.6.3"
+   },
+   {
+    "id": "bc12ffa0-0eb0-38d4-bfc2-4a37c09c1850",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.4"
+   },
+   {
+    "id": "bc4db371-e4ab-3cad-9223-ab73c2635e1f",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.8"
+   },
+   {
+    "id": "c47a1c61-5ee5-3fe0-a71c-42d529a31356",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.7.0"
+   },
+   {
+    "id": "c7dd2b52-b646-3b0b-806d-a1d27a24ddc5",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.11"
+   },
+   {
+    "id": "c8c5abb4-203a-35b1-8b2b-c73a0143d3bf",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.0"
+   },
+   {
+    "id": "cfae81f4-3280-321d-b5cf-cb390a69618a",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.5.2"
+   },
+   {
+    "id": "da733f49-8f9e-317a-a991-c754c46fcfd9",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.2"
+   },
+   {
+    "id": "dc5f2f49-34ca-31b7-8ee7-4a571a94f72c",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.0"
+   },
+   {
+    "id": "e07cfbfd-a140-3bba-9e3c-7932266befdc",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.2"
+   },
+   {
+    "id": "e132b265-cd19-3f01-9aa1-666065daf123",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.7"
+   },
+   {
+    "id": "e8794d01-a507-3617-a211-43d2d09a1a77",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.7.10"
+   },
+   {
+    "id": "f4f8fd4a-cdff-3fdc-bbe2-19950822d79a",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.7"
+   },
+   {
+    "id": "f82bd7e1-5b26-353c-bc09-8c19fc26cb35",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.5"
+   },
+   {
+    "id": "f92a553b-9f9e-3c2e-9bcd-f7bd3dfbe8a3",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.5"
+   },
+   {
+    "id": "fd297c07-c376-382f-bf0d-318abe8c6343",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.9"
+   },
+   {
+    "id": "fde28344-4f55-3d18-8305-85881cf6e4bb",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.3.1.2"
+   },
+   {
+    "id": "fea3c5f8-4155-3807-81d4-4b095e20265c",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.1"
+   },
+   {
+    "id": "febcc65c-1f7c-3171-bc06-464ef96e0724",
+    "product": {
+     "name": "Cisco Secure Firewall Management Center (FMC)",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.3.1.1"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "815e7e86-a862-374e-b847-1a25bf98f9a9",
+    "vendor": {
+     "name": "Cisco"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "9202c754-9515-31bb-aa80-1c174cd01907",
+    "vulnerability": {
+     "aliases": "GHSA-x85f-hvgg-4944\nCVE-2026-20316\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:53:46 AM",
+     "datePublished": "Jul 29, 2026, 6:31:40 PM",
+     "dateUpdated": "Jul 29, 2026, 9:30:59 PM",
+     "description": "A vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.\n\nThis vulnerability is due to the presence of static user credentials for a low-privileged&nbsp;account. An attacker could exploit this vulnerability by using the account to log in to an affected system. A successful exploit could allow the attacker to log in to the affected system and access sensitive data as the low-privileged user.&nbsp;\nNote:&nbsp;If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced.&nbsp;&nbsp;\nCisco has assigned this security advisory a Security Impact Rating (SIR) of High rather than Medium as the score indicates. The reason is that this vulnerability can be used with other Cisco Secure FMC Software vulnerabilities to elevate privileges.",
+     "enisa_id": "EUVD-2026-50404\n",
+     "epss": 0.0,
+     "id": "GHSA-x85f-hvgg-4944",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-20316\nhttps://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-BET3Cjh\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20316\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "c93718d3-2a4c-367f-988c-9f2c4b9c4af6",
+    "vulnerability": {
+     "assigner": "cisco",
+     "baseScore": 5.3,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:36:20 AM",
+     "datePublished": "Jul 29, 2026, 4:22:08 PM",
+     "dateUpdated": "Sep 16, 2026, 8:14:18 PM",
+     "description": "A vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.\r\n\r\nThis vulnerability is due to the presence of static user credentials for a low-privileged&nbsp;account. An attacker could exploit this vulnerability by using the account to log in to an affected system. A successful exploit could allow the attacker to log in to the affected system and access sensitive data as the low-privileged user.&nbsp;\r\nNote:&nbsp;If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced.&nbsp;&nbsp;\r\nCisco has assigned this security advisory a Security Impact Rating (SIR) of High rather than Medium as the score indicates. The reason is that this vulnerability can be used with other Cisco Secure FMC Software vulnerabilities to elevate privileges.",
+     "enisa_id": "EUVD-2026-50404\n",
+     "epss": 35.1,
+     "exploitedSince": "Jul 29, 2026, 12:00:00 AM",
+     "id": "CVE-2026-20316",
+     "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-BET3Cjh\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "108fa284-3b3f-3683-b6d3-a55aaf3acff9",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.2"
+      },
+      {
+       "id": "1169bb63-cc19-30f3-aa93-a12c5a421f0a",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.8"
+      },
+      {
+       "id": "1185b747-883d-3732-882d-79fb6e15530a",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.0"
+      },
+      {
+       "id": "22c473d2-544a-3ae2-b892-d7d8868c34ed",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.0.1"
+      },
+      {
+       "id": "237afaaf-b6c0-323e-81d4-cd68e4a89427",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.2"
+      },
+      {
+       "id": "2795e294-458e-33b7-96f9-436d6362ae35",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.3.0"
+      },
+      {
+       "id": "2b442082-3b73-366e-9b7a-d6e312baff4c",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.5"
+      },
+      {
+       "id": "2cfc4d62-4017-3592-a83f-c2b0677dd32c",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.2.1"
+      },
+      {
+       "id": "2e5a84dc-cad1-3c3a-af9f-0f8c4c323633",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.6.3"
+      },
+      {
+       "id": "2fb15060-5579-3ce7-b1f2-5dfadf778f07",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.2"
+      },
+      {
+       "id": "3119293d-f0f8-3a4a-ac41-51bb9e9ade52",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.0"
+      },
+      {
+       "id": "3194ce04-e6be-3a4e-8202-4c86ade12128",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.8.1"
+      },
+      {
+       "id": "31f8f4eb-665c-323c-bb9c-b75b2d43a24a",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.3"
+      },
+      {
+       "id": "33f013a2-8b18-3ac9-9a53-4912c807da20",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "10.0.1"
+      },
+      {
+       "id": "351254ff-cd10-3a3b-a740-fec25025aeef",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.9"
+      },
+      {
+       "id": "36eaf715-84b5-3ed1-a8d4-6795a6c8b08e",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.3.1.1"
+      },
+      {
+       "id": "399c7650-b6af-3fcc-85e9-0f7b35013333",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.5"
+      },
+      {
+       "id": "3f1c0557-7e32-3109-a8e4-456421296dde",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.4"
+      },
+      {
+       "id": "5100845c-a3c5-3a40-bad9-bfc7636674ce",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.7.12"
+      },
+      {
+       "id": "52893d0d-ba8e-374d-8e02-59b495b41468",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.0"
+      },
+      {
+       "id": "5abd17b2-1eaf-3154-af47-f94430fcac27",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.3"
+      },
+      {
+       "id": "5e323e5e-8868-3d20-8d3b-99725718c7a3",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.3"
+      },
+      {
+       "id": "5ef308c0-27c4-3f36-97a3-71ead465f08b",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.7.11"
+      },
+      {
+       "id": "6048270e-d992-309a-ac8f-13f9d23ac7fc",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.6.1"
+      },
+      {
+       "id": "63696eed-3132-32c6-962d-e97e6c32aacb",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.1.1"
+      },
+      {
+       "id": "6713499c-1143-36ba-8a0e-9383dc598018",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.4"
+      },
+      {
+       "id": "67b8be4d-4527-3b88-a001-09f0b4fcd293",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.5.1"
+      },
+      {
+       "id": "685d6022-cd39-3bdd-b671-643adf96c431",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.0.1"
+      },
+      {
+       "id": "6bacc3c8-e036-3329-8533-2524b855019e",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.2"
+      },
+      {
+       "id": "6cd00734-9596-300b-8c41-2567b4fc04b7",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.6"
+      },
+      {
+       "id": "6faca2ea-a670-32e5-a87d-88df1d489cdd",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.4"
+      },
+      {
+       "id": "7021cd82-1372-3c7e-a99b-c227ba5fd1ff",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.0"
+      },
+      {
+       "id": "71229987-c25d-3b76-a4d5-87cf9ca753e0",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.7.10.1"
+      },
+      {
+       "id": "789eec48-e648-3133-95aa-b6d92c26b3ac",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.7"
+      },
+      {
+       "id": "7cd912f0-2450-32d1-9eee-26ac084eec18",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.7.0"
+      },
+      {
+       "id": "7f40415e-d1e1-3a76-a152-d47311382833",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.4.1"
+      },
+      {
+       "id": "862b2b25-6085-32bc-85bb-d78426578f56",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.1.1"
+      },
+      {
+       "id": "89159a03-e72f-3ab6-b7ac-68edbad7e63a",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.2.4"
+      },
+      {
+       "id": "8b7621aa-7167-3217-ac34-a7f2f6af61cc",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.3.1"
+      },
+      {
+       "id": "8bb60770-8cb7-3460-b5c5-bf53c190b05d",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.7.10"
+      },
+      {
+       "id": "91c2dd60-da11-3cfa-9e4a-a2078a755aa9",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.5"
+      },
+      {
+       "id": "95bbd39a-5ec7-32fb-b089-86cdb9c71b27",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.7"
+      },
+      {
+       "id": "a000c40d-c7ae-3ad5-8321-f9cb52aa2749",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.2.2"
+      },
+      {
+       "id": "a318a90f-0f30-3977-af34-57600f085e34",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.6"
+      },
+      {
+       "id": "a8504667-ba30-3de0-b8d8-9e40122aaefa",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.3"
+      },
+      {
+       "id": "b0792598-8674-3489-9713-904b76ab7259",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.8.1"
+      },
+      {
+       "id": "be6f797a-066f-346d-b6f5-6b42438ae994",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.1"
+      },
+      {
+       "id": "c4a39e1a-1390-3f9d-b535-eb21389574d9",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.5.2"
+      },
+      {
+       "id": "ccb30ee4-a9f8-311f-96ed-16db56e23840",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.7"
+      },
+      {
+       "id": "d0f16bc9-ddb0-31ec-ac9d-9733d35e4fc6",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.1"
+      },
+      {
+       "id": "d3750516-2766-316d-b825-1fc13014d129",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.9"
+      },
+      {
+       "id": "d6d881ba-f2a2-365f-9863-bd7beab34c4e",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.11"
+      },
+      {
+       "id": "d751ef81-298e-3d73-84ac-b8fd5fab4a8f",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.3.1"
+      },
+      {
+       "id": "d8794b24-34f7-34d6-8cae-602c992a8395",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.10.1"
+      },
+      {
+       "id": "d8eea17d-be84-3eac-85f4-378f9c9f420b",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.10"
+      },
+      {
+       "id": "dadfe4b1-e923-33f7-9504-3c78d3ab28c9",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.8"
+      },
+      {
+       "id": "dee1bd9d-3ac6-39a3-aa7b-64abcda6e4d9",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.2.1"
+      },
+      {
+       "id": "e1e96ba0-9970-3a39-b94f-c670aa7acf7b",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.10.2"
+      },
+      {
+       "id": "e49700ca-af8c-3908-adb6-25149ea146b0",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "10.0.0"
+      },
+      {
+       "id": "e96b6334-c24f-31aa-bff6-45fd73344916",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.2.3"
+      },
+      {
+       "id": "eccc00f1-0098-3c7b-a6c1-bfe6c2ed5acf",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.6.2"
+      },
+      {
+       "id": "efc15c9b-1d1d-3413-b42b-f4ea7bce1245",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.6"
+      },
+      {
+       "id": "efecfdef-d22b-3121-a6fc-5d65031212b2",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.5"
+      },
+      {
+       "id": "f42c573e-c36b-3004-9f59-3b28086674e7",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.1"
+      },
+      {
+       "id": "f638fc6c-04cb-3984-952e-9a1285a36d3a",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.2.1"
+      },
+      {
+       "id": "f926b3e3-886f-3db9-bf9c-a950721a8e38",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.1"
+      },
+      {
+       "id": "fd8d9a4a-28ea-374b-858e-00fb0d6c4d08",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.3.1.2"
+      },
+      {
+       "id": "fe782399-2391-375f-b885-d6ccf1372c80",
+       "product": {
+        "name": "Cisco Secure Firewall Management Center (FMC)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.4"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "c6e9178f-02dc-3ade-9874-dc3e248b7372",
+       "vendor": {
+        "name": "Cisco"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "1b67464c-342a-33a5-a841-1b542494100c",
+  "epss": 35.1,
+  "exploitedSince": "Jul 29, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-50404",
+  "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-BET3Cjh\n"
+ },
+ "id": "EUVD-2026-50404",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "Cisco Secure Firewall Management Center (FMC)",
+      "vendor": "Cisco",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "7.0.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.0.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.1.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.2.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.3"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.0.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.4"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.5"
+       },
+       {
+        "status": "affected",
+        "version": "7.3.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.3.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.3"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.3.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.4"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.6"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.4.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.5"
+       },
+       {
+        "status": "affected",
+        "version": "7.3.1.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.6.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.5.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.6"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.1.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.6.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.7"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.5.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.3.1.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.8"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.8.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.6.3"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.2.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.9"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.7"
+       },
+       {
+        "status": "affected",
+        "version": "7.7.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.2.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.10"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.2.3"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.8"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.7.10"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.10.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.8.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.2.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.10.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.7.10.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.2.4"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.3"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.3"
+       },
+       {
+        "status": "affected",
+        "version": "7.7.11"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.4"
+       },
+       {
+        "status": "affected",
+        "version": "10.0.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.4"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.5"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.9"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.11"
+       },
+       {
+        "status": "affected",
+        "version": "7.7.12"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.5"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.6"
+       },
+       {
+        "status": "affected",
+        "version": "10.0.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.7"
+       }
+      ]
+     }
+    ],
+    "source": "psirt@cisco.com"
+   }
+  ],
+  "cisaActionDue": "2026-08-01",
+  "cisaExploitAdd": "2026-07-29",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7DFD0173-E045-4EF0-BC97-45BBFCFA1502",
+        "versionEndIncluding": "7.0.9",
+        "versionStartIncluding": "7.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "9DBBB745-D7D2-4E11-ACC7-CE880B066D1E",
+        "versionEndIncluding": "7.2.11",
+        "versionStartIncluding": "7.2.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5CA67B3C-60F2-4373-81B6-FCA063518CB1",
+        "versionEndIncluding": "7.3.1.2",
+        "versionStartIncluding": "7.3.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "CD49AB20-6E0A-4C1A-A775-D2EEA55D45D8",
+        "versionEndIncluding": "7.4.7",
+        "versionStartIncluding": "7.4.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "9340872F-6A25-467A-BC63-957E1B7E817D",
+        "versionEndIncluding": "7.6.5",
+        "versionStartIncluding": "7.6.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "BF37EF84-93E8-4D2F-BFEF-7754B74D1E3F",
+        "versionEndIncluding": "7.7.12",
+        "versionStartIncluding": "7.7.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7A5384FA-2700-4284-8AAD-27B8923732F3",
+        "versionEndIncluding": "10.0.1",
+        "versionStartIncluding": "10.0.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.\r\n\r\nThis vulnerability is due to the presence of static user credentials for a low-privileged&nbsp;account. An attacker could exploit this vulnerability by using the account to log in to an affected system. A successful exploit could allow the attacker to log in to the affected system and access sensitive data as the low-privileged user.&nbsp;\r\nNote:&nbsp;If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced.&nbsp;&nbsp;\r\nCisco has assigned this security advisory a Security Impact Rating (SIR) of High rather than Medium as the score indicates. The reason is that this vulnerability can be used with other Cisco Secure FMC Software vulnerabilities to elevate privileges."
+   }
+  ],
+  "id": "CVE-2026-20316",
+  "lastModified": "2026-09-16T21:17:10.150",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 5.3,
+      "baseSeverity": "MEDIUM",
+      "confidentialityImpact": "LOW",
+      "integrityImpact": "NONE",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 1.4,
+     "source": "psirt@cisco.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-20316",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-07-29T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-07-29T17:16:51.840",
+  "references": [
+   {
+    "source": "psirt@cisco.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-BET3Cjh"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20316"
+   }
+  ],
+  "sourceIdentifier": "psirt@cisco.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-259"
+     }
+    ],
+    "source": "psirt@cisco.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

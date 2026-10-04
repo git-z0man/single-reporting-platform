@@ -1,0 +1,466 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85706"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-85706",
+  "cwes": [
+   "CWE-35"
+  ],
+  "dateAdded": "2026-09-11",
+  "dueDate": "2026-09-14",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-3-2-released/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-85706",
+  "product": "Community Edition and Enterprise Edition",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "GitLab Community Edition and Enterprise Edition contains a path traversal vulnerability that allows an unauthenticated user to read arbitrary files due to an improper path confinement and missing authentication enforcement in the repository commits API.",
+  "vendorProject": "GitLab",
+  "vulnerabilityName": "GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-85706\nGHSA-f47w-mrg9-g9p2\n",
+  "assigner": "GitLab",
+  "baseScore": 10.0,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 12, 2026, 2:46:31 AM",
+  "dateUpdated": "Sep 23, 2026, 9:03:18 PM",
+  "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.7 before 18.11.12, 19.0 before 19.0.9, 19.1 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that, under certain conditions, an unauthenticated user could have read arbitrary files from the GitLab server due to improper path confinement and missing authentication enforcement in the repository commits API.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0554a40a-ff8f-389a-8d45-17747d670904",
+       "product": {
+        "name": "Community Edition and Enterprise Edition",
+        "vendor": {
+         "name": "GitLab"
+        }
+       }
+      },
+      {
+       "id": "47f378c9-9068-33dc-9a17-092184e1ff99",
+       "product": {
+        "name": "GitLab",
+        "vendor": {
+         "name": "GitLab"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-85706\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 12, 2026, 8:15:31 AM",
+     "dateUpdated": "Sep 12, 2026, 8:15:31 AM",
+     "description": "Kwetsbaarheid verholpen in GitLab Community en Enterprise Editions",
+     "id": "NCSC-2026-0367",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "3b63637e-0fd8-30ba-9ff4-8a03cd487c01"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "474ccca7-232e-395f-b037-933eb92ac42d",
+    "product": {
+     "name": "GitLab",
+     "vendor": {
+      "name": "GitLab"
+     }
+    },
+    "product_version": "19.1 <19.1.8"
+   },
+   {
+    "id": "65313054-e80e-3f01-aadc-e50966b6687d",
+    "product": {
+     "name": "GitLab",
+     "vendor": {
+      "name": "GitLab"
+     }
+    },
+    "product_version": "19.3 <19.3.2"
+   },
+   {
+    "id": "70c6c47b-f654-3ac6-af52-8cd08f202936",
+    "product": {
+     "name": "GitLab",
+     "vendor": {
+      "name": "GitLab"
+     }
+    },
+    "product_version": "19.0 <19.0.9"
+   },
+   {
+    "id": "87370baf-644f-3ae0-aee9-3d232113b33a",
+    "product": {
+     "name": "GitLab",
+     "vendor": {
+      "name": "GitLab"
+     }
+    },
+    "product_version": "18.7 <18.11.12"
+   },
+   {
+    "id": "fb71a10e-2503-350e-b3e4-792b976588e4",
+    "product": {
+     "name": "GitLab",
+     "vendor": {
+      "name": "GitLab"
+     }
+    },
+    "product_version": "19.2 <19.2.6"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "61735522-b934-3f80-8aba-d6b577ee6079",
+    "vendor": {
+     "name": "GitLab"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "4026746f-c5ab-3fb9-9f5e-bc374a1fb17a",
+    "vulnerability": {
+     "aliases": "CVE-2026-85706\nGHSA-f47w-mrg9-g9p2\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:56:19 AM",
+     "datePublished": "Sep 12, 2026, 3:30:22 AM",
+     "dateUpdated": "Sep 12, 2026, 12:30:50 PM",
+     "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.7 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that, under certain conditions, an unauthenticated user could have read arbitrary files from the GitLab server due to improper path confinement and missing authentication enforcement in the repository commits API.",
+     "enisa_id": "EUVD-2026-76779\n",
+     "epss": 0.0,
+     "id": "GHSA-f47w-mrg9-g9p2",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-85706\nhttps://hackerone.com/reports/3909881\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/627748\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85706\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "e9967d01-60af-355f-9fd7-83f176658dde",
+    "vulnerability": {
+     "assigner": "GitLab",
+     "baseScore": 10.0,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:35:08 AM",
+     "datePublished": "Sep 12, 2026, 2:46:31 AM",
+     "dateUpdated": "Sep 23, 2026, 9:03:18 PM",
+     "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.7 before 18.11.12, 19.0 before 19.0.9, 19.1 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that, under certain conditions, an unauthenticated user could have read arbitrary files from the GitLab server due to improper path confinement and missing authentication enforcement in the repository commits API.",
+     "enisa_id": "EUVD-2026-76779\n",
+     "epss": 92.96,
+     "exploitedSince": "Sep 11, 2026, 12:00:00 AM",
+     "id": "CVE-2026-85706",
+     "references": "https://gitlab.com/gitlab-org/gitlab/-/work_items/627748\nhttps://hackerone.com/reports/3909881\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "07363733-1734-3a56-afe7-0aa8d8ed12db",
+       "product": {
+        "name": "GitLab",
+        "vendor": {
+         "name": "GitLab"
+        }
+       },
+       "product_version": "19.3 <19.3.2"
+      },
+      {
+       "id": "4ad7ceb1-16fa-3709-8340-b1ebf3fd3dbc",
+       "product": {
+        "name": "GitLab",
+        "vendor": {
+         "name": "GitLab"
+        }
+       },
+       "product_version": "19.1 <19.1.8"
+      },
+      {
+       "id": "59e241ed-6306-305c-ba78-c9182cecec97",
+       "product": {
+        "name": "GitLab",
+        "vendor": {
+         "name": "GitLab"
+        }
+       },
+       "product_version": "19.0 <19.0.9"
+      },
+      {
+       "id": "5bddddce-96f5-3f61-9c5e-9d283213542b",
+       "product": {
+        "name": "GitLab",
+        "vendor": {
+         "name": "GitLab"
+        }
+       },
+       "product_version": "18.7 <18.11.12"
+      },
+      {
+       "id": "b1b3f99d-213c-3e91-a8ed-000adc4f4f1d",
+       "product": {
+        "name": "GitLab",
+        "vendor": {
+         "name": "GitLab"
+        }
+       },
+       "product_version": "19.2 <19.2.6"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "1ecc367f-0de1-3e49-92f9-8f33820e241d",
+       "vendor": {
+        "name": "GitLab"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "d42fd1a4-2163-3eb3-9c1b-79188ef655f9",
+  "epss": 92.96,
+  "exploitedSince": "Sep 11, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-76779",
+  "references": "https://gitlab.com/gitlab-org/gitlab/-/work_items/627748\nhttps://hackerone.com/reports/3909881\n"
+ },
+ "id": "EUVD-2026-76779",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "cpes": [
+       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+      ],
+      "defaultStatus": "unaffected",
+      "product": "GitLab",
+      "repo": "git://git@gitlab.com:gitlab-org/gitlab.git",
+      "vendor": "GitLab",
+      "versions": [
+       {
+        "lessThan": "18.11.12",
+        "status": "affected",
+        "version": "18.7",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "19.0.9",
+        "status": "affected",
+        "version": "19.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "19.1.8",
+        "status": "affected",
+        "version": "19.1",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "19.2.6",
+        "status": "affected",
+        "version": "19.2",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "19.3.2",
+        "status": "affected",
+        "version": "19.3",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "cve@gitlab.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-14",
+  "cisaExploitAdd": "2026-09-11",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+        "matchCriteriaId": "16F1EDAF-FD17-4B50-B9D2-643DF2770CAA",
+        "versionEndExcluding": "18.11.12",
+        "versionStartIncluding": "18.7.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+        "matchCriteriaId": "BFC013D4-560D-444B-A63F-6128E0CB8EC1",
+        "versionEndExcluding": "18.11.12",
+        "versionStartIncluding": "18.7.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+        "matchCriteriaId": "785E6802-2B47-414C-A0D7-910EBF325B9B",
+        "versionEndExcluding": "19.0.9",
+        "versionStartIncluding": "19.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+        "matchCriteriaId": "94A5B71B-5FDA-4758-9095-77AA1225282F",
+        "versionEndExcluding": "19.0.9",
+        "versionStartIncluding": "19.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+        "matchCriteriaId": "202657EE-3BCA-4770-BD25-EA7BF5139394",
+        "versionEndExcluding": "19.1.8",
+        "versionStartIncluding": "19.1.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+        "matchCriteriaId": "A7AFE4A6-85DB-4CA2-AE8A-A5EC6521520C",
+        "versionEndExcluding": "19.1.8",
+        "versionStartIncluding": "19.1.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+        "matchCriteriaId": "4A6AAECA-E557-43EF-B109-B92D1281E48B",
+        "versionEndExcluding": "19.2.6",
+        "versionStartIncluding": "19.2.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+        "matchCriteriaId": "8598AF82-D212-4B5D-ABC3-C12C9B217BF3",
+        "versionEndExcluding": "19.2.6",
+        "versionStartIncluding": "19.2.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+        "matchCriteriaId": "198FF0EF-1A45-484F-9268-F7821E006BA8",
+        "versionEndExcluding": "19.3.2",
+        "versionStartIncluding": "19.3.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+        "matchCriteriaId": "03B1901F-AAF4-421E-B704-5345CB840DEF",
+        "versionEndExcluding": "19.3.2",
+        "versionStartIncluding": "19.3.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.7 before 18.11.12, 19.0 before 19.0.9, 19.1 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that, under certain conditions, an unauthenticated user could have read arbitrary files from the GitLab server due to improper path confinement and missing authentication enforcement in the repository commits API."
+   }
+  ],
+  "id": "CVE-2026-85706",
+  "lastModified": "2026-09-24T12:52:28.143",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 10.0,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.8,
+     "source": "cve@gitlab.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-85706",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-12T03:55:28.970728Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-12T03:16:30.473",
+  "references": [
+   {
+    "source": "cve@gitlab.com",
+    "tags": [
+     "Broken Link"
+    ],
+    "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/627748"
+   },
+   {
+    "source": "cve@gitlab.com",
+    "tags": [
+     "Permissions Required"
+    ],
+    "url": "https://hackerone.com/reports/3909881"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory",
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85706"
+   }
+  ],
+  "sourceIdentifier": "cve@gitlab.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-22"
+     }
+    ],
+    "source": "cve@gitlab.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

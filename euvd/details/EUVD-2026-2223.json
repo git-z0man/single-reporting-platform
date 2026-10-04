@@ -1,0 +1,695 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-25249"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2025-25249",
+  "cwes": [
+   "CWE-122",
+   "CWE-787"
+  ],
+  "dateAdded": "2026-09-09",
+  "dueDate": "2026-09-12",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://fortiguard.fortinet.com/psirt/FG-IR-25-084 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2025-25249",
+  "product": "Multiple Products",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Fortinet FortiOS, FortiSwitchManager, and FortiSASE contain a heap-based buffer overflow vulnerability that allows an attacker to execute unauthorized code or commands via specially crafted packets.",
+  "vendorProject": "Fortinet",
+  "vulnerabilityName": "Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2025-25249\nGHSA-mj8x-m8f5-x4w8\n",
+  "assigner": "fortinet",
+  "baseScore": 7.4,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:W/RC:C",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Jan 13, 2026, 4:32:35 PM",
+  "dateUpdated": "Sep 10, 2026, 3:55:15 AM",
+  "description": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4 all versions, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 allows attacker to execute unauthorized code or commands via specially crafted packets",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "00b33034-943b-352e-9d63-cc6d84691ae6",
+       "product": {
+        "name": "6.4.17",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       }
+      },
+      {
+       "id": "0a86b041-8652-3108-a897-21dae2994206",
+       "product": {
+        "name": "7.2.12",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       }
+      },
+      {
+       "id": "6795bd32-4a5e-3065-9baa-b53d68b5c4f1",
+       "product": {
+        "name": "7.4.9",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       }
+      },
+      {
+       "id": "71414a6a-274e-3998-8fc6-5af1d0f179a3",
+       "product": {
+        "name": "7.6.4",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "c823d478-9ebd-3d90-b705-fd36e8200b97",
+       "product": {
+        "name": "7.0.18"
+       }
+      },
+      {
+       "id": "faa6d58e-17f4-3284-85ef-52d77d44d930",
+       "product": {
+        "name": "FortiOS",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-25249\n",
+     "baseScore": 0.0,
+     "datePublished": "Jan 13, 2026, 11:00:00 PM",
+     "dateUpdated": "Jan 13, 2026, 11:00:00 PM",
+     "description": "Fortinet FortiOS: Schwachstelle ermöglicht Codeausführung",
+     "id": "WID-SEC-W-2026-0085",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-0085.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-0085\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Fortinet FortiOS ausnutzen, um beliebigen Programmcode auszuführen."
+    },
+    "id": "0b5da441-b2a4-3d10-be65-d20ff3511c8b"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "52de0304-1e41-3416-98e6-05d1b300d5a0",
+       "product": {
+        "name": "vers:unknown/*",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "63f23b23-219a-3481-a802-e96732f09075",
+       "product": {
+        "name": "FortiSwitchManager",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       }
+      },
+      {
+       "id": "71ecb9da-8943-35f4-9269-042d93440384",
+       "product": {
+        "name": "FortiOS",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-25249\n",
+     "baseScore": 0.0,
+     "datePublished": "Jan 15, 2026, 12:31:57 PM",
+     "dateUpdated": "Sep 10, 2026, 2:21:16 PM",
+     "description": "Kwetsbaarheid verholpen in Fortinet FortiOS",
+     "id": "NCSC-2026-0015",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "c9f3ec94-2847-30c6-bde3-86bbf6db8006"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "2742f965-9ca3-35e4-820d-97c2930e68e3",
+       "product": {
+        "name": "RUGGEDCOM APE1808",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2024-32122\nCVE-2024-50562\nCVE-2024-52963\nCVE-2024-55599\nCVE-2025-22862\nCVE-2025-24471\nCVE-2025-25248\nCVE-2025-25249\nCVE-2025-25250\nCVE-2025-25253\nCVE-2025-31366\nCVE-2025-31514\nCVE-2025-43892\nCVE-2025-47890\nCVE-2025-53744\nCVE-2025-53843\nCVE-2025-53844\nCVE-2025-54821\nCVE-2025-57740\nCVE-2025-58413\nCVE-2025-58903\nCVE-2025-59718\nCVE-2025-59719\nCVE-2025-62675\nCVE-2025-62826\nCVE-2025-67862\nCVE-2026-59837\nCVE-2026-59840\n",
+     "baseScore": 0.0,
+     "datePublished": "May 13, 2025, 12:00:00 AM",
+     "dateUpdated": "Aug 11, 2026, 12:00:00 AM",
+     "description": "SSA-864900: Multiple Vulnerabilities in Fortigate NGFW on RUGGEDCOM APE1808 Devices",
+     "id": "SSA-864900",
+     "references": "https://cert-portal.siemens.com/productcert/html/ssa-864900.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-864900.json\n",
+     "source": {
+      "id": 7,
+      "name": "csaf_siemens"
+     },
+     "summary": "Fortinet has published information on vulnerabilities in FortiOS. This advisory lists the related Siemens Industrial products.\n\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version."
+    },
+    "id": "dbb1d51b-70dd-3db9-8054-e6974b7dec37"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "b5d98075-4fa9-314c-9349-6053b290aca3",
+       "product": {
+        "name": "RUGGEDCOM APE1808",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2024-32122\nCVE-2024-50562\nCVE-2024-52963\nCVE-2024-55599\nCVE-2025-22862\nCVE-2025-24471\nCVE-2025-25248\nCVE-2025-25249\nCVE-2025-25250\nCVE-2025-25253\nCVE-2025-31366\nCVE-2025-31514\nCVE-2025-47890\nCVE-2025-53744\nCVE-2025-53843\nCVE-2025-53844\nCVE-2025-54821\nCVE-2025-57740\nCVE-2025-58413\nCVE-2025-58903\nCVE-2025-59718\nCVE-2025-59719\n",
+     "baseScore": 0.0,
+     "datePublished": "May 13, 2025, 12:00:00 AM",
+     "dateUpdated": "Jul 9, 2026, 6:00:00 AM",
+     "description": "Siemens RUGGEDCOM APE1808 Devices",
+     "id": "ICSA-25-135-01",
+     "references": "https://cert-portal.siemens.com/productcert/csaf/ssa-864900.json\nhttps://cert-portal.siemens.com/productcert/html/ssa-864900.html\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-135-01.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-25-135-01\n",
+     "source": {
+      "id": 6,
+      "name": "csaf_cisa"
+     },
+     "summary": "Fortinet has published information on vulnerabilities in FortiOS. This advisory lists the related Siemens Industrial products.\n\nSiemens is preparing fix versions and recommends to consult and implement the workarounds provided in Fortinet's upstream security notifications."
+    },
+    "id": "e959ab8c-2025-32b1-aa8a-1be6bb4c617e"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "02dbdb10-abe0-3ad2-8ea1-16a70a8cf0e5",
+    "product": {
+     "name": "FortiOS",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.4.0 ≤7.4.7"
+   },
+   {
+    "id": "2b92b2c3-97f7-38a7-9f4f-18a8e44f4812",
+    "product": {
+     "name": "FortiOS",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.2.4 ≤7.2.11"
+   },
+   {
+    "id": "37a9e01e-6d1e-3bd0-9088-9cdec4ca90ec",
+    "product": {
+     "name": "FortiOS",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.6.0 ≤7.6.2"
+   },
+   {
+    "id": "40352f84-8bf6-38c0-a544-4acbc7986865",
+    "product": {
+     "name": "FortiSwitchManager",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.2.2 ≤7.2.5"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "5f2a0997-cb3c-3cde-b5f3-3e840c28eb71",
+    "vendor": {
+     "name": "Fortinet"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "07c59e86-1367-3856-b894-9cc2f7e5fbb9",
+    "vulnerability": {
+     "aliases": "CVE-2025-25249\nGHSA-mj8x-m8f5-x4w8\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:48:30 AM",
+     "datePublished": "Jan 13, 2026, 6:31:07 PM",
+     "dateUpdated": "Sep 9, 2026, 9:30:26 PM",
+     "description": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4.0 through 6.4.16, FortiSASE 25.2.b, FortiSASE 25.1.a.2, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 allows attacker to execute unauthorized code or commands via specially crafted packets",
+     "enisa_id": "EUVD-2026-2223\n",
+     "epss": 0.0,
+     "id": "GHSA-mj8x-m8f5-x4w8",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2025-25249\nhttps://cert-portal.siemens.com/productcert/html/ssa-864900.html\nhttps://fortiguard.fortinet.com/psirt/FG-IR-25-084\nhttps://socradar.io/blog/cve-2025-25249-pivotc2-fortigate-rat\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-25249\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "7b0d3ad9-8925-3d7d-8fd1-34015c4040f1",
+    "vulnerability": {
+     "assigner": "fortinet",
+     "baseScore": 7.4,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:W/RC:C",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:32:28 AM",
+     "datePublished": "Jan 13, 2026, 4:32:35 PM",
+     "dateUpdated": "Sep 10, 2026, 3:55:15 AM",
+     "description": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4 all versions, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 allows attacker to execute unauthorized code or commands via specially crafted packets",
+     "enisa_id": "EUVD-2026-2223\n",
+     "epss": 3.86,
+     "exploitedSince": "Sep 9, 2026, 12:00:00 AM",
+     "id": "CVE-2025-25249",
+     "references": "https://fortiguard.fortinet.com/psirt/FG-IR-25-084\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "01e2e3c5-5ea3-3a5b-9362-9868fcc29302",
+       "product": {
+        "name": "FortiOS",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.6.0 ≤7.6.2"
+      },
+      {
+       "id": "551d8436-fbdb-3f21-bb5c-64b061268800",
+       "product": {
+        "name": "FortiSwitchManager",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.2.2 ≤7.2.5"
+      },
+      {
+       "id": "cfa6e035-21b1-3b1b-a2bc-de21da26f09a",
+       "product": {
+        "name": "FortiOS",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.4.0 ≤7.4.7"
+      },
+      {
+       "id": "fb29f79b-520b-3de5-9c0b-043345fe6de9",
+       "product": {
+        "name": "FortiOS",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.2.4 ≤7.2.11"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "7513275c-8858-31d4-b42b-3e3b21c3e6c9",
+       "vendor": {
+        "name": "Fortinet"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "75e49280-30cb-36cf-aa5b-18cd446e9f68",
+  "epss": 3.86,
+  "exploitedSince": "Sep 9, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-2223",
+  "references": "https://fortiguard.fortinet.com/psirt/FG-IR-25-084\n"
+ },
+ "id": "EUVD-2026-2223",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "cpes": [
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.5:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.4:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.3:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.2:*:*:*:*:*:*:*"
+      ],
+      "defaultStatus": "unaffected",
+      "product": "FortiSwitchManager",
+      "vendor": "Fortinet",
+      "versions": [
+       {
+        "lessThanOrEqual": "7.2.5",
+        "status": "affected",
+        "version": "7.2.2",
+        "versionType": "semver"
+       }
+      ]
+     },
+     {
+      "cpes": [
+       "cpe:2.3:o:fortinet:fortios:7.6.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.6.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.6.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.7:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.6:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.5:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.4:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.11:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.10:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.9:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.8:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.7:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.6:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.5:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.4:*:*:*:*:*:*:*"
+      ],
+      "defaultStatus": "unaffected",
+      "product": "FortiOS",
+      "vendor": "Fortinet",
+      "versions": [
+       {
+        "lessThanOrEqual": "7.6.2",
+        "status": "affected",
+        "version": "7.6.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.4.7",
+        "status": "affected",
+        "version": "7.4.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.2.11",
+        "status": "affected",
+        "version": "7.2.4",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "psirt@fortinet.com"
+   },
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "RUGGEDCOM APE1808",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+   }
+  ],
+  "cisaActionDue": "2026-09-12",
+  "cisaExploitAdd": "2026-09-09",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7B071609-D589-44A8-8E7A-010B5BAA36EE",
+        "versionEndExcluding": "7.0.18",
+        "versionStartIncluding": "6.4.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "E8FAAA2E-7A53-4F6B-A9C7-1E2B4CB5F7EB",
+        "versionEndExcluding": "7.2.12",
+        "versionStartIncluding": "7.2.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "2093EFE3-4B7F-4806-9850-C42B26BC64AC",
+        "versionEndExcluding": "7.4.9",
+        "versionStartIncluding": "7.4.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "C1C30E0D-7F09-42D2-9EB1-E2196BD50D75",
+        "versionEndExcluding": "7.6.4",
+        "versionStartIncluding": "7.6.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:fortinet:fortiswitchmanager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F1B9AA70-BB46-403B-94C1-D94C64E22334",
+        "versionEndExcluding": "7.0.6",
+        "versionStartIncluding": "7.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:fortinet:fortiswitchmanager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "EE22A407-02CB-4979-A38D-9EBAFEB350F6",
+        "versionEndExcluding": "7.2.7",
+        "versionStartIncluding": "7.2.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:fortinet:fortisase:25.1.39:*:*:*:-:*:*:*",
+        "matchCriteriaId": "77B84900-E96D-4E2C-8797-B1460E71874E",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:fortinet:fortisase:25.1.51:*:*:*:-:*:*:*",
+        "matchCriteriaId": "12A8EE3F-EEAF-460D-B2DB-551509DF0814",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:siemens:ruggedcom_ape1808_firmware:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "37FDCA69-9049-40B4-88AF-F476901022B6",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:siemens:ruggedcom_ape1808:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B89A6863-B602-4404-8D26-337FECABFFF0",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4 all versions, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 allows attacker to execute unauthorized code or commands via specially crafted packets"
+   },
+   {
+    "lang": "es",
+    "value": "Una vulnerabilidad de desbordamiento de búfer basado en montículo en Fortinet FortiOS 7.6.0 a 7.6.3, FortiOS 7.4.0 a 7.4.8, FortiOS 7.2.0 a 7.2.11, FortiOS 7.0.0 a 7.0.17, FortiOS 6.4.0 a 6.4.16, FortiSwitchManager 7.2.0 a 7.2.6, FortiSwitchManager 7.0.0 a 7.0.5 permite al atacante ejecutar código o comandos no autorizados a través de paquetes especialmente diseñados."
+   }
+  ],
+  "id": "CVE-2025-25249",
+  "lastModified": "2026-09-10T12:47:59.933",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.1,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.2,
+     "impactScore": 5.9,
+     "source": "psirt@fortinet.com",
+     "type": "Secondary"
+    },
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2025-25249",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-01-13T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-01-13T17:15:56.910",
+  "references": [
+   {
+    "source": "psirt@fortinet.com",
+    "tags": [
+     "Vendor Advisory",
+     "Mitigation"
+    ],
+    "url": "https://fortiguard.fortinet.com/psirt/FG-IR-25-084"
+   },
+   {
+    "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-864900.html"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://socradar.io/blog/cve-2025-25249-pivotc2-fortigate-rat/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-25249"
+   }
+  ],
+  "sourceIdentifier": "psirt@fortinet.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-122"
+     }
+    ],
+    "source": "psirt@fortinet.com",
+    "type": "Secondary"
+   },
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-787"
+     }
+    ],
+    "source": "nvd@nist.gov",
+    "type": "Primary"
+   }
+  ]
+ }
+}

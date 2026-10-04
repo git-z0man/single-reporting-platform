@@ -1,0 +1,344 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-59822"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-59822",
+  "cwes": [
+   "CWE-287",
+   "CWE-306"
+  ],
+  "dateAdded": "2026-09-02",
+  "dueDate": "2026-09-16",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-59822",
+  "product": "LiteLLM",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "BerriAI LiteLLM contains an improper authentication vulnerability in the MCP Streamable HTTP endpoint that could allow an unauthenticated attacker to establish an authenticated MCP session using an arbitrary Bearer token.",
+  "vendorProject": "BerriAI",
+  "vulnerabilityName": "BerriAI LiteLLM Improper Authentication Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-59822\nGHSA-7488-6r32-c95q\n",
+  "assigner": "GitHub_M",
+  "baseScore": 8.8,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Jul 8, 2026, 7:32:18 PM",
+  "dateUpdated": "Sep 3, 2026, 3:56:05 AM",
+  "description": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to 1.84.0, LiteLLM's MCP Streamable HTTP endpoint allowed an unauthenticated attacker to use a fabricated Authorization header to trigger an OAuth2 passthrough fallback path that replaced failed LiteLLM key validation with an empty UserAPIKeyAuth() object, allowing requests to reach MCP tooling without a valid LiteLLM key. This issue is fixed in version 1.84.0.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "da0464a3-c2b2-3034-8d58-367ba65b3dae",
+    "product": {
+     "name": "LiteLLM",
+     "vendor": {
+      "name": "berriai"
+     }
+    },
+    "product_version": "< 1.84.0"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "b46e887e-5f64-3c24-9aa8-e640afa93eaa",
+    "vendor": {
+     "name": "berriai"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "e2f204ea-3909-3b3a-8215-b0f01452453b",
+    "vulnerability": {
+     "aliases": "CVE-2026-59822\nGHSA-7488-6r32-c95q\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 2:04:20 AM",
+     "datePublished": "Jul 23, 2026, 11:41:48 AM",
+     "dateUpdated": "Jul 23, 2026, 2:31:33 PM",
+     "description": "LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback",
+     "enisa_id": "EUVD-2026-42359\n",
+     "epss": 0.0,
+     "id": "PYSEC-2026-3479",
+     "references": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-59822\nhttps://github.com/BerriAI/litellm/pull/26463\nhttps://github.com/BerriAI/litellm/commit/73869f0faf7d11ee21adcb5f91b8c33a340b6c2c\nhttps://github.com/BerriAI/litellm\nhttps://github.com/BerriAI/litellm/releases/tag/v1.84.0\nhttps://pypi.org/project/litellm\nhttps://github.com/advisories/GHSA-7488-6r32-c95q\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "e9d8e1ea-f192-3ae3-bca1-6d7338dc02f8",
+    "vulnerability": {
+     "assigner": "GitHub_M",
+     "baseScore": 8.8,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 4, 2026, 3:33:30 AM",
+     "datePublished": "Jul 8, 2026, 7:32:18 PM",
+     "dateUpdated": "Sep 3, 2026, 3:56:05 AM",
+     "description": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to 1.84.0, LiteLLM's MCP Streamable HTTP endpoint allowed an unauthenticated attacker to use a fabricated Authorization header to trigger an OAuth2 passthrough fallback path that replaced failed LiteLLM key validation with an empty UserAPIKeyAuth() object, allowing requests to reach MCP tooling without a valid LiteLLM key. This issue is fixed in version 1.84.0.",
+     "enisa_id": "EUVD-2026-42359\n",
+     "epss": 0.84,
+     "exploitedSince": "Sep 2, 2026, 12:00:00 AM",
+     "id": "CVE-2026-59822",
+     "references": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q\nhttps://github.com/BerriAI/litellm/pull/26463\nhttps://github.com/BerriAI/litellm/commit/73869f0faf7d11ee21adcb5f91b8c33a340b6c2c\nhttps://github.com/BerriAI/litellm/releases/tag/v1.84.0\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "140073a5-672b-38d8-9f4e-223c29544608",
+       "product": {
+        "name": "LiteLLM",
+        "vendor": {
+         "name": "berriai"
+        }
+       },
+       "product_version": "< 1.84.0"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "88078639-b3e7-34db-b6d7-d7f82bb61d6e",
+       "vendor": {
+        "name": "berriai"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "f89b2cb7-58a6-3288-86ee-c53bc6707cb3",
+    "vulnerability": {
+     "aliases": "GHSA-7488-6r32-c95q\nCVE-2026-59822\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:53:46 AM",
+     "datePublished": "Jul 22, 2026, 10:38:33 PM",
+     "dateUpdated": "Jul 22, 2026, 10:38:33 PM",
+     "description": "LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback",
+     "enisa_id": "EUVD-2026-42359\n",
+     "epss": 0.0,
+     "id": "GHSA-7488-6r32-c95q",
+     "references": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-59822\nhttps://github.com/BerriAI/litellm/pull/26463\nhttps://github.com/BerriAI/litellm/commit/73869f0faf7d11ee21adcb5f91b8c33a340b6c2c\nhttps://github.com/BerriAI/litellm\nhttps://github.com/BerriAI/litellm/releases/tag/v1.84.0\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "87ba13e6-0860-3886-a958-610549644947",
+  "epss": 0.84,
+  "exploitedSince": "Sep 2, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-42359",
+  "references": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q\nhttps://github.com/BerriAI/litellm/pull/26463\nhttps://github.com/BerriAI/litellm/commit/73869f0faf7d11ee21adcb5f91b8c33a340b6c2c\nhttps://github.com/BerriAI/litellm/releases/tag/v1.84.0\n"
+ },
+ "id": "EUVD-2026-42359",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "litellm",
+      "vendor": "BerriAI",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "< 1.84.0"
+       }
+      ]
+     }
+    ],
+    "source": "security-advisories@github.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-16",
+  "cisaExploitAdd": "2026-09-02",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "BerriAI LiteLLM Improper Authentication Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:litellm:litellm:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "0432AF82-95FD-4358-9414-7B41889CEFD2",
+        "versionEndExcluding": "1.84.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to 1.84.0, LiteLLM's MCP Streamable HTTP endpoint allowed an unauthenticated attacker to use a fabricated Authorization header to trigger an OAuth2 passthrough fallback path that replaced failed LiteLLM key validation with an empty UserAPIKeyAuth() object, allowing requests to reach MCP tooling without a valid LiteLLM key. This issue is fixed in version 1.84.0."
+   }
+  ],
+  "id": "CVE-2026-59822",
+  "lastModified": "2026-09-03T13:05:59.573",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 8.2,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "LOW",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 4.2,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "NONE",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "LOW",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "security-advisories@github.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-59822",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-02T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-07-08T20:16:57.683",
+  "references": [
+   {
+    "source": "security-advisories@github.com",
+    "tags": [
+     "Patch"
+    ],
+    "url": "https://github.com/BerriAI/litellm/commit/73869f0faf7d11ee21adcb5f91b8c33a340b6c2c"
+   },
+   {
+    "source": "security-advisories@github.com",
+    "tags": [
+     "Issue Tracking",
+     "Patch"
+    ],
+    "url": "https://github.com/BerriAI/litellm/pull/26463"
+   },
+   {
+    "source": "security-advisories@github.com",
+    "tags": [
+     "Product",
+     "Release Notes"
+    ],
+    "url": "https://github.com/BerriAI/litellm/releases/tag/v1.84.0"
+   },
+   {
+    "source": "security-advisories@github.com",
+    "tags": [
+     "Mitigation",
+     "Patch",
+     "Vendor Advisory"
+    ],
+    "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-59822"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://www.wiz.io/blog/ai-infrastructure-honeypot"
+   }
+  ],
+  "sourceIdentifier": "security-advisories@github.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-287"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-306"
+     }
+    ],
+    "source": "security-advisories@github.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

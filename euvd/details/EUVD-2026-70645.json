@@ -1,0 +1,254 @@
+{
+ "cert_links": [],
+ "cisa_kev": null,
+ "euvd": {
+  "aliases": "CVE-2026-58400\n",
+  "assigner": "GitHub_M",
+  "baseScore": 9.1,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 3, 2026, 5:06:17 PM",
+  "dateUpdated": "Sep 4, 2026, 1:42:08 PM",
+  "description": "GeoNetwork is a catalog application to manage spatially referenced resources. Prior to versions 4.4.12 and 4.2.17, the Saxon XSLT processor used to render formatters is configured without secure processing (`FEATURE_SECURE_PROCESSING`) and without disabling Java extension functions (`ALLOW_EXTERNAL_FUNCTIONS`). Any stylesheet loaded by GeoNetwork can therefore invoke\n`java.lang.Runtime.exec()` or `java.lang.ProcessBuilder` directly, achieving arbitrary command execution as the GeoNetwork process user. A user with sufficient privileges to upload a formatter can deliver a `.xsl` file containing Java extension call that execute arbitrary OS commands with the privileges of the GeoNetwork process. The issue is patched in GeoNetwork versions 4.4.12 and 4.2.17.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "08feb26c-e884-3cd8-9c36-52b7451a8291",
+       "product": {
+        "name": "GeoNetwork",
+        "vendor": {
+         "name": "geonetwork"
+        }
+       }
+      },
+      {
+       "id": "ffbf01fb-afed-3837-83e4-7bf6a03e6bc6",
+       "product": {
+        "name": "core-geonetwork",
+        "vendor": {
+         "name": "geonetwork"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-57582\nCVE-2026-58400\nCVE-2026-63219\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 7, 2026, 12:00:00 PM",
+     "dateUpdated": "Sep 7, 2026, 12:00:00 PM",
+     "description": "Kwetsbaarheden verholpen in GeoNetwork door OpenGeo",
+     "id": "NCSC-2026-0343",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "63be5fdb-2545-3a60-9a86-b2404d33ccaa"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "69582a3b-1f63-3307-a15d-3aa410fab22b",
+    "product": {
+     "name": "core-geonetwork",
+     "vendor": {
+      "name": "geonetwork"
+     }
+    },
+    "product_version": "4.3.0, < 4.4.12"
+   },
+   {
+    "id": "cb634d7b-4142-30fa-987d-2ebe992d8051",
+    "product": {
+     "name": "core-geonetwork",
+     "vendor": {
+      "name": "geonetwork"
+     }
+    },
+    "product_version": "< 4.2.17"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "797b77a4-bd66-31da-8114-89ad1d6b6988",
+    "vendor": {
+     "name": "geonetwork"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "396d7e04-25b7-340b-8c38-7d417a31698f",
+    "vulnerability": {
+     "assigner": "GitHub_M",
+     "baseScore": 9.1,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:34:10 AM",
+     "datePublished": "Sep 3, 2026, 5:06:17 PM",
+     "dateUpdated": "Sep 4, 2026, 1:42:08 PM",
+     "description": "GeoNetwork is a catalog application to manage spatially referenced resources. Prior to versions 4.4.12 and 4.2.17, the Saxon XSLT processor used to render formatters is configured without secure processing (`FEATURE_SECURE_PROCESSING`) and without disabling Java extension functions (`ALLOW_EXTERNAL_FUNCTIONS`). Any stylesheet loaded by GeoNetwork can therefore invoke\n`java.lang.Runtime.exec()` or `java.lang.ProcessBuilder` directly, achieving arbitrary command execution as the GeoNetwork process user. A user with sufficient privileges to upload a formatter can deliver a `.xsl` file containing Java extension call that execute arbitrary OS commands with the privileges of the GeoNetwork process. The issue is patched in GeoNetwork versions 4.4.12 and 4.2.17.",
+     "enisa_id": "EUVD-2026-70645\n",
+     "epss": 1.19,
+     "exploitedSince": "Sep 2, 2026, 12:00:00 AM",
+     "id": "CVE-2026-58400",
+     "references": "https://github.com/geonetwork/core-geonetwork/security/advisories/GHSA-x898-729x-cc3r\nhttps://docs.geonetwork-opensource.org/4.2/overview/change-log/version-4.2.17\nhttps://docs.geonetwork-opensource.org/4.4/overview/change-log/version-4.4.12\nhttps://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "32d690f1-70dd-3f3d-85f8-7ff8100220e8",
+       "product": {
+        "name": "core-geonetwork",
+        "vendor": {
+         "name": "geonetwork"
+        }
+       },
+       "product_version": "< 4.2.17"
+      },
+      {
+       "id": "cf3eff55-c428-34a1-b94b-f7e9ef195814",
+       "product": {
+        "name": "core-geonetwork",
+        "vendor": {
+         "name": "geonetwork"
+        }
+       },
+       "product_version": "4.3.0, < 4.4.12"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "e1fd0386-7edb-328c-a456-db64e8235d8a",
+       "vendor": {
+        "name": "geonetwork"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "40cc5bf7-d5b2-3f7a-9a45-945be7ea139c",
+  "epss": 1.19,
+  "exploitedSince": "Sep 2, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-70645",
+  "references": "https://github.com/geonetwork/core-geonetwork/security/advisories/GHSA-x898-729x-cc3r\nhttps://docs.geonetwork-opensource.org/4.2/overview/change-log/version-4.2.17\nhttps://docs.geonetwork-opensource.org/4.4/overview/change-log/version-4.4.12\nhttps://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html\n"
+ },
+ "id": "EUVD-2026-70645",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "core-geonetwork",
+      "vendor": "geonetwork",
+      "versions": [
+       {
+        "status": "affected",
+        "version": ">= 4.3.0, < 4.4.12"
+       },
+       {
+        "status": "affected",
+        "version": "< 4.2.17"
+       }
+      ]
+     }
+    ],
+    "source": "security-advisories@github.com"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "GeoNetwork is a catalog application to manage spatially referenced resources. Prior to versions 4.4.12 and 4.2.17, the Saxon XSLT processor used to render formatters is configured without secure processing (`FEATURE_SECURE_PROCESSING`) and without disabling Java extension functions (`ALLOW_EXTERNAL_FUNCTIONS`). Any stylesheet loaded by GeoNetwork can therefore invoke\n`java.lang.Runtime.exec()` or `java.lang.ProcessBuilder` directly, achieving arbitrary command execution as the GeoNetwork process user. A user with sufficient privileges to upload a formatter can deliver a `.xsl` file containing Java extension call that execute arbitrary OS commands with the privileges of the GeoNetwork process. The issue is patched in GeoNetwork versions 4.4.12 and 4.2.17."
+   }
+  ],
+  "id": "CVE-2026-58400",
+  "lastModified": "2026-09-09T21:09:13.080",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.1,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "HIGH",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.3,
+     "impactScore": 6.0,
+     "source": "security-advisories@github.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-58400",
+      "options": [
+       {
+        "exploitation": "none"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-03T17:49:43.605439Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-03T18:17:22.827",
+  "references": [
+   {
+    "source": "security-advisories@github.com",
+    "url": "https://docs.geonetwork-opensource.org/4.2/overview/change-log/version-4.2.17"
+   },
+   {
+    "source": "security-advisories@github.com",
+    "url": "https://docs.geonetwork-opensource.org/4.4/overview/change-log/version-4.4.12"
+   },
+   {
+    "source": "security-advisories@github.com",
+    "url": "https://github.com/geonetwork/core-geonetwork/security/advisories/GHSA-x898-729x-cc3r"
+   },
+   {
+    "source": "security-advisories@github.com",
+    "url": "https://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html"
+   }
+  ],
+  "sourceIdentifier": "security-advisories@github.com",
+  "vulnStatus": "Deferred",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-94"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-470"
+     }
+    ],
+    "source": "security-advisories@github.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

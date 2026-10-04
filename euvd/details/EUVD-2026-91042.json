@@ -1,0 +1,432 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-104286"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-104286",
+  "cwes": [
+   "CWE-22",
+   "CWE-158"
+  ],
+  "dateAdded": "2026-10-01",
+  "dueDate": "2026-10-04",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://fortiguard.fortinet.com/psirt/FG-IR-26-175 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-104286",
+  "product": "FortiMail",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
+  "vendorProject": "Fortinet",
+  "vulnerabilityName": "Fortinet FortiMail Path Traversal Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-104286\nGHSA-6gxc-3vv7-7w24\n",
+  "assigner": "fortinet",
+  "baseScore": 9.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Oct 1, 2026, 7:17:38 PM",
+  "dateUpdated": "Oct 2, 2026, 4:56:44 PM",
+  "description": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "16660180-e77d-3121-9008-344a0f496a1d",
+       "product": {
+        "name": "FortiMail",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-104286\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 2, 2026, 7:21:47 AM",
+     "dateUpdated": "Oct 2, 2026, 7:21:47 AM",
+     "description": "Kwetsbaarheid verholpen in Fortinet FortiMail",
+     "id": "NCSC-2026-0398",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "70dde914-fa49-33a2-a21e-51d18f0e8d16"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "20fb05e1-aa4e-3b17-99c0-16a6e3b261e2",
+    "product": {
+     "name": "FortiMail",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.6.0 ≤7.6.5"
+   },
+   {
+    "id": "a7b0100f-55e1-3246-b0fd-2cd269d7e0db",
+    "product": {
+     "name": "FortiMail",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.0.0 ≤7.0.9"
+   },
+   {
+    "id": "c9de85f9-0a76-3e1a-a7d7-937a776cc21a",
+    "product": {
+     "name": "FortiMail",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "8.0.0"
+   },
+   {
+    "id": "de07ec16-ba54-3e94-ab2d-fb3f75a099ec",
+    "product": {
+     "name": "FortiMail",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.2.0 ≤7.2.9"
+   },
+   {
+    "id": "e07ad4f3-701e-3bbe-b622-083815a1a02d",
+    "product": {
+     "name": "FortiMail",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.4.0 ≤7.4.6"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "d61bd384-49be-3eab-9187-1d8a6fa7e299",
+    "vendor": {
+     "name": "Fortinet"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "79b9584c-ac6f-31ec-a61a-b851e8e95db4",
+    "vulnerability": {
+     "aliases": "CVE-2026-104286\nGHSA-6gxc-3vv7-7w24\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:56:56 AM",
+     "datePublished": "Oct 1, 2026, 9:32:52 PM",
+     "dateUpdated": "Oct 1, 2026, 9:32:52 PM",
+     "description": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
+     "enisa_id": "EUVD-2026-91042\n",
+     "epss": 0.0,
+     "id": "GHSA-6gxc-3vv7-7w24",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286\nhttps://fortiguard.fortinet.com/psirt/FG-IR-26-175\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-104286\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "b1d7a17b-c561-3a08-b743-c4323777f5d6",
+    "vulnerability": {
+     "assigner": "fortinet",
+     "baseScore": 9.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 5:00:13 AM",
+     "datePublished": "Oct 1, 2026, 7:17:38 PM",
+     "dateUpdated": "Oct 2, 2026, 4:56:44 PM",
+     "description": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
+     "enisa_id": "EUVD-2026-91042\n",
+     "epss": 2.2,
+     "exploitedSince": "Oct 1, 2026, 12:00:00 AM",
+     "id": "CVE-2026-104286",
+     "references": "https://fortiguard.fortinet.com/psirt/FG-IR-26-175\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "4c698279-5d0a-3bb3-a0b2-de429c88cee2",
+       "product": {
+        "name": "FortiMail",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.2.0 ≤7.2.9"
+      },
+      {
+       "id": "625a0ce5-5648-3df1-a995-d2418ce571e7",
+       "product": {
+        "name": "FortiMail",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.6.0 ≤7.6.5"
+      },
+      {
+       "id": "7ba50f90-9595-3781-83d0-0e3ad72ce597",
+       "product": {
+        "name": "FortiMail",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "8.0.0"
+      },
+      {
+       "id": "98548d07-c208-339a-8d55-a223c1b230d6",
+       "product": {
+        "name": "FortiMail",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.4.0 ≤7.4.6"
+      },
+      {
+       "id": "f48fdf0d-3d85-319b-bbaa-23d3e7afa704",
+       "product": {
+        "name": "FortiMail",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.0.0 ≤7.0.9"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "7cf78868-e068-303a-a9c2-3b3cc517f5a4",
+       "vendor": {
+        "name": "Fortinet"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "4bbdcbc6-5754-3012-859f-ac617ae91269",
+  "epss": 2.2,
+  "exploitedSince": "Oct 1, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-91042",
+  "references": "https://fortiguard.fortinet.com/psirt/FG-IR-26-175\n"
+ },
+ "id": "EUVD-2026-91042",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "cpes": [
+       "cpe:2.3:a:fortinet:fortimail:8.0.0:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.6.5:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.6.4:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.6.3:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.6.2:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.6.1:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.6.0:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.4.6:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.4.5:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.4.4:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.4.3:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.4.2:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.4.1:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.4.0:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.2.9:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.2.8:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.2.7:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.2.6:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.2.5:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.2.4:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.2.3:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.2.2:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.2.1:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.2.0:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.0.9:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.0.8:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.0.7:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.0.6:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.0.5:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.0.4:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.0.3:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.0.2:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.0.1:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortimail:7.0.0:*:*:*:*:*:*:*"
+      ],
+      "defaultStatus": "unaffected",
+      "product": "FortiMail",
+      "vendor": "Fortinet",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "8.0.0"
+       },
+       {
+        "lessThanOrEqual": "7.6.5",
+        "status": "affected",
+        "version": "7.6.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.4.6",
+        "status": "affected",
+        "version": "7.4.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.2.9",
+        "status": "affected",
+        "version": "7.2.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.0.9",
+        "status": "affected",
+        "version": "7.0.0",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "psirt@fortinet.com"
+   }
+  ],
+  "cisaActionDue": "2026-10-04",
+  "cisaExploitAdd": "2026-10-01",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Fortinet FortiMail Path Traversal Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:fortinet:fortimail:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "77C9CE10-1038-4100-81E0-234822E6373B",
+        "versionEndIncluding": "7.4.8",
+        "versionStartIncluding": "7.2.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:fortinet:fortimail:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "1EA73418-A7A1-4247-BA3E-969550962E0E",
+        "versionEndIncluding": "7.6.6",
+        "versionStartIncluding": "7.6.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:fortinet:fortimail:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "DDAF1B20-36CA-4DD4-9483-6B605001B9DA",
+        "versionEndIncluding": "8.0.1",
+        "versionStartIncluding": "8.0.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests."
+   }
+  ],
+  "id": "CVE-2026-104286",
+  "lastModified": "2026-10-02T12:35:33.990",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "psirt@fortinet.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-104286",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-01T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-01T20:17:24.010",
+  "references": [
+   {
+    "source": "psirt@fortinet.com",
+    "tags": [
+     "Mitigation",
+     "Vendor Advisory"
+    ],
+    "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-175"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-104286"
+   }
+  ],
+  "sourceIdentifier": "psirt@fortinet.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-22"
+     }
+    ],
+    "source": "psirt@fortinet.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

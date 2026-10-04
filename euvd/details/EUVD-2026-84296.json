@@ -1,0 +1,434 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-93952"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-93952",
+  "cwes": [
+   "CWE-20"
+  ],
+  "dateAdded": "2026-09-22",
+  "dueDate": "2026-09-25",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://www.arista.com/en/support/advisories-notices/security-advisory/24765-security-advisory-0183 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-93952",
+  "product": "VeloCloud Orchestrator",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Arista VeloCloud Orchestrator (VCO) on-prem contains an improper input validation vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
+  "vendorProject": "Arista",
+  "vulnerabilityName": "Arista VeloCloud Orchestrator Improper Input Validation Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-93952\nGHSA-fqhw-f6hf-cq3w\n",
+  "assigner": "Arista",
+  "baseScore": 9.5,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Sep 22, 2026, 7:37:24 AM",
+  "dateUpdated": "Sep 23, 2026, 3:55:40 AM",
+  "description": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\nHosted, including Dedicated, versions of VCO were impacted and have already been patched.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0fce7940-f22b-3d44-8e32-8724c23153e0",
+       "product": {
+        "name": "VeloCloud Orchestrator (VCO) On-Prem",
+        "vendor": {
+         "name": "Arista Networks"
+        }
+       }
+      },
+      {
+       "id": "db5496d0-62f4-3bfc-80e0-df4290d74f3b",
+       "product": {
+        "name": "VeloCloud Orchestrator On-Prem",
+        "vendor": {
+         "name": "Arista Networks"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-93952\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 22, 2026, 2:34:34 PM",
+     "dateUpdated": "Sep 22, 2026, 2:34:34 PM",
+     "description": "Kwetsbaarheid verholpen in VeloCloud Orchestrator (VCO) on-premises",
+     "id": "NCSC-2026-0385",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "dad96d91-a66e-3864-816e-53462fc6fe44"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "390967ea-05fc-387c-9642-3372c256f8e5",
+    "product": {
+     "name": "VeloCloud Orchestrator (VCO) On-Prem",
+     "vendor": {
+      "name": "Arista Networks"
+     }
+    },
+    "product_version": "6.1.0 ≤6.1.3.7"
+   },
+   {
+    "id": "54f05dba-7c95-3484-8ff4-4d7efcee4523",
+    "product": {
+     "name": "VeloCloud Orchestrator (VCO) On-Prem",
+     "vendor": {
+      "name": "Arista Networks"
+     }
+    },
+    "product_version": "5.2.0 ≤5.2.3.15"
+   },
+   {
+    "id": "69a03dfd-15d3-38fa-a242-5abd45ea63ef",
+    "product": {
+     "name": "VeloCloud Orchestrator (VCO) On-Prem",
+     "vendor": {
+      "name": "Arista Networks"
+     }
+    },
+    "product_version": "6.4.0 ≤6.4.2.7"
+   },
+   {
+    "id": "ec4fbcf8-1a9a-3109-8a5b-99a6b95d362a",
+    "product": {
+     "name": "VeloCloud Orchestrator (VCO) On-Prem",
+     "vendor": {
+      "name": "Arista Networks"
+     }
+    },
+    "product_version": "7.0.0 ≤7.0.0.2"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "13316001-30d9-3bec-8d94-9ede59e5655c",
+    "vendor": {
+     "name": "Arista Networks"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "5bc3b8fb-244b-3da3-918c-febb9b2c2f92",
+    "vulnerability": {
+     "aliases": "GHSA-fqhw-f6hf-cq3w\nCVE-2026-93952\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:56:56 AM",
+     "datePublished": "Sep 22, 2026, 9:31:13 AM",
+     "dateUpdated": "Sep 22, 2026, 9:31:13 PM",
+     "description": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\nHosted, including Dedicated, versions of VCO were impacted and have already been patched.",
+     "enisa_id": "EUVD-2026-84296\n",
+     "epss": 0.0,
+     "id": "GHSA-fqhw-f6hf-cq3w",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-93952\nhttps://www.arista.com/en/support/advisories-notices/security-advisory/24765-security-advisory-0183\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-93952\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "81517c68-0da9-3087-a215-fb1e932d6540",
+    "vulnerability": {
+     "assigner": "Arista",
+     "baseScore": 9.5,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 4, 2026, 3:32:10 AM",
+     "datePublished": "Sep 22, 2026, 7:37:24 AM",
+     "dateUpdated": "Sep 23, 2026, 3:55:40 AM",
+     "description": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\nHosted, including Dedicated, versions of VCO were impacted and have already been patched.",
+     "enisa_id": "EUVD-2026-84296\n",
+     "epss": 1.06,
+     "exploitedSince": "Sep 22, 2026, 12:00:00 AM",
+     "id": "CVE-2026-93952",
+     "references": "https://www.arista.com/en/support/advisories-notices/security-advisory/24765-security-advisory-0183\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "042c5d5c-9a37-3b9e-b7db-95c6eec94eb7",
+       "product": {
+        "name": "VeloCloud Orchestrator (VCO) On-Prem",
+        "vendor": {
+         "name": "Arista Networks"
+        }
+       },
+       "product_version": "5.2.0 ≤5.2.3.15"
+      },
+      {
+       "id": "3ed9d5a7-24c3-3e76-bada-bab688860990",
+       "product": {
+        "name": "VeloCloud Orchestrator (VCO) On-Prem",
+        "vendor": {
+         "name": "Arista Networks"
+        }
+       },
+       "product_version": "7.0.0 ≤7.0.0.2"
+      },
+      {
+       "id": "43ebe9b3-3437-3267-843e-645fa57bf469",
+       "product": {
+        "name": "VeloCloud Orchestrator (VCO) On-Prem",
+        "vendor": {
+         "name": "Arista Networks"
+        }
+       },
+       "product_version": "6.4.0 ≤6.4.2.7"
+      },
+      {
+       "id": "74d5287e-cc42-3ae8-8b45-9fd4415569ef",
+       "product": {
+        "name": "VeloCloud Orchestrator (VCO) On-Prem",
+        "vendor": {
+         "name": "Arista Networks"
+        }
+       },
+       "product_version": "6.1.0 ≤6.1.3.7"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "86172fb4-ae8a-3a57-bcea-abf852f703c9",
+       "vendor": {
+        "name": "Arista Networks"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "9a0f96cd-b241-3325-bac6-403585d25627",
+  "epss": 1.06,
+  "exploitedSince": "Sep 22, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-84296",
+  "references": "https://www.arista.com/en/support/advisories-notices/security-advisory/24765-security-advisory-0183\n"
+ },
+ "id": "EUVD-2026-84296",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "platforms": [
+       "VeloCloud Orchestrator On-Prem"
+      ],
+      "product": "VeloCloud Orchestrator (VCO) On-Prem",
+      "vendor": "Arista Networks",
+      "versions": [
+       {
+        "lessThanOrEqual": "5.2.3.15",
+        "status": "affected",
+        "version": "5.2.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThanOrEqual": "6.1.3.7",
+        "status": "affected",
+        "version": "6.1.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThanOrEqual": "6.4.2.7",
+        "status": "affected",
+        "version": "6.4.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThanOrEqual": "7.0.0.2",
+        "status": "affected",
+        "version": "7.0.0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "psirt@arista.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-25",
+  "cisaExploitAdd": "2026-09-22",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Arista VeloCloud Orchestrator Improper Input Validation Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "E90ACBD1-E408-4DD5-B8DC-D3E021FC7E7A",
+        "versionEndExcluding": "5.2.3.16",
+        "versionStartIncluding": "5.2.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "86BE5508-B49D-42FC-82E7-FCA23806DF8D",
+        "versionEndIncluding": "6.1.3.7",
+        "versionStartIncluding": "6.1.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "9592E38C-B71C-499C-9B7E-317E8E20794C",
+        "versionEndExcluding": "6.4.2.8",
+        "versionStartIncluding": "6.4.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:arista:velocloud_orchestrator:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "633BE61D-90FD-4868-9459-D4DB1B2CF653",
+        "versionEndIncluding": "7.0.0.2",
+        "versionStartIncluding": "7.0.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\nHosted, including Dedicated, versions of VCO were impacted and have already been patched."
+   }
+  ],
+  "id": "CVE-2026-93952",
+  "lastModified": "2026-09-23T14:32:12.417",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 10.0,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 6.0,
+     "source": "psirt@arista.com",
+     "type": "Secondary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "HIGH",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.5,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "HIGH",
+      "subConfidentialityImpact": "HIGH",
+      "subIntegrityImpact": "HIGH",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "psirt@arista.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-93952",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-22T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-22T08:16:43.047",
+  "references": [
+   {
+    "source": "psirt@arista.com",
+    "tags": [
+     "Mitigation",
+     "Vendor Advisory"
+    ],
+    "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/24765-security-advisory-0183"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-93952"
+   }
+  ],
+  "sourceIdentifier": "psirt@arista.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-20"
+     }
+    ],
+    "source": "psirt@arista.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

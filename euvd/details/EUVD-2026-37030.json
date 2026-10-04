@@ -1,0 +1,799 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-7273"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-7273",
+  "cwes": [
+   "CWE-121"
+  ],
+  "dateAdded": "2026-09-21",
+  "dueDate": "2026-09-24",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-stack-based-buffer-overflow-vulnerability-in-gs1900-series-switches-06-16-2026 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-7273",
+  "product": "GS1900 Series Switches",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.",
+  "vendorProject": "Zyxel",
+  "vulnerabilityName": "Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-7273\nGHSA-rrv4-8jq5-8j78\n",
+  "assigner": "Zyxel",
+  "baseScore": 8.8,
+  "baseScoreVector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Jun 16, 2026, 2:20:29 AM",
+  "dateUpdated": "Sep 22, 2026, 3:55:39 AM",
+  "description": "A stack-based buffer overflow vulnerability in the CGI program of Zyxel GS1900-48HPv2 firmware versions through 2.90(ABTQ.1)C0 could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "056ef8ba-6a40-3d89-b817-c6dce19e3cee",
+    "product": {
+     "name": "GS1900-24EP firmware",
+     "vendor": {
+      "name": "Zyxel"
+     }
+    },
+    "product_version": "≤ 2.90(ABTO.1)C0"
+   },
+   {
+    "id": "21aeb060-083a-3186-ab3a-bbe6722273be",
+    "product": {
+     "name": "GS1900-24HPv2 firmware",
+     "vendor": {
+      "name": "Zyxel"
+     }
+    },
+    "product_version": "≤ 2.90(ABTP.1)C0"
+   },
+   {
+    "id": "2385cd24-1148-3205-9202-681399c85095",
+    "product": {
+     "name": "GS1900-16 firmware",
+     "vendor": {
+      "name": "Zyxel"
+     }
+    },
+    "product_version": "≤ 2.90(AAHJ.1)C0"
+   },
+   {
+    "id": "4481fc3b-bd0a-3fe9-a56b-21f4357a85be",
+    "product": {
+     "name": "GS1900-8HP firmware",
+     "vendor": {
+      "name": "Zyxel"
+     }
+    },
+    "product_version": "≤ 2.90(AAHI.1)C0"
+   },
+   {
+    "id": "adf89002-9628-301e-be44-26d2803f7841",
+    "product": {
+     "name": "GS1900-48HPv2 firmware",
+     "vendor": {
+      "name": "Zyxel"
+     }
+    },
+    "product_version": "≤ 2.90(ABTQ.1)C0"
+   },
+   {
+    "id": "b6dc6bc9-9d2c-32e4-884b-ec9151b3b478",
+    "product": {
+     "name": "GS1900-24E firmware",
+     "vendor": {
+      "name": "Zyxel"
+     }
+    },
+    "product_version": "≤ 2.90(AAHK.1)C0"
+   },
+   {
+    "id": "bc5a5bef-e395-3101-a1ea-5f9295a802a3",
+    "product": {
+     "name": "GS1900-24 firmware",
+     "vendor": {
+      "name": "Zyxel"
+     }
+    },
+    "product_version": "≤ 2.90(AAHL.1)C0"
+   },
+   {
+    "id": "de9efa22-d611-3382-95f1-522a65777903",
+    "product": {
+     "name": "GS1900-48 firmware",
+     "vendor": {
+      "name": "Zyxel"
+     }
+    },
+    "product_version": "≤ 2.90(AAHN.1)C0"
+   },
+   {
+    "id": "e0d98068-da5e-35d1-b292-5b487ad154d8",
+    "product": {
+     "name": "GS1900-8 Firmware",
+     "vendor": {
+      "name": "Zyxel"
+     }
+    },
+    "product_version": "≤ 2.90(AAHH.1)C0"
+   },
+   {
+    "id": "ff44c6f3-da1b-3425-8a4e-71fcc779b96c",
+    "product": {
+     "name": "GS1900-10HP firmware",
+     "vendor": {
+      "name": "Zyxel"
+     }
+    },
+    "product_version": "≤ 2.90(AAZI.1)C0"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "cb9121fa-2f3d-3730-a658-0ea4bec42f0f",
+    "vendor": {
+     "name": "Zyxel"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "5a970895-be75-3207-95ca-0621fd8b70ac",
+    "vulnerability": {
+     "aliases": "GHSA-rrv4-8jq5-8j78\nCVE-2026-7273\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:51:46 AM",
+     "datePublished": "Jun 16, 2026, 3:30:36 AM",
+     "dateUpdated": "Sep 21, 2026, 9:31:33 PM",
+     "description": "A stack-based buffer overflow vulnerability in the CGI program of Zyxel GS1900-48HPv2 firmware versions through 2.90(ABTQ.1)C0 could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.",
+     "enisa_id": "EUVD-2026-37030\n",
+     "epss": 0.0,
+     "id": "GHSA-rrv4-8jq5-8j78",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-7273\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-7273\nhttps://www.greynoise.io/blog/open-season-on-kapibala-attacker-steals-government-records-wordpress-exploitation\nhttps://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-stack-based-buffer-overflow-vulnerability-in-gs1900-series-switches-06-16-2026\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "c813ac06-0868-3785-b967-18124e161d13",
+    "vulnerability": {
+     "assigner": "Zyxel",
+     "baseScore": 8.8,
+     "baseScoreVector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:34:15 AM",
+     "datePublished": "Jun 16, 2026, 2:20:29 AM",
+     "dateUpdated": "Sep 22, 2026, 3:55:39 AM",
+     "description": "A stack-based buffer overflow vulnerability in the CGI program of Zyxel GS1900-48HPv2 firmware versions through 2.90(ABTQ.1)C0 could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.",
+     "enisa_id": "EUVD-2026-37030\n",
+     "epss": 2.5,
+     "exploitedSince": "Sep 21, 2026, 12:00:00 AM",
+     "id": "CVE-2026-7273",
+     "references": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-stack-based-buffer-overflow-vulnerability-in-gs1900-series-switches-06-16-2026\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "0180356a-ae27-3173-bbcc-855368e7a83a",
+       "product": {
+        "name": "GS1900-16 firmware",
+        "vendor": {
+         "name": "Zyxel"
+        }
+       },
+       "product_version": "≤ 2.90(AAHJ.1)C0"
+      },
+      {
+       "id": "19db1dda-61a7-3b56-98d0-aff7607b8899",
+       "product": {
+        "name": "GS1900-24EP firmware",
+        "vendor": {
+         "name": "Zyxel"
+        }
+       },
+       "product_version": "≤ 2.90(ABTO.1)C0"
+      },
+      {
+       "id": "2c2b54ae-8f69-3aef-9bd7-fc4e08fdc1ae",
+       "product": {
+        "name": "GS1900-8 Firmware",
+        "vendor": {
+         "name": "Zyxel"
+        }
+       },
+       "product_version": "≤ 2.90(AAHH.1)C0"
+      },
+      {
+       "id": "3a3f860b-cb17-364f-af38-3fadd7f47470",
+       "product": {
+        "name": "GS1900-24HPv2 firmware",
+        "vendor": {
+         "name": "Zyxel"
+        }
+       },
+       "product_version": "≤ 2.90(ABTP.1)C0"
+      },
+      {
+       "id": "48f9bc7e-c6e7-3fbc-b3f2-1a35ea384ee2",
+       "product": {
+        "name": "GS1900-8HP firmware",
+        "vendor": {
+         "name": "Zyxel"
+        }
+       },
+       "product_version": "≤ 2.90(AAHI.1)C0"
+      },
+      {
+       "id": "4f2217ee-cdb3-3928-b0ae-8b46416306e8",
+       "product": {
+        "name": "GS1900-24E firmware",
+        "vendor": {
+         "name": "Zyxel"
+        }
+       },
+       "product_version": "≤ 2.90(AAHK.1)C0"
+      },
+      {
+       "id": "58866973-7c2e-3bde-aec7-5c7c01ad79b3",
+       "product": {
+        "name": "GS1900-24 firmware",
+        "vendor": {
+         "name": "Zyxel"
+        }
+       },
+       "product_version": "≤ 2.90(AAHL.1)C0"
+      },
+      {
+       "id": "5f5d425b-2a38-3f8d-aec2-1e444e1f468d",
+       "product": {
+        "name": "GS1900-48 firmware",
+        "vendor": {
+         "name": "Zyxel"
+        }
+       },
+       "product_version": "≤ 2.90(AAHN.1)C0"
+      },
+      {
+       "id": "ce621a4a-7967-3608-9110-4674e7e4d38c",
+       "product": {
+        "name": "GS1900-10HP firmware",
+        "vendor": {
+         "name": "Zyxel"
+        }
+       },
+       "product_version": "≤ 2.90(AAZI.1)C0"
+      },
+      {
+       "id": "e832355b-5e6a-3d61-9723-cbc2c5fe4641",
+       "product": {
+        "name": "GS1900-48HPv2 firmware",
+        "vendor": {
+         "name": "Zyxel"
+        }
+       },
+       "product_version": "≤ 2.90(ABTQ.1)C0"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "a944676f-ea34-362f-a1d9-8b2a9b2ad664",
+       "vendor": {
+        "name": "Zyxel"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "1fffe2ea-f389-35a7-88b1-23b56aa736d6",
+  "epss": 2.5,
+  "exploitedSince": "Sep 21, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-37030",
+  "references": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-stack-based-buffer-overflow-vulnerability-in-gs1900-series-switches-06-16-2026\n"
+ },
+ "id": "EUVD-2026-37030",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "GS1900-48HPv2 firmware",
+      "vendor": "Zyxel",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "<= 2.90(ABTQ.1)C0"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "GS1900-8 firmware",
+      "vendor": "Zyxel",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "<= 2.90(AAHH.1)C0"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "GS1900-8HP firmware",
+      "vendor": "Zyxel",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "<= 2.90(AAHI.1)C0"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "GS1900-10HP firmware",
+      "vendor": "Zyxel",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "<= 2.90(AAZI.1)C0"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "GS1900-16 firmware",
+      "vendor": "Zyxel",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "<= 2.90(AAHJ.1)C0"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "GS1900-24 firmware",
+      "vendor": "Zyxel",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "<= 2.90(AAHL.1)C0"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "GS1900-24E firmware",
+      "vendor": "Zyxel",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "<= 2.90(AAHK.1)C0"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "GS1900-24EP firmware",
+      "vendor": "Zyxel",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "<= 2.90(ABTO.1)C0"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "GS1900-24HPv2 firmware",
+      "vendor": "Zyxel",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "<= 2.90(ABTP.1)C0"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "GS1900-48 firmware",
+      "vendor": "Zyxel",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "<= 2.90(AAHN.1)C0"
+       }
+      ]
+     }
+    ],
+    "source": "security@zyxel.com.tw"
+   }
+  ],
+  "cisaActionDue": "2026-09-24",
+  "cisaExploitAdd": "2026-09-21",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:zyxel:gs1900-8_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7C399F4A-32C4-4482-AC09-718473463836",
+        "versionEndExcluding": "2.90\\(aahh.2\\)c0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:zyxel:gs1900-8:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "51D33F50-B5A4-4AEF-972C-7FF089C21D52",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:zyxel:gs1900-8hp_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "428E979B-9FF5-4968-B399-5B8041B9C9C7",
+        "versionEndExcluding": "2.90\\(aahi.2\\)c0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:zyxel:gs1900-8hp:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "27602862-EFB7-402B-994E-254A0B210820",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:zyxel:gs1900-10hp_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D2189FCE-CD49-4FF0-91AF-18E4032A7A70",
+        "versionEndExcluding": "2.90\\(aazi.2\\)c0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:zyxel:gs1900-10hp:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "89201505-07AF-4F9C-9304-46F2707DB9B4",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:zyxel:gs1900-16_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "1064772E-0A6C-48D0-B75F-F9B649C39CE5",
+        "versionEndExcluding": "2.90\\(aahj.2\\)c0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:zyxel:gs1900-16:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5078F7A5-D03B-4D3A-9C19-57DFF4D6BF7A",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:zyxel:gs1900-24_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "282A3334-6A1D-4758-B315-3AD75775A9F1",
+        "versionEndExcluding": "2.90\\(aahl.2\\)c0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:zyxel:gs1900-24:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F4F55299-70D5-4CE1-A1EC-D79B469B94F7",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:zyxel:gs1900-24e_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3C91378D-4A01-48BD-8EA0-86FA4CA32186",
+        "versionEndExcluding": "2.90\\(aahk.2\\)c0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:zyxel:gs1900-24e:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A6456AD6-8A1D-4D3D-AC1A-ABE442242B1B",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:zyxel:gs1900-24ep_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "CC8623A8-D581-4DEB-AE4B-4865D8CC21FA",
+        "versionEndExcluding": "2.90\\(abto.2\\)c0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:zyxel:gs1900-24ep:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B22AA8B1-11E2-408F-A1F6-0F8AF32AB131",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:zyxel:gs1900-24hpv2_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "916252C6-288F-44E4-A029-0BE1C684D2E3",
+        "versionEndExcluding": "2.90\\(abtp.2\\)c0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:zyxel:gs1900-24hpv2:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "512D9A91-8DA7-47F1-AC77-AF743F99BFF3",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:zyxel:gs1900-48_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "74EEBA8C-D7F1-45BA-B81F-EFF85B69EFCF",
+        "versionEndExcluding": "2.90\\(aahn.2\\)c0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:zyxel:gs1900-48:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "CFB7D4BF-7D17-48D3-990D-4BADAC8BD868",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:zyxel:gs1900-48hpv2_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "127498BB-7415-4AC9-BF12-318A9A11D467",
+        "versionEndExcluding": "2.90\\(abtq.2\\)c0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:zyxel:gs1900-48hpv2:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "BC74C679-6D22-47E4-AE8A-2647B1AA4276",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A stack-based buffer overflow vulnerability in the CGI program of Zyxel GS1900-48HPv2 firmware versions through 2.90(ABTQ.1)C0 could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request."
+   }
+  ],
+  "id": "CVE-2026-7273",
+  "lastModified": "2026-09-22T12:10:51.067",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "ADJACENT_NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.9,
+     "source": "security@zyxel.com.tw",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-7273",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-06-17T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-06-16T03:16:13.557",
+  "references": [
+   {
+    "source": "security@zyxel.com.tw",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-stack-based-buffer-overflow-vulnerability-in-gs1900-series-switches-06-16-2026"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory",
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-7273"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://www.greynoise.io/blog/open-season-on-kapibala-attacker-steals-government-records-wordpress-exploitation"
+   }
+  ],
+  "sourceIdentifier": "security@zyxel.com.tw",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-121"
+     }
+    ],
+    "source": "security@zyxel.com.tw",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

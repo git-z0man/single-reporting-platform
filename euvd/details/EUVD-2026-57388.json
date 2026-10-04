@@ -1,0 +1,395 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42018"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-42018",
+  "cwes": [
+   "CWE-287"
+  ],
+  "dateAdded": "2026-09-11",
+  "dueDate": "2026-09-25",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories ; https://docs.jfrog.com/releases/docs/artifactory-self-managed-releases ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-42018",
+  "product": "Artifactory",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
+  "vendorProject": "JFrog",
+  "vulnerabilityName": "JFrog Artifactory Improper Authentication Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-42018\nGHSA-3q94-gprh-7pwm\n",
+  "assigner": "JFROG",
+  "baseScore": 7.5,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Aug 12, 2026, 5:43:21 PM",
+  "dateUpdated": "Oct 1, 2026, 6:06:26 PM",
+  "description": "JFrog Artifactory could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "171d3429-1ad3-3203-bacf-d36a0cf20b0f",
+    "product": {
+     "name": "Artifactory",
+     "vendor": {
+      "name": "JFrog"
+     }
+    },
+    "product_version": "0 <7.111.20"
+   },
+   {
+    "id": "653e392c-0da8-3d6f-9b27-0f92fb6a6167",
+    "product": {
+     "name": "Artifactory",
+     "vendor": {
+      "name": "JFrog"
+     }
+    },
+    "product_version": "7.133.0 <7.133.28"
+   },
+   {
+    "id": "c20663b9-1081-3af5-9983-c176dd6f9a44",
+    "product": {
+     "name": "Artifactory",
+     "vendor": {
+      "name": "JFrog"
+     }
+    },
+    "product_version": "7.125.0 <7.125.19"
+   },
+   {
+    "id": "e1bb8cb8-23b2-3a50-8706-0702c095d794",
+    "product": {
+     "name": "Artifactory",
+     "vendor": {
+      "name": "JFrog"
+     }
+    },
+    "product_version": "7.117.0 <7.117.27"
+   },
+   {
+    "id": "fdfdd4b9-174b-3742-95d1-4879dc6b6920",
+    "product": {
+     "name": "Artifactory",
+     "vendor": {
+      "name": "JFrog"
+     }
+    },
+    "product_version": "7.146.0 <7.146.8"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "3408733d-ef3d-3198-819f-c28b5e4e9491",
+    "vendor": {
+     "name": "JFrog"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "1528d958-53d4-3ec4-b9ef-d7df808f997d",
+    "vulnerability": {
+     "assigner": "JFROG",
+     "baseScore": 7.5,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:33:08 AM",
+     "datePublished": "Aug 12, 2026, 5:43:21 PM",
+     "dateUpdated": "Oct 1, 2026, 6:06:26 PM",
+     "description": "JFrog Artifactory could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
+     "enisa_id": "EUVD-2026-57388\n",
+     "epss": 9.81,
+     "exploitedSince": "Sep 11, 2026, 12:00:00 AM",
+     "id": "CVE-2026-42018",
+     "references": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories\nhttps://docs.jfrog.com/releases/docs/artifactory-self-managed-releases\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "0cf272ca-8b32-3f17-a57b-784e729680d8",
+       "product": {
+        "name": "Artifactory",
+        "vendor": {
+         "name": "JFrog"
+        }
+       },
+       "product_version": "7.125.0 <7.125.19"
+      },
+      {
+       "id": "564e353d-5f87-36ed-bbe5-e4011f617e54",
+       "product": {
+        "name": "Artifactory",
+        "vendor": {
+         "name": "JFrog"
+        }
+       },
+       "product_version": "7.146.0 <7.146.8"
+      },
+      {
+       "id": "ac502380-ecec-3232-b293-fa1c8c10b36a",
+       "product": {
+        "name": "Artifactory",
+        "vendor": {
+         "name": "JFrog"
+        }
+       },
+       "product_version": "7.133.0 <7.133.28"
+      },
+      {
+       "id": "c6a85d97-e016-387b-91ae-95311c62ffc0",
+       "product": {
+        "name": "Artifactory",
+        "vendor": {
+         "name": "JFrog"
+        }
+       },
+       "product_version": "7.117.0 <7.117.27"
+      },
+      {
+       "id": "fff79d18-97f6-3bb2-840d-dd4704a2c833",
+       "product": {
+        "name": "Artifactory",
+        "vendor": {
+         "name": "JFrog"
+        }
+       },
+       "product_version": "0 <7.111.20"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "92bb1b9c-9c64-3b2e-9638-97b562dc7cb9",
+       "vendor": {
+        "name": "JFrog"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "2bad6a75-3791-337f-a7e5-6920c46fceac",
+    "vulnerability": {
+     "aliases": "GHSA-3q94-gprh-7pwm\nCVE-2026-42018\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:54:24 AM",
+     "datePublished": "Aug 12, 2026, 6:31:22 PM",
+     "dateUpdated": "Sep 11, 2026, 9:31:06 PM",
+     "description": "JFrog Artifactory could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
+     "enisa_id": "EUVD-2026-57388\n",
+     "epss": 0.0,
+     "id": "GHSA-3q94-gprh-7pwm",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-42018\nhttps://docs.jfrog.com/releases/docs/artifactory-self-managed-releases\nhttps://docs.jfrog.com/releases/docs/jfrog-security-advisories\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42018\nhttps://www.wiz.io/blog/artifactory-under-attack-in-the-wild-exploitation-of-cve-2026-42016-cve-2026-4201\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "8591e0b9-09b4-3905-90cd-c5388d08770f",
+  "epss": 9.81,
+  "exploitedSince": "Sep 11, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-57388",
+  "references": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories\nhttps://docs.jfrog.com/releases/docs/artifactory-self-managed-releases\n"
+ },
+ "id": "EUVD-2026-57388",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "artifactory",
+      "vendor": "jfrog",
+      "versions": [
+       {
+        "lessThan": "7.111.20",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "7.117.27",
+        "status": "affected",
+        "version": "7.117.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "7.125.19",
+        "status": "affected",
+        "version": "7.125.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "7.133.28",
+        "status": "affected",
+        "version": "7.133.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "7.146.8",
+        "status": "affected",
+        "version": "7.146.0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "reefs@jfrog.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-25",
+  "cisaExploitAdd": "2026-09-11",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "JFrog Artifactory Improper Authentication Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
+        "matchCriteriaId": "A3362EDD-29B3-4A8E-8C6B-C1E4B6801A7F",
+        "versionEndExcluding": "7.111.20",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
+        "matchCriteriaId": "95C14B2A-24BF-4C81-A178-BBA744F9AB2A",
+        "versionEndExcluding": "7.117.27",
+        "versionStartIncluding": "7.117.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
+        "matchCriteriaId": "F3D1E17C-2AE8-4B30-8802-68D75F4937B8",
+        "versionEndExcluding": "7.125.19",
+        "versionStartIncluding": "7.125.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
+        "matchCriteriaId": "3751FB76-30AC-4EB7-AAC7-7D1A6215C59B",
+        "versionEndExcluding": "7.133.28",
+        "versionStartIncluding": "7.133.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*",
+        "matchCriteriaId": "B8DDB685-DD49-4FD8-86C4-2852EBEBD5DE",
+        "versionEndExcluding": "7.146.8",
+        "versionStartIncluding": "7.146.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "JFrog Artifactory could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources."
+   }
+  ],
+  "id": "CVE-2026-42018",
+  "lastModified": "2026-10-01T19:17:20.413",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 7.5,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "NONE",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 3.6,
+     "source": "reefs@jfrog.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-42018",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-01T18:06:12.895893Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-08-12T18:17:29.473",
+  "references": [
+   {
+    "source": "reefs@jfrog.com",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://docs.jfrog.com/releases/docs/artifactory-self-managed-releases"
+   },
+   {
+    "source": "reefs@jfrog.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42018"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://www.wiz.io/blog/artifactory-under-attack-in-the-wild-exploitation-of-cve-2026-42016-cve-2026-4201"
+   }
+  ],
+  "sourceIdentifier": "reefs@jfrog.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-287"
+     }
+    ],
+    "source": "reefs@jfrog.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

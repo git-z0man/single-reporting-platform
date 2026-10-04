@@ -1,0 +1,484 @@
+{
+ "cert_links": [
+  [
+   "CERT Polska",
+   "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve"
+  ],
+  [
+   "CERT Polska",
+   "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/"
+  ],
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-67279"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-67279",
+  "cwes": [
+   "CWE-841"
+  ],
+  "dateAdded": "2026-09-25",
+  "dueDate": "2026-09-28",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://mikrotik.com/supportsec/september-2026-vulnerability/?utm_source=chatgpt.com ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-67279",
+  "product": "RouterOS",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthenticated exploitation of CVE-2026-86060.",
+  "vendorProject": "MikroTik",
+  "vulnerabilityName": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-67279\nGHSA-pqp3-gjgf-83cf\n",
+  "assigner": "CERT-PL",
+  "baseScore": 6.9,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Sep 5, 2026, 8:00:57 PM",
+  "dateUpdated": "Sep 26, 2026, 3:55:45 AM",
+  "description": "RouterOS SSH enters the connection protocol after a client-requested rekey even though user authentication was never attempted, allowing an unauthenticated client to open a session channel and send an exec request. On affected builds the server dispatches the command, enabling unauthenticated creation, overwrite, and reconstruction of files in the RouterOS managed file namespace, including support files containing configuration and diagnostic data.This issue was fixed in versions: 6.49.21 (Long-term), 7.23.4 (Long-term) and 7.24.2 (Stable)",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0dc1423a-5182-35d4-ac66-3f0a72f1ad10",
+       "product": {
+        "name": "sshamble-0:0.3.12-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "15804f44-5274-3a13-a88e-5dc081473d52",
+       "product": {
+        "name": "sshamble-0:0.3.12-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "71fcffdc-0f7c-370a-8257-fd679ae684d1",
+       "product": {
+        "name": "openSUSE Tumbleweed",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cc3c6fb5-69fe-31d9-9bb3-963627f7df79",
+       "product": {
+        "name": "sshamble-0:0.3.12-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d26526f9-95e9-3354-86b6-e6489e9a59e2",
+       "product": {
+        "name": "sshamble-0:0.3.12-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-67279\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 9, 2026, 12:00:00 AM",
+     "dateUpdated": "Sep 17, 2026, 5:23:46 PM",
+     "description": "sshamble-0.3.12-1.1 on GA media",
+     "id": "openSUSE-SU-2026:11737-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_11737-1.json\nhttps://www.suse.com/security/cve/CVE-2026-67279/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "sshamble-0.3.12-1.1 on GA media"
+    },
+    "id": "a04f125b-cfd9-3b02-93a9-88dfa9b7d000"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "a08b74ee-41cc-37fd-a413-805b521f0c0f",
+    "product": {
+     "name": "RouterOS",
+     "vendor": {
+      "name": "MikroTik"
+     }
+    },
+    "product_version": "7.24 <7.24.2"
+   },
+   {
+    "id": "e63893aa-40cf-36b3-b7a7-8d03774b9098",
+    "product": {
+     "name": "RouterOS",
+     "vendor": {
+      "name": "MikroTik"
+     }
+    },
+    "product_version": "6.0.0 <6.49.21"
+   },
+   {
+    "id": "f7ed9c13-08d8-3476-93a3-841208ebc28a",
+    "product": {
+     "name": "RouterOS",
+     "vendor": {
+      "name": "MikroTik"
+     }
+    },
+    "product_version": "7.0.0 <7.23.4"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "4164df4c-de3d-3e3d-a60c-6b7751f141a6",
+    "vendor": {
+     "name": "MikroTik"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "464a512b-4616-336b-ab87-52b8c0857304",
+    "vulnerability": {
+     "aliases": "GHSA-pqp3-gjgf-83cf\nCVE-2026-67279\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:55:42 AM",
+     "datePublished": "Sep 5, 2026, 9:31:20 PM",
+     "dateUpdated": "Sep 25, 2026, 6:31:17 PM",
+     "description": "RouterOS SSH enters the connection protocol after a client-requested rekey even though user authentication was never attempted, allowing an unauthenticated client to open a session channel and send an exec request. On affected builds the server dispatches the command, enabling unauthenticated creation, overwrite, and reconstruction of files in the RouterOS managed file namespace, including support files containing configuration and diagnostic data.This issue was fixed in versions: 6.49.21 (Long-term), 7.23.4 (Long-term) and 7.24.2 (Stable)",
+     "enisa_id": "EUVD-2026-72027\n",
+     "epss": 0.0,
+     "id": "GHSA-pqp3-gjgf-83cf",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-67279\nhttps://bishopfox.com/blog/mikrotrick-inside-the-routeros-takeover-chain\nhttps://cert.pl/en/posts/2026/09/mikrotik-routeros-cve\nhttps://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited\nhttps://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802\nhttps://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801\nhttps://forum.mikrotik.com/t/7-24-2-stable-is-released/272800\nhttps://mikrotik.com/supportsec/september-2026-vulnerability\nhttps://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-67279\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "d46ce797-bdd7-3a03-9be9-5dbddaf1394a",
+    "vulnerability": {
+     "assigner": "CERT-PL",
+     "baseScore": 6.9,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 4, 2026, 3:37:55 AM",
+     "datePublished": "Sep 5, 2026, 8:00:57 PM",
+     "dateUpdated": "Sep 26, 2026, 3:55:45 AM",
+     "description": "RouterOS SSH enters the connection protocol after a client-requested rekey even though user authentication was never attempted, allowing an unauthenticated client to open a session channel and send an exec request. On affected builds the server dispatches the command, enabling unauthenticated creation, overwrite, and reconstruction of files in the RouterOS managed file namespace, including support files containing configuration and diagnostic data.This issue was fixed in versions: 6.49.21 (Long-term), 7.23.4 (Long-term) and 7.24.2 (Stable)",
+     "enisa_id": "EUVD-2026-72027\n",
+     "epss": 1.03,
+     "exploitedSince": "Sep 25, 2026, 12:00:00 AM",
+     "id": "CVE-2026-67279",
+     "references": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve\nhttps://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/\nhttps://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/\nhttps://mikrotik.com/supportsec/september-2026-vulnerability/\nhttps://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802\nhttps://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801\nhttps://forum.mikrotik.com/t/7-24-2-stable-is-released/272800\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "72be1ce0-fbcc-33fa-bfff-00c7909b2c59",
+       "product": {
+        "name": "RouterOS",
+        "vendor": {
+         "name": "MikroTik"
+        }
+       },
+       "product_version": "6.0.0 <6.49.21"
+      },
+      {
+       "id": "83cb560e-1315-3edf-9058-9ff7ffc3f9cf",
+       "product": {
+        "name": "RouterOS",
+        "vendor": {
+         "name": "MikroTik"
+        }
+       },
+       "product_version": "7.0.0 <7.23.4"
+      },
+      {
+       "id": "a49ee200-4215-365d-a711-479cb79284f3",
+       "product": {
+        "name": "RouterOS",
+        "vendor": {
+         "name": "MikroTik"
+        }
+       },
+       "product_version": "7.24 <7.24.2"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "8e6337b3-3eb8-36ab-b587-cd473567d9d4",
+       "vendor": {
+        "name": "MikroTik"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "d30bfa4e-7613-38fb-ae80-a4716660a99d",
+  "epss": 1.03,
+  "exploitedSince": "Sep 25, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-72027",
+  "references": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve\nhttps://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/\nhttps://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/\nhttps://mikrotik.com/supportsec/september-2026-vulnerability/\nhttps://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802\nhttps://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801\nhttps://forum.mikrotik.com/t/7-24-2-stable-is-released/272800\n"
+ },
+ "id": "EUVD-2026-72027",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "RouterOS",
+      "vendor": "Mikrotik",
+      "versions": [
+       {
+        "lessThan": "7.24.2",
+        "status": "affected",
+        "version": "7.24",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "7.23.4",
+        "status": "affected",
+        "version": "7.0.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "6.49.21",
+        "status": "affected",
+        "version": "6.0.0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "cvd@cert.pl"
+   }
+  ],
+  "cisaActionDue": "2026-09-28",
+  "cisaExploitAdd": "2026-09-25",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "CFC981EC-B44C-40B5-945B-2283FADEC961",
+        "versionEndExcluding": "6.49.21",
+        "versionStartIncluding": "6.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "881306AB-32B1-4B5F-96D8-9532D25F7AE4",
+        "versionEndExcluding": "7.23.4",
+        "versionStartIncluding": "7.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A41D6B3C-D321-4C61-B3D5-00F8276CB4AC",
+        "versionEndExcluding": "7.24.2",
+        "versionStartIncluding": "7.24",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "RouterOS SSH enters the connection protocol after a client-requested rekey even though user authentication was never attempted, allowing an unauthenticated client to open a session channel and send an exec request. On affected builds the server dispatches the command, enabling unauthenticated creation, overwrite, and reconstruction of files in the RouterOS managed file namespace, including support files containing configuration and diagnostic data.This issue was fixed in versions: 6.49.21 (Long-term), 7.23.4 (Long-term) and 7.24.2 (Stable)"
+   }
+  ],
+  "id": "CVE-2026-67279",
+  "lastModified": "2026-09-26T04:17:47.273",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 6.5,
+      "baseSeverity": "MEDIUM",
+      "confidentialityImpact": "LOW",
+      "integrityImpact": "LOW",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 2.5,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 6.9,
+      "baseSeverity": "MEDIUM",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "NONE",
+      "vulnConfidentialityImpact": "LOW",
+      "vulnIntegrityImpact": "LOW",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "cvd@cert.pl",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-67279",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-25T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-05T20:17:18.390",
+  "references": [
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Mitigation",
+     "Third Party Advisory"
+    ],
+    "url": "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://forum.mikrotik.com/t/7-24-2-stable-is-released/272800"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://mikrotik.com/supportsec/september-2026-vulnerability/"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://bishopfox.com/blog/mikrotrick-inside-the-routeros-takeover-chain"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-67279"
+   }
+  ],
+  "sourceIdentifier": "cvd@cert.pl",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-841"
+     }
+    ],
+    "source": "cvd@cert.pl",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

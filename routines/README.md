@@ -1,6 +1,6 @@
 # Scheduled routine prompts
 
-Five scheduled Routines work on this repository: four monitors and the Guide
+Six scheduled Routines work on this repository: five monitors and the Guide
 sync. What a Routine executes is its **prompt**, held by the platform. To stop
 that prompt drifting from the repository, each live prompt is meant to be a
 short **loader** that reads the real prompt from the file in this directory on
@@ -17,7 +17,8 @@ says which of the two it is.
 | `commission-cra-faq-monitor.md` | **Commission CRA FAQ monitor** | `trig_012AzfKXKrPnRCEjXXYWBgY4` | `0 5 * * 1` |
 | `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `0 6 * * *` |
 | `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
-| `guide-sync.md` | **Guide sync** (disabled until the repo is attached) | `trig_01SB5rkv7M4VXgtRtNzPeNYD` | `30 7 * * *` |
+| `guide-sync.md` | **Guide sync** | `trig_01SB5rkv7M4VXgtRtNzPeNYD` | `30 7 * * *` |
+| `euvd-exploited-monitor.md` | **EUVD exploited monitor** (not created yet) | see the file's header | `20 6 * * *` |
 
 The UI name and the file name differ for the first one: an attempt to rename it
 to "ENISA SRP pages monitor" was refused along with the prompt update (see
@@ -30,6 +31,7 @@ below), so the UI still shows its original name. Go by the trigger ID.
 | `srp-domains-monitor.md` | `srp-domains-baseline.md`, `srp-domains/` |
 | `notified-bodies-monitor.md` | `notified-bodies-baseline.md`, `notified-bodies/` |
 | `guide-sync.md` | `index.html`, `guide-sync/` |
+| `euvd-exploited-monitor.md` | `euvd-exploited-baseline.md`, `euvd/` |
 
 Other Routines on this account (`FuFA Reisen`, `absence.io Zeiterfassung`) do
 not write to this repository and are not mirrored here.
@@ -179,7 +181,8 @@ Agents can only update routines they created (via create_trigger).
 | Commission CRA FAQ monitor | `meta_mcp` | Yes |
 | SRP domain reachability monitor | `meta_mcp` | Yes |
 | CRA notified body alert | `http_api` | **No — paste it in the Routines UI** |
-| Guide sync | `meta_mcp` (once created) | Yes |
+| Guide sync | `meta_mcp` | Yes |
+| EUVD exploited monitor | `meta_mcp` (once created) | Yes |
 
 With loaders this matters far less: an `http_api` Routine needs **one** paste,
 of the loader, and never again. Every later change to what it does is a commit
@@ -293,7 +296,7 @@ paste.
 |---|---|
 | Commission, SRP domains | applied by an agent with `update_trigger`; the file header records the date |
 | ENISA pages, notified bodies | **manual paste** of the loader in the Routines UI; the file header says "not applied yet" until someone has |
-| Guide sync | created with the loader from the start |
+| Guide sync, EUVD exploited monitor | created with the loader from the start |
 
 After applying, read the Routine back (`get_trigger`) and check that the stored
 text equals the loader with the right file name.
@@ -315,6 +318,17 @@ Two things an agent cannot do here, so a person does them once:
   enable the Routine. Without that its push comes back 403.
 - **Arm auto-merge**, optionally, by deleting `tools/guide-sync.paused`. It ships
   present, so the first runs produce drafts to inspect.
+
+## EUVD exploited monitor
+
+`euvd/check_exploited.py` does the work; the Routine runs it daily at 06:20 UTC and
+commits only a change or the once-a-day heartbeat. The baseline
+`euvd-exploited-baseline.md` states what the list can and cannot say: it makes
+**no claim about which entry was first reported through the SRP**, because no
+source records the reporting route, and it follows CISA's KEV catalogue closely.
+Like Guide sync it is created by an agent without a repository, so a person
+attaches `single-reporting-platform` as source and outcome in the Routines UI and
+then enables it.
 
 ## Keeping a prompt in sync
 

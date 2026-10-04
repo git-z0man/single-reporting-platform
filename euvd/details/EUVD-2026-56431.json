@@ -1,0 +1,736 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-65660"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-65660",
+  "cwes": [
+   "CWE-94"
+  ],
+  "dateAdded": "2026-09-25",
+  "dueDate": "2026-09-28",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-65660",
+  "product": "SharePoint",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
+  "vendorProject": "Microsoft",
+  "vulnerabilityName": "Microsoft SharePoint Code Injection Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-65660\nGHSA-r94x-x846-rxqx\n",
+  "assigner": "microsoft",
+  "baseScore": 8.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Aug 11, 2026, 5:04:55 PM",
+  "dateUpdated": "Sep 29, 2026, 8:20:21 PM",
+  "description": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "03fe4afa-7fc5-3b2a-8ad7-0e707881dfda",
+       "product": {
+        "name": "SharePoint",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "04237684-620d-3d25-9ca1-d8ad9b0426f8",
+       "product": {
+        "name": "Microsoft Office LTSC for Mac 2024",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "1267e99e-7d78-3920-8bff-8d76a529608d",
+       "product": {
+        "name": "Microsoft Office 2016 (32-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "3d5d4be7-e235-31f3-b92f-1771c501f297",
+       "product": {
+        "name": "Microsoft Word 2016 (64-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "43bf0f82-e7f4-3f48-806a-e5b993473c4e",
+       "product": {
+        "name": "Microsoft SharePoint Enterprise Server 2016",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "477768e1-2e8e-3361-9016-5a2200c1723b",
+       "product": {
+        "name": "Microsoft SharePoint Online",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "4a25a6ce-6b76-3624-a151-991813410421",
+       "product": {
+        "name": "Microsoft Office 365 for Mac",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "4fb7a0c8-2da8-3185-a818-8bef49470871",
+       "product": {
+        "name": "Microsoft Office LTSC 2021 for 64-bit editions",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "562daaca-1e6f-3a93-bd6e-55c5caaa8c93",
+       "product": {
+        "name": "Microsoft 365 Apps for Enterprise for 64-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "58a693e2-e921-3582-add8-1e523949febf",
+       "product": {
+        "name": "Microsoft Office LTSC for Mac 2021",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "60e36b51-3f90-33ed-bcbb-4c3e60664556",
+       "product": {
+        "name": "Microsoft Teams for iOS",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "61e8d113-ddb2-3e44-a5db-f7b10e2a1db1",
+       "product": {
+        "name": "Service Bus",
+        "vendor": {
+         "name": "Oracle Corporation"
+        }
+       }
+      },
+      {
+       "id": "67de3918-341e-307a-bfd7-0066bf2fc248",
+       "product": {
+        "name": "Microsoft Office 2019 for 32-bit editions",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "6b205593-3140-39c6-ad35-368548a70884",
+       "product": {
+        "name": "Microsoft PowerPoint 2016 (64-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "720515d0-5e8f-3367-b8e1-8aa82b993a65",
+       "product": {
+        "name": "Microsoft Office 2016 (64-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "759b9514-1618-3716-a0ee-164d39e36915",
+       "product": {
+        "name": "Microsoft SharePoint Server 2019",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "87d99dfa-916e-380d-90ed-8dfb8f6364e2",
+       "product": {
+        "name": "Microsoft Excel 2016 (32-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "9fc8b0b9-a0d8-3d73-8176-feeacf683873",
+       "product": {
+        "name": "Microsoft Teams for Android",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b16afe11-c190-3aac-8998-49c8f21a4f3b",
+       "product": {
+        "name": "Microsoft Outlook 2016 (32-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b775fe94-09b2-3280-8d60-1084d4bbdf35",
+       "product": {
+        "name": "Microsoft Teams",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c6dbc5ae-eca7-3fe4-81d4-8cb667a73963",
+       "product": {
+        "name": "Microsoft Word 2016 (32-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "cecf391e-f7ed-33ea-8351-8858895fb590",
+       "product": {
+        "name": "Microsoft Office 2019 for 64-bit editions",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d007dda1-1982-3bec-9644-487ed3ac3d45",
+       "product": {
+        "name": "Microsoft 365 Apps for Enterprise for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d8ea563c-a432-3ef1-8561-13ada6a3cd85",
+       "product": {
+        "name": "Microsoft Office LTSC 2021 for 32-bit editions",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "e751a83f-b2a9-363e-8d33-2aacf588c1a0",
+       "product": {
+        "name": "Microsoft Access 2016 (64-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "e756e6a9-1413-34ec-9baf-6d503483c394",
+       "product": {
+        "name": "Teams",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "e7d362cc-c210-329b-8515-6f4c3a786d0c",
+       "product": {
+        "name": "Microsoft Office LTSC 2024 for 32-bit editions",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "e7d67dc7-8ba4-3085-88b2-cd13081a89f9",
+       "product": {
+        "name": "Microsoft SharePoint Server Subscription Edition",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "e9630d68-9963-34c9-b580-4d9effa6ee1f",
+       "product": {
+        "name": "Microsoft Office LTSC 2024 for 64-bit editions",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "e9a1c56a-904e-3bc7-9f8c-d371baeb2f1c",
+       "product": {
+        "name": "Microsoft PowerPoint 2016 (32-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "ecb233a1-12d3-3090-9750-455ce0f8fc82",
+       "product": {
+        "name": "Microsoft Access 2016 (32-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "ed43c524-519a-3295-a5d3-e20936e9aa84",
+       "product": {
+        "name": "Microsoft Excel 2016 (64-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "f27ab180-02b6-3b63-8bdf-898d1ac60d61",
+       "product": {
+        "name": "OneDrive for MacOS",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "fe56ecaf-1cea-3004-9c12-9912070bb862",
+       "product": {
+        "name": "Microsoft Outlook 2016 (64-bit edition)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-65768\nCVE-2026-65767\nCVE-2026-57105\nCVE-2026-62829\nCVE-2026-62827\nCVE-2026-62837\nCVE-2026-63514\nCVE-2026-63512\nCVE-2026-63516\nCVE-2026-63520\nCVE-2026-64922\nCVE-2026-65658\nCVE-2026-65663\nCVE-2026-65660\nCVE-2026-65665\nCVE-2026-70324\nCVE-2026-70355\nCVE-2026-64897\nCVE-2026-64900\nCVE-2026-64902\nCVE-2026-64901\nCVE-2026-64916\nCVE-2026-64921\nCVE-2026-66805\nCVE-2026-66808\nCVE-2026-70306\nCVE-2026-58639\nCVE-2026-62839\nCVE-2026-62917\nCVE-2026-70321\nCVE-2026-70326\nCVE-2026-62896\nCVE-2026-62918\nCVE-2026-65667\nCVE-2026-62836\nCVE-2026-50515\nCVE-2026-63513\nCVE-2026-63515\nCVE-2026-63518\nCVE-2026-63521\nCVE-2026-63519\nCVE-2026-65657\nCVE-2026-65656\nCVE-2026-65661\nCVE-2026-65664\nCVE-2026-65807\nCVE-2026-68792\nCVE-2026-68793\nCVE-2026-68794\nCVE-2026-68795\nCVE-2026-68796\nCVE-2026-68800\nCVE-2026-68802\nCVE-2026-68807\nCVE-2026-68806\nCVE-2026-68808\nCVE-2026-68809\nCVE-2026-68810\nCVE-2026-68811\nCVE-2026-68813\nCVE-2026-68815\nCVE-2026-68816\nCVE-2026-70312\nCVE-2026-70311\nCVE-2026-70313\nCVE-2026-70310\nCVE-2026-70316\nCVE-2026-70315\nCVE-2026-70318\nCVE-2026-70314\nCVE-2026-70317\nCVE-2026-70325\nCVE-2026-70319\nCVE-2026-70320\nCVE-2026-70323\nCVE-2026-70322\nCVE-2026-70327\nCVE-2026-70328\nCVE-2026-70329\nCVE-2026-62842\nCVE-2026-63524\nCVE-2026-63525\nCVE-2026-63526\nCVE-2026-63528\nCVE-2026-63527\nCVE-2026-63529\nCVE-2026-63530\nCVE-2026-63531\nCVE-2026-63532\nCVE-2026-63533\nCVE-2026-64898\nCVE-2026-64899\nCVE-2026-64903\nCVE-2026-64904\nCVE-2026-64905\nCVE-2026-64907\nCVE-2026-64906\nCVE-2026-64909\nCVE-2026-64910\nCVE-2026-64912\nCVE-2026-64911\nCVE-2026-64908\nCVE-2026-64914\nCVE-2026-64915\nCVE-2026-64920\nCVE-2026-64917\nCVE-2026-64919\nCVE-2026-62882\nCVE-2026-66806\nCVE-2026-66807\nCVE-2026-66810\nCVE-2026-66809\nCVE-2026-68797\nCVE-2026-68799\nCVE-2026-68801\nCVE-2026-68803\nCVE-2026-68804\nCVE-2026-68805\nCVE-2026-68812\nCVE-2026-68814\nCVE-2026-68817\nCVE-2026-70130\nCVE-2026-63517\nCVE-2026-58651\nCVE-2026-68798\nCVE-2026-65769\nCVE-2026-65680\nCVE-2026-70332\n",
+     "baseScore": 0.0,
+     "datePublished": "Aug 11, 2026, 7:57:03 PM",
+     "dateUpdated": "Aug 11, 2026, 7:57:03 PM",
+     "description": "Kwetsbaarheden verholpen in Microsoft Office",
+     "id": "NCSC-2026-0286",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "62eecf20-4fc3-3fa8-aa24-d99ecca22ba6"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "6a6d45a6-9456-3c80-ab91-b6e69fa6b4c4",
+       "product": {
+        "name": "16.0.19725.20522",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "7dfe7d87-e253-394d-a1f1-1ba332122543",
+       "product": {
+        "name": "16.0.5565.1001",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "80aa8bbf-d582-3e13-acfc-a812f32b3220",
+       "product": {
+        "name": "Microsoft SharePoint Server Subscription Edition",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "a76b9a82-bb98-3c51-89a4-a6e742fa820d",
+       "product": {
+        "name": "Microsoft SharePoint Server 2019",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b3f0bfad-9ae5-3170-bb79-cd796cf03ad6",
+       "product": {
+        "name": "Microsoft SharePoint Enterprise Server 2016",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d987a63b-ff41-3aa3-b045-a5e8fd7c9ac3",
+       "product": {
+        "name": "16.0.10417.20198",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-65660\n",
+     "baseScore": 0.0,
+     "datePublished": "Aug 11, 2026, 7:00:00 AM",
+     "dateUpdated": "Aug 27, 2026, 7:00:00 AM",
+     "description": "Microsoft SharePoint Server Remote Code Execution Vulnerability",
+     "id": "msrc_CVE-2026-65660",
+     "references": "https://msrc.microsoft.com/csaf/vex/2026/msrc_cve-2026-65660.json\n",
+     "source": {
+      "id": 20,
+      "name": "csaf_microsoft"
+     }
+    },
+    "id": "d04f2c7e-27c1-3e7e-9f4a-418df5432639"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "15cecca9-5f0a-36d5-930d-444ef0302108",
+    "product": {
+     "name": "Microsoft SharePoint Server 2019",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "16.0.0 <16.0.10417.20198"
+   },
+   {
+    "id": "c1b992d1-189c-3e70-8408-c6fbd96069cb",
+    "product": {
+     "name": "Microsoft SharePoint Enterprise Server 2016",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "16.0.0 <16.0.5565.1001"
+   },
+   {
+    "id": "e4be3e38-12fb-35fa-86f4-976a173951a9",
+    "product": {
+     "name": "Microsoft SharePoint Server Subscription Edition",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "16.0.0 <16.0.19725.20522"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "725b20c6-be04-33fa-9bb9-31a927065e6e",
+    "vendor": {
+     "name": "Microsoft"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "251ca431-14b9-3721-91be-470a720587dd",
+    "vulnerability": {
+     "assigner": "microsoft",
+     "baseScore": 8.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:38:28 AM",
+     "datePublished": "Aug 11, 2026, 5:04:55 PM",
+     "dateUpdated": "Sep 29, 2026, 8:20:21 PM",
+     "description": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.",
+     "enisa_id": "EUVD-2026-56431\n",
+     "epss": 2.1,
+     "exploitedSince": "Sep 25, 2026, 12:00:00 AM",
+     "id": "CVE-2026-65660",
+     "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "d2b820a7-dcf1-3a6d-8d24-5582583102c7",
+       "product": {
+        "name": "Microsoft SharePoint Server 2019",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "16.0.0 <16.0.10417.20198"
+      },
+      {
+       "id": "d4e48cd1-ea0d-31c1-a60d-57b631eadf83",
+       "product": {
+        "name": "Microsoft SharePoint Enterprise Server 2016",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "16.0.0 <16.0.5565.1001"
+      },
+      {
+       "id": "e2f2d5d1-2a11-3eeb-af73-6481b0ef822b",
+       "product": {
+        "name": "Microsoft SharePoint Server Subscription Edition",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "16.0.0 <16.0.19725.20522"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "72e773c5-a929-34ec-9e5a-d1ebad426577",
+       "vendor": {
+        "name": "Microsoft"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "499ef912-2d76-3c37-99c1-7963e5874752",
+    "vulnerability": {
+     "aliases": "CVE-2026-65660\nGHSA-r94x-x846-rxqx\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:54:24 AM",
+     "datePublished": "Aug 11, 2026, 6:31:36 PM",
+     "dateUpdated": "Sep 25, 2026, 6:31:15 PM",
+     "description": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network.",
+     "enisa_id": "EUVD-2026-56431\n",
+     "epss": 0.0,
+     "id": "GHSA-r94x-x846-rxqx",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-65660\nhttps://blog.previdian.com/cve-2026-65660-previdian-observes-two-stage-sharepoint-exploitation-attempts\nhttps://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-65660\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "3856f2b9-a6c5-328c-9f3f-04f978194eb4",
+  "epss": 2.1,
+  "exploitedSince": "Sep 25, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-56431",
+  "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660\n"
+ },
+ "id": "EUVD-2026-56431",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Microsoft SharePoint Enterprise Server 2016",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "16.0.5565.1001",
+        "status": "affected",
+        "version": "16.0.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Microsoft SharePoint Server 2019",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "16.0.10417.20198",
+        "status": "affected",
+        "version": "16.0.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Microsoft SharePoint Server Subscription Edition",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "16.0.19725.20522",
+        "status": "affected",
+        "version": "16.0.0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "secure@microsoft.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-28",
+  "cisaExploitAdd": "2026-09-25",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Microsoft SharePoint Code Injection Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:*:*:*:*:subscription:*:*:*",
+        "matchCriteriaId": "D918B8DF-51D1-46F3-8B3F-E4370083BEF6",
+        "versionEndExcluding": "16.0.19725.20522",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2016:*:*:*:enterprise:*:*:*",
+        "matchCriteriaId": "F815EF1D-7B60-47BE-9AC2-2548F99F10E4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2019:*:*:*:*:*:*:*",
+        "matchCriteriaId": "6122D014-5BF1-4AF4-8B4D-80205ED7785E",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network."
+   }
+  ],
+  "id": "CVE-2026-65660",
+  "lastModified": "2026-09-26T04:17:45.630",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.9,
+     "source": "secure@microsoft.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-65660",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-24T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-08-11T17:18:54.080",
+  "references": [
+   {
+    "source": "secure@microsoft.com",
+    "tags": [
+     "Patch",
+     "Vendor Advisory"
+    ],
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://blog.previdian.com/cve-2026-65660-previdian-observes-two-stage-sharepoint-exploitation-attempts/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-65660"
+   }
+  ],
+  "sourceIdentifier": "secure@microsoft.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-94"
+     }
+    ],
+    "source": "secure@microsoft.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

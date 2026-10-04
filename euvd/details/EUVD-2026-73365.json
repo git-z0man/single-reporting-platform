@@ -1,0 +1,1387 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85880"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-85880",
+  "cwes": [
+   "CWE-122",
+   "CWE-908"
+  ],
+  "dateAdded": "2026-09-08",
+  "dueDate": "2026-09-22",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-85880 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-85880",
+  "product": "Windows",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Microsoft Windows Advanced Local Procedure Call contains a heap-based buffer overflow vulnerability that allows an attacker to elevate privileges locally.",
+  "vendorProject": "Microsoft",
+  "vulnerabilityName": "Microsoft Windows Heap-Based Buffer Overflow Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-85880\nGHSA-96fm-jjf3-wv64\n",
+  "assigner": "microsoft",
+  "baseScore": 7.8,
+  "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 8, 2026, 5:14:21 PM",
+  "dateUpdated": "Oct 1, 2026, 10:56:19 PM",
+  "description": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "106b1ad5-07e8-3483-8309-bf034dec8502",
+       "product": {
+        "name": "Windows Server 2016",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "231a32b9-f326-3b60-a9e8-1bf81f30fcf0",
+       "product": {
+        "name": "Windows 10 Version 22H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "26a059e3-c4d4-30b1-a0f2-89de94911d13",
+       "product": {
+        "name": "Windows Server 2012",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "2bc6ba66-7b44-3abd-840d-1647ff02daaf",
+       "product": {
+        "name": "Windows 10 Version 21H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "2fb2b090-b4ba-3740-8d72-348e6e0bb4a5",
+       "product": {
+        "name": "Windows 10 Version 1607 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "35ef4eef-6ff9-3452-bd94-c75b1c081ec6",
+       "product": {
+        "name": "10.0.14393.9512",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "4186f76b-63e8-3e96-8009-d7f050593eae",
+       "product": {
+        "name": "Windows 10 Version 1809 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "5ea338f6-5e73-3ae3-94b0-2595490db691",
+       "product": {
+        "name": "Windows Server 2019",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "61069b39-28a4-311c-9145-f3c793f2c2d8",
+       "product": {
+        "name": "Windows 10 Version 21H2 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "6158d05a-2f14-3d9a-ac5b-f7d3b08e4436",
+       "product": {
+        "name": "Windows 10 Version 1607 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "6ed97eec-2c7d-3c52-89a9-2b9a6677512f",
+       "product": {
+        "name": "10.0.19044.7725",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "7bd00a88-dc97-3102-bbec-7c9398e497da",
+       "product": {
+        "name": "Windows 10 Version 22H2 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "7c02d159-f397-3f05-bbb7-d536fcc269f8",
+       "product": {
+        "name": "Windows Server 2019 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "7d47c5b0-eb38-3bbd-9356-964f8cf7190b",
+       "product": {
+        "name": "Windows Server 2012 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "82e8e7b0-6fdc-3cc5-9f84-4e4a66756520",
+       "product": {
+        "name": "10.0.19045.7725",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "859c9f4f-b07a-3b7f-9e03-39fb04262318",
+       "product": {
+        "name": "6.2.9200.26349",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "9e5cc3e6-f498-38bd-a590-3a24d399ae93",
+       "product": {
+        "name": "10.0.17763.9245",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "a45d7064-cbd1-34e4-be09-a02a175bd548",
+       "product": {
+        "name": "Windows 10 Version 1809 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b5ac175b-9aab-3556-837e-635ac1dec04a",
+       "product": {
+        "name": "Windows 10 Version 22H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "bd73612c-c935-3199-9d37-ecd602e15d29",
+       "product": {
+        "name": "Windows Server 2022 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "be0212b4-e083-3f25-a0f5-cb10d32e00dc",
+       "product": {
+        "name": "6.3.9600.23397",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c3e02d25-941f-3301-9a7b-26e3322d0e9b",
+       "product": {
+        "name": "Windows 10 Version 21H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c5208cd7-a9e5-3b6c-95de-fae1b8bfa667",
+       "product": {
+        "name": "Windows Server 2016 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "cd9f46b3-41f6-3446-b29a-bd45c2902553",
+       "product": {
+        "name": "Windows Server 2012 R2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d2c8ce59-727c-3a11-87d3-db616276629b",
+       "product": {
+        "name": "10.0.20348.5622",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "e0e57600-a19d-34b5-8c69-c932bbe8a269",
+       "product": {
+        "name": "Windows Server 2022",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "f84d331a-8711-3183-8e65-ac620b09a177",
+       "product": {
+        "name": "Windows Server 2012 R2 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-85880\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 8, 2026, 7:00:00 AM",
+     "dateUpdated": "Sep 16, 2026, 7:00:00 AM",
+     "description": "Windows Advanced Local Procedure Call (ALPC) Elevation of Privilege Vulnerability",
+     "id": "msrc_CVE-2026-85880",
+     "references": "https://msrc.microsoft.com/csaf/vex/2026/msrc_cve-2026-85880.json\n",
+     "source": {
+      "id": 20,
+      "name": "csaf_microsoft"
+     }
+    },
+    "id": "aecec70f-a41e-3c5a-b5a7-c5e2886fe3dd"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "020535d7-e5f3-36c5-82a3-9d0b301d2a6f",
+       "product": {
+        "name": "Windows 10 22h2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "02ca28b9-3011-3a4e-b990-8ac5ee8a4d4d",
+       "product": {
+        "name": "Windows 10 1607",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "152967f4-9a62-3d10-93a7-c5e56096a019",
+       "product": {
+        "name": "Windows 10 Version 22H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "15510662-1898-3299-805f-da20899c7d95",
+       "product": {
+        "name": "Windows 10 Version 22H2 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "1a32e295-6416-320a-9c94-4660ca9fe696",
+       "product": {
+        "name": "Windows 11 Version 23H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "23a14e48-f551-3249-96e8-07b2f45cbdcf",
+       "product": {
+        "name": "Windows 11 version 26H1 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "29c29af7-b3ee-3361-b551-f43151ddd78a",
+       "product": {
+        "name": "Windows 10 Version 1607",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "36e9f8fa-1a10-32db-90eb-58c8d6eadb85",
+       "product": {
+        "name": "Windows 10 Version 1809 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "37545f04-90b0-338f-82a4-7942de9ea585",
+       "product": {
+        "name": "Windows 10 Version 1607 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "3bca823f-8499-3ee4-a21f-17869f5930e6",
+       "product": {
+        "name": "Windows 11 Version 25H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "4702b4b0-1eae-3951-9092-5eb6f5b49926",
+       "product": {
+        "name": "Windows 11 Version 25H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "48f37e64-e937-3667-90b7-2c557338c7a0",
+       "product": {
+        "name": "Windows 11 Version 26H1 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "49e772ca-9c2f-342c-b892-2f44de51cd81",
+       "product": {
+        "name": "Windows 10 Version 22H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "5204b98a-9f65-3e92-b13b-afa7d4d10580",
+       "product": {
+        "name": "Windows Server 2012 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "576ca8aa-246d-3db3-9b94-379f8cd62b51",
+       "product": {
+        "name": "Windows 11 Version 24H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "606836c3-9797-39fe-bf2f-33eee397591a",
+       "product": {
+        "name": "Windows 10 Version 21H2 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "76ce99d1-9d2e-3e7c-935c-e82ec4fc27cd",
+       "product": {
+        "name": "Windows Server 2012 R2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "81f71e61-ea8c-38ad-80f3-93196f7b5404",
+       "product": {
+        "name": "Windows 10 Version 1607 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "8f7eb70a-da6d-38b6-aabf-91c2d7018e86",
+       "product": {
+        "name": "Windows 10 1809",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "982b990c-4a22-3f5c-ab20-7f94be66b7f0",
+       "product": {
+        "name": "Windows 11 Version 23H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "9acdc294-9759-38f7-8172-40d6faaee1e2",
+       "product": {
+        "name": "Windows 10 Version 1809",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "9d822eba-d170-30aa-8b69-8cc9894df6a3",
+       "product": {
+        "name": "Windows 10 Version 21H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "a13e5841-0849-313a-9aea-0c859cc22570",
+       "product": {
+        "name": "Windows 10 Version 21H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "a3dc3c2c-ee72-3d38-a042-088195b074c5",
+       "product": {
+        "name": "Windows 10 21h2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "ad4dd4d9-7a92-30e3-b653-358d985c225b",
+       "product": {
+        "name": "Windows 11 Version 24H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b22f4e01-54ab-30ea-975b-89f9ab2a41b0",
+       "product": {
+        "name": "Windows 10 Version 22H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b26178d6-85b3-3892-a5d8-6f2c0d3d0365",
+       "product": {
+        "name": "Windows 11 Version 24H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b5756bc1-4e4c-3538-b5ef-60efaa7328b4",
+       "product": {
+        "name": "Windows 10 Version 21H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b76672c9-439a-3915-bbee-8f03b2f497f4",
+       "product": {
+        "name": "Windows 10 Version 1809 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b94e685b-1849-3f40-807c-76556944778d",
+       "product": {
+        "name": "Windows Server 2019",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b9b3f89f-c65b-30ba-a0e6-cb6cbce333d6",
+       "product": {
+        "name": "Windows Server 2016 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c6a89e08-1bbc-372d-936e-eb5b141dbbbe",
+       "product": {
+        "name": "Windows Server 2012 R2 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c9ef3f0f-4e08-364e-a21b-634dde749053",
+       "product": {
+        "name": "Windows Server 2012",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d115d7d0-c793-3acc-8abc-483e175c92e6",
+       "product": {
+        "name": "Windows 11 23H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d3a8238b-1fb2-38da-9043-afaf28a99439",
+       "product": {
+        "name": "Microsoft Windows 11 Version 26H1",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d5660e75-765b-332c-9618-da768b67bc86",
+       "product": {
+        "name": "Windows",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "e87b9595-eb6b-341b-91b3-fc75fc420d46",
+       "product": {
+        "name": "Windows 11 Version 23H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "ff713b56-52a7-37b9-96a1-f7e1149fc80d",
+       "product": {
+        "name": "Windows Server 2016",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-68839\nCVE-2026-69276\nCVE-2026-69431\nCVE-2026-69434\nCVE-2026-69463\nCVE-2026-69493\nCVE-2026-69496\nCVE-2026-69525\nCVE-2026-69579\nCVE-2026-69590\nCVE-2026-69595\nCVE-2026-69639\nCVE-2026-69669\nCVE-2026-69715\nCVE-2026-69730\nCVE-2026-69768\nCVE-2026-69769\nCVE-2026-69774\nCVE-2026-69819\nCVE-2026-69824\nCVE-2026-69829\nCVE-2026-69845\nCVE-2026-69910\nCVE-2026-70296\nCVE-2026-72979\nCVE-2026-72982\nCVE-2026-72983\nCVE-2026-73009\nCVE-2026-73010\nCVE-2026-73025\nCVE-2026-77493\nCVE-2026-78445\nCVE-2026-81963\nCVE-2026-85880\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 8, 2026, 6:49:09 PM",
+     "dateUpdated": "Sep 9, 2026, 8:04:57 AM",
+     "description": "Kwetsbaarheden verholpen in Microsoft Windows",
+     "id": "NCSC-2026-0353",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "ea4b5d7a-ab9a-3811-a1ce-96f074787937"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "1b18405d-7ab6-34c0-ab30-24a7e8d712f3",
+    "product": {
+     "name": "Windows Server 2016",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.14393.0 <10.0.14393.9512"
+   },
+   {
+    "id": "25e47c26-0933-3bfb-bd07-2b05a2c21a64",
+    "product": {
+     "name": "Windows Server 2012",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "6.2.9200.0 <6.2.9200.26349"
+   },
+   {
+    "id": "3548de28-bd8c-3d1f-8fc9-57776b6f1afb",
+    "product": {
+     "name": "Windows Server 2012 (Server Core installation)",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "6.2.9200.0 <6.2.9200.26349"
+   },
+   {
+    "id": "3b165adc-0512-39fa-b716-305c5c354b3e",
+    "product": {
+     "name": "Windows 10 Version 22H2",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.19045.0 <10.0.19045.7725"
+   },
+   {
+    "id": "48ad870c-1f73-30f4-8819-66b547ec4675",
+    "product": {
+     "name": "Windows Server 2022",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.20348.0 <10.0.20348.5622"
+   },
+   {
+    "id": "5b8a315e-eb1a-3f9a-9162-d5a761617f91",
+    "product": {
+     "name": "Windows Server 2016 (Server Core installation)",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.14393.0 <10.0.14393.9512"
+   },
+   {
+    "id": "8a56a54f-7dba-3c4b-a2ae-be4972a530a1",
+    "product": {
+     "name": "Windows Server 2019 (Server Core installation)",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.17763.0 <10.0.17763.9245"
+   },
+   {
+    "id": "9fe6fb30-7a8d-32d2-afa3-bd09eb87a483",
+    "product": {
+     "name": "Windows Server 2012 R2",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "6.3.9600.0 <6.3.9600.23398"
+   },
+   {
+    "id": "be1f334c-949e-39b0-bc4b-83f9a4f06d76",
+    "product": {
+     "name": "Windows 10 Version 21H2",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.19044.0 <10.0.19044.7725"
+   },
+   {
+    "id": "d2610782-277b-3fa0-9771-6a1c7b75704e",
+    "product": {
+     "name": "Windows Server 2019",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.17763.0 <10.0.17763.9245"
+   },
+   {
+    "id": "ea41e82b-47e6-334c-b7e2-5191564a266e",
+    "product": {
+     "name": "Windows Server 2012 R2 (Server Core installation)",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "6.3.9600.0 <6.3.9600.23398"
+   },
+   {
+    "id": "ef240803-6911-3bbd-ab29-c4c6fb678011",
+    "product": {
+     "name": "Windows 10 Version 1607",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.14393.0 <10.0.14393.9512"
+   },
+   {
+    "id": "fd1e54f8-0a38-3a0b-905b-e0d6efa04038",
+    "product": {
+     "name": "Windows 10 Version 1809",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.17763.0 <10.0.17763.9245"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "825bd1b3-5bd7-32ec-a8b2-5dbc1e0c2be8",
+    "vendor": {
+     "name": "Microsoft"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "1fc6c0f9-e68d-3b00-aa0c-41dcc70dc120",
+    "vulnerability": {
+     "aliases": "CVE-2026-85880\nGHSA-96fm-jjf3-wv64\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:55:42 AM",
+     "datePublished": "Sep 8, 2026, 6:33:39 PM",
+     "dateUpdated": "Sep 8, 2026, 9:34:12 PM",
+     "description": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally.",
+     "enisa_id": "EUVD-2026-73365\n",
+     "epss": 0.0,
+     "id": "GHSA-96fm-jjf3-wv64",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-85880\nhttps://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85880\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85880\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "43980875-5abf-30fb-a749-cfaadf4e8df4",
+    "vulnerability": {
+     "assigner": "microsoft",
+     "baseScore": 7.8,
+     "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:35:08 AM",
+     "datePublished": "Sep 8, 2026, 5:14:21 PM",
+     "dateUpdated": "Oct 1, 2026, 10:56:19 PM",
+     "description": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally.",
+     "enisa_id": "EUVD-2026-73365\n",
+     "epss": 3.62,
+     "exploitedSince": "Sep 8, 2026, 12:00:00 AM",
+     "id": "CVE-2026-85880",
+     "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85880\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "02cb63ea-1323-3455-90f9-3bcc584777b7",
+       "product": {
+        "name": "Windows Server 2022",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.20348.0 <10.0.20348.5622"
+      },
+      {
+       "id": "18a8dbc1-50d0-3850-ba64-f7eea2968b60",
+       "product": {
+        "name": "Windows Server 2019",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.17763.0 <10.0.17763.9245"
+      },
+      {
+       "id": "2376f005-224a-329c-8cd1-4a05988cf9d9",
+       "product": {
+        "name": "Windows Server 2016 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.14393.0 <10.0.14393.9512"
+      },
+      {
+       "id": "2e32c5ac-f352-345a-bc6a-99563da24211",
+       "product": {
+        "name": "Windows Server 2012 R2 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "6.3.9600.0 <6.3.9600.23398"
+      },
+      {
+       "id": "323d7253-2d69-3c33-b33b-9ee82aa9d13c",
+       "product": {
+        "name": "Windows Server 2012 R2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "6.3.9600.0 <6.3.9600.23398"
+      },
+      {
+       "id": "73e819a5-7977-3ecf-9f8c-a9a621740f83",
+       "product": {
+        "name": "Windows 10 Version 1607",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.14393.0 <10.0.14393.9512"
+      },
+      {
+       "id": "886bf729-4eaf-3e25-9874-cc5612bd8edb",
+       "product": {
+        "name": "Windows Server 2012",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "6.2.9200.0 <6.2.9200.26349"
+      },
+      {
+       "id": "8ed317f8-a1b5-3be2-88e0-2b5d1e260103",
+       "product": {
+        "name": "Windows 10 Version 22H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.19045.0 <10.0.19045.7725"
+      },
+      {
+       "id": "96c7d38e-b265-39da-8682-77c25842639e",
+       "product": {
+        "name": "Windows 10 Version 21H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.19044.0 <10.0.19044.7725"
+      },
+      {
+       "id": "c287b320-91d9-3e03-82c3-0a5930db9cee",
+       "product": {
+        "name": "Windows 10 Version 1809",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.17763.0 <10.0.17763.9245"
+      },
+      {
+       "id": "ca257ce0-42da-3dae-8437-7b614c1fe828",
+       "product": {
+        "name": "Windows Server 2016",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.14393.0 <10.0.14393.9512"
+      },
+      {
+       "id": "f1f9f0a6-9a45-3f26-8465-ddb74e21129e",
+       "product": {
+        "name": "Windows Server 2012 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "6.2.9200.0 <6.2.9200.26349"
+      },
+      {
+       "id": "f4e1ed5c-f039-3648-a483-3721cdd74d0f",
+       "product": {
+        "name": "Windows Server 2019 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.17763.0 <10.0.17763.9245"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "9bb1549e-768f-332f-96ef-ea9a1ee6038d",
+       "vendor": {
+        "name": "Microsoft"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "cfe3060e-cf56-3cbc-85ce-c343a2d002e0",
+  "epss": 3.62,
+  "exploitedSince": "Sep 8, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-73365",
+  "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85880\n"
+ },
+ "id": "EUVD-2026-73365",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "platforms": [
+       "32-bit Systems",
+       "x64-based Systems"
+      ],
+      "product": "Windows 10 Version 1607",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.14393.9512",
+        "status": "affected",
+        "version": "10.0.14393.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "32-bit Systems",
+       "x64-based Systems"
+      ],
+      "product": "Windows 10 Version 1809",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.17763.9245",
+        "status": "affected",
+        "version": "10.0.17763.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "32-bit Systems",
+       "ARM64-based Systems",
+       "x64-based Systems"
+      ],
+      "product": "Windows 10 Version 21H2",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.19044.7725",
+        "status": "affected",
+        "version": "10.0.19044.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "32-bit Systems",
+       "ARM64-based Systems",
+       "x64-based Systems"
+      ],
+      "product": "Windows 10 Version 22H2",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.19045.7725",
+        "status": "affected",
+        "version": "10.0.19045.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows Server 2012",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "6.2.9200.26349",
+        "status": "affected",
+        "version": "6.2.9200.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows Server 2012 (Server Core installation)",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "6.2.9200.26349",
+        "status": "affected",
+        "version": "6.2.9200.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows Server 2012 R2",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "6.3.9600.23398",
+        "status": "affected",
+        "version": "6.3.9600.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows Server 2012 R2 (Server Core installation)",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "6.3.9600.23398",
+        "status": "affected",
+        "version": "6.3.9600.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows Server 2016",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.14393.9512",
+        "status": "affected",
+        "version": "10.0.14393.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows Server 2016 (Server Core installation)",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.14393.9512",
+        "status": "affected",
+        "version": "10.0.14393.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows Server 2019",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.17763.9245",
+        "status": "affected",
+        "version": "10.0.17763.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows Server 2019 (Server Core installation)",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.17763.9245",
+        "status": "affected",
+        "version": "10.0.17763.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows Server 2022",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.20348.5622",
+        "status": "affected",
+        "version": "10.0.20348.0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "secure@microsoft.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-22",
+  "cisaExploitAdd": "2026-09-08",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Microsoft Windows Heap-Based Buffer Overflow Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x64:*",
+        "matchCriteriaId": "F5BC051B-C14F-43DF-B3A2-A32EE0DDC142",
+        "versionEndExcluding": "10.0.14393.9512",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x86:*",
+        "matchCriteriaId": "D8DA8FA6-35F6-4E0F-A9C0-37CB88186C5B",
+        "versionEndExcluding": "10.0.14393.9512",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x64:*",
+        "matchCriteriaId": "81786843-7838-4C74-AEA6-E64B6B354387",
+        "versionEndExcluding": "10.0.17763.9245",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x86:*",
+        "matchCriteriaId": "D5E29D31-09E1-4C19-AAB0-191AA960C778",
+        "versionEndExcluding": "10.0.17763.9245",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:arm64:*",
+        "matchCriteriaId": "26BFC889-B503-48BF-9D82-5B3043D9A6B3",
+        "versionEndExcluding": "10.0.19044.7725",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:x64:*",
+        "matchCriteriaId": "E6F2C029-D78A-4FAA-B2E8-FD79C2CABC32",
+        "versionEndExcluding": "10.0.19044.7725",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:x86:*",
+        "matchCriteriaId": "0B423BD2-DDDC-4869-9B98-3275F53B92F1",
+        "versionEndExcluding": "10.0.19044.7725",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:arm64:*",
+        "matchCriteriaId": "254EF7C4-707D-4480-BC27-56F64175A9AD",
+        "versionEndExcluding": "10.0.19045.7725",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:x64:*",
+        "matchCriteriaId": "B318C958-84F6-4E33-A95C-6E95C7E286EB",
+        "versionEndExcluding": "10.0.19045.7725",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:x86:*",
+        "matchCriteriaId": "9828DC67-F252-4E2B-AFE9-C404BAF414E0",
+        "versionEndExcluding": "10.0.19045.7725",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
+        "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "C7CF508B-369A-4854-97BF-EE90E0A5BF7B",
+        "versionEndExcluding": "10.0.14393.9512",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_server_2019:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "14138B1B-9554-4B1D-84C6-485FB9763DA4",
+        "versionEndExcluding": "10.0.17763.9245",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "496A12F9-40BF-4A40-948B-BDB1C5D17DCB",
+        "versionEndExcluding": "10.0.20348.5622",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally."
+   }
+  ],
+  "id": "CVE-2026-85880",
+  "lastModified": "2026-09-24T23:19:20.773",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "LOCAL",
+      "availabilityImpact": "HIGH",
+      "baseScore": 7.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 1.8,
+     "impactScore": 5.9,
+     "source": "secure@microsoft.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-85880",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-08T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-08T18:21:14.087",
+  "references": [
+   {
+    "source": "secure@microsoft.com",
+    "tags": [
+     "Patch",
+     "Vendor Advisory"
+    ],
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85880"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85880"
+   }
+  ],
+  "sourceIdentifier": "secure@microsoft.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-122"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-908"
+     }
+    ],
+    "source": "secure@microsoft.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

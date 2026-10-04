@@ -1,0 +1,394 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-86950"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-86950",
+  "cwes": [
+   "CWE-787"
+  ],
+  "dateAdded": "2026-09-29",
+  "dueDate": "2026-10-02",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://support.apple.com/en-us/149226 ; https://support.apple.com/en-us/149228 ; https://support.apple.com/en-us/149229 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-86950",
+  "product": "Multiple Products",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
+  "vendorProject": "Apple",
+  "vulnerabilityName": "Apple Multiple Products Out-of-Bounds Write Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-86950\nGHSA-3cf3-h799-fjvq\n",
+  "assigner": "apple",
+  "baseScore": 8.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 28, 2026, 7:13:52 PM",
+  "dateUpdated": "Oct 1, 2026, 5:15:57 PM",
+  "description": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 26.7.1 and iPadOS 26.7.1, macOS Sequoia 15.8.1, macOS Tahoe 26.7.1. Processing a maliciously crafted file may lead to arbitrary code execution. Apple is aware of a report that this issue may have been exploited in an extremely sophisticated attack against specific targeted individuals on versions of iOS before iOS 27.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0f8f0c55-0da0-3753-8e73-b12fbccd075b",
+       "product": {
+        "name": "Multiple Products",
+        "vendor": {
+         "name": "Check Point"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-86950\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 1, 2026, 10:35:52 AM",
+     "dateUpdated": "Oct 1, 2026, 10:35:52 AM",
+     "description": "Kwetsbaarheid verholpen in Apple CoreGraphics",
+     "id": "NCSC-2026-0397",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "474da594-a88f-3557-9852-ee7e17048aa4"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "9ddbc8c3-a6e4-3844-854b-a11177cb7297",
+    "product": {
+     "name": "macOS",
+     "vendor": {
+      "name": "Apple"
+     }
+    },
+    "product_version": "0 <15.8.1"
+   },
+   {
+    "id": "b40bfe74-81c7-3d4e-a0c0-fd8d0505d45c",
+    "product": {
+     "name": "macOS",
+     "vendor": {
+      "name": "Apple"
+     }
+    },
+    "product_version": "0 <26.7.1"
+   },
+   {
+    "id": "c167100e-c37a-3fa2-b2df-6b79a6c83a29",
+    "product": {
+     "name": "iOS and iPadOS",
+     "vendor": {
+      "name": "Apple"
+     }
+    },
+    "product_version": "0 <26.7.1"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "b11c58ad-c1ec-3308-b3b7-03049cd98260",
+    "vendor": {
+     "name": "Apple"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "e0a5d411-b79f-3b99-8688-e2edf6afaab0",
+    "vulnerability": {
+     "aliases": "CVE-2026-86950\nGHSA-3cf3-h799-fjvq\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:56:56 AM",
+     "datePublished": "Sep 28, 2026, 9:31:18 PM",
+     "dateUpdated": "Sep 29, 2026, 3:31:15 PM",
+     "description": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 26.7.1 and iPadOS 26.7.1, macOS Sequoia 15.8.1, macOS Tahoe 26.7.1. Processing a maliciously crafted file may lead to arbitrary code execution. Apple is aware of a report that this issue may have been exploited in an extremely sophisticated attack against specific targeted individuals on versions of iOS before iOS 27.",
+     "enisa_id": "EUVD-2026-88445\n",
+     "epss": 0.0,
+     "id": "GHSA-3cf3-h799-fjvq",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-86950\nhttps://support.apple.com/en-us/149226\nhttps://support.apple.com/en-us/149228\nhttps://support.apple.com/en-us/149229\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-86950\nhttp://seclists.org/fulldisclosure/2026/Sep/89\nhttp://seclists.org/fulldisclosure/2026/Sep/90\nhttp://seclists.org/fulldisclosure/2026/Sep/91\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "e212304a-a00e-3935-b358-9e4e5984573c",
+    "vulnerability": {
+     "assigner": "apple",
+     "baseScore": 8.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:35:08 AM",
+     "datePublished": "Sep 28, 2026, 7:13:52 PM",
+     "dateUpdated": "Oct 1, 2026, 5:15:57 PM",
+     "description": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 26.7.1 and iPadOS 26.7.1, macOS Sequoia 15.8.1, macOS Tahoe 26.7.1. Processing a maliciously crafted file may lead to arbitrary code execution. Apple is aware of a report that this issue may have been exploited in an extremely sophisticated attack against specific targeted individuals on versions of iOS before iOS 27.",
+     "enisa_id": "EUVD-2026-88445\n",
+     "epss": 1.24,
+     "exploitedSince": "Sep 29, 2026, 12:00:00 AM",
+     "id": "CVE-2026-86950",
+     "references": "https://support.apple.com/en-us/149226\nhttps://support.apple.com/en-us/149228\nhttps://support.apple.com/en-us/149229\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "1fcce986-4e9f-3ebb-93ba-0bfd52e190db",
+       "product": {
+        "name": "iOS and iPadOS",
+        "vendor": {
+         "name": "Apple"
+        }
+       },
+       "product_version": "0 <26.7.1"
+      },
+      {
+       "id": "948d6c7b-4c56-326c-bbc6-3da8ea40dc75",
+       "product": {
+        "name": "macOS",
+        "vendor": {
+         "name": "Apple"
+        }
+       },
+       "product_version": "0 <26.7.1"
+      },
+      {
+       "id": "f443032b-1b3b-3491-9f67-cf1217e47bf1",
+       "product": {
+        "name": "macOS",
+        "vendor": {
+         "name": "Apple"
+        }
+       },
+       "product_version": "0 <15.8.1"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "a6f997cd-1843-3812-b037-11eae31cd65e",
+       "vendor": {
+        "name": "Apple"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "5dd9868a-ea32-37d2-bcdc-2919d0166c0d",
+  "epss": 1.24,
+  "exploitedSince": "Sep 29, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-88445",
+  "references": "https://support.apple.com/en-us/149226\nhttps://support.apple.com/en-us/149228\nhttps://support.apple.com/en-us/149229\n"
+ },
+ "id": "EUVD-2026-88445",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "iOS and iPadOS",
+      "vendor": "Apple",
+      "versions": [
+       {
+        "lessThan": "26.7.1",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "product": "macOS",
+      "vendor": "Apple",
+      "versions": [
+       {
+        "lessThan": "15.8.1",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "26.7.1",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "product-security@apple.com"
+   }
+  ],
+  "cisaActionDue": "2026-10-02",
+  "cisaExploitAdd": "2026-09-29",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Apple Multiple Products Out-of-Bounds Write Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "E820C7A6-6EBE-46FC-A3A0-E2329DED12E7",
+        "versionEndExcluding": "26.7.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "FF3A9F40-6FE0-4D54-AC00-27228E5F329C",
+        "versionEndExcluding": "26.7.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "77C881FE-1FF0-4D7A-9E5A-9E7FC6BBA3B8",
+        "versionEndExcluding": "15.8.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "810BEE78-D6FB-416D-B719-A7639184DEAA",
+        "versionEndExcluding": "26.7.1",
+        "versionStartIncluding": "26.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 26.7.1 and iPadOS 26.7.1, macOS Sequoia 15.8.1, macOS Tahoe 26.7.1. Processing a maliciously crafted file may lead to arbitrary code execution. Apple is aware of a report that this issue may have been exploited in an extremely sophisticated attack against specific targeted individuals on versions of iOS before iOS 27."
+   }
+  ],
+  "id": "CVE-2026-86950",
+  "lastModified": "2026-10-01T18:17:28.430",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "REQUIRED",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.9,
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-86950",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-30T03:55:58.823862Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-28T20:17:11.193",
+  "references": [
+   {
+    "source": "product-security@apple.com",
+    "tags": [
+     "Release Notes",
+     "Vendor Advisory"
+    ],
+    "url": "https://support.apple.com/en-us/149226"
+   },
+   {
+    "source": "product-security@apple.com",
+    "tags": [
+     "Release Notes",
+     "Vendor Advisory"
+    ],
+    "url": "https://support.apple.com/en-us/149228"
+   },
+   {
+    "source": "product-security@apple.com",
+    "tags": [
+     "Release Notes",
+     "Vendor Advisory"
+    ],
+    "url": "https://support.apple.com/en-us/149229"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
+    "url": "http://seclists.org/fulldisclosure/2026/Sep/89"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
+    "url": "http://seclists.org/fulldisclosure/2026/Sep/90"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
+    "url": "http://seclists.org/fulldisclosure/2026/Sep/91"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-86950"
+   }
+  ],
+  "sourceIdentifier": "product-security@apple.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-787"
+     }
+    ],
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

@@ -1,0 +1,611 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87491"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-87491",
+  "cwes": [
+   "CWE-787"
+  ],
+  "dateAdded": "2026-09-09",
+  "dueDate": "2026-09-23",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-87491 ",
+  "product": "Chromium V8",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Google Chromium V8 contains an out of bounds write vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+  "vendorProject": "Google",
+  "vulnerabilityName": "Google Chromium V8 Out of Bounds Write Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-87491\nGHSA-8x3p-8g9v-xc7m\n",
+  "assigner": "Chrome",
+  "baseScore": 8.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 9, 2026, 12:09:38 AM",
+  "dateUpdated": "Sep 21, 2026, 12:51:58 PM",
+  "description": "Out of bounds write in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0c2b4bc5-b51a-3eb2-b76a-5e4e43f82b21",
+       "product": {
+        "name": "Chrome",
+        "vendor": {
+         "name": "Google"
+        }
+       }
+      },
+      {
+       "id": "49e3a83a-c921-3040-9a97-098dcebdc25a",
+       "product": {
+        "name": "Edge",
+        "vendor": {
+         "name": "AVEVA"
+        }
+       }
+      },
+      {
+       "id": "4db46e4c-922f-3a1d-b2f2-e8a0ba3d4bab",
+       "product": {
+        "name": "153.0.4234.32",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "55152c7b-641e-385c-aa52-46fb13c9a884",
+       "product": {
+        "name": "SUSE openSUSE",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "590db94d-9d8d-3479-aadc-fb9f4e014f4f",
+       "product": {
+        "name": "153.0.8010.37",
+        "vendor": {
+         "name": "Google"
+        }
+       }
+      },
+      {
+       "id": "e4714954-3f52-3355-b8b8-256621740849",
+       "product": {
+        "name": "153.0.8010.36",
+        "vendor": {
+         "name": "Google"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-87429\nCVE-2026-87430\nCVE-2026-87431\nCVE-2026-87432\nCVE-2026-87433\nCVE-2026-87434\nCVE-2026-87435\nCVE-2026-87436\nCVE-2026-87437\nCVE-2026-87438\nCVE-2026-87439\nCVE-2026-87440\nCVE-2026-87441\nCVE-2026-87442\nCVE-2026-87443\nCVE-2026-87444\nCVE-2026-87445\nCVE-2026-87446\nCVE-2026-87447\nCVE-2026-87448\nCVE-2026-87449\nCVE-2026-87450\nCVE-2026-87451\nCVE-2026-87452\nCVE-2026-87453\nCVE-2026-87454\nCVE-2026-87455\nCVE-2026-87456\nCVE-2026-87457\nCVE-2026-87458\nCVE-2026-87459\nCVE-2026-87460\nCVE-2026-87461\nCVE-2026-87462\nCVE-2026-87463\nCVE-2026-87464\nCVE-2026-87465\nCVE-2026-87466\nCVE-2026-87467\nCVE-2026-87468\nCVE-2026-87469\nCVE-2026-87470\nCVE-2026-87471\nCVE-2026-87472\nCVE-2026-87473\nCVE-2026-87474\nCVE-2026-87475\nCVE-2026-87476\nCVE-2026-87477\nCVE-2026-87478\nCVE-2026-87479\nCVE-2026-87480\nCVE-2026-87481\nCVE-2026-87482\nCVE-2026-87483\nCVE-2026-87484\nCVE-2026-87485\nCVE-2026-87486\nCVE-2026-87487\nCVE-2026-87488\nCVE-2026-87489\nCVE-2026-87490\nCVE-2026-87491\nCVE-2026-87492\nCVE-2026-87493\nCVE-2026-87494\nCVE-2026-87495\nCVE-2026-87496\nCVE-2026-87497\nCVE-2026-87498\nCVE-2026-87499\nCVE-2026-87500\nCVE-2026-87501\nCVE-2026-87502\nCVE-2026-87503\nCVE-2026-87504\nCVE-2026-87505\nCVE-2026-87506\nCVE-2026-87507\nCVE-2026-87508\nCVE-2026-87509\nCVE-2026-87510\nCVE-2026-87511\nCVE-2026-87512\nCVE-2026-87513\nCVE-2026-87514\nCVE-2026-87515\nCVE-2026-87516\nCVE-2026-87517\nCVE-2026-87518\nCVE-2026-87519\nCVE-2026-87520\nCVE-2026-87521\nCVE-2026-87522\nCVE-2026-87523\nCVE-2026-87524\nCVE-2026-87525\nCVE-2026-87526\nCVE-2026-87527\nCVE-2026-87528\nCVE-2026-87529\nCVE-2026-87530\nCVE-2026-87531\nCVE-2026-87532\nCVE-2026-87533\nCVE-2026-87534\nCVE-2026-87535\nCVE-2026-87536\nCVE-2026-87537\nCVE-2026-87538\nCVE-2026-87539\nCVE-2026-87540\nCVE-2026-87541\nCVE-2026-87542\nCVE-2026-87543\nCVE-2026-87544\nCVE-2026-87545\nCVE-2026-87546\nCVE-2026-87547\nCVE-2026-87548\nCVE-2026-87549\nCVE-2026-87550\nCVE-2026-87551\nCVE-2026-87552\nCVE-2026-87553\nCVE-2026-87554\nCVE-2026-87555\nCVE-2026-87556\nCVE-2026-87557\nCVE-2026-87558\nCVE-2026-87559\nCVE-2026-87560\nCVE-2026-87561\nCVE-2026-87562\nCVE-2026-87563\nCVE-2026-87564\nCVE-2026-87565\nCVE-2026-87566\nCVE-2026-87567\nCVE-2026-87568\nCVE-2026-87569\nCVE-2026-87570\nCVE-2026-87571\nCVE-2026-87572\nCVE-2026-87573\nCVE-2026-87574\nCVE-2026-87575\nCVE-2026-87576\nCVE-2026-87577\nCVE-2026-87578\nCVE-2026-87579\nCVE-2026-87580\nCVE-2026-87581\nCVE-2026-87582\nCVE-2026-87583\nCVE-2026-87584\nCVE-2026-87585\nCVE-2026-87586\nCVE-2026-87587\nCVE-2026-87588\nCVE-2026-87589\nCVE-2026-87590\nCVE-2026-87591\nCVE-2026-87592\nCVE-2026-87593\nCVE-2026-87594\nCVE-2026-87595\nCVE-2026-87596\nCVE-2026-87597\nCVE-2026-87598\nCVE-2026-87599\nCVE-2026-87600\nCVE-2026-87601\nCVE-2026-87602\nCVE-2026-87603\nCVE-2026-87604\nCVE-2026-87605\nCVE-2026-87606\nCVE-2026-87607\nCVE-2026-87608\nCVE-2026-87609\nCVE-2026-87610\nCVE-2026-87611\nCVE-2026-87612\nCVE-2026-87613\nCVE-2026-87614\nCVE-2026-87615\nCVE-2026-87616\nCVE-2026-87617\nCVE-2026-87618\nCVE-2026-87619\nCVE-2026-87620\nCVE-2026-87621\nCVE-2026-87622\nCVE-2026-87623\nCVE-2026-87624\nCVE-2026-87625\nCVE-2026-87626\nCVE-2026-87627\nCVE-2026-87628\nCVE-2026-87629\nCVE-2026-87630\nCVE-2026-87631\nCVE-2026-87632\nCVE-2026-87633\nCVE-2026-87634\nCVE-2026-87635\nCVE-2026-87636\nCVE-2026-87637\nCVE-2026-87638\nCVE-2026-87639\nCVE-2026-87640\nCVE-2026-87641\nCVE-2026-87642\nCVE-2026-87643\nCVE-2026-87644\nCVE-2026-87645\nCVE-2026-87646\nCVE-2026-87647\nCVE-2026-87648\nCVE-2026-87649\nCVE-2026-87650\nCVE-2026-87651\nCVE-2026-87652\nCVE-2026-87653\nCVE-2026-87654\nCVE-2026-87655\nCVE-2026-87656\nCVE-2026-87657\nCVE-2026-87658\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 8, 2026, 10:00:00 PM",
+     "dateUpdated": "Sep 14, 2026, 10:00:00 PM",
+     "description": "Google Chrome / Microsoft Edge: Mehrere Schwachstellen ermöglichen nicht spezifizierten Angriff",
+     "id": "WID-SEC-W-2026-3238",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-3238.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3238\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome / Microsoft Edge ausnutzen, um nicht näher spezifizierte Angriffe durchzuführen, darunter möglicherweise die Ausführung von beliebigem Code, die Umgehung von Sicherheitsmaßnahmen, die Ausweitung von Berechtigungen, die Offenlegung sensibler Informationen, die Durchführung von XSS-Angriffen oder das Auslösen eines Denial-of-Service-Zustands."
+    },
+    "id": "41beeb1f-8a4e-36fd-933d-6a9bdac2e7fc"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "074828e9-c775-3f61-8b20-422c6258ae16",
+       "product": {
+        "name": "openSUSE Leap 16.0",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2166d183-73d2-3cec-a7aa-6e91770651d3",
+       "product": {
+        "name": "chromedriver-0:153.0.8010.36-bp160.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4f469131-040a-3806-a287-4de787f772e7",
+       "product": {
+        "name": "chromedriver-0:153.0.8010.36-bp160.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "838856fa-3e32-3417-a750-ce9fc8370e32",
+       "product": {
+        "name": "chromium-0:153.0.8010.36-bp160.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "853a3957-261f-3d2a-84fa-fd06ab93bd56",
+       "product": {
+        "name": "chromium-0:153.0.8010.36-bp160.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "98112e44-693f-3ead-8cec-0a98f448efa7",
+       "product": {
+        "name": "chromium-0:153.0.8010.36-bp160.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "983f129d-4c9d-3ed5-bff7-14c0d4dae794",
+       "product": {
+        "name": "chromedriver-0:153.0.8010.36-bp160.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-87429\nCVE-2026-87430\nCVE-2026-87431\nCVE-2026-87432\nCVE-2026-87433\nCVE-2026-87434\nCVE-2026-87435\nCVE-2026-87436\nCVE-2026-87437\nCVE-2026-87438\nCVE-2026-87439\nCVE-2026-87440\nCVE-2026-87441\nCVE-2026-87442\nCVE-2026-87443\nCVE-2026-87444\nCVE-2026-87445\nCVE-2026-87446\nCVE-2026-87447\nCVE-2026-87448\nCVE-2026-87449\nCVE-2026-87450\nCVE-2026-87451\nCVE-2026-87452\nCVE-2026-87453\nCVE-2026-87454\nCVE-2026-87455\nCVE-2026-87456\nCVE-2026-87457\nCVE-2026-87458\nCVE-2026-87459\nCVE-2026-87460\nCVE-2026-87461\nCVE-2026-87462\nCVE-2026-87463\nCVE-2026-87464\nCVE-2026-87465\nCVE-2026-87466\nCVE-2026-87467\nCVE-2026-87468\nCVE-2026-87469\nCVE-2026-87470\nCVE-2026-87471\nCVE-2026-87472\nCVE-2026-87473\nCVE-2026-87474\nCVE-2026-87475\nCVE-2026-87476\nCVE-2026-87477\nCVE-2026-87478\nCVE-2026-87479\nCVE-2026-87480\nCVE-2026-87481\nCVE-2026-87482\nCVE-2026-87483\nCVE-2026-87484\nCVE-2026-87485\nCVE-2026-87486\nCVE-2026-87487\nCVE-2026-87488\nCVE-2026-87489\nCVE-2026-87490\nCVE-2026-87491\nCVE-2026-87492\nCVE-2026-87493\nCVE-2026-87494\nCVE-2026-87495\nCVE-2026-87496\nCVE-2026-87497\nCVE-2026-87498\nCVE-2026-87499\nCVE-2026-87500\nCVE-2026-87501\nCVE-2026-87502\nCVE-2026-87503\nCVE-2026-87504\nCVE-2026-87505\nCVE-2026-87506\nCVE-2026-87507\nCVE-2026-87508\nCVE-2026-87509\nCVE-2026-87510\nCVE-2026-87511\nCVE-2026-87512\nCVE-2026-87513\nCVE-2026-87514\nCVE-2026-87515\nCVE-2026-87516\nCVE-2026-87517\nCVE-2026-87518\nCVE-2026-87519\nCVE-2026-87520\nCVE-2026-87521\nCVE-2026-87522\nCVE-2026-87523\nCVE-2026-87524\nCVE-2026-87525\nCVE-2026-87526\nCVE-2026-87527\nCVE-2026-87528\nCVE-2026-87529\nCVE-2026-87530\nCVE-2026-87531\nCVE-2026-87532\nCVE-2026-87533\nCVE-2026-87534\nCVE-2026-87535\nCVE-2026-87536\nCVE-2026-87537\nCVE-2026-87538\nCVE-2026-87539\nCVE-2026-87540\nCVE-2026-87541\nCVE-2026-87542\nCVE-2026-87543\nCVE-2026-87544\nCVE-2026-87545\nCVE-2026-87546\nCVE-2026-87547\nCVE-2026-87548\nCVE-2026-87549\nCVE-2026-87550\nCVE-2026-87551\nCVE-2026-87552\nCVE-2026-87553\nCVE-2026-87554\nCVE-2026-87555\nCVE-2026-87556\nCVE-2026-87557\nCVE-2026-87558\nCVE-2026-87559\nCVE-2026-87560\nCVE-2026-87561\nCVE-2026-87562\nCVE-2026-87563\nCVE-2026-87564\nCVE-2026-87565\nCVE-2026-87566\nCVE-2026-87567\nCVE-2026-87568\nCVE-2026-87569\nCVE-2026-87570\nCVE-2026-87571\nCVE-2026-87572\nCVE-2026-87573\nCVE-2026-87574\nCVE-2026-87575\nCVE-2026-87576\nCVE-2026-87577\nCVE-2026-87578\nCVE-2026-87579\nCVE-2026-87580\nCVE-2026-87581\nCVE-2026-87582\nCVE-2026-87583\nCVE-2026-87584\nCVE-2026-87585\nCVE-2026-87586\nCVE-2026-87587\nCVE-2026-87588\nCVE-2026-87589\nCVE-2026-87590\nCVE-2026-87591\nCVE-2026-87592\nCVE-2026-87593\nCVE-2026-87594\nCVE-2026-87595\nCVE-2026-87596\nCVE-2026-87597\nCVE-2026-87598\nCVE-2026-87599\nCVE-2026-87600\nCVE-2026-87601\nCVE-2026-87602\nCVE-2026-87603\nCVE-2026-87604\nCVE-2026-87605\nCVE-2026-87606\nCVE-2026-87607\nCVE-2026-87608\nCVE-2026-87609\nCVE-2026-87610\nCVE-2026-87611\nCVE-2026-87612\nCVE-2026-87613\nCVE-2026-87614\nCVE-2026-87615\nCVE-2026-87616\nCVE-2026-87617\nCVE-2026-87618\nCVE-2026-87619\nCVE-2026-87620\nCVE-2026-87621\nCVE-2026-87622\nCVE-2026-87623\nCVE-2026-87624\nCVE-2026-87625\nCVE-2026-87626\nCVE-2026-87627\nCVE-2026-87628\nCVE-2026-87629\nCVE-2026-87630\nCVE-2026-87631\nCVE-2026-87632\nCVE-2026-87633\nCVE-2026-87634\nCVE-2026-87635\nCVE-2026-87636\nCVE-2026-87637\nCVE-2026-87638\nCVE-2026-87639\nCVE-2026-87640\nCVE-2026-87641\nCVE-2026-87642\nCVE-2026-87643\nCVE-2026-87644\nCVE-2026-87645\nCVE-2026-87646\nCVE-2026-87647\nCVE-2026-87648\nCVE-2026-87649\nCVE-2026-87650\nCVE-2026-87651\nCVE-2026-87652\nCVE-2026-87653\nCVE-2026-87654\nCVE-2026-87655\nCVE-2026-87656\nCVE-2026-87657\nCVE-2026-87658\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 16, 2026, 8:15:10 AM",
+     "dateUpdated": "Sep 17, 2026, 5:44:45 PM",
+     "description": "Security update for chromium",
+     "id": "openSUSE-SU-2026:21858-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_21858-1.json\nhttps://bugzilla.suse.com/1279840\nhttps://www.suse.com/security/cve/CVE-2026-87429/\nhttps://www.suse.com/security/cve/CVE-2026-87430/\nhttps://www.suse.com/security/cve/CVE-2026-87431/\nhttps://www.suse.com/security/cve/CVE-2026-87432/\nhttps://www.suse.com/security/cve/CVE-2026-87433/\nhttps://www.suse.com/security/cve/CVE-2026-87434/\nhttps://www.suse.com/security/cve/CVE-2026-87435/\nhttps://www.suse.com/security/cve/CVE-2026-87436/\nhttps://www.suse.com/security/cve/CVE-2026-87437/\nhttps://www.suse.com/security/cve/CVE-2026-87438/\nhttps://www.suse.com/security/cve/CVE-2026-87439/\nhttps://www.suse.com/security/cve/CVE-2026-87440/\nhttps://www.suse.com/security/cve/CVE-2026-87441/\nhttps://www.suse.com/security/cve/CVE-2026-87442/\nhttps://www.suse.com/security/cve/CVE-2026-87443/\nhttps://www.suse.com/security/cve/CVE-2026-87444/\nhttps://www.suse.com/security/cve/CVE-2026-87445/\nhttps://www.suse.com/security/cve/CVE-2026-87446/\nhttps://www.suse.com/security/cve/CVE-2026-87447/\nhttps://www.suse.com/security/cve/CVE-2026-87448/\nhttps://www.suse.com/security/cve/CVE-2026-87449/\nhttps://www.suse.com/security/cve/CVE-2026-87450/\nhttps://www.suse.com/security/cve/CVE-2026-87451/\nhttps://www.suse.com/security/cve/CVE-2026-87452/\nhttps://www.suse.com/security/cve/CVE-2026-87453/\nhttps://www.suse.com/security/cve/CVE-2026-87454/\nhttps://www.suse.com/security/cve/CVE-2026-87455/\nhttps://www.suse.com/security/cve/CVE-2026-87456/\nhttps://www.suse.com/security/cve/CVE-2026-87457/\nhttps://www.suse.com/security/cve/CVE-2026-87458/\nhttps://www.suse.com/security/cve/CVE-2026-87459/\nhttps://www.suse.com/security/cve/CVE-2026-87460/\nhttps://www.suse.com/security/cve/CVE-2026-87461/\nhttps://www.suse.com/security/cve/CVE-2026-87462/\nhttps://www.suse.com/security/cve/CVE-2026-87463/\nhttps://www.suse.com/security/cve/CVE-2026-87464/\nhttps://www.suse.com/security/cve/CVE-2026-87465/\nhttps://www.suse.com/security/cve/CVE-2026-87466/\nhttps://www.suse.com/security/cve/CVE-2026-87467/\nhttps://www.suse.com/security/cve/CVE-2026-87468/\nhttps://www.suse.com/security/cve/CVE-2026-87469/\nhttps://www.suse.com/security/cve/CVE-2026-87470/\nhttps://www.suse.com/security/cve/CVE-2026-87471/\nhttps://www.suse.com/security/cve/CVE-2026-87472/\nhttps://www.suse.com/security/cve/CVE-2026-87473/\nhttps://www.suse.com/security/cve/CVE-2026-87474/\nhttps://www.suse.com/security/cve/CVE-2026-87475/\nhttps://www.suse.com/security/cve/CVE-2026-87476/\nhttps://www.suse.com/security/cve/CVE-2026-87477/\nhttps://www.suse.com/security/cve/CVE-2026-87478/\nhttps://www.suse.com/security/cve/CVE-2026-87479/\nhttps://www.suse.com/security/cve/CVE-2026-87480/\nhttps://www.suse.com/security/cve/CVE-2026-87481/\nhttps://www.suse.com/security/cve/CVE-2026-87482/\nhttps://www.suse.com/security/cve/CVE-2026-87483/\nhttps://www.suse.com/security/cve/CVE-2026-87484/\nhttps://www.suse.com/security/cve/CVE-2026-87485/\nhttps://www.suse.com/security/cve/CVE-2026-87486/\nhttps://www.suse.com/security/cve/CVE-2026-87487/\nhttps://www.suse.com/security/cve/CVE-2026-87488/\nhttps://www.suse.com/security/cve/CVE-2026-87489/\nhttps://www.suse.com/security/cve/CVE-2026-87490/\nhttps://www.suse.com/security/cve/CVE-2026-87491/\nhttps://www.suse.com/security/cve/CVE-2026-87492/\nhttps://www.suse.com/security/cve/CVE-2026-87493/\nhttps://www.suse.com/security/cve/CVE-2026-87494/\nhttps://www.suse.com/security/cve/CVE-2026-87495/\nhttps://www.suse.com/security/cve/CVE-2026-87496/\nhttps://www.suse.com/security/cve/CVE-2026-87497/\nhttps://www.suse.com/security/cve/CVE-2026-87498/\nhttps://www.suse.com/security/cve/CVE-2026-87499/\nhttps://www.suse.com/security/cve/CVE-2026-87500/\nhttps://www.suse.com/security/cve/CVE-2026-87501/\nhttps://www.suse.com/security/cve/CVE-2026-87502/\nhttps://www.suse.com/security/cve/CVE-2026-87503/\nhttps://www.suse.com/security/cve/CVE-2026-87504/\nhttps://www.suse.com/security/cve/CVE-2026-87505/\nhttps://www.suse.com/security/cve/CVE-2026-87506/\nhttps://www.suse.com/security/cve/CVE-2026-87507/\nhttps://www.suse.com/security/cve/CVE-2026-87508/\nhttps://www.suse.com/security/cve/CVE-2026-87509/\nhttps://www.suse.com/security/cve/CVE-2026-87510/\nhttps://www.suse.com/security/cve/CVE-2026-87511/\nhttps://www.suse.com/security/cve/CVE-2026-87512/\nhttps://www.suse.com/security/cve/CVE-2026-87513/\nhttps://www.suse.com/security/cve/CVE-2026-87514/\nhttps://www.suse.com/security/cve/CVE-2026-87515/\nhttps://www.suse.com/security/cve/CVE-2026-87516/\nhttps://www.suse.com/security/cve/CVE-2026-87517/\nhttps://www.suse.com/security/cve/CVE-2026-87518/\nhttps://www.suse.com/security/cve/CVE-2026-87519/\nhttps://www.suse.com/security/cve/CVE-2026-87520/\nhttps://www.suse.com/security/cve/CVE-2026-87521/\nhttps://www.suse.com/security/cve/CVE-2026-87522/\nhttps://www.suse.com/security/cve/CVE-2026-87523/\nhttps://www.suse.com/security/cve/CVE-2026-87524/\nhttps://www.suse.com/security/cve/CVE-2026-87525/\nhttps://www.suse.com/security/cve/CVE-2026-87526/\nhttps://www.suse.com/security/cve/CVE-2026-87527/\nhttps://www.suse.com/security/cve/CVE-2026-87528/\nhttps://www.suse.com/security/cve/CVE-2026-87529/\nhttps://www.suse.com/security/cve/CVE-2026-87530/\nhttps://www.suse.com/security/cve/CVE-2026-87531/\nhttps://www.suse.com/security/cve/CVE-2026-87532/\nhttps://www.suse.com/security/cve/CVE-2026-87533/\nhttps://www.suse.com/security/cve/CVE-2026-87534/\nhttps://www.suse.com/security/cve/CVE-2026-87535/\nhttps://www.suse.com/security/cve/CVE-2026-87536/\nhttps://www.suse.com/security/cve/CVE-2026-87537/\nhttps://www.suse.com/security/cve/CVE-2026-87538/\nhttps://www.suse.com/security/cve/CVE-2026-87539/\nhttps://www.suse.com/security/cve/CVE-2026-87540/\nhttps://www.suse.com/security/cve/CVE-2026-87541/\nhttps://www.suse.com/security/cve/CVE-2026-87542/\nhttps://www.suse.com/security/cve/CVE-2026-87543/\nhttps://www.suse.com/security/cve/CVE-2026-87544/\nhttps://www.suse.com/security/cve/CVE-2026-87545/\nhttps://www.suse.com/security/cve/CVE-2026-87546/\nhttps://www.suse.com/security/cve/CVE-2026-87547/\nhttps://www.suse.com/security/cve/CVE-2026-87548/\nhttps://www.suse.com/security/cve/CVE-2026-87549/\nhttps://www.suse.com/security/cve/CVE-2026-87550/\nhttps://www.suse.com/security/cve/CVE-2026-87551/\nhttps://www.suse.com/security/cve/CVE-2026-87552/\nhttps://www.suse.com/security/cve/CVE-2026-87553/\nhttps://www.suse.com/security/cve/CVE-2026-87554/\nhttps://www.suse.com/security/cve/CVE-2026-87555/\nhttps://www.suse.com/security/cve/CVE-2026-87556/\nhttps://www.suse.com/security/cve/CVE-2026-87557/\nhttps://www.suse.com/security/cve/CVE-2026-87558/\nhttps://www.suse.com/security/cve/CVE-2026-87559/\nhttps://www.suse.com/security/cve/CVE-2026-87560/\nhttps://www.suse.com/security/cve/CVE-2026-87561/\nhttps://www.suse.com/security/cve/CVE-2026-87562/\nhttps://www.suse.com/security/cve/CVE-2026-87563/\nhttps://www.suse.com/security/cve/CVE-2026-87564/\nhttps://www.suse.com/security/cve/CVE-2026-87565/\nhttps://www.suse.com/security/cve/CVE-2026-87566/\nhttps://www.suse.com/security/cve/CVE-2026-87567/\nhttps://www.suse.com/security/cve/CVE-2026-87568/\nhttps://www.suse.com/security/cve/CVE-2026-87569/\nhttps://www.suse.com/security/cve/CVE-2026-87570/\nhttps://www.suse.com/security/cve/CVE-2026-87571/\nhttps://www.suse.com/security/cve/CVE-2026-87572/\nhttps://www.suse.com/security/cve/CVE-2026-87573/\nhttps://www.suse.com/security/cve/CVE-2026-87574/\nhttps://www.suse.com/security/cve/CVE-2026-87575/\nhttps://www.suse.com/security/cve/CVE-2026-87576/\nhttps://www.suse.com/security/cve/CVE-2026-87577/\nhttps://www.suse.com/security/cve/CVE-2026-87578/\nhttps://www.suse.com/security/cve/CVE-2026-87579/\nhttps://www.suse.com/security/cve/CVE-2026-87580/\nhttps://www.suse.com/security/cve/CVE-2026-87581/\nhttps://www.suse.com/security/cve/CVE-2026-87582/\nhttps://www.suse.com/security/cve/CVE-2026-87583/\nhttps://www.suse.com/security/cve/CVE-2026-87584/\nhttps://www.suse.com/security/cve/CVE-2026-87585/\nhttps://www.suse.com/security/cve/CVE-2026-87586/\nhttps://www.suse.com/security/cve/CVE-2026-87587/\nhttps://www.suse.com/security/cve/CVE-2026-87588/\nhttps://www.suse.com/security/cve/CVE-2026-87589/\nhttps://www.suse.com/security/cve/CVE-2026-87590/\nhttps://www.suse.com/security/cve/CVE-2026-87591/\nhttps://www.suse.com/security/cve/CVE-2026-87592/\nhttps://www.suse.com/security/cve/CVE-2026-87593/\nhttps://www.suse.com/security/cve/CVE-2026-87594/\nhttps://www.suse.com/security/cve/CVE-2026-87595/\nhttps://www.suse.com/security/cve/CVE-2026-87596/\nhttps://www.suse.com/security/cve/CVE-2026-87597/\nhttps://www.suse.com/security/cve/CVE-2026-87598/\nhttps://www.suse.com/security/cve/CVE-2026-87599/\nhttps://www.suse.com/security/cve/CVE-2026-87600/\nhttps://www.suse.com/security/cve/CVE-2026-87601/\nhttps://www.suse.com/security/cve/CVE-2026-87602/\nhttps://www.suse.com/security/cve/CVE-2026-87603/\nhttps://www.suse.com/security/cve/CVE-2026-87604/\nhttps://www.suse.com/security/cve/CVE-2026-87605/\nhttps://www.suse.com/security/cve/CVE-2026-87606/\nhttps://www.suse.com/security/cve/CVE-2026-87607/\nhttps://www.suse.com/security/cve/CVE-2026-87608/\nhttps://www.suse.com/security/cve/CVE-2026-87609/\nhttps://www.suse.com/security/cve/CVE-2026-87610/\nhttps://www.suse.com/security/cve/CVE-2026-87611/\nhttps://www.suse.com/security/cve/CVE-2026-87612/\nhttps://www.suse.com/security/cve/CVE-2026-87613/\nhttps://www.suse.com/security/cve/CVE-2026-87614/\nhttps://www.suse.com/security/cve/CVE-2026-87615/\nhttps://www.suse.com/security/cve/CVE-2026-87616/\nhttps://www.suse.com/security/cve/CVE-2026-87617/\nhttps://www.suse.com/security/cve/CVE-2026-87618/\nhttps://www.suse.com/security/cve/CVE-2026-87619/\nhttps://www.suse.com/security/cve/CVE-2026-87620/\nhttps://www.suse.com/security/cve/CVE-2026-87621/\nhttps://www.suse.com/security/cve/CVE-2026-87622/\nhttps://www.suse.com/security/cve/CVE-2026-87623/\nhttps://www.suse.com/security/cve/CVE-2026-87624/\nhttps://www.suse.com/security/cve/CVE-2026-87625/\nhttps://www.suse.com/security/cve/CVE-2026-87626/\nhttps://www.suse.com/security/cve/CVE-2026-87627/\nhttps://www.suse.com/security/cve/CVE-2026-87628/\nhttps://www.suse.com/security/cve/CVE-2026-87629/\nhttps://www.suse.com/security/cve/CVE-2026-87630/\nhttps://www.suse.com/security/cve/CVE-2026-87631/\nhttps://www.suse.com/security/cve/CVE-2026-87632/\nhttps://www.suse.com/security/cve/CVE-2026-87633/\nhttps://www.suse.com/security/cve/CVE-2026-87634/\nhttps://www.suse.com/security/cve/CVE-2026-87635/\nhttps://www.suse.com/security/cve/CVE-2026-87636/\nhttps://www.suse.com/security/cve/CVE-2026-87637/\nhttps://www.suse.com/security/cve/CVE-2026-87638/\nhttps://www.suse.com/security/cve/CVE-2026-87639/\nhttps://www.suse.com/security/cve/CVE-2026-87640/\nhttps://www.suse.com/security/cve/CVE-2026-87641/\nhttps://www.suse.com/security/cve/CVE-2026-87642/\nhttps://www.suse.com/security/cve/CVE-2026-87643/\nhttps://www.suse.com/security/cve/CVE-2026-87644/\nhttps://www.suse.com/security/cve/CVE-2026-87645/\nhttps://www.suse.com/security/cve/CVE-2026-87646/\nhttps://www.suse.com/security/cve/CVE-2026-87647/\nhttps://www.suse.com/security/cve/CVE-2026-87648/\nhttps://www.suse.com/security/cve/CVE-2026-87649/\nhttps://www.suse.com/security/cve/CVE-2026-87650/\nhttps://www.suse.com/security/cve/CVE-2026-87651/\nhttps://www.suse.com/security/cve/CVE-2026-87652/\nhttps://www.suse.com/security/cve/CVE-2026-87653/\nhttps://www.suse.com/security/cve/CVE-2026-87654/\nhttps://www.suse.com/security/cve/CVE-2026-87655/\nhttps://www.suse.com/security/cve/CVE-2026-87656/\nhttps://www.suse.com/security/cve/CVE-2026-87657/\nhttps://www.suse.com/security/cve/CVE-2026-87658/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "Security update for chromium"
+    },
+    "id": "460cbbb5-e5f4-3990-ac74-78869fb425b8"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "6bf56b63-f4a7-3076-94d3-4f3d53db988a",
+       "product": {
+        "name": "Chrome",
+        "vendor": {
+         "name": "Google"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-87491\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 9, 2026, 9:43:39 AM",
+     "dateUpdated": "Sep 9, 2026, 9:43:39 AM",
+     "description": "Kwetsbaarheid verholpen in Google Chrome",
+     "id": "NCSC-2026-0354",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "691511c6-4fb3-3dca-8260-f94bea29726f"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "150536bf-f2ae-3ee1-a96c-2500cbd82c9d",
+       "product": {
+        "name": "chromium-153.0.8010.36-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "27c4255b-1496-3ca5-aeee-f10881b50b90",
+       "product": {
+        "name": "chromium-0:153.0.8010.36-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "48a9cd3c-cce5-3ba0-be2c-a465bcd4d209",
+       "product": {
+        "name": "openSUSE Tumbleweed",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4a54ab70-5187-3ab5-b1b4-7cbb968e8176",
+       "product": {
+        "name": "chromedriver-0:153.0.8010.36-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4f114732-4bb5-38c9-949f-63c2d78606b1",
+       "product": {
+        "name": "chromedriver-153.0.8010.36-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "547a38ee-3607-38df-ab78-af771d41b4e4",
+       "product": {
+        "name": "chromium-153.0.8010.36-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5f6d626f-9153-378b-916d-463f1d252c7b",
+       "product": {
+        "name": "chromium-0:153.0.8010.36-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "628ce636-b7d2-3b71-bd6a-c410146623c5",
+       "product": {
+        "name": "chromium-153.0.8010.36-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8f63f122-2eda-3ff2-a118-78636c1107e4",
+       "product": {
+        "name": "chromedriver-0:153.0.8010.36-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9fb6515c-526f-339a-b1d5-4457a6bdff6f",
+       "product": {
+        "name": "chromedriver-153.0.8010.36-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a373e8f6-84fb-3342-a179-6170ec204fad",
+       "product": {
+        "name": "chromedriver-0:153.0.8010.36-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b704e16d-6dd3-33f8-be9c-8368383a6445",
+       "product": {
+        "name": "chromedriver-153.0.8010.36-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c378caf5-4df8-307a-97fb-35faea7d798a",
+       "product": {
+        "name": "chromedriver-153.0.8010.36-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "da336233-d6cb-3286-9636-b0c05cbfa9be",
+       "product": {
+        "name": "chromedriver-0:153.0.8010.36-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e5f9293e-d771-3d1f-9d0b-73a03f79e0cc",
+       "product": {
+        "name": "chromium-0:153.0.8010.36-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "eee2210d-b2a3-3173-82d3-6bcc73d9ff2d",
+       "product": {
+        "name": "chromium-0:153.0.8010.36-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ff524c3c-3d85-35c7-8420-cc63adc96f64",
+       "product": {
+        "name": "chromium-153.0.8010.36-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-87429\nCVE-2026-87430\nCVE-2026-87431\nCVE-2026-87432\nCVE-2026-87433\nCVE-2026-87434\nCVE-2026-87435\nCVE-2026-87436\nCVE-2026-87437\nCVE-2026-87438\nCVE-2026-87439\nCVE-2026-87440\nCVE-2026-87441\nCVE-2026-87442\nCVE-2026-87443\nCVE-2026-87444\nCVE-2026-87445\nCVE-2026-87446\nCVE-2026-87447\nCVE-2026-87448\nCVE-2026-87449\nCVE-2026-87450\nCVE-2026-87451\nCVE-2026-87452\nCVE-2026-87453\nCVE-2026-87454\nCVE-2026-87455\nCVE-2026-87456\nCVE-2026-87457\nCVE-2026-87458\nCVE-2026-87459\nCVE-2026-87460\nCVE-2026-87461\nCVE-2026-87462\nCVE-2026-87463\nCVE-2026-87464\nCVE-2026-87465\nCVE-2026-87466\nCVE-2026-87467\nCVE-2026-87468\nCVE-2026-87469\nCVE-2026-87470\nCVE-2026-87471\nCVE-2026-87472\nCVE-2026-87473\nCVE-2026-87474\nCVE-2026-87475\nCVE-2026-87476\nCVE-2026-87477\nCVE-2026-87478\nCVE-2026-87479\nCVE-2026-87480\nCVE-2026-87481\nCVE-2026-87482\nCVE-2026-87483\nCVE-2026-87484\nCVE-2026-87485\nCVE-2026-87486\nCVE-2026-87487\nCVE-2026-87488\nCVE-2026-87489\nCVE-2026-87490\nCVE-2026-87491\nCVE-2026-87492\nCVE-2026-87493\nCVE-2026-87494\nCVE-2026-87495\nCVE-2026-87496\nCVE-2026-87497\nCVE-2026-87498\nCVE-2026-87499\nCVE-2026-87500\nCVE-2026-87501\nCVE-2026-87502\nCVE-2026-87503\nCVE-2026-87504\nCVE-2026-87505\nCVE-2026-87506\nCVE-2026-87507\nCVE-2026-87508\nCVE-2026-87509\nCVE-2026-87510\nCVE-2026-87511\nCVE-2026-87512\nCVE-2026-87513\nCVE-2026-87514\nCVE-2026-87515\nCVE-2026-87516\nCVE-2026-87517\nCVE-2026-87518\nCVE-2026-87519\nCVE-2026-87520\nCVE-2026-87521\nCVE-2026-87522\nCVE-2026-87523\nCVE-2026-87524\nCVE-2026-87525\nCVE-2026-87526\nCVE-2026-87527\nCVE-2026-87528\nCVE-2026-87529\nCVE-2026-87530\nCVE-2026-87531\nCVE-2026-87532\nCVE-2026-87533\nCVE-2026-87534\nCVE-2026-87535\nCVE-2026-87536\nCVE-2026-87537\nCVE-2026-87538\nCVE-2026-87539\nCVE-2026-87540\nCVE-2026-87541\nCVE-2026-87542\nCVE-2026-87543\nCVE-2026-87544\nCVE-2026-87545\nCVE-2026-87546\nCVE-2026-87547\nCVE-2026-87548\nCVE-2026-87549\nCVE-2026-87550\nCVE-2026-87551\nCVE-2026-87552\nCVE-2026-87553\nCVE-2026-87554\nCVE-2026-87555\nCVE-2026-87556\nCVE-2026-87557\nCVE-2026-87558\nCVE-2026-87559\nCVE-2026-87560\nCVE-2026-87561\nCVE-2026-87562\nCVE-2026-87563\nCVE-2026-87564\nCVE-2026-87565\nCVE-2026-87566\nCVE-2026-87567\nCVE-2026-87568\nCVE-2026-87569\nCVE-2026-87570\nCVE-2026-87571\nCVE-2026-87572\nCVE-2026-87573\nCVE-2026-87574\nCVE-2026-87575\nCVE-2026-87576\nCVE-2026-87577\nCVE-2026-87578\nCVE-2026-87579\nCVE-2026-87580\nCVE-2026-87581\nCVE-2026-87582\nCVE-2026-87583\nCVE-2026-87584\nCVE-2026-87585\nCVE-2026-87586\nCVE-2026-87587\nCVE-2026-87588\nCVE-2026-87589\nCVE-2026-87590\nCVE-2026-87591\nCVE-2026-87592\nCVE-2026-87593\nCVE-2026-87594\nCVE-2026-87595\nCVE-2026-87596\nCVE-2026-87597\nCVE-2026-87598\nCVE-2026-87599\nCVE-2026-87600\nCVE-2026-87601\nCVE-2026-87602\nCVE-2026-87603\nCVE-2026-87604\nCVE-2026-87605\nCVE-2026-87606\nCVE-2026-87607\nCVE-2026-87608\nCVE-2026-87609\nCVE-2026-87610\nCVE-2026-87611\nCVE-2026-87612\nCVE-2026-87613\nCVE-2026-87614\nCVE-2026-87615\nCVE-2026-87616\nCVE-2026-87617\nCVE-2026-87618\nCVE-2026-87619\nCVE-2026-87620\nCVE-2026-87621\nCVE-2026-87622\nCVE-2026-87623\nCVE-2026-87624\nCVE-2026-87625\nCVE-2026-87626\nCVE-2026-87627\nCVE-2026-87628\nCVE-2026-87629\nCVE-2026-87630\nCVE-2026-87631\nCVE-2026-87632\nCVE-2026-87633\nCVE-2026-87634\nCVE-2026-87635\nCVE-2026-87636\nCVE-2026-87637\nCVE-2026-87638\nCVE-2026-87639\nCVE-2026-87640\nCVE-2026-87641\nCVE-2026-87642\nCVE-2026-87643\nCVE-2026-87644\nCVE-2026-87645\nCVE-2026-87646\nCVE-2026-87647\nCVE-2026-87648\nCVE-2026-87649\nCVE-2026-87650\nCVE-2026-87651\nCVE-2026-87652\nCVE-2026-87653\nCVE-2026-87654\nCVE-2026-87655\nCVE-2026-87656\nCVE-2026-87657\nCVE-2026-87658\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 11, 2026, 12:00:00 AM",
+     "dateUpdated": "Sep 17, 2026, 5:24:03 PM",
+     "description": "chromedriver-153.0.8010.36-1.1 on GA media",
+     "id": "openSUSE-SU-2026:11750-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_11750-1.json\nhttps://www.suse.com/security/cve/CVE-2026-87429/\nhttps://www.suse.com/security/cve/CVE-2026-87430/\nhttps://www.suse.com/security/cve/CVE-2026-87431/\nhttps://www.suse.com/security/cve/CVE-2026-87432/\nhttps://www.suse.com/security/cve/CVE-2026-87433/\nhttps://www.suse.com/security/cve/CVE-2026-87434/\nhttps://www.suse.com/security/cve/CVE-2026-87435/\nhttps://www.suse.com/security/cve/CVE-2026-87436/\nhttps://www.suse.com/security/cve/CVE-2026-87437/\nhttps://www.suse.com/security/cve/CVE-2026-87438/\nhttps://www.suse.com/security/cve/CVE-2026-87439/\nhttps://www.suse.com/security/cve/CVE-2026-87440/\nhttps://www.suse.com/security/cve/CVE-2026-87441/\nhttps://www.suse.com/security/cve/CVE-2026-87442/\nhttps://www.suse.com/security/cve/CVE-2026-87443/\nhttps://www.suse.com/security/cve/CVE-2026-87444/\nhttps://www.suse.com/security/cve/CVE-2026-87445/\nhttps://www.suse.com/security/cve/CVE-2026-87446/\nhttps://www.suse.com/security/cve/CVE-2026-87447/\nhttps://www.suse.com/security/cve/CVE-2026-87448/\nhttps://www.suse.com/security/cve/CVE-2026-87449/\nhttps://www.suse.com/security/cve/CVE-2026-87450/\nhttps://www.suse.com/security/cve/CVE-2026-87451/\nhttps://www.suse.com/security/cve/CVE-2026-87452/\nhttps://www.suse.com/security/cve/CVE-2026-87453/\nhttps://www.suse.com/security/cve/CVE-2026-87454/\nhttps://www.suse.com/security/cve/CVE-2026-87455/\nhttps://www.suse.com/security/cve/CVE-2026-87456/\nhttps://www.suse.com/security/cve/CVE-2026-87457/\nhttps://www.suse.com/security/cve/CVE-2026-87458/\nhttps://www.suse.com/security/cve/CVE-2026-87459/\nhttps://www.suse.com/security/cve/CVE-2026-87460/\nhttps://www.suse.com/security/cve/CVE-2026-87461/\nhttps://www.suse.com/security/cve/CVE-2026-87462/\nhttps://www.suse.com/security/cve/CVE-2026-87463/\nhttps://www.suse.com/security/cve/CVE-2026-87464/\nhttps://www.suse.com/security/cve/CVE-2026-87465/\nhttps://www.suse.com/security/cve/CVE-2026-87466/\nhttps://www.suse.com/security/cve/CVE-2026-87467/\nhttps://www.suse.com/security/cve/CVE-2026-87468/\nhttps://www.suse.com/security/cve/CVE-2026-87469/\nhttps://www.suse.com/security/cve/CVE-2026-87470/\nhttps://www.suse.com/security/cve/CVE-2026-87471/\nhttps://www.suse.com/security/cve/CVE-2026-87472/\nhttps://www.suse.com/security/cve/CVE-2026-87473/\nhttps://www.suse.com/security/cve/CVE-2026-87474/\nhttps://www.suse.com/security/cve/CVE-2026-87475/\nhttps://www.suse.com/security/cve/CVE-2026-87476/\nhttps://www.suse.com/security/cve/CVE-2026-87477/\nhttps://www.suse.com/security/cve/CVE-2026-87478/\nhttps://www.suse.com/security/cve/CVE-2026-87479/\nhttps://www.suse.com/security/cve/CVE-2026-87480/\nhttps://www.suse.com/security/cve/CVE-2026-87481/\nhttps://www.suse.com/security/cve/CVE-2026-87482/\nhttps://www.suse.com/security/cve/CVE-2026-87483/\nhttps://www.suse.com/security/cve/CVE-2026-87484/\nhttps://www.suse.com/security/cve/CVE-2026-87485/\nhttps://www.suse.com/security/cve/CVE-2026-87486/\nhttps://www.suse.com/security/cve/CVE-2026-87487/\nhttps://www.suse.com/security/cve/CVE-2026-87488/\nhttps://www.suse.com/security/cve/CVE-2026-87489/\nhttps://www.suse.com/security/cve/CVE-2026-87490/\nhttps://www.suse.com/security/cve/CVE-2026-87491/\nhttps://www.suse.com/security/cve/CVE-2026-87492/\nhttps://www.suse.com/security/cve/CVE-2026-87493/\nhttps://www.suse.com/security/cve/CVE-2026-87494/\nhttps://www.suse.com/security/cve/CVE-2026-87495/\nhttps://www.suse.com/security/cve/CVE-2026-87496/\nhttps://www.suse.com/security/cve/CVE-2026-87497/\nhttps://www.suse.com/security/cve/CVE-2026-87498/\nhttps://www.suse.com/security/cve/CVE-2026-87499/\nhttps://www.suse.com/security/cve/CVE-2026-87500/\nhttps://www.suse.com/security/cve/CVE-2026-87501/\nhttps://www.suse.com/security/cve/CVE-2026-87502/\nhttps://www.suse.com/security/cve/CVE-2026-87503/\nhttps://www.suse.com/security/cve/CVE-2026-87504/\nhttps://www.suse.com/security/cve/CVE-2026-87505/\nhttps://www.suse.com/security/cve/CVE-2026-87506/\nhttps://www.suse.com/security/cve/CVE-2026-87507/\nhttps://www.suse.com/security/cve/CVE-2026-87508/\nhttps://www.suse.com/security/cve/CVE-2026-87509/\nhttps://www.suse.com/security/cve/CVE-2026-87510/\nhttps://www.suse.com/security/cve/CVE-2026-87511/\nhttps://www.suse.com/security/cve/CVE-2026-87512/\nhttps://www.suse.com/security/cve/CVE-2026-87513/\nhttps://www.suse.com/security/cve/CVE-2026-87514/\nhttps://www.suse.com/security/cve/CVE-2026-87515/\nhttps://www.suse.com/security/cve/CVE-2026-87516/\nhttps://www.suse.com/security/cve/CVE-2026-87517/\nhttps://www.suse.com/security/cve/CVE-2026-87518/\nhttps://www.suse.com/security/cve/CVE-2026-87519/\nhttps://www.suse.com/security/cve/CVE-2026-87520/\nhttps://www.suse.com/security/cve/CVE-2026-87521/\nhttps://www.suse.com/security/cve/CVE-2026-87522/\nhttps://www.suse.com/security/cve/CVE-2026-87523/\nhttps://www.suse.com/security/cve/CVE-2026-87524/\nhttps://www.suse.com/security/cve/CVE-2026-87525/\nhttps://www.suse.com/security/cve/CVE-2026-87526/\nhttps://www.suse.com/security/cve/CVE-2026-87527/\nhttps://www.suse.com/security/cve/CVE-2026-87528/\nhttps://www.suse.com/security/cve/CVE-2026-87529/\nhttps://www.suse.com/security/cve/CVE-2026-87530/\nhttps://www.suse.com/security/cve/CVE-2026-87531/\nhttps://www.suse.com/security/cve/CVE-2026-87532/\nhttps://www.suse.com/security/cve/CVE-2026-87533/\nhttps://www.suse.com/security/cve/CVE-2026-87534/\nhttps://www.suse.com/security/cve/CVE-2026-87535/\nhttps://www.suse.com/security/cve/CVE-2026-87536/\nhttps://www.suse.com/security/cve/CVE-2026-87537/\nhttps://www.suse.com/security/cve/CVE-2026-87538/\nhttps://www.suse.com/security/cve/CVE-2026-87539/\nhttps://www.suse.com/security/cve/CVE-2026-87540/\nhttps://www.suse.com/security/cve/CVE-2026-87541/\nhttps://www.suse.com/security/cve/CVE-2026-87542/\nhttps://www.suse.com/security/cve/CVE-2026-87543/\nhttps://www.suse.com/security/cve/CVE-2026-87544/\nhttps://www.suse.com/security/cve/CVE-2026-87545/\nhttps://www.suse.com/security/cve/CVE-2026-87546/\nhttps://www.suse.com/security/cve/CVE-2026-87547/\nhttps://www.suse.com/security/cve/CVE-2026-87548/\nhttps://www.suse.com/security/cve/CVE-2026-87549/\nhttps://www.suse.com/security/cve/CVE-2026-87550/\nhttps://www.suse.com/security/cve/CVE-2026-87551/\nhttps://www.suse.com/security/cve/CVE-2026-87552/\nhttps://www.suse.com/security/cve/CVE-2026-87553/\nhttps://www.suse.com/security/cve/CVE-2026-87554/\nhttps://www.suse.com/security/cve/CVE-2026-87555/\nhttps://www.suse.com/security/cve/CVE-2026-87556/\nhttps://www.suse.com/security/cve/CVE-2026-87557/\nhttps://www.suse.com/security/cve/CVE-2026-87558/\nhttps://www.suse.com/security/cve/CVE-2026-87559/\nhttps://www.suse.com/security/cve/CVE-2026-87560/\nhttps://www.suse.com/security/cve/CVE-2026-87561/\nhttps://www.suse.com/security/cve/CVE-2026-87562/\nhttps://www.suse.com/security/cve/CVE-2026-87563/\nhttps://www.suse.com/security/cve/CVE-2026-87564/\nhttps://www.suse.com/security/cve/CVE-2026-87565/\nhttps://www.suse.com/security/cve/CVE-2026-87566/\nhttps://www.suse.com/security/cve/CVE-2026-87567/\nhttps://www.suse.com/security/cve/CVE-2026-87568/\nhttps://www.suse.com/security/cve/CVE-2026-87569/\nhttps://www.suse.com/security/cve/CVE-2026-87570/\nhttps://www.suse.com/security/cve/CVE-2026-87571/\nhttps://www.suse.com/security/cve/CVE-2026-87572/\nhttps://www.suse.com/security/cve/CVE-2026-87573/\nhttps://www.suse.com/security/cve/CVE-2026-87574/\nhttps://www.suse.com/security/cve/CVE-2026-87575/\nhttps://www.suse.com/security/cve/CVE-2026-87576/\nhttps://www.suse.com/security/cve/CVE-2026-87577/\nhttps://www.suse.com/security/cve/CVE-2026-87578/\nhttps://www.suse.com/security/cve/CVE-2026-87579/\nhttps://www.suse.com/security/cve/CVE-2026-87580/\nhttps://www.suse.com/security/cve/CVE-2026-87581/\nhttps://www.suse.com/security/cve/CVE-2026-87582/\nhttps://www.suse.com/security/cve/CVE-2026-87583/\nhttps://www.suse.com/security/cve/CVE-2026-87584/\nhttps://www.suse.com/security/cve/CVE-2026-87585/\nhttps://www.suse.com/security/cve/CVE-2026-87586/\nhttps://www.suse.com/security/cve/CVE-2026-87587/\nhttps://www.suse.com/security/cve/CVE-2026-87588/\nhttps://www.suse.com/security/cve/CVE-2026-87589/\nhttps://www.suse.com/security/cve/CVE-2026-87590/\nhttps://www.suse.com/security/cve/CVE-2026-87591/\nhttps://www.suse.com/security/cve/CVE-2026-87592/\nhttps://www.suse.com/security/cve/CVE-2026-87593/\nhttps://www.suse.com/security/cve/CVE-2026-87594/\nhttps://www.suse.com/security/cve/CVE-2026-87595/\nhttps://www.suse.com/security/cve/CVE-2026-87596/\nhttps://www.suse.com/security/cve/CVE-2026-87597/\nhttps://www.suse.com/security/cve/CVE-2026-87598/\nhttps://www.suse.com/security/cve/CVE-2026-87599/\nhttps://www.suse.com/security/cve/CVE-2026-87600/\nhttps://www.suse.com/security/cve/CVE-2026-87601/\nhttps://www.suse.com/security/cve/CVE-2026-87602/\nhttps://www.suse.com/security/cve/CVE-2026-87603/\nhttps://www.suse.com/security/cve/CVE-2026-87604/\nhttps://www.suse.com/security/cve/CVE-2026-87605/\nhttps://www.suse.com/security/cve/CVE-2026-87606/\nhttps://www.suse.com/security/cve/CVE-2026-87607/\nhttps://www.suse.com/security/cve/CVE-2026-87608/\nhttps://www.suse.com/security/cve/CVE-2026-87609/\nhttps://www.suse.com/security/cve/CVE-2026-87610/\nhttps://www.suse.com/security/cve/CVE-2026-87611/\nhttps://www.suse.com/security/cve/CVE-2026-87612/\nhttps://www.suse.com/security/cve/CVE-2026-87613/\nhttps://www.suse.com/security/cve/CVE-2026-87614/\nhttps://www.suse.com/security/cve/CVE-2026-87615/\nhttps://www.suse.com/security/cve/CVE-2026-87616/\nhttps://www.suse.com/security/cve/CVE-2026-87617/\nhttps://www.suse.com/security/cve/CVE-2026-87618/\nhttps://www.suse.com/security/cve/CVE-2026-87619/\nhttps://www.suse.com/security/cve/CVE-2026-87620/\nhttps://www.suse.com/security/cve/CVE-2026-87621/\nhttps://www.suse.com/security/cve/CVE-2026-87622/\nhttps://www.suse.com/security/cve/CVE-2026-87623/\nhttps://www.suse.com/security/cve/CVE-2026-87624/\nhttps://www.suse.com/security/cve/CVE-2026-87625/\nhttps://www.suse.com/security/cve/CVE-2026-87626/\nhttps://www.suse.com/security/cve/CVE-2026-87627/\nhttps://www.suse.com/security/cve/CVE-2026-87628/\nhttps://www.suse.com/security/cve/CVE-2026-87629/\nhttps://www.suse.com/security/cve/CVE-2026-87630/\nhttps://www.suse.com/security/cve/CVE-2026-87631/\nhttps://www.suse.com/security/cve/CVE-2026-87632/\nhttps://www.suse.com/security/cve/CVE-2026-87633/\nhttps://www.suse.com/security/cve/CVE-2026-87634/\nhttps://www.suse.com/security/cve/CVE-2026-87635/\nhttps://www.suse.com/security/cve/CVE-2026-87636/\nhttps://www.suse.com/security/cve/CVE-2026-87637/\nhttps://www.suse.com/security/cve/CVE-2026-87638/\nhttps://www.suse.com/security/cve/CVE-2026-87639/\nhttps://www.suse.com/security/cve/CVE-2026-87640/\nhttps://www.suse.com/security/cve/CVE-2026-87641/\nhttps://www.suse.com/security/cve/CVE-2026-87642/\nhttps://www.suse.com/security/cve/CVE-2026-87643/\nhttps://www.suse.com/security/cve/CVE-2026-87644/\nhttps://www.suse.com/security/cve/CVE-2026-87645/\nhttps://www.suse.com/security/cve/CVE-2026-87646/\nhttps://www.suse.com/security/cve/CVE-2026-87647/\nhttps://www.suse.com/security/cve/CVE-2026-87648/\nhttps://www.suse.com/security/cve/CVE-2026-87649/\nhttps://www.suse.com/security/cve/CVE-2026-87650/\nhttps://www.suse.com/security/cve/CVE-2026-87651/\nhttps://www.suse.com/security/cve/CVE-2026-87652/\nhttps://www.suse.com/security/cve/CVE-2026-87653/\nhttps://www.suse.com/security/cve/CVE-2026-87654/\nhttps://www.suse.com/security/cve/CVE-2026-87655/\nhttps://www.suse.com/security/cve/CVE-2026-87656/\nhttps://www.suse.com/security/cve/CVE-2026-87657/\nhttps://www.suse.com/security/cve/CVE-2026-87658/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "chromedriver-153.0.8010.36-1.1 on GA media"
+    },
+    "id": "b30f5beb-28dd-3939-997f-8ed3d393d6e8"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "a47b1a54-1e24-38bf-8647-1d8c5fa87923",
+    "product": {
+     "name": "Chrome",
+     "vendor": {
+      "name": "Google"
+     }
+    },
+    "product_version": "153.0.8010.36 <153.0.8010.36"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "c0c9865e-9c87-344e-8e80-88920c25b8b8",
+    "vendor": {
+     "name": "Google"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "bdcea74d-d621-3340-b338-c7623610e0c1",
+    "vulnerability": {
+     "aliases": "GHSA-8x3p-8g9v-xc7m\nCVE-2026-87491\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:55:42 AM",
+     "datePublished": "Sep 9, 2026, 3:30:39 AM",
+     "dateUpdated": "Sep 9, 2026, 9:31:35 PM",
+     "description": "Out of bounds write in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+     "enisa_id": "EUVD-2026-74529\n",
+     "epss": 0.0,
+     "id": "GHSA-8x3p-8g9v-xc7m",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-87491\nhttps://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/543557673\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87491\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "faab7d6e-2b1d-3365-89c2-b576a0dd274a",
+    "vulnerability": {
+     "assigner": "Chrome",
+     "baseScore": 8.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:36:37 AM",
+     "datePublished": "Sep 9, 2026, 12:09:38 AM",
+     "dateUpdated": "Sep 21, 2026, 12:51:58 PM",
+     "description": "Out of bounds write in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+     "enisa_id": "EUVD-2026-74529\n",
+     "epss": 3.14,
+     "exploitedSince": "Sep 9, 2026, 12:00:00 AM",
+     "id": "CVE-2026-87491",
+     "references": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/543557673\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "4bd6cf57-8672-3d28-a0f1-270e5ef960e1",
+       "product": {
+        "name": "Chrome",
+        "vendor": {
+         "name": "Google"
+        }
+       },
+       "product_version": "153.0.8010.36 <153.0.8010.36"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "f91c4cc6-b693-34fc-bc50-a8188832a881",
+       "vendor": {
+        "name": "Google"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "e655c580-8ce9-31b0-989c-70d5685e508f",
+  "epss": 3.14,
+  "exploitedSince": "Sep 9, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-74529",
+  "references": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/543557673\n"
+ },
+ "id": "EUVD-2026-74529",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "Chrome",
+      "vendor": "Google",
+      "versions": [
+       {
+        "lessThan": "153.0.8010.36",
+        "status": "affected",
+        "version": "153.0.8010.36",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "chrome-cve-admin@google.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-23",
+  "cisaExploitAdd": "2026-09-09",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Google Chromium V8 Out of Bounds Write Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7BC1B89D-DEB1-48BD-8602-0869B89600FD",
+        "versionEndExcluding": "153.0.8010.36",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Out of bounds write in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)"
+   }
+  ],
+  "id": "CVE-2026-87491",
+  "lastModified": "2026-09-21T13:17:11.283",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "REQUIRED",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.9,
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-87491",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-10T03:55:21.039385Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-09T01:17:05.887",
+  "references": [
+   {
+    "source": "chrome-cve-admin@google.com",
+    "tags": [
+     "Release Notes",
+     "Vendor Advisory"
+    ],
+    "url": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html"
+   },
+   {
+    "source": "chrome-cve-admin@google.com",
+    "tags": [
+     "Permissions Required"
+    ],
+    "url": "https://issues.chromium.org/issues/543557673"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87491"
+   }
+  ],
+  "sourceIdentifier": "chrome-cve-admin@google.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-787"
+     }
+    ],
+    "source": "chrome-cve-admin@google.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

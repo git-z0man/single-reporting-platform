@@ -1,0 +1,370 @@
+{
+ "cert_links": [
+  [
+   "CERT Polska",
+   "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve"
+  ],
+  [
+   "CERT Polska",
+   "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/"
+  ]
+ ],
+ "cisa_kev": null,
+ "euvd": {
+  "aliases": "CVE-2026-67276\nGHSA-j9wg-77fw-f22f\n",
+  "assigner": "CERT-PL",
+  "baseScore": 9.2,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Sep 5, 2026, 8:00:55 PM",
+  "dateUpdated": "Sep 9, 2026, 4:26:19 AM",
+  "description": "RouterOS does not compare the complete RSA public key when matching an SSH authentication request to an authorized user key, checking the key type and modulus but omitting the exponent. Because signature verification uses the client-supplied key, an attacker knowing an authorized RSA modulus can supply a key with exponent one, forge a valid signature, and open an SSH command channel as the target user without the private key.This issue affects only 7.x branch was fixed in versions: 7.23.4 (Long-term) and 7.24.2 (Stable)",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "6bb03b8c-b28e-3d21-b3b7-1a1beff49da8",
+       "product": {
+        "name": "RouterOS",
+        "vendor": {
+         "name": "MikroTik"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-67276\nCVE-2026-86060\nCVE-2026-67277\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 8, 2026, 9:46:33 AM",
+     "dateUpdated": "Sep 8, 2026, 9:46:33 AM",
+     "description": "Kwetsbaarheden verholpen in MikroTik RouterOS",
+     "id": "NCSC-2026-0345",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "dc9d3353-c570-38e2-b3f9-42dd2a5e7eab"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "5dd66e60-0cd5-35ba-aa1b-76221f488835",
+    "product": {
+     "name": "RouterOS",
+     "vendor": {
+      "name": "MikroTik"
+     }
+    },
+    "product_version": "7.24 <7.24.2"
+   },
+   {
+    "id": "790cc974-4d16-3157-9547-829e6f8ef4d8",
+    "product": {
+     "name": "RouterOS",
+     "vendor": {
+      "name": "MikroTik"
+     }
+    },
+    "product_version": "7.9 <7.23.4"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "b3544301-302f-3fe0-a731-ce7ef3c7c287",
+    "vendor": {
+     "name": "MikroTik"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "72687d70-c348-37df-b7bf-fce8607c142c",
+    "vulnerability": {
+     "assigner": "CERT-PL",
+     "baseScore": 9.2,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 4, 2026, 3:37:55 AM",
+     "datePublished": "Sep 5, 2026, 8:00:55 PM",
+     "dateUpdated": "Sep 9, 2026, 4:26:19 AM",
+     "description": "RouterOS does not compare the complete RSA public key when matching an SSH authentication request to an authorized user key, checking the key type and modulus but omitting the exponent. Because signature verification uses the client-supplied key, an attacker knowing an authorized RSA modulus can supply a key with exponent one, forge a valid signature, and open an SSH command channel as the target user without the private key.This issue affects only 7.x branch was fixed in versions: 7.23.4 (Long-term) and 7.24.2 (Stable)",
+     "enisa_id": "EUVD-2026-72024\n",
+     "epss": 6.45,
+     "exploitedSince": "Sep 5, 2026, 12:00:00 AM",
+     "id": "CVE-2026-67276",
+     "references": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve\nhttps://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/\nhttps://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/\nhttps://mikrotik.com/supportsec/september-2026-vulnerability/\nhttps://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801\nhttps://forum.mikrotik.com/t/7-24-2-stable-is-released/272800\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "38db050a-f4d8-3594-9afb-73d1fcdc229b",
+       "product": {
+        "name": "RouterOS",
+        "vendor": {
+         "name": "MikroTik"
+        }
+       },
+       "product_version": "7.24 <7.24.2"
+      },
+      {
+       "id": "fe3af308-688e-3554-a14e-180579903432",
+       "product": {
+        "name": "RouterOS",
+        "vendor": {
+         "name": "MikroTik"
+        }
+       },
+       "product_version": "7.9 <7.23.4"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "6b7b5ec0-3ec0-3ce7-8061-2f70995f314c",
+       "vendor": {
+        "name": "MikroTik"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "922c4382-5055-3f75-8173-7ca4c9a50c6b",
+    "vulnerability": {
+     "aliases": "CVE-2026-67276\nGHSA-j9wg-77fw-f22f\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:55:42 AM",
+     "datePublished": "Sep 5, 2026, 9:31:19 PM",
+     "dateUpdated": "Sep 25, 2026, 3:31:25 PM",
+     "description": "RouterOS does not compare the complete RSA public key when matching an SSH authentication request to an authorized user key, checking the key type and modulus but omitting the exponent. Because signature verification uses the client-supplied key, an attacker knowing an authorized RSA modulus can supply a key with exponent one, forge a valid signature, and open an SSH command channel as the target user without the private key.This issue was fixed in versions: 6.49.21 (Long-term), 7.23.4 (Long-term) and 7.24.2 (Stable)",
+     "enisa_id": "EUVD-2026-72024\n",
+     "epss": 0.0,
+     "id": "GHSA-j9wg-77fw-f22f",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-67276\nhttps://cert.pl/en/posts/2026/09/mikrotik-routeros-cve\nhttps://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited\nhttps://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802\nhttps://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801\nhttps://forum.mikrotik.com/t/7-24-2-stable-is-released/272800\nhttps://mikrotik.com/supportsec/september-2026-vulnerability\nhttps://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "53431652-9c34-3ad9-907a-2ab8c06a5122",
+  "epss": 6.45,
+  "exploitedSince": "Sep 5, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-72024",
+  "references": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve\nhttps://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/\nhttps://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/\nhttps://mikrotik.com/supportsec/september-2026-vulnerability/\nhttps://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801\nhttps://forum.mikrotik.com/t/7-24-2-stable-is-released/272800\n"
+ },
+ "id": "EUVD-2026-72024",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "RouterOS",
+      "vendor": "Mikrotik",
+      "versions": [
+       {
+        "lessThan": "7.24.2",
+        "status": "affected",
+        "version": "7.24",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "7.23.4",
+        "status": "affected",
+        "version": "7.9",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "cvd@cert.pl"
+   }
+  ],
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7B88D531-98F2-41B2-AC4F-0170D7DB15C2",
+        "versionEndExcluding": "7.23.4",
+        "versionStartIncluding": "7.9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A41D6B3C-D321-4C61-B3D5-00F8276CB4AC",
+        "versionEndExcluding": "7.24.2",
+        "versionStartIncluding": "7.24",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "RouterOS does not compare the complete RSA public key when matching an SSH authentication request to an authorized user key, checking the key type and modulus but omitting the exponent. Because signature verification uses the client-supplied key, an attacker knowing an authorized RSA modulus can supply a key with exponent one, forge a valid signature, and open an SSH command channel as the target user without the private key.This issue affects only 7.x branch was fixed in versions: 7.23.4 (Long-term) and 7.24.2 (Stable)"
+   }
+  ],
+  "id": "CVE-2026-67276",
+  "lastModified": "2026-09-25T14:57:53.150",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.1,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.2,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "HIGH",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.2,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "cvd@cert.pl",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-67276",
+      "options": [
+       {
+        "exploitation": "none"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-08T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-05T20:17:17.977",
+  "references": [
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Mitigation",
+     "Third Party Advisory"
+    ],
+    "url": "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://forum.mikrotik.com/t/7-24-2-stable-is-released/272800"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://mikrotik.com/supportsec/september-2026-vulnerability/"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/"
+   }
+  ],
+  "sourceIdentifier": "cvd@cert.pl",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-347"
+     }
+    ],
+    "source": "cvd@cert.pl",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

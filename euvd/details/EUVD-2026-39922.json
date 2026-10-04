@@ -1,0 +1,284 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-49869"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-49869",
+  "cwes": [
+   "CWE-78",
+   "CWE-184",
+   "CWE-287",
+   "CWE-918"
+  ],
+  "dateAdded": "2026-09-02",
+  "dueDate": "2026-09-05",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/kestra-io/kestra/security/advisories/GHSA-5vc5-wxxq-3fjx ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-49869",
+  "product": "Kestra OSS",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Kestra OSS contains an OS command injection vulnerability that could allow an unauthenticated remote attacker to create and execute arbitrary workflows without credentials.",
+  "vendorProject": "Kestra",
+  "vulnerabilityName": "Kestra OSS OS Command Injection Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-49869\n",
+  "assigner": "GitHub_M",
+  "baseScore": 10.0,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Jun 26, 2026, 8:58:19 PM",
+  "dateUpdated": "Sep 3, 2026, 3:55:27 AM",
+  "description": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.21, AuthenticationFilter in Kestra OSS uses request.getPath().endsWith(\"/configs\") to whitelist the public configuration endpoint from Basic Auth. Because the check is a suffix match rather than an exact path match, any API path whose last segment is configs bypasses authentication entirely. An unauthenticated remote attacker can exploit this to create and execute arbitrary workflows without credentials. Because Kestra ships with script execution plugins (plugin-script-shell, plugin-script-python, etc.) enabled by default, this directly results in unauthenticated Remote Code Execution as root inside the Kestra worker container.  This vulnerability is fixed in 1.0.45 and 1.3.21.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "261e1480-3e25-3212-984a-af47ee055b44",
+    "product": {
+     "name": "kestra",
+     "vendor": {
+      "name": "kestra-io"
+     }
+    },
+    "product_version": "< 1.0.45"
+   },
+   {
+    "id": "66c57c11-c2e3-3af2-83d4-fbf5514b14b5",
+    "product": {
+     "name": "kestra",
+     "vendor": {
+      "name": "kestra-io"
+     }
+    },
+    "product_version": "1.1.0, < 1.3.21"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "5517daf6-4609-39af-9b84-751551dd8212",
+    "vendor": {
+     "name": "kestra-io"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "e50cb36a-24af-3c9e-9430-1cb14aa8fb0a",
+    "vulnerability": {
+     "assigner": "GitHub_M",
+     "baseScore": 10.0,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:36:15 AM",
+     "datePublished": "Jun 26, 2026, 8:58:19 PM",
+     "dateUpdated": "Sep 3, 2026, 3:55:27 AM",
+     "description": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.21, AuthenticationFilter in Kestra OSS uses request.getPath().endsWith(\"/configs\") to whitelist the public configuration endpoint from Basic Auth. Because the check is a suffix match rather than an exact path match, any API path whose last segment is configs bypasses authentication entirely. An unauthenticated remote attacker can exploit this to create and execute arbitrary workflows without credentials. Because Kestra ships with script execution plugins (plugin-script-shell, plugin-script-python, etc.) enabled by default, this directly results in unauthenticated Remote Code Execution as root inside the Kestra worker container.  This vulnerability is fixed in 1.0.45 and 1.3.21.",
+     "enisa_id": "EUVD-2026-39922\n",
+     "epss": 2.1,
+     "exploitedSince": "Sep 2, 2026, 12:00:00 AM",
+     "id": "CVE-2026-49869",
+     "references": "https://github.com/kestra-io/kestra/security/advisories/GHSA-5vc5-wxxq-3fjx\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "4edffa3d-5141-3b3d-939a-40d86d1540b4",
+       "product": {
+        "name": "kestra",
+        "vendor": {
+         "name": "kestra-io"
+        }
+       },
+       "product_version": "1.1.0, < 1.3.21"
+      },
+      {
+       "id": "ba1c8df9-33d9-3fb0-9c54-e73a2217bd40",
+       "product": {
+        "name": "kestra",
+        "vendor": {
+         "name": "kestra-io"
+        }
+       },
+       "product_version": "< 1.0.45"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "4a5fdf89-47b9-3f04-9d0e-14fecfd278bf",
+       "vendor": {
+        "name": "kestra-io"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "66319825-8b7b-3dfc-9d52-d5d6cbf7e738",
+  "epss": 2.1,
+  "exploitedSince": "Sep 2, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-39922",
+  "references": "https://github.com/kestra-io/kestra/security/advisories/GHSA-5vc5-wxxq-3fjx\n"
+ },
+ "id": "EUVD-2026-39922",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "kestra",
+      "vendor": "kestra-io",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "< 1.0.45"
+       },
+       {
+        "status": "affected",
+        "version": ">= 1.1.0, < 1.3.21"
+       }
+      ]
+     }
+    ],
+    "source": "security-advisories@github.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-05",
+  "cisaExploitAdd": "2026-09-02",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Kestra OSS OS Command Injection Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:kestra:kestra:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "ADC0ED79-69EF-4A2A-9F07-4791ED97124F",
+        "versionEndExcluding": "1.0.45",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:kestra:kestra:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "73FD0092-9076-4F1C-9B93-E59C09D30E21",
+        "versionEndExcluding": "1.3.21",
+        "versionStartIncluding": "1.1.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.21, AuthenticationFilter in Kestra OSS uses request.getPath().endsWith(\"/configs\") to whitelist the public configuration endpoint from Basic Auth. Because the check is a suffix match rather than an exact path match, any API path whose last segment is configs bypasses authentication entirely. An unauthenticated remote attacker can exploit this to create and execute arbitrary workflows without credentials. Because Kestra ships with script execution plugins (plugin-script-shell, plugin-script-python, etc.) enabled by default, this directly results in unauthenticated Remote Code Execution as root inside the Kestra worker container.  This vulnerability is fixed in 1.0.45 and 1.3.21."
+   }
+  ],
+  "id": "CVE-2026-49869",
+  "lastModified": "2026-09-03T13:05:55.387",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 10.0,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 6.0,
+     "source": "security-advisories@github.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-49869",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-01T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-06-26T22:16:32.113",
+  "references": [
+   {
+    "source": "security-advisories@github.com",
+    "tags": [
+     "Exploit",
+     "Vendor Advisory"
+    ],
+    "url": "https://github.com/kestra-io/kestra/security/advisories/GHSA-5vc5-wxxq-3fjx"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Exploit",
+     "Vendor Advisory"
+    ],
+    "url": "https://github.com/kestra-io/kestra/security/advisories/GHSA-5vc5-wxxq-3fjx"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-49869"
+   }
+  ],
+  "sourceIdentifier": "security-advisories@github.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-78"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-184"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-287"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-918"
+     }
+    ],
+    "source": "security-advisories@github.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

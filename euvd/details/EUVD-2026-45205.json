@@ -1,0 +1,310 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-9586"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-9586",
+  "cwes": [
+   "CWE-89"
+  ],
+  "dateAdded": "2026-09-02",
+  "dueDate": "2026-09-05",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://sangomakb.atlassian.net/wiki/spaces/Switchvox/pages/1802371073/Switchvox+-+Release+Notes+Version+8.4.0.2+July+14+2026 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-9586",
+  "product": "Switchvox",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Sangoma Switchvox contains a SQL injection vulnerability which allows an unauthenticated remote attacker to execute arbitrary SQL statements against the backend PostgreSQL database using a single crafted request, including database operations and remote code execution.",
+  "vendorProject": "Sangoma",
+  "vulnerabilityName": "Sangoma Switchvox SQL Injection Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-9586\nGHSA-m32j-v93f-gfgc\n",
+  "assigner": "SRA",
+  "baseScore": 9.3,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Jul 17, 2026, 3:57:42 PM",
+  "dateUpdated": "Sep 3, 2026, 3:55:29 AM",
+  "description": "An unauthenticated SQL injection vulnerability exists in Sangoma Switchvox SMB Edition 8.3 (104997). The /pa endpoint processes XML content beginning with <PolycomIPPhone> and directly concatenates the user-controlled PhoneIP value into PostgreSQL queries without sanitization or parameterization. An unauthenticated remote attacker can execute arbitrary SQL statements against the backend PostgreSQL database using a single crafted request, including database operations and remote code execution.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "d312a3c2-8613-363a-818a-3c3adba46a9a",
+    "product": {
+     "name": "Switchvox SMB Edition",
+     "vendor": {
+      "name": "Sangoma"
+     }
+    },
+    "product_version": "8.3 (104997) <8.4.0.2"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "53c9c6a7-a0ce-33f2-a231-1fbd02a3f10f",
+    "vendor": {
+     "name": "Sangoma"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "843c97c3-74a3-3615-9dfe-da7d4df590cf",
+    "vulnerability": {
+     "aliases": "GHSA-m32j-v93f-gfgc\nCVE-2026-9586\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:53:07 AM",
+     "datePublished": "Jul 17, 2026, 6:31:27 PM",
+     "dateUpdated": "Sep 2, 2026, 9:31:49 PM",
+     "description": "An unauthenticated SQL injection vulnerability exists in Sangoma Switchvox SMB Edition 8.3 (104997). The /pa endpoint processes XML content beginning with <PolycomIPPhone> and directly concatenates the user-controlled PhoneIP value into PostgreSQL queries without sanitization or parameterization. An unauthenticated remote attacker can execute arbitrary SQL statements against the backend PostgreSQL database using a single crafted request, including database operations and remote code execution.",
+     "enisa_id": "EUVD-2026-45205\n",
+     "epss": 0.0,
+     "id": "GHSA-m32j-v93f-gfgc",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-9586\nhttps://horizon3.ai/attack-research/disclosures/cve-2026-9586-sangoma-switchvox-rce/#\nhttps://labs.sra.io/posts/switchvox\nhttps://sangomakb.atlassian.net/wiki/spaces/Switchvox/pages/1802371073/Switchvox+-+Release+Notes+Version+8.4.0.2+July+14+2026\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-9586\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "b8484a7a-66d6-34b2-b4ad-2bd7832c2811",
+    "vulnerability": {
+     "assigner": "SRA",
+     "baseScore": 9.3,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 4, 2026, 3:35:19 AM",
+     "datePublished": "Jul 17, 2026, 3:57:42 PM",
+     "dateUpdated": "Sep 3, 2026, 3:55:29 AM",
+     "description": "An unauthenticated SQL injection vulnerability exists in Sangoma Switchvox SMB Edition 8.3 (104997). The /pa endpoint processes XML content beginning with <PolycomIPPhone> and directly concatenates the user-controlled PhoneIP value into PostgreSQL queries without sanitization or parameterization. An unauthenticated remote attacker can execute arbitrary SQL statements against the backend PostgreSQL database using a single crafted request, including database operations and remote code execution.",
+     "enisa_id": "EUVD-2026-45205\n",
+     "epss": 18.98,
+     "exploitedSince": "Sep 2, 2026, 12:00:00 AM",
+     "id": "CVE-2026-9586",
+     "references": "https://sangomakb.atlassian.net/wiki/spaces/Switchvox/pages/1802371073/Switchvox+-+Release+Notes+Version+8.4.0.2+July+14+2026\nhttps://labs.sra.io/posts/switchvox/\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "8b14e3c3-7efa-3aa3-b2ef-510558721b02",
+       "product": {
+        "name": "Switchvox SMB Edition",
+        "vendor": {
+         "name": "Sangoma"
+        }
+       },
+       "product_version": "8.3 (104997) <8.4.0.2"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "9dbe87ca-c40b-30e3-919d-d3e0009f4f34",
+       "vendor": {
+        "name": "Sangoma"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "6797a028-ad45-3c40-bcdc-1faf52a7eaa9",
+  "epss": 18.98,
+  "exploitedSince": "Sep 2, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-45205",
+  "references": "https://sangomakb.atlassian.net/wiki/spaces/Switchvox/pages/1802371073/Switchvox+-+Release+Notes+Version+8.4.0.2+July+14+2026\nhttps://labs.sra.io/posts/switchvox/\n"
+ },
+ "id": "EUVD-2026-45205",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "Switchvox SMB Edition",
+      "vendor": "Sangoma",
+      "versions": [
+       {
+        "lessThan": "8.4.0.2",
+        "status": "affected",
+        "version": "8.3 (104997)",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "57dba5dd-1a03-47f6-8b36-e84e47d335d8"
+   }
+  ],
+  "cisaActionDue": "2026-09-05",
+  "cisaExploitAdd": "2026-09-02",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Sangoma Switchvox SQL Injection Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:sangoma:switchvox:*:*:*:*:on-premises:*:*:*",
+        "matchCriteriaId": "A9E8D249-C33B-4FC1-8EF2-3FD26AA15547",
+        "versionEndExcluding": "8.4.0.2",
+        "versionStartIncluding": "8.2.2.1",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "An unauthenticated SQL injection vulnerability exists in Sangoma Switchvox SMB Edition 8.3 (104997). The /pa endpoint processes XML content beginning with <PolycomIPPhone> and directly concatenates the user-controlled PhoneIP value into PostgreSQL queries without sanitization or parameterization. An unauthenticated remote attacker can execute arbitrary SQL statements against the backend PostgreSQL database using a single crafted request, including database operations and remote code execution."
+   }
+  ],
+  "id": "CVE-2026-9586",
+  "lastModified": "2026-09-03T13:06:25.427",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.3,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "57dba5dd-1a03-47f6-8b36-e84e47d335d8",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-9586",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-01T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-07-17T17:17:18.150",
+  "references": [
+   {
+    "source": "57dba5dd-1a03-47f6-8b36-e84e47d335d8",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://labs.sra.io/posts/switchvox/"
+   },
+   {
+    "source": "57dba5dd-1a03-47f6-8b36-e84e47d335d8",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://sangomakb.atlassian.net/wiki/spaces/Switchvox/pages/1802371073/Switchvox+-+Release+Notes+Version+8.4.0.2+July+14+2026"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://horizon3.ai/attack-research/disclosures/cve-2026-9586-sangoma-switchvox-rce/#"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory",
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-9586"
+   }
+  ],
+  "sourceIdentifier": "57dba5dd-1a03-47f6-8b36-e84e47d335d8",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-89"
+     }
+    ],
+    "source": "57dba5dd-1a03-47f6-8b36-e84e47d335d8",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

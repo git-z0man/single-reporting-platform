@@ -26,7 +26,7 @@ and the [current reachability status](https://git-z0man.github.io/single-reporti
 
 ## The tracking archive
 
-Five baselines, each with a dated change log recording what moved and when.
+Six baselines, each with a dated change log recording what moved and when.
 Every one reproduces its source verbatim — including typos and internal
 inconsistencies, which are noted rather than corrected, because a baseline that
 quietly tidies its source cannot be diffed against it.
@@ -38,7 +38,7 @@ quietly tidies its source cannot be diffed against it.
 | [`commission-cra-faq-baseline.md`](commission-cra-faq-baseline.md) | The Commission's *FAQs on the CRA*, a versioned 66-page document (now v1.4) | Four versions archived verbatim under [`commission-faq/`](commission-faq/), with side-by-side diffs |
 | [`srp-domains-baseline.md`](srp-domains-baseline.md) | The production DNS zone `cra-srp.enisa.europa.eu` — 29 hosts | Country → CSIRT mapping verified against ENISA's official list; reachability history under [`srp-domains/`](srp-domains/) |
 | [`notified-bodies-baseline.md`](notified-bodies-baseline.md) | Conformity assessment bodies notified under the CRA | **Still zero**, on every working day since 21 June 2026 — 65 checks. Machine state under [`notified-bodies/`](notified-bodies/) |
-| [`euvd-exploited.md`](euvd-exploited.md) | Actively exploited vulnerabilities in the EU Vulnerability Database since 1 September 2026, 49 entries, with the monthly count | A snapshot, not a monitored baseline. It does **not** show which entry was the first reported through the SRP; the EUVD records no reporting route. Data and script under [`euvd/`](euvd/) |
+| [`euvd-exploited-baseline.md`](euvd-exploited-baseline.md) | Actively exploited vulnerabilities in the EU Vulnerability Database since 1 September 2026, with everything the EUVD, NIST NVD, the CISA KEV catalogue and CERTs publish about each ([read it here](euvd/index.html)) | It does **not** show which entry was the first reported through the SRP: no source records the reporting route, and the list largely follows CISA's catalogue. Data under [`euvd/`](euvd/) |
 | [`enisa-defect-report.md`](enisa-defect-report.md) | Errors, contradictions and gaps found in ENISA's own SRP pages, written to be handed to ENISA | 37 findings, tracked: within a day ENISA fixed 15, partly addressed 6, 16 open (re-checked 10 September 2026 against the pages, the new AR User Manual and ENISA's own confirmation) |
 
 ### Things in here you may not find elsewhere
@@ -85,6 +85,7 @@ something moves. Their prompts, schedules and output paths are mirrored in
 | ENISA SRP pages | hourly until 14 Sep, then weekly | the two ENISA baselines |
 | Commission CRA FAQ | weekly | the Commission baseline and archive |
 | SRP domain reachability | hourly until launch, then daily | the domain baseline and its logs |
+| EUVD exploited vulnerabilities | daily | the EUVD baseline, its records and page |
 | CRA notified bodies | weekdays | the notified-bodies baseline and its state |
 
 Each baseline records `last_check` (when it was last verified) and
