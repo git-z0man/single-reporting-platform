@@ -1,0 +1,368 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-83548"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-83548",
+  "cwes": [
+   "CWE-918",
+   "CWE-441"
+  ],
+  "dateAdded": "2026-09-02",
+  "dueDate": "2026-09-05",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0016 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-83548",
+  "product": "SMA1000 Appliances",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "SonicWall SMA1000 Appliances contains a server-side request forgery vulnerability that could allow a remote unauthenticated attacker to gain unauthorized access to sensitive functionality and perform unauthorized operations.",
+  "vendorProject": "SonicWall",
+  "vulnerabilityName": "SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-83548\nGHSA-ghw2-cfh2-xvgc\n",
+  "assigner": "sonicwall",
+  "baseScore": 10.0,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 1, 2026, 9:25:45 PM",
+  "dateUpdated": "Sep 3, 2026, 3:55:31 AM",
+  "description": "A Pre-authentication SSRF vulnerability exists in the SMA1000 Appliance Work Place interface due to an unintended alternate access path. A remote unauthenticated attacker could potentially exploit this vulnerability to gain unauthorized access to sensitive functionality and perform unauthorized operations.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "59c17cf5-7684-3641-a2f5-71f142197a94",
+    "product": {
+     "name": "SMA1000",
+     "vendor": {
+      "name": "SonicWall"
+     }
+    },
+    "product_version": "12.4.3-03453 (platform-hotfix) and older versions"
+   },
+   {
+    "id": "8e76d734-b7c0-3106-a48f-53d063cb875b",
+    "product": {
+     "name": "SMA1000",
+     "vendor": {
+      "name": "SonicWall"
+     }
+    },
+    "product_version": "12.5.0-02835 (platform-hotfix) and older versions"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "5eb706c6-7eb3-3c40-8e3a-fc557c994acb",
+    "vendor": {
+     "name": "SonicWall"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "26f3bb29-a185-3f50-b090-59a9a7c5149c",
+    "vulnerability": {
+     "aliases": "GHSA-ghw2-cfh2-xvgc\nCVE-2026-83548\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:55:42 AM",
+     "datePublished": "Sep 2, 2026, 12:31:29 AM",
+     "dateUpdated": "Sep 2, 2026, 6:32:05 PM",
+     "description": "A Pre-authentication SSRF vulnerability exists in the SMA1000 Appliance Work Place interface due to an unintended alternate access path. A remote unauthenticated attacker could potentially exploit this vulnerability to gain unauthorized access to sensitive functionality and perform unauthorized operations.",
+     "enisa_id": "EUVD-2026-69704\n",
+     "epss": 0.0,
+     "id": "GHSA-ghw2-cfh2-xvgc",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-83548\nhttps://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0016\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-83548\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "ce649f08-9784-3101-b983-16afcb550037",
+    "vulnerability": {
+     "assigner": "sonicwall",
+     "baseScore": 10.0,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:34:10 AM",
+     "datePublished": "Sep 1, 2026, 9:25:45 PM",
+     "dateUpdated": "Sep 3, 2026, 3:55:31 AM",
+     "description": "A Pre-authentication SSRF vulnerability exists in the SMA1000 Appliance Work Place interface due to an unintended alternate access path. A remote unauthenticated attacker could potentially exploit this vulnerability to gain unauthorized access to sensitive functionality and perform unauthorized operations.",
+     "enisa_id": "EUVD-2026-69704\n",
+     "epss": 8.76,
+     "exploitedSince": "Sep 2, 2026, 12:00:00 AM",
+     "id": "CVE-2026-83548",
+     "references": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0016\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "b1334392-5f1e-3643-a1d3-757f7e928025",
+       "product": {
+        "name": "SMA1000",
+        "vendor": {
+         "name": "SonicWall"
+        }
+       },
+       "product_version": "12.5.0-02835 (platform-hotfix) and older versions"
+      },
+      {
+       "id": "b9984564-48a4-334f-b56c-a9793e6fcad8",
+       "product": {
+        "name": "SMA1000",
+        "vendor": {
+         "name": "SonicWall"
+        }
+       },
+       "product_version": "12.4.3-03453 (platform-hotfix) and older versions"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "e532219d-dca2-3eec-8511-3c173c754ea5",
+       "vendor": {
+        "name": "SonicWall"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "9006d56d-d50f-3407-9174-4e099346614e",
+  "epss": 8.76,
+  "exploitedSince": "Sep 2, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-69704",
+  "references": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0016\n"
+ },
+ "id": "EUVD-2026-69704",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "platforms": [
+       "Linux"
+      ],
+      "product": "SMA1000",
+      "vendor": "SonicWall",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "12.4.3-03453 (platform-hotfix) and older versions"
+       },
+       {
+        "status": "affected",
+        "version": "12.5.0-02835 (platform-hotfix) and older versions"
+       }
+      ]
+     }
+    ],
+    "source": "PSIRT@sonicwall.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-05",
+  "cisaExploitAdd": "2026-09-02",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:sonicwall:sma8200v:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F160BF49-63F6-4458-AA1B-9D46AF320741",
+        "versionEndExcluding": "12.4.3-03526",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:sonicwall:sma8200v:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "51E4FB42-435D-41F7-AF37-8235E3478CB5",
+        "versionEndExcluding": "12.5.0-02952",
+        "versionStartIncluding": "12.5.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:sonicwall:sma8200v:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "653B5F4D-7417-4A85-B385-46157A1540A6",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "796684A5-0639-4D62-8C3B-7E330F200964",
+        "versionEndExcluding": "12.4.3-03526",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "22DA8C27-F1AF-4136-AB59-4E03350B68AD",
+        "versionEndExcluding": "12.5.0-02952",
+        "versionStartIncluding": "12.5.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:sonicwall:sma6210:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7B24D300-1154-49A1-A1F3-FB0CC717166A",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "70103B37-D895-4F07-B927-7CD4DE85DB9C",
+        "versionEndExcluding": "12.4.3-03526",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "ACADD37E-AEE1-4B8A-9D49-5AB22D53C393",
+        "versionEndExcluding": "12.5.0-02952",
+        "versionStartIncluding": "12.5.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:sonicwall:sma7210:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "E9B414C5-C376-4216-A267-ABC0930905CE",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A Pre-authentication SSRF vulnerability exists in the SMA1000 Appliance Work Place interface due to an unintended alternate access path. A remote unauthenticated attacker could potentially exploit this vulnerability to gain unauthorized access to sensitive functionality and perform unauthorized operations."
+   }
+  ],
+  "id": "CVE-2026-83548",
+  "lastModified": "2026-09-03T13:06:16.053",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 10.0,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 6.0,
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-83548",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-01T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-01T22:17:13.170",
+  "references": [
+   {
+    "source": "PSIRT@sonicwall.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0016"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-83548"
+   }
+  ],
+  "sourceIdentifier": "PSIRT@sonicwall.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-441"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-918"
+     }
+    ],
+    "source": "PSIRT@sonicwall.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

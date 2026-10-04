@@ -1,0 +1,389 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-94127"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-94127",
+  "cwes": [
+   "CWE-122"
+  ],
+  "dateAdded": "2026-09-22",
+  "dueDate": "2026-09-25",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "For temporary mitigation to allow for proactive forensic triage, apply the vendor-provided iRule. Once completed, install the final vendor patch as soon as possible. For more information please see: https://my.f5.com/manage/s/article/K000162605 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-94127",
+  "product": "BIG-IP APM",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "F5 BIG-IP APM contains a heap-based buffer overflow vulnerability when access policy and an OAuth profile are configured on a virtual server. This vulnerability could allow an unauthenticated attacker to perform remote code execution.",
+  "vendorProject": "F5",
+  "vulnerabilityName": "F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-94127\nGHSA-qppv-6jrg-hxq4\n",
+  "assigner": "f5",
+  "baseScore": 9.3,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Sep 22, 2026, 2:17:42 PM",
+  "dateUpdated": "Sep 23, 2026, 3:55:44 AM",
+  "description": "When a BIG-IP APM access policy and an OAuth profile are configured on a virtual server, specific malicious traffic can lead to remote code execution (RCE). This vulnerability is only present when BIG-IP APM is configured as an OAuth Authorization Server. Deployments using APM strictly as an OAuth Client / Resource Server (without OAuth authorization server profiles configured) are not affected by this vulnerability.\n\nImpact:\nThis vulnerability allows an unauthenticated attacker to perform remote code execution. The BIG-IP system in Appliance mode is also vulnerable. This is a data plane issue; there is no control plane exposure.\n\n \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "3b3f1fc9-33dd-3870-890b-360f3e200693",
+       "product": {
+        "name": "BIG-IP (APM)",
+        "vendor": {
+         "name": "F5 Networks, Inc."
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-94127\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 22, 2026, 2:39:41 PM",
+     "dateUpdated": "Sep 23, 2026, 1:41:38 PM",
+     "description": "Kwetsbaarheid verholpen in F5 Networks BIG-IP Access Policy Manager",
+     "id": "NCSC-2026-0386",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "b3cdb7c5-8ff2-338e-9002-62bf36e88c29"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "07ac10c6-a9ce-3604-86c1-d0a21f00ec0d",
+    "product": {
+     "name": "BIG-IP",
+     "vendor": {
+      "name": "F5"
+     }
+    },
+    "product_version": "17.5.0 <Hotfix-BIGIP-17.5.1.9.0.160.12-ENG"
+   },
+   {
+    "id": "c9e062fd-a39e-3b77-aaaa-4ca64dc64ae7",
+    "product": {
+     "name": "BIG-IP",
+     "vendor": {
+      "name": "F5"
+     }
+    },
+    "product_version": "17.1.0 <Hotfix-BIGIP-17.1.3.5.0.41.14-ENG"
+   },
+   {
+    "id": "fd65a91e-c4ce-35dc-9cd2-eaa1f0f99ed4",
+    "product": {
+     "name": "BIG-IP",
+     "vendor": {
+      "name": "F5"
+     }
+    },
+    "product_version": "21.1.0 <Hotfix-BIGIP-21.1.0.2.0.30.22-ENG"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "b42038ce-4d4d-3900-8da2-9d9ccead5d8a",
+    "vendor": {
+     "name": "F5"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "04016595-23e4-321c-ad5e-823fca8c7e42",
+    "vulnerability": {
+     "assigner": "f5",
+     "baseScore": 9.3,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 4, 2026, 3:38:39 AM",
+     "datePublished": "Sep 22, 2026, 2:17:42 PM",
+     "dateUpdated": "Sep 23, 2026, 3:55:44 AM",
+     "description": "When a BIG-IP APM access policy and an OAuth profile are configured on a virtual server, specific malicious traffic can lead to remote code execution (RCE). This vulnerability is only present when BIG-IP APM is configured as an OAuth Authorization Server. Deployments using APM strictly as an OAuth Client / Resource Server (without OAuth authorization server profiles configured) are not affected by this vulnerability.\n\nImpact:\nThis vulnerability allows an unauthenticated attacker to perform remote code execution. The BIG-IP system in Appliance mode is also vulnerable. This is a data plane issue; there is no control plane exposure.\n\n \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+     "enisa_id": "EUVD-2026-84427\n",
+     "epss": 2.23,
+     "exploitedSince": "Sep 22, 2026, 12:00:00 AM",
+     "id": "CVE-2026-94127",
+     "references": "https://my.f5.com/manage/s/article/K000162605\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "724b4876-97e1-31fe-9c9b-f0b950926e66",
+       "product": {
+        "name": "BIG-IP",
+        "vendor": {
+         "name": "F5"
+        }
+       },
+       "product_version": "17.5.0 <Hotfix-BIGIP-17.5.1.9.0.160.12-ENG"
+      },
+      {
+       "id": "8f4e39e8-05e4-364e-94d0-10f078b4c80c",
+       "product": {
+        "name": "BIG-IP",
+        "vendor": {
+         "name": "F5"
+        }
+       },
+       "product_version": "21.1.0 <Hotfix-BIGIP-21.1.0.2.0.30.22-ENG"
+      },
+      {
+       "id": "a32ba29b-525d-35a4-afde-53c825c8d77b",
+       "product": {
+        "name": "BIG-IP",
+        "vendor": {
+         "name": "F5"
+        }
+       },
+       "product_version": "17.1.0 <Hotfix-BIGIP-17.1.3.5.0.41.14-ENG"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "38e7b74b-066c-311b-a6dd-317beba48b7d",
+       "vendor": {
+        "name": "F5"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "d46d3e53-9314-33d6-af20-c6d0adb9cabc",
+    "vulnerability": {
+     "aliases": "GHSA-qppv-6jrg-hxq4\nCVE-2026-94127\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:56:56 AM",
+     "datePublished": "Sep 22, 2026, 3:32:41 PM",
+     "dateUpdated": "Sep 22, 2026, 9:31:17 PM",
+     "description": "When a BIG-IP APM access policy and an OAuth profile is configured on a virtual server, specific malicious traffic can lead to Remote Code Execution (RCE).\n\nImpact:\nThis vulnerability allows an unauthenticated attacker to perform remote code execution. The BIG-IP system in Appliance mode is also vulnerable. This is a data plane issue; there is no control plane exposure.\n\n \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+     "enisa_id": "EUVD-2026-84427\n",
+     "epss": 0.0,
+     "id": "GHSA-qppv-6jrg-hxq4",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-94127\nhttps://my.f5.com/manage/s/article/K000162605\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-94127\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "8ce26194-5a43-37c8-a5fe-fc185e068b86",
+  "epss": 2.23,
+  "exploitedSince": "Sep 22, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-84427",
+  "references": "https://my.f5.com/manage/s/article/K000162605\n"
+ },
+ "id": "EUVD-2026-84427",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "modules": [
+       "APM"
+      ],
+      "product": "BIG-IP",
+      "vendor": "F5",
+      "versions": [
+       {
+        "lessThan": "Hotfix-BIGIP-21.1.0.2.0.30.22-ENG",
+        "status": "affected",
+        "version": "21.1.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "Hotfix-BIGIP-17.5.1.9.0.160.12-ENG",
+        "status": "affected",
+        "version": "17.5.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "Hotfix-BIGIP-17.1.3.5.0.41.14-ENG",
+        "status": "affected",
+        "version": "17.1.0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "f5sirt@f5.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-25",
+  "cisaExploitAdd": "2026-09-22",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "E2AC01C3-F47E-4F42-A4EB-90DE63C834CC",
+        "versionEndIncluding": "17.1.3",
+        "versionStartIncluding": "17.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "BD71EC53-8ABC-410F-B031-0B3288D2E8DF",
+        "versionEndIncluding": "17.5.1",
+        "versionStartIncluding": "17.5.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:21.1.0:*:*:*:*:*:*:*",
+        "matchCriteriaId": "8D26D424-54C1-4B2C-BBB8-C79E925BED7F",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "When a BIG-IP APM access policy and an OAuth profile are configured on a virtual server, specific malicious traffic can lead to remote code execution (RCE). This vulnerability is only present when BIG-IP APM is configured as an OAuth Authorization Server. Deployments using APM strictly as an OAuth Client / Resource Server (without OAuth authorization server profiles configured) are not affected by this vulnerability.\n\nImpact:\nThis vulnerability allows an unauthenticated attacker to perform remote code execution. The BIG-IP system in Appliance mode is also vulnerable. This is a data plane issue; there is no control plane exposure.\n\n \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated."
+   }
+  ],
+  "id": "CVE-2026-94127",
+  "lastModified": "2026-09-23T14:32:07.910",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "f5sirt@f5.com",
+     "type": "Secondary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.3,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "f5sirt@f5.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-94127",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-22T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-22T15:17:24.313",
+  "references": [
+   {
+    "source": "f5sirt@f5.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://my.f5.com/manage/s/article/K000162605"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-94127"
+   }
+  ],
+  "sourceIdentifier": "f5sirt@f5.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-122"
+     }
+    ],
+    "source": "f5sirt@f5.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

@@ -1,0 +1,406 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490"
+  ],
+  [
+   "DIVD CSIRT",
+   "https://csirt.divd.nl/CVE-2026-102490"
+  ],
+  [
+   "DIVD CSIRT",
+   "https://csirt.divd.nl/DIVD-2026-00015"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-102490",
+  "cwes": [
+   "CWE-269"
+  ],
+  "dateAdded": "2026-10-02",
+  "dueDate": "2026-10-05",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://zammad.com/en/product/releases/ ; https://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
+  "product": "Zammad",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.",
+  "vendorProject": "Zammad GmbH",
+  "vulnerabilityName": "Zammad GmbH Zammad Improper Privilege Management Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-102490\nGHSA-hgff-g8g3-4xr8\n",
+  "assigner": "DIVD",
+  "baseScore": 8.5,
+  "baseScoreVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/AU:Y/V:D",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Sep 30, 2026, 4:21:20 PM",
+  "dateUpdated": "Oct 3, 2026, 3:55:35 AM",
+  "description": "All versions of Zammad including the latest alpha enable the local zammad user to escalate privileges to root.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "71f0dc96-f5e7-3d84-807f-45caa8120a07",
+       "product": {
+        "name": "Zammad",
+        "vendor": {
+         "name": "Zammad"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-102489\nCVE-2026-102490\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 30, 2026, 5:31:14 PM",
+     "dateUpdated": "Sep 30, 2026, 5:31:14 PM",
+     "description": "Kwetsbaarheden aangetroffen in Zammad",
+     "id": "NCSC-2026-0396",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "52bd9965-67a6-36de-9b9a-562bc0afd28e"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "1794554b-652c-31e8-b784-aa50ce6bab8b",
+       "product": {
+        "name": "Zammad",
+        "vendor": {
+         "name": "Zammad"
+        }
+       }
+      },
+      {
+       "id": "8882366e-f226-32fd-a209-cf190e486f71",
+       "product": {
+        "name": "7.1.0-alpha",
+        "vendor": {
+         "name": "Zammad"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-102489\nCVE-2026-102490\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 30, 2026, 10:00:00 PM",
+     "dateUpdated": "Oct 1, 2026, 10:00:00 PM",
+     "description": "Zammad: Mehrere Schwachstellen ermöglichen Ausführen von beliebigem Programmcode und Privilegieneskalation",
+     "id": "WID-SEC-W-2026-3694",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-3694.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3694\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Zammad ausnutzen, um beliebigen Programmcode mit Benutzerrechten auszuführen und um Root-Rechte zu erlangen."
+    },
+    "id": "5659c7fe-0042-36d0-9bef-e062e30a85d6"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "2a748e34-1d85-3052-bdd7-fee6d5aabacb",
+    "product": {
+     "name": "Zammad",
+     "vendor": {
+      "name": "Zammad"
+     }
+    },
+    "product_version": "1.5.0 <7.1.0-alpha"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "f9160bb6-a6a1-3674-91c0-edfb575e715d",
+    "vendor": {
+     "name": "Zammad GmbH"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "0f3691f8-5c27-3b4e-b0a8-2eef8024aa52",
+    "vulnerability": {
+     "assigner": "DIVD",
+     "baseScore": 8.5,
+     "baseScoreVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/AU:Y/V:D",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 4, 2026, 5:00:12 AM",
+     "datePublished": "Sep 30, 2026, 4:21:20 PM",
+     "dateUpdated": "Oct 3, 2026, 3:55:35 AM",
+     "description": "All versions of Zammad including the latest alpha enable the local zammad user to escalate privileges to root.",
+     "enisa_id": "EUVD-2026-90081\n",
+     "epss": 0.63,
+     "exploitedSince": "Sep 30, 2026, 12:00:00 AM",
+     "id": "CVE-2026-102490",
+     "references": "https://csirt.divd.nl/DIVD-2026-00015\nhttps://csirt.divd.nl/CVE-2026-102490\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "0bc2afa1-6028-36c7-9f19-e3492f15c536",
+       "product": {
+        "name": "Zammad",
+        "vendor": {
+         "name": "Zammad"
+        }
+       },
+       "product_version": "1.5.0 <7.1.0-alpha"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "0767fa7d-25d3-3649-942c-10f1217e08cb",
+       "vendor": {
+        "name": "Zammad GmbH"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "f9d391da-99e3-3561-8dfc-9dbf2152798a",
+    "vulnerability": {
+     "aliases": "CVE-2026-102490\nGHSA-hgff-g8g3-4xr8\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 5:00:25 AM",
+     "datePublished": "Sep 30, 2026, 6:33:49 PM",
+     "dateUpdated": "Oct 2, 2026, 6:31:16 PM",
+     "description": "All versions of Zammad including the latest alpha enable the local zammad user to escalate privileges to root.",
+     "enisa_id": "EUVD-2026-90081\n",
+     "epss": 0.0,
+     "id": "GHSA-hgff-g8g3-4xr8",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490\nhttps://csirt.divd.nl/CVE-2026-102490\nhttps://csirt.divd.nl/DIVD-2026-00015\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "b67a9c3a-76ff-3bf3-9cc7-0601c9af037d",
+  "epss": 0.63,
+  "exploitedSince": "Sep 30, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-90081",
+  "references": "https://csirt.divd.nl/DIVD-2026-00015\nhttps://csirt.divd.nl/CVE-2026-102490\n"
+ },
+ "id": "EUVD-2026-90081",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "platforms": [
+       "Linux",
+       "Docker"
+      ],
+      "product": "Zammad",
+      "vendor": "Zammad GmbH",
+      "versions": [
+       {
+        "lessThan": "7.1.0-alpha",
+        "status": "affected",
+        "version": "1.5.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "1.5.0",
+        "status": "unknown",
+        "version": "*",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "csirt@divd.nl"
+   }
+  ],
+  "cisaActionDue": "2026-10-05",
+  "cisaExploitAdd": "2026-10-02",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:zammad:zammad:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F35B8C68-B265-4574-BEF5-51FC1CB4DF77",
+        "versionEndExcluding": "7.1.0",
+        "versionStartIncluding": "1.5.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:zammad:zammad:7.1.0:alpha:*:*:*:*:*:*",
+        "matchCriteriaId": "4DD0F01F-638A-4E1E-A53A-F38EF44D196B",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:docker:docker:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "231A8A55-A319-4878-91DA-4FD91CF0549E",
+        "vulnerable": false
+       },
+       {
+        "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "All versions of Zammad including the latest alpha enable the local zammad user to escalate privileges to root."
+   }
+  ],
+  "id": "CVE-2026-102490",
+  "lastModified": "2026-10-03T04:18:00.460",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "YES",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.4,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "ATTACKED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "HIGH",
+      "subConfidentialityImpact": "HIGH",
+      "subIntegrityImpact": "HIGH",
+      "userInteraction": "PASSIVE",
+      "valueDensity": "CONCENTRATED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:C/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "csirt@divd.nl",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-102490",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-02T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-30T17:16:40.707",
+  "references": [
+   {
+    "source": "csirt@divd.nl",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://csirt.divd.nl/CVE-2026-102490"
+   },
+   {
+    "source": "csirt@divd.nl",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://csirt.divd.nl/DIVD-2026-00015"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490"
+   }
+  ],
+  "sourceIdentifier": "csirt@divd.nl",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-269"
+     }
+    ],
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

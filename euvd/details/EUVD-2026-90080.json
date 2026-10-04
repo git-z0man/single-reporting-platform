@@ -1,0 +1,424 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102489"
+  ],
+  [
+   "DIVD CSIRT",
+   "https://csirt.divd.nl/CVE-2026-102489"
+  ],
+  [
+   "DIVD CSIRT",
+   "https://csirt.divd.nl/DIVD-2026-00015"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-102489",
+  "cwes": [
+   "CWE-384"
+  ],
+  "dateAdded": "2026-10-02",
+  "dueDate": "2026-10-05",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://zammad.com/en/product/releases/ ; https://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102489",
+  "product": "Zammad",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.",
+  "vendorProject": "Zammad GmbH",
+  "vulnerabilityName": "Zammad GmbH Zammad Session Fixation Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-102489\nGHSA-xmw5-m2wg-4243\n",
+  "assigner": "DIVD",
+  "baseScore": 8.7,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:A/AU:Y/V:C",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Sep 30, 2026, 4:21:19 PM",
+  "dateUpdated": "Oct 3, 2026, 3:55:34 AM",
+  "description": "Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The vulnerability is also present in version 7.0.0 to version 7.1.3, but not exploitable due to environment conditions.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "1794554b-652c-31e8-b784-aa50ce6bab8b",
+       "product": {
+        "name": "Zammad",
+        "vendor": {
+         "name": "Zammad"
+        }
+       }
+      },
+      {
+       "id": "8882366e-f226-32fd-a209-cf190e486f71",
+       "product": {
+        "name": "7.1.0-alpha",
+        "vendor": {
+         "name": "Zammad"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-102489\nCVE-2026-102490\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 30, 2026, 10:00:00 PM",
+     "dateUpdated": "Oct 1, 2026, 10:00:00 PM",
+     "description": "Zammad: Mehrere Schwachstellen ermöglichen Ausführen von beliebigem Programmcode und Privilegieneskalation",
+     "id": "WID-SEC-W-2026-3694",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-3694.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3694\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Zammad ausnutzen, um beliebigen Programmcode mit Benutzerrechten auszuführen und um Root-Rechte zu erlangen."
+    },
+    "id": "03086b96-ef5f-3ed2-a65b-de0d5c72e015"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "71f0dc96-f5e7-3d84-807f-45caa8120a07",
+       "product": {
+        "name": "Zammad",
+        "vendor": {
+         "name": "Zammad"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-102489\nCVE-2026-102490\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 30, 2026, 5:31:14 PM",
+     "dateUpdated": "Sep 30, 2026, 5:31:14 PM",
+     "description": "Kwetsbaarheden aangetroffen in Zammad",
+     "id": "NCSC-2026-0396",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "27085cb3-dfe4-3dc1-bf0c-82320495c35a"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "a82e1727-5df9-37f1-9229-54e3e8d61291",
+    "product": {
+     "name": "Zammad",
+     "vendor": {
+      "name": "Zammad"
+     }
+    },
+    "product_version": "6.3.0 <6.5.4"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "d58063c9-5a7a-38b4-b8ee-0932ef4579b0",
+    "vendor": {
+     "name": "Zammad GmbH"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "a067a813-18cb-3d75-b2ca-ce39edbb3f7f",
+    "vulnerability": {
+     "aliases": "CVE-2026-102489\nGHSA-xmw5-m2wg-4243\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 5:00:25 AM",
+     "datePublished": "Sep 30, 2026, 6:33:49 PM",
+     "dateUpdated": "Oct 2, 2026, 6:31:16 PM",
+     "description": "Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The vulnerability is also present in version 7.0.0 to version 7.1.3, but not exploitable due to environment conditions.",
+     "enisa_id": "EUVD-2026-90080\n",
+     "epss": 0.0,
+     "id": "GHSA-xmw5-m2wg-4243",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-102489\nhttps://csirt.divd.nl/CVE-2026-102489\nhttps://csirt.divd.nl/DIVD-2026-00015\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102489\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "b0c5cc7c-99c2-329b-b1c8-447a77fa67cc",
+    "vulnerability": {
+     "assigner": "DIVD",
+     "baseScore": 8.7,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:A/AU:Y/V:C",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 4, 2026, 5:00:12 AM",
+     "datePublished": "Sep 30, 2026, 4:21:19 PM",
+     "dateUpdated": "Oct 3, 2026, 3:55:34 AM",
+     "description": "Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The vulnerability is also present in version 7.0.0 to version 7.1.3, but not exploitable due to environment conditions.",
+     "enisa_id": "EUVD-2026-90080\n",
+     "epss": 1.4,
+     "exploitedSince": "Sep 30, 2026, 12:00:00 AM",
+     "id": "CVE-2026-102489",
+     "references": "https://csirt.divd.nl/DIVD-2026-00015\nhttps://csirt.divd.nl/CVE-2026-102489\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "aa0f2536-ecc4-31bc-9877-4f1ac648c41d",
+       "product": {
+        "name": "Zammad",
+        "vendor": {
+         "name": "Zammad"
+        }
+       },
+       "product_version": "6.3.0 <6.5.4"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "2d919af2-4b5b-32bb-b4be-53d583f73d96",
+       "vendor": {
+        "name": "Zammad GmbH"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "83eaa575-6c91-3e63-8069-5b20669a6718",
+  "epss": 1.4,
+  "exploitedSince": "Sep 30, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-90080",
+  "references": "https://csirt.divd.nl/DIVD-2026-00015\nhttps://csirt.divd.nl/CVE-2026-102489\n"
+ },
+ "id": "EUVD-2026-90080",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "platforms": [
+       "Linux",
+       "Docker"
+      ],
+      "product": "Zammad",
+      "vendor": "Zammad GmbH",
+      "versions": [
+       {
+        "lessThan": "6.3.0",
+        "status": "unknown",
+        "version": "*",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "6.5.4",
+        "status": "affected",
+        "version": "6.3.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "7.0.0",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "csirt@divd.nl"
+   }
+  ],
+  "cisaActionDue": "2026-10-05",
+  "cisaExploitAdd": "2026-10-02",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Zammad GmbH Zammad Session Fixation Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:zammad:zammad:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "E9D8A954-62EA-4646-AB84-2A5080544473",
+        "versionEndExcluding": "6.5.4",
+        "versionStartIncluding": "6.3.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:zammad:zammad:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F0888647-88A1-4B74-B55D-AB0AFDCEAF22",
+        "versionEndIncluding": "7.1.3",
+        "versionStartIncluding": "7.0.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:docker:docker:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "231A8A55-A319-4878-91DA-4FD91CF0549E",
+        "vulnerable": false
+       },
+       {
+        "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The vulnerability is also present in version 7.0.0 to version 7.1.3, but not exploitable due to environment conditions."
+   }
+  ],
+  "id": "CVE-2026-102489",
+  "lastModified": "2026-10-03T04:17:56.693",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "YES",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.4,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "ATTACKED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "HIGH",
+      "subConfidentialityImpact": "HIGH",
+      "subIntegrityImpact": "HIGH",
+      "userInteraction": "PASSIVE",
+      "valueDensity": "CONCENTRATED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:C/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "csirt@divd.nl",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-102489",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-02T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-30T17:16:40.550",
+  "references": [
+   {
+    "source": "csirt@divd.nl",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://csirt.divd.nl/CVE-2026-102489"
+   },
+   {
+    "source": "csirt@divd.nl",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://csirt.divd.nl/DIVD-2026-00015"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102489"
+   }
+  ],
+  "sourceIdentifier": "csirt@divd.nl",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-384"
+     }
+    ],
+    "source": "nvd@nist.gov",
+    "type": "Primary"
+   },
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-384"
+     }
+    ],
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

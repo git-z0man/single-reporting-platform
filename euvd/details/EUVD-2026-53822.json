@@ -1,0 +1,840 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-5430"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-5430",
+  "cwes": [
+   "CWE-347"
+  ],
+  "dateAdded": "2026-09-24",
+  "dueDate": "2026-09-27",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5328/ ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-5430",
+  "product": "Multiple Products",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution. ",
+  "vendorProject": "WSO2",
+  "vulnerabilityName": "WSO2 Multiple Products Path Traversal Vulnerability "
+ },
+ "euvd": {
+  "aliases": "CVE-2026-5430\nGHSA-j7vh-5w8q-4m4x\n",
+  "assigner": "WSO2",
+  "baseScore": 10.0,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Aug 6, 2026, 7:33:28 AM",
+  "dateUpdated": "Sep 25, 2026, 3:55:16 AM",
+  "description": "The JWT authentication mechanism accepts tokens signed with algorithms other than those explicitly configured or supported. This allows an attacker to craft a JWT with an unsupported algorithm, which is then incorrectly validated, leading to unauthorized access.\n\nSuccessful exploitation of this vulnerability may result in unauthorized access to the system, including the potential compromise of administrative accounts and full account takeover. The CVSS score is adjusted to 9.8 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H) in single-tenant deployments, reflecting that the impact is contained within a single security authority boundary.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "04d3541d-b211-32cf-8521-3925de30dffe",
+    "product": {
+     "name": "WSO2 Carbon API Manager Rest API Utility",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "9.30.67 <9.30.67.167"
+   },
+   {
+    "id": "04feccc8-173c-3f6d-8f28-289e47771f9c",
+    "product": {
+     "name": "WSO2 API Manager",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.1.0 <4.1.0.257"
+   },
+   {
+    "id": "0844c9b3-2675-34b8-9b31-39bbae6702d2",
+    "product": {
+     "name": "WSO2 Carbon API Manager Rest API Utility",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "9.32.147 <9.32.147.59"
+   },
+   {
+    "id": "0be9b841-7cdf-36cf-acb7-f53ca4365f5e",
+    "product": {
+     "name": "WSO2 Carbon API Manager Rest API Utility",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "9.29.120 <9.29.120.236"
+   },
+   {
+    "id": "10b3c98d-aa63-3d5f-bdbc-1dbf504fbde5",
+    "product": {
+     "name": "WSO2 API Control Plane",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.5.0 <4.5.0.58"
+   },
+   {
+    "id": "23711caf-f850-3883-bcbb-a06bca5e958a",
+    "product": {
+     "name": "WSO2 API Manager",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.2.0 <4.2.0.197"
+   },
+   {
+    "id": "3008d39d-6051-3ea5-89f8-8c5ed6bbd2ad",
+    "product": {
+     "name": "WSO2 API Manager",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.3.0 <4.3.0.108"
+   },
+   {
+    "id": "4116f3e0-639a-3726-97fa-a6147636a39e",
+    "product": {
+     "name": "WSO2 Carbon API Manager Rest API Utility",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "9.31.86 <9.31.86.158"
+   },
+   {
+    "id": "4947bb16-54f0-3696-967e-1512d3391948",
+    "product": {
+     "name": "WSO2 Carbon API Manager Rest API Utility",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "9.20.74 <9.20.74.401"
+   },
+   {
+    "id": "6530bfbb-98ba-3714-a351-5998da9dfc3f",
+    "product": {
+     "name": "WSO2 Universal Gateway",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.5.0 <4.5.0.57"
+   },
+   {
+    "id": "69ec0861-a297-3566-9f25-b52c326ec936",
+    "product": {
+     "name": "WSO2 Universal Gateway",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.6.0 <4.6.0.21"
+   },
+   {
+    "id": "777eb7b4-0297-361b-b910-82e6e88effa8",
+    "product": {
+     "name": "WSO2 API Manager",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.5.0 <4.5.0.57"
+   },
+   {
+    "id": "7a6762b8-5ca5-30a4-b5b4-cdccb919d816",
+    "product": {
+     "name": "WSO2 API Control Plane",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.6.0 <4.6.0.22"
+   },
+   {
+    "id": "7d730af5-e391-32ea-89f2-5f6fa57a0c86",
+    "product": {
+     "name": "WSO2 API Manager",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.4.0 <4.4.0.72"
+   },
+   {
+    "id": "d33b991e-cc7b-3c34-802d-6a5515b0bad1",
+    "product": {
+     "name": "WSO2 Traffic Manager",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.5.0 <4.5.0.56"
+   },
+   {
+    "id": "db8b3e05-80b1-33bf-8b48-28daea8cbef5",
+    "product": {
+     "name": "WSO2 Carbon API Manager Rest API Utility",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "9.28.116 <9.28.116.417"
+   },
+   {
+    "id": "e6f78f48-280b-3e8d-890d-6ab8bc757da6",
+    "product": {
+     "name": "WSO2 API Manager",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.6.0 <4.6.0.21"
+   },
+   {
+    "id": "f465ca4e-2abc-34eb-9d0a-1aa4589c631c",
+    "product": {
+     "name": "WSO2 Traffic Manager",
+     "vendor": {
+      "name": "WSO2"
+     }
+    },
+    "product_version": "4.6.0 <4.6.0.21"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "4b214df8-8bed-3880-becf-eeab4f9345c1",
+    "vendor": {
+     "name": "WSO2"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "2d898dfe-5d9c-3d02-8abe-cb100e005ed2",
+    "vulnerability": {
+     "assigner": "WSO2",
+     "baseScore": 10.0,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:32:56 AM",
+     "datePublished": "Aug 6, 2026, 7:33:28 AM",
+     "dateUpdated": "Sep 25, 2026, 3:55:16 AM",
+     "description": "The JWT authentication mechanism accepts tokens signed with algorithms other than those explicitly configured or supported. This allows an attacker to craft a JWT with an unsupported algorithm, which is then incorrectly validated, leading to unauthorized access.\n\nSuccessful exploitation of this vulnerability may result in unauthorized access to the system, including the potential compromise of administrative accounts and full account takeover. The CVSS score is adjusted to 9.8 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H) in single-tenant deployments, reflecting that the impact is contained within a single security authority boundary.",
+     "enisa_id": "EUVD-2026-53822\n",
+     "epss": 0.59,
+     "exploitedSince": "Sep 24, 2026, 12:00:00 AM",
+     "id": "CVE-2026-5430",
+     "references": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5328/\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "19793a40-ee6e-31e4-82fd-8ad33002c57f",
+       "product": {
+        "name": "WSO2 API Manager",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.2.0 <4.2.0.197"
+      },
+      {
+       "id": "26f39482-abaf-3017-8c31-55bf6d585ddb",
+       "product": {
+        "name": "WSO2 Carbon API Manager Rest API Utility",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "9.30.67 <9.30.67.167"
+      },
+      {
+       "id": "3673fe0a-347b-3b1a-bebd-6eee6c27e37a",
+       "product": {
+        "name": "WSO2 Traffic Manager",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.6.0 <4.6.0.21"
+      },
+      {
+       "id": "4137fbe3-7225-30fc-8055-1dee1360c982",
+       "product": {
+        "name": "WSO2 API Manager",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.4.0 <4.4.0.72"
+      },
+      {
+       "id": "4221d511-177d-3f3a-80f2-ad24ca4e5fdb",
+       "product": {
+        "name": "WSO2 API Manager",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.3.0 <4.3.0.108"
+      },
+      {
+       "id": "57449e57-e8ef-3c79-85ba-13ac5851f8f2",
+       "product": {
+        "name": "WSO2 API Manager",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.6.0 <4.6.0.21"
+      },
+      {
+       "id": "5abb9148-1569-39b3-a5b2-22e512fa10df",
+       "product": {
+        "name": "WSO2 Carbon API Manager Rest API Utility",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "9.32.147 <9.32.147.59"
+      },
+      {
+       "id": "694751fd-18c1-3792-89fb-e14cd087b564",
+       "product": {
+        "name": "WSO2 Universal Gateway",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.5.0 <4.5.0.57"
+      },
+      {
+       "id": "77c075ec-6650-3aac-9b21-a47f955c7bf8",
+       "product": {
+        "name": "WSO2 Carbon API Manager Rest API Utility",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "9.28.116 <9.28.116.417"
+      },
+      {
+       "id": "88185605-cfc8-3250-b5ef-f508d3cbac15",
+       "product": {
+        "name": "WSO2 Carbon API Manager Rest API Utility",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "9.29.120 <9.29.120.236"
+      },
+      {
+       "id": "9299c3a4-3275-30bd-879a-78729b1cb2e0",
+       "product": {
+        "name": "WSO2 Universal Gateway",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.6.0 <4.6.0.21"
+      },
+      {
+       "id": "9cde9c7c-c581-3353-8d19-154482bee809",
+       "product": {
+        "name": "WSO2 API Manager",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.5.0 <4.5.0.57"
+      },
+      {
+       "id": "a20bd5ff-b464-3414-be12-d2103135c9c1",
+       "product": {
+        "name": "WSO2 API Manager",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.1.0 <4.1.0.257"
+      },
+      {
+       "id": "bbe7c533-b69a-382d-a943-8dcc3df57a0c",
+       "product": {
+        "name": "WSO2 Carbon API Manager Rest API Utility",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "9.31.86 <9.31.86.158"
+      },
+      {
+       "id": "c6d34066-b01d-3e22-a0ac-2d9e07e2a485",
+       "product": {
+        "name": "WSO2 Carbon API Manager Rest API Utility",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "9.20.74 <9.20.74.401"
+      },
+      {
+       "id": "d9ee64ea-67b3-389d-9a5e-12f6a068ec8e",
+       "product": {
+        "name": "WSO2 API Control Plane",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.6.0 <4.6.0.22"
+      },
+      {
+       "id": "e8dcbd5d-b889-3e7b-912c-ac3a6794f6cc",
+       "product": {
+        "name": "WSO2 Traffic Manager",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.5.0 <4.5.0.56"
+      },
+      {
+       "id": "ff316b09-773c-3f10-96c0-552d0a482fc1",
+       "product": {
+        "name": "WSO2 API Control Plane",
+        "vendor": {
+         "name": "WSO2"
+        }
+       },
+       "product_version": "4.5.0 <4.5.0.58"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "cda15bbd-cb28-38d1-a550-fe1375664199",
+       "vendor": {
+        "name": "WSO2"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "40c15205-26bc-3c7a-8512-3cc352778b59",
+    "vulnerability": {
+     "aliases": "CVE-2026-5430\nGHSA-j7vh-5w8q-4m4x\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:53:46 AM",
+     "datePublished": "Aug 6, 2026, 9:30:32 AM",
+     "dateUpdated": "Sep 24, 2026, 9:31:19 PM",
+     "description": "The JWT authentication mechanism accepts tokens signed with algorithms other than those explicitly configured or supported. This allows an attacker to craft a JWT with an unsupported algorithm, which is then incorrectly validated, leading to unauthorized access.\n\nSuccessful exploitation of this vulnerability may result in unauthorized access to the system, including the potential compromise of administrative accounts and full account takeover. The CVSS score is adjusted to 9.8 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H) in single-tenant deployments, reflecting that the impact is contained within a single security authority boundary.",
+     "enisa_id": "EUVD-2026-53822\n",
+     "epss": 0.0,
+     "id": "GHSA-j7vh-5w8q-4m4x",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-5430\nhttps://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5328\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-5430\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "db389d4e-f78d-3b34-a8a0-5b854b8b36e3",
+  "epss": 0.59,
+  "exploitedSince": "Sep 24, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-53822",
+  "references": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5328/\n"
+ },
+ "id": "EUVD-2026-53822",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "WSO2 Universal Gateway",
+      "vendor": "WSO2",
+      "versions": [
+       {
+        "lessThan": "4.5.0.57",
+        "status": "affected",
+        "version": "4.5.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "4.6.0.21",
+        "status": "affected",
+        "version": "4.6.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "WSO2 Traffic Manager",
+      "vendor": "WSO2",
+      "versions": [
+       {
+        "lessThan": "4.5.0.56",
+        "status": "affected",
+        "version": "4.5.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "4.6.0.21",
+        "status": "affected",
+        "version": "4.6.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "WSO2 API Control Plane",
+      "vendor": "WSO2",
+      "versions": [
+       {
+        "lessThan": "4.5.0.58",
+        "status": "affected",
+        "version": "4.5.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "4.6.0.22",
+        "status": "affected",
+        "version": "4.6.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "WSO2 API Manager",
+      "vendor": "WSO2",
+      "versions": [
+       {
+        "lessThan": "4.1.0",
+        "status": "unknown",
+        "version": "0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "4.1.0.257",
+        "status": "affected",
+        "version": "4.1.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "4.2.0.197",
+        "status": "affected",
+        "version": "4.2.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "4.3.0.108",
+        "status": "affected",
+        "version": "4.3.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "4.4.0.72",
+        "status": "affected",
+        "version": "4.4.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "4.5.0.57",
+        "status": "affected",
+        "version": "4.5.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "4.6.0.21",
+        "status": "affected",
+        "version": "4.6.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "packageName": "org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.rest.api.util",
+      "product": "WSO2 Carbon API Manager Rest API Utility",
+      "vendor": "WSO2",
+      "versions": [
+       {
+        "lessThan": "9.20.74.401",
+        "status": "affected",
+        "version": "9.20.74",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "9.28.116.417",
+        "status": "affected",
+        "version": "9.28.116",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "9.29.120.236",
+        "status": "affected",
+        "version": "9.29.120",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "9.30.67.167",
+        "status": "affected",
+        "version": "9.30.67",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "9.31.86.158",
+        "status": "affected",
+        "version": "9.31.86",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "9.32.147.59",
+        "status": "affected",
+        "version": "9.32.147",
+        "versionType": "custom"
+       },
+       {
+        "lessThanOrEqual": "*",
+        "status": "unaffected",
+        "version": "9.33.106",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "ed10eef1-636d-4fbe-9993-6890dfa878f8"
+   }
+  ],
+  "cisaActionDue": "2026-09-27",
+  "cisaExploitAdd": "2026-09-24",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "WSO2 Multiple Products Path Traversal Vulnerability ",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:wso2:api_control_plane:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5F568AE3-DBF2-41B6-B4C8-20B655067056",
+        "versionEndExcluding": "4.5.0.58",
+        "versionStartIncluding": "4.5.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wso2:api_control_plane:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7C020DC7-BD0F-4C0B-8CBC-4B93671D4CAC",
+        "versionEndExcluding": "4.6.0.22",
+        "versionStartIncluding": "4.6.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "AE140289-0624-4385-8D46-D6E5052D3B28",
+        "versionEndExcluding": "4.1.0.257",
+        "versionStartIncluding": "4.1.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "31FC9528-42DB-4E23-BCF4-674397F2E626",
+        "versionEndExcluding": "4.2.0.197",
+        "versionStartIncluding": "4.2.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5F10E50C-D77F-4779-936C-0ADDF8B1B1F6",
+        "versionEndExcluding": "4.3.0.108",
+        "versionStartIncluding": "4.3.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "8774AF32-FAEC-4EF3-8399-8E76D55A8DEB",
+        "versionEndExcluding": "4.4.0.72",
+        "versionStartIncluding": "4.4.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D4DD9A69-BED3-45B4-9521-DBCA9AEBBF6F",
+        "versionEndExcluding": "4.5.0.57",
+        "versionStartIncluding": "4.5.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "07437626-95AF-4468-8479-ACC2835DF708",
+        "versionEndExcluding": "4.6.0.21",
+        "versionStartIncluding": "4.6.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:wso2:traffic_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "066D4334-A3B2-4D0D-9830-1CBE6C91B053",
+        "versionEndExcluding": "4.5.0.56",
+        "versionStartIncluding": "4.5.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wso2:traffic_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "6F904CBB-EC8F-49F3-B85D-E934E785813B",
+        "versionEndExcluding": "4.6.0.21",
+        "versionStartIncluding": "4.6.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:wso2:universal_gateway:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "6AA06D88-B2E9-4474-A12E-3D44FC7E6A6B",
+        "versionEndExcluding": "4.5.0.57",
+        "versionStartIncluding": "4.5.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wso2:universal_gateway:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7BD535B3-3554-4F39-AA9A-8A0178A44490",
+        "versionEndExcluding": "4.6.0.21",
+        "versionStartIncluding": "4.6.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "The JWT authentication mechanism accepts tokens signed with algorithms other than those explicitly configured or supported. This allows an attacker to craft a JWT with an unsupported algorithm, which is then incorrectly validated, leading to unauthorized access.\n\nSuccessful exploitation of this vulnerability may result in unauthorized access to the system, including the potential compromise of administrative accounts and full account takeover. The CVSS score is adjusted to 9.8 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H) in single-tenant deployments, reflecting that the impact is contained within a single security authority boundary."
+   }
+  ],
+  "id": "CVE-2026-5430",
+  "lastModified": "2026-09-25T12:53:05.517",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 10.0,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 6.0,
+     "source": "ed10eef1-636d-4fbe-9993-6890dfa878f8",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-5430",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-24T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-08-06T08:16:33.240",
+  "references": [
+   {
+    "source": "ed10eef1-636d-4fbe-9993-6890dfa878f8",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2026/WSO2-2026-5328/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-5430"
+   }
+  ],
+  "sourceIdentifier": "ed10eef1-636d-4fbe-9993-6890dfa878f8",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-347"
+     }
+    ],
+    "source": "ed10eef1-636d-4fbe-9993-6890dfa878f8",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

@@ -1,0 +1,320 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-84869"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-84869",
+  "cwes": [
+   "CWE-269",
+   "CWE-862"
+  ],
+  "dateAdded": "2026-09-11",
+  "dueDate": "2026-09-14",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://www.connectwise.com/company/trust/security-bulletins/2026-09-08-screenconnect-bulletin ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-84869",
+  "product": "ScreenConnect",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to transfer and execute files through an active remote session without authorization or host confirmation.",
+  "vendorProject": "ConnectWise",
+  "vulnerabilityName": "ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-84869\nGHSA-rc8v-f46m-jcgm\n",
+  "assigner": "ConnectWise",
+  "baseScore": 9.9,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 8, 2026, 7:29:33 PM",
+  "dateUpdated": "Sep 12, 2026, 3:55:19 AM",
+  "description": "A condition in the ScreenConnect client may allow files to be transferred and executed through an active remote session without authorization or Host confirmation in certain circumstances. ScreenConnect servers are not impacted.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "2eae1a2b-abbe-395b-b680-11c80fad99a5",
+       "product": {
+        "name": "ScreenConnect",
+        "vendor": {
+         "name": "ConnectWise"
+        }
+       }
+      },
+      {
+       "id": "90564812-cab2-3113-93d3-116a411d3a0e",
+       "product": {
+        "name": "26.6.5",
+        "vendor": {
+         "name": "ConnectWise"
+        }
+       }
+      },
+      {
+       "id": "d1ea01e0-4769-3fcc-9951-932374670380",
+       "product": {
+        "name": "ConnectWise ScreenConnect",
+        "vendor": {
+         "name": "ConnectWise"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-84869\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 8, 2026, 10:00:00 PM",
+     "dateUpdated": "Sep 9, 2026, 10:00:00 PM",
+     "description": "ConnectWise ScreenConnect: Schwachstelle ermöglicht Codeausführung",
+     "id": "WID-SEC-W-2026-3256",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-3256.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3256\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in ConnectWise ScreenConnect ausnutzen, um Code auszuführen."
+    },
+    "id": "8c96805a-0a21-3897-b9a7-9969991ec666"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "fbecc57d-21f2-35b3-8752-c6dabee83d4a",
+    "product": {
+     "name": "ScreenConnect",
+     "vendor": {
+      "name": "ConnectWise"
+     }
+    },
+    "product_version": "All versions prior to 26.6.5"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "dfcd4115-73c0-3741-afb0-b3d177f791ad",
+    "vendor": {
+     "name": "ConnectWise"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "229bcb3a-7a92-3fd2-a87f-22c6a8b6c9af",
+    "vulnerability": {
+     "aliases": "GHSA-rc8v-f46m-jcgm\nCVE-2026-84869\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:55:42 AM",
+     "datePublished": "Sep 8, 2026, 9:34:29 PM",
+     "dateUpdated": "Sep 11, 2026, 9:31:17 PM",
+     "description": "A condition in the ScreenConnect client may allow files to be transferred and executed through an active remote session without authorization or Host confirmation in certain circumstances. ScreenConnect servers are not impacted.",
+     "enisa_id": "EUVD-2026-74053\n",
+     "epss": 0.0,
+     "id": "GHSA-rc8v-f46m-jcgm",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-84869\nhttps://github.com/ConnectWise-Advisories/Disclosures/tree/main/CVE-2026-84869\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-84869\nhttps://www.connectwise.com/company/trust/advisories\nhttps://www.connectwise.com/company/trust/security-bulletins/2026-09-08-screenconnect-bulletin\nhttps://www.huntress.com/blog/rogue-screenconnect-installations\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "dfffe621-80cc-305a-a4f2-971a9c8fca26",
+    "vulnerability": {
+     "assigner": "ConnectWise",
+     "baseScore": 9.9,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:33:30 AM",
+     "datePublished": "Sep 8, 2026, 7:29:33 PM",
+     "dateUpdated": "Sep 12, 2026, 3:55:19 AM",
+     "description": "A condition in the ScreenConnect client may allow files to be transferred and executed through an active remote session without authorization or Host confirmation in certain circumstances. ScreenConnect servers are not impacted.",
+     "enisa_id": "EUVD-2026-74053\n",
+     "epss": 0.92,
+     "exploitedSince": "Sep 11, 2026, 12:00:00 AM",
+     "id": "CVE-2026-84869",
+     "references": "https://www.connectwise.com/company/trust/security-bulletins/2026-09-08-screenconnect-bulletin\nhttps://github.com/ConnectWise-Advisories/Disclosures/tree/main/CVE-2026-84869\nhttps://www.connectwise.com/company/trust/advisories\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "ceff7629-7e81-3d36-bcc8-0bd3b26b5ee9",
+       "product": {
+        "name": "ScreenConnect",
+        "vendor": {
+         "name": "ConnectWise"
+        }
+       },
+       "product_version": "All versions prior to 26.6.5"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "e8732c8a-f5af-37a9-8f96-cdb72b97d81e",
+       "vendor": {
+        "name": "ConnectWise"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "e0ae0b60-b0e2-3741-b3f4-38bc9e964783",
+  "epss": 0.92,
+  "exploitedSince": "Sep 11, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-74053",
+  "references": "https://www.connectwise.com/company/trust/security-bulletins/2026-09-08-screenconnect-bulletin\nhttps://github.com/ConnectWise-Advisories/Disclosures/tree/main/CVE-2026-84869\nhttps://www.connectwise.com/company/trust/advisories\n"
+ },
+ "id": "EUVD-2026-74053",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "ScreenConnect",
+      "vendor": "ConnectWise",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "All versions prior to 26.6.5"
+       }
+      ]
+     }
+    ],
+    "source": "7d616e1a-3288-43b1-a0dd-0a65d3e70a49"
+   }
+  ],
+  "cisaActionDue": "2026-09-14",
+  "cisaExploitAdd": "2026-09-11",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:connectwise:screenconnect:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "270783CF-B4ED-4608-A583-A9F7B80DC877",
+        "versionEndExcluding": "26.6.5.9742",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A condition in the ScreenConnect client may allow files to be transferred and executed through an active remote session without authorization or Host confirmation in certain circumstances. ScreenConnect servers are not impacted."
+   }
+  ],
+  "id": "CVE-2026-84869",
+  "lastModified": "2026-09-12T04:16:42.757",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.9,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.1,
+     "impactScore": 6.0,
+     "source": "7d616e1a-3288-43b1-a0dd-0a65d3e70a49",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-84869",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-10T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-08T20:18:51.147",
+  "references": [
+   {
+    "source": "7d616e1a-3288-43b1-a0dd-0a65d3e70a49",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/ConnectWise-Advisories/Disclosures/tree/main/CVE-2026-84869"
+   },
+   {
+    "source": "7d616e1a-3288-43b1-a0dd-0a65d3e70a49",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://www.connectwise.com/company/trust/advisories"
+   },
+   {
+    "source": "7d616e1a-3288-43b1-a0dd-0a65d3e70a49",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://www.connectwise.com/company/trust/security-bulletins/2026-09-08-screenconnect-bulletin"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-84869"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://www.huntress.com/blog/rogue-screenconnect-installations"
+   }
+  ],
+  "sourceIdentifier": "7d616e1a-3288-43b1-a0dd-0a65d3e70a49",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-269"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-862"
+     }
+    ],
+    "source": "7d616e1a-3288-43b1-a0dd-0a65d3e70a49",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

@@ -1,0 +1,631 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85046"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-85046",
+  "cwes": [
+   "CWE-843"
+  ],
+  "dateAdded": "2026-09-04",
+  "dueDate": "2026-09-18",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_01882797386.html ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-85046",
+  "product": "Chromium V8",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+  "vendorProject": "Google",
+  "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-85046\nGHSA-84qv-4wj5-wwmm\n",
+  "assigner": "Chrome",
+  "baseScore": 8.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 3, 2026, 7:26:12 PM",
+  "dateUpdated": "Sep 21, 2026, 12:53:20 PM",
+  "description": "Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "26130708-62dc-351b-876d-c635235d22d7",
+       "product": {
+        "name": "chromedriver-0:152.0.7977.82-bp160.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "78d67678-5eea-3818-84e1-2ea85a9e8c86",
+       "product": {
+        "name": "chromium-0:152.0.7977.82-bp160.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7ed95684-a3e8-3da8-b37b-b1d0ed8be120",
+       "product": {
+        "name": "openSUSE Leap 16.0",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "94d3ec34-f80d-3a14-9214-adf6a7f64f98",
+       "product": {
+        "name": "chromium-0:152.0.7977.82-bp160.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9a727cbe-bb72-304f-99c5-bed94f6c56ca",
+       "product": {
+        "name": "chromium-0:152.0.7977.82-bp160.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f325d67f-c2bb-3892-8e60-7acd46fcb911",
+       "product": {
+        "name": "chromedriver-0:152.0.7977.82-bp160.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f585c136-375a-3603-b6c7-6b8eef354e00",
+       "product": {
+        "name": "chromedriver-0:152.0.7977.82-bp160.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-84323\nCVE-2026-84324\nCVE-2026-84325\nCVE-2026-84326\nCVE-2026-84327\nCVE-2026-84328\nCVE-2026-84329\nCVE-2026-84330\nCVE-2026-84331\nCVE-2026-84332\nCVE-2026-84333\nCVE-2026-84334\nCVE-2026-84335\nCVE-2026-84347\nCVE-2026-84348\nCVE-2026-84349\nCVE-2026-84350\nCVE-2026-84351\nCVE-2026-84352\nCVE-2026-84353\nCVE-2026-84354\nCVE-2026-84355\nCVE-2026-84356\nCVE-2026-84357\nCVE-2026-84358\nCVE-2026-84359\nCVE-2026-85042\nCVE-2026-85043\nCVE-2026-85044\nCVE-2026-85045\nCVE-2026-85046\nCVE-2026-85047\nCVE-2026-85048\nCVE-2026-85049\nCVE-2026-85050\nCVE-2026-85051\nCVE-2026-85052\nCVE-2026-85053\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 5, 2026, 11:43:46 PM",
+     "dateUpdated": "Sep 17, 2026, 5:44:02 PM",
+     "description": "Security update for chromium",
+     "id": "openSUSE-SU-2026:21799-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_21799-1.json\nhttps://bugzilla.suse.com/1278072\nhttps://bugzilla.suse.com/1278683\nhttps://www.suse.com/security/cve/CVE-2026-84323/\nhttps://www.suse.com/security/cve/CVE-2026-84324/\nhttps://www.suse.com/security/cve/CVE-2026-84325/\nhttps://www.suse.com/security/cve/CVE-2026-84326/\nhttps://www.suse.com/security/cve/CVE-2026-84327/\nhttps://www.suse.com/security/cve/CVE-2026-84328/\nhttps://www.suse.com/security/cve/CVE-2026-84329/\nhttps://www.suse.com/security/cve/CVE-2026-84330/\nhttps://www.suse.com/security/cve/CVE-2026-84331/\nhttps://www.suse.com/security/cve/CVE-2026-84332/\nhttps://www.suse.com/security/cve/CVE-2026-84333/\nhttps://www.suse.com/security/cve/CVE-2026-84334/\nhttps://www.suse.com/security/cve/CVE-2026-84335/\nhttps://www.suse.com/security/cve/CVE-2026-84347/\nhttps://www.suse.com/security/cve/CVE-2026-84348/\nhttps://www.suse.com/security/cve/CVE-2026-84349/\nhttps://www.suse.com/security/cve/CVE-2026-84350/\nhttps://www.suse.com/security/cve/CVE-2026-84351/\nhttps://www.suse.com/security/cve/CVE-2026-84352/\nhttps://www.suse.com/security/cve/CVE-2026-84353/\nhttps://www.suse.com/security/cve/CVE-2026-84354/\nhttps://www.suse.com/security/cve/CVE-2026-84355/\nhttps://www.suse.com/security/cve/CVE-2026-84356/\nhttps://www.suse.com/security/cve/CVE-2026-84357/\nhttps://www.suse.com/security/cve/CVE-2026-84358/\nhttps://www.suse.com/security/cve/CVE-2026-84359/\nhttps://www.suse.com/security/cve/CVE-2026-85042/\nhttps://www.suse.com/security/cve/CVE-2026-85043/\nhttps://www.suse.com/security/cve/CVE-2026-85044/\nhttps://www.suse.com/security/cve/CVE-2026-85045/\nhttps://www.suse.com/security/cve/CVE-2026-85046/\nhttps://www.suse.com/security/cve/CVE-2026-85047/\nhttps://www.suse.com/security/cve/CVE-2026-85048/\nhttps://www.suse.com/security/cve/CVE-2026-85049/\nhttps://www.suse.com/security/cve/CVE-2026-85050/\nhttps://www.suse.com/security/cve/CVE-2026-85051/\nhttps://www.suse.com/security/cve/CVE-2026-85052/\nhttps://www.suse.com/security/cve/CVE-2026-85053/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "Security update for chromium"
+    },
+    "id": "28a66f93-ae3c-36d6-8c05-94cef2ddf311"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0e357156-24ed-355c-88f8-36f904e71433",
+       "product": {
+        "name": "Edge",
+        "vendor": {
+         "name": "AVEVA"
+        }
+       }
+      },
+      {
+       "id": "5bc01a7e-cf1a-301c-af42-eb1d7541a242",
+       "product": {
+        "name": "Debian Linux",
+        "vendor": {
+         "name": "Debian"
+        }
+       }
+      },
+      {
+       "id": "63593930-476b-3145-80a1-6d6b66abf7a6",
+       "product": {
+        "name": "Fedora Linux",
+        "vendor": {
+         "name": "Fedora"
+        }
+       }
+      },
+      {
+       "id": "9e8b43f1-14bb-3c15-9c03-21f43be22163",
+       "product": {
+        "name": "Chrome",
+        "vendor": {
+         "name": "Google"
+        }
+       }
+      },
+      {
+       "id": "cbfbb44b-48d0-30fc-ab6e-530ed7d07d4a",
+       "product": {
+        "name": "152.0.7977.82",
+        "vendor": {
+         "name": "Google"
+        }
+       }
+      },
+      {
+       "id": "ebdb4de9-f36e-38c8-8e89-669261bcb8b1",
+       "product": {
+        "name": "152.0.4191.65",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "f319618c-e1ef-3aad-be61-cf1db220be33",
+       "product": {
+        "name": "152.0.7977.83",
+        "vendor": {
+         "name": "Google"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-85042\nCVE-2026-85043\nCVE-2026-85044\nCVE-2026-85045\nCVE-2026-85046\nCVE-2026-85047\nCVE-2026-85048\nCVE-2026-85049\nCVE-2026-85050\nCVE-2026-85051\nCVE-2026-85052\nCVE-2026-85053\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 3, 2026, 10:00:00 PM",
+     "dateUpdated": "Sep 8, 2026, 10:00:00 PM",
+     "description": "Google Chrome / Microsoft Edge: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-3175",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-3175.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3175\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Google Chrome / Microsoft Edge ausnutzen, um beliebigen Programmcode auszuführen, um Informationen offenzulegen und um Sicherheitsmechanismen zu umgehen."
+    },
+    "id": "72921452-649f-3119-9beb-fddfb30ec4e2"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "046fa609-7ccd-3e4c-9997-31547933f882",
+       "product": {
+        "name": "chromium-0:152.0.7977.82-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "075b2dca-1f56-3bf3-86e9-8d1da09eaf6a",
+       "product": {
+        "name": "chromium-0:152.0.7977.82-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "31e0a1c3-bbe6-3ab0-94dc-4858d4822531",
+       "product": {
+        "name": "openSUSE Tumbleweed",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "46264a34-43f9-34f4-8d27-d257cb612459",
+       "product": {
+        "name": "chromedriver-0:152.0.7977.82-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5030408e-50d6-3bbe-8458-0f128c358ec8",
+       "product": {
+        "name": "chromedriver-0:152.0.7977.82-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "50851c27-9329-344b-afae-b3b528769917",
+       "product": {
+        "name": "chromedriver-0:152.0.7977.82-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9d3e073d-efdb-3563-a756-882bf5a9b8a1",
+       "product": {
+        "name": "chromium-0:152.0.7977.82-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c3ac85be-e933-3473-8eca-db5ebdf1e32f",
+       "product": {
+        "name": "chromium-0:152.0.7977.82-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c658858c-ec48-3627-9274-bef7ad51a030",
+       "product": {
+        "name": "chromedriver-0:152.0.7977.82-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-84323\nCVE-2026-84324\nCVE-2026-84325\nCVE-2026-84326\nCVE-2026-84327\nCVE-2026-84328\nCVE-2026-84329\nCVE-2026-84330\nCVE-2026-84331\nCVE-2026-84332\nCVE-2026-84333\nCVE-2026-84334\nCVE-2026-84335\nCVE-2026-84347\nCVE-2026-84348\nCVE-2026-84349\nCVE-2026-84350\nCVE-2026-84351\nCVE-2026-84352\nCVE-2026-84353\nCVE-2026-84354\nCVE-2026-84355\nCVE-2026-84356\nCVE-2026-84357\nCVE-2026-84358\nCVE-2026-84359\nCVE-2026-85042\nCVE-2026-85043\nCVE-2026-85044\nCVE-2026-85045\nCVE-2026-85046\nCVE-2026-85047\nCVE-2026-85048\nCVE-2026-85049\nCVE-2026-85050\nCVE-2026-85051\nCVE-2026-85052\nCVE-2026-85053\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 8, 2026, 12:00:00 AM",
+     "dateUpdated": "Sep 17, 2026, 5:23:22 PM",
+     "description": "chromedriver-152.0.7977.82-1.1 on GA media",
+     "id": "openSUSE-SU-2026:11714-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_11714-1.json\nhttps://www.suse.com/security/cve/CVE-2026-84323/\nhttps://www.suse.com/security/cve/CVE-2026-84324/\nhttps://www.suse.com/security/cve/CVE-2026-84325/\nhttps://www.suse.com/security/cve/CVE-2026-84326/\nhttps://www.suse.com/security/cve/CVE-2026-84327/\nhttps://www.suse.com/security/cve/CVE-2026-84328/\nhttps://www.suse.com/security/cve/CVE-2026-84329/\nhttps://www.suse.com/security/cve/CVE-2026-84330/\nhttps://www.suse.com/security/cve/CVE-2026-84331/\nhttps://www.suse.com/security/cve/CVE-2026-84332/\nhttps://www.suse.com/security/cve/CVE-2026-84333/\nhttps://www.suse.com/security/cve/CVE-2026-84334/\nhttps://www.suse.com/security/cve/CVE-2026-84335/\nhttps://www.suse.com/security/cve/CVE-2026-84347/\nhttps://www.suse.com/security/cve/CVE-2026-84348/\nhttps://www.suse.com/security/cve/CVE-2026-84349/\nhttps://www.suse.com/security/cve/CVE-2026-84350/\nhttps://www.suse.com/security/cve/CVE-2026-84351/\nhttps://www.suse.com/security/cve/CVE-2026-84352/\nhttps://www.suse.com/security/cve/CVE-2026-84353/\nhttps://www.suse.com/security/cve/CVE-2026-84354/\nhttps://www.suse.com/security/cve/CVE-2026-84355/\nhttps://www.suse.com/security/cve/CVE-2026-84356/\nhttps://www.suse.com/security/cve/CVE-2026-84357/\nhttps://www.suse.com/security/cve/CVE-2026-84358/\nhttps://www.suse.com/security/cve/CVE-2026-84359/\nhttps://www.suse.com/security/cve/CVE-2026-85042/\nhttps://www.suse.com/security/cve/CVE-2026-85043/\nhttps://www.suse.com/security/cve/CVE-2026-85044/\nhttps://www.suse.com/security/cve/CVE-2026-85045/\nhttps://www.suse.com/security/cve/CVE-2026-85046/\nhttps://www.suse.com/security/cve/CVE-2026-85047/\nhttps://www.suse.com/security/cve/CVE-2026-85048/\nhttps://www.suse.com/security/cve/CVE-2026-85049/\nhttps://www.suse.com/security/cve/CVE-2026-85050/\nhttps://www.suse.com/security/cve/CVE-2026-85051/\nhttps://www.suse.com/security/cve/CVE-2026-85052/\nhttps://www.suse.com/security/cve/CVE-2026-85053/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "chromedriver-152.0.7977.82-1.1 on GA media"
+    },
+    "id": "957aeb35-2533-3d22-95bc-09c02f634f66"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "20fd7b6f-bf39-3e7b-8ca7-de2d20a6999d",
+       "product": {
+        "name": "152.0.4191.62",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "4be761a4-cedc-37bd-af49-9587021f2774",
+       "product": {
+        "name": "Microsoft Edge (Chromium-based)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-85046\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 9, 2026, 3:09:50 PM",
+     "dateUpdated": "Sep 9, 2026, 3:09:50 PM",
+     "description": "Chromium: CVE-2026-85046 Type confusion in V8",
+     "id": "msrc_CVE-2026-85046",
+     "references": "https://msrc.microsoft.com/csaf/vex/2026/msrc_cve-2026-85046.json\n",
+     "source": {
+      "id": 20,
+      "name": "csaf_microsoft"
+     }
+    },
+    "id": "d20bf7db-0b43-35d6-bae2-6254bb1be243"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "fd9d4871-9646-3fbf-a7c7-2913c73ba8c3",
+       "product": {
+        "name": "Chrome",
+        "vendor": {
+         "name": "Google"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-85042\nCVE-2026-85043\nCVE-2026-85044\nCVE-2026-85045\nCVE-2026-85046\nCVE-2026-85047\nCVE-2026-85048\nCVE-2026-85049\nCVE-2026-85050\nCVE-2026-85052\nCVE-2026-85053\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 4, 2026, 1:20:15 PM",
+     "dateUpdated": "Sep 4, 2026, 1:20:15 PM",
+     "description": "Kwetsbaarheden verholpen in Google Chrome",
+     "id": "NCSC-2026-0341",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "fa775fc6-4d88-3226-b1d8-030865f5a066"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "0c1b2b23-ebfb-3752-b153-1805fd1059bd",
+    "product": {
+     "name": "Chrome",
+     "vendor": {
+      "name": "Google"
+     }
+    },
+    "product_version": "152.0.7977.82 <152.0.7977.82"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "fc7184c6-b795-391f-ac17-42037d2fdc54",
+    "vendor": {
+     "name": "Google"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "649afea1-0bd5-3666-82eb-61cdf2e68023",
+    "vulnerability": {
+     "assigner": "Chrome",
+     "baseScore": 8.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:35:30 AM",
+     "datePublished": "Sep 3, 2026, 7:26:12 PM",
+     "dateUpdated": "Sep 21, 2026, 12:53:20 PM",
+     "description": "Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+     "enisa_id": "EUVD-2026-70702\n",
+     "epss": 48.88,
+     "exploitedSince": "Sep 4, 2026, 12:00:00 AM",
+     "id": "CVE-2026-85046",
+     "references": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_01882797386.html\nhttps://issues.chromium.org/issues/542403045\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "93817743-e535-3371-aef3-dfdb2606f5a4",
+       "product": {
+        "name": "Chrome",
+        "vendor": {
+         "name": "Google"
+        }
+       },
+       "product_version": "152.0.7977.82 <152.0.7977.82"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "9485489d-c12c-3653-ba96-e93433ad010a",
+       "vendor": {
+        "name": "Google"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "b944ecaf-ecde-3cea-b7d5-590b832af656",
+    "vulnerability": {
+     "aliases": "CVE-2026-85046\nGHSA-84qv-4wj5-wwmm\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:55:42 AM",
+     "datePublished": "Sep 3, 2026, 9:31:16 PM",
+     "dateUpdated": "Sep 6, 2026, 3:30:24 AM",
+     "description": "Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+     "enisa_id": "EUVD-2026-70702\n",
+     "epss": 0.0,
+     "id": "GHSA-84qv-4wj5-wwmm",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-85046\nhttps://github.com/v8/v8/commit/e0562d87ad9c17042b581582c99237d798572e67\nhttps://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_01882797386.html\nhttps://github.com/Serotav/Writeups/blob/77556c57999805fa7815a114da51d91cf24fbea9/v8/When_Sorting_Leads_To_Confusion.md\nhttps://issues.chromium.org/issues/542403045\nhttps://news.ycombinator.com/item?id=49570669\nhttps://serotav.github.io/Writeups/v8/when-sorting-leads-to-confusion\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85046\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "91a21a86-1bb9-300b-b372-c90ebedd99be",
+  "epss": 48.88,
+  "exploitedSince": "Sep 4, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-70702",
+  "references": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_01882797386.html\nhttps://issues.chromium.org/issues/542403045\n"
+ },
+ "id": "EUVD-2026-70702",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "Chrome",
+      "vendor": "Google",
+      "versions": [
+       {
+        "lessThan": "152.0.7977.82",
+        "status": "affected",
+        "version": "152.0.7977.82",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "chrome-cve-admin@google.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-18",
+  "cisaExploitAdd": "2026-09-04",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "E7133861-8AAD-49BB-9137-9D737B466E1E",
+        "versionEndExcluding": "152.0.7977.82",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:google:v8:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "62F85713-22F2-43E2-B84B-F4E9E0B56490",
+        "versionEndExcluding": "15.3.48",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)"
+   }
+  ],
+  "id": "CVE-2026-85046",
+  "lastModified": "2026-09-21T13:17:10.970",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "REQUIRED",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.9,
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-85046",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-05T03:55:28.709112Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-03T20:17:24.210",
+  "references": [
+   {
+    "source": "chrome-cve-admin@google.com",
+    "tags": [
+     "Release Notes",
+     "Vendor Advisory"
+    ],
+    "url": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_01882797386.html"
+   },
+   {
+    "source": "chrome-cve-admin@google.com",
+    "tags": [
+     "Permissions Required"
+    ],
+    "url": "https://issues.chromium.org/issues/542403045"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/Serotav/Writeups/blob/77556c57999805fa7815a114da51d91cf24fbea9/v8/When_Sorting_Leads_To_Confusion.md"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Patch"
+    ],
+    "url": "https://github.com/v8/v8/commit/e0562d87ad9c17042b581582c99237d798572e67"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Issue Tracking",
+     "Third Party Advisory"
+    ],
+    "url": "https://news.ycombinator.com/item?id=49570669"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://serotav.github.io/Writeups/v8/when-sorting-leads-to-confusion/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-85046"
+   }
+  ],
+  "sourceIdentifier": "chrome-cve-admin@google.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-843"
+     }
+    ],
+    "source": "chrome-cve-admin@google.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

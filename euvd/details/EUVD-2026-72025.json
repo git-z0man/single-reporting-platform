@@ -1,0 +1,440 @@
+{
+ "cert_links": [
+  [
+   "CERT Polska",
+   "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve"
+  ],
+  [
+   "CERT Polska",
+   "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/"
+  ],
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-67277"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-67277",
+  "cwes": [
+   "CWE-306"
+  ],
+  "dateAdded": "2026-09-10",
+  "dueDate": "2026-09-13",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://mikrotik.com/supportsec/september-2026-vulnerability/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-67277",
+  "product": "RouterOS",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "MikroTik RouterOS contains a missing authentication for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
+  "vendorProject": "MikroTik",
+  "vulnerabilityName": "MikroTik RouterOS Missing Authentication for Critical Function Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-67277\nGHSA-6q2x-6fhj-r3w8\n",
+  "assigner": "CERT-PL",
+  "baseScore": 8.8,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Sep 5, 2026, 8:00:56 PM",
+  "dateUpdated": "Sep 11, 2026, 3:55:58 AM",
+  "description": "RouterOS accepts a \"related\" btest connection before the corresponding primary session has completed authentication. An unauthenticated client can use this state to start an IPv4 UDP test. With \"random-data=false\", the sender transmits an uninitialized tail from a kernel packet buffer. A separate unchecked, inverted packet-size interval causes unsigned integer underflow, anomalously large fragmented output, and can restart the RouterOS kernel.\n\n\n\nThis issue was fixed in versions: 6.49.21 (Long-term), 7.23.4 (Long-term) and 7.24.2 (Stable)",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "6bb03b8c-b28e-3d21-b3b7-1a1beff49da8",
+       "product": {
+        "name": "RouterOS",
+        "vendor": {
+         "name": "MikroTik"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-67276\nCVE-2026-86060\nCVE-2026-67277\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 8, 2026, 9:46:33 AM",
+     "dateUpdated": "Sep 8, 2026, 9:46:33 AM",
+     "description": "Kwetsbaarheden verholpen in MikroTik RouterOS",
+     "id": "NCSC-2026-0345",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "66af4a4a-08cf-3851-b229-06e38124e9f3"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "616adfa3-3a10-3b08-95f5-d02e6591e64a",
+    "product": {
+     "name": "RouterOS",
+     "vendor": {
+      "name": "MikroTik"
+     }
+    },
+    "product_version": "7.0.0 <7.23.4"
+   },
+   {
+    "id": "9839bea6-0808-34c7-86c6-72b6a0087346",
+    "product": {
+     "name": "RouterOS",
+     "vendor": {
+      "name": "MikroTik"
+     }
+    },
+    "product_version": "7.24 <7.24.2"
+   },
+   {
+    "id": "dbcf72dd-f33b-3913-aac9-9374ab9eae32",
+    "product": {
+     "name": "RouterOS",
+     "vendor": {
+      "name": "MikroTik"
+     }
+    },
+    "product_version": "6.0.0 <6.49.21"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "35f84498-a570-30c9-9405-abfb9a03dd0d",
+    "vendor": {
+     "name": "MikroTik"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "0eddc45a-8f36-3a66-8ee4-d5856c476186",
+    "vulnerability": {
+     "assigner": "CERT-PL",
+     "baseScore": 8.8,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 4, 2026, 3:37:55 AM",
+     "datePublished": "Sep 5, 2026, 8:00:56 PM",
+     "dateUpdated": "Sep 11, 2026, 3:55:58 AM",
+     "description": "RouterOS accepts a \"related\" btest connection before the corresponding primary session has completed authentication. An unauthenticated client can use this state to start an IPv4 UDP test. With \"random-data=false\", the sender transmits an uninitialized tail from a kernel packet buffer. A separate unchecked, inverted packet-size interval causes unsigned integer underflow, anomalously large fragmented output, and can restart the RouterOS kernel.\n\n\n\nThis issue was fixed in versions: 6.49.21 (Long-term), 7.23.4 (Long-term) and 7.24.2 (Stable)",
+     "enisa_id": "EUVD-2026-72025\n",
+     "epss": 1.56,
+     "exploitedSince": "Sep 5, 2026, 12:00:00 AM",
+     "id": "CVE-2026-67277",
+     "references": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve\nhttps://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/\nhttps://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/\nhttps://mikrotik.com/supportsec/september-2026-vulnerability/\nhttps://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802\nhttps://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801\nhttps://forum.mikrotik.com/t/7-24-2-stable-is-released/272800\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "2987519e-b456-3116-8a45-f39623b712ec",
+       "product": {
+        "name": "RouterOS",
+        "vendor": {
+         "name": "MikroTik"
+        }
+       },
+       "product_version": "7.24 <7.24.2"
+      },
+      {
+       "id": "30ba801d-680c-38ba-9c4b-6916991d5d33",
+       "product": {
+        "name": "RouterOS",
+        "vendor": {
+         "name": "MikroTik"
+        }
+       },
+       "product_version": "6.0.0 <6.49.21"
+      },
+      {
+       "id": "86e76d0b-fc13-3ce6-8994-5f2ebcf90448",
+       "product": {
+        "name": "RouterOS",
+        "vendor": {
+         "name": "MikroTik"
+        }
+       },
+       "product_version": "7.0.0 <7.23.4"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "deb8066d-77c8-33d6-9381-f8983b0e297f",
+       "vendor": {
+        "name": "MikroTik"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "e6d9dc6d-e187-3075-96ea-0cd7b2ca8862",
+    "vulnerability": {
+     "aliases": "CVE-2026-67277\nGHSA-6q2x-6fhj-r3w8\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:55:42 AM",
+     "datePublished": "Sep 5, 2026, 9:31:19 PM",
+     "dateUpdated": "Sep 11, 2026, 3:32:27 PM",
+     "description": "RouterOS accepts a \"related\" btest connection before the corresponding primary session has completed authentication. An unauthenticated client can use this state to start an IPv4 UDP test. With \"random-data=false\", the sender transmits an uninitialized tail from a kernel packet buffer. A separate unchecked, inverted packet-size interval causes unsigned integer underflow, anomalously large fragmented output, and can restart the RouterOS kernel.\n\n\n\nThis issue was fixed in versions: 6.49.21 (Long-term), 7.23.4 (Long-term) and 7.24.2 (Stable)",
+     "enisa_id": "EUVD-2026-72025\n",
+     "epss": 0.0,
+     "id": "GHSA-6q2x-6fhj-r3w8",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-67277\nhttps://cert.pl/en/posts/2026/09/mikrotik-routeros-cve\nhttps://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited\nhttps://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802\nhttps://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801\nhttps://forum.mikrotik.com/t/7-24-2-stable-is-released/272800\nhttps://mikrotik.com/supportsec/september-2026-vulnerability\nhttps://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-67277\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "36a680cd-3220-334e-beaa-326499155d99",
+  "epss": 1.56,
+  "exploitedSince": "Sep 5, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-72025",
+  "references": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve\nhttps://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/\nhttps://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/\nhttps://mikrotik.com/supportsec/september-2026-vulnerability/\nhttps://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802\nhttps://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801\nhttps://forum.mikrotik.com/t/7-24-2-stable-is-released/272800\n"
+ },
+ "id": "EUVD-2026-72025",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "RouterOS",
+      "vendor": "Mikrotik",
+      "versions": [
+       {
+        "lessThan": "7.24.2",
+        "status": "affected",
+        "version": "7.24",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "7.23.4",
+        "status": "affected",
+        "version": "7.0.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "6.49.21",
+        "status": "affected",
+        "version": "6.0.0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "cvd@cert.pl"
+   }
+  ],
+  "cisaActionDue": "2026-09-13",
+  "cisaExploitAdd": "2026-09-10",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "CFC981EC-B44C-40B5-945B-2283FADEC961",
+        "versionEndExcluding": "6.49.21",
+        "versionStartIncluding": "6.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "881306AB-32B1-4B5F-96D8-9532D25F7AE4",
+        "versionEndExcluding": "7.23.4",
+        "versionStartIncluding": "7.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:mikrotik:routeros:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A41D6B3C-D321-4C61-B3D5-00F8276CB4AC",
+        "versionEndExcluding": "7.24.2",
+        "versionStartIncluding": "7.24",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "RouterOS accepts a \"related\" btest connection before the corresponding primary session has completed authentication. An unauthenticated client can use this state to start an IPv4 UDP test. With \"random-data=false\", the sender transmits an uninitialized tail from a kernel packet buffer. A separate unchecked, inverted packet-size interval causes unsigned integer underflow, anomalously large fragmented output, and can restart the RouterOS kernel.\n\n\n\nThis issue was fixed in versions: 6.49.21 (Long-term), 7.23.4 (Long-term) and 7.24.2 (Stable)"
+   }
+  ],
+  "id": "CVE-2026-67277",
+  "lastModified": "2026-09-11T12:52:29.533",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.2,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "LOW",
+      "integrityImpact": "NONE",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 4.2,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "LOW",
+      "vulnIntegrityImpact": "NONE",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "cvd@cert.pl",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-67277",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-08T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-05T20:17:18.120",
+  "references": [
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Mitigation",
+     "Third Party Advisory"
+    ],
+    "url": "https://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://forum.mikrotik.com/t/7-24-2-stable-is-released/272800"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://mikrotik.com/supportsec/september-2026-vulnerability/"
+   },
+   {
+    "source": "cvd@cert.pl",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-67277"
+   }
+  ],
+  "sourceIdentifier": "cvd@cert.pl",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-306"
+     }
+    ],
+    "source": "cvd@cert.pl",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

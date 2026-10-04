@@ -1,0 +1,435 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87902"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-87902",
+  "cwes": [
+   "CWE-98"
+  ],
+  "dateAdded": "2026-09-25",
+  "dueDate": "2026-09-28",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-87902",
+  "product": "Core",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remote code execution.",
+  "vendorProject": "WordPress",
+  "vulnerabilityName": "WordPress Core Remote File Inclusion Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-87902\n",
+  "assigner": "hackerone",
+  "baseScore": 8.1,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 22, 2026, 4:44:15 PM",
+  "dateUpdated": "Sep 26, 2026, 3:55:51 AM",
+  "description": "An unauthenticated attacker can make `get_page_template()` page-template resolution include a chosen readable local `.php` file outside the active theme directories. If relevant pre-conditions for both the server and the active theme are met, this can lead to RCE.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "984c7816-881b-3a58-a96a-1f4657e13d12",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-87902\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 23, 2026, 11:47:46 AM",
+     "dateUpdated": "Sep 24, 2026, 9:14:33 AM",
+     "description": " Kwetsbaarheid verholpen in WordPress",
+     "id": "NCSC-2026-0389",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "fcd4191d-1699-32e1-ba4c-e832b71f34a2"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "aac68054-54f9-30ef-8f1a-6b84fce077af",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "0 <7.1.2"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "a504e073-cd98-3c5e-98db-1fcd85bc81bd",
+    "vendor": {
+     "name": "WordPress"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "1077001a-8e92-3ec3-9f06-c23ea0109b03",
+    "vulnerability": {
+     "assigner": "hackerone",
+     "baseScore": 8.1,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:36:37 AM",
+     "datePublished": "Sep 22, 2026, 4:44:15 PM",
+     "dateUpdated": "Sep 26, 2026, 3:55:51 AM",
+     "description": "An unauthenticated attacker can make `get_page_template()` page-template resolution include a chosen readable local `.php` file outside the active theme directories. If relevant pre-conditions for both the server and the active theme are met, this can lead to RCE.",
+     "enisa_id": "EUVD-2026-84555\n",
+     "epss": 45.5,
+     "exploitedSince": "Sep 23, 2026, 12:00:00 AM",
+     "id": "CVE-2026-87902",
+     "references": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "1b4b06c8-a0e7-3382-a819-374147596190",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "0 <7.1.2"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "ca884758-720c-36e7-8bd7-92f428ba6ca5",
+       "vendor": {
+        "name": "WordPress"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "3d97a61b-020a-30c3-8389-dc52328288c3",
+  "epss": 45.5,
+  "exploitedSince": "Sep 23, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-84555",
+  "references": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp\n"
+ },
+ "id": "EUVD-2026-84555",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "WordPress",
+      "vendor": "WordPress",
+      "versions": [
+       {
+        "lessThan": "7.1.2",
+        "status": "affected",
+        "version": "0",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "support@hackerone.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-28",
+  "cisaExploitAdd": "2026-09-25",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "WordPress Core Remote File Inclusion Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F1CFA516-E292-436E-9B45-BD6ACB344205",
+        "versionEndExcluding": "4.7.37",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "8EEBFAB5-8903-4D4E-9847-A50A3F840878",
+        "versionEndExcluding": "4.8.32",
+        "versionStartIncluding": "4.8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5A7719CA-2099-45E9-8E48-64EF672C76C0",
+        "versionEndExcluding": "4.9.33",
+        "versionStartIncluding": "4.9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "BFA3645E-7056-449B-9DEB-D9D53EB21488",
+        "versionEndExcluding": "5.0.29",
+        "versionStartIncluding": "5.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3582671F-7248-420A-8DF7-F32742D0D2AF",
+        "versionEndExcluding": "5.1.26",
+        "versionStartIncluding": "5.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "FD9C147A-9FCB-46A7-8409-4AE652986FDC",
+        "versionEndExcluding": "5.2.28",
+        "versionStartIncluding": "5.2",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "73C13CF0-B293-47C4-93AA-F46E0323A9C1",
+        "versionEndExcluding": "5.3.25",
+        "versionStartIncluding": "5.3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7FB5AE52-9590-4B1D-BDFF-A522EFDD55DC",
+        "versionEndExcluding": "5.4.23",
+        "versionStartIncluding": "5.4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "72A42175-5759-47B1-8E87-ADAF0CDB73C7",
+        "versionEndExcluding": "5.5.22",
+        "versionStartIncluding": "5.5",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5D7C48F3-BBB2-4943-A6F2-E652997034FE",
+        "versionEndExcluding": "5.6.21",
+        "versionStartIncluding": "5.6",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D23FACBB-B9EC-4490-B328-24833FEF6209",
+        "versionEndExcluding": "5.7.19",
+        "versionStartIncluding": "5.7",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "47F4A57C-CA16-4E9A-B0C2-EBB5FCCB41B9",
+        "versionEndExcluding": "5.8.17",
+        "versionStartIncluding": "5.8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "83CC56B0-F56E-4862-B74E-B106092C73F0",
+        "versionEndExcluding": "5.9.18",
+        "versionStartIncluding": "5.9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "E3EE7487-2943-4229-8B04-8787FE730FCB",
+        "versionEndExcluding": "6.0.16",
+        "versionStartIncluding": "6.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "E83A61A6-8FBC-4AF6-98E6-0152CA380AA0",
+        "versionEndExcluding": "6.1.14",
+        "versionStartIncluding": "6.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D97C90F9-83C3-4057-A7E2-61787BC24E05",
+        "versionEndExcluding": "6.2.13",
+        "versionStartIncluding": "6.2",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D7DA40D7-228A-4CFF-8CC8-32321BB1D3C5",
+        "versionEndExcluding": "6.3.12",
+        "versionStartIncluding": "6.3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "DDE93788-7DAB-475C-B6AE-753780DE8160",
+        "versionEndExcluding": "6.4.12",
+        "versionStartIncluding": "6.4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "18808A77-C445-4D07-A364-A676F2D7FD63",
+        "versionEndExcluding": "6.5.12",
+        "versionStartIncluding": "6.5",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "ADEAA29A-1862-476B-8F21-684D8799589E",
+        "versionEndExcluding": "6.6.9",
+        "versionStartIncluding": "6.6",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D3BD738C-4601-43C1-A5BC-E5AFB0189CD9",
+        "versionEndExcluding": "6.7.9",
+        "versionStartIncluding": "6.7",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "4A6867FC-850F-437B-8532-63A5F747D64F",
+        "versionEndExcluding": "6.8.10",
+        "versionStartIncluding": "6.8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5C21A09B-5001-4F4E-A49D-4F29032AF612",
+        "versionEndExcluding": "6.9.9",
+        "versionStartIncluding": "6.9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "6FC26EAE-8D7D-4BF9-AACE-75C6AB13279F",
+        "versionEndExcluding": "7.0.6",
+        "versionStartIncluding": "7.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "525A2372-93E8-447E-BBB7-F795C08B3E2B",
+        "versionEndExcluding": "7.1.2",
+        "versionStartIncluding": "7.1",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "An unauthenticated attacker can make `get_page_template()` page-template resolution include a chosen readable local `.php` file outside the active theme directories. If relevant pre-conditions for both the server and the active theme are met, this can lead to RCE."
+   }
+  ],
+  "id": "CVE-2026-87902",
+  "lastModified": "2026-09-28T12:20:54.040",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.1,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.2,
+     "impactScore": 5.9,
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-87902",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-25T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-22T17:17:28.310",
+  "references": [
+   {
+    "source": "support@hackerone.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://patchstack.com/articles/cve-2026-87902-attackers-started-probing-wordpress-sites-hours-after-the-patch/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87902"
+   }
+  ],
+  "sourceIdentifier": "support@hackerone.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-98"
+     }
+    ],
+    "source": "support@hackerone.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

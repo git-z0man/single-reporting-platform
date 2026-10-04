@@ -1,0 +1,1571 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76460"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-76460",
+  "cwes": [
+   "CWE-648"
+  ],
+  "dateAdded": "2026-09-16",
+  "dueDate": "2026-09-19",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-76460",
+  "product": "Identity Services Engine",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.",
+  "vendorProject": "Cisco",
+  "vulnerabilityName": "Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-76460\nGHSA-25wc-3w28-q6vw\n",
+  "assigner": "cisco",
+  "baseScore": 10.0,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 16, 2026, 8:12:02 PM",
+  "dateUpdated": "Sep 17, 2026, 3:57:00 AM",
+  "description": "A vulnerability in an API of Cisco Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to bypass authentication.\r\n\r\nThis vulnerability is due to insufficient authentication control on an API endpoint. An attacker could exploit this vulnerability by sending a crafted request to an affected API endpoint. A successful exploit could allow the attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "096ae766-d859-3d5f-ad5e-8d015cb4319e",
+       "product": {
+        "name": "3.1",
+        "vendor": {
+         "name": "Smiths Medical"
+        }
+       }
+      },
+      {
+       "id": "24b4ec06-d2b5-34fd-92c2-2fb107b4812a",
+       "product": {
+        "name": "3.4",
+        "vendor": {
+         "name": "3S Smart Software Solutions"
+        }
+       }
+      },
+      {
+       "id": "5c9d7fa1-5fc0-3c91-8de3-32235ac82a93",
+       "product": {
+        "name": "3.2",
+        "vendor": {
+         "name": "Dover Fueling Solutions"
+        }
+       }
+      },
+      {
+       "id": "909c3139-9da7-32f8-96de-2d7b4c105a72",
+       "product": {
+        "name": "Cisco Identity Services Engine",
+        "vendor": {
+         "name": "n/a"
+        }
+       }
+      },
+      {
+       "id": "98ab1824-5c57-3724-919e-e99009b81498",
+       "product": {
+        "name": "Cisco ISE Passive Identity Connector",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "a0308986-484b-3d5a-9738-e4d089bbfe92",
+       "product": {
+        "name": "3.5",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d9bfd1d6-c766-3b34-8a68-b0a6ac347704",
+       "product": {
+        "name": "3.3",
+        "vendor": {
+         "name": "Dover Fueling Solutions"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-76460\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 16, 2026, 4:00:00 PM",
+     "dateUpdated": "Sep 16, 2026, 4:00:00 PM",
+     "description": "Cisco Identity Services Engine Authentication Bypass Vulnerability",
+     "id": "cisco-sa-ISE-ABP-VNSW7Tn5",
+     "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5\n",
+     "source": {
+      "id": 10,
+      "name": "csaf_cisco"
+     },
+     "summary": "A vulnerability in an API of Cisco Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to bypass authentication.\r\n\r\nThis vulnerability is due to insufficient authentication control on an API endpoint. An attacker could exploit this vulnerability by sending a crafted request to an affected API endpoint. A successful exploit could allow the attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.\r\n\r\nCisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.\r\n\r\n\r\n\r\nThis advisory is part of a group of advisories. For a complete list of the advisories and links to them, see Cisco Advance Notification for Publication of September 16, 2026, Security Advisories [\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-notice-jfxK98ZP\"]. In addition, for further documentation of improvements and fixes in Cisco Identity Services Engine, see Cisco Identity Services Engine Security Hardening Release: September 2026 [\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T\"]."
+    },
+    "id": "7fec5176-00b1-3bed-89d9-a04d832a01ff"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0c83ee40-c1ca-3aa7-bb7e-4c90636d7160",
+       "product": {
+        "name": "Cisco ISE Passive Identity Connector",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "41451731-4d8f-3ea0-b3e1-c7a8b5e574bd",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "ae1826ba-5e11-3aa4-a5c6-4aafc3a44535",
+       "product": {
+        "name": "identity_services_engine",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-20307\nCVE-2026-20211\nCVE-2026-20176\nCVE-2026-76423\nCVE-2026-76424\nCVE-2026-76425\nCVE-2026-76426\nCVE-2026-76427\nCVE-2026-76428\nCVE-2026-20282\nCVE-2026-20283\nCVE-2026-20284\nCVE-2026-20305\nCVE-2026-20306\nCVE-2026-20130\nCVE-2026-20192\nCVE-2026-20194\nCVE-2026-20234\nCVE-2026-20237\nCVE-2026-20287\nCVE-2026-76460\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 17, 2026, 9:24:38 AM",
+     "dateUpdated": "Sep 17, 2026, 9:24:38 AM",
+     "description": "Kwetsbaarheden verholpen in Cisco Identity Services Engine (ISE)",
+     "id": "NCSC-2026-0382",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "a128148a-62b3-337d-a8be-06b66daef032"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "0d9adac3-1972-313e-b350-7b958e131b2b",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.3 Patch 2"
+   },
+   {
+    "id": "0da92f1c-d3a0-3de1-9fa9-3338d7490d67",
+    "product": {
+     "name": "Cisco ISE Passive Identity Connector",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.4.0"
+   },
+   {
+    "id": "172d5afb-7d9c-3ad1-96fd-de185c6d5e18",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.3 Patch 1"
+   },
+   {
+    "id": "2ad3ca88-f2d4-3362-8efc-f2b39b86b1ad",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.5.0"
+   },
+   {
+    "id": "2bc94d55-3fbe-3600-95db-a492cdf941d4",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.3 Patch 11"
+   },
+   {
+    "id": "2c4cb5a3-9699-3866-a745-dce55d5b03e6",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.3 Patch 8"
+   },
+   {
+    "id": "37132f1a-a602-3794-bb0f-aefd855a6076",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.4 Patch 4"
+   },
+   {
+    "id": "38bf1dbc-b733-37d5-953b-29f795d58b2d",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.3 Patch 9"
+   },
+   {
+    "id": "411df1a0-b83a-3756-9a86-0c125f20e0dc",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.5 Patch 2"
+   },
+   {
+    "id": "428c384c-d4a4-38e8-896f-5b21eb226cd1",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.3 Patch 4"
+   },
+   {
+    "id": "5802eb20-7d74-3d19-b420-179fccffa2d0",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.4 Patch 1"
+   },
+   {
+    "id": "6aa88236-3198-347d-83c8-b570e78ab0e9",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.3 Patch 10"
+   },
+   {
+    "id": "71630797-26d8-3f30-ac33-fbe0af96b64f",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.1.0 p9"
+   },
+   {
+    "id": "732d09ba-ad5d-3bda-b6c4-910042ee4c19",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.3 Patch 3"
+   },
+   {
+    "id": "77234a9f-59f1-34b9-b51a-37b44f10e241",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.2 Patch 8"
+   },
+   {
+    "id": "836d9e23-e879-3bbd-9c78-ddd47578bb60",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.4 Patch 5"
+   },
+   {
+    "id": "85595d05-7c14-3bb2-8a22-6be1c7621683",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.3 Patch 6"
+   },
+   {
+    "id": "94836f61-0afb-348e-9e21-ff84d7ca0150",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.2.0 p7"
+   },
+   {
+    "id": "96c13002-79bc-3fa3-bea7-1699d6e5f63d",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.4 Patch 6"
+   },
+   {
+    "id": "97f5ddde-ef8d-3650-b160-d7fda9c43d4c",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.4 Patch 2"
+   },
+   {
+    "id": "9f8bac71-0459-3c83-a326-be11001c8da9",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.1.0 p10"
+   },
+   {
+    "id": "a57bab03-c5b3-30cf-9aa8-8685c2fee47e",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.5 Patch 1"
+   },
+   {
+    "id": "a79cde9b-5f71-3d94-af9f-bb99908fbfb5",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.3 Patch 5"
+   },
+   {
+    "id": "ae7b439f-e1ee-3b72-bed1-7d122072e233",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.5 Patch 3"
+   },
+   {
+    "id": "b225f951-7275-3f32-8dc4-0aedab42bba2",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.1.0 p8"
+   },
+   {
+    "id": "b35577e4-fccd-3ae4-8fba-701adb129ab1",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.3 Patch 7"
+   },
+   {
+    "id": "d03f0b77-4130-37fe-b0d7-1aa383628979",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.2 Patch 9"
+   },
+   {
+    "id": "db47409d-c6e6-3819-96f0-38559dd79e02",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.4 Patch 3"
+   },
+   {
+    "id": "e9e784f6-a76f-3e7e-b460-3fb852baba5f",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.1.0 p11"
+   },
+   {
+    "id": "eaa7486c-e3e0-3e5e-b7a6-813c55d3f406",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.4.0"
+   },
+   {
+    "id": "ef5a3ba9-aafa-338a-9cd4-5fbe962098b1",
+    "product": {
+     "name": "Cisco Identity Services Engine Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.2 Patch 10"
+   },
+   {
+    "id": "fbd1e04a-ffa7-3d93-a879-e5f524a8fdb9",
+    "product": {
+     "name": "Cisco ISE Passive Identity Connector",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "3.5.0"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "97df7cd2-ca04-330e-ad05-fed6c22787c3",
+    "vendor": {
+     "name": "Cisco"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "2afd5b93-b165-3e83-99ef-2a5c49167256",
+    "vulnerability": {
+     "assigner": "cisco",
+     "baseScore": 10.0,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:37:00 AM",
+     "datePublished": "Sep 16, 2026, 8:12:02 PM",
+     "dateUpdated": "Sep 17, 2026, 3:57:00 AM",
+     "description": "A vulnerability in an API of Cisco Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to bypass authentication.\r\n\r\nThis vulnerability is due to insufficient authentication control on an API endpoint. An attacker could exploit this vulnerability by sending a crafted request to an affected API endpoint. A successful exploit could allow the attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.",
+     "enisa_id": "EUVD-2026-81122\n",
+     "epss": 14.03,
+     "exploitedSince": "Sep 16, 2026, 12:00:00 AM",
+     "id": "CVE-2026-76460",
+     "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "046e3f22-01c8-328e-8beb-b2b6006c3940",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.3 Patch 8"
+      },
+      {
+       "id": "1456f418-09a0-3544-a398-d6c590d37191",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.2 Patch 9"
+      },
+      {
+       "id": "2e3371cf-f657-346f-b94e-9b4904a2523e",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.2 Patch 10"
+      },
+      {
+       "id": "2ff86ac0-6d8f-34cf-a87e-aab07856ad85",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.5 Patch 2"
+      },
+      {
+       "id": "378bc4ea-8e47-3b0a-b6b0-70d2d78de546",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.4 Patch 5"
+      },
+      {
+       "id": "47085f1e-3d4a-3ad0-84f5-39b0bc94ab8f",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.3 Patch 5"
+      },
+      {
+       "id": "4920de95-0bdb-3a9d-a487-d06eabe7db7c",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.1.0 p8"
+      },
+      {
+       "id": "55e74b82-da11-382e-a2a0-e9ca129a0a88",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.4 Patch 2"
+      },
+      {
+       "id": "5cc3a36a-e920-3bd7-9db1-dc88f48f8c09",
+       "product": {
+        "name": "Cisco ISE Passive Identity Connector",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.5.0"
+      },
+      {
+       "id": "5cd0099f-5744-3602-9931-d4c449b83bc0",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.3 Patch 7"
+      },
+      {
+       "id": "5e813ff1-ba89-3fdc-b8cb-401c7461639f",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.4 Patch 4"
+      },
+      {
+       "id": "6049d78d-f041-3c1a-a6e2-8d510cbf9923",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.3 Patch 11"
+      },
+      {
+       "id": "643c7758-4fd0-3f27-be12-ef697d318f1b",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.2 Patch 8"
+      },
+      {
+       "id": "64ddd538-7e07-38ce-b46f-aee83d86bf87",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.3 Patch 6"
+      },
+      {
+       "id": "66ed5cfb-f3e6-39c5-b610-ee9995c94f06",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.5 Patch 3"
+      },
+      {
+       "id": "79d56be1-44cd-3f04-a433-bf2cb7b72783",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.1.0 p10"
+      },
+      {
+       "id": "8e64527c-6177-31d6-8fbe-1ad59cddf238",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.5.0"
+      },
+      {
+       "id": "90f3b4a7-11f1-3a2f-9ec3-bf3768b37e33",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.3 Patch 1"
+      },
+      {
+       "id": "a2fdadc1-152e-3d47-a8ba-982bbe3a7ef5",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.3 Patch 10"
+      },
+      {
+       "id": "ab3ee2f7-2ac0-3d73-9bff-ff30473dcc7e",
+       "product": {
+        "name": "Cisco ISE Passive Identity Connector",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.4.0"
+      },
+      {
+       "id": "aed2d7ed-fa11-3fb9-8c76-01bf144219c5",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.1.0 p9"
+      },
+      {
+       "id": "b18cedca-2261-31c7-9343-7f38155f0b23",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.4.0"
+      },
+      {
+       "id": "b2c27159-384c-3b39-9e32-138ba2596e1c",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.3 Patch 2"
+      },
+      {
+       "id": "b67a95ea-8ada-3de1-ac59-495147d2581f",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.3 Patch 3"
+      },
+      {
+       "id": "b68f6c28-94d4-3c48-a6b5-b13e6651fa77",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.3 Patch 9"
+      },
+      {
+       "id": "c9d53fa4-0079-3dc1-92ac-8f76477f3e99",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.2.0 p7"
+      },
+      {
+       "id": "cd1e8695-0938-36ca-b3d1-c094eff09957",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.3 Patch 4"
+      },
+      {
+       "id": "d0e415aa-3aa0-380d-a091-6e5ba90d3842",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.4 Patch 1"
+      },
+      {
+       "id": "e373fe8d-7f98-3757-a3d1-21d845c60517",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.4 Patch 6"
+      },
+      {
+       "id": "f53134e7-006e-34fa-b278-ad168b0a6fc8",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.1.0 p11"
+      },
+      {
+       "id": "f791517f-a0b6-391d-9bbc-2f59c2fd7d3b",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.5 Patch 1"
+      },
+      {
+       "id": "f86041af-e1ba-36c8-8c3b-d53ebc474197",
+       "product": {
+        "name": "Cisco Identity Services Engine Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "3.4 Patch 3"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "597ffd27-9f51-3776-b775-1099213ff18c",
+       "vendor": {
+        "name": "Cisco"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "4acc1a30-2196-35dc-ad3f-4acfefdcd019",
+    "vulnerability": {
+     "aliases": "GHSA-25wc-3w28-q6vw\nCVE-2026-76460\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:56:19 AM",
+     "datePublished": "Sep 16, 2026, 9:32:52 PM",
+     "dateUpdated": "Sep 16, 2026, 9:32:52 PM",
+     "description": "A vulnerability in an API of Cisco Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to bypass authentication.\n\nThis vulnerability is due to insufficient authentication control on an API endpoint. An attacker could exploit this vulnerability by sending a crafted request to an affected API endpoint. A successful exploit could allow the attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.",
+     "enisa_id": "EUVD-2026-81122\n",
+     "epss": 0.0,
+     "id": "GHSA-25wc-3w28-q6vw",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-76460\nhttps://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76460\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "56a57d6b-a932-3c07-b3a8-5280386d20d4",
+  "epss": 14.03,
+  "exploitedSince": "Sep 16, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-81122",
+  "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5\n"
+ },
+ "id": "EUVD-2026-81122",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "Cisco Identity Services Engine Software",
+      "vendor": "Cisco",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "3.1.0 p8"
+       },
+       {
+        "status": "affected",
+        "version": "3.1.0 p9"
+       },
+       {
+        "status": "affected",
+        "version": "3.3 Patch 2"
+       },
+       {
+        "status": "affected",
+        "version": "3.3 Patch 1"
+       },
+       {
+        "status": "affected",
+        "version": "3.3 Patch 3"
+       },
+       {
+        "status": "affected",
+        "version": "3.4.0"
+       },
+       {
+        "status": "affected",
+        "version": "3.2.0 p7"
+       },
+       {
+        "status": "affected",
+        "version": "3.3 Patch 4"
+       },
+       {
+        "status": "affected",
+        "version": "3.4 Patch 1"
+       },
+       {
+        "status": "affected",
+        "version": "3.1.0 p10"
+       },
+       {
+        "status": "affected",
+        "version": "3.3 Patch 5"
+       },
+       {
+        "status": "affected",
+        "version": "3.3 Patch 6"
+       },
+       {
+        "status": "affected",
+        "version": "3.4 Patch 2"
+       },
+       {
+        "status": "affected",
+        "version": "3.3 Patch 7"
+       },
+       {
+        "status": "affected",
+        "version": "3.4 Patch 3"
+       },
+       {
+        "status": "affected",
+        "version": "3.5.0"
+       },
+       {
+        "status": "affected",
+        "version": "3.4 Patch 4"
+       },
+       {
+        "status": "affected",
+        "version": "3.3 Patch 8"
+       },
+       {
+        "status": "affected",
+        "version": "3.2 Patch 8"
+       },
+       {
+        "status": "affected",
+        "version": "3.5 Patch 1"
+       },
+       {
+        "status": "affected",
+        "version": "3.3 Patch 9"
+       },
+       {
+        "status": "affected",
+        "version": "3.2 Patch 9"
+       },
+       {
+        "status": "affected",
+        "version": "3.4 Patch 5"
+       },
+       {
+        "status": "affected",
+        "version": "3.5 Patch 3"
+       },
+       {
+        "status": "affected",
+        "version": "3.5 Patch 2"
+       },
+       {
+        "status": "affected",
+        "version": "3.3 Patch 10"
+       },
+       {
+        "status": "affected",
+        "version": "3.3 Patch 11"
+       },
+       {
+        "status": "affected",
+        "version": "3.4 Patch 6"
+       },
+       {
+        "status": "affected",
+        "version": "3.2 Patch 10"
+       },
+       {
+        "status": "affected",
+        "version": "3.1.0 p11"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Cisco ISE Passive Identity Connector",
+      "vendor": "Cisco",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "3.4.0"
+       },
+       {
+        "status": "affected",
+        "version": "3.5.0"
+       }
+      ]
+     }
+    ],
+    "source": "psirt@cisco.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-19",
+  "cisaExploitAdd": "2026-09-16",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:-:*:*:*:*:*:*",
+        "matchCriteriaId": "7A789B44-7E6C-4FE9-BD40-702A871AB8AC",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch1:*:*:*:*:*:*",
+        "matchCriteriaId": "93920663-445E-4456-A905-81CEC6CA1833",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch10:*:*:*:*:*:*",
+        "matchCriteriaId": "DF9CCBFA-0004-48F7-B142-6FDD4B3E1081",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch11:*:*:*:*:*:*",
+        "matchCriteriaId": "C91717BE-76EF-410C-970D-01C5FDC52A0B",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch2:*:*:*:*:*:*",
+        "matchCriteriaId": "33DA5BB8-4CFE-44BD-9CEB-BC26577E8477",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch3:*:*:*:*:*:*",
+        "matchCriteriaId": "D3AEFA85-66B5-4145-A4AD-96D1FF86B46D",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch4:*:*:*:*:*:*",
+        "matchCriteriaId": "7A6A0697-6A9E-48EF-82D8-36C75E0CDFDC",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch5:*:*:*:*:*:*",
+        "matchCriteriaId": "E939B65A-7912-4C36-8799-03A1526D7BD3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch6:*:*:*:*:*:*",
+        "matchCriteriaId": "833B438F-0869-4C0D-9952-750C00702E8D",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch7:*:*:*:*:*:*",
+        "matchCriteriaId": "E8B2588D-01F9-450B-B2E3-ADC4125E354E",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch8:*:*:*:*:*:*",
+        "matchCriteriaId": "E41016C0-19E6-4BCC-A8DD-F6C9A2B0003E",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.1.0:patch9:*:*:*:*:*:*",
+        "matchCriteriaId": "654E946A-07C5-4036-BC54-85EF42B808DD",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:-:*:*:*:*:*:*",
+        "matchCriteriaId": "7932D5D5-83E1-4BEF-845A-D0783D4BB750",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch1:*:*:*:*:*:*",
+        "matchCriteriaId": "1B818846-4A6E-4256-B344-281E8C786C43",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch10:*:*:*:*:*:*",
+        "matchCriteriaId": "1EEC9040-9BD3-43D0-A33E-1EBD941EB65F",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch2:*:*:*:*:*:*",
+        "matchCriteriaId": "A44858A2-922A-425A-8B38-0C47DB911A3C",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch3:*:*:*:*:*:*",
+        "matchCriteriaId": "53484A32-757B-42F8-B655-554C34222060",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch4:*:*:*:*:*:*",
+        "matchCriteriaId": "0CCAC61F-C273-49B3-A631-31D3AE3EB148",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch5:*:*:*:*:*:*",
+        "matchCriteriaId": "51AEFCE6-FB4A-4B1C-A23D-83CC3CF3FBBD",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch6:*:*:*:*:*:*",
+        "matchCriteriaId": "B452B4F0-8510-475E-9AE8-B48FABB4D7D3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch7:*:*:*:*:*:*",
+        "matchCriteriaId": "5733512D-12B5-4098-AF90-9D68217FAC27",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch8:*:*:*:*:*:*",
+        "matchCriteriaId": "4ED98020-7BAF-4E5E-8B7B-22537200C283",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.2.0:patch9:*:*:*:*:*:*",
+        "matchCriteriaId": "4C6839DC-F3A2-4133-BF60-2E678E6DD4A4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:-:*:*:*:*:*:*",
+        "matchCriteriaId": "F1B9C2C1-59A4-49A0-9B74-83CCB063E55D",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch1:*:*:*:*:*:*",
+        "matchCriteriaId": "DFD29A0B-0D75-4EAB-BCE0-79450EC75DD0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch10:*:*:*:*:*:*",
+        "matchCriteriaId": "43F3A55D-D4FC-4D93-9513-94B64B21A2B4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch11:*:*:*:*:*:*",
+        "matchCriteriaId": "F0F60A00-E952-400A-B553-BE96E7FF746F",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch2:*:*:*:*:*:*",
+        "matchCriteriaId": "E6C94CC4-CC08-4DAF-A606-FDAFC92720A9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch3:*:*:*:*:*:*",
+        "matchCriteriaId": "BB069EA3-7B8C-42B5-8035-2EE5ED3F56E4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch4:*:*:*:*:*:*",
+        "matchCriteriaId": "FF8B81A6-BF44-4E5F-B167-39F61DDCA026",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch5:*:*:*:*:*:*",
+        "matchCriteriaId": "56E0F0EC-3E66-4866-89F5-89B331F3F517",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch6:*:*:*:*:*:*",
+        "matchCriteriaId": "2E3E8937-2859-4A2A-91C0-05F674EF0466",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch7:*:*:*:*:*:*",
+        "matchCriteriaId": "D4B14684-EB9E-405B-85FA-B62E57CB292C",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch8:*:*:*:*:*:*",
+        "matchCriteriaId": "22B752D1-9E8F-4FB7-8EEB-F9234492372B",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch9:*:*:*:*:*:*",
+        "matchCriteriaId": "85A1CC7D-FE54-4AC0-B98F-972C4B1F3189",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:-:*:*:*:*:*:*",
+        "matchCriteriaId": "D23905E0-E525-49B1-8E5F-4EB42D186768",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch1:*:*:*:*:*:*",
+        "matchCriteriaId": "74509498-38EF-4345-9583-CEF5C26CA1D8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch2:*:*:*:*:*:*",
+        "matchCriteriaId": "CD05FF93-7B8C-4283-9DB7-E03FE98FAADF",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch3:*:*:*:*:*:*",
+        "matchCriteriaId": "0F9B6A8E-E773-44A3-9266-878F0C58EB41",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch4:*:*:*:*:*:*",
+        "matchCriteriaId": "D3727619-E0CA-4CA9-BE35-0C732BCF1741",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch5:*:*:*:*:*:*",
+        "matchCriteriaId": "2CFB7565-3930-409C-B5DB-CE77E6ED7C42",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch6:*:*:*:*:*:*",
+        "matchCriteriaId": "A388D916-D6A1-4D3A-A48A-A150F387B755",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.5.0:-:*:*:*:*:*:*",
+        "matchCriteriaId": "2610FD35-BC4B-41B7-9C92-E6E5264FEE54",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.5.0:patch1:*:*:*:*:*:*",
+        "matchCriteriaId": "3FEE4377-B238-4442-9892-28CECFB2319E",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.5.0:patch2:*:*:*:*:*:*",
+        "matchCriteriaId": "6598563B-7E32-43FB-96A7-88C53E4CE226",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.5.0:patch3:*:*:*:*:*:*",
+        "matchCriteriaId": "719C8E82-269D-4F21-B2B4-4CD3033A17F9",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:-:*:*:*:*:*:*",
+        "matchCriteriaId": "006E0D77-534C-447F-8E97-EC0AB906D978",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch1:*:*:*:*:*:*",
+        "matchCriteriaId": "AC07A742-D194-425C-945C-3977E96B61B8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch10:*:*:*:*:*:*",
+        "matchCriteriaId": "00D4B446-EDCE-41DC-A03B-97D8A371B0D9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch11:*:*:*:*:*:*",
+        "matchCriteriaId": "BE3B2985-AC34-4628-8564-517C48B9F475",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch2:*:*:*:*:*:*",
+        "matchCriteriaId": "97787372-9A0D-4916-A7A2-19237B84419F",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch3:*:*:*:*:*:*",
+        "matchCriteriaId": "2E2D9D7C-A36E-489D-A2E1-ACE9E9C399BD",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch4:*:*:*:*:*:*",
+        "matchCriteriaId": "3ABA57DA-78C9-489B-88E5-6E5275E53388",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch5:*:*:*:*:*:*",
+        "matchCriteriaId": "2ABFB0CE-60CF-4969-A91E-186F457C8014",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch6:*:*:*:*:*:*",
+        "matchCriteriaId": "B8CF7EF0-FBAA-47C7-8386-F67264CA8D0E",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch7:*:*:*:*:*:*",
+        "matchCriteriaId": "5F08ACD7-2867-428A-966C-6509283FCA10",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch8:*:*:*:*:*:*",
+        "matchCriteriaId": "B365970F-9239-45F8-80C6-DA426FCA2E32",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.1.0:patch9:*:*:*:*:*:*",
+        "matchCriteriaId": "5A66142F-712F-4EFA-9FC4-E499D3015DD2",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:-:*:*:*:*:*:*",
+        "matchCriteriaId": "50D8B7DD-14A8-4C67-8B32-E1F9C7D9C01E",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch1:*:*:*:*:*:*",
+        "matchCriteriaId": "CB65DFF8-33D8-4840-8A63-7C4797FF0B51",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch10:*:*:*:*:*:*",
+        "matchCriteriaId": "9CAAF565-E1CF-4002-B91C-290ECAB2F16A",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch2:*:*:*:*:*:*",
+        "matchCriteriaId": "890FDA62-DED9-401B-9D44-26F3624118CD",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch3:*:*:*:*:*:*",
+        "matchCriteriaId": "604079BA-78F5-4D20-AF27-E7A9A899DA0C",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch4:*:*:*:*:*:*",
+        "matchCriteriaId": "25344C6F-8EB6-4709-A51B-DCA26AA885E3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch5:*:*:*:*:*:*",
+        "matchCriteriaId": "51DE5AD0-5DFA-460D-B22D-0F5E367A9A28",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch6:*:*:*:*:*:*",
+        "matchCriteriaId": "683F2E87-9759-4A98-B7C9-489E74837D59",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch7:*:*:*:*:*:*",
+        "matchCriteriaId": "22BF8687-84E4-4609-8100-FD2408DF3247",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch8:*:*:*:*:*:*",
+        "matchCriteriaId": "19F88640-BC3E-42D2-ADDC-59114974103C",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.2.0:patch9:*:*:*:*:*:*",
+        "matchCriteriaId": "40A94055-EF01-4799-813D-7BFFDD13C685",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:-:*:*:*:*:*:*",
+        "matchCriteriaId": "3CA3315D-8A45-43F4-A0F0-094D325F285B",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch1:*:*:*:*:*:*",
+        "matchCriteriaId": "B3736136-9FD8-4B12-B119-EA15201224D9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch10:*:*:*:*:*:*",
+        "matchCriteriaId": "FB15AE6D-F4EF-40AD-A88E-D22612AEF2A4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch11:*:*:*:*:*:*",
+        "matchCriteriaId": "25B8E5EB-393A-40E8-9A0D-465ECCC2A4B8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch2:*:*:*:*:*:*",
+        "matchCriteriaId": "654ED77E-22D3-4E76-9E6D-B1581F5982F0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch3:*:*:*:*:*:*",
+        "matchCriteriaId": "A0648EE9-F042-479F-9AAB-C6B5DBC46511",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch4:*:*:*:*:*:*",
+        "matchCriteriaId": "83F3BA58-4F38-41C8-956F-38A2F44EECE4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch5:*:*:*:*:*:*",
+        "matchCriteriaId": "6C30FA1D-91E2-48C5-B181-A88FDF668278",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch6:*:*:*:*:*:*",
+        "matchCriteriaId": "768215B1-80B7-40FF-8772-BA4C0B3913F5",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch7:*:*:*:*:*:*",
+        "matchCriteriaId": "40239DA8-43B6-466B-85B0-6D644D7027D1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch8:*:*:*:*:*:*",
+        "matchCriteriaId": "9118B7ED-E678-47C3-9D17-F522D9362B2F",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch9:*:*:*:*:*:*",
+        "matchCriteriaId": "C2ED3257-CB9D-4FD5-A482-3648CF292128",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:-:*:*:*:*:*:*",
+        "matchCriteriaId": "CC0525FD-C4D7-4B48-BF35-1791391AB148",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch1:*:*:*:*:*:*",
+        "matchCriteriaId": "68C96F6B-51EE-4D03-9598-CBFD16DA22EF",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch2:*:*:*:*:*:*",
+        "matchCriteriaId": "62F25185-D19E-4EC5-8A68-7AB669B76E90",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch3:*:*:*:*:*:*",
+        "matchCriteriaId": "C457D2EC-FB63-49B7-A90E-CE67ED763BAE",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch4:*:*:*:*:*:*",
+        "matchCriteriaId": "6566330F-A048-44A1-9821-7A5844C82CEC",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch5:*:*:*:*:*:*",
+        "matchCriteriaId": "1154F196-2CB3-4AC2-BE00-11A8942EA999",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch6:*:*:*:*:*:*",
+        "matchCriteriaId": "7E30ECF6-5B1D-4280-AA02-123153E68F28",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A vulnerability in an API of Cisco Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to bypass authentication.\r\n\r\nThis vulnerability is due to insufficient authentication control on an API endpoint. An attacker could exploit this vulnerability by sending a crafted request to an affected API endpoint. A successful exploit could allow the attacker to gain unauthorized access to the affected device by bypassing the web-based management interface."
+   }
+  ],
+  "id": "CVE-2026-76460",
+  "lastModified": "2026-09-25T16:53:35.463",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 10.0,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 6.0,
+     "source": "psirt@cisco.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-76460",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-16T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-16T21:17:21.430",
+  "references": [
+   {
+    "source": "psirt@cisco.com",
+    "tags": [
+     "Mitigation",
+     "Vendor Advisory"
+    ],
+    "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76460"
+   }
+  ],
+  "sourceIdentifier": "psirt@cisco.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-648"
+     }
+    ],
+    "source": "psirt@cisco.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

@@ -1,0 +1,514 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88771"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-88771",
+  "cwes": [
+   "CWE-119"
+  ],
+  "dateAdded": "2026-09-27",
+  "dueDate": "2026-09-30",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "Running the provided IOCs in the NetScaler console may help identify indicators of exploitation. Customers must conduct forensic triage as directed by BOD 26‑04 and follow Citrix’s published guidance for mitigations. For more information, please see: https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778 ; https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096 ; https://support.citrix.com/external/article/CTX694799/steps-to-take-if-netscaler-adc-is-suspec.html ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-88772",
+  "product": "NetScaler",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
+  "vendorProject": "Citrix",
+  "vulnerabilityName": "Citrix NetScaler Improper Input Validation Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-88771\nGHSA-mx58-p288-86qp\n",
+  "assigner": "NetScaler",
+  "baseScore": 9.5,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Sep 27, 2026, 4:02:07 PM",
+  "dateUpdated": "Sep 29, 2026, 3:55:15 AM",
+  "description": "Improper input validation vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to an unauthenticated attacker to execute arbitrary commands.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "020cef09-ffa2-39e1-892e-450a96cb773e",
+       "product": {
+        "name": "NetScaler Gateway",
+        "vendor": {
+         "name": "Cloud Software Group"
+        }
+       }
+      },
+      {
+       "id": "3dcf2853-af58-312a-9b20-c86f457b847c",
+       "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+         "name": "Citrix"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-88771\nCVE-2026-88772\nCVE-2026-88773\nCVE-2026-88774\nCVE-2026-88775\nCVE-2026-88776\nCVE-2026-88777\nCVE-2026-88778\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 27, 2026, 4:55:29 PM",
+     "dateUpdated": "Sep 30, 2026, 8:38:43 AM",
+     "description": "Kwetsbaarheden verholpen in NetScaler ADC en NetScaler Gateway",
+     "id": "NCSC-2026-0394",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "8933f8c5-f239-344e-a7af-d89c328e3c52"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "04188820-884d-3429-be91-3feeca99acb8",
+    "product": {
+     "name": "Gateway",
+     "vendor": {
+      "name": "NetScaler"
+     }
+    },
+    "product_version": "0 <13.1-64.23"
+   },
+   {
+    "id": "48d1b27d-794f-3a5b-bc57-22eb06b4009e",
+    "product": {
+     "name": "ADC",
+     "vendor": {
+      "name": "NetScaler"
+     }
+    },
+    "product_version": "0 <14.1-73.37 FIPS"
+   },
+   {
+    "id": "64c3294f-f613-38df-b45b-8404065dd48d",
+    "product": {
+     "name": "Gateway",
+     "vendor": {
+      "name": "NetScaler"
+     }
+    },
+    "product_version": "0 <14.1-73.37"
+   },
+   {
+    "id": "960beff4-c7c3-3a2f-864f-98593968cf9c",
+    "product": {
+     "name": "ADC",
+     "vendor": {
+      "name": "NetScaler"
+     }
+    },
+    "product_version": "0 <14.1-73.37"
+   },
+   {
+    "id": "d167cf3e-a3c9-38c1-80fb-fe239ff256ae",
+    "product": {
+     "name": "ADC",
+     "vendor": {
+      "name": "NetScaler"
+     }
+    },
+    "product_version": "0 <13.1.37.279 FIPS and NDcPP"
+   },
+   {
+    "id": "d9e7a9f5-de76-3573-b50a-383702ee2cdd",
+    "product": {
+     "name": "ADC",
+     "vendor": {
+      "name": "NetScaler"
+     }
+    },
+    "product_version": "0 <13.1-64.23"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "0389b974-eed0-32c6-9b4c-4795848ff53e",
+    "vendor": {
+     "name": "Citrix NetScaler"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "8aa4ba28-8827-3c42-9e22-43ea215a9d47",
+    "vulnerability": {
+     "assigner": "NetScaler",
+     "baseScore": 9.5,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 4, 2026, 3:36:09 AM",
+     "datePublished": "Sep 27, 2026, 4:02:07 PM",
+     "dateUpdated": "Sep 29, 2026, 3:55:15 AM",
+     "description": "Improper input validation vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to an unauthenticated attacker to execute arbitrary commands.",
+     "enisa_id": "EUVD-2026-87958\n",
+     "epss": 1.06,
+     "exploitedSince": "Sep 27, 2026, 12:00:00 AM",
+     "id": "CVE-2026-88771",
+     "references": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "01b00c4b-76b2-3e03-827a-5800ce995d4b",
+       "product": {
+        "name": "ADC",
+        "vendor": {
+         "name": "NetScaler"
+        }
+       },
+       "product_version": "0 <14.1-73.37 FIPS"
+      },
+      {
+       "id": "2675de74-784f-33b2-a814-1635382609b9",
+       "product": {
+        "name": "ADC",
+        "vendor": {
+         "name": "NetScaler"
+        }
+       },
+       "product_version": "0 <14.1-73.37"
+      },
+      {
+       "id": "5034aa87-72f0-3e46-9d76-2dff54c07ba1",
+       "product": {
+        "name": "ADC",
+        "vendor": {
+         "name": "NetScaler"
+        }
+       },
+       "product_version": "0 <13.1-64.23"
+      },
+      {
+       "id": "a3e6ad0e-a246-39c5-b30a-d440178eb203",
+       "product": {
+        "name": "ADC",
+        "vendor": {
+         "name": "NetScaler"
+        }
+       },
+       "product_version": "0 <13.1.37.279 FIPS and NDcPP"
+      },
+      {
+       "id": "dfb5997b-13c1-38ae-a580-0a477e10b1d8",
+       "product": {
+        "name": "Gateway",
+        "vendor": {
+         "name": "NetScaler"
+        }
+       },
+       "product_version": "0 <14.1-73.37"
+      },
+      {
+       "id": "f0d88d16-0aa7-3204-8dce-a71595eccaf1",
+       "product": {
+        "name": "Gateway",
+        "vendor": {
+         "name": "NetScaler"
+        }
+       },
+       "product_version": "0 <13.1-64.23"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "06c620c0-9f7a-39f1-934e-334bfaa9c9e8",
+       "vendor": {
+        "name": "Citrix NetScaler"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "c5d9778c-3131-32ee-b81e-61adbc852210",
+    "vulnerability": {
+     "aliases": "GHSA-mx58-p288-86qp\nCVE-2026-88771\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:56:56 AM",
+     "datePublished": "Sep 27, 2026, 6:30:22 PM",
+     "dateUpdated": "Sep 28, 2026, 12:31:03 PM",
+     "description": "Improper input validation vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to an unauthenticated attacker to execute arbitrary commands.",
+     "enisa_id": "EUVD-2026-87958\n",
+     "epss": 0.0,
+     "id": "GHSA-mx58-p288-86qp",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771\nhttps://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88771\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "720a13a8-1b5f-31d0-8f36-124e4e4c33d6",
+  "epss": 1.06,
+  "exploitedSince": "Sep 27, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-87958",
+  "references": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096\n"
+ },
+ "id": "EUVD-2026-87958",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "ADC",
+      "vendor": "Citrix NetScaler",
+      "versions": [
+       {
+        "lessThan": "14.1-73.37",
+        "status": "affected",
+        "version": "0",
+        "versionType": "patch"
+       },
+       {
+        "lessThan": "13.1-64.23",
+        "status": "affected",
+        "version": "0",
+        "versionType": "patch"
+       },
+       {
+        "lessThan": "14.1-73.37 FIPS",
+        "status": "affected",
+        "version": "0",
+        "versionType": "patch"
+       },
+       {
+        "lessThan": "13.1.37.279 FIPS and NDcPP",
+        "status": "affected",
+        "version": "0",
+        "versionType": "patch"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "Gateway",
+      "vendor": "Citrix NetScaler",
+      "versions": [
+       {
+        "lessThan": "14.1-73.37",
+        "status": "affected",
+        "version": "0",
+        "versionType": "patch"
+       },
+       {
+        "lessThan": "13.1-64.23",
+        "status": "affected",
+        "version": "0",
+        "versionType": "patch"
+       }
+      ]
+     }
+    ],
+    "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5"
+   }
+  ],
+  "cisaActionDue": "2026-09-30",
+  "cisaExploitAdd": "2026-09-27",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Citrix NetScaler Improper Input Validation Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+        "matchCriteriaId": "6BC2D462-9ABE-4024-8E46-8D265C0B19FB",
+        "versionEndExcluding": "13.1-64.23",
+        "versionStartIncluding": "13.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
+        "matchCriteriaId": "2DB314FE-3886-4ABD-A820-B8A70EBB23A6",
+        "versionEndExcluding": "13.1.37.279",
+        "versionStartIncluding": "13.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:ndcpp:*:*:*",
+        "matchCriteriaId": "FCFFA1B3-87CE-4CC8-990E-D3CE0B55CD45",
+        "versionEndExcluding": "13.1.37.279",
+        "versionStartIncluding": "13.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+        "matchCriteriaId": "1CA9588A-E3EB-44FC-9515-6EB89BB8C1D6",
+        "versionEndExcluding": "14.1-73.37",
+        "versionStartIncluding": "14.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
+        "matchCriteriaId": "046FF602-D956-4961-89BF-2041A3590004",
+        "versionEndIncluding": "14.1-73.37",
+        "versionStartIncluding": "14.1-66.68",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3286D2C3-EA7E-4D9C-95DE-05D462DC8B1B",
+        "versionEndExcluding": "13.1-64.23",
+        "versionStartIncluding": "13.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "C77243A7-1FDB-4557-88BE-EDF3BAA56A81",
+        "versionEndExcluding": "14.1-73.37",
+        "versionStartIncluding": "14.1",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Improper input validation vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.\n\nThis issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to an unauthenticated attacker to execute arbitrary commands."
+   },
+   {
+    "lang": "es",
+    "value": "Vulnerabilidad de validación de entrada inadecuada en Citrix NetScaler ADC y Citrix NetScaler Gateway.\n\nEste problema afecta a ADC en versiones anteriores a 14.1-73.37, 13.1-64.23, 14.1-73.37 FIPS, y 13.1.37.279 FIPS y NDcPP; y a Gateway en versiones anteriores a 14.1-73.37 y 13.1-64.23, lo que permite a un atacante no autenticado ejecutar comandos arbitrarios."
+   }
+  ],
+  "id": "CVE-2026-88771",
+  "lastModified": "2026-09-29T04:18:01.603",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "PRESENT",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.5,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "HIGH",
+      "subConfidentialityImpact": "HIGH",
+      "subIntegrityImpact": "HIGH",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-88771",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-27T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-27T17:16:56.260",
+  "references": [
+   {
+    "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88771"
+   }
+  ],
+  "sourceIdentifier": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-20"
+     }
+    ],
+    "source": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

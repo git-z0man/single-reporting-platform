@@ -1,0 +1,354 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-60137"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-60137",
+  "cwes": [
+   "CWE-89"
+  ],
+  "dateAdded": "2026-07-21",
+  "dueDate": "2026-08-04",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-60137",
+  "product": "Core",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "WordPress Core contains a SQL injection vulnerability when a plugin or theme passes untrusted input to the parameter. This vulnerability can be chained with CVE-2026-63030 to allow an unauthenticated attacker to gain remote code execution on default WordPress installations.",
+  "vendorProject": "WordPress",
+  "vulnerabilityName": "WordPress Core SQL Injection Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-60137\n",
+  "assigner": "WPScan",
+  "baseScore": 5.9,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Jul 17, 2026, 7:14:12 PM",
+  "dateUpdated": "Jul 29, 2026, 7:26:43 PM",
+  "description": "WordPress 6.8.x before 6.8.6, 6.9.x before 6.9.5, and 7.0.x before 7.0.2 does not properly sanitise the author__not_in parameter of WP_Query, which could allow SQL Injection when a plugin or theme passes untrusted input to the parameter.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "73d42d03-5317-325e-bfa0-03cdfabc97c6",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-60137\nCVE-2026-63030\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 18, 2026, 11:01:56 AM",
+     "dateUpdated": "Jul 18, 2026, 11:01:56 AM",
+     "description": "Kwetsbaarheden verholpen in WordPress door Automattic",
+     "id": "NCSC-2026-0250",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "0c9e7bc9-bed4-348e-9bf5-e7adc8508cf9"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "d57e262b-781a-3f28-ae59-bc7ce662dde8",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.9.0 <6.9.5"
+   },
+   {
+    "id": "f1d600b9-8afb-346f-8570-63879ba0abac",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "7.0.0 <7.0.2"
+   },
+   {
+    "id": "f92235aa-8486-34a7-af44-562ae437e92a",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.8.0 <6.8.6"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "a9e7f92d-d1e4-3c02-aebc-617f25405fc1",
+    "vendor": {
+     "name": "WordPress"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "1b842312-7aa1-3284-94bd-42d460a1c700",
+    "vulnerability": {
+     "assigner": "WPScan",
+     "baseScore": 5.9,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:36:09 AM",
+     "datePublished": "Jul 17, 2026, 7:14:12 PM",
+     "dateUpdated": "Jul 29, 2026, 7:26:43 PM",
+     "description": "WordPress 6.8.x before 6.8.6, 6.9.x before 6.9.5, and 7.0.x before 7.0.2 does not properly sanitise the author__not_in parameter of WP_Query, which could allow SQL Injection when a plugin or theme passes untrusted input to the parameter.",
+     "enisa_id": "EUVD-2026-45279\n",
+     "epss": 5.91,
+     "exploitedSince": "Jul 21, 2026, 12:00:00 AM",
+     "id": "CVE-2026-60137",
+     "references": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf\nhttps://wordpress.org/news/2026/07/wordpress-7-0-2-release/\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "07da7d90-4448-3f40-8f85-4d2344ed36de",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.9.0 <6.9.5"
+      },
+      {
+       "id": "0dbfc34d-b645-3ec5-8721-5c6f594ff77a",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "7.0.0 <7.0.2"
+      },
+      {
+       "id": "3f010d0b-8741-3891-a723-a98ed5e65bec",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.8.0 <6.8.6"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "d60ec7f7-9168-3263-8034-327f247161e2",
+       "vendor": {
+        "name": "WordPress"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "afd042cd-0c5c-3163-9b16-ae7745b4e681",
+  "epss": 5.91,
+  "exploitedSince": "Jul 21, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-45279",
+  "references": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf\nhttps://wordpress.org/news/2026/07/wordpress-7-0-2-release/\n"
+ },
+ "id": "EUVD-2026-45279",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "WordPress",
+      "vendor": "WordPress",
+      "versions": [
+       {
+        "lessThan": "6.8.6",
+        "status": "affected",
+        "version": "6.8.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "6.9.5",
+        "status": "affected",
+        "version": "6.9.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "7.0.2",
+        "status": "affected",
+        "version": "7.0.0",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "contact@wpscan.com"
+   }
+  ],
+  "cisaActionDue": "2026-08-04",
+  "cisaExploitAdd": "2026-07-21",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "WordPress Core SQL Injection Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "AA95FD78-D475-499E-9C1A-A2720E9E968A",
+        "versionEndExcluding": "6.8.6",
+        "versionStartIncluding": "6.8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D5B37C71-893E-460E-8790-88EF786DF56E",
+        "versionEndExcluding": "6.9.5",
+        "versionStartIncluding": "6.9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "02352A0A-26C7-4ABC-83F6-8493C6A3FB5C",
+        "versionEndExcluding": "7.0.2",
+        "versionStartIncluding": "7.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "WordPress 6.8.x before 6.8.6, 6.9.x before 6.9.5, and 7.0.x before 7.0.2 does not properly sanitise the author__not_in parameter of WP_Query, which could allow SQL Injection when a plugin or theme passes untrusted input to the parameter."
+   }
+  ],
+  "id": "CVE-2026-60137",
+  "lastModified": "2026-07-29T20:17:06.270",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 5.9,
+      "baseSeverity": "MEDIUM",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "NONE",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.2,
+     "impactScore": 3.6,
+     "source": "contact@wpscan.com",
+     "type": "Secondary"
+    },
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 9.1,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.2,
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-60137",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-07-22T03:55:47.898130Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-07-17T20:17:27.790",
+  "references": [
+   {
+    "source": "contact@wpscan.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf"
+   },
+   {
+    "source": "contact@wpscan.com",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-60137"
+   }
+  ],
+  "sourceIdentifier": "contact@wpscan.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-89"
+     }
+    ],
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

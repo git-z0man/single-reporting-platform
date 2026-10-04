@@ -1,0 +1,363 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87886"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-87886",
+  "cwes": [
+   "CWE-276"
+  ],
+  "dateAdded": "2026-09-16",
+  "dueDate": "2026-09-19",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://security-advisory.acronis.com/advisories/SEC-10986 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-87886",
+  "product": "Backup",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.",
+  "vendorProject": "Acronis",
+  "vulnerabilityName": "Acronis Backup Incorrect Default Permissions Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-87886\nGHSA-hrq3-qgq7-jm9x\n",
+  "assigner": "Acronis",
+  "baseScore": 7.8,
+  "baseScoreVector": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.0",
+  "datePublished": "Sep 17, 2026, 10:57:18 PM",
+  "dateUpdated": "Sep 18, 2026, 2:33:42 PM",
+  "description": "Local privilege escalation due to insecure file permissions. The following products are affected: Acronis Backup plugin for cPanel & WHM (Linux) before build 1.9.3.1021, Acronis Backup extension for Plesk (Linux) before build 1.8.11.638, Acronis Backup plugin for DirectAdmin (Linux) before build 1.2.3.238.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "43db2aa3-a709-3a1b-9fc6-d4b2616c03f1",
+    "product": {
+     "name": "Acronis Backup extension for Plesk",
+     "vendor": {
+      "name": "Acronis"
+     }
+    },
+    "product_version": "unspecified <1.8.11.638"
+   },
+   {
+    "id": "44dd67d1-6514-356e-ae51-45af538bcf76",
+    "product": {
+     "name": "Acronis Backup plugin for DirectAdmin",
+     "vendor": {
+      "name": "Acronis"
+     }
+    },
+    "product_version": "unspecified <1.2.3.238"
+   },
+   {
+    "id": "a54b77fd-fbbe-3a9b-9c97-908c58bd4830",
+    "product": {
+     "name": "Acronis Backup plugin for cPanel & WHM",
+     "vendor": {
+      "name": "Acronis"
+     }
+    },
+    "product_version": "unspecified <1.9.3.1021"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "c36ad8db-512d-3f92-8ad0-0663c6fa3d9d",
+    "vendor": {
+     "name": "Acronis"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "2ca1c78f-2b1e-3fe8-9ba8-1289c41bf9b7",
+    "vulnerability": {
+     "assigner": "Acronis",
+     "baseScore": 7.8,
+     "baseScoreVector": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.0",
+     "dataProcessed": "Oct 4, 2026, 3:36:37 AM",
+     "datePublished": "Sep 17, 2026, 10:57:18 PM",
+     "dateUpdated": "Sep 18, 2026, 2:33:42 PM",
+     "description": "Local privilege escalation due to insecure file permissions. The following products are affected: Acronis Backup plugin for cPanel & WHM (Linux) before build 1.9.3.1021, Acronis Backup extension for Plesk (Linux) before build 1.8.11.638, Acronis Backup plugin for DirectAdmin (Linux) before build 1.2.3.238.",
+     "enisa_id": "EUVD-2026-82595\n",
+     "epss": 0.23,
+     "exploitedSince": "Sep 16, 2026, 12:00:00 AM",
+     "id": "CVE-2026-87886",
+     "references": "https://security-advisory.acronis.com/advisories/SEC-10986\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "81027bae-669a-3fd4-9490-be5190961f5c",
+       "product": {
+        "name": "Acronis Backup plugin for DirectAdmin",
+        "vendor": {
+         "name": "Acronis"
+        }
+       },
+       "product_version": "unspecified <1.2.3.238"
+      },
+      {
+       "id": "84ef4d6f-c6a5-39d4-8baf-c09d688ca27f",
+       "product": {
+        "name": "Acronis Backup extension for Plesk",
+        "vendor": {
+         "name": "Acronis"
+        }
+       },
+       "product_version": "unspecified <1.8.11.638"
+      },
+      {
+       "id": "9501215e-7d3f-3f52-9c02-6c42eae8373c",
+       "product": {
+        "name": "Acronis Backup plugin for cPanel & WHM",
+        "vendor": {
+         "name": "Acronis"
+        }
+       },
+       "product_version": "unspecified <1.9.3.1021"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "a5f69d7c-39a8-33ad-beaf-64d5a07e6b57",
+       "vendor": {
+        "name": "Acronis"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "f4dfa248-59f5-370b-984b-0eefb1e38df5",
+    "vulnerability": {
+     "aliases": "GHSA-hrq3-qgq7-jm9x\nCVE-2026-87886\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:56:19 AM",
+     "datePublished": "Sep 18, 2026, 12:31:10 AM",
+     "dateUpdated": "Sep 18, 2026, 3:32:09 PM",
+     "description": "Local privilege escalation due to insecure file permissions. The following products are affected: Acronis Backup plugin for cPanel & WHM (Linux) before build 1.9.3.1021, Acronis Backup extension for Plesk (Linux) before build 1.8.11.638, Acronis Backup plugin for DirectAdmin (Linux) before build 1.2.3.238.",
+     "enisa_id": "EUVD-2026-82595\n",
+     "epss": 0.0,
+     "id": "GHSA-hrq3-qgq7-jm9x",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-87886\nhttps://security-advisory.acronis.com/advisories/SEC-10986\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87886\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "fe7a3f41-bd2e-3ccd-81e5-e8f80fec579d",
+  "epss": 0.23,
+  "exploitedSince": "Sep 16, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-82595",
+  "references": "https://security-advisory.acronis.com/advisories/SEC-10986\n"
+ },
+ "id": "EUVD-2026-82595",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "platforms": [
+       "Linux"
+      ],
+      "product": "Acronis Backup plugin for cPanel & WHM",
+      "vendor": "Acronis",
+      "versions": [
+       {
+        "lessThan": "1.9.3.1021",
+        "status": "affected",
+        "version": "unspecified",
+        "versionType": "semver"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "platforms": [
+       "Linux"
+      ],
+      "product": "Acronis Backup extension for Plesk",
+      "vendor": "Acronis",
+      "versions": [
+       {
+        "lessThan": "1.8.11.638",
+        "status": "affected",
+        "version": "unspecified",
+        "versionType": "semver"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "platforms": [
+       "Linux"
+      ],
+      "product": "Acronis Backup plugin for DirectAdmin",
+      "vendor": "Acronis",
+      "versions": [
+       {
+        "lessThan": "1.2.3.238",
+        "status": "affected",
+        "version": "unspecified",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "security@acronis.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-19",
+  "cisaExploitAdd": "2026-09-16",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Acronis Backup Incorrect Default Permissions Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:acronis:acronis_backup:*:*:*:*:*:directadmin:*:*",
+        "matchCriteriaId": "4CB8B9F6-DAB7-4F21-B2B4-0EE01347AC1E",
+        "versionEndExcluding": "1.2.3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:acronis:acronis_backup:*:*:*:*:*:plesk:*:*",
+        "matchCriteriaId": "AEA7BEC1-B14B-4ED9-8FA8-D602D612BCA2",
+        "versionEndExcluding": "1.8.11",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:acronis:acronis_backup:*:*:*:*:*:cpanel:*:*",
+        "matchCriteriaId": "1F03983F-EC1E-4831-BF34-69331B521543",
+        "versionEndExcluding": "1.9.3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:acronis:acronis_backup:1.9.3:-:*:*:*:cpanel:*:*",
+        "matchCriteriaId": "61BB35F9-D0AB-484A-8C9F-BA79DD51916B",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:acronis:acronis_backup:1.9.3:hotfix1:*:*:*:cpanel:*:*",
+        "matchCriteriaId": "C9442FB3-3ECF-49D7-9940-41F296D7D0BC",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:acronis:acronis_backup:1.9.3:hotfix2:*:*:*:cpanel:*:*",
+        "matchCriteriaId": "E892B84E-B369-4E1A-B9B6-57FBD1F96AFC",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Local privilege escalation due to insecure file permissions. The following products are affected: Acronis Backup plugin for cPanel & WHM (Linux) before build 1.9.3.1021, Acronis Backup extension for Plesk (Linux) before build 1.8.11.638, Acronis Backup plugin for DirectAdmin (Linux) before build 1.2.3.238."
+   }
+  ],
+  "id": "CVE-2026-87886",
+  "lastModified": "2026-09-18T19:29:35.067",
+  "metrics": {
+   "cvssMetricV30": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "LOCAL",
+      "availabilityImpact": "HIGH",
+      "baseScore": 7.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.0"
+     },
+     "exploitabilityScore": 1.8,
+     "impactScore": 5.9,
+     "source": "security@acronis.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-87886",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-18T12:27:59.851837Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-17T23:18:53.763",
+  "references": [
+   {
+    "source": "security@acronis.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://security-advisory.acronis.com/advisories/SEC-10986"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-87886"
+   }
+  ],
+  "sourceIdentifier": "security@acronis.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-276"
+     }
+    ],
+    "source": "security@acronis.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

@@ -204,6 +204,31 @@ intercepting egress proxy both TCP and TLS succeed against every host while the
 platform is dark, so the obvious simplification silently breaks the monitor.
 The reasoning is in the script's header comment.
 
+## EUVD exploited-vulnerabilities routine
+
+`euvd-exploited-baseline.md` and everything under `euvd/` (the script, the data
+in `euvd/exploited.json`, one record per entry under `euvd/details/` and the page
+`euvd/index.html`) are maintained by a scheduled task that runs
+`euvd/check_exploited.py` daily at 06:20 UTC. The prompt is
+`routines/euvd-exploited-monitor.md`.
+
+The same convention as the other monitors applies: no manual review is required.
+After pushing the branch and opening the PR (create it as a draft first), mark it
+ready for review and merge it immediately. This applies only to PRs from this
+routine that touch `euvd-exploited-baseline.md` and `euvd/` alone, checked with
+`tools/scope_guard.py euvd-exploited-baseline.md euvd/`. Any other change to this
+repository, including to `euvd/check_exploited.py` or `euvd/enrich.py`, follows the
+normal review-and-confirm flow, and the Routine does not edit them.
+
+The daily-rhythm rule applies: one measurement point per day plus every real
+change. A run that finds nothing changed and sees today's date in `last_check` on
+`main` ends silently. A failed fetch (HTTP error, unparseable answer, incomplete
+paging, an implausibly small set) is a failed check, never a content change.
+
+The baseline never says which entry was the first reported through the SRP: no
+source records the reporting route, and the list largely follows CISA's catalogue.
+A change-log entry must not imply otherwise.
+
 ## Guide sync routine
 
 `index.html` (the guide) and everything under `guide-sync/` are maintained by a

@@ -1,0 +1,1022 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-81963"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-81963",
+  "cwes": [
+   "CWE-59",
+   "CWE-284"
+  ],
+  "dateAdded": "2026-09-08",
+  "dueDate": "2026-09-22",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-81963 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-81963",
+  "product": "Windows",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Microsoft Windows Update Stack contains a link following vulnerability that allows a local attacker to escalate privileges locally up to SYSTEM.",
+  "vendorProject": "Microsoft",
+  "vulnerabilityName": "Microsoft Windows Link Following Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-81963\nGHSA-4j4j-2wjq-mxqj\n",
+  "assigner": "microsoft",
+  "baseScore": 7.8,
+  "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 8, 2026, 5:19:13 PM",
+  "dateUpdated": "Oct 1, 2026, 11:00:57 PM",
+  "description": "Improper link resolution before file access ('link following') in Windows Update Stack allows an authorized attacker to elevate privileges locally.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "020535d7-e5f3-36c5-82a3-9d0b301d2a6f",
+       "product": {
+        "name": "Windows 10 22h2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "02ca28b9-3011-3a4e-b990-8ac5ee8a4d4d",
+       "product": {
+        "name": "Windows 10 1607",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "152967f4-9a62-3d10-93a7-c5e56096a019",
+       "product": {
+        "name": "Windows 10 Version 22H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "15510662-1898-3299-805f-da20899c7d95",
+       "product": {
+        "name": "Windows 10 Version 22H2 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "1a32e295-6416-320a-9c94-4660ca9fe696",
+       "product": {
+        "name": "Windows 11 Version 23H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "23a14e48-f551-3249-96e8-07b2f45cbdcf",
+       "product": {
+        "name": "Windows 11 version 26H1 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "29c29af7-b3ee-3361-b551-f43151ddd78a",
+       "product": {
+        "name": "Windows 10 Version 1607",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "36e9f8fa-1a10-32db-90eb-58c8d6eadb85",
+       "product": {
+        "name": "Windows 10 Version 1809 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "37545f04-90b0-338f-82a4-7942de9ea585",
+       "product": {
+        "name": "Windows 10 Version 1607 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "3bca823f-8499-3ee4-a21f-17869f5930e6",
+       "product": {
+        "name": "Windows 11 Version 25H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "4702b4b0-1eae-3951-9092-5eb6f5b49926",
+       "product": {
+        "name": "Windows 11 Version 25H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "48f37e64-e937-3667-90b7-2c557338c7a0",
+       "product": {
+        "name": "Windows 11 Version 26H1 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "49e772ca-9c2f-342c-b892-2f44de51cd81",
+       "product": {
+        "name": "Windows 10 Version 22H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "5204b98a-9f65-3e92-b13b-afa7d4d10580",
+       "product": {
+        "name": "Windows Server 2012 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "576ca8aa-246d-3db3-9b94-379f8cd62b51",
+       "product": {
+        "name": "Windows 11 Version 24H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "606836c3-9797-39fe-bf2f-33eee397591a",
+       "product": {
+        "name": "Windows 10 Version 21H2 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "76ce99d1-9d2e-3e7c-935c-e82ec4fc27cd",
+       "product": {
+        "name": "Windows Server 2012 R2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "81f71e61-ea8c-38ad-80f3-93196f7b5404",
+       "product": {
+        "name": "Windows 10 Version 1607 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "8f7eb70a-da6d-38b6-aabf-91c2d7018e86",
+       "product": {
+        "name": "Windows 10 1809",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "982b990c-4a22-3f5c-ab20-7f94be66b7f0",
+       "product": {
+        "name": "Windows 11 Version 23H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "9acdc294-9759-38f7-8172-40d6faaee1e2",
+       "product": {
+        "name": "Windows 10 Version 1809",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "9d822eba-d170-30aa-8b69-8cc9894df6a3",
+       "product": {
+        "name": "Windows 10 Version 21H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "a13e5841-0849-313a-9aea-0c859cc22570",
+       "product": {
+        "name": "Windows 10 Version 21H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "a3dc3c2c-ee72-3d38-a042-088195b074c5",
+       "product": {
+        "name": "Windows 10 21h2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "ad4dd4d9-7a92-30e3-b653-358d985c225b",
+       "product": {
+        "name": "Windows 11 Version 24H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b22f4e01-54ab-30ea-975b-89f9ab2a41b0",
+       "product": {
+        "name": "Windows 10 Version 22H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b26178d6-85b3-3892-a5d8-6f2c0d3d0365",
+       "product": {
+        "name": "Windows 11 Version 24H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b5756bc1-4e4c-3538-b5ef-60efaa7328b4",
+       "product": {
+        "name": "Windows 10 Version 21H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b76672c9-439a-3915-bbee-8f03b2f497f4",
+       "product": {
+        "name": "Windows 10 Version 1809 for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b94e685b-1849-3f40-807c-76556944778d",
+       "product": {
+        "name": "Windows Server 2019",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b9b3f89f-c65b-30ba-a0e6-cb6cbce333d6",
+       "product": {
+        "name": "Windows Server 2016 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c6a89e08-1bbc-372d-936e-eb5b141dbbbe",
+       "product": {
+        "name": "Windows Server 2012 R2 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c9ef3f0f-4e08-364e-a21b-634dde749053",
+       "product": {
+        "name": "Windows Server 2012",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d115d7d0-c793-3acc-8abc-483e175c92e6",
+       "product": {
+        "name": "Windows 11 23H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d3a8238b-1fb2-38da-9043-afaf28a99439",
+       "product": {
+        "name": "Microsoft Windows 11 Version 26H1",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d5660e75-765b-332c-9618-da768b67bc86",
+       "product": {
+        "name": "Windows",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "e87b9595-eb6b-341b-91b3-fc75fc420d46",
+       "product": {
+        "name": "Windows 11 Version 23H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "ff713b56-52a7-37b9-96a1-f7e1149fc80d",
+       "product": {
+        "name": "Windows Server 2016",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-68839\nCVE-2026-69276\nCVE-2026-69431\nCVE-2026-69434\nCVE-2026-69463\nCVE-2026-69493\nCVE-2026-69496\nCVE-2026-69525\nCVE-2026-69579\nCVE-2026-69590\nCVE-2026-69595\nCVE-2026-69639\nCVE-2026-69669\nCVE-2026-69715\nCVE-2026-69730\nCVE-2026-69768\nCVE-2026-69769\nCVE-2026-69774\nCVE-2026-69819\nCVE-2026-69824\nCVE-2026-69829\nCVE-2026-69845\nCVE-2026-69910\nCVE-2026-70296\nCVE-2026-72979\nCVE-2026-72982\nCVE-2026-72983\nCVE-2026-73009\nCVE-2026-73010\nCVE-2026-73025\nCVE-2026-77493\nCVE-2026-78445\nCVE-2026-81963\nCVE-2026-85880\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 8, 2026, 6:49:09 PM",
+     "dateUpdated": "Sep 9, 2026, 8:04:57 AM",
+     "description": "Kwetsbaarheden verholpen in Microsoft Windows",
+     "id": "NCSC-2026-0353",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "48d4dc7d-3e24-31ab-8c2c-f93d58d6ac61"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "2b3e7adf-9861-35ed-bc29-9673574223d2",
+       "product": {
+        "name": "Windows 11 Version 23H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "62e381e8-947a-3e26-a4d4-e2f215c9b73e",
+       "product": {
+        "name": "Windows 11 version 26H1 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "9ccfa773-9904-368d-ab71-22e291ab2f02",
+       "product": {
+        "name": "Windows 11 Version 25H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "a3061097-b976-303d-9c91-5264c37e8bb0",
+       "product": {
+        "name": "Windows 11 Version 24H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "a76c04a9-c8cc-3f8b-aeb1-3ca0de82a9af",
+       "product": {
+        "name": "Windows 11 Version 25H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b05a4a19-ed78-3c06-8305-7ed41e4b72b8",
+       "product": {
+        "name": "10.0.26200.9445",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b7436aad-5401-309b-b772-ce4fa4756313",
+       "product": {
+        "name": "Windows Server 2025",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c8c041d8-4255-3029-99d6-0a03d1df0228",
+       "product": {
+        "name": "Windows 11 Version 23H2 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "cb98e15f-39ad-343e-a34e-b5e376f09c46",
+       "product": {
+        "name": "Windows 11 Version 24H2 for x64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "ce4fcbde-b5b2-32a7-9dfd-9a660a06d4c1",
+       "product": {
+        "name": "Windows 11 Version 26H1 for ARM64-based Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d12bb991-2544-3ac4-a5e1-c600fb8b2a10",
+       "product": {
+        "name": "10.0.26100.9445",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d2d6dfc0-77b0-3744-976e-b63ad89f10ce",
+       "product": {
+        "name": "10.0.22631.7582",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d72d7953-3d9a-3ee1-ad23-fce25c5ad505",
+       "product": {
+        "name": "10.0.26100.33438",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "f071fe33-810d-3fd0-a319-d2625ffcc391",
+       "product": {
+        "name": "10.0.28000.2954",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "f0d3135f-57f2-372a-825e-2e3ac033f264",
+       "product": {
+        "name": "Windows Server 2025 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-81963\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 8, 2026, 7:00:00 AM",
+     "dateUpdated": "Sep 11, 2026, 7:00:00 AM",
+     "description": "Windows Update Stack Elevation of Privilege Vulnerability",
+     "id": "msrc_CVE-2026-81963",
+     "references": "https://msrc.microsoft.com/csaf/vex/2026/msrc_cve-2026-81963.json\n",
+     "source": {
+      "id": 20,
+      "name": "csaf_microsoft"
+     }
+    },
+    "id": "b438e798-a8b9-3be9-954e-530f4ca07dda"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "1c265b55-315d-3af8-81f6-8b71e0059b28",
+    "product": {
+     "name": "Windows 11 Version 24H2",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.26100.0 <10.0.26100.9445"
+   },
+   {
+    "id": "32144fa9-bee4-34a0-9716-09ca6424e9ac",
+    "product": {
+     "name": "Windows 11 Version 23H2",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.22631.0 <10.0.22631.7582"
+   },
+   {
+    "id": "38f379e6-5cad-3c03-aea9-e4ac4beed19e",
+    "product": {
+     "name": "Windows Server 2025",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.26100.0 <10.0.26100.33438"
+   },
+   {
+    "id": "3baa001e-ca3e-3d4d-9ef7-bbd47e76a30c",
+    "product": {
+     "name": "Windows 11 version 26H1",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.28000.0 <10.0.28000.2954"
+   },
+   {
+    "id": "4ab5ccec-c349-3f25-9e68-9323d87a43c2",
+    "product": {
+     "name": "Windows Server 2025 (Server Core installation)",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.26100.0 <10.0.26100.33438"
+   },
+   {
+    "id": "684bf56b-3904-3514-85b7-0228c64fa0d6",
+    "product": {
+     "name": "Windows 11 Version 25H2",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "10.0.26200.0 <10.0.26200.9445"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "99ada127-81de-3e3a-a401-3d9048062fee",
+    "vendor": {
+     "name": "Microsoft"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "52fc140b-56bc-309a-b256-4bc97e855da2",
+    "vulnerability": {
+     "aliases": "GHSA-4j4j-2wjq-mxqj\nCVE-2026-81963\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 4, 2026, 1:55:42 AM",
+     "datePublished": "Sep 8, 2026, 6:33:34 PM",
+     "dateUpdated": "Sep 8, 2026, 9:34:08 PM",
+     "description": "Improper link resolution before file access ('link following') in Windows Update Stack allows an authorized attacker to elevate privileges locally.",
+     "enisa_id": "EUVD-2026-73889\n",
+     "epss": 0.0,
+     "id": "GHSA-4j4j-2wjq-mxqj",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-81963\nhttps://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81963\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-81963\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "782ed697-5ffd-3ddc-85b1-de0b10aa4ee4",
+    "vulnerability": {
+     "assigner": "microsoft",
+     "baseScore": 7.8,
+     "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 4, 2026, 3:33:08 AM",
+     "datePublished": "Sep 8, 2026, 5:19:13 PM",
+     "dateUpdated": "Oct 1, 2026, 11:00:57 PM",
+     "description": "Improper link resolution before file access ('link following') in Windows Update Stack allows an authorized attacker to elevate privileges locally.",
+     "enisa_id": "EUVD-2026-73889\n",
+     "epss": 0.39,
+     "exploitedSince": "Sep 8, 2026, 12:00:00 AM",
+     "id": "CVE-2026-81963",
+     "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81963\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "18ac0c4a-f0db-3cd3-a513-69729cecbff2",
+       "product": {
+        "name": "Windows Server 2025 (Server Core installation)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.26100.0 <10.0.26100.33438"
+      },
+      {
+       "id": "5ae17589-00b2-3294-83ff-f5a41c5822ea",
+       "product": {
+        "name": "Windows Server 2025",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.26100.0 <10.0.26100.33438"
+      },
+      {
+       "id": "8b8e2892-74ea-3208-b123-6074301754b6",
+       "product": {
+        "name": "Windows 11 Version 23H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.22631.0 <10.0.22631.7582"
+      },
+      {
+       "id": "905634be-56a4-3182-a61a-02577d383d2f",
+       "product": {
+        "name": "Windows 11 Version 24H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.26100.0 <10.0.26100.9445"
+      },
+      {
+       "id": "aeded638-23fd-3f24-9602-76a27e299788",
+       "product": {
+        "name": "Windows 11 Version 25H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.26200.0 <10.0.26200.9445"
+      },
+      {
+       "id": "b6e5c634-e88c-35b1-b479-f275594e192f",
+       "product": {
+        "name": "Windows 11 Version 23H2",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.22631.0 <10.0.22631.7582"
+      },
+      {
+       "id": "ff705c00-7c97-3f2b-92c8-67416118f0a7",
+       "product": {
+        "name": "Windows 11 version 26H1",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "10.0.28000.0 <10.0.28000.2954"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "00a0361b-9a14-38bc-b3d9-798b65a1a021",
+       "vendor": {
+        "name": "Microsoft"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "7b976ae7-f259-31dc-a822-818e42aa5426",
+  "epss": 0.39,
+  "exploitedSince": "Sep 8, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-73889",
+  "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81963\n"
+ },
+ "id": "EUVD-2026-73889",
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "platforms": [
+       "ARM64-based Systems"
+      ],
+      "product": "Windows 11 version 23H2",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.22631.7582",
+        "status": "affected",
+        "version": "10.0.22631.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows 11 Version 23H2",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.22631.7582",
+        "status": "affected",
+        "version": "10.0.22631.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "ARM64-based Systems",
+       "x64-based Systems"
+      ],
+      "product": "Windows 11 Version 24H2",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.26100.9445",
+        "status": "affected",
+        "version": "10.0.26100.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "ARM64-based Systems",
+       "x64-based Systems"
+      ],
+      "product": "Windows 11 Version 25H2",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.26200.9445",
+        "status": "affected",
+        "version": "10.0.26200.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "ARM64-based Systems",
+       "x64-based Systems"
+      ],
+      "product": "Windows 11 version 26H1",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.28000.2954",
+        "status": "affected",
+        "version": "10.0.28000.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows Server 2025",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.26100.33438",
+        "status": "affected",
+        "version": "10.0.26100.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "x64-based Systems"
+      ],
+      "product": "Windows Server 2025 (Server Core installation)",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "10.0.26100.33438",
+        "status": "affected",
+        "version": "10.0.26100.0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "secure@microsoft.com"
+   }
+  ],
+  "cisaActionDue": "2026-09-22",
+  "cisaExploitAdd": "2026-09-08",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Microsoft Windows Link Following Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:arm64:*",
+        "matchCriteriaId": "97D353CE-F9A4-46B5-BC5C-BF422E10785D",
+        "versionEndExcluding": "10.0.22631.7582",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:x64:*",
+        "matchCriteriaId": "A2B42421-4694-4879-A69B-6A9192E2CFB8",
+        "versionEndExcluding": "10.0.22631.7582",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:arm64:*",
+        "matchCriteriaId": "990434BE-FE81-48CC-8803-94FAEB694DE2",
+        "versionEndExcluding": "10.0.26100.9445",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:x64:*",
+        "matchCriteriaId": "045BBF02-6FDD-44D4-B278-0C52A5406956",
+        "versionEndExcluding": "10.0.26100.9445",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_11_25h2:*:*:*:*:*:*:arm64:*",
+        "matchCriteriaId": "948460EF-4053-4106-8D9E-4EDC3BF7B682",
+        "versionEndExcluding": "10.0.26200.9445",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_11_25h2:*:*:*:*:*:*:x64:*",
+        "matchCriteriaId": "D4F1D717-582C-446B-B90F-1D25028DA77F",
+        "versionEndExcluding": "10.0.26200.9445",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_11_26h1:*:*:*:*:*:*:arm64:*",
+        "matchCriteriaId": "4B46D2B8-7E89-4818-862C-30B9751BA6EA",
+        "versionEndExcluding": "10.0.28000.2954",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_11_26h1:*:*:*:*:*:*:x64:*",
+        "matchCriteriaId": "165C7909-F15B-4328-A175-B9FEF3BEB82D",
+        "versionEndExcluding": "10.0.28000.2954",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "48D75543-6B91-41E9-A1FB-1A09A2CBD738",
+        "versionEndExcluding": "10.0.26100.33438",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Improper link resolution before file access ('link following') in Windows Update Stack allows an authorized attacker to elevate privileges locally."
+   }
+  ],
+  "id": "CVE-2026-81963",
+  "lastModified": "2026-09-09T05:18:17.173",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "LOCAL",
+      "availabilityImpact": "HIGH",
+      "baseScore": 7.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 1.8,
+     "impactScore": 5.9,
+     "source": "secure@microsoft.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-81963",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-07T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-08T18:21:00.090",
+  "references": [
+   {
+    "source": "secure@microsoft.com",
+    "tags": [
+     "Patch",
+     "Vendor Advisory"
+    ],
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81963"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-81963"
+   }
+  ],
+  "sourceIdentifier": "secure@microsoft.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-59"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-284"
+     }
+    ],
+    "source": "secure@microsoft.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
