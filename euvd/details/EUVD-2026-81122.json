@@ -863,6 +863,7 @@
   "id": "EUVD-2026-81122",
   "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-81122",
  "nvd": {
   "affected": [

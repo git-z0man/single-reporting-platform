@@ -13,6 +13,7 @@ ce = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(ce)
 
 FETCHED = []
+REAL_HONEYPOT_BATCH = ce.enrich.honeypot_batch
 
 
 def item(n, since="Sep 12, 2026, 12:00:00 AM", updated="Sep 13, 2026, 3:00:00 AM", vendor="Acme"):
@@ -44,12 +45,21 @@ def fake_nvd(cve):
             "metrics": {}, "weaknesses": [], "references": [{"url": "https://cvcn.gov.it/a"}]}
 
 
+def obs(**kw):
+    return {"cveId": "CVE-2026-5001", "source": "shadowserver", "firstSeenAt": "Oct 1, 2026, 3:00:00 AM",
+            "lastSeenAt": "Oct 5, 2026, 7:00:00 AM", "connections1d": 4, "uniqueIps1d": 1, "avg7d": 1.0, "avg30d": 0.0,
+            "avg90d": 0.0, "vendor": "Acme", "product": "Widget", "vulnClass": "other-software", "trend": "STEADY",
+            "isNew": False, **kw}
+
+
 class Case(unittest.TestCase):
     def setUp(self):
         FETCHED.clear()
         self.catalog = {"CVE-2026-5001": {"cveID": "CVE-2026-5001", "dateAdded": "2026-09-12", "vulnerabilityName": "N",
                                           "vendorProject": "Acme", "forensicTriage": "No", "futureField": "x"}}
-        for name, fn in (("euvd_record", fake_euvd), ("nvd_record", fake_nvd), ("cisa_catalog", lambda: self.catalog)):
+        self.hp = {}
+        for name, fn in (("euvd_record", fake_euvd), ("nvd_record", fake_nvd), ("cisa_catalog", lambda: self.catalog),
+                         ("honeypot_batch", lambda ids: {i: self.hp.get(i, []) for i in ids})):
             old = getattr(ce.enrich, name)
             setattr(ce.enrich, name, fn)
             self.addCleanup(setattr, ce.enrich, name, old)
@@ -164,6 +174,43 @@ class Case(unittest.TestCase):
                        "&lt;script&gt;alert(1)&lt;/script&gt;"):
             self.assertIn(needle, page)
         self.assertNotIn("<script>alert(1)", page)
+
+    # --- honeypot sensors ---
+
+    def test_first_honeypot_sighting_is_a_change(self):
+        self.run_check(base_items())
+        self.hp["EUVD-2026-5001"] = [obs()]
+        self.assertEqual(self.run_check(base_items()), 1)
+        self.assertEqual({e["id"]: e["honeypot"] for e in self.state()["entries"]}["EUVD-2026-5001"], "2026-10-01")
+        self.assertIn("| CVE-2026-5001 | 2026-10-01 |", self.md())
+        self.assertIn("seen in honeypot", self.page())
+        self.assertIn("Honeypot sensors (Shadowserver, via EUVD)", self.page())
+
+    def test_honeypot_counts_are_not_a_change_but_the_heartbeat_records_them(self):
+        self.hp["EUVD-2026-5001"] = [obs()]
+        self.run_check(base_items())
+        self.hp["EUVD-2026-5001"] = [obs(connections1d=3331, trend="UPTICK", lastSeenAt="Oct 6, 2026, 7:11:51 AM")]
+        before = self.md()
+        self.assertEqual(self.run_check(base_items(), None, "--heartbeat"), 0)
+        self.assertEqual(self.md().replace("last_check: 2026-10-05", "x"), before.replace("last_check: 2026-10-05", "x"))
+        det = json.load(open(os.path.join(self.root, "euvd", "details", "EUVD-2026-5001.json")))
+        self.assertEqual(det["honeypot"][0]["connections1d"], 3331)
+        self.assertIn("3331 connections", self.page())
+
+    def test_honeypot_without_first_seen_fails(self):
+        self.hp["EUVD-2026-5001"] = [{"cveId": "CVE-2026-5001"}]
+        self.assertEqual(self.run_check(base_items()), 2)
+        self.assertFalse(os.path.exists(os.path.join(self.root, "euvd", "exploited.json")))
+
+    def test_incomplete_honeypot_answer_is_a_failed_fetch(self):
+        orig = ce.enrich._get
+        self.addCleanup(setattr, ce.enrich, "_get", orig)
+        ce.enrich._get = lambda url: json.dumps({"EUVD-2026-1": []})
+        with self.assertRaises(ce.enrich.FetchError):
+            REAL_HONEYPOT_BATCH(["EUVD-2026-1", "EUVD-2026-2"])
+        ce.enrich._get = lambda url: json.dumps({"EUVD-2026-1": ["x"]})
+        with self.assertRaises(ce.enrich.FetchError):
+            REAL_HONEYPOT_BATCH(["EUVD-2026-1"])
 
     def test_render_only_needs_no_network(self):
         self.run_check(base_items())

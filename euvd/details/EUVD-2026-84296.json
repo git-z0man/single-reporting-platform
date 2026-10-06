@@ -212,6 +212,7 @@
   "id": "EUVD-2026-84296",
   "references": "https://www.arista.com/en/support/advisories-notices/security-advisory/24765-security-advisory-0183\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-84296",
  "nvd": {
   "affected": [

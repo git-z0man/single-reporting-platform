@@ -1583,6 +1583,7 @@
   "id": "EUVD-2026-50404",
   "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-BET3Cjh\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-50404",
  "nvd": {
   "affected": [

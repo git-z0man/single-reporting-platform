@@ -334,6 +334,26 @@
   "id": "EUVD-2026-67861",
   "references": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories\nhttps://docs.jfrog.com/releases/docs/artifactory-self-managed-releases\n"
  },
+ "honeypot": [
+  {
+   "avg30d": 0.0,
+   "avg7d": 0.0,
+   "avg90d": 0.0,
+   "cisaKevFlag": true,
+   "connections1d": 1,
+   "cveId": "CVE-2026-82329",
+   "firstSeenAt": "Oct 6, 2026, 7:11:51 AM",
+   "isNew": true,
+   "lastSeenAt": "Oct 6, 2026, 7:11:51 AM",
+   "product": "Artifactory",
+   "source": "shadowserver",
+   "trend": "STEADY",
+   "uniqueIps1d": 1,
+   "vendor": "JFrog",
+   "vulnClass": "other-software",
+   "vulnSeverity": "Critical"
+  }
+ ],
  "id": "EUVD-2026-67861",
  "nvd": {
   "affected": [

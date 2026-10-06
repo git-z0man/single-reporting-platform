@@ -470,6 +470,7 @@
   "id": "EUVD-2026-74529",
   "references": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html\nhttps://issues.chromium.org/issues/543557673\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-74529",
  "nvd": {
   "affected": [

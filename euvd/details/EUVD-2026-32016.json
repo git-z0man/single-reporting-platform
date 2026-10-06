@@ -12805,6 +12805,7 @@
   "id": "EUVD-2026-32016",
   "references": "https://github.com/Kludex/starlette/security/advisories/GHSA-86qp-5c8j-p5mr\nhttps://github.com/Kludex/starlette/commit/764dab0dcfb9033d75442d7a359645c9f94648c6\nhttps://badhost.org\nhttps://github.com/pypa/advisory-database/tree/main/vulns/starlette/PYSEC-2026-161.yaml\nhttps://ostif.org/disclosing-the-badhost-vulnerability-in-starlette\nhttps://www.secwest.net/starlette\nhttps://www.x41-dsec.de/lab/advisories/x41-2026-002-starlette\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-32016",
  "nvd": {
   "affected": [

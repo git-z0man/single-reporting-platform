@@ -740,6 +740,7 @@
   "id": "EUVD-2026-73889",
   "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81963\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-73889",
  "nvd": {
   "affected": [

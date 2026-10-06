@@ -135,6 +135,7 @@
   "id": "EUVD-2026-69707",
   "references": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0016\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-69707",
  "nvd": {
   "affected": [

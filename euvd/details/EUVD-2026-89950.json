@@ -8685,6 +8685,7 @@
   "id": "EUVD-2026-89950",
   "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-89950",
  "nvd": {
   "affected": [

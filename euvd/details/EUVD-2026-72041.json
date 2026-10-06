@@ -143,6 +143,7 @@
   "id": "EUVD-2026-72041",
   "references": "https://me.n-able.com/s/security-advisory/aArVy0000002Ld3KAE/cve202686218-preauthentication-remote-code-execution\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-72041",
  "nvd": {
   "affected": [

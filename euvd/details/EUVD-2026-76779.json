@@ -232,6 +232,7 @@
   "id": "EUVD-2026-76779",
   "references": "https://gitlab.com/gitlab-org/gitlab/-/work_items/627748\nhttps://hackerone.com/reports/3909881\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-76779",
  "nvd": {
   "affected": [

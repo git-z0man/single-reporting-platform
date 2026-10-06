@@ -133,6 +133,7 @@
   "id": "EUVD-2026-42359",
   "references": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q\nhttps://github.com/BerriAI/litellm/pull/26463\nhttps://github.com/BerriAI/litellm/commit/73869f0faf7d11ee21adcb5f91b8c33a340b6c2c\nhttps://github.com/BerriAI/litellm/releases/tag/v1.84.0\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-42359",
  "nvd": {
   "affected": [

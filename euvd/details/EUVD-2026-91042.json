@@ -224,6 +224,7 @@
   "id": "EUVD-2026-91042",
   "references": "https://fortiguard.fortinet.com/psirt/FG-IR-26-175\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-91042",
  "nvd": {
   "affected": [

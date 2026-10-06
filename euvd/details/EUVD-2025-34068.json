@@ -30085,6 +30085,7 @@
   "id": "EUVD-2025-34068",
   "references": "https://git.kernel.org/stable/c/0f28c4adbc4a97437874c9b669fd7958a8c6d6ce\nhttps://git.kernel.org/stable/c/e4c1ec11132ec466f7362a95f36a506ce4dc08c9\nhttps://git.kernel.org/stable/c/1f323a48e9b5ebfe6dc7d130fdf5c3c0e92a07c8\nhttps://git.kernel.org/stable/c/7c4491b5644e3a3708f3dbd7591be0a570135b84\nhttps://git.kernel.org/stable/c/9aee87da5572b3a14075f501752e209801160d3d\nhttps://git.kernel.org/stable/c/45bcf60fe49b37daab1acee57b27211ad1574042\nhttps://git.kernel.org/stable/c/1b34cbbf4f011a121ef7b2d7d6e6920a036d5285\n"
  },
+ "honeypot": [],
  "id": "EUVD-2025-34068",
  "nvd": {
   "affected": [

@@ -115,6 +115,26 @@
   "id": "EUVD-2026-45205",
   "references": "https://sangomakb.atlassian.net/wiki/spaces/Switchvox/pages/1802371073/Switchvox+-+Release+Notes+Version+8.4.0.2+July+14+2026\nhttps://labs.sra.io/posts/switchvox/\n"
  },
+ "honeypot": [
+  {
+   "avg30d": 1.0,
+   "avg7d": 2.0,
+   "avg90d": 0.0,
+   "cisaKevFlag": true,
+   "connections1d": 25,
+   "cveId": "CVE-2026-9586",
+   "firstSeenAt": "Sep 4, 2026, 3:00:00 AM",
+   "isNew": false,
+   "lastSeenAt": "Oct 6, 2026, 7:11:51 AM",
+   "product": "Sangoma Switchvox",
+   "source": "shadowserver",
+   "trend": "UPTICK",
+   "uniqueIps1d": 1,
+   "vendor": "Sangoma",
+   "vulnClass": "voip",
+   "vulnSeverity": "Critical"
+  }
+ ],
  "id": "EUVD-2026-45205",
  "nvd": {
   "affected": [

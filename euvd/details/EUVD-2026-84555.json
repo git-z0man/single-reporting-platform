@@ -126,6 +126,7 @@
   "id": "EUVD-2026-84555",
   "references": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-84555",
  "nvd": {
   "affected": [

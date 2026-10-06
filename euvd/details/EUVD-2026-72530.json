@@ -201,6 +201,7 @@
   "id": "EUVD-2026-72530",
   "references": "https://helpx.adobe.com/security/products/magento/apsb26-146.html\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-72530",
  "nvd": {
   "affected": [

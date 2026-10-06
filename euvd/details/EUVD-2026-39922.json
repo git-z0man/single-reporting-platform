@@ -121,6 +121,7 @@
   "id": "EUVD-2026-39922",
   "references": "https://github.com/kestra-io/kestra/security/advisories/GHSA-5vc5-wxxq-3fjx\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-39922",
  "nvd": {
   "affected": [

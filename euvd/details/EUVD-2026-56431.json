@@ -552,6 +552,7 @@
   "id": "EUVD-2026-56431",
   "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-56431",
  "nvd": {
   "affected": [

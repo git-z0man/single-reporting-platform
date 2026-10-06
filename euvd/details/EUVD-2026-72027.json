@@ -228,6 +228,7 @@
   "id": "EUVD-2026-72027",
   "references": "https://cert.pl/en/posts/2026/09/mikrotik-routeros-cve\nhttps://cert.pl/en/posts/2026/09/vulnerabilities-in-mikrotik-routeros-actively-exploited/\nhttps://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/\nhttps://mikrotik.com/supportsec/september-2026-vulnerability/\nhttps://forum.mikrotik.com/t/6-49-21-long-term-is-released/272802\nhttps://forum.mikrotik.com/t/7-23-4-long-term-is-released/272801\nhttps://forum.mikrotik.com/t/7-24-2-stable-is-released/272800\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-72027",
  "nvd": {
   "affected": [

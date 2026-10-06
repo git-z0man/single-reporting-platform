@@ -115,6 +115,7 @@
   "id": "EUVD-2026-79004",
   "references": "https://source.android.com/docs/security/bulletin/pixel/2026/2026-09-01\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-79004",
  "nvd": {
   "affected": [

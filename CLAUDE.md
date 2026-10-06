@@ -207,8 +207,8 @@ The reasoning is in the script's header comment.
 ## EUVD exploited-vulnerabilities routine
 
 `euvd-exploited-baseline.md` and everything under `euvd/` (the script, the data
-in `euvd/exploited.json`, one record per entry under `euvd/details/` and the page
-`euvd/index.html`) are maintained by a scheduled task that runs
+in `euvd/exploited.json`, one record per entry under `euvd/details/`, including the
+EUVD's honeypot sensor sightings, and the page `euvd/index.html`) are maintained by a scheduled task that runs
 `euvd/check_exploited.py` daily at 06:20 UTC. The prompt is
 `routines/euvd-exploited-monitor.md`.
 

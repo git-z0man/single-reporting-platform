@@ -135,6 +135,7 @@
   "id": "EUVD-2026-70647",
   "references": "https://github.com/geonetwork/core-geonetwork/security/advisories/GHSA-mh22-prqr-vf42\nhttps://github.com/geonetwork/core-geonetwork/pull/9346\nhttps://docs.geonetwork-opensource.org/4.2/overview/change-log/version-4.2.17\nhttps://docs.geonetwork-opensource.org/4.4/overview/change-log/version-4.4.12\nhttps://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-70647",
  "nvd": {
   "affected": [
