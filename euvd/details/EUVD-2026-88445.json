@@ -183,7 +183,14 @@
   "id": "EUVD-2026-88445",
   "references": "https://support.apple.com/en-us/149226\nhttps://support.apple.com/en-us/149228\nhttps://support.apple.com/en-us/149229\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-88445",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 29, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {

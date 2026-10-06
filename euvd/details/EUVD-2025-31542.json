@@ -20115,7 +20115,14 @@
   "id": "EUVD-2025-31542",
   "references": "https://git.kernel.org/stable/c/2902c3ebcca52ca845c03182000e8d71d3a5196f\nhttps://git.kernel.org/stable/c/c09dd3773b5950e9cfb6c9b9a5f6e36d06c62677\nhttps://git.kernel.org/stable/c/3439c15ae91a517cf3c650ea15a8987699416ad9\nhttps://git.kernel.org/stable/c/29c0ce3c8cdb6dc5d61139c937f34cb888a6f42e\nhttps://git.kernel.org/stable/c/62708b9452f8eb77513115b17c4f8d1a22ebf843\n"
  },
+ "honeypot": [],
  "id": "EUVD-2025-31542",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 18, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {

@@ -552,7 +552,18 @@
   "id": "EUVD-2026-56431",
   "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65660\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-56431",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 25, 2026, 12:00:00 AM",
+   "source": "CISA"
+  },
+  {
+   "dateAdded": "Sep 25, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
  "nvd": {
   "affected": [
    {

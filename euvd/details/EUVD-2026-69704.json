@@ -136,7 +136,14 @@
   "id": "EUVD-2026-69704",
   "references": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0016\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-69704",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 2, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {

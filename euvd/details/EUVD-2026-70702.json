@@ -443,7 +443,14 @@
   "id": "EUVD-2026-70702",
   "references": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_01882797386.html\nhttps://issues.chromium.org/issues/542403045\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-70702",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 4, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {

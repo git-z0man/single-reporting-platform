@@ -143,7 +143,14 @@
   "id": "EUVD-2026-49566",
   "references": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories\nhttps://docs.jfrog.com/releases/docs/artifactory-self-managed-releases\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-49566",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 11, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {

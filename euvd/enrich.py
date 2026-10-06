@@ -5,9 +5,15 @@ Sources, all public and read-only:
   - NVD    services.nvd.nist.gov  the CVE record (CVSS metrics, CWE, references, CISA fields)
   - CISA   known_exploited_vulnerabilities.json   the KEV catalogue entry for the CVE
   - CERTs  links in the records whose host is a CERT or CSIRT, listed by host
+  - EUVD   /api/honeypotObservations/batch?ids=...   Shadowserver honeypot sensor sightings, read for
+           every entry on every run (one call per 50 entries); the EUVD page shows them as "Honeypot sensors"
+  - EUVD   /api/kevEntries/batch?ids=...   the day each KEV catalogue (CISA KEV, EU KEV) added the entry,
+           per source; read for every entry on every run
 
 Stored per entry in euvd/details/<EUVD-ID>.json. Volatile fields (EPSS, EUVD's
-dataProcessed stamp) are kept as last seen but never count as a change.
+dataProcessed stamp, the honeypot counts, averages and trend) are kept as last seen but
+never count as a change. Of a honeypot sighting only the fact, firstSeenAt and the
+product fields count: the counts move every day.
 """
 import html
 import json
@@ -19,7 +25,10 @@ import urllib.parse
 EUVD_ONE = "https://euvdservices.enisa.europa.eu/api/enisaid?id="
 NVD = "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId="
 CISA = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
-VOLATILE = {"epss", "dataProcessed"}
+HONEYPOT = "https://euvdservices.enisa.europa.eu/api/honeypotObservations/batch?ids="
+KEV_ENTRIES = "https://euvdservices.enisa.europa.eu/api/kevEntries/batch?ids="
+HONEYPOT_VOLATILE = {"lastSeenAt", "connections1d", "uniqueIps1d", "avg7d", "avg30d", "avg90d", "trend", "isNew"}
+VOLATILE = {"epss", "dataProcessed"} | HONEYPOT_VOLATILE
 CERT_SOURCES = ("cert", "ncsc", "cisa", "csirt", "bsi", "cnsa")
 # host suffix -> display name
 CERT_HOSTS = {
@@ -84,6 +93,31 @@ def cisa_catalog():
         raise FetchError("CISA catalogue not parseable")
 
 
+def _batch(base, what, ids, chunk=50):
+    """{EUVD-ID: [object]} from one of the EUVD's batch endpoints; an ID without data maps to [].
+    An answer that leaves out a requested ID, or is not a mapping of lists of objects, is a failed fetch."""
+    out = {}
+    for i in range(0, len(ids), chunk):
+        part = ids[i:i + chunk]
+        try:
+            d = json.loads(_get(base + ",".join(urllib.parse.quote(x) for x in part)))
+        except ValueError:
+            raise FetchError(f"{what} answer is not JSON")
+        if not isinstance(d, dict) or set(part) - set(d) or not all(isinstance(d[x], list) and all(isinstance(o, dict) for o in d[x]) for x in part):
+            raise FetchError(f"{what} answer incomplete for {sorted(set(part) - set(d or {}))[:5] or part[:3]}")
+        out.update({x: d[x] for x in part})
+    return out
+
+
+def honeypot_batch(ids):
+    return _batch(HONEYPOT, "honeypot", ids)
+
+
+def kev_batch(ids):
+    """{EUVD-ID: [{"kevSource": {"code": "CISA" | "EUKEV", ...}, "dateAdded": ...}]}"""
+    return _batch(KEV_ENTRIES, "kevEntries", ids)
+
+
 def strip_volatile(x):
     if isinstance(x, dict):
         return {k: strip_volatile(v) for k, v in x.items() if k not in VOLATILE}
@@ -107,7 +141,7 @@ def cert_links(*texts):
     return sorted(out)
 
 
-def build_detail(old, row, euvd, nvd, kev):
+def build_detail(old, row, euvd, nvd, kev, honeypot=None, kev_sources=None):
     """Merge freshly fetched parts over the stored detail.
 
     euvd=None keeps the stored EUVD part; nvd=False keeps the stored NVD part and
@@ -120,6 +154,12 @@ def build_detail(old, row, euvd, nvd, kev):
         d["nvd"] = nvd
     d.setdefault("nvd", None)
     d["cisa_kev"] = kev
+    if honeypot is not None:
+        d["honeypot"] = honeypot
+    d.setdefault("honeypot", [])
+    if kev_sources is not None:
+        d["kev_sources"] = sorted(({"source": (e.get("kevSource") or {}).get("code"), "dateAdded": e.get("dateAdded")}
+                                   for e in kev_sources), key=lambda x: (str(x["source"]), str(x["dateAdded"])))
     refs = [(d.get("euvd") or {}).get("references"), json.dumps((d.get("nvd") or {}).get("references") or [])]
     d["cert_links"] = cert_links(*refs)
     return d
@@ -204,6 +244,22 @@ def render_entry(row, d):
     else:
         sec.append("<section><h4>CISA KEV catalogue</h4><p><strong>Not in the CISA catalogue.</strong> "
                    "Another source flagged this entry as exploited.</p></section>")
+    ks = row.get("kev_sources") or {}
+    sec.append("<section><h4>KEV catalogues (per source, via EUVD)</h4>" + kv([
+        ("EU KEV added", esc(ks.get("EUKEV")) or "not listed"), ("CISA KEV added", esc(ks.get("CISA")) or "not listed")]
+        + [(code, esc(day_)) for code, day_ in sorted(ks.items()) if code not in ("EUKEV", "CISA")]) + "</section>")
+    hp = d.get("honeypot") or []
+    sec.append("<section><h4>Honeypot sensors (Shadowserver, via EUVD)</h4>" + (
+        "".join(kv([("CVE", esc(o.get("cveId"))), ("Source", esc(o.get("source"))),
+                    ("First seen", esc(o.get("firstSeenAt"))), ("Last seen (as last recorded)", esc(o.get("lastSeenAt"))),
+                    ("Last 24 h (as last recorded)", esc(f"{o['connections1d']} connections, {o.get('uniqueIps1d')} unique IPs")
+                     if o.get("connections1d") is not None else ""),
+                    ("Averages 7d / 30d / 90d", esc(f"{o.get('avg7d')} / {o.get('avg30d')} / {o.get('avg90d')}")
+                     if o.get("avg7d") is not None else ""),
+                    ("Trend (as last recorded)", esc(o.get("trend"))),
+                    ("Product", esc(f"{o.get('vendor') or ''} {o.get('product') or ''}".strip())),
+                    ("Class", esc(o.get("vulnClass")))]) for o in hp)
+        or "<p>Not seen by the honeypot sensors.</p>") + "</section>")
     certs = d.get("cert_links") or []
     cert_adv, vendor_adv = [], []
     for a in e.get("enisaIdAdvisory") or []:
@@ -214,7 +270,7 @@ def render_entry(row, d):
                + ("<h5>Advisories from CERTs</h5>" + ul([advisory(s_, x) for s_, x in cert_adv]) if cert_adv else "") + "</section>")
     if vendor_adv:
         sec.append(f"<section><h4>Vendor advisories ({len(vendor_adv)})</h4>" + ul([advisory(s_, x) for s_, x in vendor_adv]) + "</section>")
-    badge = "" if k else ' <span class="badge">not in CISA KEV</span>'
+    badge = ("" if k else ' <span class="badge">not in CISA KEV</span>') + (' <span class="badge">SRP candidate (indication only)</span>' if row.get("candidate") else "") + (' <span class="badge">seen in honeypot</span>' if hp else "")
     kevs = f"; KEV event {esc(', '.join(row['kev']))}" if row["kev"] else ""
     return (f'<details data-text="{esc((row["id"] + " " + cve + " " + row["vendor"] + " " + (e.get("description") or "")).lower())}">'
             f'<summary><b>{esc(row["id"])}</b> {esc(cve)} · {esc(row["vendor"])} · exploited since {esc(row["exploitedSince"])}'

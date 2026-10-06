@@ -146,7 +146,18 @@
   "id": "EUVD-2026-45280",
   "references": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q\nhttps://wordpress.org/news/2026/07/wordpress-7-0-2-release/\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-45280",
+ "kev_sources": [
+  {
+   "dateAdded": "Jul 21, 2026, 12:00:00 AM",
+   "source": "CISA"
+  },
+  {
+   "dateAdded": "Sep 21, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
  "nvd": {
   "affected": [
    {

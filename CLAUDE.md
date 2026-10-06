@@ -207,8 +207,8 @@ The reasoning is in the script's header comment.
 ## EUVD exploited-vulnerabilities routine
 
 `euvd-exploited-baseline.md` and everything under `euvd/` (the script, the data
-in `euvd/exploited.json`, one record per entry under `euvd/details/` and the page
-`euvd/index.html`) are maintained by a scheduled task that runs
+in `euvd/exploited.json`, one record per entry under `euvd/details/`, including the
+EUVD's honeypot sensor sightings, and the page `euvd/index.html`) are maintained by a scheduled task that runs
 `euvd/check_exploited.py` daily at 06:20 UTC. The prompt is
 `routines/euvd-exploited-monitor.md`.
 
@@ -227,7 +227,10 @@ paging, an implausibly small set) is a failed check, never a content change.
 
 The baseline never says which entry was the first reported through the SRP: no
 source records the reporting route, and the list largely follows CISA's catalogue.
-A change-log entry must not imply otherwise.
+It may list **candidates**, and does so in its "SRP candidates" section, but only by
+the criteria stated there (computed by the script) and always as indications. A
+change-log entry names a new candidate as such and must not imply that it was
+reported through the SRP.
 
 ## Guide sync routine
 

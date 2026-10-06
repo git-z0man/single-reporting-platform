@@ -252,7 +252,37 @@
   "id": "EUVD-2026-87958",
   "references": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096\n"
  },
+ "honeypot": [
+  {
+   "avg30d": 6.0,
+   "avg7d": 29.0,
+   "avg90d": 2.0,
+   "cisaKevFlag": true,
+   "connections1d": 3331,
+   "cveId": "CVE-2026-88771",
+   "firstSeenAt": "Sep 29, 2026, 3:00:00 AM",
+   "isNew": false,
+   "lastSeenAt": "Oct 6, 2026, 7:11:51 AM",
+   "product": "NetScaler ADC and NetScaler Gateway",
+   "source": "shadowserver",
+   "trend": "UPTICK",
+   "uniqueIps1d": 4,
+   "vendor": "Citrix",
+   "vulnClass": "app-delivery-controller",
+   "vulnSeverity": "Critical"
+  }
+ ],
  "id": "EUVD-2026-87958",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 27, 2026, 12:00:00 AM",
+   "source": "CISA"
+  },
+  {
+   "dateAdded": "Sep 27, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
  "nvd": {
   "affected": [
    {

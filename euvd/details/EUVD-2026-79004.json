@@ -115,7 +115,14 @@
   "id": "EUVD-2026-79004",
   "references": "https://source.android.com/docs/security/bulletin/pixel/2026/2026-09-01\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-79004",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 16, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {

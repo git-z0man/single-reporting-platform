@@ -155,7 +155,14 @@
   "id": "EUVD-2026-82595",
   "references": "https://security-advisory.acronis.com/advisories/SEC-10986\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-82595",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 16, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {

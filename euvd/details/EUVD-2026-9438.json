@@ -1709,7 +1709,18 @@
   "id": "EUVD-2026-9438",
   "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-onprem-fmc-authbypass-5JPp45V2\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-9438",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 9, 2026, 12:00:00 AM",
+   "source": "CISA"
+  },
+  {
+   "dateAdded": "Sep 9, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
  "nvd": {
   "affected": [
    {

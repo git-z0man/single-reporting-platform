@@ -220,7 +220,14 @@
   "id": "EUVD-2026-56844",
   "references": "https://helpx.adobe.com/security/products/magento/apsb26-92.html\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-56844",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 24, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {

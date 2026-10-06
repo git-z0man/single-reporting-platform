@@ -343,7 +343,26 @@
   "id": "EUVD-2026-84375",
   "references": "https://support.checkpoint.com/results/sk/sk1000171\n"
  },
+ "honeypot": [
+  {
+   "cveId": "CVE-2026-93616",
+   "firstSeenAt": "Sep 26, 2026, 3:00:00 AM",
+   "isNew": false,
+   "source": "shadowserver",
+   "trend": "STEADY"
+  }
+ ],
  "id": "EUVD-2026-84375",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 22, 2026, 12:00:00 AM",
+   "source": "CISA"
+  },
+  {
+   "dateAdded": "Sep 22, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
  "nvd": {
   "affected": [
    {

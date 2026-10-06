@@ -326,6 +326,10 @@ commits only a change or the once-a-day heartbeat. The baseline
 `euvd-exploited-baseline.md` states what the list can and cannot say: it makes
 **no claim about which entry was first reported through the SRP**, because no
 source records the reporting route, and it follows CISA's KEV catalogue closely.
+Since 2026-10-06 it also records the EUVD's honeypot sensor data (Shadowserver): a
+first sighting is a change, the daily counts are recorded by the heartbeat. It
+records the day per KEV catalogue (EU KEV, CISA) and lists SRP candidates by stated
+criteria, as indications, never as findings.
 Like Guide sync it is created by an agent without a repository, so a person
 attaches `single-reporting-platform` as source and outcome in the Routines UI and
 then enables it.

@@ -135,7 +135,14 @@
   "id": "EUVD-2026-70645",
   "references": "https://github.com/geonetwork/core-geonetwork/security/advisories/GHSA-x898-729x-cc3r\nhttps://docs.geonetwork-opensource.org/4.2/overview/change-log/version-4.2.17\nhttps://docs.geonetwork-opensource.org/4.4/overview/change-log/version-4.4.12\nhttps://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-70645",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 2, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
  "nvd": {
   "affected": [
    {

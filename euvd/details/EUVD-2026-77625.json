@@ -683,7 +683,14 @@
   "id": "EUVD-2026-77625",
   "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-inj-2bLVGmhX\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-77625",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 14, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {

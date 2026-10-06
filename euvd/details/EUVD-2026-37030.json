@@ -295,7 +295,14 @@
   "id": "EUVD-2026-37030",
   "references": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-stack-based-buffer-overflow-vulnerability-in-gs1900-series-switches-06-16-2026\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-37030",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 21, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {

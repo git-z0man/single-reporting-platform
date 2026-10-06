@@ -19116,7 +19116,14 @@
   "id": "EUVD-2026-39217",
   "references": "https://git.kernel.org/stable/c/bf84ad7c7a9ede46e31afaa41a1ba06a159e8c87\nhttps://git.kernel.org/stable/c/76280b78cc9f23bdc6438e10ad6dff148ef8375b\nhttps://git.kernel.org/stable/c/b7e91939ba9be805a62a257fa4e227dffbb88fa0\nhttps://git.kernel.org/stable/c/afd64b59c3de9bbbdd3759e834fdc55cda716e0b\nhttps://git.kernel.org/stable/c/153ea96c806aea395daba907a4f88480b6ad5093\nhttps://git.kernel.org/stable/c/b18675263db1147c8e1cab625400c13a0d87bd2d\nhttps://git.kernel.org/stable/c/c9b5ff59feffb92a147a84a5aa28acd2cb8ff4c5\nhttps://git.kernel.org/stable/c/67ba971ae02514d85818fe0c32549ab4bfa3bf49\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-39217",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 18, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {

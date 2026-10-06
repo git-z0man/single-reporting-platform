@@ -188,7 +188,18 @@
   "id": "EUVD-2026-90081",
   "references": "https://csirt.divd.nl/DIVD-2026-00015\nhttps://csirt.divd.nl/CVE-2026-102490\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-90081",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 2, 2026, 12:00:00 AM",
+   "source": "CISA"
+  },
+  {
+   "dateAdded": "Sep 30, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
  "nvd": {
   "affected": [
    {

@@ -215,7 +215,18 @@
   "id": "EUVD-2026-92065",
   "references": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697174\n"
  },
+ "honeypot": [],
  "id": "EUVD-2026-92065",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 4, 2026, 12:00:00 AM",
+   "source": "CISA"
+  },
+  {
+   "dateAdded": "Oct 2, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
  "nvd": {
   "affected": [
    {
