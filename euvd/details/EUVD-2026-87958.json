@@ -273,6 +273,16 @@
   }
  ],
  "id": "EUVD-2026-87958",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 27, 2026, 12:00:00 AM",
+   "source": "CISA"
+  },
+  {
+   "dateAdded": "Sep 27, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
  "nvd": {
   "affected": [
    {

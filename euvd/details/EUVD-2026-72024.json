@@ -154,6 +154,12 @@
  },
  "honeypot": [],
  "id": "EUVD-2026-72024",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 5, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
  "nvd": {
   "affected": [
    {

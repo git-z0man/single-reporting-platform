@@ -227,7 +227,10 @@ paging, an implausibly small set) is a failed check, never a content change.
 
 The baseline never says which entry was the first reported through the SRP: no
 source records the reporting route, and the list largely follows CISA's catalogue.
-A change-log entry must not imply otherwise.
+It may list **candidates**, and does so in its "SRP candidates" section, but only by
+the criteria stated there (computed by the script) and always as indications. A
+change-log entry names a new candidate as such and must not imply that it was
+reported through the SRP.
 
 ## Guide sync routine
 

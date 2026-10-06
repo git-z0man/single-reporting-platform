@@ -1,5 +1,7 @@
 """euvd/check_exploited.py: change detection and the detail page on synthetic answers (no network)."""
+import contextlib
 import importlib.util
+import io
 import json
 import os
 import shutil
@@ -52,14 +54,19 @@ def obs(**kw):
             "isNew": False, **kw}
 
 
+def kev(code, date):
+    return {"id": 1, "cveId": "CVE-x", "kevSource": {"code": code, "displayName": code}, "dateAdded": date + ", 12:00:00 AM"}
+
+
 class Case(unittest.TestCase):
     def setUp(self):
         FETCHED.clear()
         self.catalog = {"CVE-2026-5001": {"cveID": "CVE-2026-5001", "dateAdded": "2026-09-12", "vulnerabilityName": "N",
                                           "vendorProject": "Acme", "forensicTriage": "No", "futureField": "x"}}
-        self.hp = {}
+        self.hp, self.ks = {}, {}
         for name, fn in (("euvd_record", fake_euvd), ("nvd_record", fake_nvd), ("cisa_catalog", lambda: self.catalog),
-                         ("honeypot_batch", lambda ids: {i: self.hp.get(i, []) for i in ids})):
+                         ("honeypot_batch", lambda ids: {i: self.hp.get(i, []) for i in ids}),
+                         ("kev_batch", lambda ids: {i: self.ks.get(i, []) for i in ids})):
             old = getattr(ce.enrich, name)
             setattr(ce.enrich, name, fn)
             self.addCleanup(setattr, ce.enrich, name, old)
@@ -211,6 +218,44 @@ class Case(unittest.TestCase):
         ce.enrich._get = lambda url: json.dumps({"EUVD-2026-1": ["x"]})
         with self.assertRaises(ce.enrich.FetchError):
             REAL_HONEYPOT_BATCH(["EUVD-2026-1"])
+
+    # --- KEV per source and SRP candidates ---
+
+    def test_eu_kev_before_cisa_after_go_live_is_a_candidate(self):
+        self.run_check(base_items())
+        self.ks["EUVD-2026-5001"] = [kev("EUKEV", "Sep 23, 2026"), kev("CISA", "Sep 25, 2026")]
+        self.ks["EUVD-2026-5002"] = [kev("EUKEV", "Sep 22, 2026"), kev("CISA", "Sep 22, 2026")]    # same day: no
+        self.assertEqual(self.run_check(base_items(), None, "--json"), 1)
+        e = {x["id"]: x for x in self.state()["entries"]}
+        self.assertEqual(e["EUVD-2026-5001"]["candidate"], "EU KEV 2 days before CISA")
+        self.assertEqual(e["EUVD-2026-5001"]["kev_sources"], {"CISA": "2026-09-25", "EUKEV": "2026-09-23"})
+        self.assertEqual(e["EUVD-2026-5002"]["candidate"], "")
+        self.assertIn("## SRP candidates (indications, not findings)", self.md())
+        self.assertIn("| 2026-09-23 | 2026-09-25 | EU KEV 2 days before CISA | Acme | acme | yes |", self.md())
+        self.assertIn("SRP candidate (indication only)", self.page())
+
+    def test_eu_only_counts_but_not_before_go_live(self):
+        self.ks["EUVD-2026-5001"] = [kev("EUKEV", "Sep 12, 2026")]
+        self.ks["EUVD-2026-5002"] = [kev("EUKEV", "Sep 10, 2026")]
+        self.run_check(base_items())
+        e = {x["id"]: x for x in self.state()["entries"]}
+        self.assertEqual(e["EUVD-2026-5001"]["candidate"], "EU KEV only")
+        self.assertEqual(e["EUVD-2026-5002"]["candidate"], "")
+
+    def test_new_candidate_is_reported(self):
+        self.run_check(base_items())
+        self.ks["EUVD-2026-5001"] = [kev("EUKEV", "Oct 1, 2026")]
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            self.assertEqual(self.run_check(base_items(), None, "--json"), 1)
+        self.assertEqual(json.loads(out.getvalue())["srp_candidates_new"], ["EUVD-2026-5001"])
+
+    def test_vendor_is_assigner(self):
+        row = lambda v, a: {"vendor": v, "assigner": a}
+        self.assertTrue(ce.vendor_is_assigner(row("Citrix NetScaler", "NetScaler")))
+        self.assertTrue(ce.vendor_is_assigner(row("Arista Networks", "Arista")))
+        self.assertFalse(ce.vendor_is_assigner(row("Zammad GmbH", "DIVD")))
+        self.assertFalse(ce.vendor_is_assigner(row("", "")))
 
     def test_render_only_needs_no_network(self):
         self.run_check(base_items())

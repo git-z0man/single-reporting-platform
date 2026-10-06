@@ -223,6 +223,12 @@
  },
  "honeypot": [],
  "id": "EUVD-2026-62395",
+ "kev_sources": [
+  {
+   "dateAdded": "Sep 9, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
  "nvd": {
   "affected": [
    {
