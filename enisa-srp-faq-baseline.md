@@ -14,7 +14,7 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
-retrieved: 2026-10-01 (fetched 06:15 UTC; content changed since 2026-09-30 — new FAQ Q33, page stamp moved to 30 September 2026, see change log)
+retrieved: 2026-10-06 (fetched 06:09 UTC; content changed since 2026-10-05 — FAQ Q5 reworded and tagged [UPDATED], FAQ stamp 03 October 2026, main-page maintenance notice gone, see change log)
 guidance_retrieved: 2026-10-01 (fetched 06:15 UTC, all four guidance subpages unchanged word-for-word since 2026-09-19)
 glossary_retrieved: 2026-10-02 (fetched UTC morning run; changed — Version 1.4, two new fields 40/41 — see `enisa-srp-glossary-baseline.md`)
 csirt_list_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 17:11 UTC on 2026-09-12)
@@ -25,13 +25,27 @@ terms_conditions_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 2026-
 ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-10-05
-last_change: 2026-10-01
+last_check: 2026-10-06
+last_change: 2026-10-06
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-10-06 06:09 UTC (vs. 2026-10-05)
+
+FAQ Q5 was rewritten and tagged "[UPDATED]", and the FAQ page stamp moved from 30 September to 03 October 2026. The main-page maintenance notice is gone. Nothing else changed on the eleven tracked pages.
+
+**Changed**
+- **Q5** now says manufacturers "placing on the EU market products with digital elements" must notify the two event types (scope qualifier added), and the open-source steward sentence now reads "involved in the **development**" of products, where it said "deployment". The steward's reporting trigger therefore changed wording; the date (11 December 2027) and Art. 24(3) did not.
+- FAQ page stamp "Updated: 30 September 2026" → "03 October 2026". The stamp moved with the Q5 content change.
+
+**Fixed**
+- The 30 September maintenance notice on the main page has been removed ("Get Started" now goes straight to "Resources"); the earlier Watch item is closed.
+
+**Unchanged**
+Other 32 FAQ questions (Q1–Q33), all four guidance subpages, CSIRT list, AR User Manual page and PDF (hash `e2afc960…`, Last-Modified 17 Sep 2026), Terms and Conditions, Tutorial Video, Glossary (v1.4, last update 01 October 2026, HTTP 200).
 
 ### 2026-10-02 06:07 UTC (vs. 2026-10-01 06:15 UTC)
 
@@ -1203,7 +1217,7 @@ Groups four resource cards *(three until 2026-09-11 15:10 UTC)*: the Factsheet (
 
 ## FAQ entries
 
-Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 30 September 2026" *(moved from "17 September 2026" 2026-10-01 06:15 UTC, with the new Q33)* — earlier: "Updated: 17 September 2026" *(moved from "12 September 2026" 2026-09-18 06:12 UTC, this time correlating with the Q9 rewrite below — see the change log; before that, moved from "11 September 2026" 2026-09-12 13:10 UTC alongside the Q4/Q7/Q17/Q22/Q29 wording changes; wrapped in `<em>` since 2026-09-14 04:13 UTC, no wording change)*. Intro text on the FAQ page: "All you need to know about the CRA Single Reporting Platform" (subtitle) — "This page provides answers to frequently asked questions about the Cyber Resilience Act Single Reporting Platform (CRA SRP), including its purpose, reporting process, registration and use. The FAQs are updated regularly to reflect the latest available information and guidance as the CRA SRP is implemented. For broader guidance on the interpretation and implementation of the CRA, please also consult the European Commission's "FAQs on the CRA Implementation"." *(Watch, 2026-09-14 10:19 UTC: the raw HTML actually splits this into two `<p>` tags, uses curly quotes/apostrophe ("Commission's "FAQs...""), and carries three `&nbsp;` artifacts not reproduced above — before "The FAQs", after "is implemented.", and after the closing quote mark. This sentence has never been checked at Q1–Q31's character-level precision before, so it cannot be said whether any of this is new today or simply unrecorded until now; flagged for the record, not counted as a change.)*
+Source: dedicated FAQ subpage (see `faq_url` above). Page-level note: "Updated: 03 October 2026" *(moved from "30 September 2026" with the Q5 rewrite, first seen 2026-10-06 06:09 UTC)* — earlier: "Updated: 30 September 2026" *(moved from "17 September 2026" 2026-10-01 06:15 UTC, with the new Q33)* — earlier: "Updated: 17 September 2026" *(moved from "12 September 2026" 2026-09-18 06:12 UTC, this time correlating with the Q9 rewrite below — see the change log; before that, moved from "11 September 2026" 2026-09-12 13:10 UTC alongside the Q4/Q7/Q17/Q22/Q29 wording changes; wrapped in `<em>` since 2026-09-14 04:13 UTC, no wording change)*. Intro text on the FAQ page: "All you need to know about the CRA Single Reporting Platform" (subtitle) — "This page provides answers to frequently asked questions about the Cyber Resilience Act Single Reporting Platform (CRA SRP), including its purpose, reporting process, registration and use. The FAQs are updated regularly to reflect the latest available information and guidance as the CRA SRP is implemented. For broader guidance on the interpretation and implementation of the CRA, please also consult the European Commission's "FAQs on the CRA Implementation"." *(Watch, 2026-09-14 10:19 UTC: the raw HTML actually splits this into two `<p>` tags, uses curly quotes/apostrophe ("Commission's "FAQs...""), and carries three `&nbsp;` artifacts not reproduced above — before "The FAQs", after "is implemented.", and after the closing quote mark. This sentence has never been checked at Q1–Q31's character-level precision before, so it cannot be said whether any of this is new today or simply unrecorded until now; flagged for the record, not counted as a change.)*
 
 32 entries (31 → 32 on 2026-09-21 06:14 UTC, new Q32 — see the change log). Tags have moved four times since go-live: **2026-09-11 13:17 UTC** swept "[UPDATED]"/"[NEW]" off Q9, Q18, Q22, Q27, Q28, Q29, Q30 and Q31 (the same way Q8 lost its tag on 2026-09-09), leaving only the newly-tagged Q14; **2026-09-12 13:10 UTC** then tagged Q4, Q7, Q17, Q22 and Q29 [UPDATED] (each with a real wording or title change, see the change log) while Q14 lost its tag with no wording change; **2026-09-18 06:12 UTC** re-tagged Q9 [UPDATED], this time with a real, substantive wording change (see the change log); **2026-09-24 06:10 UTC** swept "[UPDATED]" back off Q4, Q7, Q17, Q22 and Q29, leaving only Q9 [UPDATED] and Q32 [NEW] tagged — Q29's title changed in the same run (gained "CRA"), the other four with no wording change. Read tag movement as a prompt to diff, not a content signal on its own — it has moved without content changing at least as often as it has moved with it. The per-question tags are recorded in each heading below where present.
 
@@ -1235,15 +1249,15 @@ The platform has become operational on **11 September 2026,** coinciding with th
 
 The platform supports the mandatory reporting of actively exploited vulnerabilities and severe incidents under Art. 14 of the CRA. The corresponding reporting obligations for open-source software stewards under Art. 24(3) will apply from 11 December 2027, in accordance with Art. 71(2) of the CRA.<br>Voluntary reporting under Art. 15 will be introduced in a future phase of the platform. *(merged into the paragraph above via `<br>` 2026-09-13 23:15 UTC — was a separate `<p>`; no wording change.)*
 
-### Q5. What must be reported via the platform?
+### Q5. [UPDATED] What must be reported via the platform? *(tagged "[UPDATED]" 2026-10-06)*
 
-Under the CRA, manufacturers are required to notify two specific types of events:
+Under the CRA, manufacturers placing on the EU market products with digital elements are required to notify two specific types of events: *("placing on the EU market products with digital elements" added, seen 2026-10-06)*
 
 - **Actively Exploited Vulnerabilities:** vulnerabilities in products with digital elements for which there is reliable evidence that they have been exploited by a malicious actor;
 
 - **Severe Incidents:** incidents having a severe impact on the security of a product with digital elements (e.g., compromising its availability, authenticity, integrity, or confidentiality). The criteria for severity are set out in Art. 14(5). *(both list lead-ins bolded 2026-09-13 23:15 UTC; no wording change.)*
 
-Open-source software stewards will also be subject to reporting obligations, starting from 11 December 2027, to the extent that they are involved in the deployment of products with digital elements, in accordance with Art. 24(3) of CRA.
+Open-source software stewards will also be subject to reporting obligations, starting from 11 December 2027, to the extent that they are involved in the development of products with digital elements, in accordance with Art. 24(3) of CRA. *("deployment" → "development", seen 2026-10-06.)*
 
 ### Q6. What else can be reported in the platform? *(heading gained a trailing `&nbsp;` 2026-09-28 06:26 UTC, no wording change)*
 
