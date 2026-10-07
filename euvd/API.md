@@ -89,4 +89,4 @@ CIRCL's Vulnerability-Lookup (the software the EUVD is built on) has a public AP
 vulnerability sightings and statistics (`https://vulnerability.circl.lu/api/`). It
 answered from here but is not read by the monitor.
 
-See `euvd/mockups/index.html` for the charts these data support.
+See `euvd/mockups/index.html` for the charts these data support (pre-rendered, no JavaScript needed) and `euvd/mockups/live.html` for the same page drawn in the browser from the embedded data, the way the live page would draw from `euvd/stats.json`.
