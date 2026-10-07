@@ -295,7 +295,7 @@ code{font-size:.85em}a{color:var(--acc)}.badge{border:1px solid var(--line);padd
 <h1>EUVD: actively exploited vulnerabilities from 1 September 2026</h1>
 <p class="note">Everything the EUVD, NIST NVD, the CISA KEV catalogue and linked CERTs publish about the entries below.
 It does <strong>not</strong> say which entry was first reported through the SRP: no source records the reporting route.
-Overview and caveats: <a href="../euvd-exploited-baseline.md">euvd-exploited-baseline.md</a>. Data in <code>euvd/details/</code>.</p>
+Overview and caveats: <a href="../euvd-exploited-baseline.md">euvd-exploited-baseline.md</a>. Charts and statistics: <a href="stats.html">stats.html</a>. Data in <code>euvd/details/</code>.</p>
 <input id="q" type="search" placeholder="Filter by ID, CVE, vendor or text" aria-label="Filter">
 <p id="n">__COUNT__ entries</p>
 __ENTRIES__

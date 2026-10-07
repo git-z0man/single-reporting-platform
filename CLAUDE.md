@@ -206,8 +206,10 @@ The reasoning is in the script's header comment.
 
 ## EUVD exploited-vulnerabilities routine
 
-`euvd-exploited-baseline.md` and everything under `euvd/` (the script, the data
-in `euvd/exploited.json`, one record per entry under `euvd/details/`, including the
+`euvd-exploited-baseline.md` and everything under `euvd/` (the scripts, the data
+in `euvd/exploited.json`, the statistics page `euvd/stats.html` with its data
+`euvd/stats.json` and the daily record `euvd/history.jsonl`, both written by
+`euvd/build_stats.py`, one record per entry under `euvd/details/`, including the
 EUVD's honeypot sensor sightings, and the page `euvd/index.html`) are maintained by a scheduled task that runs
 `euvd/check_exploited.py` daily at 06:20 UTC. The prompt is
 `routines/euvd-exploited-monitor.md`.
@@ -217,7 +219,8 @@ After pushing the branch and opening the PR (create it as a draft first), mark i
 ready for review and merge it immediately. This applies only to PRs from this
 routine that touch `euvd-exploited-baseline.md` and `euvd/` alone, checked with
 `tools/scope_guard.py euvd-exploited-baseline.md euvd/`. Any other change to this
-repository, including to `euvd/check_exploited.py` or `euvd/enrich.py`, follows the
+repository, including to `euvd/check_exploited.py`, `euvd/enrich.py`, `euvd/build_stats.py`,
+`euvd/charts.js` or `euvd/prerender.js`, follows the
 normal review-and-confirm flow, and the Routine does not edit them.
 
 The daily-rhythm rule applies: one measurement point per day plus every real
