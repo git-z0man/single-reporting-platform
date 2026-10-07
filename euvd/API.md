@@ -17,7 +17,8 @@ as a failed check, never as a content change.
 - **No OpenAPI schema.** `/v3/api-docs`, `/api-docs`, `/swagger-ui.html` and
   `/actuator/health` all return 404.
 - **Guessing paths does not work.** About 25 plausible names (`stats`, `vendors`,
-  `products`, `honeypot`, `trends`, ...) all answered 403, which looks like an
+  `products`, `honeypot`, `trends`, ...) answered 403 (only the three `/dump...`
+  guesses gave 404), which looks like an
   allow-list in front of the service rather than a missing route. Anything not in
   the frontend bundle was therefore not found, which is not proof that it does not exist.
 
