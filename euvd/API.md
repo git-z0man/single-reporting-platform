@@ -75,6 +75,21 @@ is **no history**: only today's count and three averages.
 `description`, `summary`, `datePublished`, `dateUpdated`, `references`, `aliases`,
 `source` and `advisoryProduct`.
 
+## Counting without downloading
+
+Every `/api/search` answer carries `total`, the number of matching records, so a
+query with `size=1` counts anything the filters can express: records per month
+(`fromDate`/`toDate`, the publication date), per assigner (`assigner=CERTVDE`; the
+value is the CNA's short name, `CERT@VDE` returns 0), critical ones
+(`fromScore=9&toScore=10`) or exploited ones (`exploited=true`). The whole EUVD held
+401,624 records on 2026-10-07. Counting 25 months for 16 series took 400 requests and
+about two minutes; a daily run only needs the current month.
+
+**No browser access.** The API answers 403 to any request carrying a foreign
+`Origin` header (no CORS for other sites), so a page cannot query it live from the
+reader's browser. Every figure on the page has to be computed in advance by the
+daily run.
+
 ## What the data cannot give
 
 - **No history anywhere.** Honeypot counts, EPSS, scores and the exploited set are only
