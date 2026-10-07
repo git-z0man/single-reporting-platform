@@ -336,22 +336,11 @@
  },
  "honeypot": [
   {
-   "avg30d": 0.0,
-   "avg7d": 0.0,
-   "avg90d": 0.0,
-   "cisaKevFlag": true,
-   "connections1d": 1,
    "cveId": "CVE-2026-82329",
-   "firstSeenAt": "Oct 6, 2026, 7:11:51 AM",
-   "isNew": true,
-   "lastSeenAt": "Oct 6, 2026, 7:11:51 AM",
-   "product": "Artifactory",
+   "firstSeenAt": "Oct 4, 2026, 3:00:00 AM",
+   "isNew": false,
    "source": "shadowserver",
-   "trend": "STEADY",
-   "uniqueIps1d": 1,
-   "vendor": "JFrog",
-   "vulnClass": "other-software",
-   "vulnSeverity": "Critical"
+   "trend": "STEADY"
   }
  ],
  "id": "EUVD-2026-67861",
