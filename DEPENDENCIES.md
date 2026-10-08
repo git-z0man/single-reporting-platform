@@ -81,8 +81,11 @@ Evidence and checks:
 Checks not performed / capability limits:
 - pip-audit and osv-scanner are not installed here (checked); OSV was queried through its API.
 - Maintainer and ownership history: not reviewed beyond PyPI metadata.
-- Whether GitHub's dependency graph / Dependabot alerts are enabled for this repository:
-  not verified.
+- Dependabot alerts: disabled for this repository (GitHub API, "Dependabot alerts are
+  disabled for this repository", checked 2026-10-08). tools/check_pins.py runs only when the
+  Commission monitor finds a new FAQ version, so between such runs nothing watches the pin.
+  Enabling the alerts is a repository setting (Settings, Code security, Dependabot alerts);
+  GitHub then reads requirements.txt.
 - SBOM: the repository keeps none; with one dependency, requirements.txt is the record.
 Required controls / approval:
 - Exact version and wheel hash in requirements.txt; install with --require-hashes
