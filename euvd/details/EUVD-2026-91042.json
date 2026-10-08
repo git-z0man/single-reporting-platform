@@ -29,7 +29,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
   "baseScoreVersion": "3.1",
   "datePublished": "Oct 1, 2026, 7:17:38 PM",
-  "dateUpdated": "Oct 5, 2026, 3:28:47 PM",
+  "dateUpdated": "Oct 7, 2026, 5:59:34 PM",
   "description": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
   "enisaIdAdvisory": [
    {
@@ -126,7 +126,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-104286\nGHSA-6gxc-3vv7-7w24\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 6, 2026, 7:02:52 AM",
+     "dataProcessed": "Oct 8, 2026, 7:03:23 AM",
      "datePublished": "Oct 1, 2026, 9:32:52 PM",
      "dateUpdated": "Oct 1, 2026, 9:32:52 PM",
      "description": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
@@ -145,9 +145,9 @@
      "baseScore": 9.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Oct 6, 2026, 9:00:07 AM",
+     "dataProcessed": "Oct 8, 2026, 9:00:28 AM",
      "datePublished": "Oct 1, 2026, 7:17:38 PM",
-     "dateUpdated": "Oct 5, 2026, 3:28:47 PM",
+     "dateUpdated": "Oct 7, 2026, 5:59:34 PM",
      "description": "An improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiMail 8.0.0 through 8.0.1, FortiMail 7.6.0 through 7.6.6, FortiMail 7.4.0 through 7.4.8, FortiMail 7.2.0 through 7.2.9 may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
      "enisa_id": "EUVD-2026-91042\n",
      "epss": 2.2,
@@ -360,7 +360,7 @@
    }
   ],
   "id": "CVE-2026-104286",
-  "lastModified": "2026-10-02T12:35:33.990",
+  "lastModified": "2026-10-07T18:17:15.240",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -401,7 +401,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-10-01T00:00:00+00:00",
+      "timestamp": "2026-10-02T03:55:37.976071Z",
       "version": "2.0.3"
      }
     }
