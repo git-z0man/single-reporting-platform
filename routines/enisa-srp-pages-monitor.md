@@ -10,6 +10,8 @@
 > **Why the loader exists.** This prompt drifted from its mirror four times in four weeks: three stale "pending" notes, an eleventh page and a whole section that were never pasted, and a cron documented wrongly for a week. Every one was the same fault - the text that runs lives on the platform and a copy lives here. The loader removes the second copy.
 >
 > **History worth keeping.** The cadence was hourly from 2026-09-07 to 2026-09-14 (89 change-log entries, 38 in the last five days). A revert to weekly was documented and never applied, and daily was confirmed as intended on 2026-09-21 - it is what caught FAQ Q32 within hours. The silence-on-no-change rule, the UTC time in a same-day heading, and 429/5xx-as-failure hold at any cadence. Placeholders are written in square brackets because the Routines UI paste path strips anything that looks like an HTML tag.
+>
+> **Page 12 (added 2026-10-08).** ENISA's Vulnerability Services topic page is tracked for one paragraph: it says the EU KEV "will be further enriched" by reports through the CRA SRP. When that sentence changes, ENISA has said publicly that the route runs; `euvd/EU-KEV.md` explains why nothing else public says so.
 
 ---
 
@@ -32,7 +34,7 @@ Do NOT hard-code a state branch name. The platform assigns this Routine's outcom
 
 Never push to `main`. Never create a new per-run branch when the session already gave you one.
 
-## 1. The pages to check — all eleven
+## 1. The pages to check — all twelve
 
 Both baseline files carry the authoritative URL list in their frontmatter. Read them first and use the URLs recorded there; the list below is what it should be, but the files win if they disagree (they get updated when ENISA moves a page).
 
@@ -48,6 +50,7 @@ Tracked in `enisa-srp-faq-baseline.md`:
 9. CRA SRP - AR User Manual — `ar_user_manual_url` (added 2026-09-10, found the same way)
 10. CRA Single Reporting Platform - Terms and Conditions — `terms_conditions_url` (added 2026-09-10, found the same way)
 11. CRA SRP - AR User Tutorial Video — `ar_user_tutorial_video_url` (added 2026-09-11, found the same way)
+12. Vulnerability Services topic page — `vulnerability_services_url` (added 2026-10-08, see section 3a)
 
 Tracked in `enisa-srp-glossary-baseline.md`:
 
@@ -90,7 +93,7 @@ The Glossary page has already moved once: on 2026-09-07 the URL that had been tr
 - Only if no replacement address exists is the page genuinely unavailable. Record that in the `status:` line with the UTC timestamp, and report it. Both directions matter: 200 → non-200 and non-200 → 200.
 - Correct an earlier wrong diagnosis in `status:` rather than overwriting it silently. The frontmatter is what the next run reads; a stale wrong URL there produces a false reachability finding a week later.
 - Only when the page returns 200 do you diff its content and update the tables, `page_version`, and `retrieved`.
-- Check the other ten pages in the same run before concluding anything: a Glossary-only failure means ENISA moved, is editing, or unpublished that page; all eleven failing means a site-wide outage.
+- Check the other eleven pages in the same run before concluding anything: a Glossary-only failure means ENISA moved, is editing, or unpublished that page; all twelve failing means a site-wide outage.
 
 Note that `enisa-srp-faq-baseline.md` also carries a deliberately trimmed summary table of the Glossary fields (in Q16 and its "CRA SRP Glossary" section). That summary is NOT the record — never reconstruct the full baseline from it, and keep the two consistent when the Glossary changes. It also repeats the Glossary URL in prose — when the page moves, update those occurrences too.
 
@@ -108,6 +111,14 @@ paths would also put your PR outside this routine's auto-merge scope.
 
 Mention a change in your report anyway, briefly, so it is visible from both
 sides.
+
+## 3a. The Vulnerability Services page — watch the EU KEV sentence
+
+`vulnerability_services_url` is ENISA's topic page above the SRP. It is tracked for its "EU KEV Catalogue" paragraph, which says confirmed exploitation information comes from the EU CSIRTs Network and ENISA "and will be further enriched by reports received from manufacturers and open-source software stewards through the CRA SRP". Its section in `enisa-srp-faq-baseline.md` holds the full text.
+
+- Diff the text from the breadcrumb to the end of the VulnOptiCON list, word for word like any other page. Skip the "Related content" teasers below it (Publications, News, Tools): ENISA's CMS fills them automatically.
+- **Any change to the EU KEV paragraph leads the report and the change-log entry**, quoting the old and the new wording. A change of tense, or a sentence that names SRP reports as a current source, is ENISA's first public statement that the route is running.
+- A new entry in the page's own "Subtopics" or "Content" list is a finding to report. Record it in the page's section, but do not start tracking the new page: that is a person's decision.
 
 ## 4. Recording changes
 
@@ -155,7 +166,7 @@ Rules for it:
 
 ### Nothing changed anywhere
 
-Only when all eleven pages came back unchanged. Read `last_check` as it stands on `origin/main`:
+Only when all twelve pages came back unchanged. Read `last_check` as it stands on `origin/main`:
 
     git show origin/main:enisa-srp-faq-baseline.md | sed -n 's/^last_check: //p' | head -1
 
@@ -191,6 +202,7 @@ What earns a mention at all:
 - **Substantive change on any page** — what changed and where, quoting new or reworded text where the wording is the point. Flag anything touching reporting obligations, deadlines, data fields, or the CSIRT mapping.
 - **A new page appeared in the navigation** — name it and say it has been added to the baseline.
 - **The CSIRT list changed** — prominently, with the affected countries (see section 3).
+- **The EU KEV paragraph on the Vulnerability Services page changed** — first, quoting old and new wording (see section 3a).
 - **A Glossary reachability transition or move** — state the direction or the new address, and that the baseline content was left intact.
 - **A fetch failed** (429 or 5xx after the retries) — say which page and which status, and that the baseline was left untouched.
 - **Nothing changed** — report nothing at all, whether or not this run wrote the day's heartbeat commit. See "Nothing changed anywhere" in section 4. Silence is the normal outcome and the only signal worth sending is a real one.

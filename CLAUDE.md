@@ -65,7 +65,9 @@ receives an invitation email — sat buried in the middle of it.
 `enisa-srp-faq-baseline.md` and `enisa-srp-glossary-baseline.md` are
 maintained by a scheduled task that periodically re-checks the ENISA Single
 Reporting Platform page (its guidance subpages, the CRA SRP Glossary page,
-and the CSIRT-list page) for changes, updates the baseline file(s), and
+and the CSIRT-list page) and, since 2026-10-08, ENISA's Vulnerability Services
+topic page, whose EU KEV paragraph says SRP reports "will" feed the EU KEV, for
+changes, updates the baseline file(s), and
 opens a PR. The Glossary page needs its own full record for two reasons
 established on 2026-09-07: it changed address that day (the old path still
 returns HTTP 403, the page lives on and is reachable at the new one), and its
@@ -210,7 +212,7 @@ The reasoning is in the script's header comment.
 in `euvd/exploited.json`, the statistics page `euvd/stats.html` with its data
 `euvd/stats.json` and the daily record `euvd/history.jsonl`, both written by
 `euvd/build_stats.py`, one record per entry under `euvd/details/`, including the
-EUVD's honeypot sensor sightings, and the page `euvd/index.html`) are maintained by a scheduled task that runs
+EUVD's honeypot sensor sightings, the EU KEV register `euvd/eukev.json`, and the page `euvd/index.html`) are maintained by a scheduled task that runs
 `euvd/check_exploited.py` daily at 06:20 UTC. The prompt is
 `routines/euvd-exploited-monitor.md`.
 
@@ -219,7 +221,7 @@ After pushing the branch and opening the PR (create it as a draft first), mark i
 ready for review and merge it immediately. This applies only to PRs from this
 routine that touch `euvd-exploited-baseline.md` and `euvd/` alone, checked with
 `tools/scope_guard.py euvd-exploited-baseline.md euvd/`. Any other change to this
-repository, including to `euvd/check_exploited.py`, `euvd/enrich.py`, `euvd/build_stats.py`,
+repository, including to `euvd/check_exploited.py`, `euvd/enrich.py`, `euvd/eukev.py`, `euvd/build_stats.py`,
 `euvd/charts.js` or `euvd/prerender.js`, follows the
 normal review-and-confirm flow, and the Routine does not edit them.
 

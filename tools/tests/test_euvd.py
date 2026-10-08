@@ -54,8 +54,12 @@ def obs(**kw):
             "isNew": False, **kw}
 
 
-def kev(code, date):
-    return {"id": 1, "cveId": "CVE-x", "kevSource": {"code": code, "displayName": code}, "dateAdded": date + ", 12:00:00 AM"}
+def kev(code, date, row=1, **kw):
+    return {"id": row, "cveId": "CVE-x", "kevSource": {"code": code, "displayName": code}, "dateAdded": date + ", 12:00:00 AM", **kw}
+
+
+def dump_row(i, date, *sources):
+    return {"cveId": "CVE-x", "euvdId": i, "dateAdded": date, "sources": list(sources)}
 
 
 class Case(unittest.TestCase):
@@ -63,13 +67,17 @@ class Case(unittest.TestCase):
         FETCHED.clear()
         self.catalog = {"CVE-2026-5001": {"cveID": "CVE-2026-5001", "dateAdded": "2026-09-12", "vulnerabilityName": "N",
                                           "vendorProject": "Acme", "forensicTriage": "No", "futureField": "x"}}
-        self.hp, self.ks = {}, {}
+        self.hp, self.ks, self.dump = {}, {}, []
         for name, fn in (("euvd_record", fake_euvd), ("nvd_record", fake_nvd), ("cisa_catalog", lambda: self.catalog),
                          ("honeypot_batch", lambda ids: {i: self.hp.get(i, []) for i in ids}),
-                         ("kev_batch", lambda ids: {i: self.ks.get(i, []) for i in ids})):
+                         ("kev_batch", lambda ids: {i: self.ks.get(i, []) for i in ids}),
+                         ("kev_dump", lambda: self.dump)):
             old = getattr(ce.enrich, name)
             setattr(ce.enrich, name, fn)
             self.addCleanup(setattr, ce.enrich, name, old)
+        for name in ("MIN_DUMP", "MIN_EU"):        # the synthetic dumps are small; one test restores the canary
+            self.addCleanup(setattr, ce.eukev, name, getattr(ce.eukev, name))
+            setattr(ce.eukev, name, 0)
         self.root = tempfile.mkdtemp()
         os.makedirs(os.path.join(self.root, "euvd"))
         shutil.copy(os.path.join(REPO, "euvd-exploited-baseline.md"), os.path.join(self.root, "euvd-exploited-baseline.md"))
@@ -256,6 +264,100 @@ class Case(unittest.TestCase):
         self.assertTrue(ce.vendor_is_assigner(row("Arista Networks", "Arista")))
         self.assertFalse(ce.vendor_is_assigner(row("Zammad GmbH", "DIVD")))
         self.assertFalse(ce.vendor_is_assigner(row("", "")))
+
+    # --- EU KEV register ---
+
+    def eukev_setup(self):
+        """EU KEV entry A (row 10, dated 1 Sep) between CISA rows dated 3 and 6 Sep: inserted 2 days after its date."""
+        self.dump = [dump_row("EUVD-2026-901", "2026-09-01", "eukev_kev", "cisa_kev"),
+                     dump_row("EUVD-2026-801", "2026-09-03", "cisa_kev"), dump_row("EUVD-2026-802", "2026-09-06", "cisa_kev")]
+        self.ks.update({"EUVD-2026-901": [kev("EUKEV", "Sep 1, 2026", 10, originSource="CERT.PL", vendorProject="Acme"),
+                                          kev("CISA", "Sep 6, 2026", 12)],
+                        "EUVD-2026-801": [kev("CISA", "Sep 3, 2026", 5)], "EUVD-2026-802": [kev("CISA", "Sep 6, 2026", 12)]})
+
+    def register(self):
+        return {e["id"]: e for e in json.load(open(os.path.join(self.root, "euvd", "eukev.json")))["entries"]}
+
+    def run_json(self, *extra, today="2026-10-06"):
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            code = ce.main(["--root", self.root, "--items-file", os.path.join(self.root, "items.json"),
+                            "--kev-file", os.path.join(self.root, "kev.json"), "--today", today, "--json", *extra])
+        return code, (json.loads(out.getvalue()) if out.getvalue() else None)
+
+    def test_eukev_register_starts_with_the_insertion_window(self):
+        self.eukev_setup()
+        self.assertEqual(self.run_check(base_items()), 1)
+        a = self.register()["EUVD-2026-901"]
+        self.assertEqual((a["inserted_after"], a["inserted_before"], a["backdated_days"]), ("2026-09-03", "2026-09-06", 2))
+        self.assertEqual((a["first_seen"], a["first_seen_after"], a["cisa"]), ("2026-10-05", "", "2026-09-06"))
+        self.assertIn("## EU KEV register", self.md())
+        self.assertIn("| 2026-09-01 | 2026-09-03 to 2026-09-06 | 2 days | at register start | CERT.PL | Acme | 2026-09-06 |", self.md())
+
+    def test_eukev_new_entry_records_first_seen_and_back_dating(self):
+        self.eukev_setup()
+        self.run_check(base_items())
+        self.dump += [dump_row("EUVD-2026-902", "2026-09-20", "eukev_kev"), dump_row("EUVD-2026-803", "2026-09-25", "cisa_kev")]
+        self.ks.update({"EUVD-2026-902": [kev("EUKEV", "Sep 20, 2026", 20, originSource="CSIRT-IE")],
+                        "EUVD-2026-803": [kev("CISA", "Sep 25, 2026", 15)]})
+        code, out = self.run_json()
+        self.assertEqual(code, 1)
+        self.assertEqual([x["id"] for x in out["eukev_new"]], ["EUVD-2026-902"])
+        b = out["eukev_new"][0]
+        self.assertEqual((b["first_seen_after"], b["inserted_after"], b["inserted_before"], b["backdated_days"]),
+                         ("2026-10-05", "2026-09-25", "", 5))
+        self.assertEqual(out["eukev_new_origins"], ["CSIRT-IE"])
+        self.assertIn("2026-10-06 (not on 2026-10-05)", self.md())
+
+    def test_eukev_origin_spelling_is_not_a_new_origin(self):
+        self.eukev_setup()
+        self.run_check(base_items())
+        self.dump.append(dump_row("EUVD-2026-903", "2026-09-21", "eukev_kev"))
+        self.ks["EUVD-2026-903"] = [kev("EUKEV", "Sep 21, 2026", 30, originSource="CERT-PL")]
+        self.assertEqual(self.run_json()[1]["eukev_new_origins"], [])
+
+    def test_eukev_moved_date_is_a_change_with_history(self):
+        self.eukev_setup()
+        self.run_check(base_items())
+        self.ks["EUVD-2026-901"][0] = kev("EUKEV", "Aug 20, 2026", 10, originSource="CERT.PL", vendorProject="Acme")
+        code, out = self.run_json()
+        self.assertEqual(code, 1)
+        self.assertEqual(out["eukev_changed"], [{"id": "EUVD-2026-901", "field": "dateAdded", "from": "2026-09-01", "to": "2026-08-20"}])
+        self.assertEqual(self.register()["EUVD-2026-901"]["changes"][0]["day"], "2026-10-06")
+
+    def test_eukev_removed_entry_is_a_change_and_kept(self):
+        self.eukev_setup()
+        self.run_check(base_items())
+        self.dump = self.dump[1:]
+        del self.ks["EUVD-2026-901"]
+        code, out = self.run_json()
+        self.assertEqual((code, out["eukev_removed"]), (1, ["EUVD-2026-901"]))
+        reg = json.load(open(os.path.join(self.root, "euvd", "eukev.json")))
+        self.assertEqual(reg["removed"][0]["removed"], "2026-10-06")
+
+    def test_eukev_window_moving_alone_is_not_a_change_but_the_heartbeat_keeps_it(self):
+        self.eukev_setup()
+        self.dump = self.dump[:2]                     # no CISA row after A yet
+        del self.ks["EUVD-2026-802"]
+        self.ks["EUVD-2026-901"] = self.ks["EUVD-2026-901"][:1]
+        self.run_check(base_items())
+        self.assertEqual(self.register()["EUVD-2026-901"]["inserted_before"], "")
+        self.eukev_setup()
+        self.ks["EUVD-2026-901"] = self.ks["EUVD-2026-901"][:1]
+        self.assertEqual(self.run_json()[0], 0)
+        self.assertEqual(self.register()["EUVD-2026-901"]["inserted_before"], "")
+        self.assertEqual(self.run_json("--heartbeat")[0], 0)
+        self.assertEqual(self.register()["EUVD-2026-901"]["inserted_before"], "2026-09-06")
+
+    def test_eukev_missing_record_or_small_dump_fails_and_writes_nothing(self):
+        self.eukev_setup()
+        del self.ks["EUVD-2026-901"]
+        self.assertEqual(self.run_check(base_items()), 2)
+        self.assertFalse(os.path.exists(os.path.join(self.root, "euvd", "eukev.json")))
+        self.eukev_setup()
+        ce.eukev.MIN_DUMP = 1000
+        self.assertEqual(self.run_check(base_items()), 2)
+        self.assertFalse(os.path.exists(os.path.join(self.root, "euvd", "exploited.json")))
 
     def test_render_only_needs_no_network(self):
         self.run_check(base_items())

@@ -14,6 +14,7 @@ guidance_urls:
 ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-manual (new 2026-09-10 10:12 UTC, found via the main/FAQ page's "Content" navigation)
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
+vulnerability_services_url: https://www.enisa.europa.eu/topics/vulnerability-services (tracked from 2026-10-08 at the owner's request: ENISA's topic page above the SRP, whose "EU KEV Catalogue" paragraph says the EU KEV "will be further enriched" by reports through the CRA SRP)
 retrieved: 2026-10-06 (fetched 06:09 UTC; content changed since 2026-10-05 — FAQ Q5 reworded and tagged [UPDATED], FAQ stamp 03 October 2026, main-page maintenance notice gone, see change log)
 guidance_retrieved: 2026-10-01 (fetched 06:15 UTC, all four guidance subpages unchanged word-for-word since 2026-09-19)
 glossary_retrieved: 2026-10-02 (fetched UTC morning run; changed — Version 1.4, two new fields 40/41 — see `enisa-srp-glossary-baseline.md`)
@@ -22,8 +23,9 @@ ar_user_manual_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 2026-09
 ar_user_manual_pdf_sha256: e2afc96031eceff4bebd9790256183e4ce6b835d9a1c44f9864e4f3995998f86 (the PDF itself, not the landing page; unchanged since 2026-09-21 — hash, size (3,190,657 bytes) and Last-Modified all match. The copy captured 2026-09-10 was 3,119,968 bytes and reversed the AR notification-visibility rule — see `enisa-defect-report.md` G26. Both are stamped "Version: 1.1" with an unchanged Document History table, so **this hash is the only reliable change signal for this document**.)
 ar_user_manual_pdf_last_modified: Thu, 17 Sep 2026 14:30:33 GMT
 terms_conditions_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 2026-09-17)
+vulnerability_services_retrieved: 2026-10-08 (fetched 10:56 UTC; first capture. Word-identical to the Internet Archive copy of 2026-10-04 05:46 UTC; the "EU KEV Catalogue" paragraph is word-identical to the archive's earliest copy, 2026-09-21 07:50 UTC)
 ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
-purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage — against this file.
+purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage, and (from 2026-10-08) the Vulnerability Services topic page — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
 last_check: 2026-10-08
 last_change: 2026-10-06
@@ -32,6 +34,17 @@ last_change: 2026-10-06
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-10-08 11:05 UTC (page added to tracking; compared with the Internet Archive copies of 2026-09-21 and 2026-10-04)
+
+ENISA's Vulnerability Services topic page is now tracked as page 12. Its "EU KEV Catalogue" paragraph says reports through the CRA SRP "will" enrich the EU KEV; a change to that sentence would be ENISA's first public statement that the route is running.
+
+**New**
+- Page 12, `vulnerability_services_url`, added at the owner's request; full text below under "Vulnerability Services". Not ENISA news: the page is older than this record (archived from 21 September; the SRP pages moved under its `vulnerability-services` path on 19 September).
+
+**Watch**
+- The sentence "Information about confirmed exploitation activity is provided by EU CSIRTs Network members and ENISA, and will be further enriched by reports received from manufacturers and open-source software stewards through the CRA SRP." It reads the same on 21 September, 4 October and today.
+- Before tracking began, ENISA edited the page once, between 21 September and 4 October: "Vulnerability Services help" became "ENISA's Vulnerability Services help", "The following vulnerability services are provided:" became "Explore ENISA's Vulnerability Services:", and the "Consult the EUVD" line was added.
 
 ### 2026-10-06 06:09 UTC (vs. 2026-10-05)
 
@@ -1619,6 +1632,52 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 - Slovenia: https://www.cert.si/en/about-si-cert/
 - Spain: for incidents — https://www.incibe.es/incibe-cert/incidentes/respuesta-incidentes and https://www.incibe.es/en/incibe-cert/incidents/incident-handling ; for vulnerability coordination — https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/asignacion-publicacion-cve and https://www.incibe.es/en/incibe-cert/early-warning/vulnerabilities/cve-assignment-publication
 - Sweden: https://cert.se/rapportera/
+
+## Vulnerability Services (topic page, `vulnerability_services_url`)
+
+ENISA's topic page for its vulnerability services, one level above the SRP pages (since 2026-09-19 the main SRP page and its FAQ sit under its `/vulnerability-services/` path). Tracked from 2026-10-08 for its "EU KEV Catalogue" paragraph. Diff the text from the breadcrumb to the end of the VulnOptiCON list. **Not tracked:** the "Related content" block below it (Publications / News / Tools teasers), which ENISA's CMS fills automatically. Text as on 2026-10-08 10:56 UTC; `&nbsp;` rendered as a space.
+
+**Navigation.** Breadcrumb "Home > Topics > Vulnerability Services". "Subtopics": "Single Reporting Platform (SRP)", linked as `https://www.enisa.europa.eu//topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp` (sic, double slash). "Content": one entry, "Join the global CVE Program under the ENISA Root" (`/topics/vulnerability-services/join-the-global-cve-program-under-the-enisa-root`). A new entry in either list is a finding to report; it is not tracked without a person's decision.
+
+**Lead (quote box).** "ENISA's Vulnerability Services help users, governments, industry, and the cybersecurity community identify, prioritise, coordinate and mitigate vulnerabilities more effectively." *(read "Vulnerability Services help …" on 2026-09-21)*
+
+**Intro.** "The EU Agency for Cybersecurity (ENISA) has been stepping up its responsibilities in vulnerability handling and coordination. In recent years, the Agency has expanded its role in vulnerability management by developing a suite of services and strengthening its operational capabilities in this area."
+
+Blockquote, bold: "ENISA provides services that help connect vulnerability identification, reporting, coordination, prioritisation, and mitigation into a more coherent EU vulnerability management capability."
+
+"Explore ENISA's Vulnerability Services:" *(read "The following vulnerability services are provided:" on 2026-09-21)*
+
+**The European Vulnerability Database (EUVD).** "The EUVD aggregates, stores, enriches, and publishes known vulnerabilities for public use. By providing this centralised source of vulnerability information, the EUVD helps users identify vulnerabilities and take appropriate mitigating measures."
+
+"The database is built with information from multiple sources, such as EU CSIRTs and ICT vendors disclosing vulnerability information via advisories, as well as relevant information from other sources, including known exploited vulnerability data maintained by ENISA together with EU CSIRTs (see EU KEV Catalogue for additional details), CISA’s Known Exploited Vulnerabilities (KEV) Catalog, and additional threat data providers."
+
+"**Consult the EUVD**: Home | EUVD" (link `https://euvd.enisa.europa.eu/`) *(line absent on 2026-09-21, present on 2026-10-04)*
+
+**Participation in the Common Vulnerabilities and Exposures (CVE) Program.** "ENISA is a partner of the CVE Program. The CVE Program’s mission is to identify, define, and catalogue publicly disclosed cybersecurity vulnerabilities.  Through its participation, ENISA supports the wider objective of reinforcing, the shared global vulnerability identifier backbone on which governments, vendors, researchers, and defenders rely." *(sic: double space before "Through", stray comma after "reinforcing")*
+
+"ENISA has been a CVE Numbering Authority (CNA) since January 2024. As such, the Agency can assign CVE identifiers (CVE IDs) and publish CVE Records for vulnerabilities discovered by or reported to ENISA and EU CSIRTs. By maintaining this registry service, ENISA supports EU CSIRTs in their coordination work and helps downstream users identify and take appropriate mitigating measures."
+
+"ENISA is also a **CVE Root** and thus a central point of contact within the CVE Program for European national authorities, EU CSIRTs Network members and cooperative partners falling under ENISA’s mandate. As a CVE Root, ENISA supports CNA candidates during the onboarding process to ensure operational readiness, clarity of scope, and alignment with the CVE Program’s requirements and rules. Through its role as a CVE Root, ENISA recruits, onboards, trains, supports, and oversees new and transferring European CNAs within its scope, handles dispute resolution where relevant, and helps ensure that CVE Program rules, guidelines, and processes are followed."
+
+"**Find out more:** How to become a CNA under the ENISA Root" (link `/topics/vulnerability-services/join-the-global-cve-program-under-the-enisa-root`)
+
+**The Single Reporting Platform (SRP) under the Cyber Resilience Act (CRA).** "The CRA SRP is an online tool established by ENISA to simplify reporting obligations for manufacturers and, to the extent applicable, open-source software stewards under the Cyber Resilience Act." ("CRA SRP" links the superseded `https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp`, which 301-redirects to `url`; "Cyber Resilience Act" links EUR-Lex `OJ:L_202402847`.)
+
+"The SRP allows manufacturers to electronically report actively exploited vulnerabilities and severe incidents having an impact on the security of products with digital elements only once, rather than having to notify multiple national authorities. The SRP is designed to support secure, efficient reporting and coordination between manufacturers, ENISA, and the CSIRTs designated as coordinators."
+
+"The CRA reporting obligations of Article 14 for actively exploited vulnerabilities and severe incidents apply from 11 September 2026."
+
+**EU KEV Catalogue.** "The EU KEV Catalogue assembles a validated listing of vulnerabilities known to have been exploited during attacks targeting entities within the EU. Information about confirmed exploitation activity is provided by EU CSIRTs Network members and ENISA, and will be further enriched by reports received from manufacturers and open-source software stewards through the CRA SRP. Known exploitation information provided via the EU KEV Catalogue is synchronised with the European Vulnerability Database (EUVD)." *(Word-identical on 2026-09-21, 2026-10-04 and 2026-10-08. The heading links nowhere; there is no EU KEV page. The tense of "will be further enriched" is what this page is tracked for: report any change to this paragraph prominently, quoting old and new wording.)*
+
+**Coordinated Vulnerability Disclosure.** "As the Secretariat of the EU CSIRTs Network, ENISA supports CSIRTs designated as coordinators to cooperate within the network when a reported vulnerability is assessed to have a potentially significant impact on entities in more than one EU Member State."
+
+"ENISA has published guidelines and studies to assist Member States in establishing CVD policies, as well as handbooks, good practices guides, and gap analyses."
+
+"All the above services support EU Member States, CSIRTs, manufacturers, open-source software stewards, vendors, researchers, defenders, and users."
+
+Bold: "You can contact the ENISA Vuln Services team at: vuln@enisa.europa.eu" (mailto link)
+
+**Further-info list.** "ENISA will be at VulnOptiCON 2026 on September 23-25, 2026, in Luxembourg.The conference brings together a cross-section of global cybersecurity leadership including representatives from CSIRTs, cybersecurity agencies, such as CISA, NCSC UK, and ENISA, European CNAs, academic research institutions, security and AI startups and end-user organisations." *(sic: no space after "Luxembourg."; the event is over and the future tense stands)* Second item: link "VulnOptiCON 2026" (`https://vulnopticon.org/`).
 
 ## Guidance subpages — full content baseline
 
