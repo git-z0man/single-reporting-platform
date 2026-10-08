@@ -1,0 +1,14 @@
+# The one third-party Python package this repository uses. Everything else is the
+# standard library.
+#
+# pypdf extracts the text of the Commission's CRA FAQ PDFs
+# (commission-faq/tools/extract_text.py). Pinned by version and wheel hash, following
+# ENISA's secure-package-consumption skill; the decision, the checks behind it and
+# how to move the pin are in DEPENDENCIES.md. A change to this file is reviewed: it
+# is outside every Routine's auto-merge scope.
+#
+# Install into a throwaway venv, wheel only, hashes enforced:
+#   python3 -m venv /tmp/venv
+#   /tmp/venv/bin/pip install --require-hashes --only-binary :all: -r requirements.txt
+pypdf==6.19.0 \
+    --hash=sha256:7e5d6e730e7dae87d560a2cee218b852f6498c8be61966f3cd02ead971e48d14

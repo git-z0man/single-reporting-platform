@@ -6,11 +6,12 @@ be diffed with tools/diff_versions.py.  It is NOT meant to be a faithful
 reproduction of the PDF layout -- it exists purely so that change detection
 runs against a stable text form that lives in git.
 
-Requires pypdf.  The system Python in some environments ships a broken
-`cryptography` build that pypdf imports; if `import pypdf` fails, create a
-throwaway venv:
+Requires pypdf, pinned by version and hash in requirements.txt at the repository
+root (see DEPENDENCIES.md; until 2026-10-08 this said to install it unpinned).
+The system Python in some environments ships a broken `cryptography` build that
+pypdf imports, so install it into a throwaway venv, from the repository root:
 
-    python3 -m venv .venv && .venv/bin/pip install pypdf
+    python3 -m venv .venv && .venv/bin/pip install --require-hashes --only-binary :all: -r requirements.txt
     .venv/bin/python commission-faq/tools/extract_text.py in.pdf out.txt
 
 Usage:
