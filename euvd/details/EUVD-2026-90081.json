@@ -36,7 +36,7 @@
   "baseScoreVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/AU:Y/V:D",
   "baseScoreVersion": "4.0",
   "datePublished": "Sep 30, 2026, 4:21:20 PM",
-  "dateUpdated": "Oct 5, 2026, 10:25:49 AM",
+  "dateUpdated": "Oct 7, 2026, 2:03:07 PM",
   "description": "All versions of Zammad including the latest alpha enable the local zammad user to escalate privileges to root.",
   "enisaIdAdvisory": [
    {
@@ -132,15 +132,15 @@
      "baseScore": 8.5,
      "baseScoreVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/AU:Y/V:D",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 6, 2026, 9:00:09 AM",
+     "dataProcessed": "Oct 8, 2026, 9:00:15 AM",
      "datePublished": "Sep 30, 2026, 4:21:20 PM",
-     "dateUpdated": "Oct 5, 2026, 10:25:49 AM",
+     "dateUpdated": "Oct 7, 2026, 2:03:07 PM",
      "description": "All versions of Zammad including the latest alpha enable the local zammad user to escalate privileges to root.",
      "enisa_id": "EUVD-2026-90081\n",
      "epss": 0.63,
      "exploitedSince": "Sep 30, 2026, 12:00:00 AM",
      "id": "CVE-2026-102490",
-     "references": "https://csirt.divd.nl/DIVD-2026-00015\nhttps://csirt.divd.nl/CVE-2026-102490\n",
+     "references": "https://csirt.divd.nl/DIVD-2026-00015\nhttps://csirt.divd.nl/CVE-2026-102490\nhttps://zammad.com/en/advisories/cve-2026-102489-cve-2026-102490\nhttps://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2\n",
      "status": "PUBLISHED",
      "vulnerabilityProduct": [
       {
@@ -169,14 +169,14 @@
     "vulnerability": {
      "aliases": "CVE-2026-102490\nGHSA-hgff-g8g3-4xr8\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 6, 2026, 7:02:52 AM",
+     "dataProcessed": "Oct 8, 2026, 9:01:05 AM",
      "datePublished": "Sep 30, 2026, 6:33:49 PM",
-     "dateUpdated": "Oct 2, 2026, 6:31:16 PM",
+     "dateUpdated": "Oct 7, 2026, 3:31:29 PM",
      "description": "All versions of Zammad including the latest alpha enable the local zammad user to escalate privileges to root.",
      "enisa_id": "EUVD-2026-90081\n",
      "epss": 0.0,
      "id": "GHSA-hgff-g8g3-4xr8",
-     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490\nhttps://csirt.divd.nl/CVE-2026-102490\nhttps://csirt.divd.nl/DIVD-2026-00015\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490\n",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490\nhttps://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2\nhttps://csirt.divd.nl/CVE-2026-102490\nhttps://csirt.divd.nl/DIVD-2026-00015\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490\nhttps://zammad.com/en/advisories/cve-2026-102489-cve-2026-102490\n",
      "vulnerabilityProduct": [],
      "vulnerabilityVendor": []
     }
@@ -186,7 +186,7 @@
   "epss": 0.63,
   "exploitedSince": "Sep 30, 2026, 12:00:00 AM",
   "id": "EUVD-2026-90081",
-  "references": "https://csirt.divd.nl/DIVD-2026-00015\nhttps://csirt.divd.nl/CVE-2026-102490\n"
+  "references": "https://csirt.divd.nl/DIVD-2026-00015\nhttps://csirt.divd.nl/CVE-2026-102490\nhttps://zammad.com/en/advisories/cve-2026-102489-cve-2026-102490\nhttps://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2\n"
  },
  "honeypot": [],
  "id": "EUVD-2026-90081",
@@ -284,7 +284,7 @@
    }
   ],
   "id": "CVE-2026-102490",
-  "lastModified": "2026-10-03T04:18:00.460",
+  "lastModified": "2026-10-07T17:58:50.700",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -380,6 +380,13 @@
    {
     "source": "csirt@divd.nl",
     "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2"
+   },
+   {
+    "source": "csirt@divd.nl",
+    "tags": [
      "Third Party Advisory"
     ],
     "url": "https://csirt.divd.nl/CVE-2026-102490"
@@ -390,6 +397,13 @@
      "Third Party Advisory"
     ],
     "url": "https://csirt.divd.nl/DIVD-2026-00015"
+   },
+   {
+    "source": "csirt@divd.nl",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://zammad.com/en/advisories/cve-2026-102489-cve-2026-102490"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",

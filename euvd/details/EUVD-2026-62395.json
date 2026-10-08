@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L",
   "baseScoreVersion": "4.0",
   "datePublished": "Aug 19, 2026, 12:54:39 PM",
-  "dateUpdated": "Sep 10, 2026, 3:55:17 AM",
+  "dateUpdated": "Oct 7, 2026, 6:01:17 PM",
   "description": "Vulnerability in NetScaler ADC and NetScaler Gateway.\n\nThis issue affects ADC: from 14.1 through 73.32 and from 13.1 through 63.21; Gateway: from 14.1 through 73.32 and from 13.1 through 63.21.",
   "enisaIdAdvisory": [
    {
@@ -135,9 +135,9 @@
      "baseScore": 9.3,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 4, 2026, 3:34:15 AM",
+     "dataProcessed": "Oct 8, 2026, 9:00:28 AM",
      "datePublished": "Aug 19, 2026, 12:54:39 PM",
-     "dateUpdated": "Sep 10, 2026, 3:55:17 AM",
+     "dateUpdated": "Oct 7, 2026, 6:01:17 PM",
      "description": "Vulnerability in NetScaler ADC and NetScaler Gateway.\n\nThis issue affects ADC: from 14.1 through 73.32 and from 13.1 through 63.21; Gateway: from 14.1 through 73.32 and from 13.1 through 63.21.",
      "enisa_id": "EUVD-2026-62395\n",
      "epss": 23.16,
@@ -348,7 +348,7 @@
    }
   ],
   "id": "CVE-2026-19490",
-  "lastModified": "2026-09-10T12:48:10.453",
+  "lastModified": "2026-10-07T19:17:36.500",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -433,7 +433,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-08-19T00:00:00+00:00",
+      "timestamp": "2026-09-10T03:55:17.447903Z",
       "version": "2.0.3"
      }
     }
