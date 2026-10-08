@@ -6,6 +6,7 @@
 - **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt; editing it changes the next run, with no paste in between.
 - **Loader status**: **applied 2026-10-04**, read back from the Routine and equal to the loader in `routines/README.md`. This file is the prompt.
 - **Updatable by an agent**: **yes** - created via `meta_mcp`, so `update_trigger` works; an agent applies the loader.
+- **Dependencies (changed 2026-10-08)**: *before*, every run that found a new version installed whatever pypdf release PyPI served that day, with no version and no hash, in a session that can push to this repository. *After*, pypdf is pinned by version and wheel hash in `requirements.txt`, installed with `--require-hashes --only-binary :all:`, and checked against OSV first (`tools/check_pins.py`). Why, and how to move the pin: `DEPENDENCIES.md`, which applies ENISA's secure-package-consumption skill.
 
 ---
 
@@ -59,12 +60,16 @@ Still check the factpage — see section 4.
 
 1. Download the new PDF and, if published, the Markdown, into `commission-faq/versions/` as `FAQs-on-the-CRA-v<VERSION>.pdf` / `.md`.
 
-2. Produce the canonical text. pypdf is needed and the system Python may ship a broken `cryptography` that pypdf imports, so use a throwaway venv:
+2. Produce the canonical text. pypdf is needed: the repository's only third-party package, pinned by version and hash in `requirements.txt`. The system Python may ship a broken `cryptography` that pypdf imports, so use a throwaway venv:
 
-       python3 -m venv /tmp/venv && /tmp/venv/bin/pip install pypdf
+       python3 tools/check_pins.py
+       python3 -m venv /tmp/venv && /tmp/venv/bin/pip install --require-hashes --only-binary :all: -r requirements.txt
        /tmp/venv/bin/python commission-faq/tools/extract_text.py \
            commission-faq/versions/FAQs-on-the-CRA-v<VERSION>.pdf \
            commission-faq/text/FAQs-on-the-CRA-v<VERSION>.txt
+
+   - `check_pins.py` exit 1: OSV lists an advisory against the pinned version. Carry on (the PDF is the Commission's own), and add a **Watch** line naming the advisory and saying the pypdf pin needs a reviewed update (`DEPENDENCIES.md`). Exit 2 (OSV did not answer): carry on, one line in the report. Exit 3: `requirements.txt` breaks the pin rule; stop and report.
+   - If the install fails, above all on a hash mismatch, stop and report the exact message. Never fall back to an unpinned install, never edit `requirements.txt`, never install another package: each of those is a reviewed change (`CLAUDE.md`, "Dependencies").
 
 3. Diff against the previous version:
 

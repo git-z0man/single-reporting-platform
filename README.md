@@ -100,6 +100,23 @@ succeed against every host — including hosts that are dark, and including a
 reserved unroutable address. The reasoning is in the header of
 [`srp-domains/check.sh`](srp-domains/check.sh).
 
+## Dependencies and the ENISA skill
+
+The scripts use the Python standard library and nothing else, with one exception: pypdf,
+for the Commission's PDFs, pinned by version and hash in
+[`requirements.txt`](requirements.txt). Anything that adds, updates or installs a package
+follows ENISA's **secure-package-consumption** skill, which ships with this repository as a
+Claude Code project skill in
+[`.claude/skills/secure-package-consumption/`](.claude/skills/secure-package-consumption/).
+Claude Code picks it up in every session on this repository and in the Routines, and it can
+be called by name: `/secure-package-consumption`.
+
+[`DEPENDENCIES.md`](DEPENDENCIES.md) has the inventory and the decision note for pypdf in
+the skill's format. It also lists what changed when the skill was first applied, on
+8 October 2026, as before, problem and after: pypdf used to be installed unpinned on every
+Commission run. `tools/check_pins.py` checks the pin against OSV before use, and
+`tools/tests/test_dependencies.py` fails on any other install command in the repository.
+
 ## What this is not
 
 Not affiliated with ENISA or the European Commission. **Not legal advice.**
@@ -120,4 +137,6 @@ distributed here.
 The Commission FAQ is © European Union, reusable under CC BY 4.0 per Commission
 Decision 2011/833/EU; archived copies are unmodified. ENISA page content is
 reproduced for change tracking and remains ENISA's. Everything written for this
-repository is MIT-licensed — see [`LICENSE`](LICENSE).
+repository is MIT-licensed — see [`LICENSE`](LICENSE). The exception is ENISA's skill in
+`.claude/skills/secure-package-consumption/`, copied unchanged and licensed under the EUPL-1.2
+(its own `LICENSE.txt` and `PROVENANCE.md`).

@@ -47,9 +47,11 @@ trigger. The download URLs are stable newsroom document ids
 ## Producing a diff
 
 ```bash
-# One-off: pypdf is only needed for PDF extraction, and the system Python in
-# some environments ships a broken `cryptography` that pypdf imports.
-python3 -m venv .venv && .venv/bin/pip install pypdf
+# One-off: pypdf is only needed for PDF extraction. It is pinned by version and
+# hash in requirements.txt (DEPENDENCIES.md); the venv keeps it away from a system
+# Python whose `cryptography` build may be broken. Run from the repository root.
+python3 tools/check_pins.py
+python3 -m venv .venv && .venv/bin/pip install --require-hashes --only-binary :all: -r requirements.txt
 
 .venv/bin/python commission-faq/tools/extract_text.py \
     commission-faq/versions/FAQs-on-the-CRA-v1.5.pdf \
@@ -59,6 +61,11 @@ python3 commission-faq/tools/diff_versions.py \
     commission-faq/text/FAQs-on-the-CRA-v1.4.txt \
     commission-faq/text/FAQs-on-the-CRA-v1.5.txt
 ```
+
+*Changed 2026-10-08, after ENISA's secure-package-consumption skill:* the venv used to
+take the newest pypdf from PyPI, unpinned and unhashed. Now the version and the wheel's
+hash are fixed in `requirements.txt`, and the pinned 6.19.0 extracts the four archived
+versions (v1.0 to v1.4) byte for byte as before. Background: [`DEPENDENCIES.md`](../DEPENDENCIES.md).
 
 `diff_versions.py` exits 1 when there are substantive differences and 0 when
 there are none. It matches sentences with all whitespace removed, because PDF

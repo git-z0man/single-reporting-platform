@@ -20,6 +20,7 @@ The design separates looking at ENISA from editing the guide.
 | `sync_guide.py` | no | Edits `index.html` from the extracts. A pure function of repository files, which is what makes the next script possible. `--dry-run`, `--json`, `--include-judgment`. Exit 0 nothing to do, 1 edited, 3 only judgment items wait, 2 error. |
 | `verify_mechanical.py BASE` | no | The auto-merge gate. Recomputes `sync(BASE index.html, working-tree extracts)` and requires **byte equality** with the working-tree `index.html`. A hand edit by a person or a model makes them differ. Exit 0 eligible. |
 | `scope_guard.py PATH...` | no | Fails if the diff against `origin/main` touches anything outside the allowed files or directories (a directory ends in `/`). Used by every Routine before it merges. |
+| `check_pins.py` | **yes** (OSV API; `--offline` skips it) | Checks `requirements.txt`: every requirement pinned with `==` and hashed, and no OSV advisory against the pinned version. Run by the Commission monitor before it installs pypdf. Exit 0 clean, 1 advisory, 2 check failed, 3 a requirement is unpinned or unhashed. See `DEPENDENCIES.md`. |
 
 The baselines (`enisa-srp-*-baseline.md`) are annotated narrative: ENISA's text
 interleaved with change-log prose, unlinked e-mail addresses, nested

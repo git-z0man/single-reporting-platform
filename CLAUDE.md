@@ -34,6 +34,26 @@ Which repositories a Routine may read and write is separate again: session
 config, not prompt, and no agent tool can set it. Moving a monitor to another
 repository is config first, prompt second. `routines/README.md` has the detail.
 
+## Dependencies
+
+The scripts use the Python standard library. The one third-party package, pypdf, is
+pinned by version and wheel hash in `requirements.txt` and installed only with
+`pip install --require-hashes --only-binary :all: -r requirements.txt`, into a throwaway
+venv. Nothing else is installed: no other `pip install`, no `npm install` or `npx` (the
+statistics page uses the Playwright the environment provides, or none), no system
+packages. `tools/tests/test_dependencies.py` enforces this.
+
+Before adding, updating or removing a package, or touching `requirements.txt`, apply
+ENISA's **secure-package-consumption** skill (`.claude/skills/secure-package-consumption/`,
+loaded as a project skill) and put its decision note in the pull request. Prefer the
+standard library over a new package. A Routine never changes a dependency: when
+`tools/check_pins.py` reports an advisory, it reports it and leaves the pin alone.
+`requirements.txt` is in no auto-merge scope. The inventory, the decision note for pypdf
+and how to move its pin are in `DEPENDENCIES.md`.
+
+Do not edit the skill's own files. They are ENISA's, EUPL-1.2, kept byte-identical to the
+source; an update is a fresh copy, recorded in the skill's `PROVENANCE.md`.
+
 ## How a change log entry is written
 
 Every baseline in this repository carries a change log, and they are read by
