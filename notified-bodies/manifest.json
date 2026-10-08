@@ -73,12 +73,12 @@
   },
   "last_successful_check": "2026-10-08T07:12:31+00:00",
   "current_snapshot": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "checked_at": "2026-10-08T07:12:31+00:00",
     "count": 0,
     "bodies": [],
     "canary_ok": true,
-    "canary_raw_rows": 367,
+    "canary_raw_rows": 368,
     "note": "No change vs prior snapshot (0 active bodies). Request pipeline verified working."
   },
   "history": [
