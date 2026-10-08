@@ -9,6 +9,8 @@ Sources, all public and read-only:
            every entry on every run (one call per 50 entries); the EUVD page shows them as "Honeypot sensors"
   - EUVD   /api/kevEntries/batch?ids=...   the day each KEV catalogue (CISA KEV, EU KEV) added the entry,
            per source; read for every entry on every run
+  - EUVD   /api/kev/dump   every KEV entry the EUVD holds, both catalogues; read once per run for the
+           EU KEV register (eukev.py)
 
 Stored per entry in euvd/details/<EUVD-ID>.json. Volatile fields (EPSS, EUVD's
 dataProcessed stamp, the honeypot counts, averages and trend) are kept as last seen but
@@ -27,6 +29,7 @@ NVD = "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId="
 CISA = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 HONEYPOT = "https://euvdservices.enisa.europa.eu/api/honeypotObservations/batch?ids="
 KEV_ENTRIES = "https://euvdservices.enisa.europa.eu/api/kevEntries/batch?ids="
+KEV_DUMP = "https://euvdservices.enisa.europa.eu/api/kev/dump"
 HONEYPOT_VOLATILE = {"lastSeenAt", "connections1d", "uniqueIps1d", "avg7d", "avg30d", "avg90d", "trend", "isNew"}
 VOLATILE = {"epss", "dataProcessed"} | HONEYPOT_VOLATILE
 CERT_SOURCES = ("cert", "ncsc", "cisa", "csirt", "bsi", "cnsa")
@@ -116,6 +119,17 @@ def honeypot_batch(ids):
 def kev_batch(ids):
     """{EUVD-ID: [{"kevSource": {"code": "CISA" | "EUKEV", ...}, "dateAdded": ...}]}"""
     return _batch(KEV_ENTRIES, "kevEntries", ids)
+
+
+def kev_dump():
+    """[{"cveId", "euvdId", "dateAdded", "sources"}]: every KEV entry the EUVD holds, both catalogues."""
+    try:
+        d = json.loads(_get(KEV_DUMP))
+    except ValueError:
+        raise FetchError("kev/dump answer is not JSON")
+    if not isinstance(d, list):
+        raise FetchError("kev/dump answer is not a list")
+    return d
 
 
 def strip_volatile(x):
