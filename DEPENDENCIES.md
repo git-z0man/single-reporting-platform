@@ -78,20 +78,24 @@ Evidence and checks:
 - Release: 2026-09-16; the project releases about weekly.
 - Verification: in a throwaway venv the hash-checked wheel extracts the archived v1.0, v1.2,
   v1.3 and v1.4 PDFs byte for byte as stored in commission-faq/text/.
+- GitHub dependency review of this change (dependency-graph/compare, 2026-10-08): pypdf
+  6.19.0 added from requirements.txt, ecosystem pip, scope runtime, BSD-3-Clause, no
+  vulnerabilities in the GitHub Advisory Database.
 Checks not performed / capability limits:
 - pip-audit and osv-scanner are not installed here (checked); OSV was queried through its API.
 - Maintainer and ownership history: not reviewed beyond PyPI metadata.
-- Dependabot alerts: disabled for this repository (GitHub API, "Dependabot alerts are
-  disabled for this repository", checked 2026-10-08). tools/check_pins.py runs only when the
-  Commission monitor finds a new FAQ version, so between such runs nothing watches the pin.
-  Enabling the alerts is a repository setting (Settings, Code security, Dependabot alerts);
-  GitHub then reads requirements.txt.
+- Dependabot alert list: not readable from the agent's GitHub access (HTTP 403, "Resource
+  not accessible by integration"). The owner switched the alerts on on 2026-10-08; until
+  then the API answered "Dependabot alerts are disabled for this repository". Alerts reach
+  the owner through GitHub's own notifications, not the Routines.
 - SBOM: the repository keeps none; with one dependency, requirements.txt is the record.
 Required controls / approval:
 - Exact version and wheel hash in requirements.txt; install with --require-hashes
   --only-binary :all: into a throwaway venv; no fallback to an unpinned install.
 - tools/check_pins.py (OSV) before each use; an advisory becomes a Watch line and a
   reviewed pin update.
+- Dependabot alerts (on since 2026-10-08) watch requirements.txt on main between uses; they
+  cover the pin from the merge of this change on, since GitHub reads the default branch.
 - requirements.txt sits outside every auto-merge scope; no Routine edits it.
 Next action: proceed with controls
 ```
