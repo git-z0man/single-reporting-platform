@@ -305,7 +305,11 @@ details{border:1px solid var(--line);background:var(--card);margin:.4rem 0;paddi
 dl{display:grid;grid-template-columns:10rem 1fr;gap:.2rem .8rem;margin:0}dt{color:var(--mut)}dd{margin:0;overflow-wrap:anywhere}
 code{font-size:.85em}a{color:var(--acc)}.badge{border:1px solid var(--line);padding:0 .4rem;font-size:.8rem}
 @media (max-width:640px){dl{grid-template-columns:1fr}}
+a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.crumbs{font-size:.9rem;color:var(--mut)}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.2rem .5rem}
+.crumbs li+li::before{content:"›";margin-right:.5rem}.crumbs [aria-current]{color:var(--fg)}
 </style></head><body><main>
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">SRP guide</a></li><li><a href="../index.html#euvd">EUVD</a></li><li><span aria-current="page">Exploited entries</span></li></ol></nav>
 <h1>EUVD: actively exploited vulnerabilities from 1 September 2026</h1>
 <p class="note">Everything the EUVD, NIST NVD, the CISA KEV catalogue and linked CERTs publish about the entries below.
 It does <strong>not</strong> say which entry was first reported through the SRP: no source records the reporting route.

@@ -65,7 +65,12 @@ sources), `sources` (`cisa_kev`, `eukev_kev`). It has no vendor and no per-sourc
 `product`, `vulnClass`, `vulnSeverity`, `cisaKevFlag`, `trend` (`UPTICK`, `STEADY`,
 `DECLINE`), `isNew`. Entries the sensors have only first seen carry just `firstSeenAt`,
 `trend` and `isNew`. About 330 of 1,746 exploited entries have any observation. There
-is **no history**: only today's count and three averages.
+is **no history**: only today's count and three averages. The `trend` rule is not documented. In the data of
+2026-10-09, `connections1d / avg7d` was at least 2.4 for every `UPTICK`, about 1 for
+`STEADY` and at most 0.3 for `DECLINE`: a one-day comparison with the week, which flags 50
+or more entries on a normal day. Since 2026-10-09 `euvd/build_stats.py` records
+`[connections1d, uniqueIps1d, trend, avg30d]` per entry and day in `euvd/history.jsonl`
+(earlier lines hold the connections only) and derives stricter "surges" from it.
 
 **Record** (`enisaid`): `id`, `enisaUuid`, `description`, `datePublished`, `dateUpdated`,
 `baseScore`, `baseScoreVersion`, `baseScoreVector`, `references`, `aliases`, `assigner`,
