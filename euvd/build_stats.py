@@ -10,6 +10,12 @@ cached in stats.json: a daily run only recounts the current and the previous mon
 only place where values the EUVD keeps no history of (honeypot counts, set sizes) are
 recorded over time.
 
+Honeypot surges: from that history it marks surges, an entry attacked far above its own
+30-day level by many sources ("broad"), or flagged UPTICK by the EUVD on several recorded
+days in a row ("persistent"). The EUVD's own UPTICK flag compares one day with the 7-day
+average and fires for dozens of entries a day; a surge is the stricter signal the monitor
+reports. New surges are printed, one per line, after the summary.
+
 The page is rendered by euvd/charts.js from the data embedded in it. When node and
 Playwright are available, euvd/prerender.js draws the charts into the file so it also
 reads in viewers that run no JavaScript; otherwise the page draws them in the browser.
@@ -54,6 +60,12 @@ CWE_NAMES = {"CWE-20": "Improper input validation", "CWE-78": "OS command inject
              "CWE-306": "Missing authentication", "CWE-843": "Type confusion", "CWE-862": "Missing authorisation",
              "CWE-918": "Server-side request forgery", "CWE-434": "Unrestricted file upload", "CWE-125": "Out-of-bounds read"}
 ORIGIN_NAMES = {"cnw": "CSIRTs Network", "cert.pl": "CERT-PL", "cert-pl": "CERT-PL"}
+# Honeypot surges. Starting values, to be calibrated once a few weeks are recorded: on
+# 2026-10-09 they would have marked 4 entries, against 51 UPTICK flags.
+SURGE_RATIO = 20     # today's connections at least this many times the 30-day average
+SURGE_IPS = 25       # ... from at least this many source IPs (fewer: one or a few scanners)
+SURGE_DAYS = 3       # UPTICK on this many recorded days in a row
+TREND_CODE = {"UPTICK": "U", "STEADY": "S", "DECLINE": "D"}
 
 
 class StatsError(Exception):
@@ -251,6 +263,12 @@ def compute(data, today):
             cov[y][1] += 1
             cov[y][0] += bool(hp.get(i))
     S["hp_cov"] = {str(y): v for y, v in sorted(cov.items()) if y >= T.year - 5}
+    today_obs = hp_today(hp)
+    S["hp_scatter"] = sorted([{"id": i, "cve": cve_of(items.get(i), o), "vendor": o.get("vendor") or "",
+                               "product": (o.get("product") or "")[:40], "d1": o.get("connections1d") or 0,
+                               "ips": o.get("uniqueIps1d") or 0, "trend": o.get("trend") or ""}
+                              for i, o in today_obs.items() if (o.get("connections1d") or 0) > 0], key=lambda r: -r["d1"])
+    S["hp_lead"] = hp_lead(hp, items, data["kev_entries"])
 
     # vendors, last 90 days against the 90 before
     cur, prev = collections.Counter(), collections.Counter()
@@ -350,12 +368,119 @@ def detail_profile(recs, assigner, exploited):
             "exploited": sum(1 for x in recs if x["id"] in exploited)}
 
 
+def cve_of(item, obs=None):
+    return (obs or {}).get("cveId") or next((a for a in ((item or {}).get("aliases") or "").split() if a.startswith("CVE-")), "")
+
+
+def hp_today(hp):
+    """{id: the observation that carries today's counts} from the honeypot answer."""
+    out = {}
+    for i, obs in hp.items():
+        o = next((o for o in obs if o.get("connections1d") is not None), None)
+        if o:
+            out[i] = o
+    return out
+
+
+def hp_lead(hp, items, kev_entries):
+    """When the sensors first saw an exploited entry, against the day it was flagged. The earliest
+    firstSeenAt of all is the start of the sensors' record, not a sighting: entries on that day are
+    counted apart ("at or before the start"), never as a lead."""
+    first = {}
+    for i, obs in hp.items():
+        seen = [pday(o["firstSeenAt"]) for o in obs if o.get("firstSeenAt")]
+        if seen and i in items and items[i].get("exploitedSince"):
+            first[i] = min(seen)
+    if not first:
+        return {"n": 0, "start": None, "censored": 0, "buckets": [], "recent": []}
+    start = min(first.values())
+    bins = [("over a year before", lambda v: v > 365), ("31-365 days before", lambda v: 31 <= v <= 365),
+            ("1-30 days before", lambda v: 1 <= v <= 30), ("same day", lambda v: v == 0),
+            ("1-30 days after", lambda v: -30 <= v <= -1), ("over 30 days after", lambda v: v < -30)]
+    gaps, recent = {}, []
+    for i, fs in first.items():
+        flagged = pday(items[i]["exploitedSince"])
+        eu = eu_cisa_dates(kev_entries.get(i, []) or [])
+        if fs > start:
+            gaps[i] = (flagged - fs).days
+        if flagged.isoformat() >= GO_LIVE:
+            recent.append({"id": i, "cve": cve_of(items[i]), "vendor": vendor_of(items[i]), "flagged": flagged.isoformat(),
+                           "eu": eu[0] if eu else None, "seen": fs.isoformat(), "censored": fs == start,
+                           "lead": (flagged - fs).days})
+    return {"n": len(first), "start": start.isoformat(), "censored": len(first) - len(gaps),
+            "buckets": [[n, sum(1 for v in gaps.values() if f(v))] for n, f in bins],
+            "recent": sorted(recent, key=lambda r: r["flagged"], reverse=True)}
+
+
 def history_line(S, data, today):
-    """One line per day: what the EUVD keeps no history of."""
-    hp = {i: next((o.get("connections1d") for o in obs if o.get("connections1d") is not None), None) for i, obs in data["hp"].items()}
+    """One line per day: what the EUVD keeps no history of. Per honeypot entry with connections:
+    [connections today, unique IPs, trend code U/S/D, 30-day average]."""
+    obs = hp_today(data["hp"])
+    hp = {i: [o.get("connections1d") or 0, o.get("uniqueIps1d"), TREND_CODE.get(o.get("trend"), ""), o.get("avg30d")]
+          for i, o in sorted(obs.items()) if o.get("connections1d")}
     return {"date": today, "euvd_total": data["euvd_total"], "exploited": S["total"], "kev_dump": len(data["kev_dump"]),
-            "eu_kev": len(S["dumbbell"]), "hp_seen": S["hp_with"], "hp_connections": sum(v for v in hp.values() if v),
-            "hp": {i: v for i, v in sorted(hp.items()) if v}}
+            "eu_kev": len(S["dumbbell"]), "hp_seen": S["hp_with"], "hp_connections": sum(v[0] for v in hp.values()),
+            "hp_uptick": sum(1 for o in obs.values() if o.get("trend") == "UPTICK"), "hp": hp}
+
+
+def hp_days(text):
+    """[(date, {id: (connections, ips, trend code, 30-day average)})] from history.jsonl, oldest first.
+    Lines written before 2026-10-09 hold only the connections; the rest is None or ''."""
+    out = []
+    for ln in (text or "").splitlines():
+        if ln.strip():
+            r = json.loads(ln)
+            out.append((r["date"], {i: (tuple(v) + (None, "", None))[:4] if isinstance(v, list) else (v, None, "", None)
+                                    for i, v in (r.get("hp") or {}).items()}))
+    return sorted(out)
+
+
+def surge_kinds(day_rows, i):
+    """Surge kinds of entry i on the last of `day_rows` ([(date, {id: values})], oldest first)."""
+    if not day_rows or i not in day_rows[-1][1]:
+        return []
+    d1, ips, _, avg30 = day_rows[-1][1][i]
+    kinds = []
+    if avg30 is not None and ips is not None and d1 >= SURGE_RATIO * max(avg30, 1) and ips >= SURGE_IPS:
+        kinds.append("broad")
+    last = day_rows[-SURGE_DAYS:]
+    if len(last) == SURGE_DAYS and all(i in m and m[i][2] == "U" for _, m in last):
+        kinds.append("persistent")
+    return kinds
+
+
+def hp_surges(days_all, S):
+    """Entries in a surge on the last recorded day; `new` when they were not in one of the same kind the
+    recorded day before, so a long surge is reported once per kind."""
+    if not days_all:
+        return []
+    meta = {r["id"]: r for r in S.get("hp_scatter", [])}
+    out = []
+    for i, (d1, ips, trend, avg30) in sorted(days_all[-1][1].items()):
+        kinds = surge_kinds(days_all, i)
+        if kinds:
+            before = set(surge_kinds(days_all[:-1], i))
+            m = meta.get(i, {})
+            out.append({"id": i, "cve": m.get("cve", ""), "vendor": m.get("vendor", ""), "product": m.get("product", ""),
+                        "kinds": kinds, "d1": d1, "ips": ips, "ratio": round(d1 / max(avg30 or 0, 1), 1),
+                        "new": bool(set(kinds) - before)})
+    return sorted(out, key=lambda r: -r["d1"])
+
+
+def hp_heat(days_all, surges, limit=20, span=30):
+    """Rows for the persistence heatmap: entries flagged UPTICK, or in a surge, on any of the last `span`
+    recorded days; one cell per day, [connections / 30-day average or None, trend code]."""
+    days = days_all[-span:]
+    flagged = collections.Counter(i for _, m in days for i, v in m.items() if v[2] == "U")
+    for s in surges:
+        flagged[s["id"]] += 0
+    rows = []
+    for i in flagged:
+        cells = [[round(m[i][0] / max(m[i][3], 1), 1) if i in m and m[i][3] is not None else None, m[i][2] if i in m else ""]
+                 for _, m in days]
+        rows.append({"id": i, "days": flagged[i], "cells": cells})
+    rows.sort(key=lambda r: (-r["days"], -max((c[0] or 0) for c in r["cells"]), r["id"]))
+    return {"days": [d for d, _ in days], "rows": rows[:limit], "n": len(rows)}
 
 
 def merge_history(text, line):
@@ -375,7 +500,7 @@ def history_series(text):
     for ln in (text or "").splitlines():
         if ln.strip():
             r = json.loads(ln)
-            out.append([r["date"], r["exploited"], r["euvd_total"], r["hp_seen"], r["hp_connections"]])
+            out.append([r["date"], r["exploited"], r["euvd_total"], r["hp_seen"], r["hp_connections"], r.get("hp_uptick")])
     return out
 
 
@@ -403,11 +528,21 @@ svg{width:100%;height:auto;display:block;font:11px system-ui,sans-serif}svg text
 .scroll{max-height:680px;overflow:auto;border:1px solid var(--line)}
 table{border-collapse:collapse;width:100%;font-size:.92rem}th,td{text-align:left;padding:.3rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}@media(max-width:760px){.grid2{grid-template-columns:1fr}}
-.tbl{overflow-x:auto}code{font-size:.85em}a{color:var(--acc)}
-</style></head><body><main>
+.tbl{overflow-x:auto}code{font-size:.85em}a{color:var(--acc)}td{font-variant-numeric:tabular-nums}
+a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.crumbs{font-size:.9rem;color:var(--mut);margin:0 0 .4rem}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.2rem .5rem}
+.crumbs li+li::before{content:"›";margin-right:.5rem;color:var(--mut)}.crumbs [aria-current]{color:var(--fg)}
+.toc{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);margin:.8rem -16px 0;padding:0 16px;overflow-x:auto;white-space:nowrap}
+.toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .5rem;text-decoration:none;font-size:.92rem}.toc a:first-child{padding-left:0}
+h2.g{font-size:1.35rem;margin:2rem 0 .2rem;scroll-margin-top:3.5rem}.top{font-size:.85rem;margin:.4rem 0 0;text-align:right}
+.swipe{display:none;font-size:.8rem;color:var(--mut);margin:.2rem 0}
+@media(max-width:700px){.c{overflow-x:auto}.c svg.wide{min-width:800px}.swipe{display:block}h1{font-size:1.35rem}}
+</style></head><body><main id="top">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">SRP guide</a></li><li><a href="../index.html#euvd">EUVD</a></li><li><span aria-current="page">Statistics</span></li></ol></nav>
 <h1>EUVD statistics</h1>
 <p class="lede">Charts on the EU Vulnerability Database, regenerated every day by the monitor in this repository from the EUVD's own API, the CISA KEV catalogue and Shadowserver honeypot data as served by the EUVD. Data as of <span id="gen"></span>. Every panel says what it shows, where the data comes from and what it cannot show. None of it says how a vulnerability reached ENISA: no source records the reporting route. Raw data: <a href="stats.json">stats.json</a>; the exploited entries one by one: <a href="index.html">index.html</a>; the API: <a href="https://github.com/git-z0man/single-reporting-platform/blob/main/euvd/API.md">API.md</a>.</p>
 <p class="lede" id="mode" style="font-size:.85rem"></p>
+<nav class="toc" aria-label="Sections"><a href="#g1">The EUVD as a whole</a><a href="#g2">Flagged, and when</a><a href="#g3">EU KEV and the SRP</a><a href="#g4">What is exploited</a><a href="#g5">Honeypot sensors</a><a href="#g6">Monitor record</a><a href="index.html">Exploited entries &rarr;</a></nav>
 <div id="panels"></div>
 <script id="data" type="application/json">__DATA__</script>
 <script>
@@ -462,6 +597,9 @@ def main(argv=None):
         S = compute(data, today)
         hist = merge_history(ce.read(hist_p), history_line(S, data, today))
         S["history"] = history_series(hist)
+        days_all = hp_days(hist)
+        S["hp_surges"] = hp_surges(days_all, S)
+        S["hp_heat"] = hp_heat(days_all, S["hp_surges"])
         S["_months"] = data["months"]
         charts = ce.read(os.path.join(HERE, "charts.js"))
         if not charts:
@@ -475,6 +613,11 @@ def main(argv=None):
     drawn = False if a.no_prerender else prerender(page_p)
     print(f"stats: {S['total']} exploited, {S['gen']['euvd_total']} EUVD records, {len(S['history'])} history days, "
           f"page {'pre-rendered' if drawn else 'drawn in the browser'}")
+    new = [r for r in S["hp_surges"] if r["new"]]
+    print(f"honeypot surges, new today: {len(new)} (in a surge: {len(S['hp_surges'])})")
+    for r in new:
+        print(f"  surge {'+'.join(r['kinds'])}: {r['id']} {r['cve']} {r['vendor']} {r['product']}: {r['d1']} connections "
+              f"from {r['ips']} IPs, {r['ratio']}x the 30-day average")
     return 0
 
 
