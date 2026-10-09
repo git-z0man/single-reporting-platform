@@ -1,0 +1,7339 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2015-5477"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2015-5477",
+  "cwes": [
+   "CWE-19"
+  ],
+  "dateAdded": "2026-10-08",
+  "dueDate": "2026-10-11",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "This vulnerability could affect an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://web.archive.org/web/20150729014733/https://kb.isc.org/article/AA-01272 ; https://access.redhat.com/errata/RHSA-2015:1513.html; https://supportportal.juniper.net/s/article/2016-01-Security-Bulletin-Junos-Vulnerability-in-ISC-BIND-named-CVE-2015-5477 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2015-5477",
+  "product": "BIND",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.",
+  "vendorProject": "ISC",
+  "vulnerabilityName": " ISC BIND Data Processing Errors Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2015-5477\nGHSA-4622-vjcx-p39j\n",
+  "assigner": "mitre",
+  "baseScore": 7.5,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Jul 29, 2015, 2:00:00 PM",
+  "dateUpdated": "Oct 8, 2026, 7:58:23 PM",
+  "description": "named in ISC BIND 9.x before 9.9.7-P2 and 9.10.x before 9.10.2-P3 allows remote attackers to cause a denial of service (REQUIRE assertion failure and daemon exit) via TKEY queries.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "002982f1-e69b-35b2-9538-da1f5c0c38fa",
+       "product": {
+        "name": "bind-devel-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "022cbaac-e243-372f-b886-6076973437f4",
+       "product": {
+        "name": "bind-chrootenv-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "041b736b-c6e5-3fb5-b4bb-035995699ec4",
+       "product": {
+        "name": "idnkit-devel-32bit-0:1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "04be9fe9-992b-35c8-a3e1-4263039e8f08",
+       "product": {
+        "name": "idnkit-0:1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "05977faf-214b-33e9-9a24-df47459ce7b0",
+       "product": {
+        "name": "bind-doc-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "061a79ed-936e-3270-9837-18423fd90959",
+       "product": {
+        "name": "libisc160-32bit-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "07f4dbe0-302c-39a7-b137-734e32dd6d62",
+       "product": {
+        "name": "libisc160-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "082eacc1-7bf5-3eed-bf5e-41f4d3d39075",
+       "product": {
+        "name": "libbind9-140-32bit-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0858aae2-50eb-3cf4-a38d-1c42040d0ad5",
+       "product": {
+        "name": "libisc160-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0c3d2dd0-32fb-36ca-afe0-4e0acb75515c",
+       "product": {
+        "name": "bind-doc-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0f2b75f7-1966-397a-90d2-2c9e043d428b",
+       "product": {
+        "name": "bind-doc-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "12ba657d-5c35-381e-954e-4d53a0939372",
+       "product": {
+        "name": "bind-doc-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "158149a3-a6b6-3b65-8a73-7cae477f8cb0",
+       "product": {
+        "name": "libdns162-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "15fd3a8a-e155-39de-9d96-8c4cf055a4b1",
+       "product": {
+        "name": "libidnkitres1-0:1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "16e9d6cd-e1f9-3333-b0a9-3335af5ea89e",
+       "product": {
+        "name": "bind-doc-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "171c4a6c-5689-325f-bd83-cc4f717f3978",
+       "product": {
+        "name": "libisccc140-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1aa07d31-7a17-3a1a-a077-b2e6036cc445",
+       "product": {
+        "name": "bind-utils-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1abd0fb5-d0bb-3f2f-bced-bb5d7f32501e",
+       "product": {
+        "name": "libdns162-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1ad00624-3e82-3af5-aeff-0f5e7a992f12",
+       "product": {
+        "name": "idnkit-0:1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1ae0068e-3963-3388-839d-19f39f603c4b",
+       "product": {
+        "name": "bind-devel-32bit-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1c24d1f1-0462-3449-aada-f05b3d007fcf",
+       "product": {
+        "name": "idnkit-devel-32bit-0:1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1c6c7f27-a695-329e-be78-32be05c69fee",
+       "product": {
+        "name": "idnkit-1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1cd1ed37-dbcb-3f5d-96d6-3a026e580700",
+       "product": {
+        "name": "libisccc140-32bit-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1e89c81a-1e21-38e9-9f1c-34608e471246",
+       "product": {
+        "name": "bind-chrootenv-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "213ee643-a507-31ae-bed8-776b3acb5752",
+       "product": {
+        "name": "libidnkitres1-1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "21e9e838-4196-3ade-85ae-b6bf0891d3e3",
+       "product": {
+        "name": "bind-utils-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "245839c5-e729-3080-92aa-eb0e6fa93337",
+       "product": {
+        "name": "liblwres141-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "251c2de2-4784-3d4d-905d-6fe913789c14",
+       "product": {
+        "name": "bind-chrootenv-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "256ead69-887c-3c9c-90b6-6b3d676a3c55",
+       "product": {
+        "name": "libbind9-140-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "265afb00-92b8-33af-9ea0-c3a17e1c9c35",
+       "product": {
+        "name": "libisc160-32bit-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "27b469a3-951a-3d76-b78e-5946ce856035",
+       "product": {
+        "name": "libisccc140-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "289d9f2a-001d-35e0-a85a-f710304bba0c",
+       "product": {
+        "name": "liblwres141-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "29a9de9e-97c6-3ade-9dde-49120e1a54b1",
+       "product": {
+        "name": "liblwres141-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2b9f40e6-c717-35a0-a156-9d5740869676",
+       "product": {
+        "name": "libirs141-32bit-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2bd02cdc-71c5-3a96-b18f-e073072ee4cb",
+       "product": {
+        "name": "libidnkit1-32bit-0:1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2c9b082e-3137-38fc-9369-dc3a2404bd7d",
+       "product": {
+        "name": "libidnkitlite1-1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2e18fa51-6a46-3fba-b77d-b3cdc65ce3ac",
+       "product": {
+        "name": "openSUSE Tumbleweed",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2e2ec9ae-12a2-3933-a9e5-0fda3fd29d3b",
+       "product": {
+        "name": "bind-doc-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "30f53ffa-1551-3424-949e-f82d70fe06ed",
+       "product": {
+        "name": "libbind9-140-32bit-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "310baac7-5fff-302f-a2f2-6b0debbc1e64",
+       "product": {
+        "name": "liblwres141-32bit-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "312dc98e-7eb9-3039-acf1-c36dda4d01bb",
+       "product": {
+        "name": "bind-devel-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "31da1ca0-3c5b-3643-85a6-b71728f8c094",
+       "product": {
+        "name": "libisccc140-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "32052210-a35e-3ade-b745-7902f993d91f",
+       "product": {
+        "name": "libirs141-32bit-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "330b09b0-fccf-3bf0-9383-0328bd04d679",
+       "product": {
+        "name": "libisccfg140-32bit-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3556c8e0-aeb3-3cdd-9e55-ce502c1367df",
+       "product": {
+        "name": "libirs-devel-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "357cf957-f5e9-3efc-9817-9f8454697b53",
+       "product": {
+        "name": "libidnkitlite1-1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "360564a0-3ce9-380e-bf7d-8d88e66838b6",
+       "product": {
+        "name": "libisccfg140-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "36539e76-c5d0-3c3b-8382-46ab66e5e944",
+       "product": {
+        "name": "libisccc140-32bit-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "374492e2-2b9e-300f-a4ca-0068de225b6f",
+       "product": {
+        "name": "libbind9-140-32bit-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "374949da-5ba1-3291-b3c2-c8e7e07cb158",
+       "product": {
+        "name": "idnkit-devel-1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "377ec0cf-7aae-3477-b88a-2e2812d45bb2",
+       "product": {
+        "name": "bind-lwresd-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "38ae7e43-479d-33d8-9fd8-b1044ca17104",
+       "product": {
+        "name": "liblwres141-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3ab1a320-3b75-396f-97f4-8e9f9cc56794",
+       "product": {
+        "name": "libdns162-32bit-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3b9cad0a-4dac-393c-8ece-74f9a1854d2e",
+       "product": {
+        "name": "libisc160-32bit-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3d73366b-b8f6-31ae-91e3-36e8fb295af8",
+       "product": {
+        "name": "idnkit-0:1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3d88fcf5-2df8-3521-a701-66f4234913a3",
+       "product": {
+        "name": "libisc160-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3f837dfa-7b0d-308a-b870-b935a5cab549",
+       "product": {
+        "name": "libidnkit1-32bit-1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3f894438-a114-3f6f-af49-f7390e9d3256",
+       "product": {
+        "name": "bind-devel-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "40063c6f-6aa5-3109-92d8-759acad3777f",
+       "product": {
+        "name": "libidnkitres1-32bit-0:1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4152eb74-4530-3eba-a84e-dd61b9e27f22",
+       "product": {
+        "name": "libisccc140-32bit-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "41c81ef9-25c7-3f4f-bfdc-14acb23c1cd7",
+       "product": {
+        "name": "libisccfg140-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "420c209c-9b82-3402-b437-35ba1fc4e237",
+       "product": {
+        "name": "libidnkitres1-32bit-0:1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "421563b3-c037-3970-8fa4-ad2966b4120d",
+       "product": {
+        "name": "bind-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "44967f82-20cd-3a40-9cb2-8261176d86ac",
+       "product": {
+        "name": "bind-devel-32bit-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "451e380a-804f-30fb-b721-92e58bb585bc",
+       "product": {
+        "name": "bind-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4a0ce3f1-505c-33ff-beea-8520682c88f6",
+       "product": {
+        "name": "libisccfg140-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4a8456bd-f6cd-35e5-86d9-ae892655233a",
+       "product": {
+        "name": "bind-devel-32bit-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4bad60d7-e18d-34e8-ae7a-623e86aa563e",
+       "product": {
+        "name": "libdns162-32bit-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4d0c07db-8368-3897-97e9-4f1610510a31",
+       "product": {
+        "name": "bind-devel-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5196d1c3-0278-336b-a091-295617fd4cb3",
+       "product": {
+        "name": "libidnkit1-0:1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "53854afa-8444-3cf3-ad79-6360e4210465",
+       "product": {
+        "name": "liblwres141-32bit-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "56305898-20f7-3d61-a556-ce75e959b696",
+       "product": {
+        "name": "bind-devel-32bit-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "571d24c2-26a9-3216-aa3e-e66c3309e539",
+       "product": {
+        "name": "libidnkit1-32bit-0:1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5a3018bb-ea57-33fd-8dd5-d89490916577",
+       "product": {
+        "name": "libisccfg140-32bit-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5d36d3f7-c298-366d-8f1d-bf4c02a05615",
+       "product": {
+        "name": "bind-devel-32bit-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5e03a8d8-535a-371e-9faa-6374bc38f55e",
+       "product": {
+        "name": "libidnkitres1-1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "607ba16b-5de0-3383-aa45-df0cc32c0f4a",
+       "product": {
+        "name": "libisccc140-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "60feee02-66c7-3472-a519-9eb8db350fd3",
+       "product": {
+        "name": "libidnkitlite1-32bit-0:1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "638c1645-f261-3295-b01a-82ac9975491f",
+       "product": {
+        "name": "bind-utils-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "641ee9d3-b73c-31f4-9444-07c446359ec4",
+       "product": {
+        "name": "libirs-devel-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "659f1fed-e425-36e0-9a0b-109590461fa1",
+       "product": {
+        "name": "libisccc140-32bit-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "65e6e162-16e9-3f14-994a-30fff9939a3d",
+       "product": {
+        "name": "libdns162-32bit-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6619c5db-9476-352c-93a5-bb963c4d8350",
+       "product": {
+        "name": "libidnkit1-32bit-1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "66da0abf-6a92-3660-85da-ed5d8b357b9c",
+       "product": {
+        "name": "libisc160-32bit-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "689b58b1-467f-3663-b0d6-1493be1aaf42",
+       "product": {
+        "name": "bind-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "68fbe8b6-3de3-3b6e-b6bb-cc20829d4def",
+       "product": {
+        "name": "bind-lwresd-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6957e825-9a91-38df-864d-f02b8e201a95",
+       "product": {
+        "name": "idnkit-1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6979d068-6bf4-3f40-b204-1b6342af907c",
+       "product": {
+        "name": "libidnkitlite1-0:1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "69acfd04-e2d0-3018-9267-0447f2e80866",
+       "product": {
+        "name": "libirs141-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6ab58272-98e4-3577-831c-5e97abca5c64",
+       "product": {
+        "name": "libidnkitlite1-0:1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6ae75a01-31cd-3f26-a317-bb0a21ef64a5",
+       "product": {
+        "name": "libisccc140-32bit-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6af4a6aa-739f-3e92-8ede-ddc1f24b55bc",
+       "product": {
+        "name": "libdns162-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6af581f6-0a74-397b-a2b6-4fdb00b66bac",
+       "product": {
+        "name": "bind-devel-32bit-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6c7334e6-2f3a-31a0-b512-d38bed5df822",
+       "product": {
+        "name": "bind-chrootenv-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6da37c77-86d4-35b5-9136-acd680e8302c",
+       "product": {
+        "name": "bind-lwresd-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6e1247ca-25fa-30ba-98b8-9798122e862c",
+       "product": {
+        "name": "libirs141-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6f615abe-3641-3172-94ce-c4459235071e",
+       "product": {
+        "name": "libidnkit1-1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6fad50ca-3d0e-3658-ab55-84eb38c35d93",
+       "product": {
+        "name": "libidnkitlite1-0:1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "705ad754-e1cc-3218-a081-438c63b94c9f",
+       "product": {
+        "name": "liblwres141-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "70b7ef44-27d7-3f39-bd10-75ac6de4085d",
+       "product": {
+        "name": "libisc160-32bit-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "71105da5-86c3-363b-90e6-d3fdf62b4bfa",
+       "product": {
+        "name": "libbind9-140-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "71d5d484-beff-3077-a9a9-27ca4913f53f",
+       "product": {
+        "name": "libidnkitres1-1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "72528d29-795a-3e3b-9792-5bdf82815b12",
+       "product": {
+        "name": "libisccfg140-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "72fce4df-c4da-3450-b746-dc04f3c7e268",
+       "product": {
+        "name": "bind-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "734fea96-1145-31af-aa19-144947c2760c",
+       "product": {
+        "name": "libidnkit1-1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "735dc15a-b2e1-3b3a-b150-b4e9fd65a9dc",
+       "product": {
+        "name": "libisc160-32bit-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "740144f2-c080-308f-ae9b-0ec95e6f4b45",
+       "product": {
+        "name": "libirs-devel-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "756780e8-0a7d-37c2-b7dd-47ebad906f4c",
+       "product": {
+        "name": "libisccc140-32bit-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "76316225-c452-3a6d-ad89-4b822cc36dac",
+       "product": {
+        "name": "libdns162-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "77d2c89e-554e-3c8a-8921-911949fbea6b",
+       "product": {
+        "name": "bind-doc-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7874f5b1-cf15-363f-8342-512e96617cad",
+       "product": {
+        "name": "idnkit-devel-32bit-1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "79f5e5eb-8e8b-30ec-9028-c9edbb9b0be1",
+       "product": {
+        "name": "idnkit-devel-32bit-1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7a3d3dae-3cea-3525-8942-d20cfc1cda0e",
+       "product": {
+        "name": "bind-chrootenv-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7a4f84be-453d-349f-b445-261b3b18f031",
+       "product": {
+        "name": "libidnkitlite1-32bit-0:1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7a761071-da1e-395e-9adc-cff87916172e",
+       "product": {
+        "name": "libidnkit1-0:1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7bae9887-1dec-34d1-97ca-0622a3d915e2",
+       "product": {
+        "name": "libidnkit1-1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7c4a66bf-45eb-3bac-8e57-4baa64535118",
+       "product": {
+        "name": "libdns162-32bit-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7cea0367-92b6-361a-bcb1-16ce5db7305b",
+       "product": {
+        "name": "idnkit-devel-32bit-0:1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7d0dde22-5654-3052-be37-00a6b9bdf32f",
+       "product": {
+        "name": "bind-devel-32bit-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7de20f9e-4d49-338d-b3d7-beada9322400",
+       "product": {
+        "name": "bind-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "816e1671-c4cc-35ec-b53a-73cf6c1d809b",
+       "product": {
+        "name": "bind-doc-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "82351869-6059-34e5-a432-7045cfa0d260",
+       "product": {
+        "name": "libidnkitlite1-32bit-0:1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "82c12157-42e6-32f1-9ed5-c0950b082d64",
+       "product": {
+        "name": "libbind9-140-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "82d8ae80-2bbb-3787-bf41-cb642dba2023",
+       "product": {
+        "name": "libirs-devel-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "83a01191-ba8d-372c-8001-9360baabaa1d",
+       "product": {
+        "name": "idnkit-devel-0:1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "846f2e5e-4e49-3ae3-b816-98e15f666410",
+       "product": {
+        "name": "liblwres141-32bit-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "84b5b5bc-e929-3fd1-b8c9-0faa57663574",
+       "product": {
+        "name": "idnkit-devel-32bit-1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8723d69f-b3bf-39d2-8dcc-a7e57bc539cd",
+       "product": {
+        "name": "idnkit-devel-1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "880ca292-8d95-3456-b7da-ad064085c597",
+       "product": {
+        "name": "bind-devel-32bit-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "88903405-0316-3ee0-9f6d-201deb8614f9",
+       "product": {
+        "name": "idnkit-1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8930e419-cdeb-32b6-9ccd-f6f936fa13b9",
+       "product": {
+        "name": "bind-lwresd-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8af57df8-af3a-36e6-9547-1b98217dfea7",
+       "product": {
+        "name": "libidnkitres1-1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8c4abefa-4365-3337-a700-2acc7dd5cacf",
+       "product": {
+        "name": "libirs141-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8e9ed937-61f4-3b72-b700-470c5b42cbc8",
+       "product": {
+        "name": "liblwres141-32bit-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8f6756c5-b740-32b6-82f4-302f95320004",
+       "product": {
+        "name": "libisccfg140-32bit-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "91222238-91b4-37ce-99cd-6b8d6291bdca",
+       "product": {
+        "name": "libidnkitlite1-1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "923abba6-337d-39a2-bc42-e3632469b2ba",
+       "product": {
+        "name": "libidnkitres1-0:1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "92e9521d-49e8-397b-8f6f-7c0e474f1f0f",
+       "product": {
+        "name": "libdns162-32bit-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9327edbd-bdf7-3a32-a9f0-ee1fb36cfc20",
+       "product": {
+        "name": "libisccfg140-32bit-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "937aad44-ee7d-38f5-adc5-56bdba1d7be3",
+       "product": {
+        "name": "libbind9-140-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9380173e-ce4c-3662-b1f1-aeefebb3324c",
+       "product": {
+        "name": "bind-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "93804b7d-4154-396a-b4aa-d28e7ab9a337",
+       "product": {
+        "name": "libidnkit1-1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "94a15096-589b-33d2-8bd1-8bf40778665c",
+       "product": {
+        "name": "libbind9-140-32bit-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "94bca9cc-8753-3fde-9e51-6fdfc6107106",
+       "product": {
+        "name": "libisc160-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "955c6168-337a-31dd-baf4-3d5889c99753",
+       "product": {
+        "name": "libidnkit1-32bit-0:1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "972a88c3-3d63-3449-8708-309f3e7e8361",
+       "product": {
+        "name": "liblwres141-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "97734681-2128-3729-a47b-132a7df3e339",
+       "product": {
+        "name": "libidnkit1-0:1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "98bd319e-9553-33f0-ac97-149bd811716f",
+       "product": {
+        "name": "libbind9-140-32bit-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "99c4a8f3-d66c-3a7f-b583-2b81c739a98d",
+       "product": {
+        "name": "bind-lwresd-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9cf1fd24-eb82-3a2b-af1b-295a86e2115f",
+       "product": {
+        "name": "libisc160-32bit-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9e495475-23f7-3bad-befd-a2eb3564a45f",
+       "product": {
+        "name": "libisc160-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9e62f5eb-5010-34a6-aa59-79a2c86b1c0d",
+       "product": {
+        "name": "liblwres141-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9fbb8617-d466-3ca0-bbda-b6b55c6130ae",
+       "product": {
+        "name": "bind-chrootenv-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a0a59e43-7e59-3177-8686-766716a5ec74",
+       "product": {
+        "name": "libisccc140-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a2405a55-40b2-3947-9b7a-2702e4a065ae",
+       "product": {
+        "name": "libisccc140-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a2a5f7cf-1fce-390e-9cdd-ab5bee03fb73",
+       "product": {
+        "name": "libidnkitlite1-32bit-1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a514fbf5-223a-34ea-8bd6-2225adcf8aba",
+       "product": {
+        "name": "bind-utils-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a72dc8d8-ed40-38e8-aab0-9e6d20ab145d",
+       "product": {
+        "name": "libidnkitres1-32bit-1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a8dd41f8-02c3-3326-9951-23eceed79643",
+       "product": {
+        "name": "liblwres141-32bit-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a945e99d-48f3-352c-8dd9-5b7f8b493475",
+       "product": {
+        "name": "libdns162-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a94eaee8-979b-3b26-8699-dd7325b57e0f",
+       "product": {
+        "name": "libisccfg140-32bit-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "aaaf67de-b583-37d3-8f23-4182843e3ed4",
+       "product": {
+        "name": "libirs141-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "abb138b4-22c9-3bb7-b412-aaca96dc939a",
+       "product": {
+        "name": "bind-utils-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "abe38787-3b73-3d9c-b6d1-59c990fe25dd",
+       "product": {
+        "name": "libidnkitres1-32bit-1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ac66cc7d-a575-3424-9649-6d7113df06b6",
+       "product": {
+        "name": "bind-lwresd-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "af11f790-b8f2-3c6c-9576-e842964e99c8",
+       "product": {
+        "name": "libisccfg140-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b02b6b6e-02a2-3c91-a7ea-40edd038bee3",
+       "product": {
+        "name": "libisc160-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b124dcd5-450f-3939-bcc9-feb6a42fb0f4",
+       "product": {
+        "name": "bind-devel-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b13ff1ad-257f-3572-ada5-848d4535a948",
+       "product": {
+        "name": "libbind9-140-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b2ffa8fa-85b8-3b33-b25a-ee5ff571a19d",
+       "product": {
+        "name": "liblwres141-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b3e85796-2d9b-3abd-907e-19419e306bcf",
+       "product": {
+        "name": "libisccfg140-32bit-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b499ba9a-71d1-3b1e-a572-29959bb952cb",
+       "product": {
+        "name": "libbind9-140-32bit-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b78496f4-ff7a-3c0a-86fc-1c00acb5ee10",
+       "product": {
+        "name": "libirs141-32bit-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b90b861f-fcfd-3563-ae8d-dc79ebe5441a",
+       "product": {
+        "name": "libidnkitres1-32bit-0:1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b946cf78-52ba-3e3b-b48a-4e3ad6222dc9",
+       "product": {
+        "name": "libidnkitres1-0:1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b96ef998-cbd2-3cab-a5fc-c79dc832f0b9",
+       "product": {
+        "name": "libidnkit1-32bit-0:1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b9d7e85b-0022-309f-aaf2-61dfd4a21e70",
+       "product": {
+        "name": "idnkit-0:1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bab40f82-d76c-39b2-bbdb-38a8ffc3952a",
+       "product": {
+        "name": "libisccc140-32bit-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bb519c49-cc39-327c-9145-6a24c196c8fd",
+       "product": {
+        "name": "bind-lwresd-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "beaac656-08eb-3c8f-8086-c94251009959",
+       "product": {
+        "name": "libisccfg140-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c01dd823-724e-3086-a25b-868c7d03b39d",
+       "product": {
+        "name": "libisccfg140-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c044b8a6-c05f-3685-8a9e-3e1b1a825a61",
+       "product": {
+        "name": "libisccfg140-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c09e1d7f-3be2-381d-8531-3f3ce8ca23c1",
+       "product": {
+        "name": "libbind9-140-32bit-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c112f984-6d14-3e6d-a45a-dd84b5ccfdee",
+       "product": {
+        "name": "libirs141-32bit-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c3046bbd-0554-3c22-9e71-8d3c40145852",
+       "product": {
+        "name": "libbind9-140-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c3cd742f-e14d-34fa-aabf-316b58dec560",
+       "product": {
+        "name": "libirs141-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c4197d28-e3b2-3342-b65c-1498f577dd60",
+       "product": {
+        "name": "libirs141-32bit-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c501df0d-ad4f-3198-8c3b-b97c6e04ff27",
+       "product": {
+        "name": "libirs-devel-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c51aaa80-10c4-3e0a-8e3c-7fa73c0bc432",
+       "product": {
+        "name": "libidnkitlite1-32bit-1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c5ed3035-3010-3878-9ebc-cfaf86219ccb",
+       "product": {
+        "name": "libidnkit1-0:1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c63e0c0d-cca5-379c-b3d7-0003cb0b2d2e",
+       "product": {
+        "name": "libisccc140-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c792cf49-0338-3be2-be28-fb8d82082994",
+       "product": {
+        "name": "libisccc140-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c929bc57-a7f3-3b43-8d7c-2f8a7fd17e9b",
+       "product": {
+        "name": "libirs141-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c9579574-64da-3129-828f-8cebf95beedf",
+       "product": {
+        "name": "idnkit-devel-1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c9d57f8a-9a48-361e-a86f-e96720bfd806",
+       "product": {
+        "name": "libirs141-32bit-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cb6b7e41-8ee9-373e-a420-fd35f957b2e3",
+       "product": {
+        "name": "bind-devel-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cc6ae2a4-f9a9-3167-b829-4f99b840d9e2",
+       "product": {
+        "name": "bind-chrootenv-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cdb207d2-d4fc-3e4a-b2d2-0c78d8f8e049",
+       "product": {
+        "name": "idnkit-devel-0:1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cf719ddc-b9bd-3c54-9f6a-26c65d120268",
+       "product": {
+        "name": "liblwres141-32bit-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d0c15af1-080b-319b-ba29-cffff0aa9bd8",
+       "product": {
+        "name": "liblwres141-32bit-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d121c47d-01a0-307a-acf9-4ced19e55088",
+       "product": {
+        "name": "libidnkit1-32bit-1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d22d603d-25f8-36c6-8e28-558f33f126a1",
+       "product": {
+        "name": "libidnkitres1-32bit-1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d27b2d86-f0cd-3817-93d8-4e6c58d77320",
+       "product": {
+        "name": "idnkit-devel-1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d3a594fa-6904-3bb8-92e0-46871b78700d",
+       "product": {
+        "name": "libirs141-32bit-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d40e6754-7045-3dba-b5a4-8249117efe2f",
+       "product": {
+        "name": "libdns162-32bit-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d43fbb72-6b2b-3d99-a3db-f7bf64f32204",
+       "product": {
+        "name": "libisc160-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d4885527-79f3-364a-a41d-1881ec71a21c",
+       "product": {
+        "name": "libdns162-32bit-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d63e6a20-579b-30ec-aa31-d31dadef8179",
+       "product": {
+        "name": "libirs-devel-0:9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d64ace4c-15c0-325c-9848-edd7c6ce3937",
+       "product": {
+        "name": "libirs141-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d6668ce3-aa09-33ee-994f-b1973aec5c3d",
+       "product": {
+        "name": "libidnkitlite1-1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d73676b2-dadf-3054-ab80-affdd5aaaf7c",
+       "product": {
+        "name": "libdns162-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d7c1ffb2-b264-3a91-a9a6-ce2429d6231d",
+       "product": {
+        "name": "libidnkitres1-0:1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d94f9ba2-95f3-397a-a805-f46820304606",
+       "product": {
+        "name": "libidnkitlite1-0:1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "da9b2457-da08-3a38-9735-603b6ec92dd5",
+       "product": {
+        "name": "bind-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "dac956a5-6490-38e8-9e4b-ce0261298400",
+       "product": {
+        "name": "bind-utils-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "dc3bd92f-ab96-3fc1-aef6-a8327b2ab77c",
+       "product": {
+        "name": "liblwres141-32bit-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "dd1334b9-2804-3529-a2ea-239b69f8b60b",
+       "product": {
+        "name": "bind-utils-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ddf3937d-f4cd-3423-8f4d-c713c1a9ebf7",
+       "product": {
+        "name": "bind-devel-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ddf39fd9-07b4-3343-a77a-045332d9b132",
+       "product": {
+        "name": "libisccfg140-32bit-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e13d7053-4eea-3ccf-8178-a9468b8ad892",
+       "product": {
+        "name": "idnkit-devel-0:1.0-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e1f5f727-29e6-38b7-8c16-df43064d2a10",
+       "product": {
+        "name": "libidnkitlite1-32bit-0:1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e3680285-dc2f-3a83-908d-c21752e352f8",
+       "product": {
+        "name": "libidnkit1-32bit-1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e37dfe94-77d2-3720-941b-b1f7b73ad99d",
+       "product": {
+        "name": "libirs-devel-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e48b7689-8fde-334e-9a39-bec6ebb76fc4",
+       "product": {
+        "name": "libisccc140-32bit-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e6311eb5-a7b8-3ff9-86db-5919f6145eb5",
+       "product": {
+        "name": "libdns162-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e9225f0a-6e0b-310a-97d9-eb69e7172858",
+       "product": {
+        "name": "idnkit-devel-32bit-1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "eaa45baf-ef08-3d39-b472-e6d1789c626c",
+       "product": {
+        "name": "bind-lwresd-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ecb9b49f-2f5b-3672-b015-701ebe5fc033",
+       "product": {
+        "name": "libisc160-32bit-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ed22e7f5-d1e4-31a7-8dc2-42593ef7b9dd",
+       "product": {
+        "name": "libidnkitres1-32bit-0:1.0-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f03e87db-f32e-3b28-9209-af626f2dfc8a",
+       "product": {
+        "name": "idnkit-devel-32bit-0:1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f0b5ffda-b86c-351d-acc3-21ce381cce9d",
+       "product": {
+        "name": "libbind9-140-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f0ed42b8-c248-3a57-8dcf-cf6c88f75dfd",
+       "product": {
+        "name": "libbind9-140-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f0fa1a0e-dd0a-3940-909e-4083fee81a67",
+       "product": {
+        "name": "bind-chrootenv-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f1717a85-b22e-3901-b4cf-9e2dfef5dd8a",
+       "product": {
+        "name": "libirs-devel-9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f326d21e-1f21-3db3-b4c1-dfd08047d52f",
+       "product": {
+        "name": "bind-devel-9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f3ee8389-788b-3758-aad9-433a43888f30",
+       "product": {
+        "name": "libidnkitres1-32bit-1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f49ffa5b-0166-35b7-be00-3c360defcc5f",
+       "product": {
+        "name": "idnkit-1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f4ba0dfe-7fc5-30ed-a2f9-2326ab1f8ba1",
+       "product": {
+        "name": "libbind9-140-32bit-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f5afe90b-13e8-3a16-ae7d-bd37576c3b1f",
+       "product": {
+        "name": "libdns162-32bit-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f68f1cbc-0b7a-3617-9f10-f602ee2c73c4",
+       "product": {
+        "name": "libisccfg140-32bit-0:9.10.3P4-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f7697867-85d7-3d48-b0b6-d740e0edcc7a",
+       "product": {
+        "name": "bind-utils-0:9.10.3P4-21.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f833cb68-48d1-3aff-bc48-62e39be58b49",
+       "product": {
+        "name": "libidnkitlite1-32bit-1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f8cdf58d-29f6-39f6-8042-0e127a0ef4c3",
+       "product": {
+        "name": "bind-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fa79d5f0-6565-37d2-83c6-efa1121a4433",
+       "product": {
+        "name": "libirs141-32bit-9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fb4a8106-a359-34fd-8bbd-04c2eb400e4b",
+       "product": {
+        "name": "idnkit-devel-0:1.0-21.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fbeb6c95-9d0f-3568-bedb-c3558a1e5102",
+       "product": {
+        "name": "libisc160-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fdbf1f26-ff63-38ce-a968-ccb50c2f74b6",
+       "product": {
+        "name": "libdns162-0:9.10.3P4-21.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fec1ed1c-9ca3-3efa-9f12-0f7bf593cb0f",
+       "product": {
+        "name": "libidnkitlite1-32bit-1.0-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fff637c6-c642-31f5-9de2-95126a3afa88",
+       "product": {
+        "name": "libirs141-9.10.3P4-21.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2009-0696\nCVE-2009-4022\nCVE-2010-3613\nCVE-2010-3614\nCVE-2010-3615\nCVE-2011-0414\nCVE-2011-1907\nCVE-2011-1910\nCVE-2011-2464\nCVE-2011-4313\nCVE-2012-1667\nCVE-2012-3817\nCVE-2012-3868\nCVE-2012-4244\nCVE-2012-5166\nCVE-2012-5688\nCVE-2012-5689\nCVE-2013-2266\nCVE-2013-4854\nCVE-2014-0591\nCVE-2014-3214\nCVE-2014-3859\nCVE-2014-8500\nCVE-2014-8680\nCVE-2015-1349\nCVE-2015-4620\nCVE-2015-5477\nCVE-2015-5722\nCVE-2015-5986\nCVE-2015-8000\nCVE-2015-8704\nCVE-2015-8705\nCVE-2016-1285\nCVE-2016-1286\nCVE-2016-2088\nCVE-2016-2776\nCVE-2016-8864\n",
+     "baseScore": 0.0,
+     "datePublished": "Jun 15, 2024, 12:00:00 AM",
+     "dateUpdated": "Sep 20, 2026, 7:59:27 PM",
+     "description": "bind-9.10.3P4-21.1 on GA media",
+     "id": "openSUSE-SU-2024:10467-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2024_10467-1.json\nhttps://www.suse.com/security/cve/CVE-2009-0696/\nhttps://www.suse.com/security/cve/CVE-2009-4022/\nhttps://www.suse.com/security/cve/CVE-2010-3613/\nhttps://www.suse.com/security/cve/CVE-2010-3614/\nhttps://www.suse.com/security/cve/CVE-2010-3615/\nhttps://www.suse.com/security/cve/CVE-2011-0414/\nhttps://www.suse.com/security/cve/CVE-2011-1907/\nhttps://www.suse.com/security/cve/CVE-2011-1910/\nhttps://www.suse.com/security/cve/CVE-2011-2464/\nhttps://www.suse.com/security/cve/CVE-2011-4313/\nhttps://www.suse.com/security/cve/CVE-2012-1667/\nhttps://www.suse.com/security/cve/CVE-2012-3817/\nhttps://www.suse.com/security/cve/CVE-2012-3868/\nhttps://www.suse.com/security/cve/CVE-2012-4244/\nhttps://www.suse.com/security/cve/CVE-2012-5166/\nhttps://www.suse.com/security/cve/CVE-2012-5688/\nhttps://www.suse.com/security/cve/CVE-2012-5689/\nhttps://www.suse.com/security/cve/CVE-2013-2266/\nhttps://www.suse.com/security/cve/CVE-2013-4854/\nhttps://www.suse.com/security/cve/CVE-2014-0591/\nhttps://www.suse.com/security/cve/CVE-2014-3214/\nhttps://www.suse.com/security/cve/CVE-2014-3859/\nhttps://www.suse.com/security/cve/CVE-2014-8500/\nhttps://www.suse.com/security/cve/CVE-2014-8680/\nhttps://www.suse.com/security/cve/CVE-2015-1349/\nhttps://www.suse.com/security/cve/CVE-2015-4620/\nhttps://www.suse.com/security/cve/CVE-2015-5477/\nhttps://www.suse.com/security/cve/CVE-2015-5722/\nhttps://www.suse.com/security/cve/CVE-2015-5986/\nhttps://www.suse.com/security/cve/CVE-2015-8000/\nhttps://www.suse.com/security/cve/CVE-2015-8704/\nhttps://www.suse.com/security/cve/CVE-2015-8705/\nhttps://www.suse.com/security/cve/CVE-2016-1285/\nhttps://www.suse.com/security/cve/CVE-2016-1286/\nhttps://www.suse.com/security/cve/CVE-2016-2088/\nhttps://www.suse.com/security/cve/CVE-2016-2776/\nhttps://www.suse.com/security/cve/CVE-2016-8864/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "bind-9.10.3P4-21.1 on GA media"
+    },
+    "id": "061d0355-5ac5-3055-bbf2-62f295d187e0"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "00a13a91-ed1e-3e04-8be1-6450dc278b76",
+       "product": {
+        "name": "bind-devel-0:9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "02a479b7-d80e-3175-bc5b-86541a408cc1",
+       "product": {
+        "name": "bind-utils-0:9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "07556a83-c2dd-31cd-a1d9-f5756bc13da3",
+       "product": {
+        "name": "bind-0:9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0edd438b-0f10-354c-bc94-cc28361b3312",
+       "product": {
+        "name": "SUSE Linux Enterprise Software Development Kit 11 SP4",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0fe654e0-4890-331d-bfed-62d8bcc767b8",
+       "product": {
+        "name": "bind-chrootenv-0:9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "11c816cc-e4fc-3fb3-9d38-7854f63a2869",
+       "product": {
+        "name": "SUSE Linux Enterprise Server for SAP Applications 11 SP3",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "144400ee-6170-3e0d-ad62-cf7f808b3c01",
+       "product": {
+        "name": "bind-chrootenv-9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1596b06b-53c3-3739-880e-543facfcb883",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 11 SP2",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "16c7c43c-2fd6-373f-86ac-dd93b29eeb6f",
+       "product": {
+        "name": "bind-9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1d12a26f-e8c0-3507-bb1b-24ee0d35bfdf",
+       "product": {
+        "name": "bind-utils-9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1df9abdd-5ef4-3a7d-80a1-c5da7b86cd96",
+       "product": {
+        "name": "bind-devel-9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "206e1661-0878-37f3-8793-38824e21b163",
+       "product": {
+        "name": "bind-libs-0:9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "240eae77-67d4-3a90-a351-a0c599be7bc5",
+       "product": {
+        "name": "bind-libs-32bit-9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2794f5ae-a9a5-3fcc-974f-0a5561b07c49",
+       "product": {
+        "name": "bind-doc-0:9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2809044a-0806-3e9f-8a3c-6f1eeba7156a",
+       "product": {
+        "name": "bind-libs-9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "29d8b3d8-2f22-3614-a66d-cb1f949117dd",
+       "product": {
+        "name": "bind-libs-0:9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2be1ba48-7b89-3211-a52a-bf09be3c4fee",
+       "product": {
+        "name": "bind-doc-9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2c5e0e89-b23f-345d-9989-1eb08051cb4c",
+       "product": {
+        "name": "bind-doc-9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2e77a7e3-296d-3cde-b1fa-80ccc5650eeb",
+       "product": {
+        "name": "bind-devel-0:9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2ebff895-fdf9-3232-9ef6-ecb70ac35a1d",
+       "product": {
+        "name": "bind-utils-9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2f2047a9-b208-3d31-b35c-84addaed639b",
+       "product": {
+        "name": "bind-devel-9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "35a1c91f-5c07-3acf-8fe2-5ba705f5c80f",
+       "product": {
+        "name": "bind-devel-32bit-9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3e8de3fc-c87c-38ea-b2e3-9db28da3062d",
+       "product": {
+        "name": "bind-devel-32bit-0:9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3ee7ce00-3251-3377-a207-70a021d14f37",
+       "product": {
+        "name": "bind-libs-32bit-9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "41803d97-222d-3b8c-acbc-76ae41ba77a5",
+       "product": {
+        "name": "bind-devel-0:9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "41df891b-421c-3e79-b013-561e10de7ac0",
+       "product": {
+        "name": "bind-9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "44de13da-630b-3675-bf95-ec9e74a82093",
+       "product": {
+        "name": "bind-doc-9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4c174411-cce2-3346-9c45-7bca1eefb8e9",
+       "product": {
+        "name": "bind-libs-32bit-0:9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "58f19134-c000-31f2-bb68-74a4307310b7",
+       "product": {
+        "name": "bind-libs-0:9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5bc74b44-7ee1-3e16-b939-e2783645cb68",
+       "product": {
+        "name": "bind-devel-9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5ecbd3a7-615d-3667-9c09-fc949f7cad7b",
+       "product": {
+        "name": "bind-doc-0:9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5f8545fd-4aac-31d4-9599-6eb8b34afb51",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 11 SP4",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "619ef96e-cac0-3e2f-9469-5d7eae88c6dc",
+       "product": {
+        "name": "bind-devel-9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "633faa2e-6145-3e3a-bda7-b2104eaf609a",
+       "product": {
+        "name": "bind-chrootenv-9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "63680e1f-0575-3a65-996b-e5e7afcf4fdc",
+       "product": {
+        "name": "bind-libs-0:9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "65c59b23-c900-3bfa-992a-b06d3b3039ea",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 11 SP3-TERADATA",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7185d07b-0af7-3eef-9be4-6d43990ba240",
+       "product": {
+        "name": "bind-chrootenv-0:9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "749470d6-dff5-33dc-8219-6487daf937a6",
+       "product": {
+        "name": "bind-doc-9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "78e6b67a-b8e8-3f79-bd3b-94167c650e9d",
+       "product": {
+        "name": "bind-utils-9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "79e5c955-9d8f-3586-9680-6c4d405893d8",
+       "product": {
+        "name": "bind-libs-32bit-0:9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7ab224d1-f57c-35da-b4ac-f309d2163e4d",
+       "product": {
+        "name": "bind-chrootenv-0:9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "809c4041-c100-392f-af87-6d5e3aa35ee6",
+       "product": {
+        "name": "bind-doc-0:9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8d04da5e-b0f4-3181-a01b-98fda4983102",
+       "product": {
+        "name": "SUSE Linux Enterprise Desktop 11 SP3",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8ecf3bc1-0849-3d33-aa83-cde5375411da",
+       "product": {
+        "name": "bind-doc-9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9428ec24-e78c-31cd-87cb-120d0166f9fa",
+       "product": {
+        "name": "bind-devel-9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "96a30947-6aec-3a92-bae4-6d9cb91c7d1b",
+       "product": {
+        "name": "bind-libs-9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "974e93e0-4fd7-3a80-9316-ece1a6cd793b",
+       "product": {
+        "name": "bind-libs-x86-0:9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "99fee1cf-c309-3257-8c82-74c904d0aaf4",
+       "product": {
+        "name": "bind-chrootenv-9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9daaa08b-debf-33e3-b92d-a4afd072f92d",
+       "product": {
+        "name": "bind-libs-32bit-0:9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9db6e901-f4aa-385a-b2f3-26d8e0ac3467",
+       "product": {
+        "name": "bind-libs-9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a0006516-2a5d-3881-b588-f1e737b785bd",
+       "product": {
+        "name": "SUSE Linux Enterprise Server for SAP Applications 11 SP2",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a0e06f2e-0ab6-316d-80b0-75b6a3ee737e",
+       "product": {
+        "name": "bind-9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a28704ae-174c-3a7d-89cb-21b71078c025",
+       "product": {
+        "name": "bind-libs-0:9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "abd41bbb-a80d-3c50-8c5a-229a13cb8d1f",
+       "product": {
+        "name": "bind-chrootenv-0:9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ad7f06dc-754f-30af-9d70-1b13268546fe",
+       "product": {
+        "name": "bind-chrootenv-0:9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "aeb64179-5201-36cd-a26d-02e44eed00b9",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 11 SP3",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b231208a-1b74-3a22-93de-336f3ab9b8ef",
+       "product": {
+        "name": "bind-0:9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b4e992aa-26b2-3e79-9521-2629fe34ccf5",
+       "product": {
+        "name": "bind-utils-0:9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b76f90e0-fcd4-37ff-aafa-df548086929e",
+       "product": {
+        "name": "bind-doc-0:9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b86e0f07-31ab-3d66-a4ee-4d0ad10c8d46",
+       "product": {
+        "name": "bind-devel-0:9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b9595ae4-5e33-3dc8-9c1b-57529fa18862",
+       "product": {
+        "name": "bind-utils-0:9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c0dc168a-4f6c-3d7f-ac22-5cfbdedcbb02",
+       "product": {
+        "name": "bind-chrootenv-9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c107b45a-3d5e-3137-9793-ef1581378b2d",
+       "product": {
+        "name": "bind-0:9.9.6P1-0.12.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c1a1fc9f-b2d1-3888-a5cd-4faba7897108",
+       "product": {
+        "name": "bind-doc-0:9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c290c7e9-e410-37a3-88a3-b11cbba10e91",
+       "product": {
+        "name": "SUSE Linux Enterprise Server for SAP Applications 11 SP4",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c9d2736a-4fc5-36c5-b3b0-c3d2ef5fa919",
+       "product": {
+        "name": "SUSE Linux Enterprise High Performance Computing 11 SP2",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cb1e7c0e-d8d1-3102-845a-95b87bb54fb0",
+       "product": {
+        "name": "bind-0:9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d0f95276-97c9-316b-acdb-ea3e4df3231f",
+       "product": {
+        "name": "bind-utils-0:9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d65a3c36-d76f-3e1f-afb3-b7ab352c3960",
+       "product": {
+        "name": "bind-9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d78fa89d-70c9-351d-be7c-33b12f742955",
+       "product": {
+        "name": "SUSE Linux Enterprise Desktop 11 SP4",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d9403fef-4a1d-3bf4-a803-b38d323e1b3e",
+       "product": {
+        "name": "SUSE Linux Enterprise Software Development Kit 11 SP3",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e12c7368-6e8e-32e8-8aff-eb33fa8a5872",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 11 SP2-LTSS",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e667d158-5bcd-3cab-9392-4dbc5ba4fe72",
+       "product": {
+        "name": "bind-utils-0:9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e682bcce-03ba-3cf5-a09c-4b1cbd5029ec",
+       "product": {
+        "name": "bind-devel-0:9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e7b9e132-fcbb-3932-af59-60d60e905301",
+       "product": {
+        "name": "bind-libs-9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e818c1d2-d1e6-3651-87d7-071f12c06f28",
+       "product": {
+        "name": "bind-9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ea6d1d0a-1886-34aa-a8c3-fe677fbed424",
+       "product": {
+        "name": "bind-libs-9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "eaf1dfe6-b5e7-3ac6-9727-9252294520a7",
+       "product": {
+        "name": "bind-utils-9.9.6P1-0.12.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ebb8a142-6a77-3d71-b4d9-70ef2391e10b",
+       "product": {
+        "name": "bind-libs-x86-9.9.6P1-0.12.1.ia64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ed748e75-4090-31ee-8220-16776c516412",
+       "product": {
+        "name": "bind-0:9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f054eff3-a909-3f2f-95d0-51705e28083f",
+       "product": {
+        "name": "bind-utils-9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f0ea8826-1200-31ac-8552-9654caee731e",
+       "product": {
+        "name": "bind-libs-32bit-9.9.6P1-0.12.1.ppc64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f92341fb-a150-39b0-acbb-a7cb3376d058",
+       "product": {
+        "name": "bind-chrootenv-9.9.6P1-0.12.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2015-5477\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 28, 2015, 1:37:03 PM",
+     "dateUpdated": "Sep 20, 2026, 12:04:58 PM",
+     "description": "Security update for bind",
+     "id": "SUSE-SU-2015:1304-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2015_1304-1.json\nhttps://www.suse.com/support/update/announcement/2015/suse-su-20151304-1/\nhttps://lists.suse.com/pipermail/sle-security-updates/2015-July/001512.html\nhttps://bugzilla.suse.com/939567\nhttps://www.suse.com/security/cve/CVE-2015-5477/\n",
+     "source": {
+      "id": 22,
+      "name": "csaf_suse"
+     },
+     "summary": "Security update for bind"
+    },
+    "id": "0f17c4ac-ee63-3a2b-9fef-fd594ad3ad94"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0672290d-9017-3a8a-b892-274ae387447c",
+       "product": {
+        "name": "Red Hat Enterprise Linux (v. 5 server)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "08594910-2a3a-3042-89f5-72c59b90af15",
+       "product": {
+        "name": "bind97-debuginfo-32:9.7.0-21.P2.el5_11.2.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "089256f0-0c89-3634-abe9-baa2747d3778",
+       "product": {
+        "name": "bind97-devel-32:9.7.0-21.P2.el5_11.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "08f036c7-3eea-33a8-b09e-5e89c57a90a4",
+       "product": {
+        "name": "bind97-chroot-32:9.7.0-21.P2.el5_11.2.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0c828ff0-f3ac-3cc1-b99a-8f8d2686dcee",
+       "product": {
+        "name": "Red Hat Enterprise Linux Desktop Workstation (v. 5 client)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0d6685f8-4f85-3293-bd54-efc15724594a",
+       "product": {
+        "name": "bind97-32:9.7.0-21.P2.el5_11.2.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1190e44c-8f76-3b9a-b2d7-c3e9f394009b",
+       "product": {
+        "name": "bind97-utils-32:9.7.0-21.P2.el5_11.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1bcdd1a8-62b3-309b-9c70-13875414b5d5",
+       "product": {
+        "name": "bind97-devel-32:9.7.0-21.P2.el5_11.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "24b0b970-8918-3604-a8fc-bb506350704a",
+       "product": {
+        "name": "bind97-libs-32:9.7.0-21.P2.el5_11.2.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2c479eb7-196e-3a1a-9c0f-446bc46ce49d",
+       "product": {
+        "name": "bind97-devel-32:9.7.0-21.P2.el5_11.2.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "36d24943-a7f1-3e9f-ac5e-87603bd047fd",
+       "product": {
+        "name": "bind97-libs-32:9.7.0-21.P2.el5_11.2.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3934ab6c-245b-3322-85ac-4820786f2575",
+       "product": {
+        "name": "bind97-32:9.7.0-21.P2.el5_11.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "40cf1553-87ae-3f0d-8c8f-3caf22b6001b",
+       "product": {
+        "name": "bind97-chroot-32:9.7.0-21.P2.el5_11.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4b9dd2c8-d925-3321-a163-5211b0c501aa",
+       "product": {
+        "name": "bind97-32:9.7.0-21.P2.el5_11.2.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4e969da8-2f8c-35d7-ad1c-ff55a2214693",
+       "product": {
+        "name": "bind97-devel-32:9.7.0-21.P2.el5_11.2.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "53d4c211-9ea9-3ace-b9ef-d7b716046aae",
+       "product": {
+        "name": "bind97-libs-32:9.7.0-21.P2.el5_11.2.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5c44018f-816a-3f0c-9abe-86882eacc367",
+       "product": {
+        "name": "bind97-chroot-32:9.7.0-21.P2.el5_11.2.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "65b3f949-5b1e-3fe9-9a90-7eab8023e027",
+       "product": {
+        "name": "bind97-libs-32:9.7.0-21.P2.el5_11.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "65bfaea0-b04f-3180-bd72-5243b068cbb6",
+       "product": {
+        "name": "bind97-32:9.7.0-21.P2.el5_11.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "65ed040f-a5bf-3824-90f8-bef6d0590459",
+       "product": {
+        "name": "bind97-debuginfo-32:9.7.0-21.P2.el5_11.2.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "74ad7b36-bac8-356f-aef5-b7f4b16dbd35",
+       "product": {
+        "name": "bind97-debuginfo-32:9.7.0-21.P2.el5_11.2.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "77b7a4aa-bbd0-3205-900e-475a9d2de8b7",
+       "product": {
+        "name": "bind97-libs-32:9.7.0-21.P2.el5_11.2.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "841ad5e6-9255-34fa-be01-a3fa651bd4a1",
+       "product": {
+        "name": "bind97-utils-32:9.7.0-21.P2.el5_11.2.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "88f47a13-8b0e-34a7-8f5e-efe0ea7e1c8e",
+       "product": {
+        "name": "bind97-utils-32:9.7.0-21.P2.el5_11.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8bda04c0-f1c2-3747-b67a-dcff45287761",
+       "product": {
+        "name": "bind97-utils-32:9.7.0-21.P2.el5_11.2.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8fef245a-794d-3403-b995-a2a0ce7eabac",
+       "product": {
+        "name": "bind97-debuginfo-32:9.7.0-21.P2.el5_11.2.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a189542d-8658-38fa-850c-bdc756f64c67",
+       "product": {
+        "name": "bind97-debuginfo-32:9.7.0-21.P2.el5_11.2.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a32496cf-887b-3979-92c7-a3b396484cd6",
+       "product": {
+        "name": "bind97-devel-32:9.7.0-21.P2.el5_11.2.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b9753a67-40e7-3f24-88f3-2ed7f11d578e",
+       "product": {
+        "name": "bind97-devel-32:9.7.0-21.P2.el5_11.2.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bc26bee4-2099-3d1b-8fcf-d657e87d74b2",
+       "product": {
+        "name": "bind97-32:9.7.0-21.P2.el5_11.2.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "beb09af6-d423-3c7e-9b95-ea12336acaa6",
+       "product": {
+        "name": "bind97-debuginfo-32:9.7.0-21.P2.el5_11.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c1586017-6171-3cbe-bd42-bc6225a854fe",
+       "product": {
+        "name": "bind97-devel-32:9.7.0-21.P2.el5_11.2.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c2819067-2101-3fc4-8506-f8f442afdebf",
+       "product": {
+        "name": "bind97-libs-32:9.7.0-21.P2.el5_11.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c658b250-06ad-340f-9dc4-890cd0db98db",
+       "product": {
+        "name": "bind97-utils-32:9.7.0-21.P2.el5_11.2.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cb249fe9-b31b-31bd-be70-21bcfe9108e7",
+       "product": {
+        "name": "bind97-chroot-32:9.7.0-21.P2.el5_11.2.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d689f331-567c-386e-a426-86b58d7b7e29",
+       "product": {
+        "name": "bind97-32:9.7.0-21.P2.el5_11.2.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dc595c59-054d-337a-a66e-5ff9166a7702",
+       "product": {
+        "name": "bind97-chroot-32:9.7.0-21.P2.el5_11.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e4bfa7a7-487a-3bd5-a5fd-c736692bda8c",
+       "product": {
+        "name": "bind97-libs-32:9.7.0-21.P2.el5_11.2.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fec6bd99-8fcd-3055-9f0d-a965c4a60fdf",
+       "product": {
+        "name": "bind97-debuginfo-32:9.7.0-21.P2.el5_11.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2015-5477\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 28, 2015, 10:53:56 PM",
+     "dateUpdated": "Jun 27, 2026, 8:56:32 AM",
+     "description": "Red Hat Security Advisory: bind97 security update",
+     "id": "RHSA-2015:1515",
+     "references": "https://access.redhat.com/errata/RHSA-2015:1515\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2015/rhsa-2015_1515.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Updated bind97 packages that fix one security issue are now available for\nRed Hat Enterprise Linux 5.\n\nRed Hat Product Security has rated this update as having Important security\nimpact. A Common Vulnerability Scoring System (CVSS) base score, which\ngives a detailed severity rating, is available from the CVE link in the\nReferences section."
+    },
+    "id": "2452487a-16aa-3160-8d63-b43428e15b9d"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0321239c-5789-3716-9d33-71e6c27fed4d",
+       "product": {
+        "name": "bind-doc-0:9.9.6P1-23.1.noarch",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "062d8d29-11fd-3a31-8f63-2d06683d8835",
+       "product": {
+        "name": "bind-chrootenv-9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0a001050-080d-34a5-842e-a05dfe12eecf",
+       "product": {
+        "name": "bind-utils-0:9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0b02d694-f0a5-3a41-b33a-b32245f4192c",
+       "product": {
+        "name": "bind-0:9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0fe44a6e-db1b-30fd-8f2f-802766cea014",
+       "product": {
+        "name": "bind-libs-32bit-9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "14f7ad18-27a7-3cc0-998f-77dda8241d74",
+       "product": {
+        "name": "bind-0:9.9.6P1-23.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1aed1866-cbe4-3786-bac8-835e2938bb9e",
+       "product": {
+        "name": "bind-utils-0:9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "24500787-ff8e-34a6-b865-b698c98e2a45",
+       "product": {
+        "name": "bind-utils-9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "260954ea-2fac-31c2-b94e-d3f30f79e5a3",
+       "product": {
+        "name": "bind-libs-9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2723a237-e983-3c0e-abca-827bc84e837e",
+       "product": {
+        "name": "bind-doc-9.9.6P1-23.1.noarch",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "324a8b19-be92-3333-8f26-5b10be0f1d56",
+       "product": {
+        "name": "SUSE Linux Enterprise High Performance Computing 12",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "35a2e3c8-a23a-3b94-b7c8-f7198ddac1a1",
+       "product": {
+        "name": "bind-libs-32bit-0:9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "37d7b7cf-6f90-316d-bb7c-c3ae83939c45",
+       "product": {
+        "name": "bind-9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3c93b18d-01d2-3b17-96e9-f31aa816c590",
+       "product": {
+        "name": "bind-devel-9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3f6751e4-5d07-3b53-8699-b867904731ad",
+       "product": {
+        "name": "bind-chrootenv-0:9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "42bed2b5-3d66-367c-ad8e-0d42afac400d",
+       "product": {
+        "name": "bind-chrootenv-9.9.6P1-23.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4d64340e-abdc-3b30-a004-63c9f45b5103",
+       "product": {
+        "name": "bind-libs-0:9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5e9a9bc3-1f84-30e5-bdc1-c257990e87e8",
+       "product": {
+        "name": "bind-devel-9.9.6P1-23.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "652d69cd-c764-30ca-a5e8-96e2067371e9",
+       "product": {
+        "name": "bind-chrootenv-9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "691ab238-432d-3ac2-895d-123815a3fb94",
+       "product": {
+        "name": "bind-devel-0:9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6bbcba0b-e9fc-3462-b6fe-c73bc03a66f0",
+       "product": {
+        "name": "bind-libs-9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6c3f78d5-bb7b-313a-9926-e66a3d0d5962",
+       "product": {
+        "name": "bind-9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6e6a4b77-3846-35e9-8db4-4ad7f02b3873",
+       "product": {
+        "name": "bind-utils-9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "792d4baf-4890-39f8-8762-fda29c5359a0",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 12",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7f50735a-b659-37e7-9674-3641c751d85e",
+       "product": {
+        "name": "bind-libs-32bit-0:9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "80c45e83-a577-36db-a92b-a895a426669e",
+       "product": {
+        "name": "bind-chrootenv-0:9.9.6P1-23.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "812cc1cb-f95f-3a5e-8d60-a62f2300033b",
+       "product": {
+        "name": "bind-utils-9.9.6P1-23.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8d956b09-2728-3ce1-adc9-493aa691df11",
+       "product": {
+        "name": "bind-devel-9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "92bb2bbc-ea87-386e-a355-091a700ff5a2",
+       "product": {
+        "name": "bind-9.9.6P1-23.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "962c7452-1c52-31bf-8b23-06228215e823",
+       "product": {
+        "name": "bind-libs-9.9.6P1-23.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "96c2f75a-6c37-3a4e-9b72-56fbcc6c9af2",
+       "product": {
+        "name": "SUSE Linux Enterprise Desktop 12",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "afaf8b0d-cb1d-3a5a-af9e-bd2106255ec8",
+       "product": {
+        "name": "bind-utils-0:9.9.6P1-23.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bfb95ea5-a12a-3c30-999f-652af7759904",
+       "product": {
+        "name": "bind-devel-0:9.9.6P1-23.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d11df32f-a259-373c-8248-0dd003bd1e7f",
+       "product": {
+        "name": "SUSE Linux Enterprise Software Development Kit 12",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d34337d8-7138-3c8c-96ca-5757c5cda7b3",
+       "product": {
+        "name": "bind-libs-32bit-9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d7f33160-ffd8-34be-82ee-366c21fb8399",
+       "product": {
+        "name": "bind-libs-0:9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "db495ee6-5761-31ac-87f0-695eb8d4a6ff",
+       "product": {
+        "name": "SUSE Linux Enterprise Server for SAP Applications 12",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e0e127de-fd91-3d17-a286-95954b006af7",
+       "product": {
+        "name": "bind-0:9.9.6P1-23.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ef17bea3-097e-375c-a8ff-530d562ae353",
+       "product": {
+        "name": "bind-libs-0:9.9.6P1-23.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f4f7139f-0b69-34b1-85dc-b320d918a015",
+       "product": {
+        "name": "bind-devel-0:9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fc9d7176-e2e1-3da7-80de-a73b21d14d22",
+       "product": {
+        "name": "bind-chrootenv-0:9.9.6P1-23.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2015-5477\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 28, 2015, 1:36:49 PM",
+     "dateUpdated": "Sep 20, 2026, 12:04:59 PM",
+     "description": "Security update for bind",
+     "id": "SUSE-SU-2015:1305-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2015_1305-1.json\nhttps://www.suse.com/support/update/announcement/2015/suse-su-20151305-1/\nhttps://lists.suse.com/pipermail/sle-security-updates/2015-July/001513.html\nhttps://bugzilla.suse.com/939567\nhttps://www.suse.com/security/cve/CVE-2015-5477/\n",
+     "source": {
+      "id": 22,
+      "name": "csaf_suse"
+     },
+     "summary": "Security update for bind"
+    },
+    "id": "2c05ce27-5e23-3e78-a547-e870bf078688"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0b7cb86e-e92f-3a9e-b54b-f9402e29f469",
+       "product": {
+        "name": "bind-sdb-32:9.8.2-0.30.rc1.el6_6.4.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "10edf7c4-28ab-3bd9-9cb6-1d084bfb4ec3",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.30.rc1.el6_6.4.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "279fede3-83ff-3a5e-b6e8-d996653f6cb9",
+       "product": {
+        "name": "bind-utils-32:9.8.2-0.30.rc1.el6_6.4.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2f2ff7a3-e3a7-3c71-8c92-c7af24899ff6",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.30.rc1.el6_6.4.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "333c8b65-5d28-3867-9ff8-0e996882dd37",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.30.rc1.el6_6.4.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "37757144-aeb2-3de0-b25b-5cc480020edd",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.30.rc1.el6_6.4.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "412afd1d-f14d-3e36-8ac9-b32f040a7ab8",
+       "product": {
+        "name": "bind-sdb-32:9.8.2-0.30.rc1.el6_6.4.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "45e2a129-32a9-35ec-99d9-a33d9ccca72b",
+       "product": {
+        "name": "Red Hat Enterprise Linux Server EUS (v. 6.6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "49f686dc-2a9d-39bb-99b2-37f4ad4ce455",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.30.rc1.el6_6.4.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4e57b9f1-2911-3b60-b287-c7a4fde99bd9",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.30.rc1.el6_6.4.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5675c15c-f91a-3150-91c6-16f6ca0ad1aa",
+       "product": {
+        "name": "Red Hat Enterprise Linux HPC Node EUS (v. 6.6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "588bbc01-7e40-31c3-8cb4-4631d7c0ac29",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.30.rc1.el6_6.4.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5921fe50-975f-3cc5-b3b8-45decbf552e3",
+       "product": {
+        "name": "bind-32:9.8.2-0.30.rc1.el6_6.4.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "653fbe60-56f8-36b3-a60c-4ea206e62103",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.30.rc1.el6_6.4.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "68ddb8b1-5761-342f-9262-aeb54f8f67f9",
+       "product": {
+        "name": "bind-chroot-32:9.8.2-0.30.rc1.el6_6.4.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "74bdfff6-071d-3e83-aaac-ef69bb888039",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.30.rc1.el6_6.4.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "77408c87-4d3f-3815-b009-0cfed9a433e0",
+       "product": {
+        "name": "bind-32:9.8.2-0.30.rc1.el6_6.4.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "79d18d9c-0845-3708-bd29-14de8d4b922a",
+       "product": {
+        "name": "bind-utils-32:9.8.2-0.30.rc1.el6_6.4.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "85d64ee6-dd22-3c0b-af8c-32330de535d4",
+       "product": {
+        "name": "Red Hat Enterprise Linux Server Optional EUS (v. 6.6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "86e81672-5e59-3ece-8bed-6c9b851927fc",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.30.rc1.el6_6.4.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8ba87bce-e313-3886-8ee5-d8d5fb22dbd4",
+       "product": {
+        "name": "bind-utils-32:9.8.2-0.30.rc1.el6_6.4.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9790c1db-5b9c-3a58-9728-bf7b8148e4a8",
+       "product": {
+        "name": "bind-32:9.8.2-0.30.rc1.el6_6.4.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "992d5095-b90b-3892-bb1c-d850f586a11f",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.30.rc1.el6_6.4.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9b61a678-3b7a-357e-9b12-043f7be5e40a",
+       "product": {
+        "name": "bind-sdb-32:9.8.2-0.30.rc1.el6_6.4.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a368ff93-9cae-34fe-a13c-235af42ac305",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.30.rc1.el6_6.4.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a936ed2f-e886-38fe-9e86-466a6cf67623",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.30.rc1.el6_6.4.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ab9285ff-1664-3d22-be67-d481bef64e66",
+       "product": {
+        "name": "bind-chroot-32:9.8.2-0.30.rc1.el6_6.4.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aee9ed54-3051-3ed1-a0a4-01ef022a37f3",
+       "product": {
+        "name": "bind-utils-32:9.8.2-0.30.rc1.el6_6.4.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b792b8d6-1e53-3f5e-b410-05a0c9de52a5",
+       "product": {
+        "name": "bind-chroot-32:9.8.2-0.30.rc1.el6_6.4.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b79d7cd6-c1b6-39a6-9426-88319837ba8f",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.30.rc1.el6_6.4.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c7581987-ba31-3350-8cbb-4ffc51a1321d",
+       "product": {
+        "name": "bind-32:9.8.2-0.30.rc1.el6_6.4.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d0151cae-a4e1-3009-a5f7-a14aa03bafeb",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.30.rc1.el6_6.4.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dc27b28d-32fd-3e55-93d5-b56e189d7d37",
+       "product": {
+        "name": "bind-chroot-32:9.8.2-0.30.rc1.el6_6.4.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e2225103-7481-3127-b952-d090dd06d0cb",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.30.rc1.el6_6.4.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e3a20480-ff58-3e25-8e22-4fa813650781",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.30.rc1.el6_6.4.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eddf4772-a39a-3bb0-8f74-ac67409ab61b",
+       "product": {
+        "name": "bind-sdb-32:9.8.2-0.30.rc1.el6_6.4.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ee95ecb1-fbec-3cbd-a5df-11a028d6fc35",
+       "product": {
+        "name": "Red Hat Enterprise Linux HPC Node Optional EUS (v. 6.6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f10ae75a-2906-3074-98b9-fa456b6312e8",
+       "product": {
+        "name": "bind-32:9.8.2-0.30.rc1.el6_6.4.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "faabce78-b253-3202-8dee-b73f40b630da",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.30.rc1.el6_6.4.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2015-5477\nCVE-2015-5722\nCVE-2015-8000\n",
+     "baseScore": 0.0,
+     "datePublished": "Jan 28, 2016, 1:45:17 PM",
+     "dateUpdated": "Jun 27, 2026, 8:59:16 AM",
+     "description": "Red Hat Security Advisory: bind security update",
+     "id": "RHSA-2016:0079",
+     "references": "https://access.redhat.com/errata/RHSA-2016:0079\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2016/rhsa-2016_0079.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Updated bind packages that fix three security issues are now available for\nRed Hat Enterprise Linux 6.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having Important security\nimpact. Common Vulnerability Scoring System (CVSS) base scores, which give\ndetailed severity ratings, are available for each vulnerability from the\nCVE links in the References section."
+    },
+    "id": "8930c16f-9530-3d02-8447-95ab4228f42c"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0036d388-0573-3bb5-9929-ab69a44157e4",
+       "product": {
+        "name": "bind-0:9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "022912cd-6817-32b4-9228-1bc41ae6b087",
+       "product": {
+        "name": "bind-doc-0:9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0ab5a88b-edd4-3f80-85b1-4bef133165cb",
+       "product": {
+        "name": "bind-libs-32bit-9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1255148a-ffa6-3dad-ad2f-556e2fa5e750",
+       "product": {
+        "name": "bind-devel-9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "14d2e176-4530-3847-934d-c905bad58822",
+       "product": {
+        "name": "bind-devel-0:9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1749f2d6-c8c8-37cc-afc3-ae02b20072bc",
+       "product": {
+        "name": "bind-devel-0:9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "180a992a-10c0-3fcf-b65b-2bbab7bae352",
+       "product": {
+        "name": "bind-chrootenv-9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "212b87b4-fd16-30b3-83f3-34e521007441",
+       "product": {
+        "name": "SUSE Linux Enterprise Server for SAP Applications 11 SP1",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2a49aece-cc07-3a53-b2c2-4c1eb65b2d82",
+       "product": {
+        "name": "bind-doc-9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2b2b5833-b241-331f-a7f6-9a9ad18e9ac9",
+       "product": {
+        "name": "bind-doc-0:9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "31df2a49-e4d8-378c-9410-238092f1c589",
+       "product": {
+        "name": "bind-doc-0:9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "323ba2b3-634f-38be-bf23-49ce8e98d9ae",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 11 SP1-LTSS",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "353c7502-f553-3a83-b1bb-fcfe9bc8d73d",
+       "product": {
+        "name": "bind-libs-9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "37837aa8-274c-3ae2-b733-25a2fdc7b6b8",
+       "product": {
+        "name": "bind-utils-0:9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "478bbc4a-725d-3a23-871d-9921170b4a4e",
+       "product": {
+        "name": "bind-libs-32bit-0:9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4d5a84ce-ea55-3a86-9320-a5810341d4a0",
+       "product": {
+        "name": "bind-utils-0:9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5b8a4b69-2dad-3a1f-b1ec-e72a20f9a838",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 11 SP1-TERADATA",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "611fe1cd-d9e2-3114-a14a-c668a865c29d",
+       "product": {
+        "name": "bind-utils-9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "65a60666-03d7-3336-96d0-2bd63d7af226",
+       "product": {
+        "name": "bind-chrootenv-9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6693f2b1-0876-352a-97ce-c44f295c51ea",
+       "product": {
+        "name": "bind-0:9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6f967312-7263-3ce4-b286-c130aba6e1b4",
+       "product": {
+        "name": "bind-libs-32bit-0:9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7342feaa-5866-32df-a120-ba855a4035c0",
+       "product": {
+        "name": "bind-chrootenv-0:9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "735bc74a-eb26-3c8f-8927-986d4892fb6d",
+       "product": {
+        "name": "bind-chrootenv-9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7a99b833-9ae3-3678-9db7-e76c6ac75b4d",
+       "product": {
+        "name": "bind-libs-0:9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "87074f76-7ef2-3a41-9b6e-9003ed129958",
+       "product": {
+        "name": "SUSE Linux Enterprise High Performance Computing 11 SP1",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8decbc87-ad65-3d12-8c5c-6ae96cce4d6d",
+       "product": {
+        "name": "bind-devel-9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8e6665bb-62b3-3852-b9d1-7b4eb972f056",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 11 SP1",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "927d6c1a-aa33-3197-9035-dcb3922c7dab",
+       "product": {
+        "name": "bind-utils-9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "96b7a2c2-c98b-3ec1-901e-32bb36de59ff",
+       "product": {
+        "name": "bind-9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9c1bc278-f680-3ba5-8301-49b873a7bbaf",
+       "product": {
+        "name": "bind-libs-0:9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "aaa1d541-a9c3-3b03-a82a-b3f995e8df75",
+       "product": {
+        "name": "bind-libs-0:9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "aefb204b-83c6-3020-a9c7-f48a53fd6063",
+       "product": {
+        "name": "bind-libs-32bit-9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b8970d35-23c2-31ec-8cf4-5a0f237b7e45",
+       "product": {
+        "name": "bind-9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bd543183-aa6c-35a5-ba18-3c938b35a658",
+       "product": {
+        "name": "bind-9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "beb05ccc-5c6a-3cef-b375-dec132323785",
+       "product": {
+        "name": "bind-chrootenv-0:9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c6b2bab2-0acc-3421-9050-5ac956ba78dc",
+       "product": {
+        "name": "bind-utils-9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cc14423e-5ed1-39ef-9fce-f85bcd719741",
+       "product": {
+        "name": "bind-doc-9.6ESVR11W1-0.6.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ccdb40a4-a126-31ea-b961-dba05dfd9f11",
+       "product": {
+        "name": "bind-chrootenv-0:9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cfd561f7-b9ca-3d6f-8f43-bc2d5cf9ff51",
+       "product": {
+        "name": "bind-devel-9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d2bacce6-c9fe-3dcd-b837-0214ea5d4c88",
+       "product": {
+        "name": "bind-doc-9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "df73bb0a-7b3b-313b-9d2e-d04250fec699",
+       "product": {
+        "name": "bind-libs-9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e179c973-71c0-3ae8-9c9f-2a268053db70",
+       "product": {
+        "name": "bind-0:9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "eca71965-dbb7-3513-926c-a85ecb3bea6a",
+       "product": {
+        "name": "bind-devel-0:9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f8922021-dd07-3c69-9594-f10c4a6a065f",
+       "product": {
+        "name": "bind-utils-0:9.6ESVR11W1-0.6.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fecb2ea9-9d6e-3226-a7a0-25508ba79282",
+       "product": {
+        "name": "bind-libs-9.6ESVR11W1-0.6.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2015-5477\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 28, 2015, 1:36:51 PM",
+     "dateUpdated": "Sep 20, 2026, 12:05:00 PM",
+     "description": "Security update for bind",
+     "id": "SUSE-SU-2015:1316-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2015_1316-1.json\nhttps://www.suse.com/support/update/announcement/2015/suse-su-20151316-1/\nhttps://lists.suse.com/pipermail/sle-security-updates/2015-July/001514.html\nhttps://bugzilla.suse.com/939567\nhttps://www.suse.com/security/cve/CVE-2015-5477/\n",
+     "source": {
+      "id": 22,
+      "name": "csaf_suse"
+     },
+     "summary": "Security update for bind"
+    },
+    "id": "8cbc4eed-cce4-3bb1-a6e1-661ac196f83e"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "02ab46fb-6185-3454-8f45-b11baff0c0e3",
+       "product": {
+        "name": "bind-chroot-32:9.8.2-0.17.rc1.el6_4.7.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "17d951e8-cde8-3e9f-8f6c-e86c76dc96ca",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.23.rc1.el6_5.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "18a2dd55-b759-3c25-b336-f997e3a258ac",
+       "product": {
+        "name": "bind-utils-32:9.8.2-0.17.rc1.el6_4.7.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "254f9678-1b61-3b5f-928d-8f603f201639",
+       "product": {
+        "name": "Red Hat Enterprise Linux Server AUS (v. 6.5)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "282ca5d5-5ce1-387b-a39e-c469e6ca687b",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.23.rc1.el6_5.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2c25cea4-c07c-36b6-97e3-ded40dc1fde1",
+       "product": {
+        "name": "bind-utils-32:9.8.2-0.23.rc1.el6_5.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "304df300-8987-33d2-83ce-0432a06416aa",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.17.rc1.el6_4.7.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3376f440-35cc-30ef-9482-262fd5e39303",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.23.rc1.el6_5.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "33d73a18-bf45-3dd4-80b0-04fe1610b61a",
+       "product": {
+        "name": "Red Hat Enterprise Linux Server Optional AUS (v. 6.4)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "37e5a50c-604c-3cb7-9ee8-557e12bba629",
+       "product": {
+        "name": "bind-32:9.8.2-0.17.rc1.el6_4.7.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "46a6d035-e2fa-3219-98db-1cf69cb75ad1",
+       "product": {
+        "name": "bind-sdb-32:9.8.2-0.23.rc1.el6_5.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "49ffa3fa-5113-35a6-ad5d-0df2e1655ccb",
+       "product": {
+        "name": "bind-32:9.8.2-0.23.rc1.el6_5.2.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5797f548-c480-3fbf-b89b-a0787491aa17",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.17.rc1.el6_4.7.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "58395227-44c7-377c-a823-6da30b8ab3b7",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.17.rc1.el6_4.7.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5e9cae71-24c9-33c1-ba7f-6058f3756a75",
+       "product": {
+        "name": "Red Hat Enterprise Linux Server Optional AUS (v. 6.5)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "62a3b20b-5cf5-3976-96db-9081fef884bb",
+       "product": {
+        "name": "bind-chroot-32:9.8.2-0.23.rc1.el6_5.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "634dc4b4-2a4f-310c-a628-6c402f9bca53",
+       "product": {
+        "name": "bind-sdb-32:9.8.2-0.17.rc1.el6_4.7.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "947dd076-d0c3-3547-acef-0a6ccb2fe450",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.17.rc1.el6_4.7.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a67c0166-a6c8-3942-8cec-f3f1e41d7823",
+       "product": {
+        "name": "bind-32:9.8.2-0.17.rc1.el6_4.7.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c4878752-d712-3222-885c-947e75c3fe35",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.23.rc1.el6_5.2.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cdad9c71-80b0-360f-ab99-b9a6e6b02296",
+       "product": {
+        "name": "Red Hat Enterprise Linux Server AUS (v. 6.4)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dda55cb4-a95c-3282-b663-13e269c50648",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.23.rc1.el6_5.2.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e6ac4d71-fc19-32c0-a872-054145d88292",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.17.rc1.el6_4.7.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e9a57f28-e43c-36ee-bddc-98aecf32db89",
+       "product": {
+        "name": "bind-32:9.8.2-0.23.rc1.el6_5.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e9ad239c-f83a-37f7-9097-f7d114dda63d",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.17.rc1.el6_4.7.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f3cb9d69-f6eb-3fd5-ba24-e9bb5554db80",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.23.rc1.el6_5.2.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2014-8500\nCVE-2015-5477\nCVE-2015-5722\nCVE-2015-8000\n",
+     "baseScore": 0.0,
+     "datePublished": "Jan 28, 2016, 1:27:03 PM",
+     "dateUpdated": "Jun 27, 2026, 8:56:29 AM",
+     "description": "Red Hat Security Advisory: bind security update",
+     "id": "RHSA-2016:0078",
+     "references": "https://access.redhat.com/errata/RHSA-2016:0078\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2016/rhsa-2016_0078.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Updated bind packages that fix multiple security issues are now available\nfor Red Hat Enterprise Linux 6.4 and 6.5 Advanced Update Support.\n\nRed Hat Product Security has rated this update as having Important security\nimpact. Common Vulnerability Scoring System (CVSS) base scores, which give\ndetailed severity ratings, are available for each vulnerability from the\nCVE links in the References section."
+    },
+    "id": "ba232740-f5aa-346d-b852-07b931dec213"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "129432cc-c214-3c3f-b6b4-bd0c3d65d00d",
+       "product": {
+        "name": "Red Hat Enterprise Linux",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "154858be-c41b-3c05-b1c5-92c558541127",
+       "product": {
+        "name": "Ubuntu Linux",
+        "vendor": {
+         "name": "Canonical"
+        }
+       }
+      },
+      {
+       "id": "1f36a800-d56f-3ae0-a7da-b08c719d7443",
+       "product": {
+        "name": "Lotus Protector for Mail Security",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
+       "id": "22a53029-1e80-382b-a39e-ccf52cb62090",
+       "product": {
+        "name": "BIND",
+        "vendor": {
+         "name": "ISC"
+        }
+       }
+      },
+      {
+       "id": "24290e46-5410-393b-a896-97f80995c329",
+       "product": {
+        "name": "7.1",
+        "vendor": {
+         "name": "InduSoft"
+        }
+       }
+      },
+      {
+       "id": "2bd26eee-1081-3ad4-bc2f-382710fd2281",
+       "product": {
+        "name": "Dell NetWorker",
+        "vendor": {
+         "name": "Dell"
+        }
+       }
+      },
+      {
+       "id": "300780cb-dfc8-390d-a257-efdbd9593982",
+       "product": {
+        "name": "F5 BIG-IP Link Controller",
+        "vendor": {
+         "name": "F5"
+        }
+       }
+      },
+      {
+       "id": "300a393e-3bbc-3507-8e22-f11eaadcdf45",
+       "product": {
+        "name": "HPE OpenVMS",
+        "vendor": {
+         "name": "HPE"
+        }
+       }
+      },
+      {
+       "id": "3ca20c45-8f50-389d-acf2-48c97bc11f5d",
+       "product": {
+        "name": "HPE NonStop Server",
+        "vendor": {
+         "name": "HPE"
+        }
+       }
+      },
+      {
+       "id": "407c3e4c-c6f7-3b29-a377-3fb1e5d7b747",
+       "product": {
+        "name": "2.2.x",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
+       "id": "4476835e-b97d-39f3-9a5f-686409ed7396",
+       "product": {
+        "name": "F5 BIG-IP Edge Gateway",
+        "vendor": {
+         "name": "F5"
+        }
+       }
+      },
+      {
+       "id": "472a1032-56b7-3c69-aa12-14695a60d0d6",
+       "product": {
+        "name": "2.8.0.0",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
+       "id": "4be2948a-3d74-344d-bb70-7328cd702a3f",
+       "product": {
+        "name": "Open Source CentOS",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "4c7a5922-4d66-31c4-9ee6-2e33616757e0",
+       "product": {
+        "name": "F5 BIG-IP Application Security Manager",
+        "vendor": {
+         "name": "F5"
+        }
+       }
+      },
+      {
+       "id": "5c032027-1564-3269-8d2a-6c649d4e6e13",
+       "product": {
+        "name": "2.8.1.0",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
+       "id": "65dc05a0-5c8f-36b1-bddd-83df859e6765",
+       "product": {
+        "name": "F5 Enterprise Manager",
+        "vendor": {
+         "name": "F5"
+        }
+       }
+      },
+      {
+       "id": "785d0536-2b2f-3764-8cbf-44407dcee6fd",
+       "product": {
+        "name": "6.1",
+        "vendor": {
+         "name": "Automated Logic"
+        }
+       }
+      },
+      {
+       "id": "7ffc0cf0-b254-389e-801e-74e79d4191ef",
+       "product": {
+        "name": "F5 BIG-IP Access Policy Manager",
+        "vendor": {
+         "name": "F5"
+        }
+       }
+      },
+      {
+       "id": "82f99e6b-3b0d-3247-81a3-5deda8c44ffd",
+       "product": {
+        "name": "Oracle Linux",
+        "vendor": {
+         "name": "Oracle Corporation"
+        }
+       }
+      },
+      {
+       "id": "84476b39-4847-3de9-a6a5-af0b1c088454",
+       "product": {
+        "name": "VIOS",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
+       "id": "8ecfcca0-7e77-3b9b-af35-29e9a4588eb5",
+       "product": {
+        "name": "F5 BIG-IP Protocol Security Manager",
+        "vendor": {
+         "name": "F5"
+        }
+       }
+      },
+      {
+       "id": "95bfc3da-9ebc-31b0-96ac-3760321c7721",
+       "product": {
+        "name": "AIX",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
+       "id": "a0666e75-4e55-3cca-9428-5bc7756b0d07",
+       "product": {
+        "name": "F5 BIG-IP Local Traffic Manager",
+        "vendor": {
+         "name": "F5"
+        }
+       }
+      },
+      {
+       "id": "b002ec2b-e78d-3ff0-8cc0-abbd18847504",
+       "product": {
+        "name": "Debian Linux",
+        "vendor": {
+         "name": "Debian"
+        }
+       }
+      },
+      {
+       "id": "bdd253ea-052f-3c6f-8e3f-261986b729ce",
+       "product": {
+        "name": "Dell Avamar",
+        "vendor": {
+         "name": "Dell"
+        }
+       }
+      },
+      {
+       "id": "c740be3a-2ad3-35ab-8a2a-97f9f10a3721",
+       "product": {
+        "name": "F5 BIG-IP Analytics",
+        "vendor": {
+         "name": "F5"
+        }
+       }
+      },
+      {
+       "id": "ccb89196-032f-39d9-9585-20a9cac130a5",
+       "product": {
+        "name": "SUSE Linux",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cea93972-4a3f-32bb-b814-5d9ed81baa8b",
+       "product": {
+        "name": "F5 WebAccelerator",
+        "vendor": {
+         "name": "F5"
+        }
+       }
+      },
+      {
+       "id": "d12600f0-d2ad-380a-9ae4-9e1da5f7375a",
+       "product": {
+        "name": "HPE HP-UX",
+        "vendor": {
+         "name": "HPE"
+        }
+       }
+      },
+      {
+       "id": "d47391e9-70b1-3ca1-9c76-06562c534bc6",
+       "product": {
+        "name": "F5 BIG-IP Global Traffic Manager",
+        "vendor": {
+         "name": "F5"
+        }
+       }
+      },
+      {
+       "id": "d93ed104-e33b-3b6c-996e-64d2efe06241",
+       "product": {
+        "name": "9.10.2-P3",
+        "vendor": {
+         "name": "Internet Systems Consortium"
+        }
+       }
+      },
+      {
+       "id": "ed50126b-b0bf-3aaf-92d2-0370436b0487",
+       "product": {
+        "name": "9.9.7-P2",
+        "vendor": {
+         "name": "Internet Systems Consortium"
+        }
+       }
+      },
+      {
+       "id": "eeb0c452-851d-3b96-ae3c-ef194910778d",
+       "product": {
+        "name": "FreeBSD Project FreeBSD OS",
+        "vendor": {
+         "name": "FreeBSD Project"
+        }
+       }
+      },
+      {
+       "id": "f7ab9900-935f-3a0e-afb7-33234af6bde6",
+       "product": {
+        "name": "F5 Policy Enforcement Manager",
+        "vendor": {
+         "name": "F5"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2015-5477\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 28, 2015, 10:00:00 PM",
+     "dateUpdated": "May 29, 2025, 10:00:00 PM",
+     "description": "Internet Systems Consortium BIND: Schwachstelle ermöglicht Denial of Service",
+     "id": "WID-SEC-W-2025-1181",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2015/wid-sec-w-2025-1181.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-1181\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Internet Systems Consortium BIND ausnutzen, um einen Denial of Service Angriff durchzuführen."
+    },
+    "id": "bc0faf88-baaf-3408-ab26-d427b53781ba"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0212cced-3e1a-32f9-afd8-1c3719eeb91a",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.37.rc1.el6_7.2.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "03c2f9e1-6d4b-33c7-a281-e8780a4a636e",
+       "product": {
+        "name": "bind-sdb-32:9.8.2-0.37.rc1.el6_7.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "059a4376-95cd-35d7-8c3f-a7f9d9074e9e",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.37.rc1.el6_7.2.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "05a7d31b-d812-3004-9a74-47049f33952d",
+       "product": {
+        "name": "bind-utils-32:9.8.2-0.37.rc1.el6_7.2.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "07c37e71-dad9-3223-bf46-6bc2c3d72378",
+       "product": {
+        "name": "bind-debuginfo-32:9.9.4-18.el7_1.3.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "085a4485-93e8-3442-8e37-b8aeb66453be",
+       "product": {
+        "name": "bind-libs-lite-32:9.9.4-18.el7_1.3.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0bf64e2b-68ae-3110-a8d0-15c8d74e823c",
+       "product": {
+        "name": "bind-devel-32:9.9.4-18.el7_1.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0d10ff2c-eccb-3d79-9b16-6575c81c3666",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.37.rc1.el6_7.2.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0d7b5b9e-d5fb-37a1-a17d-71b29243793c",
+       "product": {
+        "name": "bind-utils-32:9.9.4-18.el7_1.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "11b9cce8-def9-33c3-b675-9ccabb93c612",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.37.rc1.el6_7.2.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "13cc0286-7beb-3e2b-a8cb-ee698e4eb76b",
+       "product": {
+        "name": "bind-32:9.9.4-18.ael7b_1.3.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "160464cf-0892-39d1-aeef-afb1484b5f5d",
+       "product": {
+        "name": "Red Hat Enterprise Linux Workstation (v. 7)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "16476ee9-1c3a-38a2-a3a9-305e86764591",
+       "product": {
+        "name": "Red Hat Enterprise Linux Client (v. 7)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "189e9c4c-9132-391b-860b-f8dcc5f4865c",
+       "product": {
+        "name": "bind-chroot-32:9.8.2-0.37.rc1.el6_7.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "19b11806-10c5-3e4a-b567-4d2e11a532be",
+       "product": {
+        "name": "bind-libs-32:9.9.4-18.el7_1.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "219a5132-3cef-33e5-a34a-32053c3c4323",
+       "product": {
+        "name": "bind-libs-lite-32:9.9.4-18.el7_1.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2d530ebc-0260-3441-95ea-c3c0fd840c42",
+       "product": {
+        "name": "bind-chroot-32:9.8.2-0.37.rc1.el6_7.2.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2ee70069-1a18-3633-a1ec-7c7b662dca0c",
+       "product": {
+        "name": "Red Hat Enterprise Linux Desktop (v. 6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2f634276-3aa4-353a-aa9e-7b29f7210cb0",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.37.rc1.el6_7.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "31626de8-64d5-3c0d-9615-6f8ac054aaa3",
+       "product": {
+        "name": "bind-chroot-32:9.9.4-18.el7_1.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "32bf45ae-7935-3601-8608-2ec1755e3eb6",
+       "product": {
+        "name": "Red Hat Enterprise Linux HPC Node (v. 6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3418e0c3-4ead-3b2d-a0b4-76c4ddf6cb7e",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.37.rc1.el6_7.2.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "381cd328-e64d-33f9-b5e9-e96cd212ec62",
+       "product": {
+        "name": "bind-license-32:9.9.4-18.ael7b_1.3.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "383e9432-0d08-3753-a1ae-34aba03ec50a",
+       "product": {
+        "name": "bind-debuginfo-32:9.9.4-18.el7_1.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "393fa20f-78ce-3756-abab-606cb29eb862",
+       "product": {
+        "name": "bind-debuginfo-32:9.9.4-18.el7_1.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3d653c6d-d0a0-3d20-9749-438c178545bc",
+       "product": {
+        "name": "bind-libs-32:9.9.4-18.el7_1.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "40c5095c-bf66-37be-8652-2ef96d652288",
+       "product": {
+        "name": "bind-lite-devel-32:9.9.4-18.el7_1.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "43a2f606-4442-3468-9154-7692071cf2b7",
+       "product": {
+        "name": "bind-chroot-32:9.9.4-18.el7_1.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "449639c5-404d-34b5-95a3-ef32de6befd4",
+       "product": {
+        "name": "bind-devel-32:9.9.4-18.ael7b_1.3.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "44aea6bc-0e83-3309-863c-af9298a29e5b",
+       "product": {
+        "name": "bind-32:9.9.4-18.el7_1.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4632e630-2969-3e62-9ffa-aa380b9ec82a",
+       "product": {
+        "name": "bind-sdb-32:9.8.2-0.37.rc1.el6_7.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "492e856c-2e4b-3982-87e9-e98e9d20b50e",
+       "product": {
+        "name": "bind-lite-devel-32:9.9.4-18.ael7b_1.3.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4b940537-97d3-35ed-896c-887573030d21",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.37.rc1.el6_7.2.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4d1ae7a0-eb08-3dff-910e-752600c13248",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.37.rc1.el6_7.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "54159937-46c9-3707-9e42-2b27ee285cbe",
+       "product": {
+        "name": "Red Hat Enterprise Linux ComputeNode Optional (v. 7)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5641d640-89f2-3728-8c3f-d288ced67cdf",
+       "product": {
+        "name": "bind-sdb-chroot-32:9.9.4-18.ael7b_1.3.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "576990fd-4629-3005-b560-f39a8a864936",
+       "product": {
+        "name": "Red Hat Enterprise Linux Server Optional (v. 7)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "63cdf25a-3cdd-39a7-bfbf-ba0428b37a47",
+       "product": {
+        "name": "bind-libs-32:9.9.4-18.el7_1.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "65150a04-5fe9-3fbf-83db-322cd8d8e302",
+       "product": {
+        "name": "bind-32:9.8.2-0.37.rc1.el6_7.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6629cd86-3299-3253-9b65-b41cf04d576e",
+       "product": {
+        "name": "bind-libs-32:9.9.4-18.ael7b_1.3.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6b5b2f7c-be5c-3938-8a6f-48240417eee8",
+       "product": {
+        "name": "bind-utils-32:9.8.2-0.37.rc1.el6_7.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6d66e522-5f5f-3955-962d-dbc6205f42b9",
+       "product": {
+        "name": "SUSE Liberty Linux 7",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "74bed299-c1ec-3e37-ba7f-b8eb76a32810",
+       "product": {
+        "name": "Red Hat Enterprise Linux HPC Node Optional (v. 6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7611be64-29de-36ab-a0c4-eb460a129eb3",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.37.rc1.el6_7.2.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "79f685b3-8c6f-38ce-ac98-50ae676c7237",
+       "product": {
+        "name": "bind-32:9.8.2-0.37.rc1.el6_7.2.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7c7af4cf-85a0-3180-8a82-774a6dc4f7a5",
+       "product": {
+        "name": "bind-32:9.9.4-18.el7_1.3.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7c8c0c45-8c41-3ce9-9d07-b5e83811f765",
+       "product": {
+        "name": "bind-libs-lite-32:9.9.4-18.el7_1.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7ec15d6e-e7b6-3c36-aa8c-a81a0ee90df5",
+       "product": {
+        "name": "bind-libs-lite-32:9.9.4-18.el7_1.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "83e8f086-6b5b-39f4-a3ed-d6f4e11d1c78",
+       "product": {
+        "name": "Red Hat Enterprise Linux Workstation Optional (v. 6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "856201cc-8bed-34cb-9bc7-2874004bc5ee",
+       "product": {
+        "name": "bind-chroot-32:9.9.4-18.el7_1.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8a011ee9-5909-3e9e-aee3-f98b191cbcef",
+       "product": {
+        "name": "Red Hat Enterprise Linux Workstation (v. 6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8b25cf72-9ad6-365f-8017-2f5364305c21",
+       "product": {
+        "name": "Red Hat Enterprise Linux Server (v. 7)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8c16c276-461e-3bbf-9ab3-37fc94d0790a",
+       "product": {
+        "name": "bind-utils-32:9.9.4-18.ael7b_1.3.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8f4cbb30-0cee-301c-af53-3bb1c469f600",
+       "product": {
+        "name": "bind-devel-32:9.9.4-18.el7_1.3.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "910e0ab8-54d4-3d19-a9bb-0720eae65574",
+       "product": {
+        "name": "bind-libs-lite-32:9.9.4-18.el7_1.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9279f058-520b-3b35-8efb-3fda29875921",
+       "product": {
+        "name": "Red Hat Enterprise Linux Desktop Optional (v. 6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "928de90d-df1b-341c-8c78-95ca8f5e8728",
+       "product": {
+        "name": "Red Hat Enterprise Linux Client Optional (v. 7)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "93235180-9017-3a81-a2e8-5261f0e104d7",
+       "product": {
+        "name": "bind-sdb-32:9.8.2-0.37.rc1.el6_7.2.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "94911aa0-4975-36a6-b815-e68395355746",
+       "product": {
+        "name": "bind-sdb-32:9.8.2-0.37.rc1.el6_7.2.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "95604eb5-08c6-3c6f-8a31-f7cd4f868595",
+       "product": {
+        "name": "bind-sdb-32:9.9.4-18.el7_1.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9a68a7e3-47b0-3452-9fa3-948784272fd3",
+       "product": {
+        "name": "bind-lite-devel-32:9.9.4-18.el7_1.3.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9d7e2655-57da-3ff5-8853-675028845898",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.37.rc1.el6_7.2.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a2295fe9-7065-3a55-84c6-1acbe398f906",
+       "product": {
+        "name": "bind-lite-devel-32:9.9.4-18.el7_1.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a24f0056-0220-308b-b697-a5f251e6939a",
+       "product": {
+        "name": "bind-utils-32:9.8.2-0.37.rc1.el6_7.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a27c16fe-d689-3bcb-b70f-5d4ea3c83a94",
+       "product": {
+        "name": "Red Hat Enterprise Linux Workstation Optional (v. 7)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a2edbb3e-f8d0-31d7-92ce-f3c3195e19d3",
+       "product": {
+        "name": "bind-libs-32:9.9.4-18.el7_1.3.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a4a5e43d-f1c5-310f-ba75-9fa290316163",
+       "product": {
+        "name": "bind-chroot-32:9.8.2-0.37.rc1.el6_7.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a9fcc51f-443d-3342-b10f-b074ed820783",
+       "product": {
+        "name": "bind-lite-devel-32:9.9.4-18.el7_1.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ab826f6d-3bda-3239-9d4e-f2470cebeb83",
+       "product": {
+        "name": "bind-sdb-32:9.9.4-18.ael7b_1.3.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ac2e989a-d824-300c-a6d7-69b4e990128f",
+       "product": {
+        "name": "bind-libs-32:9.9.4-18.el7_1.3.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ad0a3a25-719f-33ba-9785-e073f8885a64",
+       "product": {
+        "name": "bind-sdb-chroot-32:9.9.4-18.el7_1.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "af9dd045-b081-3e28-8d6c-8c5957a6e3be",
+       "product": {
+        "name": "bind-32:9.9.4-18.el7_1.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "afd7377c-7ba3-344c-851d-4a7d4de5f205",
+       "product": {
+        "name": "bind-debuginfo-32:9.9.4-18.el7_1.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b206430c-43fe-31f2-8d10-f2494bebf3a2",
+       "product": {
+        "name": "bind-devel-32:9.9.4-18.el7_1.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b5df412d-e228-3212-ad8c-6ca5837bc83c",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.37.rc1.el6_7.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b67a056b-94ff-3af5-87fd-7d119133e112",
+       "product": {
+        "name": "bind-chroot-32:9.9.4-18.ael7b_1.3.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b956ee1a-e2dc-35fe-9da8-94bd2d82e0be",
+       "product": {
+        "name": "bind-debuginfo-32:9.9.4-18.el7_1.3.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bb978f92-1b6a-3aa8-9032-55d4c117894b",
+       "product": {
+        "name": "bind-lite-devel-32:9.9.4-18.el7_1.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bcb2405d-1cea-3c68-bd8d-5d5c9254bfee",
+       "product": {
+        "name": "bind-sdb-32:9.9.4-18.el7_1.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "be614620-02cc-374f-b092-cbe4737ebcf8",
+       "product": {
+        "name": "bind-libs-lite-32:9.9.4-18.ael7b_1.3.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bf445447-ca60-3828-8fc8-2eac8c2ff8cd",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.37.rc1.el6_7.2.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c1775514-c6ea-343a-8f63-95a6c491d89f",
+       "product": {
+        "name": "Red Hat Enterprise Linux ComputeNode (v. 7)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c22ae07c-9cf8-34ea-a5e2-0f41e4530c37",
+       "product": {
+        "name": "bind-sdb-32:9.9.4-18.el7_1.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c47a9eb3-421e-3901-8a7b-e05a00e5a302",
+       "product": {
+        "name": "bind-sdb-chroot-32:9.9.4-18.el7_1.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c57209ed-b194-35f8-92e9-e798744107f5",
+       "product": {
+        "name": "Red Hat Enterprise Linux Server (v. 6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c592c35f-f711-3c75-bfd1-16189ac342b9",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.37.rc1.el6_7.2.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c64de8ee-e59b-3776-8f82-963b8ec0eb65",
+       "product": {
+        "name": "bind-lite-devel-32:9.9.4-18.el7_1.3.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cc707539-316f-31e2-90d5-876dbe480983",
+       "product": {
+        "name": "bind-utils-32:9.9.4-18.el7_1.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cc7734e5-97be-37d2-b6fc-9e35764e75eb",
+       "product": {
+        "name": "Red Hat Enterprise Linux Server Optional (v. 6)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d2fc04c5-dfc6-3cc9-9a74-bb8a6e8193a1",
+       "product": {
+        "name": "bind-devel-32:9.9.4-18.el7_1.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d817850f-c74c-3a5c-bf6c-be8d9beec65a",
+       "product": {
+        "name": "bind-32:9.9.4-18.el7_1.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "db16f891-dc42-340b-8e66-7be96aacc3e0",
+       "product": {
+        "name": "bind-license-32:9.9.4-18.el7_1.3.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e06d56a7-d670-308f-b019-1c3d255aa0ff",
+       "product": {
+        "name": "bind-debuginfo-32:9.9.4-18.ael7b_1.3.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e07899c7-84bd-3be3-9481-5b9aecab8912",
+       "product": {
+        "name": "bind-32:9.8.2-0.37.rc1.el6_7.2.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e44d40a0-19ad-36a7-9e3c-35652403b228",
+       "product": {
+        "name": "bind-utils-32:9.9.4-18.el7_1.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e6b76202-6fdf-37f9-9e48-d00dbd6b6631",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.37.rc1.el6_7.2.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e7158b3d-075f-323e-85ea-47d70b62604a",
+       "product": {
+        "name": "bind-devel-32:9.8.2-0.37.rc1.el6_7.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e717b94b-0e61-3dca-a5a8-08c54676f091",
+       "product": {
+        "name": "bind-libs-lite-32:9.9.4-18.el7_1.3.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eb10f09b-f356-39c6-b7d2-3da12a0c8f73",
+       "product": {
+        "name": "bind-devel-32:9.9.4-18.el7_1.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ebb4758d-2a26-37d8-94c4-96b3927038c9",
+       "product": {
+        "name": "bind-debuginfo-32:9.8.2-0.37.rc1.el6_7.2.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eca40953-5af2-3655-9f39-957257992151",
+       "product": {
+        "name": "bind-devel-32:9.9.4-18.el7_1.3.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ee95bae6-4651-3190-b600-1deb61ccc525",
+       "product": {
+        "name": "bind-libs-32:9.9.4-18.el7_1.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eee61780-4ddb-3b8f-a432-9beff70438c1",
+       "product": {
+        "name": "bind-32:9.9.4-18.ael7b_1.3.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ef381a9c-ab65-312d-be0e-dacdf37d5bb4",
+       "product": {
+        "name": "bind-chroot-32:9.8.2-0.37.rc1.el6_7.2.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f46a2115-6f03-3eda-960e-b7596f16e870",
+       "product": {
+        "name": "bind-sdb-chroot-32:9.9.4-18.el7_1.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fa2c0b49-e392-3480-afdc-7e1728e258c1",
+       "product": {
+        "name": "bind-32:9.8.2-0.37.rc1.el6_7.2.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fa5c0d17-ad25-3449-befc-8aa2cdd3b1b5",
+       "product": {
+        "name": "bind-utils-32:9.8.2-0.37.rc1.el6_7.2.i686",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fac8f99a-9205-36ea-92f1-48957b023f60",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.37.rc1.el6_7.2.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fb95104e-96fb-3d91-a7ff-f954d7612b4e",
+       "product": {
+        "name": "bind-32:9.8.2-0.37.rc1.el6_7.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fd3a3a3a-d4e3-3627-bbec-0722e73c68f2",
+       "product": {
+        "name": "bind-debuginfo-32:9.9.4-18.el7_1.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ff4128ff-6c6e-3a26-a17f-bdfd8f412608",
+       "product": {
+        "name": "bind-libs-32:9.8.2-0.37.rc1.el6_7.2.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2015-5477\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 28, 2015, 12:00:00 AM",
+     "dateUpdated": "Sep 20, 2026, 10:54:43 AM",
+     "description": "security update for bind",
+     "id": "RHSA-2015:1513",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2015_1513.json\nhttps://www.suse.com/security/cve/CVE-2015-5477/\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "security update for bind"
+    },
+    "id": "e98be52d-eb31-35e7-b281-0dd4aba4e1a6"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "00f98b28-9a8d-3b78-82f6-06bea4d68afe",
+       "product": {
+        "name": "bind-libbind-devel-30:9.3.6-25.P1.el5_11.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "074836b6-c229-3587-847c-07bb1f1de6a2",
+       "product": {
+        "name": "bind-utils-30:9.3.6-25.P1.el5_11.3.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0fe9c7d4-7522-379c-949c-dcfb6d0c52a5",
+       "product": {
+        "name": "caching-nameserver-30:9.3.6-25.P1.el5_11.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "13f65330-201b-3328-9aa7-2e3fe3058e60",
+       "product": {
+        "name": "bind-devel-30:9.3.6-25.P1.el5_11.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "19eac58d-3ce7-3bea-bc68-dd4b7d6eb821",
+       "product": {
+        "name": "bind-chroot-30:9.3.6-25.P1.el5_11.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1a1ae615-ff73-3832-b8e9-f3783e408e67",
+       "product": {
+        "name": "bind-utils-30:9.3.6-25.P1.el5_11.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1b094b93-4721-361f-bbb5-a47320daf43a",
+       "product": {
+        "name": "bind-utils-30:9.3.6-25.P1.el5_11.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1f12393e-bd0e-3d5f-aee3-6bab5a16b165",
+       "product": {
+        "name": "bind-sdb-30:9.3.6-25.P1.el5_11.3.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2251b1e5-5bb2-3e30-9b6e-6dc9bfea64bf",
+       "product": {
+        "name": "bind-libs-30:9.3.6-25.P1.el5_11.3.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "282347ac-4ef9-36ce-9b05-269a01fcfaef",
+       "product": {
+        "name": "caching-nameserver-30:9.3.6-25.P1.el5_11.3.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2abf1ac7-ad69-3ea8-aa54-95c89d054036",
+       "product": {
+        "name": "bind-libbind-devel-30:9.3.6-25.P1.el5_11.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2e7cb05c-0925-36f9-b724-bc139a53a394",
+       "product": {
+        "name": "bind-sdb-30:9.3.6-25.P1.el5_11.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "32ef9333-76a9-31a7-9977-4e2fa3a49df9",
+       "product": {
+        "name": "bind-libbind-devel-30:9.3.6-25.P1.el5_11.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3552a424-3530-3385-8321-b12bf67fabf6",
+       "product": {
+        "name": "bind-30:9.3.6-25.P1.el5_11.3.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3633f86b-6c9e-388f-845a-269bb1e02cd4",
+       "product": {
+        "name": "bind-devel-30:9.3.6-25.P1.el5_11.3.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "365d88ae-ad00-3249-acca-2ce794dcc7b2",
+       "product": {
+        "name": "bind-utils-30:9.3.6-25.P1.el5_11.3.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "386193e2-181f-3709-9e46-901dda96e12e",
+       "product": {
+        "name": "bind-debuginfo-30:9.3.6-25.P1.el5_11.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3c188516-34f5-3c9b-bc5e-fe1c37660890",
+       "product": {
+        "name": "bind-30:9.3.6-25.P1.el5_11.3.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3e28f92a-9ffe-3fde-ac77-0c231fd79939",
+       "product": {
+        "name": "Red Hat Enterprise Linux Desktop (v. 5 client)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "42349d34-dd86-380c-97f2-359b069510df",
+       "product": {
+        "name": "bind-debuginfo-30:9.3.6-25.P1.el5_11.3.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4643c811-2261-303b-8f8f-66647e800b5d",
+       "product": {
+        "name": "bind-devel-30:9.3.6-25.P1.el5_11.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "487e9a82-82f0-3cf0-9072-3edb3fbd3be3",
+       "product": {
+        "name": "bind-libbind-devel-30:9.3.6-25.P1.el5_11.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4cea8f44-c600-3887-994c-c7e2c9b0e1e8",
+       "product": {
+        "name": "bind-debuginfo-30:9.3.6-25.P1.el5_11.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5134f99e-2062-35e1-9b65-d2f25cf249d4",
+       "product": {
+        "name": "bind-debuginfo-30:9.3.6-25.P1.el5_11.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "524ab7e5-1905-38d8-ac59-019afdfd5e8b",
+       "product": {
+        "name": "Red Hat Enterprise Linux Desktop Workstation (v. 5 client)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "57a96306-ee76-3f84-904c-82fc03ad1caa",
+       "product": {
+        "name": "bind-debuginfo-30:9.3.6-25.P1.el5_11.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5b983cf0-c687-3dd0-9451-737d45d677fc",
+       "product": {
+        "name": "bind-sdb-30:9.3.6-25.P1.el5_11.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "631444ff-191a-36f6-9a46-8e5aed043f3f",
+       "product": {
+        "name": "bind-chroot-30:9.3.6-25.P1.el5_11.3.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "708acad3-59f7-3529-b72f-b19f640e5b9a",
+       "product": {
+        "name": "bind-libbind-devel-30:9.3.6-25.P1.el5_11.3.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "70928ea6-1104-3842-a73f-fd2cdfdca5de",
+       "product": {
+        "name": "bind-debuginfo-30:9.3.6-25.P1.el5_11.3.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "73bdaddb-8aa6-3b83-a38b-dd2a9885ecb3",
+       "product": {
+        "name": "bind-devel-30:9.3.6-25.P1.el5_11.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "750a5435-b80c-3bbf-97c1-a24642bf3ede",
+       "product": {
+        "name": "bind-libbind-devel-30:9.3.6-25.P1.el5_11.3.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7b95ed58-4ccb-3f6b-9d63-80c189d75f19",
+       "product": {
+        "name": "bind-chroot-30:9.3.6-25.P1.el5_11.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7ba79782-9a1e-3cfc-aa63-26e3273ef160",
+       "product": {
+        "name": "bind-devel-30:9.3.6-25.P1.el5_11.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "80d33434-960d-33f6-ae07-0096a9f28ace",
+       "product": {
+        "name": "bind-libbind-devel-30:9.3.6-25.P1.el5_11.3.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8714dc39-183d-3951-9b39-ac7e6f5c0a46",
+       "product": {
+        "name": "bind-libs-30:9.3.6-25.P1.el5_11.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "87d4062e-9221-3677-9264-750f5f031e95",
+       "product": {
+        "name": "caching-nameserver-30:9.3.6-25.P1.el5_11.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8b884c8e-3321-360f-885f-a4c952a1be4c",
+       "product": {
+        "name": "bind-chroot-30:9.3.6-25.P1.el5_11.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8ea3b0f4-cbe6-385e-814d-bc9e451f26e6",
+       "product": {
+        "name": "bind-libs-30:9.3.6-25.P1.el5_11.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9601cee4-e568-35f4-884f-4ad850e79d39",
+       "product": {
+        "name": "bind-libs-30:9.3.6-25.P1.el5_11.3.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "98f7fd51-2b2b-351c-a602-f61801dd4b7b",
+       "product": {
+        "name": "bind-30:9.3.6-25.P1.el5_11.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9e0f305b-bb83-36c7-84c8-9fe1cec0c523",
+       "product": {
+        "name": "bind-30:9.3.6-25.P1.el5_11.3.ppc",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a08722f7-d541-3a4a-804e-8616cfda183b",
+       "product": {
+        "name": "bind-chroot-30:9.3.6-25.P1.el5_11.3.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a3e8573b-3b7a-3eb7-bbf0-a2c1b86d8dc7",
+       "product": {
+        "name": "bind-30:9.3.6-25.P1.el5_11.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ac21297f-fd7b-3431-914e-804302fb7d5e",
+       "product": {
+        "name": "bind-debuginfo-30:9.3.6-25.P1.el5_11.3.i386",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b33608fb-f196-3dde-8432-dec7f84da792",
+       "product": {
+        "name": "Red Hat Enterprise Linux (v. 5 server)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bda031e0-5e99-3baf-951b-f3d6523cceda",
+       "product": {
+        "name": "bind-sdb-30:9.3.6-25.P1.el5_11.3.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bf295bde-e154-38fa-a86b-1e83d1163d1b",
+       "product": {
+        "name": "caching-nameserver-30:9.3.6-25.P1.el5_11.3.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c0d2d9b0-5c45-37cd-b47e-70dde334b940",
+       "product": {
+        "name": "bind-libs-30:9.3.6-25.P1.el5_11.3.ppc64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c31512e1-26db-3b46-896e-b257cc79e477",
+       "product": {
+        "name": "caching-nameserver-30:9.3.6-25.P1.el5_11.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cf1a103e-9263-3c7e-8d87-0f1ba5d4f06f",
+       "product": {
+        "name": "bind-libs-30:9.3.6-25.P1.el5_11.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d6492631-feb5-39bd-82db-d236be681661",
+       "product": {
+        "name": "bind-devel-30:9.3.6-25.P1.el5_11.3.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dfed7611-9bad-3ceb-afd8-98bd0ed6eb52",
+       "product": {
+        "name": "bind-utils-30:9.3.6-25.P1.el5_11.3.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e964d0b8-62da-394f-8b60-83173a2b7f3a",
+       "product": {
+        "name": "bind-libs-30:9.3.6-25.P1.el5_11.3.ia64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f420ed04-0813-339c-ac75-f0fe0b3ef96e",
+       "product": {
+        "name": "bind-devel-30:9.3.6-25.P1.el5_11.3.s390",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fe6da3a9-4be4-385f-bb45-d2193708f000",
+       "product": {
+        "name": "bind-sdb-30:9.3.6-25.P1.el5_11.3.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ff45c434-c66c-319a-9f7f-6de4f2a42ca5",
+       "product": {
+        "name": "bind-30:9.3.6-25.P1.el5_11.3.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2015-5477\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 28, 2015, 10:59:26 PM",
+     "dateUpdated": "Jun 27, 2026, 8:56:28 AM",
+     "description": "Red Hat Security Advisory: bind security update",
+     "id": "RHSA-2015:1514",
+     "references": "https://access.redhat.com/errata/RHSA-2015:1514\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2015/rhsa-2015_1514.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Updated bind packages that fix one security issue are now available for Red\nHat Enterprise Linux 5.\n\nRed Hat Product Security has rated this update as having Important security\nimpact. A Common Vulnerability Scoring System (CVSS) base score, which\ngives a detailed severity rating, is available from the CVE link in the\nReferences section."
+    },
+    "id": "f3d3b457-191a-326f-9dd0-78c4c6fd8285"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "0994e177-36c1-3d83-bb0f-4062c672a7d1",
+    "product": {
+     "name": "n/a",
+     "vendor": {
+      "name": "n/a"
+     }
+    },
+    "product_version": "n/a"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "392d0f23-1631-3630-a0d0-59a17d18b0ca",
+    "vendor": {
+     "name": "n/a"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "6107e0e6-7435-3122-aa92-610041357bba",
+    "vulnerability": {
+     "aliases": "GHSA-4622-vjcx-p39j\nCVE-2015-5477\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 9, 2026, 7:03:31 AM",
+     "datePublished": "May 17, 2022, 12:25:07 AM",
+     "dateUpdated": "Oct 8, 2026, 6:31:48 PM",
+     "description": "named in ISC BIND 9.x before 9.9.7-P2 and 9.10.x before 9.10.2-P3 allows remote attackers to cause a denial of service (REQUIRE assertion failure and daemon exit) via TKEY queries.",
+     "enisa_id": "EUVD-2015-5432\n",
+     "epss": 0.0,
+     "id": "GHSA-4622-vjcx-p39j",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477\nhttps://www.exploit-db.com/exploits/37723\nhttps://www.exploit-db.com/exploits/37721\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2015-5477\nhttps://support.apple.com/kb/HT205032\nhttps://security.netapp.com/advisory/ntap-20160114-0001\nhttps://security.gentoo.org/glsa/201510-01\nhttps://kc.mcafee.com/corporate/index?page=content&id=SB10126\nhttps://kb.juniper.net/JSA10783\nhttps://kb.isc.org/article/AA-01438\nhttps://kb.isc.org/article/AA-01307\nhttps://kb.isc.org/article/AA-01306\nhttps://kb.isc.org/article/AA-01305\nhttps://kb.isc.org/article/AA-01272\nhttps://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05095918\nhttps://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04952480\nhttps://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04789415\nhttp://kb.juniper.net/InfoCenter/index?page=content&id=JSA10718\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-August/163006.html\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-August/163007.html\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-August/163015.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00043.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00044.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00045.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00048.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00050.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-08/msg00001.html\nhttp://lists.opensuse.org/opensuse-security-announce/2016-01/msg00033.html\nhttp://marc.info/?l=bugtraq&m=144000632319155&w=2\nhttp://marc.info/?l=bugtraq&m=144017354030745&w=2\nhttp://marc.info/?l=bugtraq&m=144181171013996&w=2\nhttp://marc.info/?l=bugtraq&m=144294073801304&w=2\nhttp://packetstormsecurity.com/files/132926/BIND-TKEY-Query-Denial-Of-Service.html\nhttp://rhn.redhat.com/errata/RHSA-2015-1513.html\nhttp://rhn.redhat.com/errata/RHSA-2015-1514.html\nhttp://rhn.redhat.com/errata/RHSA-2015-1515.html\nhttp://rhn.redhat.com/errata/RHSA-2016-0078.html\nhttp://rhn.redhat.com/errata/RHSA-2016-0079.html\nhttp://www.debian.org/security/2015/dsa-3319\nhttp://www.oracle.com/technetwork/topics/security/bulletinjul2015-2511963.html\nhttp://www.oracle.com/technetwork/topics/security/ovmbulletinjul2016-3090546.html\nhttp://www.securityfocus.com/bid/76092\nhttp://www.securitytracker.com/id/1033100\nhttp://www.ubuntu.com/usn/USN-2693-1\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "ae5f053b-f745-3ebd-b4fb-8abc3b24a305",
+    "vulnerability": {
+     "assigner": "mitre",
+     "baseScore": 7.5,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 9, 2026, 7:16:50 AM",
+     "datePublished": "Jul 29, 2015, 2:00:00 PM",
+     "dateUpdated": "Oct 8, 2026, 7:58:23 PM",
+     "description": "named in ISC BIND 9.x before 9.9.7-P2 and 9.10.x before 9.10.2-P3 allows remote attackers to cause a denial of service (REQUIRE assertion failure and daemon exit) via TKEY queries.",
+     "enisa_id": "EUVD-2015-5432\n",
+     "epss": 91.28,
+     "exploitedSince": "Oct 8, 2026, 12:00:00 AM",
+     "id": "CVE-2015-5477",
+     "references": "http://packetstormsecurity.com/files/132926/BIND-TKEY-Query-Denial-Of-Service.html\nhttp://www.oracle.com/technetwork/topics/security/ovmbulletinjul2016-3090546.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00050.html\nhttps://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04789415\nhttps://kb.juniper.net/JSA10783\nhttp://rhn.redhat.com/errata/RHSA-2015-1513.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00044.html\nhttps://security.netapp.com/advisory/ntap-20160114-0001/\nhttps://kb.isc.org/article/AA-01438\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-August/163015.html\nhttp://marc.info/?l=bugtraq&m=144017354030745&w=2\nhttp://marc.info/?l=bugtraq&m=144294073801304&w=2\nhttp://rhn.redhat.com/errata/RHSA-2016-0079.html\nhttps://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05095918\nhttp://www.oracle.com/technetwork/topics/security/bulletinjul2015-2511963.html\nhttp://kb.juniper.net/InfoCenter/index?page=content&id=JSA10718\nhttp://rhn.redhat.com/errata/RHSA-2015-1514.html\nhttp://www.ubuntu.com/usn/USN-2693-1\nhttps://support.apple.com/kb/HT205032\nhttp://www.securitytracker.com/id/1033100\nhttps://kb.isc.org/article/AA-01307\nhttp://www.securityfocus.com/bid/76092\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00045.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-08/msg00001.html\nhttp://marc.info/?l=bugtraq&m=144294073801304&w=2\nhttps://www.exploit-db.com/exploits/37721/\nhttp://rhn.redhat.com/errata/RHSA-2015-1515.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00048.html\nhttps://security.gentoo.org/glsa/201510-01\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00043.html\nhttp://marc.info/?l=bugtraq&m=144181171013996&w=2\nhttp://marc.info/?l=bugtraq&m=144017354030745&w=2\nhttps://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04952480\nhttp://www.debian.org/security/2015/dsa-3319\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-August/163007.html\nhttp://marc.info/?l=bugtraq&m=144000632319155&w=2\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-August/163006.html\nhttps://www.exploit-db.com/exploits/37723/\nhttps://kb.isc.org/article/AA-01305\nhttp://rhn.redhat.com/errata/RHSA-2016-0078.html\nhttp://lists.opensuse.org/opensuse-security-announce/2016-01/msg00033.html\nhttps://kb.isc.org/article/AA-01306\nhttps://kc.mcafee.com/corporate/index?page=content&id=SB10126\nhttps://kb.isc.org/article/AA-01272\nhttp://marc.info/?l=bugtraq&m=144000632319155&w=2\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "f617e5c5-c8fd-3b08-973e-7515062f4a21",
+       "product": {
+        "name": "n/a",
+        "vendor": {
+         "name": "n/a"
+        }
+       },
+       "product_version": "n/a"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "d5782a8a-3578-389e-9ef0-bad44384924f",
+       "vendor": {
+        "name": "n/a"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "acc7f430-ec86-3eb1-b0b8-bb5c79c6441a",
+  "epss": 91.28,
+  "exploitedSince": "Oct 8, 2026, 12:00:00 AM",
+  "id": "EUVD-2015-5432",
+  "references": "http://packetstormsecurity.com/files/132926/BIND-TKEY-Query-Denial-Of-Service.html\nhttp://www.oracle.com/technetwork/topics/security/ovmbulletinjul2016-3090546.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00050.html\nhttps://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04789415\nhttps://kb.juniper.net/JSA10783\nhttp://rhn.redhat.com/errata/RHSA-2015-1513.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00044.html\nhttps://security.netapp.com/advisory/ntap-20160114-0001/\nhttps://kb.isc.org/article/AA-01438\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-August/163015.html\nhttp://marc.info/?l=bugtraq&m=144017354030745&w=2\nhttp://marc.info/?l=bugtraq&m=144294073801304&w=2\nhttp://rhn.redhat.com/errata/RHSA-2016-0079.html\nhttps://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05095918\nhttp://www.oracle.com/technetwork/topics/security/bulletinjul2015-2511963.html\nhttp://kb.juniper.net/InfoCenter/index?page=content&id=JSA10718\nhttp://rhn.redhat.com/errata/RHSA-2015-1514.html\nhttp://www.ubuntu.com/usn/USN-2693-1\nhttps://support.apple.com/kb/HT205032\nhttp://www.securitytracker.com/id/1033100\nhttps://kb.isc.org/article/AA-01307\nhttp://www.securityfocus.com/bid/76092\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00045.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-08/msg00001.html\nhttp://marc.info/?l=bugtraq&m=144294073801304&w=2\nhttps://www.exploit-db.com/exploits/37721/\nhttp://rhn.redhat.com/errata/RHSA-2015-1515.html\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00048.html\nhttps://security.gentoo.org/glsa/201510-01\nhttp://lists.opensuse.org/opensuse-security-announce/2015-07/msg00043.html\nhttp://marc.info/?l=bugtraq&m=144181171013996&w=2\nhttp://marc.info/?l=bugtraq&m=144017354030745&w=2\nhttps://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04952480\nhttp://www.debian.org/security/2015/dsa-3319\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-August/163007.html\nhttp://marc.info/?l=bugtraq&m=144000632319155&w=2\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-August/163006.html\nhttps://www.exploit-db.com/exploits/37723/\nhttps://kb.isc.org/article/AA-01305\nhttp://rhn.redhat.com/errata/RHSA-2016-0078.html\nhttp://lists.opensuse.org/opensuse-security-announce/2016-01/msg00033.html\nhttps://kb.isc.org/article/AA-01306\nhttps://kc.mcafee.com/corporate/index?page=content&id=SB10126\nhttps://kb.isc.org/article/AA-01272\nhttp://marc.info/?l=bugtraq&m=144000632319155&w=2\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2015-5432",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 8, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "n/a",
+      "vendor": "n/a",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "n/a"
+       }
+      ]
+     }
+    ],
+    "source": "cve@mitre.org"
+   }
+  ],
+  "cisaActionDue": "2026-10-11",
+  "cisaExploitAdd": "2026-10-08",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": " ISC BIND Data Processing Errors Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:isc:bind:*:p1:*:*:*:*:*:*",
+        "matchCriteriaId": "54645B93-57B1-41CB-83DC-8650DB354B1F",
+        "versionEndIncluding": "9.9.7",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:isc:bind:*:p2:*:*:*:*:*:*",
+        "matchCriteriaId": "DBDE13E9-2392-4B6A-A955-8FB2560DD0B4",
+        "versionEndIncluding": "9.10.2",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "named in ISC BIND 9.x before 9.9.7-P2 and 9.10.x before 9.10.2-P3 allows remote attackers to cause a denial of service (REQUIRE assertion failure and daemon exit) via TKEY queries."
+   },
+   {
+    "lang": "es",
+    "value": "Vulnerabilidad identificada en ISC BIND 9.x en versiones anteriores a 9.9.7-P2 y 9.10.x en versiones anteriores a 9.10.2-P3, permite a atacantes remotos causar una denegación de servicio (fallo en la comprobación de REQUIRE y salida del demonio) a través de consultas TKEY."
+   }
+  ],
+  "id": "CVE-2015-5477",
+  "lastModified": "2026-10-09T04:18:00.970",
+  "metrics": {
+   "cvssMetricV2": [
+    {
+     "acInsufInfo": false,
+     "baseSeverity": "HIGH",
+     "cvssData": {
+      "accessComplexity": "LOW",
+      "accessVector": "NETWORK",
+      "authentication": "NONE",
+      "availabilityImpact": "COMPLETE",
+      "baseScore": 7.8,
+      "confidentialityImpact": "NONE",
+      "integrityImpact": "NONE",
+      "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+      "version": "2.0"
+     },
+     "exploitabilityScore": 10.0,
+     "impactScore": 6.9,
+     "obtainAllPrivilege": false,
+     "obtainOtherPrivilege": false,
+     "obtainUserPrivilege": false,
+     "source": "nvd@nist.gov",
+     "type": "Primary",
+     "userInteractionRequired": false
+    }
+   ],
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 7.5,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "NONE",
+      "integrityImpact": "NONE",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 3.6,
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2015-5477",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-08T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2015-07-29T14:59:05.397",
+  "references": [
+   {
+    "source": "cve@mitre.org",
+    "url": "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10718"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163006.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163007.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163015.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00043.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00044.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00045.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00048.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00050.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-08/msg00001.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2016-01/msg00033.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://marc.info/?l=bugtraq&m=144000632319155&w=2"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://marc.info/?l=bugtraq&m=144017354030745&w=2"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://marc.info/?l=bugtraq&m=144181171013996&w=2"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://marc.info/?l=bugtraq&m=144294073801304&w=2"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://packetstormsecurity.com/files/132926/BIND-TKEY-Query-Denial-Of-Service.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://rhn.redhat.com/errata/RHSA-2015-1513.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://rhn.redhat.com/errata/RHSA-2015-1514.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://rhn.redhat.com/errata/RHSA-2015-1515.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://rhn.redhat.com/errata/RHSA-2016-0078.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://rhn.redhat.com/errata/RHSA-2016-0079.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://www.debian.org/security/2015/dsa-3319"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://www.oracle.com/technetwork/topics/security/bulletinjul2015-2511963.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://www.oracle.com/technetwork/topics/security/ovmbulletinjul2016-3090546.html"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://www.securityfocus.com/bid/76092"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://www.securitytracker.com/id/1033100"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "http://www.ubuntu.com/usn/USN-2693-1"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04789415"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04952480"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05095918"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Patch",
+     "Vendor Advisory"
+    ],
+    "url": "https://kb.isc.org/article/AA-01272"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://kb.isc.org/article/AA-01305"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://kb.isc.org/article/AA-01306"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://kb.isc.org/article/AA-01307"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://kb.isc.org/article/AA-01438"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://kb.juniper.net/JSA10783"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://kc.mcafee.com/corporate/index?page=content&id=SB10126"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://security.gentoo.org/glsa/201510-01"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://security.netapp.com/advisory/ntap-20160114-0001/"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://support.apple.com/kb/HT205032"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://www.exploit-db.com/exploits/37721/"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://www.exploit-db.com/exploits/37723/"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10718"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163006.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163007.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/163015.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00043.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00044.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00045.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00048.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00050.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-08/msg00001.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2016-01/msg00033.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://marc.info/?l=bugtraq&m=144000632319155&w=2"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://marc.info/?l=bugtraq&m=144017354030745&w=2"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://marc.info/?l=bugtraq&m=144181171013996&w=2"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://marc.info/?l=bugtraq&m=144294073801304&w=2"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://packetstormsecurity.com/files/132926/BIND-TKEY-Query-Denial-Of-Service.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://rhn.redhat.com/errata/RHSA-2015-1513.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://rhn.redhat.com/errata/RHSA-2015-1514.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://rhn.redhat.com/errata/RHSA-2015-1515.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://rhn.redhat.com/errata/RHSA-2016-0078.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://rhn.redhat.com/errata/RHSA-2016-0079.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.debian.org/security/2015/dsa-3319"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.oracle.com/technetwork/topics/security/bulletinjul2015-2511963.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.oracle.com/technetwork/topics/security/ovmbulletinjul2016-3090546.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.securityfocus.com/bid/76092"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.securitytracker.com/id/1033100"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.ubuntu.com/usn/USN-2693-1"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04789415"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://h20564.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c04952480"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05095918"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Patch",
+     "Vendor Advisory"
+    ],
+    "url": "https://kb.isc.org/article/AA-01272"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://kb.isc.org/article/AA-01305"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://kb.isc.org/article/AA-01306"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://kb.isc.org/article/AA-01307"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://kb.isc.org/article/AA-01438"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://kb.juniper.net/JSA10783"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://kc.mcafee.com/corporate/index?page=content&id=SB10126"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://security.gentoo.org/glsa/201510-01"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://security.netapp.com/advisory/ntap-20160114-0001/"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://support.apple.com/kb/HT205032"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://www.exploit-db.com/exploits/37721/"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://www.exploit-db.com/exploits/37723/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2015-5477"
+   }
+  ],
+  "sourceIdentifier": "cve@mitre.org",
+  "vulnStatus": "Modified",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-19"
+     }
+    ],
+    "source": "nvd@nist.gov",
+    "type": "Primary"
+   },
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-617"
+     }
+    ],
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

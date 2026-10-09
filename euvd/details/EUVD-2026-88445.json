@@ -11,8 +11,8 @@
    "CWE-787"
   ],
   "dateAdded": "2026-09-29",
-  "dueDate": "2026-10-02",
-  "forensicTriage": "Yes",
+  "dueDate": "2026-10-13",
+  "forensicTriage": "No",
   "knownRansomwareCampaignUse": "Unknown",
   "notes": "https://support.apple.com/en-us/149226 ; https://support.apple.com/en-us/149228 ; https://support.apple.com/en-us/149229 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-86950",
   "product": "Multiple Products",
