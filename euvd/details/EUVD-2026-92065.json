@@ -12,7 +12,7 @@
   ],
   "dateAdded": "2026-10-04",
   "dueDate": "2026-10-07",
-  "forensicTriage": "Yes",
+  "forensicTriage": "No",
   "knownRansomwareCampaignUse": "Unknown",
   "notes": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697174 ; https://community.citrix.com/techzone-blogs/110_security-updates/understanding-and-addressing-cve-2026-88779-in-citrix-netscaler-adc-and-citrix-netscaler-gateway/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-88779",
   "product": "NetScaler",

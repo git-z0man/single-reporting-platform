@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
   "baseScoreVersion": "3.1",
   "datePublished": "Aug 11, 2026, 5:04:55 PM",
-  "dateUpdated": "Sep 29, 2026, 8:20:21 PM",
+  "dateUpdated": "Oct 8, 2026, 6:11:15 PM",
   "description": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.",
   "enisaIdAdvisory": [
    {
@@ -476,9 +476,9 @@
      "baseScore": 8.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Oct 4, 2026, 3:38:28 AM",
+     "dataProcessed": "Oct 9, 2026, 7:19:41 AM",
      "datePublished": "Aug 11, 2026, 5:04:55 PM",
-     "dateUpdated": "Sep 29, 2026, 8:20:21 PM",
+     "dateUpdated": "Oct 8, 2026, 6:11:15 PM",
      "description": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.",
      "enisa_id": "EUVD-2026-56431\n",
      "epss": 2.1,

@@ -1,0 +1,350 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-3199"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2021-3199",
+  "cwes": [
+   "CWE-22"
+  ],
+  "dateAdded": "2026-10-08",
+  "dueDate": "2026-10-11",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "This vulnerability could affect an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: ; https://github.com/ONLYOFFICE/DocumentServer/blob/903fe5ab7a275bd69c3c3346af2d21cf87ebeabf/CHANGELOG.md#563 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2021-3199",
+  "product": "Docs",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.",
+  "vendorProject": "ONLYOFFICE",
+  "vulnerabilityName": "ONLYOFFICE Docs Server Path Traversal Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2021-3199\nGHSA-vm8r-r39c-96c6\n",
+  "assigner": "mitre",
+  "baseScore": 9.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Jan 22, 2021, 2:41:34 AM",
+  "dateUpdated": "Oct 8, 2026, 7:58:24 PM",
+  "description": "Directory traversal with remote code execution can occur in /upload in ONLYOFFICE Document Server before 5.6.3, when JWT is used, via a /.. sequence in an image upload parameter.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "8dae861a-f088-323b-a9a1-11ed35f95587",
+    "product": {
+     "name": "n/a",
+     "vendor": {
+      "name": "n/a"
+     }
+    },
+    "product_version": "n/a"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "967a2f64-df9f-3c3e-9e02-2db2dd0e6cf6",
+    "vendor": {
+     "name": "n/a"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "9de36ce4-b24c-30f0-a1cb-267d21afb9a4",
+    "vulnerability": {
+     "aliases": "CVE-2021-3199\nGHSA-vm8r-r39c-96c6\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 9, 2026, 7:03:31 AM",
+     "datePublished": "May 24, 2022, 5:40:23 PM",
+     "dateUpdated": "Oct 8, 2026, 6:31:47 PM",
+     "description": "Directory traversal with remote code execution can occur in /upload in ONLYOFFICE Document Server before 5.6.3, when JWT is used, via a /.. sequence in an image upload parameter.",
+     "enisa_id": "EUVD-2021-26539\n",
+     "epss": 0.0,
+     "id": "GHSA-vm8r-r39c-96c6",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2021-3199\nhttps://github.com/ONLYOFFICE/DocumentServer/blob/903fe5ab7a275bd69c3c3346af2d21cf87ebeabf/CHANGELOG.md#563\nhttps://github.com/moehw/poc_exploits/tree/master/CVE-2021-3199/poc_uploadImageFile.py\nhttps://github.com/nola-milkin/poc_exploits/blob/master/CVE-2021-3199/poc_uploadImageFile.py\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-3199\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "b3d4b9fe-3b88-351d-91da-b71630e1223f",
+    "vulnerability": {
+     "assigner": "mitre",
+     "baseScore": 9.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 9, 2026, 7:13:11 AM",
+     "datePublished": "Jan 22, 2021, 2:41:34 AM",
+     "dateUpdated": "Oct 8, 2026, 7:58:24 PM",
+     "description": "Directory traversal with remote code execution can occur in /upload in ONLYOFFICE Document Server before 5.6.3, when JWT is used, via a /.. sequence in an image upload parameter.",
+     "enisa_id": "EUVD-2021-26539\n",
+     "epss": 8.22,
+     "exploitedSince": "Oct 8, 2026, 12:00:00 AM",
+     "id": "CVE-2021-3199",
+     "references": "https://github.com/ONLYOFFICE/DocumentServer/blob/903fe5ab7a275bd69c3c3346af2d21cf87ebeabf/CHANGELOG.md#563\nhttps://github.com/nola-milkin/poc_exploits/blob/master/CVE-2021-3199/poc_uploadImageFile.py\nhttps://github.com/moehw/poc_exploits/tree/master/CVE-2021-3199/poc_uploadImageFile.py\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "ba6d9090-5717-38e3-ba6a-3f211d384896",
+       "product": {
+        "name": "n/a",
+        "vendor": {
+         "name": "n/a"
+        }
+       },
+       "product_version": "n/a"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "389e432e-a778-3a52-9884-c5ac904de0bc",
+       "vendor": {
+        "name": "n/a"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "3d9c6f8b-6414-3b6e-968a-f8a6713bbe1f",
+  "epss": 8.22,
+  "exploitedSince": "Oct 8, 2026, 12:00:00 AM",
+  "id": "EUVD-2021-26539",
+  "references": "https://github.com/ONLYOFFICE/DocumentServer/blob/903fe5ab7a275bd69c3c3346af2d21cf87ebeabf/CHANGELOG.md#563\nhttps://github.com/nola-milkin/poc_exploits/blob/master/CVE-2021-3199/poc_uploadImageFile.py\nhttps://github.com/moehw/poc_exploits/tree/master/CVE-2021-3199/poc_uploadImageFile.py\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2021-26539",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 8, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "n/a",
+      "vendor": "n/a",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "n/a"
+       }
+      ]
+     }
+    ],
+    "source": "cve@mitre.org"
+   }
+  ],
+  "cisaActionDue": "2026-10-11",
+  "cisaExploitAdd": "2026-10-08",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "ONLYOFFICE Docs Server Path Traversal Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:onlyoffice:document_server:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "226FAC46-5D2C-4685-AA75-0EEB5BA85178",
+        "versionEndExcluding": "5.6.3",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Directory traversal with remote code execution can occur in /upload in ONLYOFFICE Document Server before 5.6.3, when JWT is used, via a /.. sequence in an image upload parameter."
+   },
+   {
+    "lang": "es",
+    "value": "Un salto de directorio con ejecución de código remota puede ocurrir en /upload en ONLYOFFICE Document Server versiones anteriores a 5.6.3, cuando es usado JWT, por medio de una secuencia /.. en un parámetro de carga de imagen"
+   }
+  ],
+  "id": "CVE-2021-3199",
+  "lastModified": "2026-10-09T04:18:02.710",
+  "metrics": {
+   "cvssMetricV2": [
+    {
+     "acInsufInfo": false,
+     "baseSeverity": "HIGH",
+     "cvssData": {
+      "accessComplexity": "LOW",
+      "accessVector": "NETWORK",
+      "authentication": "NONE",
+      "availabilityImpact": "PARTIAL",
+      "baseScore": 7.5,
+      "confidentialityImpact": "PARTIAL",
+      "integrityImpact": "PARTIAL",
+      "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+      "version": "2.0"
+     },
+     "exploitabilityScore": 10.0,
+     "impactScore": 6.4,
+     "obtainAllPrivilege": false,
+     "obtainOtherPrivilege": false,
+     "obtainUserPrivilege": false,
+     "source": "nvd@nist.gov",
+     "type": "Primary",
+     "userInteractionRequired": false
+    }
+   ],
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    },
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2021-3199",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-08T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2021-01-26T18:16:28.507",
+  "references": [
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Release Notes",
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/ONLYOFFICE/DocumentServer/blob/903fe5ab7a275bd69c3c3346af2d21cf87ebeabf/CHANGELOG.md#563"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/moehw/poc_exploits/tree/master/CVE-2021-3199/poc_uploadImageFile.py"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/nola-milkin/poc_exploits/blob/master/CVE-2021-3199/poc_uploadImageFile.py"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Release Notes",
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/ONLYOFFICE/DocumentServer/blob/903fe5ab7a275bd69c3c3346af2d21cf87ebeabf/CHANGELOG.md#563"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/moehw/poc_exploits/tree/master/CVE-2021-3199/poc_uploadImageFile.py"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/nola-milkin/poc_exploits/blob/master/CVE-2021-3199/poc_uploadImageFile.py"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-3199"
+   }
+  ],
+  "sourceIdentifier": "cve@mitre.org",
+  "vulnStatus": "Modified",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-22"
+     }
+    ],
+    "source": "nvd@nist.gov",
+    "type": "Primary"
+   },
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-22"
+     }
+    ],
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
