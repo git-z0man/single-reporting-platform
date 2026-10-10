@@ -232,7 +232,26 @@
   "id": "EUVD-2026-76779",
   "references": "https://gitlab.com/gitlab-org/gitlab/-/work_items/627748\nhttps://hackerone.com/reports/3909881\n"
  },
- "honeypot": [],
+ "honeypot": [
+  {
+   "avg30d": 0.0,
+   "avg7d": 0.0,
+   "avg90d": 0.0,
+   "cisaKevFlag": true,
+   "connections1d": 1,
+   "cveId": "CVE-2026-85706",
+   "firstSeenAt": "Oct 10, 2026, 7:12:12 AM",
+   "isNew": true,
+   "lastSeenAt": "Oct 10, 2026, 7:12:12 AM",
+   "product": "GitLab CE/EE",
+   "source": "shadowserver",
+   "trend": "STEADY",
+   "uniqueIps1d": 1,
+   "vendor": "GitLab",
+   "vulnClass": "other-software",
+   "vulnSeverity": "Critical"
+  }
+ ],
  "id": "EUVD-2026-76779",
  "kev_sources": [
   {
