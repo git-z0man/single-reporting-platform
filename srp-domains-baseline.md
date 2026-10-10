@@ -25,13 +25,13 @@ is the baseline that the reachability routine updates when that changes.
 | | |
 |---|---|
 | Hosts watched | **29** (portal, auth, 27 Member State instances) |
-| Live | **0 / 29 — OUTAGE seen 2026-10-10 06:12 UTC** (was 29 / 29; go-live confirmed 2026-09-11, first at 11:24:01 UTC (28 hosts), `es` followed at 11:36:58 UTC after a monitoring-side DNS blind spot; see Delta history) |
+| Live | **29 / 29 — recovered 2026-10-10, first seen 08:39 UTC** (outage seen from 06:02 UTC; go-live confirmed 2026-09-11, first at 11:24:01 UTC (28 hosts), `es` followed at 11:36:58 UTC after a monitoring-side DNS blind spot; see Delta history) |
 | Zone | `cra-srp.enisa.europa.eu` — independently delegated |
 | Edge | 45-address WEDOS pool `185.8.236.33`–`185.8.236.77` (WEDOS Global, CZ) |
-| State | **PROVISIONED / not answering** since the 2026-10-10 run (launch confirmed 2026-09-11) |
+| State | **LIVE** again since the 2026-10-10 08:39 UTC run (launch confirmed 2026-09-11) |
 | Expected go-live | **reached** — 11 September 2026, 11:24:01 UTC |
 | Last check | 2026-10-10 |
-| Last change | 2026-10-10 — **all 29 hosts LIVE -> PROVISIONED** (timeouts); earlier: 2026-09-11 **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
+| Last change | 2026-10-10 08:39 UTC — **all 29 hosts PROVISIONED -> LIVE** (recovery); earlier: 2026-10-10 06:02 UTC all 29 LIVE -> PROVISIONED (timeouts); 2026-09-11 **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
 
@@ -274,6 +274,15 @@ signals — no login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-10-10 08:39 UTC (vs. 2026-10-10 06:02 UTC) — RECOVERY, ALL 29 HOSTS LIVE AGAIN
+
+All 29 hosts answer with HTTP again (`portal` 200, `auth` 302, country hosts 307 to Keycloak), `server: srp`, no WEDOS error page. Outage: last LIVE run 2026-10-09 06:02 UTC, first failing run 2026-10-10 06:02 UTC (first seen 06:12), first LIVE run 08:39 UTC, so about 2.5 h from the first failure seen.
+
+**Changed** — 0/29 -> 29/29 LIVE at 08:39:19 UTC; `blocked=0`, `edge_blocked=0`.
+**Changed** — the callback target moved from ReplicaSet `srp-ui-ddb75f59b` to `srp-ui-6fd6bcbc49`: a redeployment, not an incident. Recorded, nothing else of the architecture drifted (`client_id=srp-ar-fe-de`, `kc_idp_hint=eu-login`, shared Keycloak at `auth`; edge pool and AS not re-derived in this run).
+**Watch** — ENISA's CSIRT list (still "Last updated 10 September 2026") is unchanged in content; the links for `mt` and `sk` are now `https://` instead of `http://`, same hosts. Country table left as is.
+**Unchanged** — scope statement not re-checked in this run; cause of the outage still not published.
 
 ### 2026-10-10 06:12 UTC (vs. 2026-10-09) — ALL 29 HOSTS UNREACHABLE
 
