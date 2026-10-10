@@ -280,7 +280,8 @@ signals — no login attempts, no form input, no authentication**:
 All 29 hosts went from LIVE to PROVISIONED: every request timed out (curl exit 28, 20 s, 0 bytes). Controls from the same environment (`www.enisa.europa.eu`, `example.com`) returned HTTP 200, and a second attempt on `portal` and `de` also timed out.
 
 **Changed** — 29/29 LIVE -> 0/29 LIVE; `blocked=0`, `edge_blocked=0`, DNS resolved 29/29. Platform-wide, not one Member State.
-**Watch** — a timeout is not an HTTP answer: cause (origin outage, edge/WEDOS filtering of the monitor's egress, or maintenance) is not established. Section 4 drift check and CSIRT list check not run in this entry.
+**Watch** — a timeout is not an HTTP answer: cause (origin outage, edge/WEDOS filtering of the monitor's egress, or maintenance) was not established by the run.
+**Watch** — *Nachtrag 2026-10-10 07:16 UTC, from a user's browser (screenshot):* `portal` answered with a WEDOS error page, "HTTP 502 — origin server returned invalid response", WEDOS.protection marked OK and the origin marked as failed (node `ac119-Luxembourg`, server `BE-ALB-AL7-GEN / S-ALB-to-AL7-GEN-NP`, Req-ID `c8323f5f-c67c-4897-a408-8303c82c115d`). That points to a failing origin or its upstream, not to edge filtering of the monitor. Only `portal` was seen; whether the other 28 hosts return the same 502 is not known. `check.sh` would class such a page `EDGE_BLOCKED`, which never counts as live. Section 4 drift check and CSIRT list check not run in this entry.
 
 ### 2026-09-11 11:36 UTC (vs. 2026-09-11 10:35 UTC) — GO-LIVE
 
