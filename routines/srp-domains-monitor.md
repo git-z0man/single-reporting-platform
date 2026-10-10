@@ -2,6 +2,7 @@
 
 - **Trigger**: `trig_01426ap5KJGGrY4Fk2pbTm8s`
 - **Schedule**: `0 6 * * *` (daily since 2026-09-13 17:38 UTC; hourly before that, to catch the go-live)
+- **Schedule note (2026-10-10)**: outage mode (section 3b-bis) is written for an hourly firing while the platform is degraded. The cron of the live Routine is **not** changed by this file; it is a setting in the Routines UI (or `update_trigger`). Until `0 * * * *` is set there, outage mode still applies to each daily run, but recovery is only noticed once a day.
 - **Writes**: `srp-domains-baseline.md`, `srp-domains/`
 - **Also reads**: ENISA's List of CSIRTs Designated as Coordinators — it owns
   the country table, so it applies changes to that list itself rather than
@@ -121,6 +122,17 @@ Only when BOTH the reachability check and the CSIRT list came back unchanged. Re
 - If it is **today's date** → today's measurement point is already recorded. Do NOT commit, do NOT open a PR, do NOT report anything. End the run silently. This is the normal outcome for almost every run.
 - If it is an **earlier date** → this is the first run of the day. Update `last_check` in the frontmatter of `srp-domains-baseline.md` to today AND the "Last check" row of its "Current state" table, leave `last_change` alone, then commit, PR and merge per section 5. Do NOT report — a routine heartbeat is not worth a notification.
 
+### 3b-bis. Outage mode — denser checking while the platform is degraded
+
+Added 2026-10-10, after all 29 hosts went dark (06:12 UTC) and nobody could say when they would be back. **Outage mode** is on when `live_count` in `srp-domains/manifest.json` on `origin/main` is below `host_count` (read it the same way as `last_check` in 3b). This Routine may then be fired hourly (`0 * * * *`; see the schedule note at the top of this file), and the rules above apply with these differences:
+
+- Every run is a real check, whatever the date. Run `check.sh` and the CSIRT check as usual.
+- Exit 0 and nothing changed: end silently, no commit, no PR, no report — also when `last_check` on `main` is an earlier date than today, provided one commit for the day already exists (that is the heartbeat of 3b). Hourly runs must not produce hourly PRs.
+- Exit 1: commit, PR and merge per section 5 at once. Name the hosts, the HTTP codes or curl errors, and the time of the run.
+- **Recovery is the event this mode exists for.** When `live_count` rises (some or all hosts LIVE again), commit and report it immediately. The delta entry states the first-live timestamp per host, the length of the outage (from the last LIVE run recorded in `reachability-log.csv` to the first LIVE one) and whether the answers are the real SRP application again (`server: srp`, no WEDOS error page).
+- A host whose answer changes between failure kinds (timeout, WEDOS 502, other 5xx) is a change worth one line in the delta, but not a recovery. `EDGE_BLOCKED` never counts as live.
+- Outage mode ends when `live_count` equals `host_count` again on `main`, after the recovery entry has been merged.
+
 ### 3c. Exit 2 — the check itself failed
 
 Do not commit. Report the failure and its cause. Do not work around it.
@@ -161,6 +173,7 @@ Stay SILENT for a run that changed nothing, including the daily heartbeat commit
 Report, in German and concisely, only when:
 
 - **A live host went dark** — say so first and clearly: which hosts, what HTTP codes or errors, whether it is all 29 or a subset, and since when. This is now the event this monitor exists for.
+- **Recovery** (outage mode, section 3b-bis) — say so first: which hosts are live again, when, how long the outage lasted.
 - **A new host appeared in the zone, or a host became live for the first time** — one short paragraph.
 - **Drift from the settled architecture** (section 4) — name what changed and against which recorded value.
 - **The CSIRT coordinator list changed** — name the countries and what changed, old value and new.
