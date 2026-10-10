@@ -1503,3 +1503,32 @@ timestamp_utc,host,dns,tcp443,tls,http_code,note
 2026-10-10T06:02:22Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
 2026-10-10T06:02:22Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
 2026-10-10T06:02:22Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T08:39:19Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,200,LIVE http 200
+2026-10-10T08:39:19Z,auth.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,302,LIVE http 302
+2026-10-10T08:39:19Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-10-10T08:39:19Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
