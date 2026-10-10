@@ -1474,3 +1474,32 @@ timestamp_utc,host,dns,tcp443,tls,http_code,note
 2026-10-09T06:02:34Z,se.cra-srp.enisa.europa.eu,unknown,unreliable,unreliable,307,LIVE http 307
 2026-10-09T06:02:34Z,si.cra-srp.enisa.europa.eu,unknown,unreliable,unreliable,307,LIVE http 307
 2026-10-09T06:02:34Z,sk.cra-srp.enisa.europa.eu,unknown,unreliable,unreliable,307,LIVE http 307
+2026-10-10T06:02:22Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,auth.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20001 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20000 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20001 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20001 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20001 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20001 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20001 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20001 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20001 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 
+2026-10-10T06:02:22Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 28: curl: (28) Operation timed out after 20002 milliseconds with 0 bytes received 

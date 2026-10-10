@@ -9,8 +9,8 @@ expected_go_live: 2026-09-11
 retrieved: 2026-09-06
 purpose: Reachability baseline for the SRP production environment. The routine re-checks all 29 hosts, records the first successful HTTP response per host, detects new hosts appearing in the zone, and verifies the assumed country-to-CSIRT mapping once the platform answers.
 note: Only an HTTP status code relayed from upstream counts as live. TCP and TLS are recorded but are forged by an intercepting egress proxy in the monitoring environment — see "Why a TLS handshake is not evidence" below.
-last_check: 2026-10-09
-last_change: 2026-09-11
+last_check: 2026-10-10
+last_change: 2026-10-10
 ---
 
 # CRA SRP — Production domain reachability baseline
@@ -25,13 +25,13 @@ is the baseline that the reachability routine updates when that changes.
 | | |
 |---|---|
 | Hosts watched | **29** (portal, auth, 27 Member State instances) |
-| Live | **29 / 29 — GO-LIVE CONFIRMED** 2026-09-11, first at 11:24:01 UTC (28 hosts), `es` followed at 11:36:58 UTC after a monitoring-side DNS blind spot; see Delta history |
+| Live | **0 / 29 — OUTAGE seen 2026-10-10 06:12 UTC** (was 29 / 29; go-live confirmed 2026-09-11, first at 11:24:01 UTC (28 hosts), `es` followed at 11:36:58 UTC after a monitoring-side DNS blind spot; see Delta history) |
 | Zone | `cra-srp.enisa.europa.eu` — independently delegated |
 | Edge | 45-address WEDOS pool `185.8.236.33`–`185.8.236.77` (WEDOS Global, CZ) |
-| State | **LIVE** — public launch confirmed 2026-09-11 |
+| State | **PROVISIONED / not answering** since the 2026-10-10 run (launch confirmed 2026-09-11) |
 | Expected go-live | **reached** — 11 September 2026, 11:24:01 UTC |
-| Last check | 2026-10-09 |
-| Last change | 2026-09-11 — **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
+| Last check | 2026-10-10 |
+| Last change | 2026-10-10 — **all 29 hosts LIVE -> PROVISIONED** (timeouts); earlier: 2026-09-11 **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
 
@@ -274,6 +274,13 @@ signals — no login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-10-10 06:12 UTC (vs. 2026-10-09) — ALL 29 HOSTS UNREACHABLE
+
+All 29 hosts went from LIVE to PROVISIONED: every request timed out (curl exit 28, 20 s, 0 bytes). Controls from the same environment (`www.enisa.europa.eu`, `example.com`) returned HTTP 200, and a second attempt on `portal` and `de` also timed out.
+
+**Changed** — 29/29 LIVE -> 0/29 LIVE; `blocked=0`, `edge_blocked=0`, DNS resolved 29/29. Platform-wide, not one Member State.
+**Watch** — a timeout is not an HTTP answer: cause (origin outage, edge/WEDOS filtering of the monitor's egress, or maintenance) is not established. Section 4 drift check and CSIRT list check not run in this entry.
 
 ### 2026-09-11 11:36 UTC (vs. 2026-09-11 10:35 UTC) — GO-LIVE
 
