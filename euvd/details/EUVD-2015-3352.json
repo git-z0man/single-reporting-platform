@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "May 18, 2015, 3:00:00 PM",
-  "dateUpdated": "Oct 8, 2026, 7:58:24 PM",
+  "dateUpdated": "Oct 9, 2026, 4:02:13 PM",
   "description": "The mod_copy module in ProFTPD 1.3.5 allows remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.",
   "enisaIdAdvisory": [
    {
@@ -734,7 +734,7 @@
     "vulnerability": {
      "aliases": "GHSA-4mfj-5wr8-x32q\nCVE-2015-3306\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 9, 2026, 7:03:31 AM",
+     "dataProcessed": "Oct 10, 2026, 7:03:36 AM",
      "datePublished": "May 13, 2022, 1:09:57 AM",
      "dateUpdated": "Oct 8, 2026, 6:31:47 PM",
      "description": "The mod_copy module in ProFTPD 1.3.5 allows remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.",
@@ -753,12 +753,12 @@
      "baseScore": 10.0,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Oct 9, 2026, 7:18:27 AM",
+     "dataProcessed": "Oct 10, 2026, 7:18:29 AM",
      "datePublished": "May 18, 2015, 3:00:00 PM",
-     "dateUpdated": "Oct 8, 2026, 7:58:24 PM",
+     "dateUpdated": "Oct 9, 2026, 4:02:13 PM",
      "description": "The mod_copy module in ProFTPD 1.3.5 allows remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.",
      "enisa_id": "EUVD-2015-3352\n",
-     "epss": 96.75,
+     "epss": 98.03,
      "exploitedSince": "Oct 8, 2026, 12:00:00 AM",
      "id": "CVE-2015-3306",
      "references": "http://www.rapid7.com/db/modules/exploit/unix/ftp/proftpd_modcopy_exec\nhttps://www.exploit-db.com/exploits/36803/\nhttp://packetstormsecurity.com/files/131555/ProFTPd-1.3.5-Remote-Command-Execution.html\nhttp://www.debian.org/security/2015/dsa-3263\nhttp://packetstormsecurity.com/files/131567/ProFTPd-CPFR-CPTO-Proof-Of-Concept.html\nhttp://packetstormsecurity.com/files/132218/ProFTPD-1.3.5-Mod_Copy-Command-Execution.html\nhttp://lists.opensuse.org/opensuse-updates/2015-06/msg00020.html\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-May/157053.html\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-May/157054.html\nhttp://www.securityfocus.com/bid/74238\nhttps://www.exploit-db.com/exploits/36742/\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-May/157581.html\nhttp://packetstormsecurity.com/files/131505/ProFTPd-1.3.5-File-Copy.html\nhttp://packetstormsecurity.com/files/162777/ProFTPd-1.3.5-Remote-Command-Execution.html\n",
@@ -787,7 +787,7 @@
    }
   ],
   "enisaUuid": "8a519828-80fa-3265-90d5-298564e973ed",
-  "epss": 96.75,
+  "epss": 98.03,
   "exploitedSince": "Oct 8, 2026, 12:00:00 AM",
   "id": "EUVD-2015-3352",
   "references": "http://www.rapid7.com/db/modules/exploit/unix/ftp/proftpd_modcopy_exec\nhttps://www.exploit-db.com/exploits/36803/\nhttp://packetstormsecurity.com/files/131555/ProFTPd-1.3.5-Remote-Command-Execution.html\nhttp://www.debian.org/security/2015/dsa-3263\nhttp://packetstormsecurity.com/files/131567/ProFTPd-CPFR-CPTO-Proof-Of-Concept.html\nhttp://packetstormsecurity.com/files/132218/ProFTPD-1.3.5-Mod_Copy-Command-Execution.html\nhttp://lists.opensuse.org/opensuse-updates/2015-06/msg00020.html\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-May/157053.html\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-May/157054.html\nhttp://www.securityfocus.com/bid/74238\nhttps://www.exploit-db.com/exploits/36742/\nhttp://lists.fedoraproject.org/pipermail/package-announce/2015-May/157581.html\nhttp://packetstormsecurity.com/files/131505/ProFTPd-1.3.5-File-Copy.html\nhttp://packetstormsecurity.com/files/162777/ProFTPd-1.3.5-Remote-Command-Execution.html\n"
@@ -828,6 +828,81 @@
      {
       "cpeMatch": [
        {
+        "criteria": "cpe:2.3:o:fedoraproject:fedora:20:*:*:*:*:*:*:*",
+        "matchCriteriaId": "FF47C9F0-D8DA-4B55-89EB-9B2C9383ADB9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:fedoraproject:fedora:21:*:*:*:*:*:*:*",
+        "matchCriteriaId": "56BDB5A0-0839-4A20-A003-B8CD56F48171",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:fedoraproject:fedora:22:*:*:*:*:*:*:*",
+        "matchCriteriaId": "253C303A-E577-4488-93E6-68A8DD942C38",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:debian:debian_linux:7.0:*:*:*:*:*:*:*",
+        "matchCriteriaId": "16F59A04-14CF-49E2-9973-645477EA09DA",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+        "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+        "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:opensuse:tumbleweed:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "107C84EE-5E5C-4C36-A6DA-295144A527E9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp7:*:*:-:-:*:*",
+        "matchCriteriaId": "CCE4946A-773A-443D-B5E3-839E637C3360",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp7:*:*:-:sap:*:*",
+        "matchCriteriaId": "C2F7F7D2-6E82-4FB4-8C44-3C7DEF123173",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
         "criteria": "cpe:2.3:a:proftpd:proftpd:1.3.5:*:*:*:*:*:*:*",
         "matchCriteriaId": "9A5C227B-70A9-46C9-927B-915962D7A35B",
         "vulnerable": true
@@ -851,7 +926,7 @@
    }
   ],
   "id": "CVE-2015-3306",
-  "lastModified": "2026-10-09T04:17:53.027",
+  "lastModified": "2026-10-09T16:17:18.210",
   "metrics": {
    "cvssMetricV2": [
     {
@@ -917,7 +992,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-10-08T00:00:00+00:00",
+      "timestamp": "2026-10-09T03:55:32.860386Z",
       "version": "2.0.3"
      }
     }
@@ -927,50 +1002,99 @@
   "references": [
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Broken Link",
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157053.html"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Broken Link",
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157054.html"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Broken Link",
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157581.html"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://lists.opensuse.org/opensuse-updates/2015-06/msg00020.html"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
     "url": "http://packetstormsecurity.com/files/131505/ProFTPd-1.3.5-File-Copy.html"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
     "url": "http://packetstormsecurity.com/files/131555/ProFTPd-1.3.5-Remote-Command-Execution.html"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Exploit",
+     "VDB Entry"
+    ],
     "url": "http://packetstormsecurity.com/files/131567/ProFTPd-CPFR-CPTO-Proof-Of-Concept.html"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Exploit",
+     "VDB Entry"
+    ],
     "url": "http://packetstormsecurity.com/files/132218/ProFTPD-1.3.5-Mod_Copy-Command-Execution.html"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Exploit",
+     "VDB Entry"
+    ],
     "url": "http://packetstormsecurity.com/files/162777/ProFTPd-1.3.5-Remote-Command-Execution.html"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://www.debian.org/security/2015/dsa-3263"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "http://www.rapid7.com/db/modules/exploit/unix/ftp/proftpd_modcopy_exec"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "http://www.securityfocus.com/bid/74238"
    },
    {
@@ -989,50 +1113,99 @@
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Broken Link",
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157053.html"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Broken Link",
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157054.html"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Broken Link",
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-May/157581.html"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://lists.opensuse.org/opensuse-updates/2015-06/msg00020.html"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
     "url": "http://packetstormsecurity.com/files/131505/ProFTPd-1.3.5-File-Copy.html"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
     "url": "http://packetstormsecurity.com/files/131555/ProFTPd-1.3.5-Remote-Command-Execution.html"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Exploit",
+     "VDB Entry"
+    ],
     "url": "http://packetstormsecurity.com/files/131567/ProFTPd-CPFR-CPTO-Proof-Of-Concept.html"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Exploit",
+     "VDB Entry"
+    ],
     "url": "http://packetstormsecurity.com/files/132218/ProFTPD-1.3.5-Mod_Copy-Command-Execution.html"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Exploit",
+     "VDB Entry"
+    ],
     "url": "http://packetstormsecurity.com/files/162777/ProFTPd-1.3.5-Remote-Command-Execution.html"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://www.debian.org/security/2015/dsa-3263"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "http://www.rapid7.com/db/modules/exploit/unix/ftp/proftpd_modcopy_exec"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "http://www.securityfocus.com/bid/74238"
    },
    {
@@ -1051,11 +1224,14 @@
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2015-3306"
    }
   ],
   "sourceIdentifier": "cve@mitre.org",
-  "vulnStatus": "Undergoing Analysis",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [
