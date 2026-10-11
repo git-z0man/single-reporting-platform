@@ -8685,7 +8685,26 @@
   "id": "EUVD-2026-89950",
   "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU\n"
  },
- "honeypot": [],
+ "honeypot": [
+  {
+   "avg30d": 0.0,
+   "avg7d": 0.0,
+   "avg90d": 0.0,
+   "cisaKevFlag": true,
+   "connections1d": 6,
+   "cveId": "CVE-2026-76504",
+   "firstSeenAt": "Oct 9, 2026, 3:00:00 AM",
+   "isNew": false,
+   "lastSeenAt": "Oct 11, 2026, 7:12:01 AM",
+   "product": "Cisco Catalyst SD-WAN Manager",
+   "source": "shadowserver",
+   "trend": "STEADY",
+   "uniqueIps1d": 1,
+   "vendor": "Cisco",
+   "vulnClass": "device-management-platform",
+   "vulnSeverity": "Critical"
+  }
+ ],
  "id": "EUVD-2026-89950",
  "kev_sources": [
   {

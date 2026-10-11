@@ -310,7 +310,7 @@
    "2026-07": 9818,
    "2026-08": 12311,
    "2026-09": 14964,
-   "2026-10": 3597
+   "2026-10": 3988
   },
   "crit": {
    "2024-11": 364,
@@ -336,7 +336,7 @@
    "2026-07": 1333,
    "2026-08": 1823,
    "2026-09": 1559,
-   "2026-10": 392
+   "2026-10": 458
   },
   "schneider": {
    "2024-11": 7,
@@ -434,7 +434,7 @@
    71
   ]
  ],
- "dumb_from": "2026-06-12",
+ "dumb_from": "2026-06-13",
  "dumbbell": [
   {
    "cisa": "2026-04-28",
@@ -1121,7 +1121,7 @@
    9818,
    12311,
    14964,
-   3597
+   3988
   ],
   "assigners": [
    [
@@ -1552,7 +1552,7 @@
    1333,
    1823,
    1559,
-   392
+   458
   ],
   "detail": {
    "assigner": "CERTVDE",
@@ -1687,7 +1687,7 @@
     ]
    ]
   },
-  "euvd_total": 402723,
+  "euvd_total": 403149,
   "months": [
    "2024-11",
    "2024-12",
@@ -1727,12 +1727,12 @@
    ],
    [
     "Patchstack",
-    18612,
+    18772,
     0
    ],
    [
     "VulDB",
-    17215,
+    17216,
     0
    ],
    [
@@ -1747,12 +1747,12 @@
    ],
    [
     "Wordfence",
-    11669,
+    11771,
     0
    ],
    [
     "VulnCheck",
-    8958,
+    9089,
     0
    ],
    [
@@ -1837,7 +1837,7 @@
    ]
   ]
  },
- "generated": "2026-10-10",
+ "generated": "2026-10-11",
  "go_live": "2026-09-11",
  "history": [
   [
@@ -1871,184 +1871,192 @@
    331,
    161595,
    131
+  ],
+  [
+   "2026-10-11",
+   1752,
+   403149,
+   332,
+   86485,
+   139
   ]
  ],
  "honeypot": [
   {
-   "d1": 78951,
-   "d30": 6.0,
-   "d7": 6.0,
-   "d90": 6.0,
-   "id": "EUVD-2025-199606",
-   "ips": 7,
-   "product": "Geoserver",
-   "trend": "UPTICK",
-   "vendor": "Geoserver"
-  },
-  {
-   "d1": 8031,
-   "d30": 16.0,
-   "d7": 26.0,
-   "d90": 12.0,
-   "id": "EUVD-2024-26057",
-   "ips": 40,
-   "product": "SolarWinds Serv-U",
-   "trend": "UPTICK",
-   "vendor": "SolarWinds"
-  },
-  {
-   "d1": 7440,
-   "d30": 11.0,
-   "d7": 5.0,
-   "d90": 6.0,
-   "id": "EUVD-2023-50971",
-   "ips": 7,
-   "product": "Ivanti Secure Connect and Policy Secure",
-   "trend": "UPTICK",
-   "vendor": "Ivanti"
-  },
-  {
-   "d1": 6322,
-   "d30": 25.0,
-   "d7": 35.0,
-   "d90": 17.0,
+   "d1": 17957,
+   "d30": 27.0,
+   "d7": 36.0,
+   "d90": 18.0,
    "id": "EUVD-2026-14546",
-   "ips": 7,
+   "ips": 51,
    "product": "Citrix NetScaler ADC and NetScaler Gateway",
    "trend": "UPTICK",
    "vendor": "Citrix"
   },
   {
-   "d1": 6247,
-   "d30": 10.0,
-   "d7": 12.0,
-   "d90": 9.0,
-   "id": "EUVD-2024-19498",
-   "ips": 44,
-   "product": "Ivanti Secure Connect and Policy Secure",
-   "trend": "UPTICK",
-   "vendor": "Ivanti"
-  },
-  {
-   "d1": 4704,
-   "d30": 18.0,
-   "d7": 17.0,
+   "d1": 5987,
+   "d30": 16.0,
+   "d7": 13.0,
    "d90": 10.0,
-   "id": "EUVD-2023-54802",
-   "ips": 14,
-   "product": "Citrix ADC and Citrix Gateway",
+   "id": "EUVD-2019-9380",
+   "ips": 33,
+   "product": "Application Delivery Controller",
    "trend": "UPTICK",
    "vendor": "Citrix"
   },
   {
-   "d1": 3638,
-   "d30": 270.0,
-   "d7": 205.0,
-   "d90": 231.0,
-   "id": "EUVD-2023-24377",
-   "ips": 273,
-   "product": "Cisco IOS XE",
+   "d1": 4158,
+   "d30": 6.0,
+   "d7": 9.0,
+   "d90": 4.0,
+   "id": "EUVD-2023-26655",
+   "ips": 29,
+   "product": "Confluence",
    "trend": "UPTICK",
-   "vendor": "Cisco"
+   "vendor": "Atlassian"
   },
   {
-   "d1": 3507,
+   "d1": 3677,
    "d30": 87.0,
    "d7": 84.0,
-   "d90": 56.0,
+   "d90": 57.0,
    "id": "EUVD-2025-18497",
-   "ips": 81,
+   "ips": 90,
    "product": "Citrix NetScaler",
    "trend": "UPTICK",
    "vendor": "Citrix"
   },
   {
-   "d1": 3167,
-   "d30": 6.0,
-   "d7": 6.0,
-   "d90": 6.0,
-   "id": "EUVD-2024-22282",
-   "ips": 16,
-   "product": "Check Point Security Gateway",
+   "d1": 3410,
+   "d30": 70.0,
+   "d7": 37.0,
+   "d90": 75.0,
+   "id": "EUVD-2018-5323",
+   "ips": 33,
+   "product": "FortiOS",
    "trend": "UPTICK",
-   "vendor": "Check Point"
+   "vendor": "Fortinet"
   },
   {
-   "d1": 2967,
-   "d30": 8.0,
-   "d7": 12.0,
-   "d90": 2.0,
+   "d1": 2919,
+   "d30": 269.0,
+   "d7": 201.0,
+   "d90": 232.0,
+   "id": "EUVD-2023-24377",
+   "ips": 223,
+   "product": "Cisco IOS XE",
+   "trend": "UPTICK",
+   "vendor": "Cisco"
+  },
+  {
+   "d1": 2857,
+   "d30": 9.0,
+   "d7": 14.0,
+   "d90": 3.0,
    "id": "EUVD-2026-87958",
-   "ips": 12,
+   "ips": 27,
    "product": "NetScaler ADC and NetScaler Gateway",
    "trend": "UPTICK",
    "vendor": "Citrix"
   },
   {
-   "d1": 2901,
-   "d30": 4.0,
-   "d7": 2.0,
-   "d90": 2.0,
-   "id": "EUVD-2026-6842",
-   "ips": 7,
-   "product": "Ivanti EPM",
+   "d1": 2834,
+   "d30": 5.0,
+   "d7": 8.0,
+   "d90": 3.0,
+   "id": "EUVD-2023-26658",
+   "ips": 31,
+   "product": "Confluence",
    "trend": "UPTICK",
-   "vendor": "Ivanti"
+   "vendor": "Atlassian"
   },
   {
-   "d1": 2523,
-   "d30": 179.0,
-   "d7": 172.0,
+   "d1": 2724,
+   "d30": 178.0,
+   "d7": 168.0,
    "d90": 177.0,
    "id": "EUVD-2022-1528",
-   "ips": 165,
+   "ips": 156,
    "product": "PHPUnit",
    "trend": "UPTICK",
    "vendor": "PHPUnit - Sebastian Bergmann"
   },
   {
-   "d1": 2252,
-   "d30": 2.0,
-   "d7": 6.0,
-   "d90": 1.0,
-   "id": "EUVD-2024-19504",
-   "ips": 27,
-   "product": "Ivanti Connect Secure, Policy Secure and Ivanti Neurons for ZTA",
+   "d1": 2551,
+   "d30": 10.0,
+   "d7": 11.0,
+   "d90": 12.0,
+   "id": "EUVD-2023-26667",
+   "ips": 31,
+   "product": "Confluence",
    "trend": "UPTICK",
-   "vendor": "Ivanti"
+   "vendor": "Atlassian"
   },
   {
-   "d1": 1980,
-   "d30": 5.0,
-   "d7": 4.0,
-   "d90": 4.0,
-   "id": "EUVD-2024-2280",
-   "ips": 4,
-   "product": "Geoserver",
-   "trend": "UPTICK",
-   "vendor": "Geoserver"
-  },
-  {
-   "d1": 1907,
-   "d30": 12.0,
-   "d7": 12.0,
-   "d90": 8.0,
-   "id": "EUVD-2025-1505",
-   "ips": 28,
-   "product": "PAN-OS",
-   "trend": "UPTICK",
-   "vendor": "Palo Alto Networks"
-  },
-  {
-   "d1": 1824,
+   "d1": 2423,
    "d30": 282.0,
-   "d7": 57.0,
-   "d90": 172.0,
+   "d7": 62.0,
+   "d90": 173.0,
    "id": "EUVD-2025-200983",
-   "ips": 90,
+   "ips": 95,
    "product": "React Server Components",
    "trend": "UPTICK",
    "vendor": "Meta"
+  },
+  {
+   "d1": 1956,
+   "d30": 10.0,
+   "d7": 8.0,
+   "d90": 6.0,
+   "id": "EUVD-2020-29070",
+   "ips": 15,
+   "product": "Citrix ADC, Citrix Gateway, Citrix SDWAN WAN-OP",
+   "trend": "UPTICK",
+   "vendor": "Citrix"
+  },
+  {
+   "d1": 1488,
+   "d30": 192.0,
+   "d7": 186.0,
+   "d90": 182.0,
+   "id": "EUVD-2021-29001",
+   "ips": 175,
+   "product": "Apache HTTP Server",
+   "trend": "UPTICK",
+   "vendor": "Apache"
+  },
+  {
+   "d1": 963,
+   "d30": 8.0,
+   "d7": 11.0,
+   "d90": 5.0,
+   "id": "EUVD-2024-0270",
+   "ips": 8,
+   "product": "Jenkins",
+   "trend": "UPTICK",
+   "vendor": "Jenkins"
+  },
+  {
+   "d1": 934,
+   "d30": 6.0,
+   "d7": 2.0,
+   "d90": 3.0,
+   "id": "EUVD-2021-1339",
+   "ips": 3,
+   "product": "PrimeTek",
+   "trend": "UPTICK",
+   "vendor": "PrimeFaces"
+  },
+  {
+   "d1": 895,
+   "d30": 381.0,
+   "d7": 442.0,
+   "d90": 339.0,
+   "id": "EUVD-2014-8198",
+   "ips": 408,
+   "product": "Realtek SDK",
+   "trend": "UPTICK",
+   "vendor": "Realtek"
   }
  ],
  "hp_cov": {
@@ -2073,7 +2081,7 @@
    248
   ],
   "2026": [
-   39,
+   40,
    265
   ]
  },
@@ -2082,9 +2090,10 @@
    "2026-10-07",
    "2026-10-08",
    "2026-10-09",
-   "2026-10-10"
+   "2026-10-10",
+   "2026-10-11"
   ],
-  "n": 131,
+  "n": 177,
   "rows": [
    {
     "cells": [
@@ -2103,9 +2112,13 @@
      [
       13158.5,
       "U"
+     ],
+     [
+      53.7,
+      "U"
      ]
     ],
-    "days": 1,
+    "days": 2,
     "id": "EUVD-2025-199606"
    },
    {
@@ -2123,78 +2136,16 @@
       ""
      ],
      [
-      1126.0,
+      252.9,
+      "U"
+     ],
+     [
+      665.1,
       "U"
      ]
     ],
-    "days": 1,
-    "id": "EUVD-2024-19504"
-   },
-   {
-    "cells": [
-     [
-      null,
-      ""
-     ],
-     [
-      null,
-      ""
-     ],
-     [
-      null,
-      ""
-     ],
-     [
-      725.2,
-      "U"
-     ]
-    ],
-    "days": 1,
-    "id": "EUVD-2026-6842"
-   },
-   {
-    "cells": [
-     [
-      null,
-      ""
-     ],
-     [
-      null,
-      ""
-     ],
-     [
-      null,
-      ""
-     ],
-     [
-      676.4,
-      "U"
-     ]
-    ],
-    "days": 1,
-    "id": "EUVD-2023-50971"
-   },
-   {
-    "cells": [
-     [
-      null,
-      ""
-     ],
-     [
-      null,
-      ""
-     ],
-     [
-      null,
-      ""
-     ],
-     [
-      646.0,
-      "U"
-     ]
-    ],
-    "days": 1,
-    "id": "EUVD-2024-37356"
+    "days": 2,
+    "id": "EUVD-2026-14546"
    },
    {
     "cells": [
@@ -2213,9 +2164,13 @@
      [
       624.7,
       "U"
+     ],
+     [
+      12.4,
+      "U"
      ]
     ],
-    "days": 1,
+    "days": 2,
     "id": "EUVD-2024-19498"
    },
    {
@@ -2235,9 +2190,13 @@
      [
       585.5,
       "U"
+     ],
+     [
+      185.0,
+      "U"
      ]
     ],
-    "days": 1,
+    "days": 2,
     "id": "EUVD-2025-14388"
    },
    {
@@ -2255,34 +2214,16 @@
       ""
      ],
      [
-      527.8,
+      259.0,
+      "U"
+     ],
+     [
+      510.0,
       "U"
      ]
     ],
-    "days": 1,
-    "id": "EUVD-2024-22282"
-   },
-   {
-    "cells": [
-     [
-      null,
-      ""
-     ],
-     [
-      null,
-      ""
-     ],
-     [
-      null,
-      ""
-     ],
-     [
-      501.9,
-      "U"
-     ]
-    ],
-    "days": 1,
-    "id": "EUVD-2024-26057"
+    "days": 2,
+    "id": "EUVD-2023-32406"
    },
    {
     "cells": [
@@ -2301,32 +2242,14 @@
      [
       396.0,
       "U"
-     ]
-    ],
-    "days": 1,
-    "id": "EUVD-2024-2280"
-   },
-   {
-    "cells": [
-     [
-      null,
-      ""
      ],
      [
-      null,
-      ""
-     ],
-     [
-      null,
-      ""
-     ],
-     [
-      371.7,
+      25.4,
       "U"
      ]
     ],
-    "days": 1,
-    "id": "EUVD-2025-30225"
+    "days": 2,
+    "id": "EUVD-2024-2280"
    },
    {
     "cells": [
@@ -2345,9 +2268,13 @@
      [
       370.9,
       "U"
+     ],
+     [
+      317.4,
+      "U"
      ]
     ],
-    "days": 1,
+    "days": 2,
     "id": "EUVD-2026-87958"
    },
    {
@@ -2367,9 +2294,13 @@
      [
       298.5,
       "U"
+     ],
+     [
+      48.8,
+      "U"
      ]
     ],
-    "days": 1,
+    "days": 2,
     "id": "EUVD-2024-15815"
    },
    {
@@ -2389,9 +2320,13 @@
      [
       298.0,
       "U"
+     ],
+     [
+      2.0,
+      "U"
      ]
     ],
-    "days": 1,
+    "days": 2,
     "id": "EUVD-2025-31139"
    },
    {
@@ -2411,9 +2346,13 @@
      [
       261.3,
       "U"
+     ],
+     [
+      2.7,
+      "U"
      ]
     ],
-    "days": 1,
+    "days": 2,
     "id": "EUVD-2023-54802"
    },
    {
@@ -2431,12 +2370,16 @@
       ""
      ],
      [
-      259.0,
+      44.0,
+      "U"
+     ],
+     [
+      260.0,
       "U"
      ]
     ],
-    "days": 1,
-    "id": "EUVD-2023-32406"
+    "days": 2,
+    "id": "EUVD-2025-20552"
    },
    {
     "cells": [
@@ -2453,12 +2396,16 @@
       ""
      ],
      [
-      252.9,
+      41.5,
+      "U"
+     ],
+     [
+      255.1,
       "U"
      ]
     ],
-    "days": 1,
-    "id": "EUVD-2026-14546"
+    "days": 2,
+    "id": "EUVD-2023-26667"
    },
    {
     "cells": [
@@ -2475,12 +2422,16 @@
       ""
      ],
      [
-      250.5,
+      35.0,
+      "U"
+     ],
+     [
+      216.7,
       "U"
      ]
     ],
-    "days": 1,
-    "id": "EUVD-2025-6498"
+    "days": 2,
+    "id": "EUVD-2019-0590"
    },
    {
     "cells": [
@@ -2497,12 +2448,16 @@
       ""
      ],
      [
-      216.0,
+      125.0,
+      "U"
+     ],
+     [
+      206.0,
       "U"
      ]
     ],
-    "days": 1,
-    "id": "EUVD-2024-51385"
+    "days": 2,
+    "id": "EUVD-2017-16892"
    },
    {
     "cells": [
@@ -2521,10 +2476,144 @@
      [
       187.9,
       "U"
+     ],
+     [
+      120.4,
+      "U"
      ]
     ],
-    "days": 1,
+    "days": 2,
     "id": "EUVD-2024-0270"
+   },
+   {
+    "cells": [
+     [
+      null,
+      ""
+     ],
+     [
+      null,
+      ""
+     ],
+     [
+      null,
+      ""
+     ],
+     [
+      55.0,
+      "U"
+     ],
+     [
+      181.0,
+      "U"
+     ]
+    ],
+    "days": 2,
+    "id": "EUVD-2018-7817"
+   },
+   {
+    "cells": [
+     [
+      null,
+      ""
+     ],
+     [
+      null,
+      ""
+     ],
+     [
+      null,
+      ""
+     ],
+     [
+      171.5,
+      "U"
+     ],
+     [
+      154.2,
+      "U"
+     ]
+    ],
+    "days": 2,
+    "id": "EUVD-2026-43767"
+   },
+   {
+    "cells": [
+     [
+      null,
+      ""
+     ],
+     [
+      null,
+      ""
+     ],
+     [
+      null,
+      ""
+     ],
+     [
+      9.0,
+      "U"
+     ],
+     [
+      168.7,
+      "U"
+     ]
+    ],
+    "days": 2,
+    "id": "EUVD-2026-5681"
+   },
+   {
+    "cells": [
+     [
+      null,
+      ""
+     ],
+     [
+      null,
+      ""
+     ],
+     [
+      null,
+      ""
+     ],
+     [
+      47.0,
+      "U"
+     ],
+     [
+      166.0,
+      "U"
+     ]
+    ],
+    "days": 2,
+    "id": "EUVD-2019-3250"
+   },
+   {
+    "cells": [
+     [
+      null,
+      ""
+     ],
+     [
+      null,
+      ""
+     ],
+     [
+      null,
+      ""
+     ],
+     [
+      161.0,
+      "U"
+     ],
+     [
+      92.0,
+      "U"
+     ]
+    ],
+    "days": 2,
+    "id": "EUVD-2023-0644"
    }
   ]
  },
@@ -2548,7 +2637,7 @@
    ],
    [
     "1-30 days after",
-    36
+    37
    ],
    [
     "over 30 days after",
@@ -2556,8 +2645,18 @@
    ]
   ],
   "censored": 33,
-  "n": 331,
+  "n": 332,
   "recent": [
+   {
+    "censored": false,
+    "cve": "CVE-2026-76504",
+    "eu": null,
+    "flagged": "2026-09-30",
+    "id": "EUVD-2026-89950",
+    "lead": -9,
+    "seen": "2026-10-09",
+    "vendor": "Cisco"
+   },
    {
     "censored": false,
     "cve": "CVE-2026-88771",
@@ -2584,8 +2683,8 @@
     "eu": null,
     "flagged": "2026-09-11",
     "id": "EUVD-2026-76779",
-    "lead": -29,
-    "seen": "2026-10-10",
+    "lead": -27,
+    "seen": "2026-10-08",
     "vendor": "GitLab"
    }
   ],
@@ -2593,368 +2692,224 @@
  },
  "hp_scatter": [
   {
-   "cve": "CVE-2025-58360",
-   "d1": 78951,
-   "id": "EUVD-2025-199606",
-   "ips": 7,
-   "product": "Geoserver",
-   "trend": "UPTICK",
-   "vendor": "Geoserver"
-  },
-  {
-   "cve": "CVE-2024-28995",
-   "d1": 8031,
-   "id": "EUVD-2024-26057",
-   "ips": 40,
-   "product": "SolarWinds Serv-U",
-   "trend": "UPTICK",
-   "vendor": "SolarWinds"
-  },
-  {
-   "cve": "CVE-2023-46805",
-   "d1": 7440,
-   "id": "EUVD-2023-50971",
-   "ips": 7,
-   "product": "Ivanti Secure Connect and Policy Secure",
-   "trend": "UPTICK",
-   "vendor": "Ivanti"
-  },
-  {
    "cve": "CVE-2026-3055",
-   "d1": 6322,
+   "d1": 17957,
    "id": "EUVD-2026-14546",
-   "ips": 7,
+   "ips": 51,
    "product": "Citrix NetScaler ADC and NetScaler Gatew",
    "trend": "UPTICK",
    "vendor": "Citrix"
   },
   {
-   "cve": "CVE-2024-21887",
-   "d1": 6247,
-   "id": "EUVD-2024-19498",
-   "ips": 44,
-   "product": "Ivanti Secure Connect and Policy Secure",
-   "trend": "UPTICK",
-   "vendor": "Ivanti"
-  },
-  {
-   "cve": "CVE-2023-4966",
-   "d1": 4704,
-   "id": "EUVD-2023-54802",
-   "ips": 14,
-   "product": "Citrix ADC and Citrix Gateway",
+   "cve": "CVE-2019-19781",
+   "d1": 5987,
+   "id": "EUVD-2019-9380",
+   "ips": 33,
+   "product": "Application Delivery Controller",
    "trend": "UPTICK",
    "vendor": "Citrix"
   },
   {
-   "cve": "CVE-2023-20198",
-   "d1": 3638,
-   "id": "EUVD-2023-24377",
-   "ips": 273,
-   "product": "Cisco IOS XE",
-   "trend": "UPTICK",
-   "vendor": "Cisco"
-  },
-  {
-   "cve": "CVE-2025-5777",
-   "d1": 3507,
-   "id": "EUVD-2025-18497",
-   "ips": 81,
-   "product": "Citrix NetScaler",
-   "trend": "UPTICK",
-   "vendor": "Citrix"
-  },
-  {
-   "cve": "CVE-2024-24919",
-   "d1": 3167,
-   "id": "EUVD-2024-22282",
-   "ips": 16,
-   "product": "Check Point Security Gateway",
-   "trend": "UPTICK",
-   "vendor": "Check Point"
-  },
-  {
-   "cve": "CVE-2026-88771",
-   "d1": 2967,
-   "id": "EUVD-2026-87958",
-   "ips": 12,
-   "product": "NetScaler ADC and NetScaler Gateway",
-   "trend": "UPTICK",
-   "vendor": "Citrix"
-  },
-  {
-   "cve": "CVE-2026-1603",
-   "d1": 2901,
-   "id": "EUVD-2026-6842",
-   "ips": 7,
-   "product": "Ivanti EPM",
-   "trend": "UPTICK",
-   "vendor": "Ivanti"
-  },
-  {
-   "cve": "CVE-2017-9841",
-   "d1": 2523,
-   "id": "EUVD-2022-1528",
-   "ips": 165,
-   "product": "PHPUnit",
-   "trend": "UPTICK",
-   "vendor": "PHPUnit - Sebastian Bergmann"
-  },
-  {
-   "cve": "CVE-2024-21893",
-   "d1": 2252,
-   "id": "EUVD-2024-19504",
-   "ips": 27,
-   "product": "Ivanti Connect Secure, Policy Secure and",
-   "trend": "UPTICK",
-   "vendor": "Ivanti"
-  },
-  {
-   "cve": "CVE-2024-36401",
-   "d1": 1980,
-   "id": "EUVD-2024-2280",
-   "ips": 4,
-   "product": "Geoserver",
-   "trend": "UPTICK",
-   "vendor": "Geoserver"
-  },
-  {
-   "cve": "CVE-2025-0108",
-   "d1": 1907,
-   "id": "EUVD-2025-1505",
-   "ips": 28,
-   "product": "PAN-OS",
-   "trend": "UPTICK",
-   "vendor": "Palo Alto Networks"
-  },
-  {
-   "cve": "CVE-2025-55182",
-   "d1": 1824,
-   "id": "EUVD-2025-200983",
-   "ips": 90,
-   "product": "React Server Components",
-   "trend": "UPTICK",
-   "vendor": "Meta"
-  },
-  {
-   "cve": "CVE-2024-23897",
-   "d1": 1503,
-   "id": "EUVD-2024-0270",
-   "ips": 15,
-   "product": "Jenkins",
-   "trend": "UPTICK",
-   "vendor": "Jenkins"
-  },
-  {
-   "cve": "CVE-2021-42013",
-   "d1": 1413,
-   "id": "EUVD-2021-29001",
-   "ips": 180,
-   "product": "Apache HTTP Server",
-   "trend": "UPTICK",
-   "vendor": "Apache"
-  },
-  {
-   "cve": "CVE-2024-0012",
-   "d1": 1194,
-   "id": "EUVD-2024-15815",
-   "ips": 22,
-   "product": "PAN-OS",
-   "trend": "UPTICK",
-   "vendor": "Palo Alto Networks"
-  },
-  {
-   "cve": "CVE-2025-4427",
-   "d1": 1171,
-   "id": "EUVD-2025-14388",
-   "ips": 16,
-   "product": "Endpoint Manager Mobile (EPMM), formerly",
-   "trend": "UPTICK",
-   "vendor": "Ivanti"
-  },
-  {
-   "cve": "CVE-2018-13379",
-   "d1": 1119,
-   "id": "EUVD-2018-5323",
-   "ips": 9,
-   "product": "FortiOS",
-   "trend": "UPTICK",
-   "vendor": "Fortinet"
-  },
-  {
-   "cve": "CVE-2025-10035",
-   "d1": 1115,
-   "id": "EUVD-2025-30225",
-   "ips": 16,
-   "product": "GoAnywhere MFT",
-   "trend": "UPTICK",
-   "vendor": "Fortra"
-  },
-  {
-   "cve": "CVE-2014-8361",
-   "d1": 944,
-   "id": "EUVD-2014-8198",
-   "ips": 418,
-   "product": "Realtek SDK",
-   "trend": "UPTICK",
-   "vendor": "Realtek"
-  },
-  {
-   "cve": "CVE-2026-50522",
-   "d1": 686,
-   "id": "EUVD-2026-43767",
-   "ips": 1,
-   "product": "SharePoint",
-   "trend": "UPTICK",
-   "vendor": "Microsoft"
-  },
-  {
-   "cve": "CVE-2017-1000486",
-   "d1": 655,
-   "id": "EUVD-2021-1339",
-   "ips": 4,
-   "product": "PrimeTek",
-   "trend": "UPTICK",
-   "vendor": "PrimeFaces"
-  },
-  {
-   "cve": "CVE-2024-38475",
-   "d1": 646,
-   "id": "EUVD-2024-37356",
-   "ips": 16,
-   "product": "Apache HTTP Server",
-   "trend": "UPTICK",
-   "vendor": "Apache"
-  },
-  {
-   "cve": "CVE-2018-0296",
-   "d1": 590,
-   "id": "EUVD-2018-1119",
-   "ips": 3,
-   "product": "Cisco ASA and Cisco Firepower Threat Def",
-   "trend": "STEADY",
-   "vendor": "Cisco"
-  },
-  {
-   "cve": "CVE-2024-8963",
-   "d1": 547,
-   "id": "EUVD-2024-49510",
-   "ips": 18,
-   "product": "Ivanti CSA",
-   "trend": "UPTICK",
-   "vendor": "Ivanti"
-  },
-  {
-   "cve": "CVE-2025-24813",
-   "d1": 501,
-   "id": "EUVD-2025-6498",
-   "ips": 22,
-   "product": "Tomcat",
-   "trend": "UPTICK",
-   "vendor": "Apache"
-  },
-  {
-   "cve": "CVE-2018-10562",
-   "d1": 490,
-   "id": "EUVD-2018-2634",
-   "ips": 322,
-   "product": "Dasan GPON Home Router",
-   "trend": "STEADY",
-   "vendor": "Dasan"
-  },
-  {
-   "cve": "CVE-2020-3452",
-   "d1": 470,
-   "id": "EUVD-2020-24723",
-   "ips": 4,
-   "product": "Cisco ASA and Cisco Firepower Threat Def",
-   "trend": "UPTICK",
-   "vendor": "Cisco"
-  },
-  {
-   "cve": "CVE-2021-32030",
-   "d1": 465,
-   "id": "EUVD-2021-18896",
-   "ips": 3,
-   "product": "GT-AC2900",
-   "trend": "UPTICK",
-   "vendor": "ASUS"
-  },
-  {
-   "cve": "CVE-2019-1653",
-   "d1": 456,
-   "id": "EUVD-2019-10210",
-   "ips": 98,
-   "product": "Cisco RV320/RV325",
-   "trend": "UPTICK",
-   "vendor": "Cisco"
-  },
-  {
-   "cve": "CVE-2024-13159",
-   "d1": 432,
-   "id": "EUVD-2024-51385",
-   "ips": 11,
-   "product": "Ivanti EPM",
-   "trend": "UPTICK",
-   "vendor": "Ivanti"
-  },
-  {
-   "cve": "CVE-2023-22527",
-   "d1": 415,
-   "id": "EUVD-2023-26667",
-   "ips": 4,
+   "cve": "CVE-2023-22515",
+   "d1": 4158,
+   "id": "EUVD-2023-26655",
+   "ips": 29,
    "product": "Confluence",
    "trend": "UPTICK",
    "vendor": "Atlassian"
   },
   {
-   "cve": "CVE-2021-36260",
-   "d1": 392,
-   "id": "EUVD-2021-22880",
-   "ips": 6,
-   "product": "Hikvision Web Server",
+   "cve": "CVE-2025-5777",
+   "d1": 3677,
+   "id": "EUVD-2025-18497",
+   "ips": 90,
+   "product": "Citrix NetScaler",
    "trend": "UPTICK",
-   "vendor": "Hikvision"
+   "vendor": "Citrix"
   },
   {
-   "cve": "CVE-2026-41940",
-   "d1": 389,
-   "id": "EUVD-2026-26246",
-   "ips": 63,
-   "product": "cPanel and WHM",
+   "cve": "CVE-2018-13379",
+   "d1": 3410,
+   "id": "EUVD-2018-5323",
+   "ips": 33,
+   "product": "FortiOS",
    "trend": "UPTICK",
-   "vendor": "cPanel"
+   "vendor": "Fortinet"
   },
   {
-   "cve": "CVE-2021-44228",
-   "d1": 376,
-   "id": "EUVD-2021-34768",
-   "ips": 36,
-   "product": "Log4j",
-   "trend": "UPTICK",
-   "vendor": "Apache"
-  },
-  {
-   "cve": "CVE-2024-50623",
-   "d1": 353,
-   "id": "EUVD-2024-45217",
-   "ips": 5,
-   "product": "Cleo Harmony, VLTrader and LexiCom",
-   "trend": "STEADY",
-   "vendor": "Cleo"
-  },
-  {
-   "cve": "CVE-2025-20362",
-   "d1": 298,
-   "id": "EUVD-2025-31139",
-   "ips": 3,
-   "product": "Cisco ASA and Cisco Firepower Threat Def",
+   "cve": "CVE-2023-20198",
+   "d1": 2919,
+   "id": "EUVD-2023-24377",
+   "ips": 223,
+   "product": "Cisco IOS XE",
    "trend": "UPTICK",
    "vendor": "Cisco"
   },
   {
+   "cve": "CVE-2026-88771",
+   "d1": 2857,
+   "id": "EUVD-2026-87958",
+   "ips": 27,
+   "product": "NetScaler ADC and NetScaler Gateway",
+   "trend": "UPTICK",
+   "vendor": "Citrix"
+  },
+  {
+   "cve": "CVE-2023-22518",
+   "d1": 2834,
+   "id": "EUVD-2023-26658",
+   "ips": 31,
+   "product": "Confluence",
+   "trend": "UPTICK",
+   "vendor": "Atlassian"
+  },
+  {
+   "cve": "CVE-2017-9841",
+   "d1": 2724,
+   "id": "EUVD-2022-1528",
+   "ips": 156,
+   "product": "PHPUnit",
+   "trend": "UPTICK",
+   "vendor": "PHPUnit - Sebastian Bergmann"
+  },
+  {
+   "cve": "CVE-2023-22527",
+   "d1": 2551,
+   "id": "EUVD-2023-26667",
+   "ips": 31,
+   "product": "Confluence",
+   "trend": "UPTICK",
+   "vendor": "Atlassian"
+  },
+  {
+   "cve": "CVE-2025-55182",
+   "d1": 2423,
+   "id": "EUVD-2025-200983",
+   "ips": 95,
+   "product": "React Server Components",
+   "trend": "UPTICK",
+   "vendor": "Meta"
+  },
+  {
+   "cve": "CVE-2020-8193",
+   "d1": 1956,
+   "id": "EUVD-2020-29070",
+   "ips": 15,
+   "product": "Citrix ADC, Citrix Gateway, Citrix SDWAN",
+   "trend": "UPTICK",
+   "vendor": "Citrix"
+  },
+  {
+   "cve": "CVE-2021-42013",
+   "d1": 1488,
+   "id": "EUVD-2021-29001",
+   "ips": 175,
+   "product": "Apache HTTP Server",
+   "trend": "UPTICK",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2024-23897",
+   "d1": 963,
+   "id": "EUVD-2024-0270",
+   "ips": 8,
+   "product": "Jenkins",
+   "trend": "UPTICK",
+   "vendor": "Jenkins"
+  },
+  {
+   "cve": "CVE-2017-1000486",
+   "d1": 934,
+   "id": "EUVD-2021-1339",
+   "ips": 3,
+   "product": "PrimeTek",
+   "trend": "UPTICK",
+   "vendor": "PrimeFaces"
+  },
+  {
+   "cve": "CVE-2014-8361",
+   "d1": 895,
+   "id": "EUVD-2014-8198",
+   "ips": 408,
+   "product": "Realtek SDK",
+   "trend": "UPTICK",
+   "vendor": "Realtek"
+  },
+  {
+   "cve": "CVE-2018-15811",
+   "d1": 650,
+   "id": "EUVD-2019-0590",
+   "ips": 10,
+   "product": "DNN (DotNetNuke)",
+   "trend": "UPTICK",
+   "vendor": "DNN Corp"
+  },
+  {
+   "cve": "CVE-2023-35082",
+   "d1": 628,
+   "id": "EUVD-2023-39117",
+   "ips": 33,
+   "product": "Endpoint Manager Mobile (EPMM), formerly",
+   "trend": "UPTICK",
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2022-41082",
+   "d1": 626,
+   "id": "EUVD-2022-44326",
+   "ips": 503,
+   "product": "Exchange",
+   "trend": "UPTICK",
+   "vendor": "Microsoft"
+  },
+  {
+   "cve": "CVE-2021-26855",
+   "d1": 622,
+   "id": "EUVD-2021-13639",
+   "ips": 14,
+   "product": "Exchange",
+   "trend": "UPTICK",
+   "vendor": "Microsoft"
+  },
+  {
+   "cve": "CVE-2026-50522",
+   "d1": 617,
+   "id": "EUVD-2026-43767",
+   "ips": 7,
+   "product": "SharePoint",
+   "trend": "UPTICK",
+   "vendor": "Microsoft"
+  },
+  {
+   "cve": "CVE-2025-0108",
+   "d1": 613,
+   "id": "EUVD-2025-1505",
+   "ips": 18,
+   "product": "PAN-OS",
+   "trend": "UPTICK",
+   "vendor": "Palo Alto Networks"
+  },
+  {
+   "cve": "CVE-2026-42271",
+   "d1": 560,
+   "id": "EUVD-2026-28507",
+   "ips": 36,
+   "product": "LiteLLM",
+   "trend": "UPTICK",
+   "vendor": "LiteLLM"
+  },
+  {
+   "cve": "CVE-2025-3248",
+   "d1": 531,
+   "id": "EUVD-2025-10011",
+   "ips": 7,
+   "product": "Langflow",
+   "trend": "UPTICK",
+   "vendor": "Langflow"
+  },
+  {
    "cve": "CVE-2023-28771",
-   "d1": 259,
+   "d1": 510,
    "id": "EUVD-2023-32406",
    "ips": 1,
    "product": "",
@@ -2962,215 +2917,233 @@
    "vendor": "Zyxel"
   },
   {
-   "cve": "CVE-2024-13161",
-   "d1": 198,
-   "id": "EUVD-2024-51387",
-   "ips": 8,
-   "product": "Ivanti EPM",
+   "cve": "CVE-2026-21643",
+   "d1": 506,
+   "id": "EUVD-2026-5681",
+   "ips": 9,
+   "product": "FortiClientEMS",
    "trend": "UPTICK",
-   "vendor": "Ivanti"
+   "vendor": "Fortinet"
   },
   {
-   "cve": "CVE-2021-26084",
-   "d1": 195,
-   "id": "EUVD-2021-12905",
-   "ips": 4,
-   "product": "Confluence",
-   "trend": "UPTICK",
-   "vendor": "Atlassian"
-  },
-  {
-   "cve": "CVE-2022-24816",
-   "d1": 180,
-   "id": "EUVD-2023-2600",
-   "ips": 4,
-   "product": "Geoserver (JAI-EXT)",
-   "trend": "UPTICK",
-   "vendor": "Geoserver"
-  },
-  {
-   "cve": "CVE-2015-2051",
-   "d1": 166,
-   "id": "EUVD-2015-2164",
-   "ips": 163,
-   "product": "D-Link DIR-645, DAP-1522 revB, DAP-1650 ",
-   "trend": "STEADY",
-   "vendor": "D-Link"
-  },
-  {
-   "cve": "CVE-2023-0669",
-   "d1": 161,
-   "id": "EUVD-2023-0644",
-   "ips": 1,
-   "product": "GoAnywhere MFT",
-   "trend": "UPTICK",
-   "vendor": "Fortra"
-  },
-  {
-   "cve": "CVE-2020-8515",
-   "d1": 146,
-   "id": "EUVD-2020-29381",
-   "ips": 4,
-   "product": "Draytek Vigor2960, Vigor3900, Vigor300B",
-   "trend": "UPTICK",
-   "vendor": "Draytek"
-  },
-  {
-   "cve": "CVE-2020-17496",
-   "d1": 146,
-   "id": "EUVD-2020-9444",
-   "ips": 3,
-   "product": "vBulletin",
-   "trend": "UPTICK",
-   "vendor": "vBulletin"
-  },
-  {
-   "cve": "CVE-2017-7921",
-   "d1": 125,
-   "id": "EUVD-2017-16892",
-   "ips": 5,
-   "product": "Hikvision DS series multiple products",
+   "cve": "CVE-2021-36260",
+   "d1": 500,
+   "id": "EUVD-2021-22880",
+   "ips": 9,
+   "product": "Hikvision Web Server",
    "trend": "UPTICK",
    "vendor": "Hikvision"
   },
   {
-   "cve": "CVE-2016-6277",
-   "d1": 119,
-   "id": "EUVD-2016-7207",
-   "ips": 118,
-   "product": "NETGEAR R/D Series Routers",
-   "trend": "STEADY",
-   "vendor": "Netgear"
+   "cve": "CVE-2026-41940",
+   "d1": 494,
+   "id": "EUVD-2026-26246",
+   "ips": 59,
+   "product": "cPanel and WHM",
+   "trend": "UPTICK",
+   "vendor": "cPanel"
   },
   {
-   "cve": "CVE-2024-13160",
-   "d1": 118,
-   "id": "EUVD-2024-51386",
-   "ips": 7,
-   "product": "Ivanti EPM",
+   "cve": "CVE-2026-10520",
+   "d1": 482,
+   "id": "EUVD-2026-35440",
+   "ips": 4,
+   "product": "Sentry",
    "trend": "UPTICK",
    "vendor": "Ivanti"
   },
   {
-   "cve": "CVE-2026-42271",
-   "d1": 114,
-   "id": "EUVD-2026-28507",
-   "ips": 34,
-   "product": "LiteLLM",
+   "cve": "CVE-2023-35081",
+   "d1": 476,
+   "id": "EUVD-2023-39116",
+   "ips": 18,
+   "product": "Endpoint Manager Mobile (EPMM), formerly",
    "trend": "UPTICK",
-   "vendor": "LiteLLM"
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2023-23752",
+   "d1": 408,
+   "id": "EUVD-2023-27838",
+   "ips": 27,
+   "product": "Joomla",
+   "trend": "UPTICK",
+   "vendor": "Open Source Matters, Inc/Joomla community"
+  },
+  {
+   "cve": "CVE-2024-38856",
+   "d1": 397,
+   "id": "EUVD-2024-37643",
+   "ips": 3,
+   "product": "OFBiz",
+   "trend": "UPTICK",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2023-35078",
+   "d1": 384,
+   "id": "EUVD-2023-39113",
+   "ips": 31,
+   "product": "Endpoint Manager Mobile (EPMM), formerly",
+   "trend": "UPTICK",
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2020-25078",
+   "d1": 382,
+   "id": "EUVD-2020-17770",
+   "ips": 10,
+   "product": "D-Link DCS-2530L and DCS-2670L",
+   "trend": "UPTICK",
+   "vendor": "D-Link"
+  },
+  {
+   "cve": "CVE-2025-4427",
+   "d1": 370,
+   "id": "EUVD-2025-14388",
+   "ips": 1,
+   "product": "Endpoint Manager Mobile (EPMM), formerly",
+   "trend": "UPTICK",
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2024-4040",
+   "d1": 369,
+   "id": "EUVD-2024-32605",
+   "ips": 12,
+   "product": "CrushFTP",
+   "trend": "UPTICK",
+   "vendor": "CrushFTP"
+  },
+  {
+   "cve": "CVE-2018-10562",
+   "d1": 363,
+   "id": "EUVD-2018-2634",
+   "ips": 295,
+   "product": "Dasan GPON Home Router",
+   "trend": "STEADY",
+   "vendor": "Dasan"
+  },
+  {
+   "cve": "CVE-2020-9377",
+   "d1": 344,
+   "id": "EUVD-2020-30198",
+   "ips": 2,
+   "product": "D-Link DIR-610",
+   "trend": "STEADY",
+   "vendor": "D-Link"
+  },
+  {
+   "cve": "CVE-2025-58360",
+   "d1": 322,
+   "id": "EUVD-2025-199606",
+   "ips": 17,
+   "product": "Geoserver",
+   "trend": "UPTICK",
+   "vendor": "Geoserver"
+  },
+  {
+   "cve": "CVE-2020-4427",
+   "d1": 317,
+   "id": "EUVD-2020-25674",
+   "ips": 8,
+   "product": "IBM Data Risk Manager",
+   "trend": "UPTICK",
+   "vendor": "IBM"
+  },
+  {
+   "cve": "CVE-2021-44228",
+   "d1": 309,
+   "id": "EUVD-2021-34768",
+   "ips": 36,
+   "product": "Log4j",
+   "trend": "UPTICK",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2021-32030",
+   "d1": 298,
+   "id": "EUVD-2021-18896",
+   "ips": 3,
+   "product": "GT-AC2900",
+   "trend": "UPTICK",
+   "vendor": "ASUS"
   },
   {
    "cve": "CVE-2022-26134",
-   "d1": 112,
+   "d1": 288,
    "id": "EUVD-2022-30701",
-   "ips": 6,
+   "ips": 3,
    "product": "Confluence",
    "trend": "UPTICK",
    "vendor": "Atlassian"
   },
   {
-   "cve": "CVE-2024-1709",
-   "d1": 109,
-   "id": "EUVD-2024-17443",
-   "ips": 9,
-   "product": "ScreenConnect",
-   "trend": "UPTICK",
-   "vendor": "ConnectWise"
-  },
-  {
-   "cve": "CVE-2018-15811",
-   "d1": 105,
-   "id": "EUVD-2019-0590",
+   "cve": "CVE-2019-2725",
+   "d1": 261,
+   "id": "EUVD-2019-12364",
    "ips": 3,
-   "product": "DNN (DotNetNuke)",
+   "product": "Oracle Weblogic Server",
    "trend": "UPTICK",
-   "vendor": "DNN Corp"
+   "vendor": "Oracle"
   },
   {
-   "cve": "CVE-2019-7192",
-   "d1": 103,
-   "id": "EUVD-2019-16736",
-   "ips": 3,
-   "product": "QNAP NAS devices running Photo Station",
-   "trend": "UPTICK",
-   "vendor": "QNAP"
-  },
-  {
-   "cve": "CVE-2022-37042",
-   "d1": 96,
-   "id": "EUVD-2022-39696",
+   "cve": "CVE-2025-49706",
+   "d1": 260,
+   "id": "EUVD-2025-20552",
    "ips": 2,
+   "product": "SharePoint",
+   "trend": "UPTICK",
+   "vendor": "Microsoft"
+  },
+  {
+   "cve": "CVE-2019-9670",
+   "d1": 247,
+   "id": "EUVD-2019-19036",
+   "ips": 44,
    "product": "Zimbra Collaboration Suite",
    "trend": "UPTICK",
    "vendor": "Synacor"
   },
   {
-   "cve": "CVE-2021-26855",
-   "d1": 88,
-   "id": "EUVD-2021-13639",
-   "ips": 11,
-   "product": "Exchange",
-   "trend": "UPTICK",
-   "vendor": "Microsoft"
-  },
-  {
-   "cve": "CVE-2019-16278",
-   "d1": 84,
-   "id": "EUVD-2019-7077",
-   "ips": 3,
-   "product": "nhttpd",
-   "trend": "UPTICK",
-   "vendor": "nostromo"
-  },
-  {
-   "cve": "CVE-2019-3396",
-   "d1": 83,
-   "id": "EUVD-2019-13035",
-   "ips": 4,
-   "product": "Confluence",
-   "trend": "UPTICK",
-   "vendor": "Atlassian"
-  },
-  {
-   "cve": "CVE-2019-15107",
-   "d1": 83,
-   "id": "EUVD-2019-6178",
-   "ips": 3,
-   "product": "Webmin",
-   "trend": "UPTICK",
-   "vendor": "Webmin"
-  },
-  {
-   "cve": "CVE-2021-35395",
-   "d1": 82,
-   "id": "EUVD-2021-22038",
+   "cve": "CVE-2026-34910",
+   "d1": 241,
+   "id": "EUVD-2026-31382",
    "ips": 2,
-   "product": "Realtek SDK",
+   "product": "Ubiquiti UniFi",
    "trend": "UPTICK",
-   "vendor": "Realtek"
+   "vendor": "Ubiquiti"
   },
   {
-   "cve": "CVE-2018-1273",
-   "d1": 81,
-   "id": "EUVD-2018-0500",
+   "cve": "CVE-2025-4008",
+   "d1": 238,
+   "id": "EUVD-2025-16032",
    "ips": 2,
-   "product": "Spring Data Commons",
-   "trend": "UPTICK",
-   "vendor": "Spring"
+   "product": "MeteoBridge",
+   "trend": "STEADY",
+   "vendor": "Smartbedded"
   },
   {
-   "cve": "CVE-2020-16846",
-   "d1": 81,
-   "id": "EUVD-2020-0173",
-   "ips": 4,
-   "product": "Salt",
-   "trend": "UPTICK",
-   "vendor": "SaltStack"
+   "cve": "CVE-2025-6205",
+   "d1": 238,
+   "id": "EUVD-2025-23493",
+   "ips": 2,
+   "product": "DELMIA Apriso",
+   "trend": "STEADY",
+   "vendor": "Dassualt Systems"
+  },
+  {
+   "cve": "CVE-2025-57819",
+   "d1": 235,
+   "id": "EUVD-2025-26123",
+   "ips": 2,
+   "product": "FreePBX",
+   "trend": "STEADY",
+   "vendor": "FreePBX"
   },
   {
    "cve": "CVE-2019-7256",
-   "d1": 80,
+   "d1": 234,
    "id": "EUVD-2019-16800",
    "ips": 2,
    "product": "eMerge E3-Series",
@@ -3179,178 +3152,178 @@
   },
   {
    "cve": "CVE-2018-7600",
-   "d1": 80,
+   "d1": 233,
    "id": "EUVD-2022-2985",
-   "ips": 5,
+   "ips": 3,
    "product": "Drupal",
    "trend": "UPTICK",
    "vendor": "Drupal"
   },
   {
-   "cve": "CVE-2021-31755",
-   "d1": 79,
-   "id": "EUVD-2021-18639",
+   "cve": "CVE-2025-30406",
+   "d1": 232,
+   "id": "EUVD-2025-9671",
    "ips": 2,
-   "product": "Tenda AC11",
+   "product": "Gladinet CentreStack",
    "trend": "UPTICK",
-   "vendor": "Tenda"
+   "vendor": "Gladinet"
   },
   {
-   "cve": "CVE-2021-21985",
-   "d1": 79,
-   "id": "EUVD-2021-9156",
-   "ips": 3,
-   "product": "vCenter",
-   "trend": "UPTICK",
-   "vendor": "VMware"
-  },
-  {
-   "cve": "CVE-2019-7609",
-   "d1": 77,
-   "id": "EUVD-2019-17147",
-   "ips": 2,
-   "product": "Kibana",
-   "trend": "UPTICK",
-   "vendor": "Elastic"
-  },
-  {
-   "cve": "CVE-2018-6530",
-   "d1": 74,
-   "id": "EUVD-2018-18282",
-   "ips": 2,
-   "product": "D-Link multiple routers",
-   "trend": "UPTICK",
-   "vendor": "D-Link"
-  },
-  {
-   "cve": "CVE-2019-3929",
-   "d1": 74,
-   "id": "EUVD-2019-13536",
-   "ips": 2,
-   "product": "Barco/AWIND OEM",
-   "trend": "UPTICK",
-   "vendor": "Barco/AWIND"
-  },
-  {
-   "cve": "CVE-2021-36380",
-   "d1": 73,
-   "id": "EUVD-2021-22996",
-   "ips": 2,
-   "product": "Sureline",
-   "trend": "UPTICK",
-   "vendor": "Sunhillo"
-  },
-  {
-   "cve": "CVE-2021-22502",
-   "d1": 71,
-   "id": "EUVD-2021-9648",
-   "ips": 2,
-   "product": "Operations Bridge Reporter (OBR)",
-   "trend": "UPTICK",
-   "vendor": "Micro Focus"
-  },
-  {
-   "cve": "CVE-2021-40539",
-   "d1": 70,
-   "id": "EUVD-2021-27714",
-   "ips": 2,
-   "product": "ManageEngine ADSelfService Plus",
-   "trend": "UPTICK",
-   "vendor": "Zoho"
-  },
-  {
-   "cve": "CVE-2020-6207",
-   "d1": 69,
-   "id": "EUVD-2020-27357",
-   "ips": 2,
-   "product": "Solution Manager",
-   "trend": "UPTICK",
-   "vendor": "SAP"
-  },
-  {
-   "cve": "CVE-2019-2725",
-   "d1": 67,
-   "id": "EUVD-2019-12364",
+   "cve": "CVE-2025-59287",
+   "d1": 229,
+   "id": "EUVD-2025-34268",
    "ips": 4,
-   "product": "Oracle Weblogic Server",
-   "trend": "UPTICK",
-   "vendor": "Oracle"
-  },
-  {
-   "cve": "CVE-2013-2251",
-   "d1": 67,
-   "id": "EUVD-2022-2328",
-   "ips": 2,
-   "product": "Struts",
-   "trend": "UPTICK",
-   "vendor": "Apache"
-  },
-  {
-   "cve": "CVE-2018-7841",
-   "d1": 66,
-   "id": "EUVD-2018-19553",
-   "ips": 2,
-   "product": "Schneider Electric U.Motion Builder",
-   "trend": "UPTICK",
-   "vendor": "Schneider Electric"
-  },
-  {
-   "cve": "CVE-2020-15505",
-   "d1": 66,
-   "id": "EUVD-2020-7497",
-   "ips": 2,
-   "product": "MobileIron Mobile Device Management (MDM",
-   "trend": "UPTICK",
-   "vendor": "MobileIron"
-  },
-  {
-   "cve": "CVE-2021-38647",
-   "d1": 66,
-   "id": "EUVD-2021-25086",
-   "ips": 2,
-   "product": "Open Management Infrastructure (OMI)",
+   "product": "Windows Server Update Service",
    "trend": "UPTICK",
    "vendor": "Microsoft"
   },
   {
-   "cve": "CVE-2021-40870",
-   "d1": 66,
-   "id": "EUVD-2021-28025",
-   "ips": 2,
-   "product": "Aviatrix Controller",
-   "trend": "UPTICK",
-   "vendor": "Aviatrix"
-  },
-  {
-   "cve": "CVE-2021-1497",
-   "d1": 66,
-   "id": "EUVD-2021-6964",
-   "ips": 2,
-   "product": "HyperFlex HX",
-   "trend": "UPTICK",
-   "vendor": "Cisco"
-  },
-  {
-   "cve": "CVE-2017-10271",
-   "d1": 65,
-   "id": "EUVD-2017-1918",
+   "cve": "CVE-2019-3396",
+   "d1": 228,
+   "id": "EUVD-2019-13035",
    "ips": 3,
-   "product": "Oracle Weblogic Server",
+   "product": "Confluence",
    "trend": "UPTICK",
-   "vendor": "Oracle"
+   "vendor": "Atlassian"
   },
   {
-   "cve": "CVE-2020-15415",
-   "d1": 65,
-   "id": "EUVD-2020-7408",
-   "ips": 2,
-   "product": "Vigor3900, Vigor2960, Vigor300B",
+   "cve": "CVE-2016-3088",
+   "d1": 223,
+   "id": "EUVD-2022-5255",
+   "ips": 3,
+   "product": "ActiveMQ",
    "trend": "UPTICK",
-   "vendor": "Draytek"
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2025-47812",
+   "d1": 216,
+   "id": "EUVD-2025-21009",
+   "ips": 2,
+   "product": "Wing FTP Server",
+   "trend": "STEADY",
+   "vendor": "wftpserver.com"
+  },
+  {
+   "cve": "CVE-2020-5902",
+   "d1": 212,
+   "id": "EUVD-2020-27056",
+   "ips": 3,
+   "product": "F5 Big-IP",
+   "trend": "UPTICK",
+   "vendor": "F5"
+  },
+  {
+   "cve": "CVE-2023-42793",
+   "d1": 210,
+   "id": "EUVD-2023-47222",
+   "ips": 4,
+   "product": "TeamCity",
+   "trend": "UPTICK",
+   "vendor": "JetBrains"
+  },
+  {
+   "cve": "CVE-2017-7921",
+   "d1": 206,
+   "id": "EUVD-2017-16892",
+   "ips": 6,
+   "product": "Hikvision DS series multiple products",
+   "trend": "UPTICK",
+   "vendor": "Hikvision"
+  },
+  {
+   "cve": "CVE-2018-1273",
+   "d1": 204,
+   "id": "EUVD-2018-0500",
+   "ips": 2,
+   "product": "Spring Data Commons",
+   "trend": "UPTICK",
+   "vendor": "Spring"
+  },
+  {
+   "cve": "CVE-2024-0012",
+   "d1": 195,
+   "id": "EUVD-2024-15815",
+   "ips": 4,
+   "product": "PAN-OS",
+   "trend": "UPTICK",
+   "vendor": "Palo Alto Networks"
+  },
+  {
+   "cve": "CVE-2019-16278",
+   "d1": 194,
+   "id": "EUVD-2019-7077",
+   "ips": 2,
+   "product": "nhttpd",
+   "trend": "UPTICK",
+   "vendor": "nostromo"
+  },
+  {
+   "cve": "CVE-2020-17519",
+   "d1": 192,
+   "id": "EUVD-2021-0481",
+   "ips": 3,
+   "product": "Flink",
+   "trend": "UPTICK",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2019-7192",
+   "d1": 191,
+   "id": "EUVD-2019-16736",
+   "ips": 3,
+   "product": "QNAP NAS devices running Photo Station",
+   "trend": "UPTICK",
+   "vendor": "QNAP"
+  },
+  {
+   "cve": "CVE-2024-45195",
+   "d1": 191,
+   "id": "EUVD-2024-41762",
+   "ips": 2,
+   "product": "OFBiz",
+   "trend": "STEADY",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2019-12989",
+   "d1": 188,
+   "id": "EUVD-2019-4564",
+   "ips": 3,
+   "product": "Citrix SD-WAN and NetScaler SD-WAN",
+   "trend": "UPTICK",
+   "vendor": "Citrix"
+  },
+  {
+   "cve": "CVE-2021-26084",
+   "d1": 188,
+   "id": "EUVD-2021-12905",
+   "ips": 2,
+   "product": "Confluence",
+   "trend": "UPTICK",
+   "vendor": "Atlassian"
+  },
+  {
+   "cve": "CVE-2015-1427",
+   "d1": 188,
+   "id": "EUVD-2022-5539",
+   "ips": 2,
+   "product": "Elasticsearch",
+   "trend": "UPTICK",
+   "vendor": "Elastic"
+  },
+  {
+   "cve": "CVE-2019-7238",
+   "d1": 185,
+   "id": "EUVD-2019-16782",
+   "ips": 2,
+   "product": "Nexus Repository Manager",
+   "trend": "UPTICK",
+   "vendor": "Sonatype"
   },
   {
    "cve": "CVE-2021-3129",
-   "d1": 65,
+   "d1": 183,
    "id": "EUVD-2021-0599",
    "ips": 3,
    "product": "Ignition",
@@ -3358,116 +3331,17 @@
    "vendor": "Laravel"
   },
   {
-   "cve": "CVE-2022-22965",
-   "d1": 65,
-   "id": "EUVD-2022-1283",
+   "cve": "CVE-2018-19410",
+   "d1": 182,
+   "id": "EUVD-2018-11103",
    "ips": 2,
-   "product": "Spring Framework",
+   "product": "PRTG Network Monitor",
    "trend": "UPTICK",
-   "vendor": "Spring"
-  },
-  {
-   "cve": "CVE-2017-15944",
-   "d1": 64,
-   "id": "EUVD-2017-7360",
-   "ips": 2,
-   "product": "PAN-OS",
-   "trend": "UPTICK",
-   "vendor": "Palo Alto Networks"
-  },
-  {
-   "cve": "CVE-2020-25506",
-   "d1": 63,
-   "id": "EUVD-2020-18191",
-   "ips": 2,
-   "product": "DNS-320",
-   "trend": "UPTICK",
-   "vendor": "D-Link"
-  },
-  {
-   "cve": "CVE-2021-28799",
-   "d1": 63,
-   "id": "EUVD-2021-15455",
-   "ips": 2,
-   "product": "QNAP NAS running HBS 3",
-   "trend": "UPTICK",
-   "vendor": "QNAP"
-  },
-  {
-   "cve": "CVE-2021-44515",
-   "d1": 63,
-   "id": "EUVD-2021-31348",
-   "ips": 2,
-   "product": "ManageEngine Desktop Central",
-   "trend": "UPTICK",
-   "vendor": "Zoho"
-  },
-  {
-   "cve": "CVE-2017-3506",
-   "d1": 62,
-   "id": "EUVD-2017-12627",
-   "ips": 2,
-   "product": "Oracle Weblogic Server",
-   "trend": "UPTICK",
-   "vendor": "Oracle"
-  },
-  {
-   "cve": "CVE-2017-9791",
-   "d1": 62,
-   "id": "EUVD-2022-1954",
-   "ips": 2,
-   "product": "Struts",
-   "trend": "UPTICK",
-   "vendor": "Apache"
-  },
-  {
-   "cve": "CVE-2020-14882",
-   "d1": 61,
-   "id": "EUVD-2020-7018",
-   "ips": 2,
-   "product": "Oracle Weblogic Server",
-   "trend": "UPTICK",
-   "vendor": "Oracle"
-  },
-  {
-   "cve": "CVE-2019-7238",
-   "d1": 60,
-   "id": "EUVD-2019-16782",
-   "ips": 3,
-   "product": "Nexus Repository Manager",
-   "trend": "UPTICK",
-   "vendor": "Sonatype"
-  },
-  {
-   "cve": "CVE-2020-5902",
-   "d1": 58,
-   "id": "EUVD-2020-27056",
-   "ips": 4,
-   "product": "F5 Big-IP",
-   "trend": "UPTICK",
-   "vendor": "F5"
-  },
-  {
-   "cve": "CVE-2016-1555",
-   "d1": 56,
-   "id": "EUVD-2016-2650",
-   "ips": 2,
-   "product": "WN604, WN802Tv2, WNAP210v2, WNAP320, WND",
-   "trend": "UPTICK",
-   "vendor": "NETGEAR"
-  },
-  {
-   "cve": "CVE-2022-1388",
-   "d1": 56,
-   "id": "EUVD-2022-24705",
-   "ips": 2,
-   "product": "BIG-IP",
-   "trend": "UPTICK",
-   "vendor": "F5"
+   "vendor": "Paessler"
   },
   {
    "cve": "CVE-2018-15961",
-   "d1": 55,
+   "d1": 181,
    "id": "EUVD-2018-7817",
    "ips": 2,
    "product": "ColdFusion",
@@ -3475,134 +3349,89 @@
    "vendor": "Apache"
   },
   {
-   "cve": "CVE-2021-42237",
-   "d1": 54,
-   "id": "EUVD-2021-29215",
-   "ips": 2,
-   "product": "Sitecore XP",
+   "cve": "CVE-2023-1389",
+   "d1": 181,
+   "id": "EUVD-2023-23645",
+   "ips": 5,
+   "product": "TP-Link Archer AX21",
    "trend": "UPTICK",
-   "vendor": "Sitecore"
+   "vendor": "TP-Link"
   },
   {
-   "cve": "CVE-2023-23752",
-   "d1": 54,
-   "id": "EUVD-2023-27838",
-   "ips": 27,
-   "product": "Joomla",
-   "trend": "UPTICK",
-   "vendor": "Open Source Matters, Inc/Joomla community"
-  },
-  {
-   "cve": "CVE-2021-45382",
-   "d1": 53,
-   "id": "EUVD-2021-32155",
-   "ips": 2,
-   "product": "DIR-810L, DIR-820L/LW, DIR-826L, DIR-830",
-   "trend": "UPTICK",
+   "cve": "CVE-2015-2051",
+   "d1": 180,
+   "id": "EUVD-2015-2164",
+   "ips": 174,
+   "product": "D-Link DIR-645, DAP-1522 revB, DAP-1650 ",
+   "trend": "STEADY",
    "vendor": "D-Link"
   },
   {
-   "cve": "CVE-2017-9805",
-   "d1": 52,
-   "id": "EUVD-2018-0602",
+   "cve": "CVE-2024-41713",
+   "d1": 178,
+   "id": "EUVD-2024-39339",
+   "ips": 2,
+   "product": "MiCollab",
+   "trend": "UPTICK",
+   "vendor": "Mitel"
+  },
+  {
+   "cve": "CVE-2023-41265",
+   "d1": 173,
+   "id": "EUVD-2023-45782",
+   "ips": 29,
+   "product": "Qlik Sense",
+   "trend": "UPTICK",
+   "vendor": "Qlik"
+  },
+  {
+   "cve": "CVE-2017-9791",
+   "d1": 167,
+   "id": "EUVD-2022-1954",
    "ips": 2,
    "product": "Struts",
    "trend": "UPTICK",
    "vendor": "Apache"
   },
   {
-   "cve": "CVE-2018-14558",
-   "d1": 52,
-   "id": "EUVD-2018-6467",
+   "cve": "CVE-2022-1388",
+   "d1": 167,
+   "id": "EUVD-2022-24705",
    "ips": 2,
-   "product": "Tenda AC7/AC9/AC10",
+   "product": "BIG-IP",
    "trend": "UPTICK",
-   "vendor": "Tenda"
-  },
-  {
-   "cve": "CVE-2022-26352",
-   "d1": 48,
-   "id": "EUVD-2022-30911",
-   "ips": 1,
-   "product": "dotCMS",
-   "trend": "UPTICK",
-   "vendor": "dotCMS"
-  },
-  {
-   "cve": "CVE-2023-33246",
-   "d1": 48,
-   "id": "EUVD-2023-2175",
-   "ips": 1,
-   "product": "",
-   "trend": "STEADY",
-   "vendor": "Apache"
+   "vendor": "F5"
   },
   {
    "cve": "CVE-2019-11580",
-   "d1": 47,
+   "d1": 166,
    "id": "EUVD-2019-3250",
-   "ips": 3,
+   "ips": 2,
    "product": "Crowd/Crowd Data Center",
    "trend": "UPTICK",
    "vendor": "Atlassian"
   },
   {
-   "cve": "CVE-2022-24112",
-   "d1": 47,
-   "id": "EUVD-2022-29024",
-   "ips": 1,
-   "product": "APISIX",
+   "cve": "CVE-2020-8515",
+   "d1": 164,
+   "id": "EUVD-2020-29381",
+   "ips": 3,
+   "product": "Draytek Vigor2960, Vigor3900, Vigor300B",
    "trend": "UPTICK",
-   "vendor": "Apache"
-  },
-  {
-   "cve": "CVE-2023-49103",
-   "d1": 46,
-   "id": "EUVD-2023-53112",
-   "ips": 40,
-   "product": "ownCloud",
-   "trend": "UPTICK",
-   "vendor": "ownCloud"
-  },
-  {
-   "cve": "CVE-2023-29357",
-   "d1": 45,
-   "id": "EUVD-2023-32930",
-   "ips": 1,
-   "product": "SharePoint",
-   "trend": "UPTICK",
-   "vendor": "Microsoft"
-  },
-  {
-   "cve": "CVE-2025-49706",
-   "d1": 44,
-   "id": "EUVD-2025-20552",
-   "ips": 1,
-   "product": "SharePoint",
-   "trend": "UPTICK",
-   "vendor": "Microsoft"
+   "vendor": "Draytek"
   },
   {
    "cve": "CVE-2017-18368",
-   "d1": 42,
+   "d1": 163,
    "id": "EUVD-2017-9484",
-   "ips": 5,
+   "ips": 6,
    "product": "ZyXEL P660HN-T1A v1, ZyXEL P660HN-T1A v2",
    "trend": "UPTICK",
    "vendor": "Zyxel/Billion"
   },
   {
-   "cve": "CVE-2022-29303",
-   "d1": 41,
-   "id": "EUVD-2022-33646",
-   "ips": 1,
-   "product": "SolarView Compact ver.6.00",
-   "trend": "UPTICK",
-   "vendor": "CONTEC"
-  },
-  {
    "cve": "CVE-2018-6961",
-   "d1": 40,
+   "d1": 162,
    "id": "EUVD-2018-18705",
    "ips": 2,
    "product": "VMware NSX SD-WAN Edge",
@@ -3610,179 +3439,44 @@
    "vendor": "VMware"
   },
   {
-   "cve": "CVE-2019-16920",
-   "d1": 40,
-   "id": "EUVD-2019-7414",
+   "cve": "CVE-2021-21985",
+   "d1": 161,
+   "id": "EUVD-2021-9156",
    "ips": 2,
+   "product": "vCenter",
+   "trend": "UPTICK",
+   "vendor": "VMware"
+  },
+  {
+   "cve": "CVE-2026-39808",
+   "d1": 161,
+   "id": "EUVD-2026-22338",
+   "ips": 2,
+   "product": "Fortisandbox",
+   "trend": "STEADY",
+   "vendor": "Fortinet"
+  },
+  {
+   "cve": "CVE-2025-5086",
+   "d1": 159,
+   "id": "EUVD-2025-16682",
+   "ips": 2,
+   "product": "DELMIA Apriso",
+   "trend": "STEADY",
+   "vendor": "Dassualt Systems"
+  },
+  {
+   "cve": "CVE-2019-16920",
+   "d1": 158,
+   "id": "EUVD-2019-7414",
+   "ips": 1,
    "product": "D-Link  DIR-615, DIR-655C, DIR-825, DIR-",
    "trend": "UPTICK",
    "vendor": "D-Link"
   },
   {
-   "cve": "CVE-2022-35914",
-   "d1": 40,
-   "id": "EUVD-2022-38785",
-   "ips": 1,
-   "product": "GLPI",
-   "trend": "UPTICK",
-   "vendor": "GLPI (teclib)"
-  },
-  {
-   "cve": "CVE-2022-29464",
-   "d1": 37,
-   "id": "EUVD-2022-33802",
-   "ips": 2,
-   "product": "WSO2 multiple products",
-   "trend": "UPTICK",
-   "vendor": "WSO2"
-  },
-  {
-   "cve": "CVE-2020-1956",
-   "d1": 36,
-   "id": "EUVD-2020-0557",
-   "ips": 1,
-   "product": "Apache Kylin",
-   "trend": "UPTICK",
-   "vendor": "Apache"
-  },
-  {
-   "cve": "CVE-2015-1427",
-   "d1": 32,
-   "id": "EUVD-2022-5539",
-   "ips": 3,
-   "product": "Elasticsearch",
-   "trend": "UPTICK",
-   "vendor": "Elastic"
-  },
-  {
-   "cve": "CVE-2020-25078",
-   "d1": 31,
-   "id": "EUVD-2020-17770",
-   "ips": 2,
-   "product": "D-Link DCS-2530L and DCS-2670L",
-   "trend": "UPTICK",
-   "vendor": "D-Link"
-  },
-  {
-   "cve": "CVE-2021-22986",
-   "d1": 31,
-   "id": "EUVD-2021-10104",
-   "ips": 2,
-   "product": "BIG-IP",
-   "trend": "UPTICK",
-   "vendor": "F5"
-  },
-  {
-   "cve": "CVE-2022-35405",
-   "d1": 29,
-   "id": "EUVD-2022-38295",
-   "ips": 1,
-   "product": "ManageEngine",
-   "trend": "UPTICK",
-   "vendor": "Zoho"
-  },
-  {
-   "cve": "CVE-2021-20028",
-   "d1": 28,
-   "id": "EUVD-2021-7491",
-   "ips": 2,
-   "product": "SonicWall Secure Remote Access",
-   "trend": "UPTICK",
-   "vendor": "SonicWall"
-  },
-  {
-   "cve": "CVE-2019-12989",
-   "d1": 27,
-   "id": "EUVD-2019-4564",
-   "ips": 2,
-   "product": "Citrix SD-WAN and NetScaler SD-WAN",
-   "trend": "UPTICK",
-   "vendor": "Citrix"
-  },
-  {
-   "cve": "CVE-2026-21643",
-   "d1": 27,
-   "id": "EUVD-2026-5681",
-   "ips": 1,
-   "product": "FortiClientEMS",
-   "trend": "UPTICK",
-   "vendor": "Fortinet"
-  },
-  {
-   "cve": "CVE-2020-4427",
-   "d1": 25,
-   "id": "EUVD-2020-25674",
-   "ips": 1,
-   "product": "IBM Data Risk Manager",
-   "trend": "UPTICK",
-   "vendor": "IBM"
-  },
-  {
-   "cve": "CVE-2022-30525",
-   "d1": 24,
-   "id": "EUVD-2022-52385",
-   "ips": 2,
-   "product": "USG FLEX 100, 100W, 200, 500, 700, USG20",
-   "trend": "UPTICK",
-   "vendor": "Zyxel"
-  },
-  {
-   "cve": "CVE-2019-19781",
-   "d1": 15,
-   "id": "EUVD-2019-9380",
-   "ips": 2,
-   "product": "Application Delivery Controller",
-   "trend": "STEADY",
-   "vendor": "Citrix"
-  },
-  {
-   "cve": "CVE-2021-21311",
-   "d1": 15,
-   "id": "EUVD-2021-0576",
-   "ips": 2,
-   "product": "Adminer",
-   "trend": "UPTICK",
-   "vendor": "Adminer"
-  },
-  {
-   "cve": "CVE-2022-46169",
-   "d1": 13,
-   "id": "EUVD-2022-48996",
-   "ips": 1,
-   "product": "Cacti",
-   "trend": "UPTICK",
-   "vendor": "Cacti"
-  },
-  {
-   "cve": "CVE-2024-29059",
-   "d1": 12,
-   "id": "EUVD-2024-26106",
-   "ips": 6,
-   "product": ".NET Framework",
-   "trend": "STEADY",
-   "vendor": "Microsoft"
-  },
-  {
-   "cve": "CVE-2022-22947",
-   "d1": 11,
-   "id": "EUVD-2022-1288",
-   "ips": 1,
-   "product": "Spring Cloud Gateway",
-   "trend": "STEADY",
-   "vendor": "Spring"
-  },
-  {
-   "cve": "CVE-2021-21972",
-   "d1": 10,
-   "id": "EUVD-2021-9143",
-   "ips": 1,
-   "product": "vCenter Server",
-   "trend": "STEADY",
-   "vendor": "VMWare"
-  },
-  {
    "cve": "CVE-2021-21975",
-   "d1": 10,
+   "d1": 154,
    "id": "EUVD-2021-9146",
    "ips": 2,
    "product": "vRealize Operations Manager API",
@@ -3790,35 +3484,134 @@
    "vendor": "VMware"
   },
   {
-   "cve": "CVE-2020-17519",
-   "d1": 9,
-   "id": "EUVD-2021-0481",
+   "cve": "CVE-2017-15944",
+   "d1": 150,
+   "id": "EUVD-2017-7360",
    "ips": 2,
-   "product": "Flink",
+   "product": "PAN-OS",
    "trend": "UPTICK",
-   "vendor": "Apache"
+   "vendor": "Palo Alto Networks"
   },
   {
-   "cve": "CVE-2020-10199",
-   "d1": 8,
-   "id": "EUVD-2020-0379",
+   "cve": "CVE-2019-1653",
+   "d1": 149,
+   "id": "EUVD-2019-10210",
+   "ips": 97,
+   "product": "Cisco RV320/RV325",
+   "trend": "STEADY",
+   "vendor": "Cisco"
+  },
+  {
+   "cve": "CVE-2026-20253",
+   "d1": 148,
+   "id": "EUVD-2026-36088",
    "ips": 1,
-   "product": "Nexus Repository Manager",
+   "product": "Splunk",
    "trend": "STEADY",
-   "vendor": "Sonatype"
+   "vendor": "Splunk"
   },
   {
-   "cve": "CVE-2023-22515",
-   "d1": 8,
-   "id": "EUVD-2023-26655",
+   "cve": "CVE-2020-12641",
+   "d1": 145,
+   "id": "EUVD-2020-4942",
    "ips": 2,
-   "product": "Confluence",
+   "product": "Roundcube Webmail",
+   "trend": "UPTICK",
+   "vendor": "Roundcube"
+  },
+  {
+   "cve": "CVE-2022-24816",
+   "d1": 140,
+   "id": "EUVD-2023-2600",
+   "ips": 2,
+   "product": "Geoserver (JAI-EXT)",
+   "trend": "UPTICK",
+   "vendor": "Geoserver"
+  },
+  {
+   "cve": "CVE-2023-29298",
+   "d1": 139,
+   "id": "EUVD-2023-32873",
+   "ips": 3,
+   "product": "ColdFusion",
+   "trend": "UPTICK",
+   "vendor": "Adobe"
+  },
+  {
+   "cve": "CVE-2020-16846",
+   "d1": 138,
+   "id": "EUVD-2020-0173",
+   "ips": 2,
+   "product": "Salt",
+   "trend": "UPTICK",
+   "vendor": "SaltStack"
+  },
+  {
+   "cve": "CVE-2022-29303",
+   "d1": 137,
+   "id": "EUVD-2022-33646",
+   "ips": 1,
+   "product": "SolarView Compact ver.6.00",
+   "trend": "UPTICK",
+   "vendor": "CONTEC"
+  },
+  {
+   "cve": "CVE-2021-40539",
+   "d1": 136,
+   "id": "EUVD-2021-27714",
+   "ips": 1,
+   "product": "ManageEngine ADSelfService Plus",
+   "trend": "UPTICK",
+   "vendor": "Zoho"
+  },
+  {
+   "cve": "CVE-2025-31324",
+   "d1": 133,
+   "id": "EUVD-2025-11987",
+   "ips": 1,
+   "product": "NetWeaver",
    "trend": "STEADY",
-   "vendor": "Atlassian"
+   "vendor": "SAP"
+  },
+  {
+   "cve": "CVE-2023-27350",
+   "d1": 131,
+   "id": "EUVD-2023-31126",
+   "ips": 3,
+   "product": "PaperCut MF/NG",
+   "trend": "UPTICK",
+   "vendor": "PaperCut"
+  },
+  {
+   "cve": "CVE-2021-38647",
+   "d1": 128,
+   "id": "EUVD-2021-25086",
+   "ips": 1,
+   "product": "Open Management Infrastructure (OMI)",
+   "trend": "UPTICK",
+   "vendor": "Microsoft"
+  },
+  {
+   "cve": "CVE-2023-46747",
+   "d1": 127,
+   "id": "EUVD-2023-50916",
+   "ips": 4,
+   "product": "BIG-IP",
+   "trend": "UPTICK",
+   "vendor": "F5"
+  },
+  {
+   "cve": "CVE-2024-36401",
+   "d1": 127,
+   "id": "EUVD-2024-2280",
+   "ips": 4,
+   "product": "Geoserver",
+   "trend": "UPTICK",
+   "vendor": "Geoserver"
   },
   {
    "cve": "CVE-2024-50603",
-   "d1": 7,
+   "d1": 124,
    "id": "EUVD-2024-44623",
    "ips": 1,
    "product": "Aviatrix Network Controller",
@@ -3826,166 +3619,985 @@
    "vendor": "Aviatrix"
   },
   {
-   "cve": "CVE-2017-5521",
-   "d1": 6,
-   "id": "EUVD-2017-14625",
+   "cve": "CVE-2025-25231",
+   "d1": 124,
+   "id": "EUVD-2025-24160",
    "ips": 1,
-   "product": "NETGEAR (multiple routers)",
+   "product": "Omnissa Workspace ONE UEM",
    "trend": "STEADY",
-   "vendor": "NETGEAR"
+   "vendor": "Omnissa"
   },
   {
-   "cve": "CVE-2019-9670",
-   "d1": 6,
-   "id": "EUVD-2019-19036",
-   "ips": 2,
-   "product": "Zimbra Collaboration Suite",
+   "cve": "CVE-2026-8037",
+   "d1": 123,
+   "id": "EUVD-2026-34260",
+   "ips": 1,
+   "product": "Kemp LoadMaster",
    "trend": "STEADY",
-   "vendor": "Synacor"
+   "vendor": "Progress"
   },
   {
-   "cve": "CVE-2016-3088",
-   "d1": 6,
-   "id": "EUVD-2022-5255",
-   "ips": 2,
-   "product": "ActiveMQ",
+   "cve": "CVE-2026-72898",
+   "d1": 121,
+   "id": "EUVD-2026-55690",
+   "ips": 1,
+   "product": "Metabase",
    "trend": "UPTICK",
-   "vendor": "Apache"
+   "vendor": "Metabase"
   },
   {
-   "cve": "CVE-2017-12615",
-   "d1": 5,
-   "id": "EUVD-2018-0654",
+   "cve": "CVE-2020-15415",
+   "d1": 117,
+   "id": "EUVD-2020-7408",
    "ips": 2,
-   "product": "Tomcat",
-   "trend": "STEADY",
-   "vendor": "Apache"
-  },
-  {
-   "cve": "CVE-2021-34473",
-   "d1": 5,
-   "id": "EUVD-2021-21128",
-   "ips": 1,
-   "product": "Exchange",
+   "product": "Vigor3900, Vigor2960, Vigor300B",
    "trend": "UPTICK",
-   "vendor": "Microsoft"
+   "vendor": "Draytek"
   },
   {
-   "cve": "CVE-2019-11510",
-   "d1": 3,
-   "id": "EUVD-2019-3183",
+   "cve": "CVE-2024-4885",
+   "d1": 116,
+   "id": "EUVD-2024-44455",
    "ips": 1,
-   "product": "Pulse Secure VPN",
-   "trend": "DECLINE",
-   "vendor": "Pulse Secure"
+   "product": "WhatsUp Gold",
+   "trend": "STEADY",
+   "vendor": "Progress"
   },
   {
    "cve": "CVE-2020-11978",
-   "d1": 3,
+   "d1": 115,
    "id": "EUVD-2020-0032",
-   "ips": 2,
+   "ips": 1,
    "product": "Airflow",
    "trend": "UPTICK",
    "vendor": "Apache"
   },
   {
-   "cve": "CVE-2024-4577",
-   "d1": 3,
-   "id": "EUVD-2024-44188",
-   "ips": 2,
-   "product": "PHP (PHP-CGI)",
-   "trend": "STEADY",
-   "vendor": "PHP Foundation"
+   "cve": "CVE-2023-43208",
+   "d1": 115,
+   "id": "EUVD-2023-47627",
+   "ips": 7,
+   "product": "Mirth Connect",
+   "trend": "UPTICK",
+   "vendor": "NextGen Healthcare"
   },
   {
-   "cve": "CVE-2025-68645",
-   "d1": 3,
-   "id": "EUVD-2025-204719",
+   "cve": "CVE-2023-47246",
+   "d1": 112,
+   "id": "EUVD-2023-51378",
+   "ips": 3,
+   "product": "SysAid On-Premise",
+   "trend": "UPTICK",
+   "vendor": "SysAid"
+  },
+  {
+   "cve": "CVE-2024-21887",
+   "d1": 112,
+   "id": "EUVD-2024-19498",
+   "ips": 1,
+   "product": "Ivanti Secure Connect and Policy Secure",
+   "trend": "UPTICK",
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2026-24423",
+   "d1": 111,
+   "id": "EUVD-2026-4273",
+   "ips": 1,
+   "product": "SmarterMail",
+   "trend": "UPTICK",
+   "vendor": "SmarterTools"
+  },
+  {
+   "cve": "CVE-2022-35405",
+   "d1": 109,
+   "id": "EUVD-2022-38295",
+   "ips": 1,
+   "product": "ManageEngine",
+   "trend": "UPTICK",
+   "vendor": "Zoho"
+  },
+  {
+   "cve": "CVE-2024-9465",
+   "d1": 109,
+   "id": "EUVD-2024-49957",
+   "ips": 1,
+   "product": "Palo Alto Networks Expedition",
+   "trend": "STEADY",
+   "vendor": "Palo Alto Networks"
+  },
+  {
+   "cve": "CVE-2023-36844",
+   "d1": 108,
+   "id": "EUVD-2023-40764",
+   "ips": 2,
+   "product": "Junos OS (J-Web)",
+   "trend": "UPTICK",
+   "vendor": "Juniper"
+  },
+  {
+   "cve": "CVE-2025-25257",
+   "d1": 108,
+   "id": "EUVD-2025-21785",
+   "ips": 1,
+   "product": "Fortinet FortiWeb",
+   "trend": "UPTICK",
+   "vendor": "Fortinet"
+  },
+  {
+   "cve": "CVE-2025-11371",
+   "d1": 107,
+   "id": "EUVD-2025-33408",
+   "ips": 1,
+   "product": "Gladinet CentreStack & Triofox & Cloud E",
+   "trend": "STEADY",
+   "vendor": "Gladinet"
+  },
+  {
+   "cve": "CVE-2023-38203",
+   "d1": 105,
+   "id": "EUVD-2023-42023",
+   "ips": 2,
+   "product": "ColdFusion",
+   "trend": "STEADY",
+   "vendor": "Adobe"
+  },
+  {
+   "cve": "CVE-2026-34197",
+   "d1": 104,
+   "id": "EUVD-2026-19588",
+   "ips": 1,
+   "product": "ActiveMQ",
+   "trend": "UPTICK",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2022-26352",
+   "d1": 103,
+   "id": "EUVD-2022-30911",
+   "ips": 2,
+   "product": "dotCMS",
+   "trend": "UPTICK",
+   "vendor": "dotCMS"
+  },
+  {
+   "cve": "CVE-2016-6277",
+   "d1": 102,
+   "id": "EUVD-2016-7207",
+   "ips": 100,
+   "product": "NETGEAR R/D Series Routers",
+   "trend": "STEADY",
+   "vendor": "Netgear"
+  },
+  {
+   "cve": "CVE-2020-15505",
+   "d1": 102,
+   "id": "EUVD-2020-7497",
+   "ips": 2,
+   "product": "MobileIron Mobile Device Management (MDM",
+   "trend": "UPTICK",
+   "vendor": "MobileIron"
+  },
+  {
+   "cve": "CVE-2021-22005",
+   "d1": 100,
+   "id": "EUVD-2021-9174",
+   "ips": 2,
+   "product": "vCenter",
+   "trend": "UPTICK",
+   "vendor": "VMware"
+  },
+  {
+   "cve": "CVE-2023-38950",
+   "d1": 95,
+   "id": "EUVD-2023-42710",
+   "ips": 2,
+   "product": "BioTime",
+   "trend": "STEADY",
+   "vendor": "ZKTeco"
+  },
+  {
+   "cve": "CVE-2026-35273",
+   "d1": 94,
+   "id": "EUVD-2026-36199",
+   "ips": 1,
+   "product": "PeopleSoft Enterprise PeopleTools",
+   "trend": "STEADY",
+   "vendor": "Oracle"
+  },
+  {
+   "cve": "CVE-2023-0669",
+   "d1": 92,
+   "id": "EUVD-2023-0644",
+   "ips": 3,
+   "product": "GoAnywhere MFT",
+   "trend": "UPTICK",
+   "vendor": "Fortra"
+  },
+  {
+   "cve": "CVE-2024-9463",
+   "d1": 91,
+   "id": "EUVD-2024-49955",
+   "ips": 1,
+   "product": "Palo Alto Expedition",
+   "trend": "STEADY",
+   "vendor": "Palo Alto Networks"
+  },
+  {
+   "cve": "CVE-2022-22947",
+   "d1": 90,
+   "id": "EUVD-2022-1288",
+   "ips": 1,
+   "product": "Spring Cloud Gateway",
+   "trend": "STEADY",
+   "vendor": "Spring"
+  },
+  {
+   "cve": "CVE-2022-29464",
+   "d1": 90,
+   "id": "EUVD-2022-33802",
+   "ips": 1,
+   "product": "WSO2 multiple products",
+   "trend": "UPTICK",
+   "vendor": "WSO2"
+  },
+  {
+   "cve": "CVE-2022-37042",
+   "d1": 89,
+   "id": "EUVD-2022-39696",
    "ips": 1,
    "product": "Zimbra Collaboration Suite",
    "trend": "UPTICK",
-   "vendor": "Zimbra"
+   "vendor": "Synacor"
   },
   {
-   "cve": "CVE-2019-11581",
-   "d1": 2,
-   "id": "EUVD-2019-3251",
-   "ips": 2,
-   "product": "JIRA",
-   "trend": "UPTICK",
-   "vendor": "Atlassian"
-  },
-  {
-   "cve": "CVE-2023-1389",
-   "d1": 2,
-   "id": "EUVD-2023-23645",
+   "cve": "CVE-2024-6670",
+   "d1": 89,
+   "id": "EUVD-2024-48017",
    "ips": 1,
-   "product": "TP-Link Archer AX21",
+   "product": "WhatsUp Gold",
    "trend": "UPTICK",
-   "vendor": "TP-Link"
+   "vendor": "Progress"
+  },
+  {
+   "cve": "CVE-2025-64446",
+   "d1": 88,
+   "id": "EUVD-2025-197613",
+   "ips": 1,
+   "product": "Fortinet FortiWeb",
+   "trend": "STEADY",
+   "vendor": "Fortinet"
+  },
+  {
+   "cve": "CVE-2021-34473",
+   "d1": 87,
+   "id": "EUVD-2021-21128",
+   "ips": 2,
+   "product": "Exchange",
+   "trend": "UPTICK",
+   "vendor": "Microsoft"
+  },
+  {
+   "cve": "CVE-2025-14611",
+   "d1": 82,
+   "id": "EUVD-2025-203165",
+   "ips": 1,
+   "product": "Gladinet CentreStack",
+   "trend": "STEADY",
+   "vendor": "Gladinet"
+  },
+  {
+   "cve": "CVE-2021-44515",
+   "d1": 81,
+   "id": "EUVD-2021-31348",
+   "ips": 1,
+   "product": "ManageEngine Desktop Central",
+   "trend": "UPTICK",
+   "vendor": "Zoho"
+  },
+  {
+   "cve": "CVE-2022-47986",
+   "d1": 78,
+   "id": "EUVD-2022-50700",
+   "ips": 1,
+   "product": "Aspera Faspex",
+   "trend": "STEADY",
+   "vendor": "IBM"
+  },
+  {
+   "cve": "CVE-2023-1671",
+   "d1": 73,
+   "id": "EUVD-2023-23899",
+   "ips": 2,
+   "product": "Sophos Web Appliance",
+   "trend": "STEADY",
+   "vendor": "Sophos"
+  },
+  {
+   "cve": "CVE-2023-29300",
+   "d1": 71,
+   "id": "EUVD-2023-32875",
+   "ips": 2,
+   "product": "ColdFusion",
+   "trend": "STEADY",
+   "vendor": "Adobe"
+  },
+  {
+   "cve": "CVE-2026-48282",
+   "d1": 69,
+   "id": "EUVD-2026-40339",
+   "ips": 1,
+   "product": "Adobe ColdFusion",
+   "trend": "STEADY",
+   "vendor": "Adobe"
+  },
+  {
+   "cve": "CVE-2024-29824",
+   "d1": 68,
+   "id": "EUVD-2024-26818",
+   "ips": 1,
+   "product": "Ivanti EPM",
+   "trend": "UPTICK",
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2023-20887",
+   "d1": 67,
+   "id": "EUVD-2023-25058",
+   "ips": 1,
+   "product": "Aria Operations for Networks",
+   "trend": "STEADY",
+   "vendor": "VMware"
+  },
+  {
+   "cve": "CVE-2024-27348",
+   "d1": 66,
+   "id": "EUVD-2024-1059",
+   "ips": 1,
+   "product": "HugeGraph",
+   "trend": "STEADY",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2022-47966",
+   "d1": 64,
+   "id": "EUVD-2022-50684",
+   "ips": 1,
+   "product": "ManageEngine (multiple products)",
+   "trend": "STEADY",
+   "vendor": "Zoho"
+  },
+  {
+   "cve": "CVE-2024-1709",
+   "d1": 60,
+   "id": "EUVD-2024-17443",
+   "ips": 5,
+   "product": "ScreenConnect",
+   "trend": "UPTICK",
+   "vendor": "ConnectWise"
   },
   {
    "cve": "CVE-2024-3273",
-   "d1": 2,
+   "d1": 59,
    "id": "EUVD-2024-31863",
-   "ips": 1,
+   "ips": 3,
    "product": "D-Link DNS-320L, DNS-325, DNS-327L and D",
    "trend": "UPTICK",
    "vendor": "D-Link"
   },
   {
-   "cve": "CVE-2025-3248",
-   "d1": 2,
-   "id": "EUVD-2025-10011",
+   "cve": "CVE-2025-68645",
+   "d1": 58,
+   "id": "EUVD-2025-204719",
    "ips": 2,
-   "product": "Langflow",
-   "trend": "DECLINE",
-   "vendor": "Langflow"
+   "product": "Zimbra Collaboration Suite",
+   "trend": "UPTICK",
+   "vendor": "Zimbra"
   },
   {
-   "cve": "CVE-2018-19410",
-   "d1": 1,
-   "id": "EUVD-2018-11103",
+   "cve": "CVE-2021-21311",
+   "d1": 57,
+   "id": "EUVD-2021-0576",
    "ips": 1,
-   "product": "PRTG Network Monitor",
+   "product": "Adminer",
+   "trend": "UPTICK",
+   "vendor": "Adminer"
+  },
+  {
+   "cve": "CVE-2021-20028",
+   "d1": 55,
+   "id": "EUVD-2021-7491",
+   "ips": 1,
+   "product": "SonicWall Secure Remote Access",
+   "trend": "UPTICK",
+   "vendor": "SonicWall"
+  },
+  {
+   "cve": "CVE-2022-30525",
+   "d1": 51,
+   "id": "EUVD-2022-52385",
+   "ips": 2,
+   "product": "USG FLEX 100, 100W, 200, 500, 700, USG20",
+   "trend": "UPTICK",
+   "vendor": "Zyxel"
+  },
+  {
+   "cve": "CVE-2023-4966",
+   "d1": 51,
+   "id": "EUVD-2023-54802",
+   "ips": 19,
+   "product": "Citrix ADC and Citrix Gateway",
+   "trend": "UPTICK",
+   "vendor": "Citrix"
+  },
+  {
+   "cve": "CVE-2019-11510",
+   "d1": 49,
+   "id": "EUVD-2019-3183",
+   "ips": 2,
+   "product": "Pulse Secure VPN",
+   "trend": "UPTICK",
+   "vendor": "Pulse Secure"
+  },
+  {
+   "cve": "CVE-2022-22965",
+   "d1": 49,
+   "id": "EUVD-2022-1283",
+   "ips": 1,
+   "product": "Spring Framework",
+   "trend": "UPTICK",
+   "vendor": "Spring"
+  },
+  {
+   "cve": "CVE-2018-14558",
+   "d1": 48,
+   "id": "EUVD-2018-6467",
+   "ips": 2,
+   "product": "Tenda AC7/AC9/AC10",
+   "trend": "UPTICK",
+   "vendor": "Tenda"
+  },
+  {
+   "cve": "CVE-2020-17496",
+   "d1": 46,
+   "id": "EUVD-2020-9444",
+   "ips": 3,
+   "product": "vBulletin",
+   "trend": "UPTICK",
+   "vendor": "vBulletin"
+  },
+  {
+   "cve": "CVE-2021-21972",
+   "d1": 45,
+   "id": "EUVD-2021-9143",
+   "ips": 1,
+   "product": "vCenter Server",
    "trend": "STEADY",
-   "vendor": "Paessler"
+   "vendor": "VMWare"
   },
   {
-   "cve": "CVE-2018-14839",
-   "d1": 1,
-   "id": "EUVD-2018-6722",
-   "ips": 1,
-   "product": "NAS N1A1",
+   "cve": "CVE-2017-5521",
+   "d1": 42,
+   "id": "EUVD-2017-14625",
+   "ips": 2,
+   "product": "NETGEAR (multiple routers)",
    "trend": "STEADY",
-   "vendor": "LG"
+   "vendor": "NETGEAR"
   },
   {
-   "cve": "CVE-2019-10758",
-   "d1": 1,
-   "id": "EUVD-2019-0791",
-   "ips": 1,
-   "product": "mongo-express",
+   "cve": "CVE-2020-3452",
+   "d1": 42,
+   "id": "EUVD-2020-24723",
+   "ips": 3,
+   "product": "Cisco ASA and Cisco Firepower Threat Def",
    "trend": "STEADY",
-   "vendor": "mongo-express"
+   "vendor": "Cisco"
   },
   {
-   "cve": "CVE-2019-2616",
-   "d1": 1,
-   "id": "EUVD-2019-12256",
+   "cve": "CVE-2019-15107",
+   "d1": 41,
+   "id": "EUVD-2019-6178",
+   "ips": 3,
+   "product": "Webmin",
+   "trend": "UPTICK",
+   "vendor": "Webmin"
+  },
+  {
+   "cve": "CVE-2020-10199",
+   "d1": 40,
+   "id": "EUVD-2020-0379",
    "ips": 1,
-   "product": "BI Publisher (Oracle Fusion Middleware)",
+   "product": "Nexus Repository Manager",
+   "trend": "STEADY",
+   "vendor": "Sonatype"
+  },
+  {
+   "cve": "CVE-2021-27561",
+   "d1": 38,
+   "id": "EUVD-2021-14312",
+   "ips": 1,
+   "product": "Yealink Device Management (DM)",
+   "trend": "STEADY",
+   "vendor": "Yealink"
+  },
+  {
+   "cve": "CVE-2023-49103",
+   "d1": 38,
+   "id": "EUVD-2023-53112",
+   "ips": 36,
+   "product": "ownCloud",
+   "trend": "UPTICK",
+   "vendor": "ownCloud"
+  },
+  {
+   "cve": "CVE-2020-9054",
+   "d1": 32,
+   "id": "EUVD-2020-29883",
+   "ips": 1,
+   "product": "",
+   "trend": "UPTICK",
+   "vendor": "ZyXEL"
+  },
+  {
+   "cve": "CVE-2024-27199",
+   "d1": 32,
+   "id": "EUVD-2024-24438",
+   "ips": 1,
+   "product": "TeamCity",
+   "trend": "STEADY",
+   "vendor": "JetBrains"
+  },
+  {
+   "cve": "CVE-2019-9978",
+   "d1": 30,
+   "id": "EUVD-2019-19332",
+   "ips": 1,
+   "product": "Social Warfare WordPress Plugin",
+   "trend": "UPTICK",
+   "vendor": "Social Warfare"
+  },
+  {
+   "cve": "CVE-2020-10148",
+   "d1": 29,
+   "id": "EUVD-2020-2611",
+   "ips": 1,
+   "product": "SolarWinds Orion",
+   "trend": "STEADY",
+   "vendor": "SolarWinds"
+  },
+  {
+   "cve": "CVE-2021-41277",
+   "d1": 28,
+   "id": "EUVD-2021-28310",
+   "ips": 1,
+   "product": "Metabase",
+   "trend": "STEADY",
+   "vendor": "Metabase"
+  },
+  {
+   "cve": "CVE-2022-27593",
+   "d1": 28,
+   "id": "EUVD-2022-32094",
+   "ips": 1,
+   "product": "QNAP NAS devices running Photo Station",
+   "trend": "UPTICK",
+   "vendor": "QNAP"
+  },
+  {
+   "cve": "CVE-2020-5847",
+   "d1": 26,
+   "id": "EUVD-2020-27001",
+   "ips": 1,
+   "product": "Unraid",
+   "trend": "STEADY",
+   "vendor": "Lime Technology"
+  },
+  {
+   "cve": "CVE-2024-1212",
+   "d1": 26,
+   "id": "EUVD-2024-16979",
+   "ips": 1,
+   "product": "Kemp LoadMaster",
+   "trend": "STEADY",
+   "vendor": "Progress"
+  },
+  {
+   "cve": "CVE-2024-8963",
+   "d1": 25,
+   "id": "EUVD-2024-49510",
+   "ips": 3,
+   "product": "Ivanti CSA",
+   "trend": "UPTICK",
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2021-35464",
+   "d1": 24,
+   "id": "EUVD-2021-22106",
+   "ips": 2,
+   "product": "ForgeRock Access Manager",
+   "trend": "UPTICK",
+   "vendor": "ForgeRock"
+  },
+  {
+   "cve": "CVE-2020-14864",
+   "d1": 23,
+   "id": "EUVD-2020-7000",
+   "ips": 1,
+   "product": "Oracle Business Intelligence (Oracle Fus",
    "trend": "STEADY",
    "vendor": "Oracle"
+  },
+  {
+   "cve": "CVE-2017-12637",
+   "d1": 20,
+   "id": "EUVD-2017-4176",
+   "ips": 1,
+   "product": "NetWeaver Application Server Java",
+   "trend": "STEADY",
+   "vendor": "SAP"
+  },
+  {
+   "cve": "CVE-2025-24893",
+   "d1": 20,
+   "id": "EUVD-2025-4562",
+   "ips": 1,
+   "product": "XWiki Platform",
+   "trend": "STEADY",
+   "vendor": "XWiki"
+  },
+  {
+   "cve": "CVE-2018-0296",
+   "d1": 19,
+   "id": "EUVD-2018-1119",
+   "ips": 1,
+   "product": "Cisco ASA and Cisco Firepower Threat Def",
+   "trend": "STEADY",
+   "vendor": "Cisco"
+  },
+  {
+   "cve": "CVE-2019-11581",
+   "d1": 18,
+   "id": "EUVD-2019-3251",
+   "ips": 1,
+   "product": "JIRA",
+   "trend": "UPTICK",
+   "vendor": "Atlassian"
+  },
+  {
+   "cve": "CVE-2020-11738",
+   "d1": 17,
+   "id": "EUVD-2020-4080",
+   "ips": 2,
+   "product": "Duplicator WordPress Plugin",
+   "trend": "UPTICK",
+   "vendor": "Duplicator"
+  },
+  {
+   "cve": "CVE-2021-35587",
+   "d1": 17,
+   "id": "EUVD-2021-22223",
+   "ips": 1,
+   "product": "Oracle Access Manager (Oracle Fusion Mid",
+   "trend": "STEADY",
+   "vendor": "Oracle"
+  },
+  {
+   "cve": "CVE-2021-40438",
+   "d1": 17,
+   "id": "EUVD-2021-27615",
+   "ips": 9,
+   "product": "Apache HTTP Server",
+   "trend": "UPTICK",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2021-20123",
+   "d1": 17,
+   "id": "EUVD-2021-7580",
+   "ips": 1,
+   "product": "VigorConnect",
+   "trend": "STEADY",
+   "vendor": "Draytek"
+  },
+  {
+   "cve": "CVE-2021-20124",
+   "d1": 17,
+   "id": "EUVD-2021-7581",
+   "ips": 1,
+   "product": "VigorConnect",
+   "trend": "STEADY",
+   "vendor": "Draytek"
+  },
+  {
+   "cve": "CVE-2024-28995",
+   "d1": 17,
+   "id": "EUVD-2024-26057",
+   "ips": 17,
+   "product": "SolarWinds Serv-U",
+   "trend": "STEADY",
+   "vendor": "SolarWinds"
+  },
+  {
+   "cve": "CVE-2019-16057",
+   "d1": 16,
+   "id": "EUVD-2019-6920",
+   "ips": 2,
+   "product": "DNS-320",
+   "trend": "UPTICK",
+   "vendor": "D-Link"
+  },
+  {
+   "cve": "CVE-2022-33891",
+   "d1": 16,
+   "id": "EUVD-2022-0217",
+   "ips": 1,
+   "product": "Spark",
+   "trend": "STEADY",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2021-28799",
+   "d1": 9,
+   "id": "EUVD-2021-15455",
+   "ips": 2,
+   "product": "QNAP NAS running HBS 3",
+   "trend": "UPTICK",
+   "vendor": "QNAP"
+  },
+  {
+   "cve": "CVE-2024-29059",
+   "d1": 9,
+   "id": "EUVD-2024-26106",
+   "ips": 9,
+   "product": ".NET Framework",
+   "trend": "STEADY",
+   "vendor": "Microsoft"
+  },
+  {
+   "cve": "CVE-2026-76504",
+   "d1": 6,
+   "id": "EUVD-2026-89950",
+   "ips": 1,
+   "product": "Cisco Catalyst SD-WAN Manager",
+   "trend": "STEADY",
+   "vendor": "Cisco"
+  },
+  {
+   "cve": "CVE-2024-3400",
+   "d1": 5,
+   "id": "EUVD-2024-31989",
+   "ips": 2,
+   "product": "GlobalProtect",
+   "trend": "UPTICK",
+   "vendor": "Palo Alto Networks"
+  },
+  {
+   "cve": "CVE-2026-85706",
+   "d1": 5,
+   "id": "EUVD-2026-76779",
+   "ips": 1,
+   "product": "GitLab CE/EE",
+   "trend": "STEADY",
+   "vendor": "GitLab"
+  },
+  {
+   "cve": "CVE-2017-12615",
+   "d1": 4,
+   "id": "EUVD-2018-0654",
+   "ips": 1,
+   "product": "Tomcat",
+   "trend": "STEADY",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2023-27524",
+   "d1": 3,
+   "id": "EUVD-2023-1207",
+   "ips": 2,
+   "product": "Superset",
+   "trend": "STEADY",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2023-27351",
+   "d1": 3,
+   "id": "EUVD-2023-31127",
+   "ips": 2,
+   "product": "PaperCut MF/NG",
+   "trend": "STEADY",
+   "vendor": "PaperCut"
+  },
+  {
+   "cve": "CVE-2013-2251",
+   "d1": 2,
+   "id": "EUVD-2022-2328",
+   "ips": 2,
+   "product": "Struts",
+   "trend": "STEADY",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2022-22536",
+   "d1": 2,
+   "id": "EUVD-2022-27682",
+   "ips": 2,
+   "product": "NetWeaver Application Server ABAP, SAP N",
+   "trend": "UPTICK",
+   "vendor": "SAP"
+  },
+  {
+   "cve": "CVE-2023-28432",
+   "d1": 2,
+   "id": "EUVD-2023-32124",
+   "ips": 2,
+   "product": "MinIO",
+   "trend": "STEADY",
+   "vendor": "MinIO"
+  },
+  {
+   "cve": "CVE-2023-29357",
+   "d1": 2,
+   "id": "EUVD-2023-32930",
+   "ips": 2,
+   "product": "SharePoint",
+   "trend": "UPTICK",
+   "vendor": "Microsoft"
+  },
+  {
+   "cve": "CVE-2023-38205",
+   "d1": 2,
+   "id": "EUVD-2023-42025",
+   "ips": 2,
+   "product": "ColdFusion",
+   "trend": "UPTICK",
+   "vendor": "Adobe"
+  },
+  {
+   "cve": "CVE-2023-46805",
+   "d1": 2,
+   "id": "EUVD-2023-50971",
+   "ips": 2,
+   "product": "Ivanti Secure Connect and Policy Secure",
+   "trend": "STEADY",
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2024-24919",
+   "d1": 2,
+   "id": "EUVD-2024-22282",
+   "ips": 2,
+   "product": "Check Point Security Gateway",
+   "trend": "DECLINE",
+   "vendor": "Check Point"
+  },
+  {
+   "cve": "CVE-2024-7593",
+   "d1": 2,
+   "id": "EUVD-2024-48489",
+   "ips": 2,
+   "product": "Ivanti Virtual Traffic Manager (vTM)",
+   "trend": "UPTICK",
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2025-29635",
+   "d1": 2,
+   "id": "EUVD-2025-14821",
+   "ips": 1,
+   "product": "D-Link DIR-823X",
+   "trend": "STEADY",
+   "vendor": "D-Link"
+  },
+  {
+   "cve": "CVE-2025-20362",
+   "d1": 2,
+   "id": "EUVD-2025-31139",
+   "ips": 2,
+   "product": "Cisco ASA and Cisco Firepower Threat Def",
+   "trend": "UPTICK",
+   "vendor": "Cisco"
+  },
+  {
+   "cve": "CVE-2025-12480",
+   "d1": 2,
+   "id": "EUVD-2025-44062",
+   "ips": 2,
+   "product": "Gladinet CentreStack & Triofox",
+   "trend": "STEADY",
+   "vendor": "Gladinet"
+  },
+  {
+   "cve": "CVE-2026-1603",
+   "d1": 2,
+   "id": "EUVD-2026-6842",
+   "ips": 2,
+   "product": "Ivanti EPM",
+   "trend": "STEADY",
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2014-6287",
+   "d1": 1,
+   "id": "EUVD-2014-6172",
+   "ips": 1,
+   "product": "Rejetto HTTP File Server",
+   "trend": "STEADY",
+   "vendor": "Rejetto"
+  },
+  {
+   "cve": "CVE-2018-18809",
+   "d1": 1,
+   "id": "EUVD-2018-10525",
+   "ips": 1,
+   "product": "JasperReports Library",
+   "trend": "STEADY",
+   "vendor": "TIBCO"
+  },
+  {
+   "cve": "CVE-2018-6530",
+   "d1": 1,
+   "id": "EUVD-2018-18282",
+   "ips": 1,
+   "product": "D-Link multiple routers",
+   "trend": "STEADY",
+   "vendor": "D-Link"
+  },
+  {
+   "cve": "CVE-2019-0193",
+   "d1": 1,
+   "id": "EUVD-2019-0615",
+   "ips": 1,
+   "product": "Solr",
+   "trend": "STEADY",
+   "vendor": "Apache"
+  },
+  {
+   "cve": "CVE-2019-7609",
+   "d1": 1,
+   "id": "EUVD-2019-17147",
+   "ips": 1,
+   "product": "Kibana",
+   "trend": "STEADY",
+   "vendor": "Elastic"
   },
   {
    "cve": "CVE-2019-9874",
    "d1": 1,
    "id": "EUVD-2019-19230",
    "ips": 1,
-   "product": "Citrix StoreFront Server",
+   "product": "Sitecore CMS/XP",
    "trend": "STEADY",
-   "vendor": "Citrix"
+   "vendor": "Sitecore"
+  },
+  {
+   "cve": "CVE-2019-18935",
+   "d1": 1,
+   "id": "EUVD-2019-8608",
+   "ips": 1,
+   "product": "Telerik",
+   "trend": "STEADY",
+   "vendor": "Telerik"
   },
   {
    "cve": "CVE-2020-3580",
@@ -3997,13 +4609,13 @@
    "vendor": "Cisco"
   },
   {
-   "cve": "CVE-2020-10189",
+   "cve": "CVE-2020-6207",
    "d1": 1,
-   "id": "EUVD-2020-2650",
+   "id": "EUVD-2020-27357",
    "ips": 1,
-   "product": "ManageEngine Desktop Central (now Engine",
+   "product": "Solution Manager",
    "trend": "STEADY",
-   "vendor": "Zoho"
+   "vendor": "SAP"
   },
   {
    "cve": "CVE-2020-6287",
@@ -4015,24 +4627,6 @@
    "vendor": "SAP"
   },
   {
-   "cve": "CVE-2020-7796",
-   "d1": 1,
-   "id": "EUVD-2020-28728",
-   "ips": 1,
-   "product": "Zimbra Collaboration Suite",
-   "trend": "DECLINE",
-   "vendor": "Zimbra"
-  },
-  {
-   "cve": "CVE-2020-8193",
-   "d1": 1,
-   "id": "EUVD-2020-29070",
-   "ips": 1,
-   "product": "Citrix ADC, Citrix Gateway, Citrix SDWAN",
-   "trend": "DECLINE",
-   "vendor": "Citrix"
-  },
-  {
    "cve": "CVE-2020-8657",
    "d1": 1,
    "id": "EUVD-2020-29505",
@@ -4042,13 +4636,13 @@
    "vendor": "EyesOfNetwork"
   },
   {
-   "cve": "CVE-2020-12641",
+   "cve": "CVE-2021-22986",
    "d1": 1,
-   "id": "EUVD-2020-4942",
+   "id": "EUVD-2021-10104",
    "ips": 1,
-   "product": "Roundcube Webmail",
-   "trend": "DECLINE",
-   "vendor": "Roundcube"
+   "product": "BIG-IP",
+   "trend": "STEADY",
+   "vendor": "F5"
   },
   {
    "cve": "CVE-2021-33044",
@@ -4060,6 +4654,15 @@
    "vendor": "Dahua"
   },
   {
+   "cve": "CVE-2021-39226",
+   "d1": 1,
+   "id": "EUVD-2021-2169",
+   "ips": 1,
+   "product": "Grafana",
+   "trend": "STEADY",
+   "vendor": "Grafana"
+  },
+  {
    "cve": "CVE-2021-39935",
    "d1": 1,
    "id": "EUVD-2021-26291",
@@ -4069,13 +4672,13 @@
    "vendor": "GitLab"
   },
   {
-   "cve": "CVE-2021-22005",
+   "cve": "CVE-2021-40870",
    "d1": 1,
-   "id": "EUVD-2021-9174",
+   "id": "EUVD-2021-28025",
    "ips": 1,
-   "product": "vCenter",
+   "product": "Aviatrix Controller",
    "trend": "STEADY",
-   "vendor": "VMware"
+   "vendor": "Aviatrix"
   },
   {
    "cve": "CVE-2021-22017",
@@ -4087,6 +4690,33 @@
    "vendor": "VMware"
   },
   {
+   "cve": "CVE-2022-23131",
+   "d1": 1,
+   "id": "EUVD-2022-28222",
+   "ips": 1,
+   "product": "Zabbix",
+   "trend": "STEADY",
+   "vendor": "Zabbix"
+  },
+  {
+   "cve": "CVE-2022-23134",
+   "d1": 1,
+   "id": "EUVD-2022-28225",
+   "ips": 1,
+   "product": "Zabbix",
+   "trend": "STEADY",
+   "vendor": "Zabbix"
+  },
+  {
+   "cve": "CVE-2022-24990",
+   "d1": 1,
+   "id": "EUVD-2022-29737",
+   "ips": 1,
+   "product": "TOS",
+   "trend": "STEADY",
+   "vendor": "Terramaster"
+  },
+  {
    "cve": "CVE-2022-26138",
    "d1": 1,
    "id": "EUVD-2022-30705",
@@ -4094,6 +4724,24 @@
    "product": "Confluence",
    "trend": "STEADY",
    "vendor": "Atlassian"
+  },
+  {
+   "cve": "CVE-2022-27926",
+   "d1": 1,
+   "id": "EUVD-2022-32414",
+   "ips": 1,
+   "product": "Zimbra Collaboration Suite",
+   "trend": "STEADY",
+   "vendor": "Synacor"
+  },
+  {
+   "cve": "CVE-2022-35914",
+   "d1": 1,
+   "id": "EUVD-2022-38785",
+   "ips": 1,
+   "product": "GLPI",
+   "trend": "STEADY",
+   "vendor": "GLPI (teclib)"
   },
   {
    "cve": "CVE-2022-40684",
@@ -4105,106 +4753,300 @@
    "vendor": "Fortinet"
   },
   {
-   "cve": "CVE-2023-22518",
+   "cve": "CVE-2022-46169",
    "d1": 1,
-   "id": "EUVD-2023-26658",
+   "id": "EUVD-2022-48996",
    "ips": 1,
-   "product": "Confluence",
+   "product": "Cacti",
+   "trend": "STEADY",
+   "vendor": "Cacti"
+  },
+  {
+   "cve": "CVE-2023-41763",
+   "d1": 1,
+   "id": "EUVD-2023-46255",
+   "ips": 1,
+   "product": "Skype",
+   "trend": "STEADY",
+   "vendor": "Microsoft"
+  },
+  {
+   "cve": "CVE-2021-43798",
+   "d1": 1,
+   "id": "EUVD-2024-0581",
+   "ips": 1,
+   "product": "Grafana",
+   "trend": "STEADY",
+   "vendor": "Grafana"
+  },
+  {
+   "cve": "CVE-2024-20439",
+   "d1": 1,
+   "id": "EUVD-2024-18154",
+   "ips": 1,
+   "product": "Cisco Smart Licensing Utility (CSLU)",
+   "trend": "STEADY",
+   "vendor": "Cisco"
+  },
+  {
+   "cve": "CVE-2024-20767",
+   "d1": 1,
+   "id": "EUVD-2024-18482",
+   "ips": 1,
+   "product": "ColdFusion",
+   "trend": "STEADY",
+   "vendor": "Adobe"
+  },
+  {
+   "cve": "CVE-2024-27198",
+   "d1": 1,
+   "id": "EUVD-2024-24437",
+   "ips": 1,
+   "product": "TeamCity",
+   "trend": "STEADY",
+   "vendor": "JetBrains"
+  },
+  {
+   "cve": "CVE-2024-38475",
+   "d1": 1,
+   "id": "EUVD-2024-37356",
+   "ips": 1,
+   "product": "Apache HTTP Server",
    "trend": "DECLINE",
-   "vendor": "Atlassian"
+   "vendor": "Apache"
   },
   {
-   "cve": "CVE-2024-3400",
+   "cve": "CVE-2024-4358",
    "d1": 1,
-   "id": "EUVD-2024-31989",
+   "id": "EUVD-2024-43994",
    "ips": 1,
-   "product": "GlobalProtect",
+   "product": "Telerik Report Server",
    "trend": "STEADY",
-   "vendor": "Palo Alto Networks"
+   "vendor": "Progress"
   },
   {
-   "cve": "CVE-2026-85706",
+   "cve": "CVE-2024-53704",
    "d1": 1,
-   "id": "EUVD-2026-76779",
+   "id": "EUVD-2024-52037",
    "ips": 1,
-   "product": "GitLab CE/EE",
+   "product": "SonicOS",
    "trend": "STEADY",
-   "vendor": "GitLab"
+   "vendor": "SonicWall"
+  },
+  {
+   "cve": "CVE-2024-48248",
+   "d1": 1,
+   "id": "EUVD-2024-54120",
+   "ips": 1,
+   "product": "NAKIVO Backup & Replication",
+   "trend": "STEADY",
+   "vendor": "NAKIVO"
+  },
+  {
+   "cve": "CVE-2025-34026",
+   "d1": 1,
+   "id": "EUVD-2025-16087",
+   "ips": 1,
+   "product": "Versa Concerto",
+   "trend": "STEADY",
+   "vendor": "Versa"
+  },
+  {
+   "cve": "CVE-2025-54236",
+   "d1": 1,
+   "id": "EUVD-2025-27277",
+   "ips": 1,
+   "product": "Adobe Commerce (Magento)",
+   "trend": "STEADY",
+   "vendor": "Adobe"
+  },
+  {
+   "cve": "CVE-2025-2746",
+   "d1": 1,
+   "id": "EUVD-2025-8008",
+   "ips": 1,
+   "product": "Kentico",
+   "trend": "STEADY",
+   "vendor": "Kentico"
   }
  ],
  "hp_surges": [
   {
-   "cve": "CVE-2024-28995",
-   "d1": 8031,
-   "id": "EUVD-2024-26057",
-   "ips": 40,
+   "cve": "CVE-2026-3055",
+   "d1": 17957,
+   "id": "EUVD-2026-14546",
+   "ips": 51,
    "kinds": [
     "broad"
    ],
    "new": true,
-   "product": "SolarWinds Serv-U",
-   "ratio": 501.9,
-   "vendor": "SolarWinds"
-  },
-  {
-   "cve": "CVE-2024-21887",
-   "d1": 6247,
-   "id": "EUVD-2024-19498",
-   "ips": 44,
-   "kinds": [
-    "broad"
-   ],
-   "new": true,
-   "product": "Ivanti Secure Connect and Policy Secure",
-   "ratio": 624.7,
-   "vendor": "Ivanti"
-  },
-  {
-   "cve": "CVE-2025-5777",
-   "d1": 3507,
-   "id": "EUVD-2025-18497",
-   "ips": 81,
-   "kinds": [
-    "broad"
-   ],
-   "new": true,
-   "product": "Citrix NetScaler",
-   "ratio": 40.3,
+   "product": "Citrix NetScaler ADC and NetScaler Gatew",
+   "ratio": 665.1,
    "vendor": "Citrix"
   },
   {
-   "cve": "CVE-2024-21893",
-   "d1": 2252,
-   "id": "EUVD-2024-19504",
+   "cve": "CVE-2019-19781",
+   "d1": 5987,
+   "id": "EUVD-2019-9380",
+   "ips": 33,
+   "kinds": [
+    "broad"
+   ],
+   "new": true,
+   "product": "Application Delivery Controller",
+   "ratio": 374.2,
+   "vendor": "Citrix"
+  },
+  {
+   "cve": "CVE-2023-22515",
+   "d1": 4158,
+   "id": "EUVD-2023-26655",
+   "ips": 29,
+   "kinds": [
+    "broad"
+   ],
+   "new": true,
+   "product": "Confluence",
+   "ratio": 693.0,
+   "vendor": "Atlassian"
+  },
+  {
+   "cve": "CVE-2025-5777",
+   "d1": 3677,
+   "id": "EUVD-2025-18497",
+   "ips": 90,
+   "kinds": [
+    "broad"
+   ],
+   "new": false,
+   "product": "Citrix NetScaler",
+   "ratio": 42.3,
+   "vendor": "Citrix"
+  },
+  {
+   "cve": "CVE-2018-13379",
+   "d1": 3410,
+   "id": "EUVD-2018-5323",
+   "ips": 33,
+   "kinds": [
+    "broad"
+   ],
+   "new": true,
+   "product": "FortiOS",
+   "ratio": 48.7,
+   "vendor": "Fortinet"
+  },
+  {
+   "cve": "CVE-2026-88771",
+   "d1": 2857,
+   "id": "EUVD-2026-87958",
    "ips": 27,
    "kinds": [
     "broad"
    ],
    "new": true,
-   "product": "Ivanti Connect Secure, Policy Secure and",
-   "ratio": 1126.0,
-   "vendor": "Ivanti"
+   "product": "NetScaler ADC and NetScaler Gateway",
+   "ratio": 317.4,
+   "vendor": "Citrix"
   },
   {
-   "cve": "CVE-2025-0108",
-   "d1": 1907,
-   "id": "EUVD-2025-1505",
-   "ips": 28,
+   "cve": "CVE-2023-22518",
+   "d1": 2834,
+   "id": "EUVD-2023-26658",
+   "ips": 31,
    "kinds": [
     "broad"
    ],
    "new": true,
-   "product": "PAN-OS",
-   "ratio": 158.9,
-   "vendor": "Palo Alto Networks"
+   "product": "Confluence",
+   "ratio": 566.8,
+   "vendor": "Atlassian"
+  },
+  {
+   "cve": "CVE-2023-22527",
+   "d1": 2551,
+   "id": "EUVD-2023-26667",
+   "ips": 31,
+   "kinds": [
+    "broad"
+   ],
+   "new": true,
+   "product": "Confluence",
+   "ratio": 255.1,
+   "vendor": "Atlassian"
+  },
+  {
+   "cve": "CVE-2023-35082",
+   "d1": 628,
+   "id": "EUVD-2023-39117",
+   "ips": 33,
+   "kinds": [
+    "broad"
+   ],
+   "new": true,
+   "product": "Endpoint Manager Mobile (EPMM), formerly",
+   "ratio": 104.7,
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2023-23752",
+   "d1": 408,
+   "id": "EUVD-2023-27838",
+   "ips": 27,
+   "kinds": [
+    "broad"
+   ],
+   "new": true,
+   "product": "Joomla",
+   "ratio": 81.6,
+   "vendor": "Open Source Matters, Inc/Joomla community"
+  },
+  {
+   "cve": "CVE-2023-35078",
+   "d1": 384,
+   "id": "EUVD-2023-39113",
+   "ips": 31,
+   "kinds": [
+    "broad"
+   ],
+   "new": true,
+   "product": "Endpoint Manager Mobile (EPMM), formerly",
+   "ratio": 42.7,
+   "vendor": "Ivanti"
+  },
+  {
+   "cve": "CVE-2019-9670",
+   "d1": 247,
+   "id": "EUVD-2019-19036",
+   "ips": 44,
+   "kinds": [
+    "broad"
+   ],
+   "new": true,
+   "product": "Zimbra Collaboration Suite",
+   "ratio": 41.2,
+   "vendor": "Synacor"
+  },
+  {
+   "cve": "CVE-2023-41265",
+   "d1": 173,
+   "id": "EUVD-2023-45782",
+   "ips": 29,
+   "kinds": [
+    "broad"
+   ],
+   "new": true,
+   "product": "Qlik Sense",
+   "ratio": 57.7,
+   "vendor": "Qlik"
   }
  ],
  "hp_trend": {
-  "DECLINE": 7,
-  "STEADY": 33,
-  "UPTICK": 131
+  "DECLINE": 3,
+  "STEADY": 100,
+  "UPTICK": 139
  },
- "hp_with": 331,
+ "hp_with": 332,
  "kev_day": [
   [
    "2026-08-17",
@@ -4745,7 +5587,7 @@
   ]
  ],
  "lead": {
-  "cut": "2026-07-12",
+  "cut": "2026-07-13",
   "old": {
    "cisa_first": 26,
    "eu_first": 3,
@@ -4982,39 +5824,39 @@
  ],
  "scatter": [
   {
-   "cve": "CVE-2015-3306",
-   "cvss": 10.0,
-   "epss": 98.03,
-   "id": "EUVD-2015-3352"
-  },
-  {
    "cve": "CVE-2026-102489",
    "cvss": 8.7,
    "epss": 1.26,
    "id": "EUVD-2026-90080"
   },
   {
+   "cve": "CVE-2015-3306",
+   "cvss": 10.0,
+   "epss": 99.5,
+   "id": "EUVD-2015-3352"
+  },
+  {
    "cve": "CVE-2021-3199",
    "cvss": 9.8,
-   "epss": 14.55,
+   "epss": 19.35,
    "id": "EUVD-2021-26539"
   },
   {
    "cve": "CVE-2016-3081",
    "cvss": 8.1,
-   "epss": 94.51,
+   "epss": 96.05,
    "id": "EUVD-2022-3161"
   },
   {
    "cve": "CVE-2015-5477",
    "cvss": 7.5,
-   "epss": 91.81,
+   "epss": 99.41,
    "id": "EUVD-2015-5432"
   },
   {
    "cve": "CVE-2023-22894",
    "cvss": 7.2,
-   "epss": 3.43,
+   "epss": 3.61,
    "id": "EUVD-2023-1342"
   },
   {
@@ -5228,12 +6070,6 @@
    "id": "EUVD-2026-56844"
   },
   {
-   "cve": "CVE-2008-4128",
-   "cvss": 8.1,
-   "epss": 33.87,
-   "id": "EUVD-2008-4111"
-  },
-  {
    "cve": "CVE-2026-85706",
    "cvss": 10.0,
    "epss": 92.96,
@@ -5284,7 +6120,7 @@
   {
    "cve": "CVE-2026-83549",
    "cvss": 7.8,
-   "epss": 10.76,
+   "epss": 9.89,
    "id": "EUVD-2026-69707"
   },
   {
@@ -5446,7 +6282,7 @@
   {
    "cve": "CVE-2026-83548",
    "cvss": 10.0,
-   "epss": 8.76,
+   "epss": 8.04,
    "id": "EUVD-2026-69704"
   },
   {
@@ -5914,10 +6750,6 @@
  "tte_n": 313,
  "updates": [
   [
-   "2026-09-11",
-   2
-  ],
-  [
    "2026-09-12",
    3
   ],
@@ -5999,10 +6831,14 @@
   ],
   [
    "2026-10-09",
-   6
+   5
+  ],
+  [
+   "2026-10-10",
+   1
   ]
  ],
- "updates_from": "2026-09-11",
+ "updates_from": "2026-09-12",
  "urgency": [
   [
    "2024-10",
@@ -6234,11 +7070,11 @@
   [
    "Microsoft",
    12,
-   7
+   6
   ],
   [
    "n/a",
-   11,
+   10,
    12
   ],
   [
