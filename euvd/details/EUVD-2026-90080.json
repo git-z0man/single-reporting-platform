@@ -36,7 +36,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:A/AU:Y/V:C",
   "baseScoreVersion": "4.0",
   "datePublished": "Sep 30, 2026, 4:21:19 PM",
-  "dateUpdated": "Oct 9, 2026, 3:59:17 PM",
+  "dateUpdated": "Oct 10, 2026, 3:55:20 AM",
   "description": "Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The bug is also present in version 7.0.0 to version 7.1.2, but not exploitable due to changes in the underlying framework.",
   "enisaIdAdvisory": [
    {
@@ -130,7 +130,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-102489\nGHSA-xmw5-m2wg-4243\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 10, 2026, 7:03:18 AM",
+     "dataProcessed": "Oct 11, 2026, 7:02:54 AM",
      "datePublished": "Sep 30, 2026, 6:33:49 PM",
      "dateUpdated": "Oct 7, 2026, 3:31:29 PM",
      "description": "Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The vulnerability is also present in version 7.0.0 to version 7.1.3, but not exploitable due to environment conditions.",
@@ -149,9 +149,9 @@
      "baseScore": 8.7,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:A/AU:Y/V:C",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 10, 2026, 7:12:21 AM",
+     "dataProcessed": "Oct 11, 2026, 7:12:13 AM",
      "datePublished": "Sep 30, 2026, 4:21:19 PM",
-     "dateUpdated": "Oct 9, 2026, 3:59:17 PM",
+     "dateUpdated": "Oct 10, 2026, 3:55:20 AM",
      "description": "Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The bug is also present in version 7.0.0 to version 7.1.2, but not exploitable due to changes in the underlying framework.",
      "enisa_id": "EUVD-2026-90080\n",
      "epss": 1.26,
