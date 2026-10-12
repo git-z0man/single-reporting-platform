@@ -11,10 +11,10 @@ only place where values the EUVD keeps no history of (honeypot counts, set sizes
 recorded over time.
 
 Honeypot surges: from that history it marks surges, an entry attacked far above its own
-30-day level by many sources ("broad"), or flagged UPTICK by the EUVD on several recorded
-days in a row ("persistent"). The EUVD's own UPTICK flag compares one day with the 7-day
-average and fires for dozens of entries a day; a surge is the stricter signal the monitor
-reports. New surges are printed, one per line, after the summary.
+30-day level by many sources ("broad"), or well above it from several sources on several
+recorded days in a row ("persistent"). The EUVD's own UPTICK flag compares one day with the
+7-day average, fires for dozens of entries a day and stays on for days, so it is not used for
+either; a surge is the stricter signal the monitor reports. New surges are printed, one per line, after the summary.
 
 The page is rendered by euvd/charts.js from the data embedded in it. When node and
 Playwright are available, euvd/prerender.js draws the charts into the file so it also
@@ -52,7 +52,8 @@ ASSIGNERS = [("CERTVDE", "CERT@VDE (DE)"), ("CERT-PL", "CERT Polska (PL)"), ("IN
 GLOBAL = [("mitre", "MITRE"), ("GitHub_M", "GitHub"), ("Patchstack", "Patchstack"), ("VulDB", "VulDB"),
           ("microsoft", "Microsoft"), ("redhat", "Red Hat"), ("Wordfence", "Wordfence"), ("VulnCheck", "VulnCheck"),
           ("cisco", "Cisco"), ("JPCERT", "JPCERT/CC"), ("Fortinet", "Fortinet")]
-DETAIL_ASSIGNER = "CERTVDE"
+# Assigners with a profile panel of their own, in page order
+DETAIL_ASSIGNERS = ["CERTVDE", "CERT-PL", "INCIBE", "CIRCL"]
 CWE_NAMES = {"CWE-20": "Improper input validation", "CWE-78": "OS command injection", "CWE-787": "Out-of-bounds write",
              "CWE-416": "Use after free", "CWE-119": "Memory buffer bounds", "CWE-22": "Path traversal",
              "CWE-94": "Code injection", "CWE-502": "Unsafe deserialisation", "CWE-77": "Command injection",
@@ -60,11 +61,16 @@ CWE_NAMES = {"CWE-20": "Improper input validation", "CWE-78": "OS command inject
              "CWE-306": "Missing authentication", "CWE-843": "Type confusion", "CWE-862": "Missing authorisation",
              "CWE-918": "Server-side request forgery", "CWE-434": "Unrestricted file upload", "CWE-125": "Out-of-bounds read"}
 ORIGIN_NAMES = {"cnw": "CSIRTs Network", "cert.pl": "CERT-PL", "cert-pl": "CERT-PL"}
-# Honeypot surges. Starting values, to be calibrated once a few weeks are recorded: on
-# 2026-10-09 they would have marked 4 entries, against 51 UPTICK flags.
+# Honeypot surges. Starting values, to be calibrated once a few weeks are recorded.
+# "broad": on 2026-10-10..12 it marked 5, 13 and 4 entries, against 85-139 UPTICK flags.
 SURGE_RATIO = 20     # today's connections at least this many times the 30-day average
 SURGE_IPS = 25       # ... from at least this many source IPs (fewer: one or a few scanners)
-SURGE_DAYS = 3       # UPTICK on this many recorded days in a row
+# "persistent": until 2026-10-12 this was "UPTICK on three days in a row", which marked 57
+# entries on 2026-10-12, some with 2 connections: the flag stays on. Now a level held for
+# three recorded days; on 2026-10-12 it marks 3 entries.
+PERSIST_RATIO = 10   # connections at least this many times the 30-day average ...
+PERSIST_IPS = 10     # ... from at least this many source IPs ...
+SURGE_DAYS = 3       # ... on this many recorded days in a row
 TREND_CODE = {"UPTICK": "U", "STEADY": "S", "DECLINE": "D"}
 
 
@@ -141,7 +147,7 @@ def fetch_everything(today, cached_months, full):
     months = count_months(today, cached_months, full)
     totals = {a: search_total("assigner=" + urllib.parse.quote(a)) for a, _ in ASSIGNERS + GLOBAL}
     euvd_total = search_total("fromScore=0&toScore=10")
-    detail = search_all("assigner=" + urllib.parse.quote(DETAIL_ASSIGNER))
+    detail = {a: search_all("assigner=" + urllib.parse.quote(a)) for a in DETAIL_ASSIGNERS}
     return dict(items=items, kev_dump=kev_dump, hp=hp, kev_entries=kev_entries, cisa=cisa, months=months,
                 totals=totals, euvd_total=euvd_total, detail=detail)
 
@@ -340,13 +346,15 @@ def compute(data, today):
     S["cwe"] = [[k, CWE_NAMES.get(k, ""), n] for k, n in cw.most_common(8)]
 
     # the whole EUVD
+    det = data["detail"] if isinstance(data["detail"], dict) else {DETAIL_ASSIGNERS[0]: data["detail"]}
+    details = [detail_profile(det[a], a, items) for a in DETAIL_ASSIGNERS if a in det]
     mo = data["months"]
     ms = sorted(mo["all"])
     S["gen"] = {"months": ms, "all": [mo["all"][m] for m in ms], "crit": [mo["crit"][m] for m in ms],
                 "assigners": [[a, n, [mo[a][m] for m in ms], data["totals"][a]] for a, n in ASSIGNERS],
                 "rank": sorted([[n, data["totals"][a], 1] for a, n in ASSIGNERS] + [[n, data["totals"][a], 0] for a, n in GLOBAL],
                                key=lambda r: -r[1]),
-                "euvd_total": data["euvd_total"], "detail": detail_profile(data["detail"], DETAIL_ASSIGNER, items)}
+                "euvd_total": data["euvd_total"], "details": details, "detail": details[0] if details else None}
     return S
 
 
@@ -439,14 +447,19 @@ def surge_kinds(day_rows, i):
     """Surge kinds of entry i on the last of `day_rows` ([(date, {id: values})], oldest first)."""
     if not day_rows or i not in day_rows[-1][1]:
         return []
-    d1, ips, _, avg30 = day_rows[-1][1][i]
     kinds = []
-    if avg30 is not None and ips is not None and d1 >= SURGE_RATIO * max(avg30, 1) and ips >= SURGE_IPS:
+    if above(day_rows[-1][1][i], SURGE_RATIO, SURGE_IPS):
         kinds.append("broad")
     last = day_rows[-SURGE_DAYS:]
-    if len(last) == SURGE_DAYS and all(i in m and m[i][2] == "U" for _, m in last):
+    if len(last) == SURGE_DAYS and all(i in m and above(m[i], PERSIST_RATIO, PERSIST_IPS) for _, m in last):
         kinds.append("persistent")
     return kinds
+
+
+def above(v, ratio, ips):
+    """True when one day's (connections, ips, trend, avg30) is `ratio` times the 30-day average from `ips` sources."""
+    d1, n_ips, _, avg30 = v
+    return avg30 is not None and n_ips is not None and d1 >= ratio * max(avg30, 1) and n_ips >= ips
 
 
 def hp_surges(days_all, S):
@@ -468,10 +481,11 @@ def hp_surges(days_all, S):
 
 
 def hp_heat(days_all, surges, limit=20, span=30):
-    """Rows for the persistence heatmap: entries flagged UPTICK, or in a surge, on any of the last `span`
-    recorded days; one cell per day, [connections / 30-day average or None, trend code]."""
+    """Rows for the persistence heatmap: entries at the persistent level (PERSIST_RATIO from PERSIST_IPS
+    sources), or in a surge, on any of the last `span` recorded days; one cell per day,
+    [connections / 30-day average or None, trend code]."""
     days = days_all[-span:]
-    flagged = collections.Counter(i for _, m in days for i, v in m.items() if v[2] == "U")
+    flagged = collections.Counter(i for _, m in days for i, v in m.items() if above(v, PERSIST_RATIO, PERSIST_IPS))
     for s in surges:
         flagged[s["id"]] += 0
     rows = []

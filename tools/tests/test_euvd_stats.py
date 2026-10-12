@@ -44,7 +44,9 @@ def data():
             "CVE-2026-3": {"cveID": "CVE-2026-3", "dateAdded": "2025-12-01", "dueDate": "2025-12-22", "knownRansomwareCampaignUse": "Unknown", "cwes": []}}
     months = {s: {m: 5 for m, _, _ in bs.month_windows("2026-10-07")} for s in ["all", "crit"] + [a for a, _ in bs.ASSIGNERS]}
     totals = {a: 10 for a, _ in bs.ASSIGNERS + bs.GLOBAL}
-    detail = [dict(item(9, "2026-01-01", "2026-01-01"), id="EUVD-2026-9", exploitedSince=None)]
+    detail = {"CERTVDE": [dict(item(9, "2026-01-01", "2026-01-01"), id="EUVD-2026-9", exploitedSince=None)],
+              "CERT-PL": [dict(item(8, "2026-01-01", "2025-03-01", vendor="Pol"), id="EUVD-2026-8", exploitedSince=None)],
+              "INCIBE": [], "CIRCL": [dict(item(1, "2026-09-20", "2026-09-01"), id="EUVD-2026-1")]}
     return dict(items=items, kev_dump=kev_dump, hp=hp, kev_entries=kev_entries, cisa=cisa, months=months, totals=totals,
                 euvd_total=1000, detail=detail)
 
@@ -72,6 +74,8 @@ class Case(unittest.TestCase):
         self.assertEqual(S["lead"]["recent"]["eu_first"], 1)               # EU KEV two days before CISA
         self.assertEqual({r[0]: r[1] for r in S["urgency"]}["2026-09"], 1)   # one 3-day window in Sep 2026
         self.assertEqual(S["gen"]["detail"]["n"], 1)
+        self.assertEqual([(v["assigner"], v["n"], v["exploited"]) for v in S["gen"]["details"]],
+                         [("CERTVDE", 1, 0), ("CERT-PL", 1, 0), ("INCIBE", 0, 0), ("CIRCL", 1, 1)])
         page = self.read("stats.html")
         self.assertIn('<script id="data" type="application/json">', page)
         self.assertNotIn("</script><b>x", page)                            # embedded JSON cannot close the script
@@ -118,11 +122,11 @@ class Case(unittest.TestCase):
         html = open(page, encoding="utf-8").read()
         self.assertNotIn("could not be drawn", html)
         self.assertNotIn("<script", html)
-        self.assertEqual(html.count('class="p"'), 22)
+        self.assertEqual(html.count('class="p"'), 25)
         self.assertEqual(html.count('<h2 class="g"'), 6)
         titles = re.findall(r'<h2><span class="tag">[^<]*</span>\d+\. (.*?)</h2>', html)
-        self.assertEqual(len(titles), 22)
-        self.assertEqual(len(set(titles)), 22, "a panel appears twice")
+        self.assertEqual(len(titles), 25)
+        self.assertEqual(len(set(titles)), 25, "a panel appears twice")
         for i in range(1, 7):
             self.assertIn(f'href="#g{i}"', html)
             self.assertIn(f'id="g{i}"', html)
@@ -149,19 +153,21 @@ class Honeypot(unittest.TestCase):
         self.assertEqual([(r["id"], r["kinds"], r["new"]) for r in s], [("A", ["broad"], True)])   # B: too few addresses
         days.append(("2026-10-10", D((900, 40, "S", 10.0), (10, 2, "S", 10.0))))
         self.assertEqual([(r["id"], r["new"]) for r in bs.hp_surges(days, {})], [("A", False)])
-        days.append(("2026-10-11", D((100, 40, "S", 10.0), (10, 2, "S", 10.0))))                     # 10x: below the ratio
+        days.append(("2026-10-11", D((90, 40, "S", 10.0), (10, 2, "S", 10.0))))                      # 9x: below both ratios
         self.assertEqual(bs.hp_surges(days, {}), [])
 
-    def test_persistent_surge_after_three_flagged_days(self):
-        days = [(f"2026-10-0{n}", {"A": (20, 3, "U", 10.0)}) for n in (7, 8)]
+    def test_persistent_surge_needs_a_level_held_three_days(self):
+        days = [(f"2026-10-0{n}", {"A": (150, 12, "S", 10.0), "B": (2, 2, "U", 1.0)}) for n in (7, 8)]
         self.assertEqual(bs.hp_surges(days, {}), [])
-        days.append(("2026-10-09", {"A": (20, 3, "U", 10.0)}))
+        days.append(("2026-10-09", {"A": (150, 12, "S", 10.0), "B": (2, 2, "U", 1.0)}))
         s = bs.hp_surges(days, {})
-        self.assertEqual((s[0]["kinds"], s[0]["new"]), (["persistent"], True))
-        days.append(("2026-10-10", {"A": (20, 3, "U", 10.0)}))
+        self.assertEqual([(r["id"], r["kinds"], r["new"]) for r in s], [("A", ["persistent"], True)])   # B: UPTICK alone is not enough
+        days.append(("2026-10-10", {"A": (150, 12, "S", 10.0)}))
         self.assertFalse(bs.hp_surges(days, {})[0]["new"])
+        days.append(("2026-10-11", {"A": (150, 5, "S", 10.0)}))                                        # too few sources today
+        self.assertEqual(bs.hp_surges(days, {}), [])
         heat = bs.hp_heat(days, [])
-        self.assertEqual((heat["n"], heat["rows"][0]["days"], heat["rows"][0]["cells"][0]), (1, 4, [2.0, "U"]))
+        self.assertEqual((heat["n"], heat["rows"][0]["id"], heat["rows"][0]["days"], heat["rows"][0]["cells"][0]), (1, "A", 4, [15.0, "S"]))
 
     def test_first_sighting_on_the_sensors_first_day_is_not_a_lead(self):
         S = bs.compute(data(), "2026-10-07")
@@ -169,6 +175,20 @@ class Honeypot(unittest.TestCase):
         self.assertEqual((L["n"], L["start"], L["censored"]), (2, "2022-06-23", 1))
         self.assertEqual(dict(L["buckets"])["1-30 days before"], 1)                               # seen 15 Sep, flagged 20 Sep
         self.assertEqual([(r["id"], r["lead"], r["censored"]) for r in L["recent"]], [("EUVD-2026-1", 5, False)])
+
+    @unittest.skipUnless(shutil.which("node") and os.path.isdir("/opt/node22/lib/node_modules/playwright"), "node/Playwright not available")
+    def test_old_stats_json_with_one_profile_still_draws(self):
+        root = tempfile.mkdtemp()
+        self.addCleanup(shutil.rmtree, root)
+        os.makedirs(os.path.join(root, "euvd"))
+        S = bs.compute(data(), "2026-10-07")
+        S["gen"].pop("details")
+        S["history"], S["hp_surges"], S["hp_heat"] = [], [], {"days": [], "rows": [], "n": 0}
+        json.dump(S, open(os.path.join(root, "euvd", "stats.json"), "w"))
+        self.assertEqual(bs.main(["--root", root, "--render-only"]), 0)
+        html = open(os.path.join(root, "euvd", "stats.html"), encoding="utf-8").read()
+        self.assertNotIn("could not be drawn", html)
+        self.assertEqual(html.count('class="p"'), 22)
 
     def test_pages_have_breadcrumbs_and_relative_links_resolve(self):
         import enrich
