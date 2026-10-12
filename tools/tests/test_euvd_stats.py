@@ -153,19 +153,21 @@ class Honeypot(unittest.TestCase):
         self.assertEqual([(r["id"], r["kinds"], r["new"]) for r in s], [("A", ["broad"], True)])   # B: too few addresses
         days.append(("2026-10-10", D((900, 40, "S", 10.0), (10, 2, "S", 10.0))))
         self.assertEqual([(r["id"], r["new"]) for r in bs.hp_surges(days, {})], [("A", False)])
-        days.append(("2026-10-11", D((100, 40, "S", 10.0), (10, 2, "S", 10.0))))                     # 10x: below the ratio
+        days.append(("2026-10-11", D((90, 40, "S", 10.0), (10, 2, "S", 10.0))))                      # 9x: below both ratios
         self.assertEqual(bs.hp_surges(days, {}), [])
 
-    def test_persistent_surge_after_three_flagged_days(self):
-        days = [(f"2026-10-0{n}", {"A": (20, 3, "U", 10.0)}) for n in (7, 8)]
+    def test_persistent_surge_needs_a_level_held_three_days(self):
+        days = [(f"2026-10-0{n}", {"A": (150, 12, "S", 10.0), "B": (2, 2, "U", 1.0)}) for n in (7, 8)]
         self.assertEqual(bs.hp_surges(days, {}), [])
-        days.append(("2026-10-09", {"A": (20, 3, "U", 10.0)}))
+        days.append(("2026-10-09", {"A": (150, 12, "S", 10.0), "B": (2, 2, "U", 1.0)}))
         s = bs.hp_surges(days, {})
-        self.assertEqual((s[0]["kinds"], s[0]["new"]), (["persistent"], True))
-        days.append(("2026-10-10", {"A": (20, 3, "U", 10.0)}))
+        self.assertEqual([(r["id"], r["kinds"], r["new"]) for r in s], [("A", ["persistent"], True)])   # B: UPTICK alone is not enough
+        days.append(("2026-10-10", {"A": (150, 12, "S", 10.0)}))
         self.assertFalse(bs.hp_surges(days, {})[0]["new"])
+        days.append(("2026-10-11", {"A": (150, 5, "S", 10.0)}))                                        # too few sources today
+        self.assertEqual(bs.hp_surges(days, {}), [])
         heat = bs.hp_heat(days, [])
-        self.assertEqual((heat["n"], heat["rows"][0]["days"], heat["rows"][0]["cells"][0]), (1, 4, [2.0, "U"]))
+        self.assertEqual((heat["n"], heat["rows"][0]["id"], heat["rows"][0]["days"], heat["rows"][0]["cells"][0]), (1, "A", 4, [15.0, "S"]))
 
     def test_first_sighting_on_the_sensors_first_day_is_not_a_lead(self):
         S = bs.compute(data(), "2026-10-07")

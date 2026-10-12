@@ -11,10 +11,10 @@ only place where values the EUVD keeps no history of (honeypot counts, set sizes
 recorded over time.
 
 Honeypot surges: from that history it marks surges, an entry attacked far above its own
-30-day level by many sources ("broad"), or flagged UPTICK by the EUVD on several recorded
-days in a row ("persistent"). The EUVD's own UPTICK flag compares one day with the 7-day
-average and fires for dozens of entries a day; a surge is the stricter signal the monitor
-reports. New surges are printed, one per line, after the summary.
+30-day level by many sources ("broad"), or well above it from several sources on several
+recorded days in a row ("persistent"). The EUVD's own UPTICK flag compares one day with the
+7-day average, fires for dozens of entries a day and stays on for days, so it is not used for
+either; a surge is the stricter signal the monitor reports. New surges are printed, one per line, after the summary.
 
 The page is rendered by euvd/charts.js from the data embedded in it. When node and
 Playwright are available, euvd/prerender.js draws the charts into the file so it also
@@ -61,11 +61,16 @@ CWE_NAMES = {"CWE-20": "Improper input validation", "CWE-78": "OS command inject
              "CWE-306": "Missing authentication", "CWE-843": "Type confusion", "CWE-862": "Missing authorisation",
              "CWE-918": "Server-side request forgery", "CWE-434": "Unrestricted file upload", "CWE-125": "Out-of-bounds read"}
 ORIGIN_NAMES = {"cnw": "CSIRTs Network", "cert.pl": "CERT-PL", "cert-pl": "CERT-PL"}
-# Honeypot surges. Starting values, to be calibrated once a few weeks are recorded: on
-# 2026-10-09 they would have marked 4 entries, against 51 UPTICK flags.
+# Honeypot surges. Starting values, to be calibrated once a few weeks are recorded.
+# "broad": on 2026-10-10..12 it marked 5, 13 and 4 entries, against 85-139 UPTICK flags.
 SURGE_RATIO = 20     # today's connections at least this many times the 30-day average
 SURGE_IPS = 25       # ... from at least this many source IPs (fewer: one or a few scanners)
-SURGE_DAYS = 3       # UPTICK on this many recorded days in a row
+# "persistent": until 2026-10-12 this was "UPTICK on three days in a row", which marked 57
+# entries on 2026-10-12, some with 2 connections: the flag stays on. Now a level held for
+# three recorded days; on 2026-10-12 it marks 3 entries.
+PERSIST_RATIO = 10   # connections at least this many times the 30-day average ...
+PERSIST_IPS = 10     # ... from at least this many source IPs ...
+SURGE_DAYS = 3       # ... on this many recorded days in a row
 TREND_CODE = {"UPTICK": "U", "STEADY": "S", "DECLINE": "D"}
 
 
@@ -442,14 +447,19 @@ def surge_kinds(day_rows, i):
     """Surge kinds of entry i on the last of `day_rows` ([(date, {id: values})], oldest first)."""
     if not day_rows or i not in day_rows[-1][1]:
         return []
-    d1, ips, _, avg30 = day_rows[-1][1][i]
     kinds = []
-    if avg30 is not None and ips is not None and d1 >= SURGE_RATIO * max(avg30, 1) and ips >= SURGE_IPS:
+    if above(day_rows[-1][1][i], SURGE_RATIO, SURGE_IPS):
         kinds.append("broad")
     last = day_rows[-SURGE_DAYS:]
-    if len(last) == SURGE_DAYS and all(i in m and m[i][2] == "U" for _, m in last):
+    if len(last) == SURGE_DAYS and all(i in m and above(m[i], PERSIST_RATIO, PERSIST_IPS) for _, m in last):
         kinds.append("persistent")
     return kinds
+
+
+def above(v, ratio, ips):
+    """True when one day's (connections, ips, trend, avg30) is `ratio` times the 30-day average from `ips` sources."""
+    d1, n_ips, _, avg30 = v
+    return avg30 is not None and n_ips is not None and d1 >= ratio * max(avg30, 1) and n_ips >= ips
 
 
 def hp_surges(days_all, S):
@@ -471,10 +481,11 @@ def hp_surges(days_all, S):
 
 
 def hp_heat(days_all, surges, limit=20, span=30):
-    """Rows for the persistence heatmap: entries flagged UPTICK, or in a surge, on any of the last `span`
-    recorded days; one cell per day, [connections / 30-day average or None, trend code]."""
+    """Rows for the persistence heatmap: entries at the persistent level (PERSIST_RATIO from PERSIST_IPS
+    sources), or in a surge, on any of the last `span` recorded days; one cell per day,
+    [connections / 30-day average or None, trend code]."""
     days = days_all[-span:]
-    flagged = collections.Counter(i for _, m in days for i, v in m.items() if v[2] == "U")
+    flagged = collections.Counter(i for _, m in days for i, v in m.items() if above(v, PERSIST_RATIO, PERSIST_IPS))
     for s in surges:
         flagged[s["id"]] += 0
     rows = []
