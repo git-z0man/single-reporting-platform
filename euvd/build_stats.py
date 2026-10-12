@@ -52,7 +52,8 @@ ASSIGNERS = [("CERTVDE", "CERT@VDE (DE)"), ("CERT-PL", "CERT Polska (PL)"), ("IN
 GLOBAL = [("mitre", "MITRE"), ("GitHub_M", "GitHub"), ("Patchstack", "Patchstack"), ("VulDB", "VulDB"),
           ("microsoft", "Microsoft"), ("redhat", "Red Hat"), ("Wordfence", "Wordfence"), ("VulnCheck", "VulnCheck"),
           ("cisco", "Cisco"), ("JPCERT", "JPCERT/CC"), ("Fortinet", "Fortinet")]
-DETAIL_ASSIGNER = "CERTVDE"
+# Assigners with a profile panel of their own, in page order
+DETAIL_ASSIGNERS = ["CERTVDE", "CERT-PL", "INCIBE", "CIRCL"]
 CWE_NAMES = {"CWE-20": "Improper input validation", "CWE-78": "OS command injection", "CWE-787": "Out-of-bounds write",
              "CWE-416": "Use after free", "CWE-119": "Memory buffer bounds", "CWE-22": "Path traversal",
              "CWE-94": "Code injection", "CWE-502": "Unsafe deserialisation", "CWE-77": "Command injection",
@@ -141,7 +142,7 @@ def fetch_everything(today, cached_months, full):
     months = count_months(today, cached_months, full)
     totals = {a: search_total("assigner=" + urllib.parse.quote(a)) for a, _ in ASSIGNERS + GLOBAL}
     euvd_total = search_total("fromScore=0&toScore=10")
-    detail = search_all("assigner=" + urllib.parse.quote(DETAIL_ASSIGNER))
+    detail = {a: search_all("assigner=" + urllib.parse.quote(a)) for a in DETAIL_ASSIGNERS}
     return dict(items=items, kev_dump=kev_dump, hp=hp, kev_entries=kev_entries, cisa=cisa, months=months,
                 totals=totals, euvd_total=euvd_total, detail=detail)
 
@@ -340,13 +341,15 @@ def compute(data, today):
     S["cwe"] = [[k, CWE_NAMES.get(k, ""), n] for k, n in cw.most_common(8)]
 
     # the whole EUVD
+    det = data["detail"] if isinstance(data["detail"], dict) else {DETAIL_ASSIGNERS[0]: data["detail"]}
+    details = [detail_profile(det[a], a, items) for a in DETAIL_ASSIGNERS if a in det]
     mo = data["months"]
     ms = sorted(mo["all"])
     S["gen"] = {"months": ms, "all": [mo["all"][m] for m in ms], "crit": [mo["crit"][m] for m in ms],
                 "assigners": [[a, n, [mo[a][m] for m in ms], data["totals"][a]] for a, n in ASSIGNERS],
                 "rank": sorted([[n, data["totals"][a], 1] for a, n in ASSIGNERS] + [[n, data["totals"][a], 0] for a, n in GLOBAL],
                                key=lambda r: -r[1]),
-                "euvd_total": data["euvd_total"], "detail": detail_profile(data["detail"], DETAIL_ASSIGNER, items)}
+                "euvd_total": data["euvd_total"], "details": details, "detail": details[0] if details else None}
     return S
 
 
