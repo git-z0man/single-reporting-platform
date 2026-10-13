@@ -118,18 +118,18 @@
  "honeypot": [
   {
    "avg30d": 1.0,
-   "avg7d": 0.0,
+   "avg7d": 1.0,
    "avg90d": 0.0,
    "cisaKevFlag": true,
-   "connections1d": 107,
+   "connections1d": 8,
    "cveId": "CVE-2026-9586",
    "firstSeenAt": "Sep 4, 2026, 3:00:00 AM",
    "isNew": false,
-   "lastSeenAt": "Oct 12, 2026, 7:12:10 AM",
+   "lastSeenAt": "Oct 13, 2026, 7:12:23 AM",
    "product": "Sangoma Switchvox",
    "source": "shadowserver",
-   "trend": "STEADY",
-   "uniqueIps1d": 1,
+   "trend": "UPTICK",
+   "uniqueIps1d": 7,
    "vendor": "Sangoma",
    "vulnClass": "voip",
    "vulnSeverity": "Critical"
