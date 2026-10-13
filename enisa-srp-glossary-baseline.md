@@ -26,8 +26,8 @@ status: >-
   (1.2 → 1.3) and this time the correlation was large: 38 fields → 39, a new AEV
   field inserted as v23 cascading every later field's number up by one, and roughly
   a dozen wording/status fixes across the page. See the change log.
-last_check: 2026-10-12
-last_change: 2026-10-02
+last_check: 2026-10-13
+last_change: 2026-10-13
 note: >-
   One row per field, one table per group (Common / AEV / SI), matching the live page's own
   column order — Nr. | Field | Applies to | Meaning | How to complete | Example | Format |
@@ -41,6 +41,16 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-10-13 06:05 UTC (vs. 2026-10-02)
+
+One field was renamed: v28 "Particular Exceptional Circumstances (PEC)" is now "Particularly Exceptional Circumstances (PEC)". Nothing else changed in the 42 fields.
+
+**Watch**
+- The footer still reads Version 1.4, last update 01 October 2026, so the rename did not move the stamp (same pattern as 2026-09-07). ENISA upgraded the platform to 1.1 on 12 October; the Glossary has no matching version.
+
+**Unchanged**
+42 fields, Version 1.4 / 01 October 2026, same address (`cra-srp-glossary2`, HTTP 200).
 
 ### 2026-10-02 06:07 UTC (vs. 2026-09-26 06:13 UTC)
 
@@ -419,7 +429,7 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 | v26 | Date and time when you become aware of the Actively Exploited Vulnerability [1] *(was "v25", "Date/time"; renumbered and reworded since 2026-09-10 13:11 UTC)* | AEV | Date and time when the manufacturer or another relevant party first detected the vulnerability. | For example, enter the date and time when the vulnerability was first detected. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description. | 2026-08-24 09:15 UTC | Date and time | Required | By default copied from previous step, or updated | By default copied from previous step, or updated |
 | v26a | Date and time when the Actively Exploited Vulnerability occurred (UTC time) *(new field, inserted between v26 and v27 2026-09-26, without renumbering either — mirrors the SI table's i38)* | AEV | Known or estimated date and time when the actively exploited vulnerability occured. *("occured" typo on the live page, reproduced verbatim — missing the second "r")* | For example, enter the date and time since when the vulnerability exists. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description. | 2026-08-24 09:15 UTC | Date and time | Optional | Required | By default copied from previous step, or updated |
 | v27 | Malicious actor that has exploited/is exploiting the vulnerability *(was "v26"; renumbering only, since 2026-09-10 13:11 UTC)* | AEV | Available information about the actor that exploited or is exploiting the vulnerability, without requiring attribution where information is unavailable. | You may enter confirmed information about the malicious actor or observed activity. If attribution is unconfirmed, describe the observed indicators and state that attribution is unknown (max. 100 characters).. | Unknown actor; observed infrastructure includes the indicators listed in Reference REF-2026-18. | Free text | Optional | Optional | Required if such information available |
-| v28 | Particular Exceptional Circumstances (PEC) *(was "v27"; renumbering only, since 2026-09-10 13:11 UTC)* | AEV | Selection indicating that one or more legally specified circumstances in the third subparagraph of Article 16 (2) of CRA justify withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination. | You may select the applicable exceptional circumstance only when the corresponding legal condition is met: *(colon, not full stop, and a three-item list added 2026-10-02)*<br>a) The vulnerability is actively exploited but confined to the coordinating CSIRT's Member State.<br>b) Further dissemination would compromise essential national security or defence interests.<br>c) Further dissemination poses an imminent high cybersecurity risk that cannot yet be mitigated. | *(empty since 2026-09-12 05:12 UTC; was "—")* | Select applicable PEC option(s) | N/A | Optional | N/A |
+| v28 | Particularly Exceptional Circumstances (PEC) *(renamed 2026-10-12/13 from "Particular Exceptional Circumstances (PEC)", no other change; was "v27"; renumbering only, since 2026-09-10 13:11 UTC)* | AEV | Selection indicating that one or more legally specified circumstances in the third subparagraph of Article 16 (2) of CRA justify withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination. | You may select the applicable exceptional circumstance only when the corresponding legal condition is met: *(colon, not full stop, and a three-item list added 2026-10-02)*<br>a) The vulnerability is actively exploited but confined to the coordinating CSIRT's Member State.<br>b) Further dissemination would compromise essential national security or defence interests.<br>c) Further dissemination poses an imminent high cybersecurity risk that cannot yet be mitigated. | *(empty since 2026-09-12 05:12 UTC; was "—")* | Select applicable PEC option(s) | N/A | Optional | N/A |
 | v29 | PEC Delay Reason *(was "v28"; renumbering since 2026-09-10 13:11 UTC)* | AEV | You may select at least one of the three legally specified circumstances justifying withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination. *(Meaning fixed 2026-09-10 13:11 UTC; was "one of the three of the" — now matches this row's own How-to-complete, resolving the tracked inconsistency)* | Support the selection with specific facts in PEC Delay Reason and indicate the requested dissemination delay. You may select at least one of the three options. | You may choose: the notified vulnerability has been actively exploited by a malicious actor and, according to the information available, it has been exploited in no other Member State than the one of the CSIRT designated as coordinator to which the manufacturer has notified the vulnerability; or<br>that any immediate further dissemination of the notified vulnerability would likely result in the supply of information the disclosure of which would be contrary to the essential interests of that Member State; or<br>that the notified vulnerability poses an imminent high cybersecurity risk stemming from the further dissemination; | Select applicable check box | N/A | Optional | N/A |
 | v30 | Please provide further information *(was "v29"; renumbering since 2026-09-10 13:11 UTC)* | AEV | Description of anything that should be helpful for CSIRT Designated as Coordinator (CDaC)taking *(missing space on the live page, since 2026-09-07)* their decision. | You may provide additional information (max. 800 characters). *(character limit added 2026-09-10 13:11 UTC; was "You may provide additional information(s)." with no stated limit)* | We consider it very important for national security. | Free text | Optional | Optional | By default copied from previous step, or updated |
 
