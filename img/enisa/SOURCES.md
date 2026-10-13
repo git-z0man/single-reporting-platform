@@ -110,6 +110,10 @@ nine of the ten are byte-identical in the new PDF, some on a different page
 replaced here by the v1.1 bitmap (PDF page 13, 1402×544). It now labels the
 first field "Manufacturer name" and badges both it and Additional Information
 "Required", while the manual's text still calls Additional Information optional.
+The running platform, checked on 13 October 2026, does not: its Manufacturer
+Details dialog badges only the manufacturer name. The guide uses this screenshot
+for the layout and says in its caption that the badge on Additional Information
+is not what the form does.
 
 - **`man-reg-legal-agreement.png`** — p. 12 (v1.1 p. 12, unchanged): the Legal Agreement dialog between EU Login and the personal details, linking to the Terms and Conditions.
 - **`man-reg-personal-details.png`** — p. 13 (v1.1 p. 12, unchanged): Personal Details, step 1 of 2 — First Name, Last Name, Email only.
