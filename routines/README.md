@@ -18,7 +18,7 @@ says which of the two it is.
 | `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `0 6 * * *` |
 | `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
 | `guide-sync.md` | **Guide sync** | `trig_01SB5rkv7M4VXgtRtNzPeNYD` | `30 7 * * *` |
-| `euvd-exploited-monitor.md` | **EUVD exploited monitor** | `trig_01Sfn7X2MMSSdBDZv9v51Z1D` | `20 6 * * *` |
+| `euvd-exploited-monitor.md` | **EUVD exploited monitor** | `trig_01Sfn7X2MMSSdBDZv9v51Z1D` | `50 4 * * *` |
 
 The UI name and the file name differ for the first one: an attempt to rename it
 to "ENISA SRP pages monitor" was refused along with the prompt update (see
@@ -130,6 +130,14 @@ ModDate are the only honest evidence. So the prompt now carries section 1a:
 hash the PDF every run, compare against `ar_user_manual_pdf_sha256` in
 `enisa-srp-faq-baseline.md`'s frontmatter, and diff the extracted text when
 the hash moves.
+
+On 12 October 2026, with the SRP 1.1 upgrade, ENISA published the real
+Version 1.1 at a new address (`.../2026-10/CRA SRP - AR User Manual v1.1.pdf`)
+and pointed the landing page's Download link at it; the September file is
+still served, unchanged. The run of 13 October caught it and recorded it as
+`ar_user_manual_pdf_v11_*`. Section 1a now follows the Download link, compares
+against those fields, and treats a moved link as a finding in itself. The same
+change added page 13, "CRA SRP Status", to the prompt's page list.
 
 The general lesson, worth applying to any document this or another routine
 picks up: **if a tracked page's purpose is to hand out a file, the file needs
@@ -321,7 +329,7 @@ Two things an agent cannot do here, so a person does them once:
 
 ## EUVD exploited monitor
 
-`euvd/check_exploited.py` does the work; the Routine runs it daily at 06:20 UTC and
+`euvd/check_exploited.py` does the work; the Routine runs it daily at 04:50 UTC (06:20 until 2026-10-08) and
 commits only a change or the once-a-day heartbeat. The baseline
 `euvd-exploited-baseline.md` states what the list can and cannot say: it makes
 **no claim about which entry was first reported through the SRP**, because no

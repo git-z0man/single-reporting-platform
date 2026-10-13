@@ -86,7 +86,9 @@ receives an invitation email — sat buried in the middle of it.
 maintained by a scheduled task that periodically re-checks the ENISA Single
 Reporting Platform page (its guidance subpages, the CRA SRP Glossary page,
 and the CSIRT-list page) and, since 2026-10-08, ENISA's Vulnerability Services
-topic page, whose EU KEV paragraph says SRP reports "will" feed the EU KEV, for
+topic page, whose EU KEV paragraph says SRP reports "will" feed the EU KEV, and,
+since 2026-10-13, the CRA SRP Status page and the AR User Manual PDF that the
+manual's Download link points to (Version 1.1 of October 2026), for
 changes, updates the baseline file(s), and
 opens a PR. The Glossary page needs its own full record for two reasons
 established on 2026-09-07: it changed address that day (the old path still
@@ -233,7 +235,7 @@ in `euvd/exploited.json`, the statistics page `euvd/stats.html` with its data
 `euvd/stats.json` and the daily record `euvd/history.jsonl`, both written by
 `euvd/build_stats.py`, one record per entry under `euvd/details/`, including the
 EUVD's honeypot sensor sightings, the EU KEV register `euvd/eukev.json`, and the page `euvd/index.html`) are maintained by a scheduled task that runs
-`euvd/check_exploited.py` daily at 06:20 UTC. The prompt is
+`euvd/check_exploited.py` daily at 04:50 UTC. The prompt is
 `routines/euvd-exploited-monitor.md`.
 
 The same convention as the other monitors applies: no manual review is required.

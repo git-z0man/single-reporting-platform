@@ -189,7 +189,7 @@ practical note as well.
 | `field-v25` | Full description of the impact of the vulnerability |  |
 | `field-v26` | Date/time when you become aware of the Actively Exploited Vulnerability [1] | — **written** |
 | `field-v27` | Malicious actor that has exploited/is exploiting the vulnerability |  |
-| `field-v28` | Particular Exceptional Circumstances (PEC) | ⚑ source note |
+| `field-v28` | Particularly Exceptional Circumstances (PEC) | ⚑ source note |
 | `field-v29` | PEC Delay Reason | ⚑ source note |
 | `field-v30` | Please provide further information |  |
 

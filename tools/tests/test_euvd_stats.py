@@ -146,28 +146,43 @@ class Honeypot(unittest.TestCase):
         self.assertEqual(days[0][1]["EUVD-1"], (40, None, "", None))
         self.assertEqual(days[2][1]["EUVD-1"], (60, 30, "U", 2.0))
 
-    def test_broad_surge_needs_ratio_and_addresses_and_is_new_once(self):
+    def test_broad_surge_needs_ratio_against_own_level_and_addresses_and_is_new_once(self):
         D = lambda *v: dict(zip(["A", "B"], v))
-        days = [("2026-10-09", D((1000, 30, "U", 10.0), (5000, 5, "U", 10.0)))]
+        days = [(f"2026-10-0{n}", D((100, 30, "S", 10.0), (500, 30, "S", 10.0))) for n in (5, 6, 7, 8)]
+        days.append(("2026-10-09", D((1000, 30, "U", 10.0), (5000, 5, "U", 10.0))))
         s = bs.hp_surges(days, {})
-        self.assertEqual([(r["id"], r["kinds"], r["new"]) for r in s], [("A", ["broad"], True)])   # B: too few addresses
-        days.append(("2026-10-10", D((900, 40, "S", 10.0), (10, 2, "S", 10.0))))
+        self.assertEqual([(r["id"], r["kinds"], r["base"], r["ratio"], r["new"]) for r in s],
+                         [("A", ["broad"], 100, 10.0, True)])                                    # B: too few addresses
+        days.append(("2026-10-10", D((1000, 40, "S", 10.0), (10, 2, "S", 10.0))))
         self.assertEqual([(r["id"], r["new"]) for r in bs.hp_surges(days, {})], [("A", False)])
-        days.append(("2026-10-11", D((90, 40, "S", 10.0), (10, 2, "S", 10.0))))                      # 9x: below both ratios
+        days.append(("2026-10-11", D((900, 40, "S", 10.0), (10, 2, "S", 10.0))))               # 9x its level: no longer broad,
+        self.assertEqual([(r["id"], r["kinds"], r["new"]) for r in bs.hp_surges(days, {})],    # but held three days
+                         [("A", ["persistent"], True)])
+
+    def test_steady_entry_far_above_the_euvd_average_is_no_surge(self):
+        # NetScaler on 2026-10-10..13: thousands of connections a day against an avg30d of 25-28.
+        days = [(f"2026-10-0{n}", {"A": (6000 + 100 * n, 50, "U", 27.0)}) for n in range(1, 8)]
+        self.assertEqual(bs.hp_surges(days, {}), [])
+
+    def test_no_surge_without_enough_recorded_days(self):
+        days = [(f"2026-10-0{n}", {"A": (10, 30, "S", 1.0)}) for n in (6, 7, 8)]
+        days.append(("2026-10-09", {"A": (5000, 300, "U", 1.0)}))
+        self.assertIsNone(bs.own_base(days, "A", 3))
         self.assertEqual(bs.hp_surges(days, {}), [])
 
     def test_persistent_surge_needs_a_level_held_three_days(self):
-        days = [(f"2026-10-0{n}", {"A": (150, 12, "S", 10.0), "B": (2, 2, "U", 1.0)}) for n in (7, 8)]
+        days = [(f"2026-10-0{n}", {"A": (20, 12, "S", 10.0), "B": (2, 2, "U", 1.0)}) for n in (3, 4, 5, 6)]
+        for n in (7, 8):
+            days.append((f"2026-10-0{n}", {"A": (150, 12, "S", 10.0), "B": (2, 2, "U", 1.0)}))
         self.assertEqual(bs.hp_surges(days, {}), [])
         days.append(("2026-10-09", {"A": (150, 12, "S", 10.0), "B": (2, 2, "U", 1.0)}))
         s = bs.hp_surges(days, {})
         self.assertEqual([(r["id"], r["kinds"], r["new"]) for r in s], [("A", ["persistent"], True)])   # B: UPTICK alone is not enough
-        days.append(("2026-10-10", {"A": (150, 12, "S", 10.0)}))
-        self.assertFalse(bs.hp_surges(days, {})[0]["new"])
-        days.append(("2026-10-11", {"A": (150, 5, "S", 10.0)}))                                        # too few sources today
+        days.append(("2026-10-10", {"A": (150, 5, "S", 10.0)}))                                        # too few sources today
         self.assertEqual(bs.hp_surges(days, {}), [])
         heat = bs.hp_heat(days, [])
-        self.assertEqual((heat["n"], heat["rows"][0]["id"], heat["rows"][0]["days"], heat["rows"][0]["cells"][0]), (1, "A", 4, [15.0, "S"]))
+        self.assertEqual((heat["n"], heat["rows"][0]["id"], heat["rows"][0]["days"]), (1, "A", 3))
+        self.assertEqual(heat["rows"][0]["cells"][4], [7.5, "S"])                                  # 150 against a level of 20
 
     def test_first_sighting_on_the_sensors_first_day_is_not_a_lead(self):
         S = bs.compute(data(), "2026-10-07")

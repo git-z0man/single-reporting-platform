@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "source": "https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2",
- "fetched": "2026-10-04",
+ "fetched": "2026-10-13",
  "version": "1.4",
  "last_update": "01 October 2026",
  "fields": [
@@ -343,7 +343,7 @@
   },
   {
    "nr": "v28",
-   "name": "Particular Exceptional Circumstances (PEC)",
+   "name": "Particularly Exceptional Circumstances (PEC)",
    "applies": "AEV",
    "means": "Selection indicating that one or more legally specified circumstances in the third subparagraph of Article 16 (2) of CRA justify withholding the full 72-hour AEV notification from simultaneous access by ENISA and/or delaying wider dissemination.",
    "how": "You may select the applicable exceptional circumstance only when the corresponding legal condition is met:\na) The vulnerability is actively exploited but confined to the coordinating CSIRT's Member State.\nb) Further dissemination would compromise essential national security or defence interests.\nc) Further dissemination poses an imminent high cybersecurity risk that cannot yet be mitigated.",
