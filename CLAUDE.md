@@ -235,7 +235,7 @@ in `euvd/exploited.json`, the statistics page `euvd/stats.html` with its data
 `euvd/stats.json` and the daily record `euvd/history.jsonl`, both written by
 `euvd/build_stats.py`, one record per entry under `euvd/details/`, including the
 EUVD's honeypot sensor sightings, the EU KEV register `euvd/eukev.json`, and the page `euvd/index.html`) are maintained by a scheduled task that runs
-`euvd/check_exploited.py` daily at 06:20 UTC. The prompt is
+`euvd/check_exploited.py` daily at 04:50 UTC. The prompt is
 `routines/euvd-exploited-monitor.md`.
 
 The same convention as the other monitors applies: no manual review is required.

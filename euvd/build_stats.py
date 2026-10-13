@@ -11,10 +11,12 @@ only place where values the EUVD keeps no history of (honeypot counts, set sizes
 recorded over time.
 
 Honeypot surges: from that history it marks surges, an entry attacked far above its own
-30-day level by many sources ("broad"), or well above it from several sources on several
-recorded days in a row ("persistent"). The EUVD's own UPTICK flag compares one day with the
-7-day average, fires for dozens of entries a day and stays on for days, so it is not used for
-either; a surge is the stricter signal the monitor reports. New surges are printed, one per line, after the summary.
+recorded level by many sources ("broad"), or well above it from several sources on several
+recorded days in a row ("persistent"). The level is the median of the entry's own daily
+connections on the previous recorded days. The EUVD's avg7d/avg30d/avg90d are not used: they
+are on another, undocumented scale (on 2026-10-13 the median entry had 17 times its avg30d in
+connections on an ordinary day). Its UPTICK flag fires for most entries every day, so it is not
+used either; a surge is the stricter signal the monitor reports. New surges are printed, one per line, after the summary.
 
 The page is rendered by euvd/charts.js from the data embedded in it. When node and
 Playwright are available, euvd/prerender.js draws the charts into the file so it also
@@ -61,14 +63,16 @@ CWE_NAMES = {"CWE-20": "Improper input validation", "CWE-78": "OS command inject
              "CWE-306": "Missing authentication", "CWE-843": "Type confusion", "CWE-862": "Missing authorisation",
              "CWE-918": "Server-side request forgery", "CWE-434": "Unrestricted file upload", "CWE-125": "Out-of-bounds read"}
 ORIGIN_NAMES = {"cnw": "CSIRTs Network", "cert.pl": "CERT-PL", "cert-pl": "CERT-PL"}
-# Honeypot surges. Starting values, to be calibrated once a few weeks are recorded.
-# "broad": on 2026-10-10..12 it marked 5, 13 and 4 entries, against 85-139 UPTICK flags.
-SURGE_RATIO = 20     # today's connections at least this many times the 30-day average
+# Honeypot surges, measured against the entry's own record in history.jsonl. Until 2026-10-13
+# they were measured against the EUVD's avg30d, which is not on the connection scale: a busy but
+# steady entry (NetScaler, 5,000-19,000 connections a day, avg30d 25-28) showed "682x" every day,
+# and 46% of all entries cleared "20x". Starting values, to be calibrated once a few weeks are
+# recorded; replayed on 2026-10-13, "broad" marks 9 entries where the old rule marked 20.
+BASE_DAYS = 4        # the level needs at least this many previous recorded days
+BASE_SPAN = 30       # ... and uses at most this many (a day without a sighting counts as 0)
+SURGE_RATIO = 10     # "broad": today's connections at least this many times the level ...
 SURGE_IPS = 25       # ... from at least this many source IPs (fewer: one or a few scanners)
-# "persistent": until 2026-10-12 this was "UPTICK on three days in a row", which marked 57
-# entries on 2026-10-12, some with 2 connections: the flag stays on. Now a level held for
-# three recorded days; on 2026-10-12 it marks 3 entries.
-PERSIST_RATIO = 10   # connections at least this many times the 30-day average ...
+PERSIST_RATIO = 5    # "persistent": connections at least this many times the level before the run ...
 PERSIST_IPS = 10     # ... from at least this many source IPs ...
 SURGE_DAYS = 3       # ... on this many recorded days in a row
 TREND_CODE = {"UPTICK": "U", "STEADY": "S", "DECLINE": "D"}
@@ -422,7 +426,7 @@ def hp_lead(hp, items, kev_entries):
 
 def history_line(S, data, today):
     """One line per day: what the EUVD keeps no history of. Per honeypot entry with connections:
-    [connections today, unique IPs, trend code U/S/D, 30-day average]."""
+    [connections today, unique IPs, trend code U/S/D, the EUVD's avg30d (kept as data, not compared)]."""
     obs = hp_today(data["hp"])
     hp = {i: [o.get("connections1d") or 0, o.get("uniqueIps1d"), TREND_CODE.get(o.get("trend"), ""), o.get("avg30d")]
           for i, o in sorted(obs.items()) if o.get("connections1d")}
@@ -432,7 +436,7 @@ def history_line(S, data, today):
 
 
 def hp_days(text):
-    """[(date, {id: (connections, ips, trend code, 30-day average)})] from history.jsonl, oldest first.
+    """[(date, {id: (connections, ips, trend code, EUVD avg30d)})] from history.jsonl, oldest first.
     Lines written before 2026-10-09 hold only the connections; the rest is None or ''."""
     out = []
     for ln in (text or "").splitlines():
@@ -443,55 +447,76 @@ def hp_days(text):
     return sorted(out)
 
 
+def own_base(day_rows, i, before):
+    """Median of entry i's connections on the recorded days before index `before` (at most BASE_SPAN,
+    a day without a sighting counting as 0); None with fewer than BASE_DAYS such days."""
+    prior = day_rows[max(0, before - BASE_SPAN):max(0, before)]
+    if len(prior) < BASE_DAYS:
+        return None
+    return statistics.median(m[i][0] if i in m else 0 for _, m in prior)
+
+
+def above(v, base, ratio, ips):
+    """True when one day's (connections, ips, ...) is `ratio` times the level `base` from `ips` sources."""
+    d1, n_ips = v[0], v[1]
+    return base is not None and n_ips is not None and d1 >= ratio * max(base, 1) and n_ips >= ips
+
+
 def surge_kinds(day_rows, i):
     """Surge kinds of entry i on the last of `day_rows` ([(date, {id: values})], oldest first)."""
     if not day_rows or i not in day_rows[-1][1]:
         return []
-    kinds = []
-    if above(day_rows[-1][1][i], SURGE_RATIO, SURGE_IPS):
+    n, kinds = len(day_rows), []
+    if above(day_rows[-1][1][i], own_base(day_rows, i, n - 1), SURGE_RATIO, SURGE_IPS):
         kinds.append("broad")
-    last = day_rows[-SURGE_DAYS:]
-    if len(last) == SURGE_DAYS and all(i in m and above(m[i], PERSIST_RATIO, PERSIST_IPS) for _, m in last):
-        kinds.append("persistent")
+    start = n - SURGE_DAYS
+    if start >= 0:
+        base = own_base(day_rows, i, start)
+        if all(i in m and above(m[i], base, PERSIST_RATIO, PERSIST_IPS) for _, m in day_rows[start:]):
+            kinds.append("persistent")
     return kinds
-
-
-def above(v, ratio, ips):
-    """True when one day's (connections, ips, trend, avg30) is `ratio` times the 30-day average from `ips` sources."""
-    d1, n_ips, _, avg30 = v
-    return avg30 is not None and n_ips is not None and d1 >= ratio * max(avg30, 1) and n_ips >= ips
 
 
 def hp_surges(days_all, S):
     """Entries in a surge on the last recorded day; `new` when they were not in one of the same kind the
-    recorded day before, so a long surge is reported once per kind."""
+    recorded day before, so a long surge is reported once per kind. `ratio` is today against the entry's
+    own level `base`, the median of its previous `base_days` recorded days."""
     if not days_all:
         return []
     meta = {r["id"]: r for r in S.get("hp_scatter", [])}
-    out = []
+    n, out = len(days_all), []
     for i, (d1, ips, trend, avg30) in sorted(days_all[-1][1].items()):
         kinds = surge_kinds(days_all, i)
         if kinds:
             before = set(surge_kinds(days_all[:-1], i))
+            base = own_base(days_all, i, n - 1)
             m = meta.get(i, {})
             out.append({"id": i, "cve": m.get("cve", ""), "vendor": m.get("vendor", ""), "product": m.get("product", ""),
-                        "kinds": kinds, "d1": d1, "ips": ips, "ratio": round(d1 / max(avg30 or 0, 1), 1),
-                        "new": bool(set(kinds) - before)})
+                        "kinds": kinds, "d1": d1, "ips": ips, "base": base, "base_days": min(n - 1, BASE_SPAN),
+                        "ratio": round(d1 / max(base or 0, 1), 1), "new": bool(set(kinds) - before)})
     return sorted(out, key=lambda r: -r["d1"])
 
 
 def hp_heat(days_all, surges, limit=20, span=30):
-    """Rows for the persistence heatmap: entries at the persistent level (PERSIST_RATIO from PERSIST_IPS
-    sources), or in a surge, on any of the last `span` recorded days; one cell per day,
-    [connections / 30-day average or None, trend code]."""
-    days = days_all[-span:]
-    flagged = collections.Counter(i for _, m in days for i, v in m.items() if above(v, PERSIST_RATIO, PERSIST_IPS))
+    """Rows for the persistence heatmap: entries at the persistent level (PERSIST_RATIO times their own
+    level from PERSIST_IPS sources), or in a surge, on any of the last `span` recorded days; one cell per
+    day, [connections / own level or None, trend code]."""
+    off = max(0, len(days_all) - span)
+    days = days_all[off:]
+    base = {}
+    for j in range(len(days)):
+        for i in days[j][1]:
+            base[(i, j)] = own_base(days_all, i, off + j)
+    flagged = collections.Counter(i for j, (_, m) in enumerate(days) for i, v in m.items()
+                                  if above(v, base[(i, j)], PERSIST_RATIO, PERSIST_IPS))
     for s in surges:
         flagged[s["id"]] += 0
     rows = []
     for i in flagged:
-        cells = [[round(m[i][0] / max(m[i][3], 1), 1) if i in m and m[i][3] is not None else None, m[i][2] if i in m else ""]
-                 for _, m in days]
+        cells = []
+        for j, (_, m) in enumerate(days):
+            b = base.get((i, j), own_base(days_all, i, off + j))
+            cells.append([round(m[i][0] / max(b, 1), 1) if i in m and b is not None else None, m[i][2] if i in m else ""])
         rows.append({"id": i, "days": flagged[i], "cells": cells})
     rows.sort(key=lambda r: (-r["days"], -max((c[0] or 0) for c in r["cells"]), r["id"]))
     return {"days": [d for d, _ in days], "rows": rows[:limit], "n": len(rows)}
@@ -631,7 +656,7 @@ def main(argv=None):
     print(f"honeypot surges, new today: {len(new)} (in a surge: {len(S['hp_surges'])})")
     for r in new:
         print(f"  surge {'+'.join(r['kinds'])}: {r['id']} {r['cve']} {r['vendor']} {r['product']}: {r['d1']} connections "
-              f"from {r['ips']} IPs, {r['ratio']}x the 30-day average")
+              f"from {r['ips']} IPs, {r['ratio']}x its level (median {r['base']} over the previous {r['base_days']} recorded days)")
     return 0
 
 

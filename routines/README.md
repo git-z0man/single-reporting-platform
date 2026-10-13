@@ -18,7 +18,7 @@ says which of the two it is.
 | `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `0 6 * * *` |
 | `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
 | `guide-sync.md` | **Guide sync** | `trig_01SB5rkv7M4VXgtRtNzPeNYD` | `30 7 * * *` |
-| `euvd-exploited-monitor.md` | **EUVD exploited monitor** | `trig_01Sfn7X2MMSSdBDZv9v51Z1D` | `20 6 * * *` |
+| `euvd-exploited-monitor.md` | **EUVD exploited monitor** | `trig_01Sfn7X2MMSSdBDZv9v51Z1D` | `50 4 * * *` |
 
 The UI name and the file name differ for the first one: an attempt to rename it
 to "ENISA SRP pages monitor" was refused along with the prompt update (see
@@ -329,7 +329,7 @@ Two things an agent cannot do here, so a person does them once:
 
 ## EUVD exploited monitor
 
-`euvd/check_exploited.py` does the work; the Routine runs it daily at 06:20 UTC and
+`euvd/check_exploited.py` does the work; the Routine runs it daily at 04:50 UTC (06:20 until 2026-10-08) and
 commits only a change or the once-a-day heartbeat. The baseline
 `euvd-exploited-baseline.md` states what the list can and cannot say: it makes
 **no claim about which entry was first reported through the SRP**, because no
