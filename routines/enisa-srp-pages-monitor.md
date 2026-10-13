@@ -12,6 +12,8 @@
 > **History worth keeping.** The cadence was hourly from 2026-09-07 to 2026-09-14 (89 change-log entries, 38 in the last five days). A revert to weekly was documented and never applied, and daily was confirmed as intended on 2026-09-21 - it is what caught FAQ Q32 within hours. The silence-on-no-change rule, the UTC time in a same-day heading, and 429/5xx-as-failure hold at any cadence. Placeholders are written in square brackets because the Routines UI paste path strips anything that looks like an HTML tag.
 >
 > **Page 12 (added 2026-10-08).** ENISA's Vulnerability Services topic page is tracked for one paragraph: it says the EU KEV "will be further enriched" by reports through the CRA SRP. When that sentence changes, ENISA has said publicly that the route runs; `euvd/EU-KEV.md` explains why nothing else public says so.
+>
+> **SRP 1.1 (added 2026-10-13).** ENISA upgraded the platform to version 1.1 on 12 October 2026. The run of 2026-10-13 found the new "CRA SRP Status" page (page 13 below) and the manual's new PDF, and recorded both in the baseline; this file now names them, so the next runs check them by instruction rather than by the previous run's diligence. The PEC guidance page's title reads "Particularly" since the same day; its address still says `particular`.
 
 ---
 
@@ -34,7 +36,7 @@ Do NOT hard-code a state branch name. The platform assigns this Routine's outcom
 
 Never push to `main`. Never create a new per-run branch when the session already gave you one.
 
-## 1. The pages to check — all twelve
+## 1. The pages to check — all thirteen
 
 Both baseline files carry the authoritative URL list in their frontmatter. Read them first and use the URLs recorded there; the list below is what it should be, but the files win if they disagree (they get updated when ENISA moves a page).
 
@@ -46,11 +48,12 @@ Tracked in `enisa-srp-faq-baseline.md`:
 4. AR User Registration guidance — `guidance_urls[0]`
 5. AR Notification Submission and Update guidance — `guidance_urls[1]`
 6. AR Interface Functions guidance — `guidance_urls[2]`
-7. Particular Exceptional Circumstances (PEC) guidance — `guidance_urls[3]` (added 2026-09-08, found via the "Content" navigation — see below)
+7. Particularly Exceptional Circumstances (PEC) guidance — `guidance_urls[3]` (added 2026-09-08, found via the "Content" navigation — see below; titled "Particular …" until 2026-10-12)
 9. CRA SRP - AR User Manual — `ar_user_manual_url` (added 2026-09-10, found the same way)
 10. CRA Single Reporting Platform - Terms and Conditions — `terms_conditions_url` (added 2026-09-10, found the same way)
 11. CRA SRP - AR User Tutorial Video — `ar_user_tutorial_video_url` (added 2026-09-11, found the same way)
 12. Vulnerability Services topic page — `vulnerability_services_url` (added 2026-10-08, see section 3a)
+13. CRA SRP Status — `cra_srp_status_url` (added 2026-10-13, found via the "Content" navigation). Its static HTML carries both panels, "Available" and "Temporarily Unavailable"; diff their text like any other page, and do not report which state is showing — nothing in the fetched HTML says so.
 
 Tracked in `enisa-srp-glossary-baseline.md`:
 
@@ -65,7 +68,7 @@ Then check what actually came back, and treat a bad fetch as a bad fetch:
 - **HTTP 429 or 5xx that survives the retries is a check failure, not a change.** Do not touch the baseline, never diff an error page as if it were content, and report the run as failed with the exact status. This is the same mistake class as reading a 403 as an unpublished page: an HTTP status tells you about the fetch, not about the page.
 - Confirm each response really is the page — a non-empty HTML body, not an error document — before diffing. Check the content, not just curl's exit code: on 2026-09-07 ten downloads returned error bodies with exit code 0 and were only caught by inspecting the files.
 
-Also walk the page navigation ("Content" subtopics list) on the main page. If a page appears there that is not in either baseline, that is itself a finding: ENISA added the Glossary and the CSIRT list this way on 2026-09-07, the PEC guidance page this way on 2026-09-08, and the AR User Manual and Terms and Conditions pages this way on 2026-09-10. Add it to the appropriate baseline and say so in the report.
+Also walk the page navigation ("Content" subtopics list) on the main page. If a page appears there that is not in either baseline, that is itself a finding: ENISA added the Glossary and the CSIRT list this way on 2026-09-07, the PEC guidance page this way on 2026-09-08, the AR User Manual and Terms and Conditions pages this way on 2026-09-10, and the CRA SRP Status page this way on 2026-10-13. Add it to the appropriate baseline and say so in the report.
 
 ## 1a. The AR User Manual PDF — checksum it, do not trust its version stamp
 
@@ -73,12 +76,14 @@ Page 9 above is the manual's **landing page**. Diffing that page tells you nothi
 
 Every run, additionally:
 
-1. Fetch the PDF itself (the `Download` link on `ar_user_manual_url`; as of 2026-09-21 it is `https://www.enisa.europa.eu/sites/default/files/2026-09/CRA%20SRP%20--%20AR%20User%20Manual.pdf`), with the same backoff as any other fetch.
-2. Compute its **SHA-256** and note the **HTTP `Last-Modified`** header. Compare both against `ar_user_manual_pdf_sha256` and `ar_user_manual_pdf_last_modified` in `enisa-srp-faq-baseline.md`'s frontmatter.
+1. Read the `Download` link on `ar_user_manual_url` and fetch the PDF it points to, with the same backoff as any other fetch. Since 2026-10-12 that is `ar_user_manual_pdf_v11_url`, `https://www.enisa.europa.eu/sites/default/files/2026-10/CRA%20SRP%20-%20AR%20User%20Manual%20v1.1.pdf`. If the link points anywhere else, that is a finding in itself: report the new address, hash the file there, and record it in the frontmatter next to the old one.
+2. Compute its **SHA-256** and note the **HTTP `Last-Modified`** header. Compare both against `ar_user_manual_pdf_v11_sha256` and `ar_user_manual_pdf_v11_last_modified` in `enisa-srp-faq-baseline.md`'s frontmatter.
 3. If the hash matches, say so in one line and move on — no further work.
 4. If the hash differs, this is a change even when every visible stamp says otherwise. Extract the text (`pdftotext -layout`), diff it against the previous run's text, and report the substantive differences the way any other content change is reported. Then update both frontmatter values.
 
-**Do not use the version stamp or the Document History table to decide whether this document changed.** They do not track it. On 2026-09-17 ENISA republished the manual with a reversed AR notification-visibility rule (a permission model inverted — see `enisa-defect-report.md` G26 and B7), a retitled section, a new typo, and redactions lifted from four screenshots, while leaving the header stamp at "Version: 1.1" and the Document History table showing nothing but "09/09/2026 v1.0 First version". The file size and ModDate moved; nothing a reader would look at did. That change went unnoticed for four days precisely because this routine was watching the landing page and not the file.
+The September file (`ar_user_manual_pdf_sha256`, `.../2026-09/CRA%20SRP%20--%20AR%20User%20Manual.pdf`) is superseded and no longer needs a fetch every run. ENISA still served it unchanged on 2026-10-13; keep its frontmatter fields as the record of what the September editions were.
+
+**Do not use the version stamp or the Document History table to decide whether this document changed.** They do not track it. Three different files have carried "Version: 1.1" (9 September, 17 September, and the real 1.1 of 12 October, which dropped the Document History table altogether). On 2026-09-17 ENISA republished the manual with a reversed AR notification-visibility rule (a permission model inverted — see `enisa-defect-report.md` G26 and B7), a retitled section, a new typo, and redactions lifted from four screenshots, while leaving the header stamp at "Version: 1.1" and the Document History table showing nothing but "09/09/2026 v1.0 First version". The file size and ModDate moved; nothing a reader would look at did. That change went unnoticed for four days precisely because this routine was watching the landing page and not the file.
 
 If `pdftotext` is unavailable in the run environment, still record the hash and report that the content diff could not be produced — a detected-but-undiffed change is a finding; a missed change is not.
 
@@ -93,7 +98,7 @@ The Glossary page has already moved once: on 2026-09-07 the URL that had been tr
 - Only if no replacement address exists is the page genuinely unavailable. Record that in the `status:` line with the UTC timestamp, and report it. Both directions matter: 200 → non-200 and non-200 → 200.
 - Correct an earlier wrong diagnosis in `status:` rather than overwriting it silently. The frontmatter is what the next run reads; a stale wrong URL there produces a false reachability finding a week later.
 - Only when the page returns 200 do you diff its content and update the tables, `page_version`, and `retrieved`.
-- Check the other eleven pages in the same run before concluding anything: a Glossary-only failure means ENISA moved, is editing, or unpublished that page; all twelve failing means a site-wide outage.
+- Check the other twelve pages in the same run before concluding anything: a Glossary-only failure means ENISA moved, is editing, or unpublished that page; all thirteen failing means a site-wide outage.
 
 Note that `enisa-srp-faq-baseline.md` also carries a deliberately trimmed summary table of the Glossary fields (in Q16 and its "CRA SRP Glossary" section). That summary is NOT the record — never reconstruct the full baseline from it, and keep the two consistent when the Glossary changes. It also repeats the Glossary URL in prose — when the page moves, update those occurrences too.
 
@@ -166,7 +171,7 @@ Rules for it:
 
 ### Nothing changed anywhere
 
-Only when all twelve pages came back unchanged. Read `last_check` as it stands on `origin/main`:
+Only when all thirteen pages came back unchanged. Read `last_check` as it stands on `origin/main`:
 
     git show origin/main:enisa-srp-faq-baseline.md | sed -n 's/^last_check: //p' | head -1
 

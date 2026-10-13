@@ -365,7 +365,7 @@
     AR:    ['Assigned Representative', 'The person registered on the SRP to report for a manufacturer. Not the CRA’s “authorised representative”, which is a different role (Art. 3(13)).'],
     AEV:   ['Actively Exploited Vulnerability', 'One of the two notification types (Art. 14(1)).'],
     SI:    ['Severe Incident', 'The other notification type: a severe incident having an impact on the security of the product (Art. 14(3)).'],
-    PEC:   ['Particular Exceptional Circumstances', 'Grounds under Art. 16(2) for delaying wider dissemination of a 72-hour AEV notification.'],
+    PEC:   ['Particularly Exceptional Circumstances', 'Grounds under Art. 16(2) for delaying wider dissemination of a 72-hour AEV notification.'],
     EW:    ['Early Warning', 'The first reporting stage, within 24 hours of becoming aware.'],
     FR:    ['Final Report', 'The last reporting stage, closing the notification.'],
     EUVD:  ['European Vulnerability Database', 'ENISA’s public vulnerability database (Art. 12).'],

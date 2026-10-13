@@ -23,6 +23,13 @@ finding below now carries a status, and a fixed one names the time the change
 was first seen. Findings are never deleted — a fixed one stays listed, marked
 **fixed**, so the record of what was wrong survives the correction.
 
+**Re-checked against SRP 1.1**: **13 October 2026**. ENISA upgraded the
+platform to version 1.1 on 12 October and published a new AR User Manual,
+Version 1.1 of October 2026, at a new address and without a Document History.
+Every entry that cites the manual, the PEC naming or the registration form was
+compared with it and with the pages as fetched that morning; each carries a
+note dated 2026-10-13.
+
 | Status | Meaning |
 |---|---|
 | **fixed** · *timestamp* | the quoted text is gone from the live page; the timestamp is the monitor run that first recorded it |
@@ -65,15 +72,15 @@ Text quoted verbatim as it stood on 9 September.
 | A7 | FAQ | Q16, introductory paragraph | "For each field, **it explains that the field means**, how it may be completed…" | "…it explains what the field means…" | **fixed** · 2026-09-09 23:11 UTC — now "what the field means" |
 | A8 | FAQ | Q16 table, field 22 | "Corrective or mitigating measures that **user** can take" | "…that users can take" (the Glossary uses the plural). | **fixed** · 2026-09-09 23:11 UTC — now "that users can take" |
 | A9 | PEC | Body text | "By toggling the indicator, the PEC Delay **Reson** options will be displayed." | "Reason" — the Glossary (v28) spells it correctly. | **fixed** · 2026-09-09 21:07 UTC — now "PEC Delay Reason" |
-| A10 | PEC | Screenshot of the PEC block *(screenshot)* | "…would be contrary to the essential **intrests** of that Member State" | "interests". This is in the application UI, not only in the guidance. | **open** — a UI screenshot, not testable from page text; unchanged as far as can be seen |
+| A10 | PEC | Screenshot of the PEC block *(screenshot)* | "…would be contrary to the essential **intrests** of that Member State" | "interests". This is in the application UI, not only in the guidance. | **fixed** in the platform · 2026-10-13 — the SRP 1.1 manual's screenshot of the PEC block reads "essential interests"; the PEC guidance page's screenshot of 8 September still shows "intrests" |
 | A11 | Interface | "Access the Dashboard" step | "**Yo** can access the Dashboard by:" | "You". | **fixed** · 2026-09-09 21:07 UTC |
 | A12 | Interface | Section heading | "Add an **Association** with an Additional Manufacturer **Association** through Settings" | "Association" appears twice; drop the second. | **fixed** · 2026-09-09 21:07 UTC — heading now "Add Additional Manufacturer Association via Settings" |
 | A13 | Registration | Manufacturer details step | "Enter the manufacturer details (manufacturer name, manufacturer **adress**, additional information)" | "address" — see D4: the field is absent from the live form, so the guidance text is wrong on both counts. | **fixed** · 2026-09-09 22:12 UTC — now "address"; the field itself is still missing, see D4 |
 | A14 | Registration | Invitation registration, personal details step | "These fields **cannot be edited** but are retrieved from EU Login and **cannot be edited** in the SRP." | The clause is duplicated within one sentence. | **fixed** · 2026-09-09 22:12 UTC — now "These fields are retrieved from EU Login and cannot be edited in the SRP." |
-| A15 | Submission | Expected results, 72-hour Notification and Final Report | "…subject to **Particularly Exception** Circumstances (PEC)…" (twice) | "Particular Exceptional Circumstances" — "Exception" is not a valid form. See also C2. | **open** — three occurrences now, after the Submission page was rewritten on 9 September 22:12 UTC |
+| A15 | Submission | Expected results, 72-hour Notification and Final Report | "…subject to **Particularly Exception** Circumstances (PEC)…" (twice) | "Particularly Exceptional Circumstances", the form every other ENISA source uses since 12 October 2026 — "Exception" is not a valid form. See also C2. | **open** — three occurrences now, after the Submission page was rewritten on 9 September 22:12 UTC; still three on 2026-10-13, now the last variant left (C2) |
 | A16 | Submission | Pre-conditions, three occurrences | "you are **logged in into** the SRP" | "logged in to the SRP". | **open** — still three occurrences |
-| A17 | AR User Manual | §1.4 "How to Use the Manual" (p. 7) | "Section 5 presents other functionalities available on the platform, including reminders and alerts. Section 6 provides FAQs…" | There is no standalone Section 5 — reminders/alerts is §4.9, and the FAQ section's own divider page is titled "SECTION 5", not 6. | **open** — the manual's own table of contents (p. 3-4) agrees with the divider pages, not with §1.4's description |
-| A18 | AR User Manual | §4.6.2 (printed p. 33) | "Exceptions and error **hadling**:" | "handling". | **open** — a regression: the word was correct in the 9 September copy and was broken by the 17 September republication (see G26) |
+| A17 | AR User Manual | §1.4 "How to Use the Manual" (p. 7) | "Section 5 presents other functionalities available on the platform, including reminders and alerts. Section 6 provides FAQs…" | There is no standalone Section 5 — reminders/alerts is §4.9, and the FAQ section's own divider page is titled "SECTION 5", not 6. | **fixed** · 2026-10-13 — Version 1.1 of October 2026 lists reminders and alerts under Section 4 and the FAQs as Section 5, matching its table of contents and divider pages. *(Was open: the September table of contents agreed with the divider pages, not with §1.4.)* |
+| A18 | AR User Manual | §4.6.2 (printed p. 33) | "Exceptions and error **hadling**:" | "handling". | **open** — a regression: the word was correct in the 9 September copy and was broken by the 17 September republication (see G26); still present in Version 1.1 of October 2026 (§4.6.2, printed p. 34) |
 | A19 | FAQ | Q27, first paragraph | "…concerning actively exploited vulnerabilities (AEVs) under Art. 14(<s>3</s>1) and severe incidents (SIs) under Art. 14 (3) having an impact on the security of products with digital elements under Art. 14(3)…" | A struck-through "3" followed by "1" reads "Art. 14(31)" wherever the strikethrough is lost, and the sentence cites Art. 14(3) twice more, once with a stray space. It looks like an unfinished edit from 3 to 1 on the AEV citation; a legal FAQ should not leave a citation in that state. | **open** — first recorded 2026-09-11 13:17 UTC, still live 2026-10-04 |
 | A20 | Glossary | Field v29 "PEC Delay Reason", Example column | "You may choose: the notified vulnerability has been actively exploited by a malicious actor and, according to the information available, it has been exploited in no other Member State than the one of the CSIRT designated as coordinator to which the manufacturer has notified the vulnerability; **or**" — and nothing after it | The example lists the first of the three legal grounds and stops on a dangling "or". The other two grounds were in the example until at least the 3 October capture and are gone from the live page on 4 October. | **open** — first seen 2026-10-04 00:55 UTC in a direct fetch; the monitor had not yet logged it |
 
@@ -164,7 +171,7 @@ field**. Either the text or the form is wrong.
 
 ### B7 — Who can see another AR's notifications: two sources say one thing, one says the opposite
 
-**Status: open · opened 2026-09-21, re-confirmed 2026-10-04** — the AR Interface functions page still carries the old sentence; the Manual (byte-identical to its 17 September copy) and FAQ Q9 still carry the new one. Until mid-September every ENISA source
+**Status: open · opened 2026-09-21, re-confirmed 2026-10-04 and 2026-10-13** — the AR Interface functions page still carries the old sentence; the Manual (byte-identical to its 17 September copy until 12 October, and Version 1.1 of October 2026 keeps the new sentence word for word) and FAQ Q9 still carry the new one. Until mid-September every ENISA source
 agreed that a Secondary AR could see only what they had submitted. Two of the
 three have since reversed; the third has not been touched.
 
@@ -214,8 +221,8 @@ guidance to form labels word by word.
 | # | Variants in use | Where | Suggestion | Status |
 |---|---|---|---|---|
 | C1 | "Full description of the severity/impact" (AEV) vs. "Detailed description of the Severity/Impact" (SI) | Glossary fields v23 and i33; FAQ Q16 table | Same content, two names and two capitalisations. Pick one. | **partly** · 2026-09-09 23:11 UTC — the FAQ renamed v28/v29 to "Detailed", so the FAQ is now consistent with itself; but the Glossary's v23/v24 still read "Full", so the two documents now disagree where they used to agree |
-| C2 | "Particular Exceptional Circumstances" / "Particularly Exceptional Circumstances" / "Particularly Exception Circumstances" | PEC page uses the first and second within a few lines of each other; Submission uses the third | The CRA itself has no defined term here; choose one form and use it everywhere, including the UI label. | **open** — the PEC page now reads "Particular" seven times and "Particularly" once (22:12 UTC rewrite); Submission still has "Exception" |
-| C3 | "Particular Exceptional Circumstances**(PEC)**" — no space before the bracket *(screenshot)* | The toggle label in the notification form | Insert a space, to match every guidance page. | **open** — UI label, not testable from page text |
+| C2 | "Particular Exceptional Circumstances" / "Particularly Exceptional Circumstances" / "Particularly Exception Circumstances" | PEC page uses the first and second within a few lines of each other; Submission uses the third | The CRA itself has no defined term here; choose one form and use it everywhere, including the UI label. | **partly** · 2026-10-13 — with SRP 1.1 ENISA chose "Particularly Exceptional Circumstances" and now uses it in the FAQ, the Glossary (v28), the PEC page (eight times, no "Particular" left), the manual and the form's label. Only the Submission page's three "Particularly Exception Circumstances" remain (A15). *(Was open: the PEC page read "Particular" seven times and "Particularly" once after its 9 September rewrite.)* |
+| C3 | "Particular Exceptional Circumstances**(PEC)**" — no space before the bracket *(screenshot)* | The toggle label in the notification form | Insert a space, to match every guidance page. | **open** — UI label, not testable from page text; re-checked 2026-10-13: the SRP 1.1 manual's screenshot shows the renamed label, "Particularly Exceptional Circumstances(PEC)", still without the space |
 | C4 | "validation" vs. "verification" of the AR–manufacturer association | FAQ Q9 uses both in one paragraph ("validation … before **verification** becomes mandatory"); Registration uses "validation"; Interface uses "Unverified" as the status | One term for the act, matching the status name shown in the platform. | **open** — Q9 now reads "Verification takes place … while validation is pending" (23:11 UTC): both words in one sentence. The new AR User Manual leans the other way: "validation" 12 times, "verification" once |
 | C5 | Date formats: "3/08/2026", "07/09/2026", "08/09/2026", "09 September 2026", "05/09/2026", "04/09/2026" | Guidance pages, FAQ, Glossary, CSIRT list | Mixed unpadded numeric, padded numeric and long form. Numeric DD/MM is ambiguous to non-European readers; the FAQ's "09 September 2026" is unambiguous. | **partly** · 2026-09-09 22:12 / 2026-09-10 02:08 UTC — six pages now spell the month out; the main-page cards moved to "Updated: 9 September 2026" in the 10 September main-page rewrite (seen 11:52 UTC); only the Glossary footer still reads "09/09/2026" |
 | C6 | "authorised representative" (Glossary field 40) vs. "Assigned Representative" | Glossary field 40 "AR Note": both the meaning and the completion instruction, as of Glossary version 1.4 (2026-10-02) | Everywhere else on the SRP pages, and in the platform's own role screen, AR means the *Assigned* Representative; "authorised representative" is the different Art. 3(13) CRA concept, and the guide has a warning against confusing the two. Use the platform's term. | **open** — first recorded 2026-10-02 |
@@ -236,7 +243,9 @@ it empty.
 
 ### D2 — No Glossary entry for "Additional Information", which is mandatory
 
-**Status: partly** · *the mandatory half settled 2026-09-13 in the running platform* — the field is **not** required. The live *Manufacturer Details* dialog shows **Name** carrying a *Required* badge and **Additional Information** carrying none, with the placeholder "Additional information (max 255 characters)". That closes the question the AR User Manual and the guidance page disagreed on (F13): the manual, which called it optional, was right, and the guidance page's "Required field" screenshot documents a build that is no longer running.
+**Status: open again** · *2026-10-13* — the manual for SRP 1.1 badges Additional Information **Required** on both of its screenshots of the step (the empty form and the validation error), while its text still reads "Manufacturer Name and Additional Information (optional)". One document now says both. Whether the running 1.1 form enforces the field has not been verified here. The paragraph below describes the 1.0 form.
+
+*Earlier status: partly* · *the mandatory half settled 2026-09-13 in the running platform* — the field is **not** required. The live *Manufacturer Details* dialog shows **Name** carrying a *Required* badge and **Additional Information** carrying none, with the placeholder "Additional information (max 255 characters)". That closes the question the AR User Manual and the guidance page disagreed on (F13): the manual, which called it optional, was right, and the guidance page's "Required field" screenshot documents a build that is no longer running.
 
 What remains open is the documentation half: the term still appears nowhere in the Glossary or the FAQ, and nothing states what belongs in the field — which matters because this is the information the CSIRT uses to decide whether to verify the association. A 255-character limit is now known, from the placeholder, and is documented nowhere either.
 
@@ -248,7 +257,9 @@ characters, and no published source says either.
 
 ### D3 — The 800-character limit on the PEC justification is not documented
 
-**Status: open** — the limit appears in neither the Glossary nor the PEC page on 10 September, nor in the AR User Manual (0 hits for "800").
+**Status: fixed** · *2026-09-10 13:11 UTC* — Glossary v30 (was v29) now reads "You may provide additional information (max. 800 characters)." Recorded here on 2026-10-13; the PEC page and the manual's text still do not state the limit (Version 1.1: 0 hits for "800"), but the SRP 1.1 manual's screenshot shows it in the box.
+
+*Earlier status: open* — the limit appears in neither the Glossary nor the PEC page on 10 September, nor in the AR User Manual (0 hits for "800").
 
 The PEC justification box is labelled "Provide further information (max 800
 characters)" *(screenshot)*. Neither the Glossary (field v29) nor the PEC page
@@ -258,7 +269,7 @@ to know it will be truncated or rejected.
 
 ### D4 — Registration describes a manufacturer address field that does not exist
 
-**Status: open** · *re-verified 2026-09-13 in the running platform* — the field is **not** in the form. The live *Manufacturer Details* dialog offers **Name** (Required), **CSIRT Designated as Coordinator** (read-only, pre-filled) and **Additional Information** (no Required badge), and nothing else.
+**Status: open** · *re-verified 2026-09-13 in the running platform* — the field is **not** in the form. The live *Manufacturer Details* dialog offers **Name** (Required), **CSIRT Designated as Coordinator** (read-only, pre-filled) and **Additional Information** (no Required badge), and nothing else. Re-checked 2026-10-13: the SRP 1.1 manual's screenshot of the step has no address field either; its first field is now labelled "Manufacturer name".
 
 **Withdrawn:** this entry previously reported, on the strength of a statement made to us on 10 September, that ENISA would restore the address field, and was marked *partly* on that basis. Two days after go-live the field has not appeared and there is no present indication that it will, so the claim is withdrawn rather than left standing — the guidance text is the side that is wrong. Anyone who acted on the earlier note should disregard it. (The typo in the same sentence was fixed separately, A13.)
 
@@ -365,15 +376,15 @@ re-check, ahead of the monitor.
 |---|---|---|---|---|
 | F1 | Interface | "Claim the Primary AR role" step | "…**request to the Primary AR role** for a manufacturer" — a word is missing ("request to *take over* / *become*…) | 2026-09-09 22:12 |
 | F2 | Registration | Confirm-details step, both flows | Primary AR flow lists "First Name, Last Name, Email"; Secondary AR flow lists "First Name, Last Name, Email, Legal name". Same screen, two field lists. | 2026-09-09 22:12 **Superseded**: the manual shows three fields in both flows; the four-field Secondary text is the stale one (F13). |
-| F3 | PEC | Body text | The page's own term is spelled "**Particularly** Exceptional Circumstances (PEC)" in the opening sentence and "**Particular** Exceptional Circumstances (PEC)" seven times below it. | 2026-09-09 22:12 |
+| F3 | PEC | Body text | The page's own term is spelled "**Particularly** Exceptional Circumstances (PEC)" in the opening sentence and "**Particular** Exceptional Circumstances (PEC)" seven times below it. | 2026-09-09 22:12 **Fixed 2026-10-13**: the page reads "Particularly" in all eight places since the SRP 1.1 update. |
 | F4 | FAQ | Q9 | "**Verification** takes place in parallel with the reporting process and does not prevent an AR from submitting notifications while **validation** is pending." | 2026-09-09 23:11 |
 | F5 | FAQ / Glossary | Q16 v28/v29 vs Glossary v23/v24 | FAQ now "**Detailed** description of the severity/impact of the vulnerability"; Glossary still "**Full** description…". They agreed before this edit. | 2026-09-09 23:11 |
 | F6 | Main / Registration | "User guidance" card vs the page | Card blurb: "the Assigned **Representatives** (AR) user registration"; the page itself now: "the Assigned **Representative** (AR)…". The card was reworded and re-dated in the 10 September main-page rewrite — "Updated: 9 September 2026" — but still says "Assigned Representatives (ARs)" against the page's singular. **Partly.** | 2026-09-10 00:10 |
 | F7 | Glossary / FAQ | Field i35 vs FAQ i40 | Glossary: "Type of **Threat** or root cause that is likely to have triggered **incident**"; FAQ: "Type of threat or root cause that is likely to have triggered **the** incident". Brought closer on 10 September, not aligned. | 2026-09-10 07:11 |
 | F8 | Interface | Manufacturer-details screenshot *(screenshot)* | The manufacturer record is labelled "Manufacturer **Addresss**" (three s), and its *Manufacturer Address* row shows "Manufacturer Sector" as its value. The same screenshot shows the manufacturer record *does* have an address field — which the registration form lacks (D4). | on the page since at least 2026-09-07 Consistent with ENISA's 10 September confirmation that the address field returns to the registration form (D4). |
 | F9 | Main | "User Guidance" block, User Manual card | The card's download link is `href="https://CRA SRP – AR User Manual"` — the document's title in place of a URL. The link is dead; the manual is reachable only through the Content navigation. | 2026-09-10 11:52 |
-| F10 | Manual / Registration form | Manual §2.1 step 6 vs the form *(screenshot)* | Manual: "Enter the manufacturer details, including Manufacturer Name and Additional Information **(optional)**". The form marks Additional Information **"Required field"**. On closer reading not a contradiction but a version gap: the manual's own screenshot of the step shows the field **without** the badge. The guidance page's "Required field" screenshot is the older state (F13). **Partly** — D2 adjusted accordingly. | 2026-09-10 11:52 |
-| F11 | Manual | Cover and page headers vs Document History | Every page says "Version: 1.1"; the Document History table lists a single entry, "09/09/2026 v1.0 First version". Either the history is missing 1.1 or the stamp is wrong. | 2026-09-10 11:52 |
+| F10 | Manual / Registration form | Manual §2.1 step 6 vs the form *(screenshot)* | Manual: "Enter the manufacturer details, including Manufacturer Name and Additional Information **(optional)**". The form marks Additional Information **"Required field"**. On closer reading not a contradiction but a version gap: the manual's own screenshot of the step shows the field **without** the badge. The guidance page's "Required field" screenshot is the older state (F13). **Partly** — D2 adjusted accordingly. | 2026-09-10 11:52 **Re-opened 2026-10-13**: the manual for SRP 1.1 badges Additional Information "Required" on its screenshots and still calls it optional in its text, a contradiction within one document (D2). |
+| F11 | Manual | Cover and page headers vs Document History | Every page says "Version: 1.1"; the Document History table lists a single entry, "09/09/2026 v1.0 First version". Either the history is missing 1.1 or the stamp is wrong. | 2026-09-10 11:52 **Fixed 2026-10-13** by removal: Version 1.1 of October 2026 has no Document History, and its cover reads "V1.1 / OCTOBER 2026". The September files with the old stamp are still served at their old address. |
 | F12 | FAQ | Q9 vs Q28 | Q9's opening sentence regressed from "The SRP is available at: https://portal.cra-srp.enisa.europa.eu" to "**The SRP will be available in due time**" — the day before the 11 September go-live that Q4, Q28 and Q29 still commit to. Q28 still gives the URL. | 2026-09-10 09:09 |
 | F13 | Registration (guidance page) vs AR User Manual | Both screenshots of the registration steps | The guidance page's screenshots (uploaded 7 September) show a **"Legal name (for legal entities)"** field and Additional Information badged **"Required field"**. The manual's screenshots of the same steps (9 September) show neither: three personal fields, no badge. The manual's text matches its screenshots; the guidance page's Secondary-AR text still lists four fields. The guidance page is documenting a previous build of the form. | 2026-09-10 11:52 |
 
@@ -769,7 +780,7 @@ screenshot is kept as the historical capture, not replaced).
 
 ### G26 — The AR User Manual was republished with a reversed rule, under the same version number
 
-**Status: open · found 2026-09-21.** The manual at the same unchanged URL is
+**Status: open · found 2026-09-21.** Re-checked 2026-10-13: Version 1.1 of October 2026, at a new address, keeps the 17 September rule and the "hadling" typo (A18), and drops the Document History (F11). The manual at the same unchanged URL is
 not the document this repository captured on 10 September:
 
 | | 10 September copy | current copy |
@@ -816,6 +827,7 @@ step has since been added.
 Recorded so the record shows what was checked rather than only what was wrong:
 
 - **Additional Information** is optional and capped at 255 characters — see D2.
+  *(As of 13 September; the manual for SRP 1.1 badges it Required, see D2.)*
   The AR User Manual was right and the guidance-page screenshot is a stale
   build.
 - **The manufacturer address field is absent** — see D4, and note the

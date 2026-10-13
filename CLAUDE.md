@@ -86,7 +86,9 @@ receives an invitation email — sat buried in the middle of it.
 maintained by a scheduled task that periodically re-checks the ENISA Single
 Reporting Platform page (its guidance subpages, the CRA SRP Glossary page,
 and the CSIRT-list page) and, since 2026-10-08, ENISA's Vulnerability Services
-topic page, whose EU KEV paragraph says SRP reports "will" feed the EU KEV, for
+topic page, whose EU KEV paragraph says SRP reports "will" feed the EU KEV, and,
+since 2026-10-13, the CRA SRP Status page and the AR User Manual PDF that the
+manual's Download link points to (Version 1.1 of October 2026), for
 changes, updates the baseline file(s), and
 opens a PR. The Glossary page needs its own full record for two reasons
 established on 2026-09-07: it changed address that day (the old path still

@@ -98,16 +98,26 @@ acknowledged beside each image on the guide. They show a test tenant
 address on the personal-details capture is preserved.
 
 They matter because they are newer than the guidance-page screenshots: the
-registration captures no longer show a "Legal name" field, and Additional
-Information no longer carries a "Required field" badge.
+registration captures no longer show a "Legal name" field.
 
-- **`man-reg-legal-agreement.png`** — p. 12: the Legal Agreement dialog between EU Login and the personal details, linking to the Terms and Conditions.
-- **`man-reg-personal-details.png`** — p. 13: Personal Details, step 1 of 2 — First Name, Last Name, Email only.
-- **`man-reg-manufacturer-details.png`** — p. 13: Manufacturer Details, step 2 of 2 — Name (Required), CDaC read-only, Additional Information unbadged.
-- **`man-reg-invited-personal-details.png`** — p. 14: "Backup AR Invitation" step 1 of 2 — First Name, Last Name, Email only, reached from an invitation e-mail.
-- **`man-reg-existing-user-accept.png`** — p. 16: "Backup AR Invitation" step 2 with the "You have accepted the invitation" confirmation.
-- **`man-if-manufacturer-details-verified.png`** — p. 32: Manufacturer Details with both representatives Verified, "Claim Primary AR Role" and "Delete Association".
-- **`man-n72-form-top.png`** — p. 43: the 72h Notification tab (severe incident), top: the stage header with the due date, the two Required narrative fields, Considered sensitivity.
-- **`man-n72-form-lower.png`** — p. 44: the same tab further down: Attack vector, the two Detailed descriptions, Type of threat, Save draft / Submit 72h Notification.
-- **`man-fin-form-top.png`** — p. 46: the Final Report tab (severe incident), top: both Detailed descriptions Required.
-- **`man-fin-submit-confirm.png`** — p. 47: the "Are you sure? After submission, you will not be able to update the notification." dialog on Submit Final Report.
+**Checked against Version 1.1 of October 2026 on 2026-10-13.** ENISA published
+the real Version 1.1 on 12 October 2026 with the SRP 1.1 upgrade:
+<https://www.enisa.europa.eu/sites/default/files/2026-10/CRA%20SRP%20-%20AR%20User%20Manual%20v1.1.pdf>
+(3,289,026 bytes, SHA-256 `2eaea3fc0913a9a9…`, cover "V1.1 / OCTOBER 2026", no
+Document History). Each embedded bitmap was compared with the September file's:
+nine of the ten are byte-identical in the new PDF, some on a different page
+(given below as "v1.1 p. n"). One changed: the manufacturer-details screen,
+replaced here by the v1.1 bitmap (PDF page 13, 1402×544). It now labels the
+first field "Manufacturer name" and badges both it and Additional Information
+"Required", while the manual's text still calls Additional Information optional.
+
+- **`man-reg-legal-agreement.png`** — p. 12 (v1.1 p. 12, unchanged): the Legal Agreement dialog between EU Login and the personal details, linking to the Terms and Conditions.
+- **`man-reg-personal-details.png`** — p. 13 (v1.1 p. 12, unchanged): Personal Details, step 1 of 2 — First Name, Last Name, Email only.
+- **`man-reg-manufacturer-details.png`** — **v1.1 p. 13** (replaced 2026-10-13): Manufacturer Details, step 2 of 2 — Manufacturer name (Required), CDaC read-only, Additional Information (Required, "max 255 characters"). The September file's capture (p. 13, 1450×490) showed "Name" as the only badged field.
+- **`man-reg-invited-personal-details.png`** — p. 14 (v1.1 p. 15, unchanged): "Backup AR Invitation" step 1 of 2 — First Name, Last Name, Email only, reached from an invitation e-mail.
+- **`man-reg-existing-user-accept.png`** — p. 16 (v1.1 p. 15, unchanged): "Backup AR Invitation" step 2 with the "You have accepted the invitation" confirmation.
+- **`man-if-manufacturer-details-verified.png`** — p. 32 (v1.1 p. 32, unchanged): Manufacturer Details with both representatives Verified, "Claim Primary AR Role" and "Delete Association".
+- **`man-n72-form-top.png`** — p. 43 (v1.1 p. 43, unchanged): the 72h Notification tab (severe incident), top: the stage header with the due date, the two Required narrative fields, Considered sensitivity.
+- **`man-n72-form-lower.png`** — p. 44 (v1.1 p. 44, unchanged): the same tab further down: Attack vector, the two Detailed descriptions, Type of threat, Save draft / Submit 72h Notification.
+- **`man-fin-form-top.png`** — p. 46 (v1.1 p. 46, unchanged): the Final Report tab (severe incident), top: both Detailed descriptions Required.
+- **`man-fin-submit-confirm.png`** — p. 47 (v1.1 p. 47, unchanged): the "Are you sure? After submission, you will not be able to update the notification." dialog on Submit Final Report.
