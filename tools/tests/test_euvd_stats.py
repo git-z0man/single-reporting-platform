@@ -178,6 +178,7 @@ class Honeypot(unittest.TestCase):
         days.append(("2026-10-09", {"A": (150, 12, "S", 10.0), "B": (2, 2, "U", 1.0)}))
         s = bs.hp_surges(days, {})
         self.assertEqual([(r["id"], r["kinds"], r["new"]) for r in s], [("A", ["persistent"], True)])   # B: UPTICK alone is not enough
+        self.assertEqual((s[0]["base"], s[0]["base_days"], s[0]["ratio"]), (20, 4, 7.5))              # the level before the run
         days.append(("2026-10-10", {"A": (150, 5, "S", 10.0)}))                                        # too few sources today
         self.assertEqual(bs.hp_surges(days, {}), [])
         heat = bs.hp_heat(days, [])

@@ -480,7 +480,8 @@ def surge_kinds(day_rows, i):
 def hp_surges(days_all, S):
     """Entries in a surge on the last recorded day; `new` when they were not in one of the same kind the
     recorded day before, so a long surge is reported once per kind. `ratio` is today against the entry's
-    own level `base`, the median of its previous `base_days` recorded days."""
+    own level `base`, the median of its previous `base_days` recorded days (for a persistent-only surge,
+    of the days before its run)."""
     if not days_all:
         return []
     meta = {r["id"]: r for r in S.get("hp_scatter", [])}
@@ -489,10 +490,13 @@ def hp_surges(days_all, S):
         kinds = surge_kinds(days_all, i)
         if kinds:
             before = set(surge_kinds(days_all[:-1], i))
-            base = own_base(days_all, i, n - 1)
+            # A persistent-only surge is measured, and reported, against the level before its run:
+            # the median of all previous days already contains the run.
+            upto = n - 1 if "broad" in kinds else n - SURGE_DAYS
+            base = own_base(days_all, i, upto)
             m = meta.get(i, {})
             out.append({"id": i, "cve": m.get("cve", ""), "vendor": m.get("vendor", ""), "product": m.get("product", ""),
-                        "kinds": kinds, "d1": d1, "ips": ips, "base": base, "base_days": min(n - 1, BASE_SPAN),
+                        "kinds": kinds, "d1": d1, "ips": ips, "base": base, "base_days": min(upto, BASE_SPAN),
                         "ratio": round(d1 / max(base or 0, 1), 1), "new": bool(set(kinds) - before)})
     return sorted(out, key=lambda r: -r["d1"])
 
