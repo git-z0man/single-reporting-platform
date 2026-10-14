@@ -210,6 +210,8 @@ class Honeypot(unittest.TestCase):
         import enrich
         for page in (bs.PAGE, enrich.PAGE):
             self.assertIn('aria-label="Breadcrumb"', page)
+            self.assertIn('<header class="bar"><nav class="crumbs"', page)                      # the breadcrumb stays visible
+            self.assertRegex(page, r'\.bar\{position:-webkit-sticky;position:sticky;top:0')
             for href in re.findall(r'href="([^"#:]+)(?:#[^"]*)?"', page):
                 self.assertTrue(os.path.exists(os.path.join(REPO, "euvd", href)), href)
 

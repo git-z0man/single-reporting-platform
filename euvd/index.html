@@ -4,7 +4,7 @@
 <style>
 :root{--bg:#fbfbf9;--fg:#1d2330;--mut:#5b6472;--line:#d9dde3;--card:#fff;--acc:#1f5fa8}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181f;--fg:#e4e8ee;--mut:#9aa4b2;--line:#2c3440;--card:#1b212b;--acc:#7db2ee}}
-body{margin:0;padding:1rem 16px 3rem;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+body{margin:0;padding:0 16px 3rem;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
 main{max-width:62rem;margin:0 auto}h1{font-size:1.5rem}h4{margin:.8rem 0 .2rem}
 .note{border-left:4px solid var(--acc);padding:.2rem .8rem;background:var(--card)}
 input{width:100%;box-sizing:border-box;padding:.5rem;margin:1rem 0;border:1px solid var(--line);background:var(--card);color:var(--fg)}
@@ -15,8 +15,10 @@ code{font-size:.85em}a{color:var(--acc)}.badge{border:1px solid var(--line);padd
 a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .crumbs{font-size:.9rem;color:var(--mut)}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.2rem .5rem}
 .crumbs li+li::before{content:"›";margin-right:.5rem}.crumbs [aria-current]{color:var(--fg)}
+.bar{position:-webkit-sticky;position:sticky;top:0;z-index:3;background:var(--bg);margin:0 -16px 1rem;padding:0 16px;border-bottom:1px solid var(--line)}
+.crumbs ol{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}.crumbs a,.crumbs [aria-current]{display:inline-flex;align-items:center;min-height:2.6rem}
 </style></head><body><main>
-<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">SRP guide</a></li><li><a href="../index.html#euvd">EUVD</a></li><li><span aria-current="page">Exploited entries</span></li></ol></nav>
+<header class="bar"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">SRP guide</a></li><li><a href="../index.html#euvd">EUVD</a></li><li><span aria-current="page">Exploited entries</span></li></ol></nav></header>
 <h1>EUVD: actively exploited vulnerabilities from 1 September 2026</h1>
 <p class="note">Everything the EUVD, NIST NVD, the CISA KEV catalogue and linked CERTs publish about the entries below.
 It does <strong>not</strong> say which entry was first reported through the SRP: no source records the reporting route.
