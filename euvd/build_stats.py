@@ -553,14 +553,14 @@ PAGE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EUVD statistics</title>
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--fg:#1b2230;--mut:#5d6677;--line:#dde1e8;--grid:#e9ecf1;--acc:#1f5fa8;
+:root{--barh:2.65rem;--bg:#f6f7f9;--card:#fff;--fg:#1b2230;--mut:#5d6677;--line:#dde1e8;--grid:#e9ecf1;--acc:#1f5fa8;
 --cisa:#4b7fb8;--both:#2a9d8f;--eu:#e0a030;--up:#c0463a;--steady:#7d8798;--down:#3f8f5b;--note:#eef3fa}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12161d;--card:#1a202a;--fg:#e4e8ee;--mut:#98a2b3;--line:#2c3441;--grid:#252c37;--acc:#7db2ee;
 --cisa:#6a9fd6;--both:#3cb8a8;--eu:#e9b44c;--up:#e0675b;--steady:#8b95a7;--down:#5bb07a;--note:#1f2937}}
 :root[data-theme="dark"]{--bg:#12161d;--card:#1a202a;--fg:#e4e8ee;--mut:#98a2b3;--line:#2c3441;--grid:#252c37;--acc:#7db2ee;
 --cisa:#6a9fd6;--both:#3cb8a8;--eu:#e9b44c;--up:#e0675b;--steady:#8b95a7;--down:#5bb07a;--note:#1f2937}
-*{box-sizing:border-box}body{margin:0;padding:1.2rem 16px 4rem;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:64rem;margin:0 auto}h1{font-size:1.6rem;margin:.2rem 0 .4rem}h2{font-size:1.15rem;margin:0 0 .2rem}
+*{box-sizing:border-box}body{margin:0;padding:0 16px 4rem;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:64rem;margin:0 auto}h1{font-size:1.6rem;margin:.9rem 0 .4rem}h2{font-size:1.15rem;margin:0 0 .2rem}
 .lede{color:var(--mut);max-width:48rem}.tag{display:inline-block;font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:0 .45rem;margin-right:.4rem}
 section.p{background:var(--card);border:1px solid var(--line);padding:1rem 1.1rem 1.1rem;margin:1.1rem 0}
 .src{font-size:.85rem;color:var(--mut);margin:.1rem 0 .7rem}.see{background:var(--note);border-left:3px solid var(--acc);padding:.5rem .8rem;margin:.8rem 0 0;font-size:.95rem}
@@ -573,15 +573,17 @@ table{border-collapse:collapse;width:100%;font-size:.92rem}th,td{text-align:left
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}@media(max-width:760px){.grid2{grid-template-columns:1fr}}
 .tbl{overflow-x:auto}code{font-size:.85em}a{color:var(--acc)}td{font-variant-numeric:tabular-nums}
 a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-.crumbs{font-size:.9rem;color:var(--mut);margin:0 0 .4rem}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.2rem .5rem}
+.crumbs{font-size:.9rem;color:var(--mut);margin:0}.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.2rem .5rem}
 .crumbs li+li::before{content:"›";margin-right:.5rem;color:var(--mut)}.crumbs [aria-current]{color:var(--fg)}
-.toc{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);margin:.8rem -16px 0;padding:0 16px;overflow-x:auto;white-space:nowrap}
+.bar{position:-webkit-sticky;position:sticky;top:0;z-index:3;background:var(--bg);margin:0 -16px;padding:0 16px;border-bottom:1px solid var(--line)}
+.crumbs ol{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}.crumbs a,.crumbs [aria-current]{display:inline-flex;align-items:center;min-height:2.6rem}
+.toc{position:-webkit-sticky;position:sticky;top:var(--barh);z-index:2;background:var(--bg);border-bottom:1px solid var(--line);margin:.8rem -16px 0;padding:0 16px;overflow-x:auto;white-space:nowrap}
 .toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .5rem;text-decoration:none;font-size:.92rem}.toc a:first-child{padding-left:0}
-h2.g{font-size:1.35rem;margin:2rem 0 .2rem;scroll-margin-top:3.5rem}.top{font-size:.85rem;margin:.4rem 0 0;text-align:right}
+h2.g{font-size:1.35rem;margin:2rem 0 .2rem;scroll-margin-top:6.6rem}.top{font-size:.85rem;margin:.4rem 0 0;text-align:right}
 .swipe{display:none;font-size:.8rem;color:var(--mut);margin:.2rem 0}
 @media(max-width:700px){.c{overflow-x:auto}.c svg.wide{min-width:800px}.swipe{display:block}h1{font-size:1.35rem}}
 </style></head><body><main id="top">
-<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">SRP guide</a></li><li><a href="../index.html#euvd">EUVD</a></li><li><span aria-current="page">Statistics</span></li></ol></nav>
+<header class="bar"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">SRP guide</a></li><li><a href="../index.html#euvd">EUVD</a></li><li><span aria-current="page">Statistics</span></li></ol></nav></header>
 <h1>EUVD statistics</h1>
 <p class="lede">Charts on the EU Vulnerability Database, regenerated every day by the monitor in this repository from the EUVD's own API, the CISA KEV catalogue and Shadowserver honeypot data as served by the EUVD. Data as of <span id="gen"></span>. Every panel says what it shows, where the data comes from and what it cannot show. None of it says how a vulnerability reached ENISA: no source records the reporting route. Raw data: <a href="stats.json">stats.json</a>; the exploited entries one by one: <a href="index.html">index.html</a>; the API: <a href="https://github.com/git-z0man/single-reporting-platform/blob/main/euvd/API.md">API.md</a>.</p>
 <p class="lede" id="mode" style="font-size:.85rem"></p>
