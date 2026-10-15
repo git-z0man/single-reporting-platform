@@ -1242,6 +1242,23 @@
    "first_seen": "2026-10-08",
    "first_seen_after": "",
    "changes": []
+  },
+  {
+   "id": "EUVD-2026-88445",
+   "cve": "CVE-2026-86950",
+   "row": 1819,
+   "dateAdded": "2026-10-08",
+   "origin": "CSIRT-IE",
+   "vendor": "Apple",
+   "product": "macOS, iOS and iPadOS",
+   "notes": "https://support.apple.com/en-us/149226",
+   "cisa": "2026-09-29",
+   "inserted_after": "2026-10-13",
+   "inserted_before": "2026-10-14",
+   "backdated_days": 5,
+   "first_seen": "2026-10-15",
+   "first_seen_after": "2026-10-14",
+   "changes": []
   }
  ],
  "removed": []
