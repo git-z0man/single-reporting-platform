@@ -1,9 +1,9 @@
 {
  "schema": 1,
  "source": "https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2",
- "fetched": "2026-10-13",
- "version": "1.4",
- "last_update": "01 October 2026",
+ "fetched": "2026-10-15",
+ "version": "1.5",
+ "last_update": "15 October 2026",
  "fields": [
   {
    "nr": "1",
@@ -381,10 +381,10 @@
    "nr": "i31",
    "name": "Incident is suspected of unlawful or malicious acts",
    "applies": "SI",
-   "means": "Boolean indication of whether available evidence suggests the incident resulted from unlawful or malicious activity.",
-   "how": "For example, select Yes when available evidence indicates intentional unlawful or malicious activity. Select No when the event is assessed as non-malicious. Select Unknown while the cause remains unresolved (max. 255 characters).",
+   "means": "Indication of whether available evidence suggests the incident resulted from unlawful or malicious activity.",
+   "how": "Mention \"Yes\" when available evidence indicates intentional unlawful or malicious activity. Mention \"No\" when the event is assessed as non-malicious, or \"Unknown\" while the cause remains unresolved. Provide additional information, if available (max. 255 characters).",
    "example": "Yes",
-   "format": "Select one: Yes, No, Unknown",
+   "format": "Free text",
    "ew": "Required",
    "h72": "Carried over",
    "fr": "Carried over"
