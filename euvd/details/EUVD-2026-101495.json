@@ -1,0 +1,757 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-0322"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-0322",
+  "cwes": [
+   "CWE-94"
+  ],
+  "dateAdded": "2026-10-14",
+  "dueDate": "2026-10-17",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://security.paloaltonetworks.com/CVE-2026-0322 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-0322",
+  "product": "PAN-OS",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
+  "vendorProject": "Palo Alto Networks",
+  "vulnerabilityName": "Palo Alto Networks PAN-OS Code Injection Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-0322\nGHSA-9fh3-97mp-7wmv\n",
+  "assigner": "palo_alto",
+  "baseScore": 8.6,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/AU:N/R:U/V:D/RE:M/U:Red",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Oct 14, 2026, 5:26:52 PM",
+  "dateUpdated": "Oct 14, 2026, 7:58:24 PM",
+  "description": "A remote code execution (RCE) vulnerability in the management interface of Palo Alto Networks PAN-OS® software enables an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.\n\n\n\nThe security risk posed by this issue is minimized by restricting access to the management interface to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 .\n\n\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\n\n\nCloud NGFW and Prisma® Access are not impacted by this vulnerability.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "0f2ed7cc-87bd-3ce6-9bd2-07eea50ba105",
+    "product": {
+     "name": "PAN-OS",
+     "vendor": {
+      "name": "Palo Alto Networks"
+     }
+    },
+    "product_version": "12.2.0 <12.2.4"
+   },
+   {
+    "id": "44052bf4-15fa-3f08-bba5-2c4ee8b19894",
+    "product": {
+     "name": "PAN-OS",
+     "vendor": {
+      "name": "Palo Alto Networks"
+     }
+    },
+    "product_version": "11.1.0 <11.1.16-h3"
+   },
+   {
+    "id": "5793f612-f9ec-3cf7-823a-3b129a3e2022",
+    "product": {
+     "name": "PAN-OS",
+     "vendor": {
+      "name": "Palo Alto Networks"
+     }
+    },
+    "product_version": "11.2.0 <11.2.16"
+   },
+   {
+    "id": "b6989f07-96f8-3c5d-bc28-17451522c14c",
+    "product": {
+     "name": "PAN-OS",
+     "vendor": {
+      "name": "Palo Alto Networks"
+     }
+    },
+    "product_version": "10.2.0 <10.2.18-h12"
+   },
+   {
+    "id": "c40a93df-a267-3633-a8f1-4c0fc3a5781a",
+    "product": {
+     "name": "PAN-OS",
+     "vendor": {
+      "name": "Palo Alto Networks"
+     }
+    },
+    "product_version": "12.1.0 <12.1.10-h2"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "dacb17c9-a50b-3b5c-81fe-85abd541f323",
+    "vendor": {
+     "name": "Palo Alto Networks"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "8b08fcda-a483-39f2-99d9-c82ff05a779b",
+    "vulnerability": {
+     "aliases": "GHSA-9fh3-97mp-7wmv\nCVE-2026-0322\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 15, 2026, 7:04:26 AM",
+     "datePublished": "Oct 14, 2026, 6:32:28 PM",
+     "dateUpdated": "Oct 14, 2026, 9:33:42 PM",
+     "description": "A remote code execution (RCE) vulnerability in the management interface of Palo Alto Networks PAN-OS® software enables an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.\n\n\n\nThe security risk posed by this issue is minimized by restricting access to the management interface to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 .\n\n\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\n\n\nCloud NGFW and Prisma® Access are not impacted by this vulnerability.",
+     "enisa_id": "EUVD-2026-101495\n",
+     "epss": 0.0,
+     "id": "GHSA-9fh3-97mp-7wmv",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322\nhttps://security.paloaltonetworks.com/CVE-2026-0322\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-0322\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "a96efd47-30d6-3b54-b3ba-e33c521bd476",
+    "vulnerability": {
+     "assigner": "palo_alto",
+     "baseScore": 8.6,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/AU:N/R:U/V:D/RE:M/U:Red",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 15, 2026, 7:02:40 AM",
+     "datePublished": "Oct 14, 2026, 5:26:52 PM",
+     "dateUpdated": "Oct 14, 2026, 7:58:24 PM",
+     "description": "A remote code execution (RCE) vulnerability in the management interface of Palo Alto Networks PAN-OS® software enables an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.\n\n\n\nThe security risk posed by this issue is minimized by restricting access to the management interface to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 .\n\n\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\n\n\nCloud NGFW and Prisma® Access are not impacted by this vulnerability.",
+     "enisa_id": "EUVD-2026-101495\n",
+     "epss": 0.0,
+     "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
+     "id": "CVE-2026-0322",
+     "references": "https://security.paloaltonetworks.com/CVE-2026-0322\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "0a655583-a01e-3ec5-8da7-66f63d409e9d",
+       "product": {
+        "name": "PAN-OS",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       },
+       "product_version": "12.1.0 <12.1.10-h2"
+      },
+      {
+       "id": "4a0c903f-939b-37ad-9630-cd9d46fafacf",
+       "product": {
+        "name": "PAN-OS",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       },
+       "product_version": "12.2.0 <12.2.4"
+      },
+      {
+       "id": "56e8c278-1944-3d16-9a38-ef9ae8a7f76f",
+       "product": {
+        "name": "PAN-OS",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       },
+       "product_version": "11.2.0 <11.2.16"
+      },
+      {
+       "id": "ca63936c-7734-3c51-9526-7d9c74a7479a",
+       "product": {
+        "name": "PAN-OS",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       },
+       "product_version": "10.2.0 <10.2.18-h12"
+      },
+      {
+       "id": "ecf776ff-b878-3edc-a078-f5c52669e14e",
+       "product": {
+        "name": "PAN-OS",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       },
+       "product_version": "11.1.0 <11.1.16-h3"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "154dfce8-e25a-3219-a0fb-38f9203512d2",
+       "vendor": {
+        "name": "Palo Alto Networks"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "926d96e0-b92c-340d-bc4f-85a9bb7afc5f",
+  "epss": 0.0,
+  "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-101495",
+  "references": "https://security.paloaltonetworks.com/CVE-2026-0322\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-101495",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 14, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "Cloud NGFW",
+      "vendor": "Palo Alto Networks",
+      "versions": [
+       {
+        "status": "unaffected",
+        "version": "All",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "cpes": [
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.2.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.2.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.10:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.9:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.8:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.7:h6:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.7:h5:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.7:h3:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.7:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.7:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.7:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.6:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.5:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.4:h11:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.4:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.4:h9:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.4:h8:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.4:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.4:h6:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.4:h5:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.4:h3:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.4:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.4:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:12.1.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.15:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.13:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.13:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.13:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.12:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.11:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h14:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h13:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h12:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h9:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h8:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h6:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h5:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h4:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h3:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.10:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.9:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.8:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h20:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h19:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h18:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h17:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h16:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h15:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h14:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h13:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h12:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h11:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h8:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h4:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h3:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.7:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.6:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.5:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h21:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h20:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h18:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h17:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h15:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h14:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h12:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h11:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h9:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h8:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h6:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h5:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h4:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h3:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.4:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.2.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.16:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.16:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.16:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.15:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.14:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:h12:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:h11:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:h9:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:h8:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:h6:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:h5:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:h3:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.13:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.12:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.11:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h33:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h32:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h30:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h28:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h27:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h26:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h25:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h21:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h12:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h9:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h5:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h4:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.10:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.9:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.8:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h38:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h36:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h35:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h34:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h33:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h32:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h29:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h25:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h23:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h22:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h21:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h20:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h19:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h18:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h17:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h14:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h6:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h4:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h3:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.6:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.5:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h36:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h35:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h34:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h33:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h32:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h27:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h25:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h18:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h17:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h15:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h13:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h12:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h11:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h9:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h8:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h6:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h5:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h4:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h3:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.4:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:11.1.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.18:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.18:h9:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.18:h8:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.18:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.18:h6:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.18:h5:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.18:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.18:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.17:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.16:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.16:h9:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.16:h8:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.16:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.16:h6:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.16:h4:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.16:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.16:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.15:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.14:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h25:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h24:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h23:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h22:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h21:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h18:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h16:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h15:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h5:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h4:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h3:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.13:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.12:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.11:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h40:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h39:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h37:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h36:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h31:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h30:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h27:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h26:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h23:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h21:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h18:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h17:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h14:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h13:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h12:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h11:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h9:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h8:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h6:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h5:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h4:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h3:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.10:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.9:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.8:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h37:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h36:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h35:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h34:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h32:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h24:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h23:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h22:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h21:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h20:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h19:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h18:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h17:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h16:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h15:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h14:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h13:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h12:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h11:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h10:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h9:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h8:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h7:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h6:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h5:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h4:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h3:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h2:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:h1:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.7:-:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.6:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.5:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.4:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:palo_alto_networks:pan-os:10.2.0:*:*:*:*:*:*:*"
+      ],
+      "defaultStatus": "unaffected",
+      "product": "PAN-OS",
+      "vendor": "Palo Alto Networks",
+      "versions": [
+       {
+        "changes": [
+         {
+          "at": "12.2.4",
+          "status": "unaffected"
+         }
+        ],
+        "lessThan": "12.2.4",
+        "status": "affected",
+        "version": "12.2.0",
+        "versionType": "custom"
+       },
+       {
+        "changes": [
+         {
+          "at": "12.1.4-h12",
+          "status": "unaffected"
+         },
+         {
+          "at": "12.1.7-h8",
+          "status": "unaffected"
+         },
+         {
+          "at": "12.1.10-h2",
+          "status": "unaffected"
+         }
+        ],
+        "lessThan": "12.1.10-h2",
+        "status": "affected",
+        "version": "12.1.0",
+        "versionType": "custom"
+       },
+       {
+        "changes": [
+         {
+          "at": "11.2.4-h22",
+          "status": "unaffected"
+         },
+         {
+          "at": "11.2.7-h21",
+          "status": "unaffected"
+         },
+         {
+          "at": "11.2.10-h15",
+          "status": "unaffected"
+         },
+         {
+          "at": "11.2.13-h3",
+          "status": "unaffected"
+         },
+         {
+          "at": "11.2.16",
+          "status": "unaffected"
+         }
+        ],
+        "lessThan": "11.2.16",
+        "status": "affected",
+        "version": "11.2.0",
+        "versionType": "custom"
+       },
+       {
+        "changes": [
+         {
+          "at": "11.1.4-h37",
+          "status": "unaffected"
+         },
+         {
+          "at": "11.1.6-h39",
+          "status": "unaffected"
+         },
+         {
+          "at": "11.1.7-h11",
+          "status": "unaffected"
+         },
+         {
+          "at": "11.1.10-h35",
+          "status": "unaffected"
+         },
+         {
+          "at": "11.1.13-h15",
+          "status": "unaffected"
+         },
+         {
+          "at": "11.1.16-h3",
+          "status": "unaffected"
+         }
+        ],
+        "lessThan": "11.1.16-h3",
+        "status": "affected",
+        "version": "11.1.0",
+        "versionType": "custom"
+       },
+       {
+        "changes": [
+         {
+          "at": "10.2.7-h38",
+          "status": "unaffected"
+         },
+         {
+          "at": "10.2.10-h41",
+          "status": "unaffected"
+         },
+         {
+          "at": "10.2.13-h26",
+          "status": "unaffected"
+         },
+         {
+          "at": "10.2.16-h11",
+          "status": "unaffected"
+         },
+         {
+          "at": "10.2.18-h12",
+          "status": "unaffected"
+         }
+        ],
+        "lessThan": "10.2.18-h12",
+        "status": "affected",
+        "version": "10.2.0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "Prisma Access",
+      "vendor": "Palo Alto Networks",
+      "versions": [
+       {
+        "status": "unaffected",
+        "version": "All",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "psirt@paloaltonetworks.com"
+   }
+  ],
+  "cisaActionDue": "2026-10-17",
+  "cisaExploitAdd": "2026-10-14",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Palo Alto Networks PAN-OS Code Injection Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A remote code execution (RCE) vulnerability in the management interface of Palo Alto Networks PAN-OS® software enables an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.\n\n\n\nThe security risk posed by this issue is minimized by restricting access to the management interface to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 .\n\n\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\n\n\nCloud NGFW and Prisma® Access are not impacted by this vulnerability."
+   }
+  ],
+  "id": "CVE-2026-0322",
+  "lastModified": "2026-10-15T04:18:03.657",
+  "metrics": {
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NO",
+      "Recovery": "USER",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 8.6,
+      "baseSeverity": "HIGH",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "ATTACKED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "HIGH",
+      "providerUrgency": "RED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "DIFFUSE",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:Red",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "MODERATE"
+     },
+     "source": "psirt@paloaltonetworks.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-0322",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-14T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-14T18:17:07.743",
+  "references": [
+   {
+    "source": "psirt@paloaltonetworks.com",
+    "url": "https://security.paloaltonetworks.com/CVE-2026-0322"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-0322"
+   }
+  ],
+  "sourceIdentifier": "psirt@paloaltonetworks.com",
+  "vulnStatus": "Received",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-94"
+     }
+    ],
+    "source": "psirt@paloaltonetworks.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

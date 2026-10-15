@@ -1,0 +1,377 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-105134"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-105134",
+  "cwes": [
+   "CWE-77",
+   "CWE-78"
+  ],
+  "dateAdded": "2026-10-14",
+  "dueDate": "2026-10-17",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-105134",
+  "product": "AhsayCBS",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133.",
+  "vendorProject": "Ahsay",
+  "vulnerabilityName": "Ahsay AhsayCBS Command Injection Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-105134\nGHSA-mxj3-2x8q-2rh9\n",
+  "assigner": "VulDB",
+  "baseScore": 10.0,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Oct 4, 2026, 5:30:12 AM",
+  "dateUpdated": "Oct 14, 2026, 7:58:23 PM",
+  "description": "A flaw has been found in Ahsay AhsayCBS up to 10.3.2. This vulnerability affects unknown code of the file /rps/api/json/UpdateReceivers.do of the component Replication Receiver. Executing a manipulation of the argument random can lead to os command injection. It is possible to launch the attack remotely. The exploit has been published and may be used. Upgrading to version 10.3.4 is able to resolve this issue. Upgrading the affected component is advised.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "135291c8-c901-3369-8961-e636dae242cc",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.2"
+   },
+   {
+    "id": "9b48d094-f8d0-3877-8a91-c112f0d9e403",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.0"
+   },
+   {
+    "id": "a88670cd-3de9-3edf-bf47-e9314af220fa",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.1"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "d87a15c7-18b8-3d79-882b-c9652958f890",
+    "vendor": {
+     "name": "Ahsay"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "7e0cba79-5f81-3daf-a896-aeff0981655c",
+    "vulnerability": {
+     "assigner": "VulDB",
+     "baseScore": 10.0,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 15, 2026, 7:20:35 AM",
+     "datePublished": "Oct 4, 2026, 5:30:12 AM",
+     "dateUpdated": "Oct 14, 2026, 7:58:23 PM",
+     "description": "A flaw has been found in Ahsay AhsayCBS up to 10.3.2. This vulnerability affects unknown code of the file /rps/api/json/UpdateReceivers.do of the component Replication Receiver. Executing a manipulation of the argument random can lead to os command injection. It is possible to launch the attack remotely. The exploit has been published and may be used. Upgrading to version 10.3.4 is able to resolve this issue. Upgrading the affected component is advised.",
+     "enisa_id": "EUVD-2026-92078\n",
+     "epss": 1.84,
+     "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
+     "id": "CVE-2026-105134",
+     "references": "https://vuldb.com/vuln/413351\nhttps://vuldb.com/vuln/413351/cti\nhttps://vuldb.com/cve/CVE-2026-105134\nhttps://vuldb.com/submit/942743\nhttps://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "0e51d2f4-8cfb-3a2e-8785-7fb8f2ddfe66",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.1"
+      },
+      {
+       "id": "26cc3826-e6b5-3a08-ad58-9f97b8723421",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.2"
+      },
+      {
+       "id": "e958e24b-9e0a-32a4-9efd-f23a029dfdcd",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.0"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "e8f927c9-1de1-36a7-b398-9da9565ee3fc",
+       "vendor": {
+        "name": "Ahsay"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "9b9da320-9831-3359-8a45-9fd0ce7a179f",
+    "vulnerability": {
+     "aliases": "GHSA-mxj3-2x8q-2rh9\nCVE-2026-105134\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 15, 2026, 7:04:26 AM",
+     "datePublished": "Oct 4, 2026, 9:30:20 AM",
+     "dateUpdated": "Oct 14, 2026, 9:33:05 PM",
+     "description": "A flaw has been found in Ahsay AhsayCBS up to 10.3.2. This vulnerability affects unknown code of the file /rps/api/json/UpdateReceivers.do of the component Replication Receiver. Executing a manipulation of the argument random can lead to os command injection. It is possible to launch the attack remotely. The exploit has been published and may be used. Upgrading to version 10.3.4 is able to resolve this issue. Upgrading the affected component is advised.",
+     "enisa_id": "EUVD-2026-92078\n",
+     "epss": 0.0,
+     "id": "GHSA-mxj3-2x8q-2rh9",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134\nhttps://vuldb.com/cve/CVE-2026-105134\nhttps://vuldb.com/submit/942743\nhttps://vuldb.com/vuln/413351\nhttps://vuldb.com/vuln/413351/cti\nhttps://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-105134\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "9e4b0dea-555d-3805-8f32-c545935e192c",
+  "epss": 1.84,
+  "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-92078",
+  "references": "https://vuldb.com/vuln/413351\nhttps://vuldb.com/vuln/413351/cti\nhttps://vuldb.com/cve/CVE-2026-105134\nhttps://vuldb.com/submit/942743\nhttps://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-92078",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 14, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "cpes": [
+       "cpe:2.3:a:ahsay:ahsaycbs:*:*:*:*:*:*:*:*"
+      ],
+      "modules": [
+       "Replication Receiver"
+      ],
+      "product": "AhsayCBS",
+      "vendor": "Ahsay",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "10.3.0"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.1"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.2"
+       },
+       {
+        "status": "unaffected",
+        "version": "10.3.4"
+       }
+      ]
+     }
+    ],
+    "source": "cna@vuldb.com"
+   }
+  ],
+  "cisaActionDue": "2026-10-17",
+  "cisaExploitAdd": "2026-10-14",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Ahsay AhsayCBS Command Injection Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A flaw has been found in Ahsay AhsayCBS up to 10.3.2. This vulnerability affects unknown code of the file /rps/api/json/UpdateReceivers.do of the component Replication Receiver. Executing a manipulation of the argument random can lead to os command injection. It is possible to launch the attack remotely. The exploit has been published and may be used. Upgrading to version 10.3.4 is able to resolve this issue. Upgrading the affected component is advised."
+   }
+  ],
+  "id": "CVE-2026-105134",
+  "lastModified": "2026-10-15T04:18:15.337",
+  "metrics": {
+   "cvssMetricV2": [
+    {
+     "acInsufInfo": false,
+     "baseSeverity": "HIGH",
+     "cvssData": {
+      "accessComplexity": "LOW",
+      "accessVector": "NETWORK",
+      "authentication": "NONE",
+      "availabilityImpact": "COMPLETE",
+      "baseScore": 10.0,
+      "confidentialityImpact": "COMPLETE",
+      "integrityImpact": "COMPLETE",
+      "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+      "version": "2.0"
+     },
+     "exploitabilityScore": 10.0,
+     "impactScore": 10.0,
+     "obtainAllPrivilege": false,
+     "obtainOtherPrivilege": false,
+     "obtainUserPrivilege": false,
+     "source": "cna@vuldb.com",
+     "type": "Secondary",
+     "userInteractionRequired": false
+    }
+   ],
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 10.0,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 6.0,
+     "source": "cna@vuldb.com",
+     "type": "Secondary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.3,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "PROOF_OF_CONCEPT",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "HIGH",
+      "subConfidentialityImpact": "HIGH",
+      "subIntegrityImpact": "HIGH",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "cna@vuldb.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-105134",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-14T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-04T07:16:33.480",
+  "references": [
+   {
+    "source": "cna@vuldb.com",
+    "url": "https://vuldb.com/cve/CVE-2026-105134"
+   },
+   {
+    "source": "cna@vuldb.com",
+    "url": "https://vuldb.com/submit/942743"
+   },
+   {
+    "source": "cna@vuldb.com",
+    "url": "https://vuldb.com/vuln/413351"
+   },
+   {
+    "source": "cna@vuldb.com",
+    "url": "https://vuldb.com/vuln/413351/cti"
+   },
+   {
+    "source": "cna@vuldb.com",
+    "url": "https://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-105134"
+   }
+  ],
+  "sourceIdentifier": "cna@vuldb.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-77"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-78"
+     }
+    ],
+    "source": "cna@vuldb.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

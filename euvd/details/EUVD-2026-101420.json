@@ -1,0 +1,758 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76519"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-76519",
+  "cwes": [
+   "CWE-23"
+  ],
+  "dateAdded": "2026-10-14",
+  "dueDate": "2026-10-17",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-76519",
+  "product": "Secure Email Gateway",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
+  "vendorProject": "Cisco",
+  "vulnerabilityName": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-76519\nGHSA-6rc3-jwq8-jm3v\n",
+  "assigner": "cisco",
+  "baseScore": 9.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Oct 14, 2026, 4:07:51 PM",
+  "dateUpdated": "Oct 14, 2026, 7:58:23 PM",
+  "description": "A vulnerability in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\r\n\r\nThis vulnerability is due to improper handling of email attachments when the file reputation service is enabled. An attacker could exploit this vulnerability by sending an email that contains a crafted attachment through an affected device. A successful exploit could allow the attacker to write arbitrary files and execute commands with&nbsp;root privileges on the underlying operating system.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "112acd76-267a-3cb1-967c-e8c90c3bdbd5",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "16.0.2-112"
+   },
+   {
+    "id": "199bf199-552d-39ec-ba05-95a615e415d8",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "15.5.0-048"
+   },
+   {
+    "id": "32e383ed-cb64-3e55-9eef-53220af25cbc",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "13.5.1-277"
+   },
+   {
+    "id": "3ee1faa3-ac10-3034-bd1e-86eceb0450dd",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "14.2.0-620"
+   },
+   {
+    "id": "422decfa-42b8-3bb2-941b-59ebf7553bed",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "15.5.1-055"
+   },
+   {
+    "id": "450e8f6f-6cc3-3b5b-bed2-b40252a34e2f",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "15.5.4-012"
+   },
+   {
+    "id": "4a86b71e-3f23-3bdf-b55b-0bbd9505d6b9",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "15.0.1-030"
+   },
+   {
+    "id": "58efa1bb-661f-314e-8ebc-cd98bb43e8ee",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "13.0.0-392"
+   },
+   {
+    "id": "651bba7d-44ad-3da4-a28c-bb7bb00fb63e",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "15.0.3-002"
+   },
+   {
+    "id": "87803d73-3d66-3b62-8b69-6eb576da5e11",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "14.2.1-020"
+   },
+   {
+    "id": "8a0b4f7b-fc72-3b66-9132-4cd25871b6eb",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "15.5.3-022"
+   },
+   {
+    "id": "8c894568-3203-3243-911e-ead9b1ac8565",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "16.0.0-050"
+   },
+   {
+    "id": "8f92e6ed-487b-320f-b499-a85ecbcd6576",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "13.0.5-007"
+   },
+   {
+    "id": "9c6499d7-4c7b-3923-bfa5-31eac9f2f24c",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "15.0.0-104"
+   },
+   {
+    "id": "ad24c851-ab32-3158-9cc0-21671cff9811",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "14.0.0-698"
+   },
+   {
+    "id": "b1c1a953-3010-3026-a7a2-3834f0004496",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "14.3.0-032"
+   },
+   {
+    "id": "b32c35b8-66ba-3fee-96fd-e96dd77b3c1f",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "13.5.4-038"
+   },
+   {
+    "id": "b837ff57-8f55-30ab-8b36-30f0fd0bc3a1",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "15.5.2-018"
+   },
+   {
+    "id": "ca37dc0c-e127-3936-aef5-e40081d59c92",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "16.0.0-054"
+   },
+   {
+    "id": "e5534b22-2e05-3d28-8b68-58f421818ed6",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "16.0.3-044"
+   },
+   {
+    "id": "e56c178e-a2c2-38f3-8d85-51cddf3f3b68",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "15.0.5-016"
+   },
+   {
+    "id": "e5989b8c-bf09-3afe-84d1-13d977b3806e",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "16.0.4-016"
+   },
+   {
+    "id": "fd7e70e7-af42-316d-a923-97c83b2a2a1b",
+    "product": {
+     "name": "Cisco Secure Email",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "16.0.1-017"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "ea589b08-c423-338c-8560-124047f2b09e",
+    "vendor": {
+     "name": "Cisco"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "b37d2daf-f157-3f42-8188-8a409b6a4212",
+    "vulnerability": {
+     "assigner": "cisco",
+     "baseScore": 9.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 15, 2026, 7:02:40 AM",
+     "datePublished": "Oct 14, 2026, 4:07:51 PM",
+     "dateUpdated": "Oct 14, 2026, 7:58:23 PM",
+     "description": "A vulnerability in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\r\n\r\nThis vulnerability is due to improper handling of email attachments when the file reputation service is enabled. An attacker could exploit this vulnerability by sending an email that contains a crafted attachment through an affected device. A successful exploit could allow the attacker to write arbitrary files and execute commands with&nbsp;root privileges on the underlying operating system.",
+     "enisa_id": "EUVD-2026-101420\n",
+     "epss": 0.0,
+     "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
+     "id": "CVE-2026-76519",
+     "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "091eddc3-e7cd-39e1-b5b9-4053ece6db60",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "15.0.1-030"
+      },
+      {
+       "id": "337266be-8e8b-31c5-b4a5-db9cb9eab7ff",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "16.0.3-044"
+      },
+      {
+       "id": "41f728f0-af92-3531-a63c-d40f1765767e",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "15.0.0-104"
+      },
+      {
+       "id": "6002bc5a-ead4-3b29-bccb-482fc399685a",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "13.5.4-038"
+      },
+      {
+       "id": "7bb9603b-224a-3043-9e1c-c8a051bd0659",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "15.5.3-022"
+      },
+      {
+       "id": "7bdd3584-f7ff-344b-a860-b640a93119e2",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "15.0.3-002"
+      },
+      {
+       "id": "83b57703-304a-3669-a775-37365cc1a0fa",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "16.0.0-054"
+      },
+      {
+       "id": "8ff1138b-76f9-3818-a2e5-a01a702d779e",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "15.5.0-048"
+      },
+      {
+       "id": "94a093da-8b77-39f1-8b19-f82f27092f4d",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "15.5.4-012"
+      },
+      {
+       "id": "99e2b5fd-b2a9-3b6d-a728-6f5722b3700d",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "14.0.0-698"
+      },
+      {
+       "id": "9e9370ac-9e7a-3ab0-ab16-a9cadb41bd90",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "15.0.5-016"
+      },
+      {
+       "id": "a1a13839-c597-3121-96c6-43d04741caa3",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "15.5.2-018"
+      },
+      {
+       "id": "a7317879-880d-3711-b5eb-d18dc90b4d1b",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "14.3.0-032"
+      },
+      {
+       "id": "ac442123-d865-3c7d-923f-8d52f008162a",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "15.5.1-055"
+      },
+      {
+       "id": "c6217435-7224-36f8-a717-0b5812a42df1",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "16.0.0-050"
+      },
+      {
+       "id": "c6a09504-1643-3900-9014-2ad72783bfd9",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "16.0.4-016"
+      },
+      {
+       "id": "ce04d9ac-baed-3f3d-9d55-af691af03809",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "13.0.5-007"
+      },
+      {
+       "id": "d3aaf0ee-afc3-3cdd-b41d-e128a4d882cb",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "16.0.2-112"
+      },
+      {
+       "id": "d4e9b1a1-689d-3189-944a-9433aba94eff",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "14.2.1-020"
+      },
+      {
+       "id": "e0a97c0d-5ea3-31ed-a993-53da29340794",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "16.0.1-017"
+      },
+      {
+       "id": "e930ffe6-99d9-344a-84df-9d8bbf07e0e0",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "13.0.0-392"
+      },
+      {
+       "id": "e9e8fcb6-1d42-313b-b2e5-be832d076a54",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "14.2.0-620"
+      },
+      {
+       "id": "edf37b8d-740b-3768-ba5a-93d9d42d40d2",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "13.5.1-277"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "1dd1b9bb-a3bf-33fa-be0c-fc6781a873cb",
+       "vendor": {
+        "name": "Cisco"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "fc335313-dea6-3dcd-8846-1b04aa5656f0",
+    "vulnerability": {
+     "aliases": "CVE-2026-76519\nGHSA-6rc3-jwq8-jm3v\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 15, 2026, 7:04:26 AM",
+     "datePublished": "Oct 14, 2026, 6:32:26 PM",
+     "dateUpdated": "Oct 14, 2026, 9:33:41 PM",
+     "description": "A vulnerability in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\n\nThis vulnerability is due to improper handling of email attachments when the file reputation service is enabled. An attacker could exploit this vulnerability by sending an email that contains a crafted attachment through an affected device. A successful exploit could allow the attacker to write arbitrary files and execute commands with&nbsp;root privileges on the underlying operating system.",
+     "enisa_id": "EUVD-2026-101420\n",
+     "epss": 0.0,
+     "id": "GHSA-6rc3-jwq8-jm3v",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519\nhttps://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76519\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "acacbdca-6544-3503-9020-81c2636abcf8",
+  "epss": 0.0,
+  "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-101420",
+  "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-101420",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 14, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "Cisco Secure Email",
+      "vendor": "Cisco",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "14.0.0-698"
+       },
+       {
+        "status": "affected",
+        "version": "13.5.1-277"
+       },
+       {
+        "status": "affected",
+        "version": "13.0.0-392"
+       },
+       {
+        "status": "affected",
+        "version": "14.2.0-620"
+       },
+       {
+        "status": "affected",
+        "version": "13.0.5-007"
+       },
+       {
+        "status": "affected",
+        "version": "13.5.4-038"
+       },
+       {
+        "status": "affected",
+        "version": "14.2.1-020"
+       },
+       {
+        "status": "affected",
+        "version": "14.3.0-032"
+       },
+       {
+        "status": "affected",
+        "version": "15.0.0-104"
+       },
+       {
+        "status": "affected",
+        "version": "15.0.1-030"
+       },
+       {
+        "status": "affected",
+        "version": "15.5.0-048"
+       },
+       {
+        "status": "affected",
+        "version": "15.5.1-055"
+       },
+       {
+        "status": "affected",
+        "version": "15.5.2-018"
+       },
+       {
+        "status": "affected",
+        "version": "16.0.0-050"
+       },
+       {
+        "status": "affected",
+        "version": "15.0.3-002"
+       },
+       {
+        "status": "affected",
+        "version": "16.0.0-054"
+       },
+       {
+        "status": "affected",
+        "version": "15.5.3-022"
+       },
+       {
+        "status": "affected",
+        "version": "16.0.1-017"
+       },
+       {
+        "status": "affected",
+        "version": "15.5.4-012"
+       },
+       {
+        "status": "affected",
+        "version": "16.0.4-016"
+       },
+       {
+        "status": "affected",
+        "version": "15.0.5-016"
+       },
+       {
+        "status": "affected",
+        "version": "16.0.2-112"
+       },
+       {
+        "status": "affected",
+        "version": "16.0.3-044"
+       }
+      ]
+     }
+    ],
+    "source": "psirt@cisco.com"
+   }
+  ],
+  "cisaActionDue": "2026-10-17",
+  "cisaExploitAdd": "2026-10-14",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A vulnerability in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\r\n\r\nThis vulnerability is due to improper handling of email attachments when the file reputation service is enabled. An attacker could exploit this vulnerability by sending an email that contains a crafted attachment through an affected device. A successful exploit could allow the attacker to write arbitrary files and execute commands with&nbsp;root privileges on the underlying operating system."
+   }
+  ],
+  "id": "CVE-2026-76519",
+  "lastModified": "2026-10-15T04:18:26.410",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "psirt@cisco.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-76519",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-14T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-14T17:19:10.747",
+  "references": [
+   {
+    "source": "psirt@cisco.com",
+    "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76519"
+   }
+  ],
+  "sourceIdentifier": "psirt@cisco.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-23"
+     }
+    ],
+    "source": "psirt@cisco.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
