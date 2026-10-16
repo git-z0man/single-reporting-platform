@@ -28,9 +28,137 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Oct 14, 2026, 4:07:51 PM",
-  "dateUpdated": "Oct 14, 2026, 7:58:23 PM",
+  "dateUpdated": "Oct 15, 2026, 3:56:57 AM",
   "description": "A vulnerability in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\r\n\r\nThis vulnerability is due to improper handling of email attachments when the file reputation service is enabled. An attacker could exploit this vulnerability by sending an email that contains a crafted attachment through an affected device. A successful exploit could allow the attacker to write arbitrary files and execute commands with&nbsp;root privileges on the underlying operating system.",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "3b576ce1-f85c-3cbf-bd1c-712544d599d5",
+       "product": {
+        "name": "14.0",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "43b31d58-25fb-3367-8805-1ea5baaee3c7",
+       "product": {
+        "name": "15.5",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "46e6fff9-d4d9-3ba7-8924-66b16054f31a",
+       "product": {
+        "name": "13.0",
+        "vendor": {
+         "name": "Rockwell Automation"
+        }
+       }
+      },
+      {
+       "id": "8f1121f6-4640-347f-a409-cd907ea2005a",
+       "product": {
+        "name": "15.0",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "a9b3e14c-3e11-3beb-9de3-6f991adf234d",
+       "product": {
+        "name": "13.5",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "ae92c453-321c-3c0b-a889-74d11f95a7f2",
+       "product": {
+        "name": "14.3",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "be3f891a-7dec-34c9-b0f7-b29075991af0",
+       "product": {
+        "name": "Cisco Secure Email Gateway",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "ced4e5c2-4720-3518-a82a-133282c98a17",
+       "product": {
+        "name": "16.0",
+        "vendor": {
+         "name": "Schneider Electric"
+        }
+       }
+      },
+      {
+       "id": "dd6f227d-87f9-3729-8dee-09d257ab2252",
+       "product": {
+        "name": "14.2",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-76519\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 14, 2026, 4:00:00 PM",
+     "dateUpdated": "Oct 14, 2026, 4:00:00 PM",
+     "description": "Cisco Secure Email Gateway Arbitrary File Write Vulnerability",
+     "id": "cisco-sa-esa-afw-zqYJkjxp",
+     "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp\n",
+     "source": {
+      "id": 10,
+      "name": "csaf_cisco"
+     },
+     "summary": "A vulnerability in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\r\n\r\nThis vulnerability is due to improper handling of email attachments when the file reputation service is enabled. An attacker could exploit this vulnerability by sending an email that contains a crafted attachment through an affected device. A successful exploit could allow the attacker to write arbitrary files and execute commands with root privileges on the underlying operating system.\r\n\r\nCisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.\r\n\r\n\r\n\r\nFor further documentation of improvements and fixes in Cisco Secure Email Gateway, see Cisco Secure Email Gateway and Secure Email and Web Manager Security Hardening Release: September 2026 [\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-esa-dfCrfXkm\"]."
+    },
+    "id": "3b4062fa-b2db-3a4b-9300-c0ab00862501"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "6ca6cf2f-86e3-34c8-8676-32d7ec33f84e",
+       "product": {
+        "name": "Cisco Secure Email",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-76519\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 14, 2026, 6:46:36 PM",
+     "dateUpdated": "Oct 14, 2026, 6:46:36 PM",
+     "description": "Kwetsbaarheid verholpen in Cisco Secure Email Gateway",
+     "id": "NCSC-2026-0429",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "d651278b-9eee-3a31-80ed-e8067af903b7"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "112acd76-267a-3cb1-967c-e8c90c3bdbd5",
@@ -279,12 +407,12 @@
      "baseScore": 9.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Oct 15, 2026, 7:02:40 AM",
+     "dataProcessed": "Oct 16, 2026, 7:19:46 AM",
      "datePublished": "Oct 14, 2026, 4:07:51 PM",
-     "dateUpdated": "Oct 14, 2026, 7:58:23 PM",
+     "dateUpdated": "Oct 15, 2026, 3:56:57 AM",
      "description": "A vulnerability in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\r\n\r\nThis vulnerability is due to improper handling of email attachments when the file reputation service is enabled. An attacker could exploit this vulnerability by sending an email that contains a crafted attachment through an affected device. A successful exploit could allow the attacker to write arbitrary files and execute commands with&nbsp;root privileges on the underlying operating system.",
      "enisa_id": "EUVD-2026-101420\n",
-     "epss": 0.0,
+     "epss": 1.74,
      "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
      "id": "CVE-2026-76519",
      "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp\n",
@@ -536,7 +664,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-76519\nGHSA-6rc3-jwq8-jm3v\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 15, 2026, 7:04:26 AM",
+     "dataProcessed": "Oct 16, 2026, 7:04:58 AM",
      "datePublished": "Oct 14, 2026, 6:32:26 PM",
      "dateUpdated": "Oct 14, 2026, 9:33:41 PM",
      "description": "A vulnerability in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\n\nThis vulnerability is due to improper handling of email attachments when the file reputation service is enabled. An attacker could exploit this vulnerability by sending an email that contains a crafted attachment through an affected device. A successful exploit could allow the attacker to write arbitrary files and execute commands with&nbsp;root privileges on the underlying operating system.",
@@ -550,7 +678,7 @@
    }
   ],
   "enisaUuid": "acacbdca-6544-3503-9020-81c2636abcf8",
-  "epss": 0.0,
+  "epss": 1.74,
   "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
   "id": "EUVD-2026-101420",
   "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp\n"
@@ -674,6 +802,69 @@
   "cisaExploitAdd": "2026-10-14",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "652A6E01-3966-4EB3-AF8C-59D8FD64012F",
+        "versionEndExcluding": "15.5.5-014",
+        "versionStartIncluding": "15.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "48814B81-D798-4DAA-B8B5-6956CB5B34C9",
+        "versionEndExcluding": "16.5.0-780",
+        "versionStartIncluding": "16.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c100v:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5B6FBC8A-8187-4903-B786-6CF341C142B5",
+        "vulnerable": false
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c300v:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "68864429-9730-43E9-96C3-20B9035BB291",
+        "vulnerable": false
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c600v:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B52D8B2B-E9AE-4B02-87BD-9CF9FA95906A",
+        "vulnerable": false
+       },
+       {
+        "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c195:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7B1322B8-1CF9-4B17-9A58-38788051ED4F",
+        "vulnerable": false
+       },
+       {
+        "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c395:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "139A640B-1957-4953-AA88-9D373A5152D1",
+        "vulnerable": false
+       },
+       {
+        "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c695:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F08EA2AD-618B-4834-A52D-73F6A4502DF1",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   }
+  ],
   "cveTags": [],
   "descriptions": [
    {
@@ -682,7 +873,7 @@
    }
   ],
   "id": "CVE-2026-76519",
-  "lastModified": "2026-10-15T04:18:26.410",
+  "lastModified": "2026-10-15T13:47:19.470",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -733,15 +924,21 @@
   "references": [
    {
     "source": "psirt@cisco.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
     "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-afw-zqYJkjxp"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76519"
    }
   ],
   "sourceIdentifier": "psirt@cisco.com",
-  "vulnStatus": "Undergoing Analysis",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [

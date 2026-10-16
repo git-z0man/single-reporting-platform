@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
   "baseScoreVersion": "3.1",
   "datePublished": "Oct 13, 2026, 7:01:26 PM",
-  "dateUpdated": "Oct 14, 2026, 5:59:25 PM",
+  "dateUpdated": "Oct 15, 2026, 10:30:51 PM",
   "description": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -239,9 +239,9 @@
      "baseScore": 8.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Oct 15, 2026, 7:14:20 AM",
+     "dataProcessed": "Oct 16, 2026, 7:15:09 AM",
      "datePublished": "Oct 13, 2026, 7:01:26 PM",
-     "dateUpdated": "Oct 14, 2026, 5:59:25 PM",
+     "dateUpdated": "Oct 15, 2026, 10:30:51 PM",
      "description": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
      "enisa_id": "EUVD-2026-100274\n",
      "epss": 1.51,
@@ -466,7 +466,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-96951\nGHSA-hjr5-mppg-mjq7\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 15, 2026, 7:04:26 AM",
+     "dataProcessed": "Oct 16, 2026, 7:04:05 AM",
      "datePublished": "Oct 13, 2026, 9:37:08 PM",
      "dateUpdated": "Oct 13, 2026, 9:37:08 PM",
      "description": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
@@ -986,7 +986,7 @@
    }
   ],
   "id": "CVE-2026-96951",
-  "lastModified": "2026-10-14T18:24:18.857",
+  "lastModified": "2026-10-16T04:18:44.017",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -1017,7 +1017,7 @@
       "id": "CVE-2026-96951",
       "options": [
        {
-        "exploitation": "none"
+        "exploitation": "active"
        },
        {
         "automatable": "no"

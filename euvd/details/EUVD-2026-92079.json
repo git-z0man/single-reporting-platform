@@ -28,9 +28,37 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 4, 2026, 5:15:14 AM",
-  "dateUpdated": "Oct 14, 2026, 7:58:23 PM",
+  "dateUpdated": "Oct 15, 2026, 3:57:04 AM",
   "description": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 10.3.4 is able to mitigate this issue. It is recommended to upgrade the affected component.",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "bf65f99a-b174-3172-aad7-15afd7cdf014",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-105134\nCVE-2026-105133\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 14, 2026, 1:19:14 PM",
+     "dateUpdated": "Oct 14, 2026, 1:19:14 PM",
+     "description": "Kwetsbaarheden verholpen in Ahsay AhsayCBS",
+     "id": "NCSC-2026-0427",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "4931e048-7f98-30d2-9c23-c54777a41ce8"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "4f65fde0-f060-3a85-abb8-b295fbdee423",
@@ -79,12 +107,12 @@
      "baseScore": 6.9,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 15, 2026, 7:20:35 AM",
+     "dataProcessed": "Oct 16, 2026, 7:21:13 AM",
      "datePublished": "Oct 4, 2026, 5:15:14 AM",
-     "dateUpdated": "Oct 14, 2026, 7:58:23 PM",
+     "dateUpdated": "Oct 15, 2026, 3:57:04 AM",
      "description": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 10.3.4 is able to mitigate this issue. It is recommended to upgrade the affected component.",
      "enisa_id": "EUVD-2026-92079\n",
-     "epss": 0.38,
+     "epss": 0.67,
      "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
      "id": "CVE-2026-105133",
      "references": "https://vuldb.com/vuln/413350\nhttps://vuldb.com/vuln/413350/cti\nhttps://vuldb.com/cve/CVE-2026-105133\nhttps://vuldb.com/submit/942688\nhttps://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4\n",
@@ -136,7 +164,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-105133\nGHSA-fp2j-3cmp-828j\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 15, 2026, 7:04:26 AM",
+     "dataProcessed": "Oct 16, 2026, 7:04:58 AM",
      "datePublished": "Oct 4, 2026, 9:30:20 AM",
      "dateUpdated": "Oct 14, 2026, 9:33:05 PM",
      "description": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 10.3.4 is able to mitigate this issue. It is recommended to upgrade the affected component.",
@@ -150,7 +178,7 @@
    }
   ],
   "enisaUuid": "be5b32f1-ddaf-3b64-99ee-8f109ece9151",
-  "epss": 0.38,
+  "epss": 0.67,
   "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
   "id": "EUVD-2026-92079",
   "references": "https://vuldb.com/vuln/413350\nhttps://vuldb.com/vuln/413350/cti\nhttps://vuldb.com/cve/CVE-2026-105133\nhttps://vuldb.com/submit/942688\nhttps://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4\n"
@@ -203,6 +231,24 @@
   "cisaExploitAdd": "2026-10-14",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "Ahsay AhsayCBS Improper Authentication Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:ahsay:cloud_backup_suite:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "68F3128A-420B-4BD1-BC88-CBEC1BADAC57",
+        "versionEndExcluding": "10.3.4",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
   "cveTags": [],
   "descriptions": [
    {
@@ -211,7 +257,7 @@
    }
   ],
   "id": "CVE-2026-105133",
-  "lastModified": "2026-10-15T04:18:14.760",
+  "lastModified": "2026-10-15T13:47:06.283",
   "metrics": {
    "cvssMetricV2": [
     {
@@ -331,31 +377,53 @@
   "references": [
    {
     "source": "cna@vuldb.com",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
     "url": "https://vuldb.com/cve/CVE-2026-105133"
    },
    {
     "source": "cna@vuldb.com",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
     "url": "https://vuldb.com/submit/942688"
    },
    {
     "source": "cna@vuldb.com",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
     "url": "https://vuldb.com/vuln/413350"
    },
    {
     "source": "cna@vuldb.com",
+    "tags": [
+     "Permissions Required",
+     "VDB Entry"
+    ],
     "url": "https://vuldb.com/vuln/413350/cti"
    },
    {
     "source": "cna@vuldb.com",
+    "tags": [
+     "Release Notes"
+    ],
     "url": "https://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-105133"
    }
   ],
   "sourceIdentifier": "cna@vuldb.com",
-  "vulnStatus": "Undergoing Analysis",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [
