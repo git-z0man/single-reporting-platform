@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "source": "https://www.enisa.europa.eu/topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp/frequently-asked-questions",
- "fetched": "2026-10-13",
- "stamp": "Updated: 03 October 2026",
+ "fetched": "2026-10-16",
+ "stamp": "Updated: 15 October 2026",
  "questions": [
   {
    "n": 1,
@@ -21,7 +21,7 @@
   },
   {
    "n": 4,
-   "title": "When will the Single Reporting Platform be operational?",
+   "title": "When the Single Reporting Platform has become operational?",
    "html": "<p>The platform has become operational on <strong>11 September 2026,</strong> coinciding with the date on which the CRA <strong>reporting</strong> <strong>obligations</strong> under Art.14 are applicable.</p>\n<p>The platform supports the mandatory reporting of actively exploited vulnerabilities and severe incidents under Art. 14 of the CRA. The corresponding reporting obligations for open-source software stewards under Art. 24(3) will apply from 11 December 2027, in accordance with Art. 71(2) of the CRA.<br>Voluntary reporting under Art. 15 will be introduced in a future phase of the platform.</p>"
   },
   {
@@ -121,8 +121,8 @@
   },
   {
    "n": 24,
-   "title": "In which languages will the SRP be available?",
-   "html": "<p>At launch, the platform will be available in English only.</p>\n<p>ENISA will progressively translate the Factsheet and other supporting materials into all EU languages. This availability of additional language versions of the platform itself will be reviewed in the next phase of the project.</p>"
+   "title": "In which languages is the SRP available?",
+   "html": "<p>Since its launch, the platform is available in English only.</p>\n<p>ENISA is progressively translating the SRP Factsheet into all EU languages. This availability of additional language versions of the platform itself is under review in the current phase of the project.</p>"
   },
   {
    "n": 25,
@@ -168,6 +168,16 @@
    "n": 33,
    "title": "I received an email “Your AR association request with a manufacturer has been rejected by the Designated CSIRT”. What should I do?",
    "html": "<p>The CSIRTs designated as coordinators verify the ARs, ENISA is not intervening in this process. You can find the list of contacts of these CSIRTs on <a href=\"https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/list-of-csirts-designated-as-coordinators\" target=\"_blank\" rel=\"noopener\">our website</a>.</p>"
+  },
+  {
+   "n": 34,
+   "title": "What should I do if I submitted a notification by mistake and would like to cancel it?",
+   "html": "<p>Reporting is a legal obligation and should be carried out only after carefully reading the user manual. A report can be closed only by the CSIRT Designated as Coordinator (CDaC) — that is, the CSIRT of the EU Member State where the notification was submitted.</p>\n<p>To request the closure and invalidation of a report, you can contact the CSIRT using the contact details provided at this link, or add a note to the submission via the “additional note” field, requesting the relevant action.</p>\n<p>ENISA may block an account if it considers that the user has violated the SRP Terms and Conditions.</p>"
+  },
+  {
+   "n": 35,
+   "title": "Why was I contacted by ENISA after submitting a notification about a vulnerability?",
+   "html": "<p>Under Article 17(5) of the Cyber Resilience Act (CRA), ENISA shall, in agreement with the manufacturer of the product with digital elements concerned, add the publicly known vulnerability notified pursuant to Article 14(1) or Article 15(1) of the CRA to the European Vulnerability Database (EUVD).</p>\n<p>ENISA may contact the manufacturer to verify if and when the information can be added to the EUVD.</p>\n<p>As ENISA is a CVE Numbering Authority, the Agency can also help assign a Common Vulnerabilities and Exposures (CVE) ID in accordance with the CVE Program rules.</p>"
   }
  ]
 }
