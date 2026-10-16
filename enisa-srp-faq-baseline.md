@@ -15,7 +15,7 @@ ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-r
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
 vulnerability_services_url: https://www.enisa.europa.eu/topics/vulnerability-services (tracked from 2026-10-08 at the owner's request: ENISA's topic page above the SRP, whose "EU KEV Catalogue" paragraph says the EU KEV "will be further enriched" by reports through the CRA SRP)
-retrieved: 2026-10-13 (fetched 06:05 UTC; content changed since 2026-10-06 — main-page note on the SRP 1.1 upgrade of 12 October, "Particular" → "Particularly" Exceptional Circumstances in FAQ Q11/Q21, new "CRA SRP Status" page, see change log)
+retrieved: 2026-10-16 (fetched UTC morning run; FAQ changed since 2026-10-13 — "Updated: 15 October 2026", new Q34/Q35, Q4 title and Q24 reworded; earlier: content changed since 2026-10-06 — main-page note on the SRP 1.1 upgrade of 12 October, "Particular" → "Particularly" Exceptional Circumstances in FAQ Q11/Q21, new "CRA SRP Status" page, see change log)
 guidance_retrieved: 2026-10-13 (fetched 06:05 UTC; PEC guidance changed 2026-10-12 — stamp "Last updated: 12 October 2026", "Particular" → "Particularly" ×3; the other three subpages unchanged word-for-word)
 glossary_retrieved: 2026-10-02 (fetched UTC morning run; changed — Version 1.4, two new fields 40/41 — see `enisa-srp-glossary-baseline.md`)
 csirt_list_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 17:11 UTC on 2026-09-12)
@@ -32,13 +32,32 @@ vulnerability_services_retrieved: 2026-10-08 (fetched 10:56 UTC; first capture. 
 ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage, and (from 2026-10-08) the Vulnerability Services topic page — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-10-15
-last_change: 2026-10-13
+last_check: 2026-10-16
+last_change: 2026-10-16
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-10-16 UTC (vs. 2026-10-15)
+
+The FAQ gained two questions (Q34 on cancelling a notification submitted by mistake, Q35 on why ENISA contacts reporters about vulnerabilities) and moved to "Updated: 15 October 2026". The Glossary moved to Version 1.5 with one wording change in field 40.
+
+**New**
+- **Q34** "What should I do if I submitted a notification by mistake and would like to cancel it?": a report can be closed only by the CSIRT Designated as Coordinator (CDaC) of the Member State where it was submitted; request closure and invalidation via the CSIRT contacts or the "additional note" field; "ENISA may block an account if it considers that the user has violated the SRP Terms and Conditions." Full text below.
+- **Q35** "Why was I contacted by ENISA after submitting a notification about a vulnerability?": Art. 17(5) CRA, ENISA adds the notified vulnerability to the EUVD in agreement with the manufacturer, may contact the manufacturer to verify if and when, and as CVE Numbering Authority can help assign a CVE ID. Full text below.
+
+**Changed**
+- **Q24** moved from future to present tense: "Since its launch, the platform is available in English only." ENISA "is progressively translating the SRP Factsheet" (was: "will progressively translate the Factsheet and other supporting materials"); language versions of the platform are "under review in the current phase" (was: "will be reviewed in the next phase"). Title now "In which languages is the SRP available?".
+- **Q4** title is now "When the Single Reporting Platform has become operational?" (body unchanged; the title is ungrammatical).
+- **Glossary** footer "Version 1.5. Last update: 15 October 2026" (was 1.4 / 01 October); field 40 "authorised representative" → "assigned representative" (see `enisa-srp-glossary-baseline.md`).
+
+**Watch**
+- Q34 says "at this link" without a link in the fetched text; Q35 names the EUVD route Art. 17(5) CRA.
+
+**Unchanged**
+Other 31 FAQ questions, EU KEV paragraph on the Vulnerability Services page (still "will be further enriched"), AR User Manual v1.1 PDF (hash `2eaea3fc…`, Last-Modified 12 Oct 2026), the four guidance stamps (12 Sep ×3, PEC 12 Oct), CSIRT list (10 Sep), Terms and Conditions, Tutorial Video, Status page. All thirteen pages HTTP 200.
 
 ### 2026-10-13 06:05 UTC (vs. 2026-10-06)
 
@@ -1287,7 +1306,7 @@ Articles 14-17 of the CRA provide the relevant framework for the reporting and d
 
 ENISA is responsible for establishing the CRA SRP and for managing and maintaining its day-to-day operations. ENISA must also ensure the platform's security and implement appropriate technical and organizational measures to protect the information submitted.
 
-### Q4. When will the Single Reporting Platform be operational? *(lost its "[UPDATED]" tag 2026-09-24 06:10 UTC with no wording change — the third tag sweep since go-live; was tagged since 2026-09-12 13:10 UTC, when it was rewritten into past/present tense, reflecting the actual launch — see the change log for the exact before/after wording)*
+### Q4. When the Single Reporting Platform has become operational? *(title changed 2026-10-16 from "When will the Single Reporting Platform be operational?"; body unchanged; lost its "[UPDATED]" tag 2026-09-24 06:10 UTC with no wording change — the third tag sweep since go-live; was tagged since 2026-09-12 13:10 UTC, when it was rewritten into past/present tense, reflecting the actual launch — see the change log for the exact before/after wording)*
 
 The platform has become operational on **11 September 2026,** coinciding with the date on which the CRA **reporting** **obligations** under Art.14 are applicable.&nbsp; *(bold added 2026-09-13 23:15 UTC to the date and, oddly split into two separate `<strong>` tags, "reporting"/"obligations "; no wording change. Gained a trailing nbsp 2026-09-17 09:00 UTC.)*
 
@@ -1493,11 +1512,11 @@ The platform will also be periodically reviewed and re-tested as necessary after
 
 As provided for in Art. 16 of the CRA, ENISA has engaged the CSIRTs Network in the development and testing of the CRA SRP. Various CSIRTs participated in user, security and technical testing, providing valuable feedback on the functioning of the platform.
 
-### Q24. In which languages will the SRP be available?
+### Q24. In which languages is the SRP available? *(rewritten 2026-10-16; was "In which languages will the SRP be available?", "At launch, the platform will be available in English only.", "ENISA will progressively translate the Factsheet and other supporting materials into all EU languages. This availability ... will be reviewed in the next phase of the project.")*
 
-At launch, the platform will be available in English only.
+Since its launch, the platform is available in English only.
 
-ENISA will progressively translate the Factsheet and other supporting materials into all EU languages. This availability of additional language versions of the platform itself will be reviewed in the next phase of the project.
+ENISA is progressively translating the SRP Factsheet into all EU languages. This availability of additional language versions of the platform itself is under review in the current phase of the project.
 
 ### Q25. What should I do if the SRP is temporarily unavailable?
 
@@ -1567,6 +1586,22 @@ For further guidance, please consult Section 4.5 "Manage Manufacturer Associatio
 
 The CSIRTs designated as coordinators verify the ARs, ENISA is not intervening in this process. You can find the list of contacts of these CSIRTs on our website.
 
+### Q34. What should I do if I submitted a notification by mistake and would like to cancel it? *(new question, added 2026-10-16; count 33 → 35)*
+
+Reporting is a legal obligation and should be carried out only after carefully reading the user manual. A report can be closed only by the CSIRT Designated as Coordinator (CDaC) — that is, the CSIRT of the EU Member State where the notification was submitted.
+
+To request the closure and invalidation of a report, you can contact the CSIRT using the contact details provided at this link, or add a note to the submission via the “additional note” field, requesting the relevant action.
+
+ENISA may block an account if it considers that the user has violated the SRP Terms and Conditions.
+
+### Q35. Why was I contacted by ENISA after submitting a notification about a vulnerability? *(new question, added 2026-10-16)*
+
+Under Article 17(5) of the Cyber Resilience Act (CRA), ENISA shall, in agreement with the manufacturer of the product with digital elements concerned, add the publicly known vulnerability notified pursuant to Article 14(1) or Article 15(1) of the CRA to the European Vulnerability Database (EUVD).
+
+ENISA may contact the manufacturer to verify if and when the information can be added to the EUVD.
+
+As ENISA is a CVE Numbering Authority, the Agency can also help assign a Common Vulnerabilities and Exposures (CVE) ID in accordance with the CVE Program rules.
+
 ### Closing note (end of FAQ page)
 
 "Did you not find the answer to your question above? For matters **not covered in the FAQs, nor in the available supporting materials**, please contact: cra-srp-helpdesk[@]enisa.europa.eu" — reworded on 2026-09-07 (was "You did not find above the answer to your question? For matters not covered by this FAQ, nor by available guidance pages, …"). "Available supporting materials" was a link from 2026-09-07 until sometime before 2026-09-12 07:12 UTC, when it reverted to plain `<strong>` emphasis (still bold, no `<a>`); the wording itself did not move. *(Bold span widened 2026-09-28 06:26 UTC from just "available supporting materials" to the whole clause quoted above, "not covered in the FAQs, nor in the available supporting materials"; no wording change.)*
@@ -1626,7 +1661,7 @@ Video: embedded via a PeerTube `<iframe>`, `src="https://videos.enisa.europa.eu/
 
 ## CRA SRP Glossary (new page, `glossary_url`)
 
-Version 1.4, last update: 01 October 2026 *(was 1.3 / 25 September 2026 until the 2026-10-02 check, which also added Common-group fields 40 AR Note and 41 CSIRT Note, both Both/Free text/Optional at all stages; earlier history: date bumped 2026-09-26 from "10 September 2026" — version number unchanged — correlating with the new v26a field below; the previous move was 2026-09-10 13:11 UTC, "1.2, last update: 09/09/2026" → "1.3, last update: 10 September 2026", by far the largest correlated change since first capture at that point — see the change log in `enisa-srp-glossary-baseline.md`)*. The authoritative field-by-field reference for the reporting template: for each field it gives the meaning, how to complete it, a worked example, the expected format, and its per-stage status (Early Warning 24h / 72h / Final Report). Its own field numbering differs from the FAQ's Q16 table — it does not itemize the 5 automated/system common fields (Notification level, the three Reporting-time fields, Reporter) that Q16 lists explicitly, so its common-field numbering runs 1–18 instead of 1–23; the AEV and SI fields (same substance as Q16's v24–v35 and i36–i44) are renumbered v19–v30 (plus v26a, since 2026-09-26) and i31–i39 respectively.
+Version 1.5, last update: 15 October 2026 *(was 1.4 / 01 October 2026 until the 2026-10-16 check; field 40 reworded "authorised" → "assigned representative"; was 1.3 / 25 September 2026 until the 2026-10-02 check, which also added Common-group fields 40 AR Note and 41 CSIRT Note, both Both/Free text/Optional at all stages; earlier history: date bumped 2026-09-26 from "10 September 2026" — version number unchanged — correlating with the new v26a field below; the previous move was 2026-09-10 13:11 UTC, "1.2, last update: 09/09/2026" → "1.3, last update: 10 September 2026", by far the largest correlated change since first capture at that point — see the change log in `enisa-srp-glossary-baseline.md`)*. The authoritative field-by-field reference for the reporting template: for each field it gives the meaning, how to complete it, a worked example, the expected format, and its per-stage status (Early Warning 24h / 72h / Final Report). Its own field numbering differs from the FAQ's Q16 table — it does not itemize the 5 automated/system common fields (Notification level, the three Reporting-time fields, Reporter) that Q16 lists explicitly, so its common-field numbering runs 1–18 instead of 1–23; the AEV and SI fields (same substance as Q16's v24–v35 and i36–i44) are renumbered v19–v30 (plus v26a, since 2026-09-26) and i31–i39 respectively.
 
 **Scope note**: only field names, applies-to (Both/AEV/SI), and per-stage status are captured below, not the full descriptive text (meaning/how-to-complete/example/format) for each field — that level of detail lives in the dedicated **`enisa-srp-glossary-baseline.md`** file (added 2026-09-07, when the live Glossary page began returning HTTP 403 on its original path — it had moved, see `glossary_url`), which is the full-detail historical record and the one to diff against for wording-level changes. A future check should re-verify field names, counts, and statuses against this list, and flag if the page's own numbering or the field set changes.
 
