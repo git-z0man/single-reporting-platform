@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "source": "https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2",
- "fetched": "2026-10-15",
+ "fetched": "2026-10-16",
  "version": "1.5",
  "last_update": "15 October 2026",
  "fields": [
@@ -489,8 +489,8 @@
    "nr": "40",
    "name": "AR Note",
    "applies": "Both",
-   "means": "Free-text note entered by the authorised representative to supplement the notification outside the structured report fields.",
-   "how": "Enter supplementary information from the authorised representative that does not fit another field. Use the relevant structured field whenever one is available.",
+   "means": "Free-text note entered by the assigned representative to supplement the notification outside the structured report fields.",
+   "how": "Enter supplementary information from the assigned representative that does not fit another field. Use the relevant structured field whenever one is available.",
    "example": "The manufacturer will provide the remaining forensic evidence through the secure channel.",
    "format": "Free text",
    "ew": "Optional",
