@@ -2,8 +2,8 @@
 source: ENISA — CRA SRP Glossary
 url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2
 old_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary (returns HTTP 403 since at least 2026-09-07; superseded, see status)
-page_version: "1.4 (page footer: Version 1.4, last update 01 October 2026 — version number moved 1.3 → 1.4 on 2026-10-02 check; was 1.3 / 25 September 2026)"
-retrieved: 2026-10-02 (fetched UTC morning run, changed since 2026-09-26 — two new fields 40/41, v28 conditions listed, version 1.4; see change log)
+page_version: "1.5 (page footer: Version 1.5, last update 15 October 2026 — version moved 1.4 → 1.5 on 2026-10-16 check; was 1.4 / 01 October 2026 — version number moved 1.3 → 1.4 on 2026-10-02 check; was 1.3 / 25 September 2026)"
+retrieved: 2026-10-16 (fetched UTC morning run; changed — Version 1.5, field 40 wording; earlier: 2026-10-02 (fetched UTC morning run, changed since 2026-09-26 — two new fields 40/41, v28 conditions listed, version 1.4; see change log)
 purpose: Full-detail baseline of the CRA SRP Glossary page — the authoritative field-by-field
   reference for the SRP reporting template (meaning, how to complete, example, expected format,
   and per-stage status for every field). The compact field-name/status table cross-referenced
@@ -26,8 +26,8 @@ status: >-
   (1.2 → 1.3) and this time the correlation was large: 38 fields → 39, a new AEV
   field inserted as v23 cascading every later field's number up by one, and roughly
   a dozen wording/status fixes across the page. See the change log.
-last_check: 2026-10-15
-last_change: 2026-10-13
+last_check: 2026-10-16
+last_change: 2026-10-16
 note: >-
   One row per field, one table per group (Common / AEV / SI), matching the live page's own
   column order — Nr. | Field | Applies to | Meaning | How to complete | Example | Format |
@@ -41,6 +41,17 @@ note: >-
 # CRA SRP Glossary — full-detail baseline
 
 ## Change log
+
+### 2026-10-16 UTC (vs. 2026-10-13)
+
+The Glossary moved to Version 1.5 (last update 15 October 2026), the first stamp move since 1 October. One wording change: field 40 AR Note now says "assigned representative" instead of "authorised representative", in both the meaning and the how-to-complete cells.
+
+**Changed**
+- Field 40 AR Note, meaning: "Free-text note entered by the assigned representative to supplement…" (was "authorised"); how to complete: "Enter supplementary information from the assigned representative that does not fit another field…" (was "authorised"). This aligns the field with the "Assigned Representative" term used everywhere else.
+- Footer: "Version 1.5. Last update: 15 October 2026" (was 1.4 / 01 October 2026).
+
+**Unchanged**
+The other 41 fields; same address (`cra-srp-glossary2`, HTTP 200).
 
 ### 2026-10-13 06:05 UTC (vs. 2026-10-02)
 
@@ -385,7 +396,7 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 
 ## Page metadata
 
-- Version: 1.3 (moved from 1.2 on 2026-09-10 13:11 UTC; unchanged by the 2026-09-26 field addition)
+- Version: 1.5 as of 2026-10-16 (footer "Version 1.5. Last update: 15 October 2026"; was 1.4 / 01 October from 2026-10-02) — earlier note: 1.3 (moved from 1.2 on 2026-09-10 13:11 UTC; unchanged by the 2026-09-26 field addition)
 - Page's own "last update" footer: 25 September 2026 (moved from 10 September 2026 on 2026-09-26, correlating with the new v26a field; the previous move was 09/09/2026 → 10 September 2026 on 2026-09-10 13:11 UTC)
 - Columns on the live page, per field: Nr. | Field | Applies to AEV or SI | What this field means | How you may complete it | Example | Expected format | Early Warning (EW) 24h | 72h | Final Report (FR)
 - Field count: 40 (was 39 from 2026-09-10 13:11 UTC to 2026-09-17; was 38 before that) — 18 Common, 13 AEV (v19–v30 plus v26a, inserted 2026-09-26), 9 SI (i31–i39)
@@ -446,7 +457,7 @@ First full-detail capture. Found by the FAQ routine's run that morning, when the
 | i37 | Date and time when you become aware of the incident (UTC time) [2] *(was "i36", "Date/time when you become aware..."; renumbered and reworded since 2026-09-10 13:11 UTC)* | SI | Date and time when the manufacturer or another relevant entity becomes aware of the incident. *(broken grammar fixed 2026-09-10 13:11 UTC; was "another relevant become aware")* | For example, enter the date and time you became aware of the incident. *(tense fixed 2026-09-10 13:11 UTC; was "you become aware")* If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description. | 2026-08-24 09:15 UTC | Date and time | Required | Required *(was "copied-or-updated" until 2026-09-10 13:11 UTC)* | By default copied from previous step, or updated |
 | i38 | Date and time when the incident occurred (UTC time) *(was "i37", "Date/time when the incident occurred"; renumbered and reworded since 2026-09-10 13:11 UTC)* | SI | Known or estimated date and time when the incident began or took place. | For example, enter the date and time when the incident began or occurred. *(broken grammar fixed 2026-09-10 13:11 UTC; was "the incident was began or occurred")* If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description. | 2026-08-24 09:15 UTC | Date and time | Optional | Required *(was "Optional" until 2026-09-10 13:11 UTC)* | Optional |
 | i39 | Initial assessment of the incident *(was "i38"; renumbering only, since 2026-09-10 13:11 UTC)* | SI | Preliminary analysis of the incident's severity, scope, likely impact, affected functions or data, and immediate implications. | For example, provide the preliminary assessment of severity, scope, affected security properties, products or users, and likely impact. Clearly distinguish confirmed findings from matters still under investigation (max. 4000 characters). | Confirmed impact is limited to integrity of configuration data on three product instances; broader exposure remains under investigation. | Structured narrative | Optional | Required | By default copied from previous step, or updated |
-| 40 *(new 2026-10-02; numbered 40, not in the Common/AEV/SI numbering scheme, appended after i39 in the live table)* | AR Note | Both | Free-text note entered by the authorised representative to supplement the notification outside the structured report fields. | Enter supplementary information from the authorised representative that does not fit another field. Use the relevant structured field whenever one is available. | The manufacturer will provide the remaining forensic evidence through the secure channel. | Free text | Optional | Optional | Optional |
+| 40 *(new 2026-10-02; numbered 40, not in the Common/AEV/SI numbering scheme, appended after i39 in the live table)* | AR Note | Both | Free-text note entered by the assigned representative to supplement the notification *(was "authorised", 2026-10-16)* outside the structured report fields. | Enter supplementary information from the assigned representative that does not fit another field. Use the relevant structured field whenever one is available. | The manufacturer will provide the remaining forensic evidence through the secure channel. | Free text | Optional | Optional | Optional |
 | 41 *(new 2026-10-02; same placement as 40)* | CSIRT Note | Both | Free-text note entered by the designated CSIRT for review, coordination, or case-management purposes. | Enter information needed by CSIRT users for coordination, validation, dissemination, or case handling. Keep the note factual and avoid duplicating data already captured in structured fields *(no closing full stop on the live page)* | Product distribution information confirmed with the reporting party. | Free text | Optional | Optional | Optional |
 
 ## Footnotes (from the live page)
