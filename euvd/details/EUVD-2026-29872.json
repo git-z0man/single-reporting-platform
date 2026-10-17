@@ -1,0 +1,205 @@
+{
+ "cert_links": [],
+ "cisa_kev": null,
+ "euvd": {
+  "aliases": "CVE-2026-41901\nGHSA-c9ph-gxww-7744\n",
+  "assigner": "GitHub_M",
+  "baseScore": 9.0,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "May 12, 2026, 10:35:50 PM",
+  "dateUpdated": "May 13, 2026, 12:08:38 PM",
+  "description": "Thymeleaf is a server-side Java template engine for web and standalone environments. Prior to 3.1.5.RELEASE, a security bypass vulnerability exists in the expression execution mechanisms of Thymeleaf. Although the library provides mechanisms to avoid the execution of potentially dangerous expressions in some specific sandboxed (restricted) contexts, it fails to properly neutralize specific constructs that allow this kind of expressions to be executed. If an application developer passes to the template engine unsanitized variables that contain such expressions, and these values are used in sandboxed contexts inside the templates, these expressions can be executed achieving Server-Side Template Injection (SSTI). This vulnerability is fixed in 3.1.5.RELEASE.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "e47d4223-c247-316f-9718-74b3d3d57cf6",
+    "product": {
+     "name": "thymeleaf",
+     "vendor": {
+      "name": "thymeleaf"
+     }
+    },
+    "product_version": "< 3.1.5.RELEASE"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "0f669e2d-9fb7-3110-b9ee-8d877e80df14",
+    "vendor": {
+     "name": "thymeleaf"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "aefe2106-15cf-325b-9f12-722d0718c310",
+    "vulnerability": {
+     "aliases": "CVE-2026-41901\nGHSA-c9ph-gxww-7744\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 11, 2026, 1:52:57 AM",
+     "datePublished": "May 4, 2026, 9:15:20 PM",
+     "dateUpdated": "May 13, 2026, 4:43:36 PM",
+     "description": "Sandboxed Thymeleaf expressions vulnerable to improper recognition of unauthorized syntax patterns",
+     "enisa_id": "EUVD-2026-29872\n",
+     "epss": 0.0,
+     "id": "GHSA-c9ph-gxww-7744",
+     "references": "https://github.com/thymeleaf/thymeleaf/security/advisories/GHSA-c9ph-gxww-7744\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-41901\nhttps://github.com/thymeleaf/thymeleaf\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "b4749314-4c8f-33fd-a21c-7469f3044632",
+    "vulnerability": {
+     "assigner": "GitHub_M",
+     "baseScore": 9.0,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 17, 2026, 7:15:20 AM",
+     "datePublished": "May 12, 2026, 10:35:50 PM",
+     "dateUpdated": "May 13, 2026, 12:08:38 PM",
+     "description": "Thymeleaf is a server-side Java template engine for web and standalone environments. Prior to 3.1.5.RELEASE, a security bypass vulnerability exists in the expression execution mechanisms of Thymeleaf. Although the library provides mechanisms to avoid the execution of potentially dangerous expressions in some specific sandboxed (restricted) contexts, it fails to properly neutralize specific constructs that allow this kind of expressions to be executed. If an application developer passes to the template engine unsanitized variables that contain such expressions, and these values are used in sandboxed contexts inside the templates, these expressions can be executed achieving Server-Side Template Injection (SSTI). This vulnerability is fixed in 3.1.5.RELEASE.",
+     "enisa_id": "EUVD-2026-29872\n",
+     "epss": 0.54,
+     "exploitedSince": "Oct 10, 2026, 12:00:00 AM",
+     "id": "CVE-2026-41901",
+     "references": "https://github.com/thymeleaf/thymeleaf/security/advisories/GHSA-c9ph-gxww-7744\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "d183c974-83cb-3520-999f-26528a6b0f0b",
+       "product": {
+        "name": "thymeleaf",
+        "vendor": {
+         "name": "thymeleaf"
+        }
+       },
+       "product_version": "< 3.1.5.RELEASE"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "9c8ac41c-fa57-3d52-97de-593d207ace4a",
+       "vendor": {
+        "name": "thymeleaf"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "3ef78323-c868-348b-8c2d-c6cabcf8e067",
+  "epss": 0.54,
+  "exploitedSince": "Oct 10, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-29872",
+  "references": "https://github.com/thymeleaf/thymeleaf/security/advisories/GHSA-c9ph-gxww-7744\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-29872",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 10, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "thymeleaf",
+      "vendor": "thymeleaf",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "< 3.1.5.RELEASE"
+       }
+      ]
+     }
+    ],
+    "source": "security-advisories@github.com"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Thymeleaf is a server-side Java template engine for web and standalone environments. Prior to 3.1.5.RELEASE, a security bypass vulnerability exists in the expression execution mechanisms of Thymeleaf. Although the library provides mechanisms to avoid the execution of potentially dangerous expressions in some specific sandboxed (restricted) contexts, it fails to properly neutralize specific constructs that allow this kind of expressions to be executed. If an application developer passes to the template engine unsanitized variables that contain such expressions, and these values are used in sandboxed contexts inside the templates, these expressions can be executed achieving Server-Side Template Injection (SSTI). This vulnerability is fixed in 3.1.5.RELEASE."
+   }
+  ],
+  "id": "CVE-2026-41901",
+  "lastModified": "2026-06-17T10:47:09.893",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.0,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.2,
+     "impactScore": 6.0,
+     "source": "security-advisories@github.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-41901",
+      "options": [
+       {
+        "exploitation": "none"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-05-13T12:07:53.448371Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-05-12T23:16:17.060",
+  "references": [
+   {
+    "source": "security-advisories@github.com",
+    "url": "https://github.com/thymeleaf/thymeleaf/security/advisories/GHSA-c9ph-gxww-7744"
+   }
+  ],
+  "sourceIdentifier": "security-advisories@github.com",
+  "vulnStatus": "Deferred",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-917"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-1336"
+     }
+    ],
+    "source": "security-advisories@github.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

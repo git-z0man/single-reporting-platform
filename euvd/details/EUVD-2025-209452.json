@@ -1,0 +1,1121 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61624"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2025-61624",
+  "cwes": [
+   "CWE-22"
+  ],
+  "dateAdded": "2026-10-16",
+  "dueDate": "2026-10-19",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2025-61624",
+  "product": "Multiple Products",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
+  "vendorProject": "Fortinet",
+  "vulnerabilityName": "Fortinet Multiple Products Path Traversal Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2025-61624\nGHSA-f3vf-64gv-cxr8\n",
+  "assigner": "fortinet",
+  "baseScore": 5.4,
+  "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H/E:P/RL:O/RC:C",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Apr 14, 2026, 3:39:51 PM",
+  "dateUpdated": "Oct 16, 2026, 7:58:23 PM",
+  "description": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') [CWE-22] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.7.0, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.6.0 through 7.6.4, FortiProxy 7.4.0 through 7.4.11, FortiProxy 7.2 all versions, FortiProxy 7.0 all versions, FortiSwitchManager 7.2.0 through 7.2.7, FortiSwitchManager 7.0.0 through 7.0.6 may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "ca4190b5-199b-305d-9d9c-861bd7a843bd",
+       "product": {
+        "name": "RUGGEDCOM APE1808",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-53847\nCVE-2025-55018\nCVE-2025-61624\nCVE-2025-62439\nCVE-2025-64157\nCVE-2026-24858\n",
+     "baseScore": 0.0,
+     "datePublished": "Mar 10, 2026, 12:00:00 AM",
+     "dateUpdated": "May 14, 2026, 6:00:00 AM",
+     "description": "Siemens RUGGEDCOM APE1808 Devices",
+     "id": "ICSA-26-071-02",
+     "references": "https://cert-portal.siemens.com/productcert/csaf/ssa-975644.json\nhttps://cert-portal.siemens.com/productcert/html/ssa-975644.html\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-071-02.json\nhttps://www.cisa.gov/news-events/ics-advisories/icsa-26-071-02\n",
+     "source": {
+      "id": 6,
+      "name": "csaf_cisa"
+     },
+     "summary": "Fortinet has published information on vulnerabilities in FORTIOS. This advisory lists the related Siemens Industrial products.\n\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version."
+    },
+    "id": "3d11128c-466f-3414-a748-24c014e37066"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "4c26eeb7-5e86-3379-9a34-381bdd1e0c05",
+       "product": {
+        "name": "RUGGEDCOM APE1808",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-53847\nCVE-2025-55018\nCVE-2025-61624\nCVE-2025-62439\nCVE-2025-64157\nCVE-2026-24858\n",
+     "baseScore": 0.0,
+     "datePublished": "Mar 10, 2026, 12:00:00 AM",
+     "dateUpdated": "May 12, 2026, 12:00:00 AM",
+     "description": "SSA-975644: Multiple Vulnerabilities in Fortigate NGFW on RUGGEDCOM APE1808 Devices",
+     "id": "SSA-975644",
+     "references": "https://cert-portal.siemens.com/productcert/html/ssa-975644.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-975644.json\n",
+     "source": {
+      "id": 7,
+      "name": "csaf_siemens"
+     },
+     "summary": "Fortinet has published information on vulnerabilities in FORTIOS. This advisory lists the related Siemens Industrial products.\n\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version."
+    },
+    "id": "b05e1f32-1789-3cd2-9c47-26168118e9a9"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "0cd8e8b6-708f-3841-9777-5b412bf0ca5d",
+    "product": {
+     "name": "FortiPAM",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "1.7.0"
+   },
+   {
+    "id": "0eb10a8d-bc3e-3246-96bd-d7b3a8dcc12f",
+    "product": {
+     "name": "FortiSwitchManager",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.0.0 ≤7.0.6"
+   },
+   {
+    "id": "1709d358-7c94-39b6-80e5-21bacef6a3f7",
+    "product": {
+     "name": "FortiProxy",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.6.0 ≤7.6.4"
+   },
+   {
+    "id": "1b46df01-0748-35b4-8833-185be54cddf5",
+    "product": {
+     "name": "FortiOS",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.0.0 ≤7.0.19"
+   },
+   {
+    "id": "3ae76edd-9a8a-30a5-98c5-2978376d80a5",
+    "product": {
+     "name": "FortiOS",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.2.0 ≤7.2.13"
+   },
+   {
+    "id": "426ef541-dc15-3c6a-9eaf-1315b5cead0e",
+    "product": {
+     "name": "FortiProxy",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.2.0 ≤7.2.16"
+   },
+   {
+    "id": "4fcc8f56-547b-3ef8-be9e-32e3c51b5dcf",
+    "product": {
+     "name": "FortiPAM",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "1.3.0 ≤1.3.1"
+   },
+   {
+    "id": "5a1ba307-0d3d-3fd0-bc48-b3fbf384f8cd",
+    "product": {
+     "name": "FortiPAM",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "1.5.0 ≤1.5.1"
+   },
+   {
+    "id": "60eea9ce-db0f-33f2-bbd5-cfeecffec338",
+    "product": {
+     "name": "FortiPAM",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "1.6.0 ≤1.6.2"
+   },
+   {
+    "id": "6a459d05-31df-3974-9b07-910b5704d9d4",
+    "product": {
+     "name": "FortiOS",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.6.0 ≤7.6.4"
+   },
+   {
+    "id": "913cf525-3307-3369-9070-c90881aa71b4",
+    "product": {
+     "name": "FortiPAM",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "1.1.0 ≤1.1.2"
+   },
+   {
+    "id": "b6a39e42-6c01-378a-8ac8-56f9dc9cd837",
+    "product": {
+     "name": "FortiProxy",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.4.0 ≤7.4.11"
+   },
+   {
+    "id": "bfe06fd3-d36b-33d2-a464-5000d6611884",
+    "product": {
+     "name": "FortiProxy",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.0.0 ≤7.0.23"
+   },
+   {
+    "id": "c13cb2ad-6770-3c41-add4-f01f4c340518",
+    "product": {
+     "name": "FortiOS",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.4.0 ≤7.4.9"
+   },
+   {
+    "id": "c61a40f9-6635-3342-b114-5f5fca1bd315",
+    "product": {
+     "name": "FortiOS",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "6.4.0 ≤6.4.16"
+   },
+   {
+    "id": "dded8e6b-2fbb-3fd1-9b23-5cbaa1ab9bba",
+    "product": {
+     "name": "FortiPAM",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "1.4.0 ≤1.4.3"
+   },
+   {
+    "id": "e4b8577e-070b-3a25-bf04-fadad38947e2",
+    "product": {
+     "name": "FortiSwitchManager",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "7.2.0 ≤7.2.7"
+   },
+   {
+    "id": "f3650a98-ce6e-3b6e-a9a4-ee1e65d02527",
+    "product": {
+     "name": "FortiPAM",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "1.0.0 ≤1.0.3"
+   },
+   {
+    "id": "f3fcfb90-c6d6-3c91-b1bf-bbbbf7945791",
+    "product": {
+     "name": "FortiPAM",
+     "vendor": {
+      "name": "Fortinet"
+     }
+    },
+    "product_version": "1.2.0"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "6b25d19f-691d-3608-86c7-974a946081d4",
+    "vendor": {
+     "name": "Fortinet"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "b8376e29-1f0a-3930-9f2a-2e05721f3d9d",
+    "vulnerability": {
+     "aliases": "GHSA-f3vf-64gv-cxr8\nCVE-2025-61624\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 17, 2026, 7:04:36 AM",
+     "datePublished": "Apr 14, 2026, 6:30:34 PM",
+     "dateUpdated": "Oct 16, 2026, 6:31:41 PM",
+     "description": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') [CWE-22] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.7.0, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.6.0 through 7.6.4, FortiProxy 7.4.0 through 7.4.11, FortiProxy 7.2 all versions, FortiProxy 7.0 all versions, FortiSwitchManager 7.2.0 through 7.2.7, FortiSwitchManager 7.0.0 through 7.0.6 may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
+     "enisa_id": "EUVD-2025-209452\n",
+     "epss": 0.0,
+     "id": "GHSA-f3vf-64gv-cxr8",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2025-61624\nhttps://cert-portal.siemens.com/productcert/html/ssa-975644.html\nhttps://fortiguard.fortinet.com/psirt/FG-IR-26-122\nhttps://unit42.paloaltonetworks.com/fortimanager-cve-2024-47575-peerstitch-malware/#post-188095-_guyq53ar8k05\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61624\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "ce88bf12-8a6e-383d-a3fe-6005118a1d0c",
+    "vulnerability": {
+     "assigner": "fortinet",
+     "baseScore": 5.4,
+     "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H/E:P/RL:O/RC:C",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 17, 2026, 7:20:36 AM",
+     "datePublished": "Apr 14, 2026, 3:39:51 PM",
+     "dateUpdated": "Oct 16, 2026, 7:58:23 PM",
+     "description": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') [CWE-22] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.7.0, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.6.0 through 7.6.4, FortiProxy 7.4.0 through 7.4.11, FortiProxy 7.2 all versions, FortiProxy 7.0 all versions, FortiSwitchManager 7.2.0 through 7.2.7, FortiSwitchManager 7.0.0 through 7.0.6 may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
+     "enisa_id": "EUVD-2025-209452\n",
+     "epss": 0.58,
+     "exploitedSince": "Oct 16, 2026, 12:00:00 AM",
+     "id": "CVE-2025-61624",
+     "references": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "0da4d990-d2ad-30f5-8320-05fe2911504e",
+       "product": {
+        "name": "FortiSwitchManager",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.0.0 ≤7.0.6"
+      },
+      {
+       "id": "23fdc7a9-80db-3202-a2f8-3ec13bd4e01b",
+       "product": {
+        "name": "FortiOS",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.0.0 ≤7.0.19"
+      },
+      {
+       "id": "27663658-cd4d-3ea4-9b95-9d63d4b9b081",
+       "product": {
+        "name": "FortiProxy",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.6.0 ≤7.6.4"
+      },
+      {
+       "id": "2e15ce12-f404-3470-ab15-8f54cc81524e",
+       "product": {
+        "name": "FortiPAM",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "1.2.0"
+      },
+      {
+       "id": "312df9d1-aefe-38c5-b352-ef8215780f4a",
+       "product": {
+        "name": "FortiPAM",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "1.6.0 ≤1.6.2"
+      },
+      {
+       "id": "33814a52-8f05-3689-a39e-f7579f4cf9d8",
+       "product": {
+        "name": "FortiOS",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.6.0 ≤7.6.4"
+      },
+      {
+       "id": "34a84b7c-7fe8-35b9-b9be-28170c7c16a0",
+       "product": {
+        "name": "FortiSwitchManager",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.2.0 ≤7.2.7"
+      },
+      {
+       "id": "37973ea0-db07-30af-afb0-6842173677f4",
+       "product": {
+        "name": "FortiOS",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.4.0 ≤7.4.9"
+      },
+      {
+       "id": "54e83040-4880-30bf-90d3-5f1c9b8d5a03",
+       "product": {
+        "name": "FortiPAM",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "1.5.0 ≤1.5.1"
+      },
+      {
+       "id": "7134b963-c74e-3e0b-89a4-c45cd848adc2",
+       "product": {
+        "name": "FortiPAM",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "1.7.0"
+      },
+      {
+       "id": "8108591a-0e9f-322a-a3d1-1d5f0eaab4fa",
+       "product": {
+        "name": "FortiPAM",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "1.4.0 ≤1.4.3"
+      },
+      {
+       "id": "8c1642c7-d3c8-3b20-a310-7edf585410a0",
+       "product": {
+        "name": "FortiPAM",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "1.3.0 ≤1.3.1"
+      },
+      {
+       "id": "958ba376-e746-33a2-b6df-06d8c99e1e73",
+       "product": {
+        "name": "FortiOS",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "6.4.0 ≤6.4.16"
+      },
+      {
+       "id": "9bbaa882-ee1b-37ce-8bb3-704f18e25d76",
+       "product": {
+        "name": "FortiProxy",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.2.0 ≤7.2.16"
+      },
+      {
+       "id": "a187e0da-709f-3e56-b354-3226dc38e857",
+       "product": {
+        "name": "FortiPAM",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "1.0.0 ≤1.0.3"
+      },
+      {
+       "id": "a36791b3-821c-3b7b-9bde-a6d640733767",
+       "product": {
+        "name": "FortiProxy",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.0.0 ≤7.0.23"
+      },
+      {
+       "id": "ba5c78ed-7762-332d-9f07-8efb24b88c51",
+       "product": {
+        "name": "FortiOS",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.2.0 ≤7.2.13"
+      },
+      {
+       "id": "d0c7be61-952d-3ba9-9760-06afab22466e",
+       "product": {
+        "name": "FortiPAM",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "1.1.0 ≤1.1.2"
+      },
+      {
+       "id": "e39983fb-b229-3666-9f20-382be87831ee",
+       "product": {
+        "name": "FortiProxy",
+        "vendor": {
+         "name": "Fortinet"
+        }
+       },
+       "product_version": "7.4.0 ≤7.4.11"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "fe7a66c4-0f0f-3239-b441-67f303086320",
+       "vendor": {
+        "name": "Fortinet"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "67595843-0575-392e-a9c5-52ef88faba84",
+  "epss": 0.58,
+  "exploitedSince": "Oct 16, 2026, 12:00:00 AM",
+  "id": "EUVD-2025-209452",
+  "references": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2025-209452",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 16, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "cpes": [
+       "cpe:2.3:o:fortinet:fortios:7.6.4:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.6.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.6.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.6.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.6.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.9:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.8:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.7:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.6:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.5:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.4:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.4.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.13:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.12:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.11:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.10:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.9:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.8:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.7:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.6:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.5:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.4:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.2.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.19:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.18:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.17:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.16:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.15:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.14:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.13:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.12:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.11:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.10:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.9:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.8:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.7:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.6:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.5:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.4:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:7.0.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.16:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.15:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.14:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.13:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.12:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.11:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.10:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.9:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.8:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.7:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.6:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.5:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.4:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortios:6.4.0:*:*:*:*:*:*:*"
+      ],
+      "defaultStatus": "unaffected",
+      "product": "FortiOS",
+      "vendor": "Fortinet",
+      "versions": [
+       {
+        "lessThanOrEqual": "7.6.4",
+        "status": "affected",
+        "version": "7.6.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.4.9",
+        "status": "affected",
+        "version": "7.4.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.2.13",
+        "status": "affected",
+        "version": "7.2.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.0.19",
+        "status": "affected",
+        "version": "7.0.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "6.4.16",
+        "status": "affected",
+        "version": "6.4.0",
+        "versionType": "semver"
+       }
+      ]
+     },
+     {
+      "cpes": [
+       "cpe:2.3:a:fortinet:fortiproxy:7.6.4:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.6.3:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.6.2:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.6.1:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.6.0:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.11:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.10:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.9:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.8:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.7:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.6:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.5:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.4:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.3:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.2:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.1:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.4.0:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.16:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.15:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.14:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.13:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.12:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.11:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.10:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.9:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.8:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.7:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.6:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.5:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.4:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.3:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.2:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.1:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.2.0:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.23:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.22:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.21:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.20:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.19:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.18:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.17:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.16:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.15:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.14:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.13:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.12:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.11:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.10:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.9:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.8:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.7:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.6:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.5:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.4:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.3:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.2:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.1:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiproxy:7.0.0:*:*:*:*:*:*:*"
+      ],
+      "defaultStatus": "unaffected",
+      "product": "FortiProxy",
+      "vendor": "Fortinet",
+      "versions": [
+       {
+        "lessThanOrEqual": "7.6.4",
+        "status": "affected",
+        "version": "7.6.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.4.11",
+        "status": "affected",
+        "version": "7.4.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.2.16",
+        "status": "affected",
+        "version": "7.2.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.0.23",
+        "status": "affected",
+        "version": "7.0.0",
+        "versionType": "semver"
+       }
+      ]
+     },
+     {
+      "cpes": [
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.7:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.6:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.5:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.4:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.3:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.2:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.1:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.2.0:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.6:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.5:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.4:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.3:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.2:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.1:*:*:*:*:*:*:*",
+       "cpe:2.3:a:fortinet:fortiswitchmanager:7.0.0:*:*:*:*:*:*:*"
+      ],
+      "defaultStatus": "unaffected",
+      "product": "FortiSwitchManager",
+      "vendor": "Fortinet",
+      "versions": [
+       {
+        "lessThanOrEqual": "7.2.7",
+        "status": "affected",
+        "version": "7.2.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.0.6",
+        "status": "affected",
+        "version": "7.0.0",
+        "versionType": "semver"
+       }
+      ]
+     },
+     {
+      "cpes": [
+       "cpe:2.3:o:fortinet:fortipam:1.7.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.6.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.6.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.6.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.5.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.5.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.4.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.4.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.4.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.4.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.3.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.3.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.2.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.1.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.1.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.1.0:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.0.3:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.0.2:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.0.1:*:*:*:*:*:*:*",
+       "cpe:2.3:o:fortinet:fortipam:1.0.0:*:*:*:*:*:*:*"
+      ],
+      "defaultStatus": "unaffected",
+      "product": "FortiPAM",
+      "vendor": "Fortinet",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "1.7.0"
+       },
+       {
+        "lessThanOrEqual": "1.6.2",
+        "status": "affected",
+        "version": "1.6.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "1.5.1",
+        "status": "affected",
+        "version": "1.5.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "1.4.3",
+        "status": "affected",
+        "version": "1.4.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "1.3.1",
+        "status": "affected",
+        "version": "1.3.0",
+        "versionType": "semver"
+       },
+       {
+        "status": "affected",
+        "version": "1.2.0"
+       },
+       {
+        "lessThanOrEqual": "1.1.2",
+        "status": "affected",
+        "version": "1.1.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "1.0.3",
+        "status": "affected",
+        "version": "1.0.0",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "psirt@fortinet.com"
+   },
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "RUGGEDCOM APE1808",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+   }
+  ],
+  "cisaActionDue": "2026-10-19",
+  "cisaExploitAdd": "2026-10-16",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Fortinet Multiple Products Path Traversal Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "8E0DD361-4041-480A-8B5E-1E14BBDD8133",
+        "versionEndExcluding": "7.4.10",
+        "versionStartIncluding": "6.4.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "26DF2CCC-782C-4AE8-8CDE-13FFEE8676E6",
+        "versionEndExcluding": "7.6.5",
+        "versionStartIncluding": "7.6.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:fortinet:fortipam:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "C8E26F28-B9CA-47D5-86B0-AA98C67D9314",
+        "versionEndExcluding": "1.7.1",
+        "versionStartIncluding": "1.0.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:fortinet:fortiproxy:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "92465F3D-698E-4CA6-87CB-E5A08C34067E",
+        "versionEndExcluding": "7.4.12",
+        "versionStartIncluding": "7.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:fortinet:fortiproxy:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "026DF873-FF5C-4629-8516-350C53CE2DEA",
+        "versionEndExcluding": "7.6.5",
+        "versionStartIncluding": "7.6.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:fortinet:fortiswitchmanager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "23564E7E-21B7-4936-B4F2-85CD46D64A5D",
+        "versionEndExcluding": "7.0.7",
+        "versionStartIncluding": "7.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:fortinet:fortiswitchmanager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "6EFEB80D-87BB-4AD3-AA9D-9F0C37F227D2",
+        "versionEndExcluding": "7.2.8",
+        "versionStartIncluding": "7.2.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:siemens:ruggedcom_ape1808_firmware:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "37FDCA69-9049-40B4-88AF-F476901022B6",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:siemens:ruggedcom_ape1808:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B89A6863-B602-4404-8D26-337FECABFFF0",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') [CWE-22] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.7.0, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.6.0 through 7.6.4, FortiProxy 7.4.0 through 7.4.11, FortiProxy 7.2 all versions, FortiProxy 7.0 all versions, FortiSwitchManager 7.2.0 through 7.2.7, FortiSwitchManager 7.0.0 through 7.0.6 may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands."
+   },
+   {
+    "lang": "es",
+    "value": "Una limitación inadecuada de un nombre de ruta a un directorio restringido ('salto de ruta') [CWE-22] vulnerabilidad en Fortinet FortiOS 7.6.0 a 7.6.4, FortiOS 7.4.0 a 7.4.9, FortiOS 7.2 todas las versiones, FortiOS 7.0 todas las versiones, FortiOS 6.4 todas las versiones, FortiPAM 1.7.0, FortiPAM 1.6 todas las versiones, FortiPAM 1.5 todas las versiones, FortiPAM 1.4 todas las versiones, FortiPAM 1.3 todas las versiones, FortiPAM 1.2 todas las versiones, FortiPAM 1.1 todas las versiones, FortiPAM 1.0 todas las versiones, FortiProxy 7.6.0 a 7.6.4, FortiProxy 7.4.0 a 7.4.11, FortiProxy 7.2 todas las versiones, FortiProxy 7.0 todas las versiones, FortiSwitchManager 7.2.0 a 7.2.7, FortiSwitchManager 7.0.0 a 7.0.6 puede permitir a un atacante autenticado con perfil de administrador y al menos permisos de lectura-escritura escribir o eliminar archivos arbitrarios a través de comandos CLI específicos."
+   }
+  ],
+  "id": "CVE-2025-61624",
+  "lastModified": "2026-10-17T04:16:43.363",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "LOCAL",
+      "availabilityImpact": "HIGH",
+      "baseScore": 6.0,
+      "baseSeverity": "MEDIUM",
+      "confidentialityImpact": "NONE",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "HIGH",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 0.8,
+     "impactScore": 5.2,
+     "source": "psirt@fortinet.com",
+     "type": "Secondary"
+    },
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 6.5,
+      "baseSeverity": "MEDIUM",
+      "confidentialityImpact": "NONE",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "HIGH",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 1.2,
+     "impactScore": 5.2,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2025-61624",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-15T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-04-14T16:16:31.300",
+  "references": [
+   {
+    "source": "psirt@fortinet.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122"
+   },
+   {
+    "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-975644.html"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://unit42.paloaltonetworks.com/fortimanager-cve-2024-47575-peerstitch-malware/#post-188095-_guyq53ar8k05"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61624"
+   }
+  ],
+  "sourceIdentifier": "psirt@fortinet.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-22"
+     }
+    ],
+    "source": "psirt@fortinet.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
