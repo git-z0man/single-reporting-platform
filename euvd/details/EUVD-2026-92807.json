@@ -1,10 +1,5 @@
 {
- "cert_links": [
-  [
-   "CISA",
-   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-21589"
-  ]
- ],
+ "cert_links": [],
  "cisa_kev": {
   "cveID": "CVE-2026-21589",
   "cwes": [
@@ -28,8 +23,8 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 5, 2026, 9:30:00 PM",
-  "dateUpdated": "Oct 15, 2026, 7:58:23 PM",
-  "description": "This is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to access specific files within the web application root directory in affected versions. Exploitation requires prior knowledge of the target file's exact name and path; this vulnerability does not allow attackers to enumerate or list directory contents. In some configurations, there may be some sensitive files that make this highly severe. This vulnerability allows an unauthenticated remote attacker to access specific files within the web application root directory in affected versions. The vulnerability must be addressed for affected versions of: -- Bitbucket Data Center, introduced in version >= 4.6.0, fix versions: 9.4.26, 10.2.8, 10.5.1 -- Confluence Data Center, introduced in version >= 5.10.0, fix versions 9.2.26, 10.2.19 -- Crowd Data Center, introduced in version >= 2.11.0, fix versions 6.3.7, 7.0.3, 7.1.7, 7.2.4 -- Jira Software Data Center, introduced in version >= 7.1.0, fix versions 9.12.40, 10.3.26, 11.3.12 -- Jira Service Management Data Center, introduced in version >= 3.1.0, fix versions 5.12.40, 10.3.26, 11.3.12 -- Bamboo Data Center >= 7.0.1, fix versions 10.2.24, 12.1.12 -- Crucible, fix versions 4.9.15 -- Fisheye, fix version 4.9.15 -- Exploitation requires prior knowledge of the target file's exact name and path. The vulnerability does not include the capability to enumerate or list directory contents.",
+  "dateUpdated": "Oct 16, 2026, 8:39:09 PM",
+  "description": "This CVE's publication may have been a false positive or a mistake. As a result, we have rejected this record.",
   "enisaIdAdvisory": [
    {
     "advisory": {
@@ -312,105 +307,17 @@
     "id": "e596693a-1df1-337c-8924-13013befdfeb"
    }
   ],
-  "enisaIdProduct": [
-   {
-    "id": "124a4382-450b-36da-87ce-54cbf2e835e3",
-    "product": {
-     "name": "Bitbucket Data Center",
-     "vendor": {
-      "name": "Atlassian"
-     }
-    },
-    "product_version": "All other versions"
-   },
-   {
-    "id": "1f3de261-b492-3279-8c7f-6e6ef6d12f50",
-    "product": {
-     "name": "Crucible Data Center",
-     "vendor": {
-      "name": "Atlassian"
-     }
-    },
-    "product_version": "All other versions"
-   },
-   {
-    "id": "4f5959a5-b5d1-3bdf-a4a3-6c11c4fe750a",
-    "product": {
-     "name": "Bamboo Data Center",
-     "vendor": {
-      "name": "Atlassian"
-     }
-    },
-    "product_version": "All other versions"
-   },
-   {
-    "id": "5a98b7d5-12c2-39f7-b0e0-15749463fba0",
-    "product": {
-     "name": "Confluence Data Center",
-     "vendor": {
-      "name": "Atlassian"
-     }
-    },
-    "product_version": "All other versions"
-   },
-   {
-    "id": "7a9f57d8-8ad0-3d89-87ba-0dd3118eed3e",
-    "product": {
-     "name": "Jira Software Data Center",
-     "vendor": {
-      "name": "Atlassian"
-     }
-    },
-    "product_version": "All other versions"
-   },
-   {
-    "id": "81bcf532-9f39-3a88-a050-63c5dedf67a5",
-    "product": {
-     "name": "Jira Service Management Data Center",
-     "vendor": {
-      "name": "Atlassian"
-     }
-    },
-    "product_version": "All other versions"
-   },
-   {
-    "id": "85c91d43-a664-34f8-8b3d-ead891504f75",
-    "product": {
-     "name": "Fisheye Data Center",
-     "vendor": {
-      "name": "Atlassian"
-     }
-    },
-    "product_version": "All other versions"
-   },
-   {
-    "id": "f46aa784-caf9-3a76-ba64-539755d7c8be",
-    "product": {
-     "name": "Crowd Data Center",
-     "vendor": {
-      "name": "Atlassian"
-     }
-    },
-    "product_version": "All other versions"
-   }
-  ],
-  "enisaIdVendor": [
-   {
-    "id": "20f2ef4d-bb15-3bf1-a127-160dd8ce072d",
-    "vendor": {
-     "name": "Atlassian"
-    }
-   }
-  ],
+  "enisaIdProduct": [],
+  "enisaIdVendor": [],
   "enisaIdVulnerability": [
    {
     "id": "26be48f4-3e0e-3d0a-b478-4dd04507c481",
     "vulnerability": {
      "aliases": "CVE-2026-21589\nGHSA-gr66-x5pq-8g2g\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 16, 2026, 7:04:39 AM",
+     "dataProcessed": "Oct 17, 2026, 7:04:36 AM",
      "datePublished": "Oct 6, 2026, 12:32:50 AM",
-     "dateUpdated": "Oct 15, 2026, 9:35:32 PM",
+     "dateUpdated": "Oct 16, 2026, 9:32:16 PM",
      "description": "h3. Summary\n\nThis is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to access specific files within the web application root directory in affected versions. Exploitation requires prior knowledge of the target file's exact name and path; this vulnerability does not allow attackers to enumerate or list directory contents. In some configurations, there may be some sensitive files that make this highly severe.  \n\nh3. Context\n\nThis vulnerability allows an unauthenticated remote attacker to access specific files within the web application root directory in affected versions.\n\nh3. Details:\n\n* The vulnerability must be addressed for affected versions of:\n Bitbucket Data Center, introduced in version >= 4.6.0, fix versions: 9.4.26, 10.2.8, 10.5.1\n Confluence Data Center, introduced in version >= 5.10.0, fix versions 9.2.26, 10.2.19\n Crowd Data Center, introduced in version >= 2.11.0, fix versions 6.3.7, 7.0.3, 7.1.1, 7.2.4\n Jira Software Data Center, introduced in version >= 7.1.0, fix versions 9.12.40, 10.3.26, 11.3.12\n Jira Service Management Data Center, introduced in version >= 3.1.0, fix versions 5.12.40, 10.3.26, 11.3.12\n Bamboo Data Center >= 7.0.1, fix versions 10.2.24, 12.1.12\n Crucible, fix versions 4.9.15\n Fisheye, fix version 4.9.15\n* Exploitation requires prior knowledge of the target file's exact name and path.\n* The vulnerability does not include the capability to enumerate or list directory contents.",
      "enisa_id": "EUVD-2026-92807\n",
      "epss": 0.0,
@@ -427,130 +334,42 @@
      "baseScore": 9.3,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 16, 2026, 7:18:42 AM",
+     "dataProcessed": "Oct 17, 2026, 7:18:05 AM",
      "datePublished": "Oct 5, 2026, 9:30:00 PM",
-     "dateUpdated": "Oct 15, 2026, 7:58:23 PM",
-     "description": "This is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to access specific files within the web application root directory in affected versions. Exploitation requires prior knowledge of the target file's exact name and path; this vulnerability does not allow attackers to enumerate or list directory contents. In some configurations, there may be some sensitive files that make this highly severe. This vulnerability allows an unauthenticated remote attacker to access specific files within the web application root directory in affected versions. The vulnerability must be addressed for affected versions of: -- Bitbucket Data Center, introduced in version >= 4.6.0, fix versions: 9.4.26, 10.2.8, 10.5.1 -- Confluence Data Center, introduced in version >= 5.10.0, fix versions 9.2.26, 10.2.19 -- Crowd Data Center, introduced in version >= 2.11.0, fix versions 6.3.7, 7.0.3, 7.1.7, 7.2.4 -- Jira Software Data Center, introduced in version >= 7.1.0, fix versions 9.12.40, 10.3.26, 11.3.12 -- Jira Service Management Data Center, introduced in version >= 3.1.0, fix versions 5.12.40, 10.3.26, 11.3.12 -- Bamboo Data Center >= 7.0.1, fix versions 10.2.24, 12.1.12 -- Crucible, fix versions 4.9.15 -- Fisheye, fix version 4.9.15 -- Exploitation requires prior knowledge of the target file's exact name and path. The vulnerability does not include the capability to enumerate or list directory contents.",
+     "dateUpdated": "Oct 16, 2026, 8:39:09 PM",
+     "description": "This CVE's publication may have been a false positive or a mistake. As a result, we have rejected this record.",
      "enisa_id": "EUVD-2026-92807\n",
-     "epss": 2.78,
+     "epss": 12.71,
      "exploitedSince": "Oct 15, 2026, 12:00:00 AM",
      "id": "CVE-2026-21589",
-     "references": "https://jira.atlassian.com/browse/BAM-26567\nhttps://jira.atlassian.com/browse/BSERV-20604\nhttps://jira.atlassian.com/browse/CONFSERVER-104488\nhttps://jira.atlassian.com/browse/CRUC-8741\nhttps://jira.atlassian.com/browse/CWD-6610\nhttps://jira.atlassian.com/browse/FE-7583\nhttps://jira.atlassian.com/browse/JRASERVER-79546\nhttps://jira.atlassian.com/browse/JSDSERVER-16809\n",
-     "status": "PUBLISHED",
-     "vulnerabilityProduct": [
-      {
-       "id": "09f9736f-535d-3088-8793-7c319f3fb5ee",
-       "product": {
-        "name": "Confluence Data Center",
-        "vendor": {
-         "name": "Atlassian"
-        }
-       },
-       "product_version": "All other versions"
-      },
-      {
-       "id": "0fa3e4fa-d178-3ab4-a62d-30ed879eeda6",
-       "product": {
-        "name": "Bamboo Data Center",
-        "vendor": {
-         "name": "Atlassian"
-        }
-       },
-       "product_version": "All other versions"
-      },
-      {
-       "id": "378955d8-ef9e-3d1e-bb02-669aa3df0c5a",
-       "product": {
-        "name": "Bitbucket Data Center",
-        "vendor": {
-         "name": "Atlassian"
-        }
-       },
-       "product_version": "All other versions"
-      },
-      {
-       "id": "429c39c5-6946-3527-a9ab-5818e43e1f49",
-       "product": {
-        "name": "Jira Service Management Data Center",
-        "vendor": {
-         "name": "Atlassian"
-        }
-       },
-       "product_version": "All other versions"
-      },
-      {
-       "id": "5f57ed95-84c1-3ff9-9d20-4f89ca5e957d",
-       "product": {
-        "name": "Jira Software Data Center",
-        "vendor": {
-         "name": "Atlassian"
-        }
-       },
-       "product_version": "All other versions"
-      },
-      {
-       "id": "62f7a354-1fbf-3b06-ba73-be9bdadbe1f8",
-       "product": {
-        "name": "Crucible Data Center",
-        "vendor": {
-         "name": "Atlassian"
-        }
-       },
-       "product_version": "All other versions"
-      },
-      {
-       "id": "86190f57-2101-3e0b-80dc-e12af575507f",
-       "product": {
-        "name": "Fisheye Data Center",
-        "vendor": {
-         "name": "Atlassian"
-        }
-       },
-       "product_version": "All other versions"
-      },
-      {
-       "id": "d8f8a47b-79d1-3dfd-bbd1-8124c229ceea",
-       "product": {
-        "name": "Crowd Data Center",
-        "vendor": {
-         "name": "Atlassian"
-        }
-       },
-       "product_version": "All other versions"
-      }
-     ],
-     "vulnerabilityVendor": [
-      {
-       "id": "6a226373-64b2-30c1-a3bb-f156831afe62",
-       "vendor": {
-        "name": "Atlassian"
-       }
-      }
-     ]
+     "references": "",
+     "status": "REJECTED",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
     }
    }
   ],
   "enisaUuid": "0dcb8b22-ebf1-38ab-88c6-374d2f9d6083",
-  "epss": 2.78,
+  "epss": 12.71,
   "exploitedSince": "Oct 15, 2026, 12:00:00 AM",
   "id": "EUVD-2026-92807",
-  "references": "https://jira.atlassian.com/browse/BAM-26567\nhttps://jira.atlassian.com/browse/BSERV-20604\nhttps://jira.atlassian.com/browse/CONFSERVER-104488\nhttps://jira.atlassian.com/browse/CRUC-8741\nhttps://jira.atlassian.com/browse/CWD-6610\nhttps://jira.atlassian.com/browse/FE-7583\nhttps://jira.atlassian.com/browse/JRASERVER-79546\nhttps://jira.atlassian.com/browse/JSDSERVER-16809\n"
+  "references": ""
  },
  "honeypot": [
   {
-   "avg30d": 0.0,
-   "avg7d": 1.0,
+   "avg30d": 2.0,
+   "avg7d": 11.0,
    "avg90d": 0.0,
-   "cisaKevFlag": false,
-   "connections1d": 1745,
+   "cisaKevFlag": true,
+   "connections1d": 174,
    "cveId": "CVE-2026-21589",
-   "firstSeenAt": "Oct 16, 2026, 7:13:51 AM",
-   "isNew": true,
-   "lastSeenAt": "Oct 16, 2026, 7:13:51 AM",
+   "firstSeenAt": "Oct 14, 2026, 3:00:00 AM",
+   "isNew": false,
+   "lastSeenAt": "Oct 17, 2026, 7:13:14 AM",
    "product": "Confluence",
    "source": "shadowserver",
    "trend": "UPTICK",
-   "uniqueIps1d": 8,
+   "uniqueIps1d": 72,
    "vendor": "Atlassian",
    "vulnClass": "other-software",
    "vulnSeverity": "Critical"
@@ -564,594 +383,23 @@
   }
  ],
  "nvd": {
-  "affected": [
-   {
-    "affectedData": [
-     {
-      "product": "Bamboo Data Center",
-      "vendor": "Atlassian",
-      "versions": [
-       {
-        "status": "affected",
-        "version": "All other versions"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 10.2.24 and later"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 12.1.12 and later"
-       }
-      ]
-     },
-     {
-      "product": "Bitbucket Data Center",
-      "vendor": "Atlassian",
-      "versions": [
-       {
-        "status": "affected",
-        "version": "All other versions"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 10.2.8 and later"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 10.5.1 and later"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 9.4.26 and later"
-       }
-      ]
-     },
-     {
-      "product": "Confluence Data Center",
-      "vendor": "Atlassian",
-      "versions": [
-       {
-        "status": "affected",
-        "version": "All other versions"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 10.2.19 and later"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 9.2.26 and later"
-       }
-      ]
-     },
-     {
-      "product": "Crowd Data Center",
-      "vendor": "Atlassian",
-      "versions": [
-       {
-        "status": "affected",
-        "version": "All other versions"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 7.2.4 and later"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 7.1.7 and later"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 7.0.3 and later"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 6.3.7 and later"
-       }
-      ]
-     },
-     {
-      "product": "Crucible Data Center",
-      "vendor": "Atlassian",
-      "versions": [
-       {
-        "status": "affected",
-        "version": "All other versions"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 4.9.15 and later"
-       }
-      ]
-     },
-     {
-      "product": "Fisheye Data Center",
-      "vendor": "Atlassian",
-      "versions": [
-       {
-        "status": "affected",
-        "version": "All other versions"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 4.9.15 and later"
-       }
-      ]
-     },
-     {
-      "product": "Jira Service Management Data Center",
-      "vendor": "Atlassian",
-      "versions": [
-       {
-        "status": "affected",
-        "version": "All other versions"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 11.3.12 and later"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 10.3.26 and later"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 5.12.40 and later"
-       }
-      ]
-     },
-     {
-      "product": "Jira Software Data Center",
-      "vendor": "Atlassian",
-      "versions": [
-       {
-        "status": "affected",
-        "version": "All other versions"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 11.3.12 and later"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 10.3.26 and later"
-       },
-       {
-        "status": "unaffected",
-        "version": "Patch version 9.12.40 and later"
-       }
-      ]
-     }
-    ],
-    "source": "security@atlassian.com"
-   }
-  ],
   "cisaActionDue": "2026-10-18",
   "cisaExploitAdd": "2026-10-15",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
-  "configurations": [
-   {
-    "nodes": [
-     {
-      "cpeMatch": [
-       {
-        "criteria": "cpe:2.3:a:atlassian:bitbucket_data_center:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "7F95E74C-C2B5-4527-9282-A9C1E6FE2770",
-        "versionEndExcluding": "9.4.26",
-        "versionStartIncluding": "7.17.0",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:bitbucket_data_center:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "4489C580-A184-45F2-945A-74919B30770E",
-        "versionEndExcluding": "10.2.8",
-        "versionStartIncluding": "9.5.0",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:bitbucket_data_center:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "FC3E298E-8B85-4EE6-B5BD-B9D2ECE4ACF4",
-        "versionEndExcluding": "10.5.1",
-        "versionStartIncluding": "10.3.0",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:bitbucket_server:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "6C615C3F-17A8-4458-88C1-342B973C0FB1",
-        "versionEndIncluding": "8.14.6",
-        "versionStartIncluding": "4.6.0",
-        "vulnerable": true
-       }
-      ],
-      "negate": false,
-      "operator": "OR"
-     }
-    ]
-   },
-   {
-    "nodes": [
-     {
-      "cpeMatch": [
-       {
-        "criteria": "cpe:2.3:a:atlassian:confluence_data_center:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "E935B10B-F918-41C0-890D-DB9058BC503B",
-        "versionEndExcluding": "9.2.26",
-        "versionStartIncluding": "5.10.0",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:confluence_data_center:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "8ABC2EDD-401B-4065-98CA-1D6AFE8C48E7",
-        "versionEndExcluding": "10.2.19",
-        "versionStartIncluding": "9.3.0",
-        "vulnerable": true
-       }
-      ],
-      "negate": false,
-      "operator": "OR"
-     }
-    ]
-   },
-   {
-    "nodes": [
-     {
-      "cpeMatch": [
-       {
-        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "D7704951-4EDF-4ADD-BF1F-0E74302B4D15",
-        "versionEndExcluding": "6.3.7",
-        "versionStartIncluding": "2.11.0",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "0C6C0576-C6B8-4B7B-A3AF-2F49C07CD087",
-        "versionEndExcluding": "7.0.3",
-        "versionStartIncluding": "7.0.0",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "2DDBD17E-7209-4402-81E0-C3A77D9BADC6",
-        "versionEndExcluding": "7.1.7",
-        "versionStartIncluding": "7.1.0",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:crowd:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "A00677AE-D4A9-486C-8D5B-FAC4CD68F17E",
-        "versionEndExcluding": "7.2.4",
-        "versionStartIncluding": "7.2.0",
-        "vulnerable": true
-       }
-      ],
-      "negate": false,
-      "operator": "OR"
-     }
-    ]
-   },
-   {
-    "nodes": [
-     {
-      "cpeMatch": [
-       {
-        "criteria": "cpe:2.3:a:atlassian:jira_data_center:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "8C2734C1-0626-4C2B-8E7E-1E5744931699",
-        "versionEndExcluding": "9.12.40",
-        "versionStartIncluding": "7.1.0",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:jira_data_center:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "13B7AADD-EE93-4BE5-A12A-FC69F024276D",
-        "versionEndExcluding": "10.3.26",
-        "versionStartIncluding": "9.13.0",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:jira_data_center:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "585E5684-41A5-4882-BBE6-8CC388162DC6",
-        "versionEndExcluding": "11.3.12",
-        "versionStartIncluding": "10.4.0",
-        "vulnerable": true
-       }
-      ],
-      "negate": false,
-      "operator": "OR"
-     }
-    ]
-   },
-   {
-    "nodes": [
-     {
-      "cpeMatch": [
-       {
-        "criteria": "cpe:2.3:a:atlassian:jira_service_management:*:*:*:*:data_center:*:*:*",
-        "matchCriteriaId": "4E9A69F2-AFAC-43DE-9DA5-AEBE8569807C",
-        "versionEndExcluding": "5.12.40",
-        "versionStartIncluding": "3.1.0",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:jira_service_management:*:*:*:*:data_center:*:*:*",
-        "matchCriteriaId": "EAB2D1C1-8AF2-49EE-AD67-5B489BD4BD6A",
-        "versionEndExcluding": "10.3.26",
-        "versionStartIncluding": "5.13.0",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:jira_service_management:*:*:*:*:data_center:*:*:*",
-        "matchCriteriaId": "7166EDE8-5D90-4B90-B770-0DBD581D10E9",
-        "versionEndExcluding": "11.3.12",
-        "versionStartIncluding": "10.4.0",
-        "vulnerable": true
-       }
-      ],
-      "negate": false,
-      "operator": "OR"
-     }
-    ]
-   },
-   {
-    "nodes": [
-     {
-      "cpeMatch": [
-       {
-        "criteria": "cpe:2.3:a:atlassian:bamboo:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "9E8447C5-5177-4BC0-86E5-CCF9339B6C74",
-        "versionEndExcluding": "10.2.24",
-        "versionStartIncluding": "7.0.1",
-        "vulnerable": true
-       },
-       {
-        "criteria": "cpe:2.3:a:atlassian:bamboo:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "7355838B-DA4B-4399-BA98-D97CBA4F45A0",
-        "versionEndExcluding": "12.1.12",
-        "versionStartIncluding": "11.0.0",
-        "vulnerable": true
-       }
-      ],
-      "negate": false,
-      "operator": "OR"
-     }
-    ]
-   },
-   {
-    "nodes": [
-     {
-      "cpeMatch": [
-       {
-        "criteria": "cpe:2.3:a:atlassian:crucible:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "157CCC63-800B-46BD-AE83-9F8C8CC481FE",
-        "versionEndExcluding": "4.9.15",
-        "vulnerable": true
-       }
-      ],
-      "negate": false,
-      "operator": "OR"
-     }
-    ]
-   },
-   {
-    "nodes": [
-     {
-      "cpeMatch": [
-       {
-        "criteria": "cpe:2.3:a:atlassian:fisheye:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "74B7DE64-7D30-4076-983A-D9814AC90B3A",
-        "versionEndExcluding": "4.9.15",
-        "vulnerable": true
-       }
-      ],
-      "negate": false,
-      "operator": "OR"
-     }
-    ]
-   }
-  ],
   "cveTags": [],
   "descriptions": [
    {
     "lang": "en",
-    "value": "This is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to access specific files within the web application root directory in affected versions. Exploitation requires prior knowledge of the target file's exact name and path; this vulnerability does not allow attackers to enumerate or list directory contents. In some configurations, there may be some sensitive files that make this highly severe. This vulnerability allows an unauthenticated remote attacker to access specific files within the web application root directory in affected versions. The vulnerability must be addressed for affected versions of: -- Bitbucket Data Center, introduced in version >= 4.6.0, fix versions: 9.4.26, 10.2.8, 10.5.1 -- Confluence Data Center, introduced in version >= 5.10.0, fix versions 9.2.26, 10.2.19 -- Crowd Data Center, introduced in version >= 2.11.0, fix versions 6.3.7, 7.0.3, 7.1.7, 7.2.4 -- Jira Software Data Center, introduced in version >= 7.1.0, fix versions 9.12.40, 10.3.26, 11.3.12 -- Jira Service Management Data Center, introduced in version >= 3.1.0, fix versions 5.12.40, 10.3.26, 11.3.12 -- Bamboo Data Center >= 7.0.1, fix versions 10.2.24, 12.1.12 -- Crucible, fix versions 4.9.15 -- Fisheye, fix version 4.9.15 -- Exploitation requires prior knowledge of the target file's exact name and path. The vulnerability does not include the capability to enumerate or list directory contents."
+    "value": "Rejected reason: This CVE's publication may have been a false positive or a mistake. As a result, we have rejected this record."
    }
   ],
   "id": "CVE-2026-21589",
-  "lastModified": "2026-10-16T04:18:31.887",
-  "metrics": {
-   "cvssMetricV31": [
-    {
-     "cvssData": {
-      "attackComplexity": "LOW",
-      "attackVector": "NETWORK",
-      "availabilityImpact": "NONE",
-      "baseScore": 7.5,
-      "baseSeverity": "HIGH",
-      "confidentialityImpact": "HIGH",
-      "integrityImpact": "NONE",
-      "privilegesRequired": "NONE",
-      "scope": "UNCHANGED",
-      "userInteraction": "NONE",
-      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-      "version": "3.1"
-     },
-     "exploitabilityScore": 3.9,
-     "impactScore": 3.6,
-     "source": "nvd@nist.gov",
-     "type": "Primary"
-    }
-   ],
-   "cvssMetricV40": [
-    {
-     "cvssData": {
-      "Automatable": "NOT_DEFINED",
-      "Recovery": "NOT_DEFINED",
-      "Safety": "NOT_DEFINED",
-      "attackComplexity": "LOW",
-      "attackRequirements": "NONE",
-      "attackVector": "NETWORK",
-      "availabilityRequirement": "NOT_DEFINED",
-      "baseScore": 9.3,
-      "baseSeverity": "CRITICAL",
-      "confidentialityRequirement": "NOT_DEFINED",
-      "exploitMaturity": "NOT_DEFINED",
-      "integrityRequirement": "NOT_DEFINED",
-      "modifiedAttackComplexity": "NOT_DEFINED",
-      "modifiedAttackRequirements": "NOT_DEFINED",
-      "modifiedAttackVector": "NOT_DEFINED",
-      "modifiedPrivilegesRequired": "NOT_DEFINED",
-      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
-      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
-      "modifiedSubIntegrityImpact": "NOT_DEFINED",
-      "modifiedUserInteraction": "NOT_DEFINED",
-      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
-      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
-      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
-      "privilegesRequired": "NONE",
-      "providerUrgency": "NOT_DEFINED",
-      "subAvailabilityImpact": "HIGH",
-      "subConfidentialityImpact": "HIGH",
-      "subIntegrityImpact": "HIGH",
-      "userInteraction": "NONE",
-      "valueDensity": "NOT_DEFINED",
-      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-      "version": "4.0",
-      "vulnAvailabilityImpact": "NONE",
-      "vulnConfidentialityImpact": "HIGH",
-      "vulnIntegrityImpact": "NONE",
-      "vulnerabilityResponseEffort": "NOT_DEFINED"
-     },
-     "source": "security@atlassian.com",
-     "type": "Secondary"
-    }
-   ],
-   "ssvcV203": [
-    {
-     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-     "ssvcData": {
-      "id": "CVE-2026-21589",
-      "options": [
-       {
-        "exploitation": "active"
-       },
-       {
-        "automatable": "no"
-       },
-       {
-        "technicalImpact": "total"
-       }
-      ],
-      "role": "CISA Coordinator",
-      "timestamp": "2026-10-15T00:00:00+00:00",
-      "version": "2.0.3"
-     }
-    }
-   ]
-  },
+  "lastModified": "2026-10-16T21:17:24.280",
+  "metrics": {},
   "published": "2026-10-05T22:16:58.423",
-  "references": [
-   {
-    "source": "security@atlassian.com",
-    "tags": [
-     "Issue Tracking",
-     "Mitigation",
-     "Vendor Advisory"
-    ],
-    "url": "https://jira.atlassian.com/browse/BAM-26567"
-   },
-   {
-    "source": "security@atlassian.com",
-    "tags": [
-     "Issue Tracking",
-     "Mitigation",
-     "Vendor Advisory"
-    ],
-    "url": "https://jira.atlassian.com/browse/BSERV-20604"
-   },
-   {
-    "source": "security@atlassian.com",
-    "tags": [
-     "Issue Tracking",
-     "Mitigation",
-     "Vendor Advisory"
-    ],
-    "url": "https://jira.atlassian.com/browse/CONFSERVER-104488"
-   },
-   {
-    "source": "security@atlassian.com",
-    "tags": [
-     "Issue Tracking",
-     "Mitigation",
-     "Vendor Advisory"
-    ],
-    "url": "https://jira.atlassian.com/browse/CRUC-8741"
-   },
-   {
-    "source": "security@atlassian.com",
-    "tags": [
-     "Issue Tracking",
-     "Mitigation",
-     "Vendor Advisory"
-    ],
-    "url": "https://jira.atlassian.com/browse/CWD-6610"
-   },
-   {
-    "source": "security@atlassian.com",
-    "tags": [
-     "Issue Tracking",
-     "Mitigation",
-     "Vendor Advisory"
-    ],
-    "url": "https://jira.atlassian.com/browse/FE-7583"
-   },
-   {
-    "source": "security@atlassian.com",
-    "tags": [
-     "Issue Tracking",
-     "Mitigation",
-     "Vendor Advisory"
-    ],
-    "url": "https://jira.atlassian.com/browse/JRASERVER-79546"
-   },
-   {
-    "source": "security@atlassian.com",
-    "tags": [
-     "Issue Tracking",
-     "Mitigation",
-     "Vendor Advisory"
-    ],
-    "url": "https://jira.atlassian.com/browse/JSDSERVER-16809"
-   },
-   {
-    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-    "tags": [
-     "Third Party Advisory"
-    ],
-    "url": "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589"
-   },
-   {
-    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-    "tags": [
-     "US Government Resource"
-    ],
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-21589"
-   }
-  ],
+  "references": [],
   "sourceIdentifier": "security@atlassian.com",
-  "vulnStatus": "Analyzed",
-  "weaknesses": [
-   {
-    "description": [
-     {
-      "lang": "en",
-      "value": "CWE-552"
-     }
-    ],
-    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
-    "type": "Secondary"
-   }
-  ]
+  "vulnStatus": "Rejected"
  }
 }

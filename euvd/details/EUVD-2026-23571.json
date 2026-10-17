@@ -1,0 +1,1141 @@
+{
+ "cert_links": [],
+ "cisa_kev": null,
+ "euvd": {
+  "aliases": "CVE-2026-40477\nGHSA-r4v4-5mwr-2fwr\n",
+  "assigner": "GitHub_M",
+  "baseScore": 9.1,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Apr 17, 2026, 9:53:47 PM",
+  "dateUpdated": "Aug 17, 2026, 12:04:57 PM",
+  "description": "Thymeleaf is a server-side Java template engine for web and standalone environments. Versions 3.1.3.RELEASE and prior contain a security bypass vulnerability in the expression execution mechanisms. Although the library provides mechanisms to prevent expression injection, it fails to properly restrict the scope of accessible objects, allowing specific potentially sensitive objects to be reached from within a template. If an application developer passes unvalidated user input directly to the template engine, an unauthenticated remote attacker can bypass the library's protections to achieve Server-Side Template Injection (SSTI). This issue has ben fixed in version 3.1.4.RELEASE.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "005122a1-0171-3acc-acfd-48e58c6625ec",
+       "product": {
+        "name": "registry.redhat.io/devspaces/imagepuller-rhel9@sha256:ce0df59b0323f22f213488878123cbce067b946a2ea600e9fc6d26f2ac9ad12e_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "00e973a8-1eec-33eb-a0d3-69c5d14d6672",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-base-rhel9@sha256:35f3dd8ce6c805bd624df77da6788be8655cd934d9a307060608459f7a9249d8_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "018d20ca-bc19-33a4-a84b-aaad0fe13018",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-base-rhel9@sha256:6c6c03f1630e51959a47f2b3f24004c6d871f7035afd720e8ec6ea2c7f2173f9_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "057b891f-79a2-36b0-8433-e23e365ad49e",
+       "product": {
+        "name": "registry.redhat.io/devspaces/dashboard-rhel9@sha256:e10099e6dec84dd608b95679315fd09d6a8c377f57dabf68f5b3e1fdb12a10e5_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "18b425e6-2d37-3a0f-899c-998d683995be",
+       "product": {
+        "name": "registry.redhat.io/devspaces/imagepuller-rhel9@sha256:c694a1979337f1666efdc017209e7b3a77b9639f823086ce907c166f6120fa71_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1abab54b-2aed-3d02-8d8d-1874f35113df",
+       "product": {
+        "name": "registry.redhat.io/devspaces/devspaces-rhel9-operator@sha256:f53eafc9e43fca96bad5352706b791476164902cf53261437642da9352b9e121_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1d7530a5-4aef-3173-96e9-bd7d7b1be146",
+       "product": {
+        "name": "registry.redhat.io/devspaces/pluginregistry-rhel9@sha256:5f22f4a4c2de62f4569dcfbdf3650edc51aacee3b4cb6c49c87b25c6bf530b6c_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1f8c5d8a-33b7-3be0-b0d5-d9226f7f9c27",
+       "product": {
+        "name": "registry.redhat.io/devspaces/code-sshd-rhel9@sha256:1d42bcfcf3be9fdb75625eb17ecc7b05d311ceb7e5db9b64a61b957a0dac2017_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "24f0ed4e-eaa8-3e2a-ba26-2fc8631ce4d4",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-rhel9@sha256:977387ccbda9f2a6de9bcabd4256c2194e7e21dbdbaca842be4c37afd55b268f_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2edfe0f2-2638-3d1e-85b2-460a2c486310",
+       "product": {
+        "name": "registry.redhat.io/devspaces/code-sshd-rhel9@sha256:a47056a230633c885e68ec24f4a0827e6ed6e295a16ab03ee7a4ef5ea1064254_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "32743048-3f6f-3b86-80d6-8ac894a6a842",
+       "product": {
+        "name": "registry.redhat.io/devspaces/multicluster-redirector-rhel9@sha256:ad3122a7a3fe50239ada2ef6ae9e085c6cf76baa1376fdcff3829d759a1064f3_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "331ffc58-6bf5-3b66-96ab-aca5f2caa8fb",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-base-rhel10@sha256:cc4113bcb89360970fd57421849664a8db402be0c55ebabef47a01724c7e36f2_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "35299531-ce32-3949-a567-ae55ecb3d44e",
+       "product": {
+        "name": "registry.redhat.io/devspaces/openvsx-rhel9@sha256:e9eef99fc45b2ce06fadacf3db85e6e2f1fbabb16afc250929387ce2589732c3_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3b510967-9d40-3f81-8876-3afb6293a120",
+       "product": {
+        "name": "registry.redhat.io/devspaces/imagepuller-rhel9@sha256:efd2d59a47a3507c3cdbd8e890c6d9a0c868025659fccc67d3f718253fede591_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3d2d72a8-bf34-33b6-a156-d67b1943f1c8",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-base-rhel9@sha256:ba654706ac34dcedfd1ca31f3e77190d598e5d54d19c1b8d7eae8f67a924eef7_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3e8873f3-6222-31c3-98f8-423f1eeddc15",
+       "product": {
+        "name": "registry.redhat.io/devspaces/server-rhel9@sha256:0ba5969eb9013d9d44e20c12fe0a510cf38ca6948ce1d61e087f4cb527044d72_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4373b1bb-5a9c-382c-89b8-f778739d6ec8",
+       "product": {
+        "name": "registry.redhat.io/devspaces/dashboard-rhel9@sha256:fd8259ec2fe8fe72432e32186b2319bc0ef5eb1d25092b66b8f65dda04e783ac_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4a323bfc-b80c-3041-91a4-edac3b0b2082",
+       "product": {
+        "name": "registry.redhat.io/devspaces/openvsx-rhel9@sha256:fe8c450b4f48bd6935495464a3c2a7bfcf29e2bee04d44f9e60344351c49b049_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4a8a3cb6-46f1-344d-a6da-0c20c84866dc",
+       "product": {
+        "name": "registry.redhat.io/devspaces/devspaces-rhel9-operator@sha256:0abb9413b448c31440bf42cdd876174b1534043011a68842c95d18baca978b65_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4b640f5b-8531-3393-940b-c991decf9b3a",
+       "product": {
+        "name": "registry.redhat.io/devspaces/server-rhel9@sha256:0e2ef986cf3ec33b9df0ef362570fd536b2805da20d0e99b6fb25b053235d117_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4d0579f8-17ec-39b3-8444-1066fa20042f",
+       "product": {
+        "name": "registry.redhat.io/devspaces/traefik-rhel9@sha256:3485ff167c400ce15935150104f4a3cf430bcf12cbf29f9b34674a94d381b7d6_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "50ec0d04-c2e1-3545-b302-b6f01ad14610",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-base-rhel10@sha256:b03208e52022e91dd863090b47da35bea4ea1c4c835d30bbf49e2d7e589895b8_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5ab296dd-f4a1-3c5d-9dc8-04e74ae67f04",
+       "product": {
+        "name": "registry.redhat.io/devspaces/configbump-rhel9@sha256:64e5a7d8b8ea5d4f4e9248ffe5ff1235897a6fb799e9ae80cc321730c6173b1a_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "61d7b8d9-2e8c-3b98-b414-85afe48461a6",
+       "product": {
+        "name": "registry.redhat.io/devspaces/multicluster-redirector-rhel9@sha256:49e24bc1bd333713715af7930958a6b01a595ff6320742c7c485f441e6385eb2_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6e048982-4657-352a-ad77-8b43b707cfec",
+       "product": {
+        "name": "registry.redhat.io/devspaces/dashboard-rhel9@sha256:0f5532354d096fca2b4b51e1184c5d219d9c51880873482437ddf64c197ceb1f_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7224f2e9-436f-365f-a6f9-c2ed037552fc",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-base-rhel10@sha256:852bbc356fb837fd973beadc9394a528be22c6ed38810aec821e7fba15fbb059_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "73fad9a7-38fa-36f4-953e-28bff9e53c00",
+       "product": {
+        "name": "registry.redhat.io/devspaces/traefik-rhel9@sha256:992ea99b0f70663a8409fce0e498044cee5d09e379f45986602c3c9a10a664ba_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "75742366-8a7e-3336-a21b-41755f3635b9",
+       "product": {
+        "name": "registry.redhat.io/devspaces/multicluster-redirector-rhel9@sha256:4f77d16fd69ef14da0a96ea0f0e05ca331fcfa5c88df7b51a5c8d95e86bdb913_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7b871244-ad24-303e-a3b8-1e70b412420b",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-rhel9@sha256:d991c0ebd75cdd80cf18c4798b28c2b83a4962d7dc704d47d78e83439774c0e5_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "826a2148-d02b-3045-8d22-e1db4dfc47d4",
+       "product": {
+        "name": "registry.redhat.io/devspaces/server-rhel9@sha256:7868955f9a0266eb48a93cfb965e08fd8171a1e26f46c1e172e27cbd5db9a34f_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "848217eb-4616-3500-b63d-7670e788651d",
+       "product": {
+        "name": "registry.redhat.io/devspaces/jetbrains-ide-rhel9@sha256:1c79ec491dbdcb2dcd861df09d8cadb3b6db3743b614b65301020f4a2f6d39dd_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "892be1b5-e27a-3d31-9f6a-d378b524d9fe",
+       "product": {
+        "name": "Red Hat OpenShift Dev Spaces 3.28",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8963acdf-70ec-3280-a565-fe6447a0b90c",
+       "product": {
+        "name": "registry.redhat.io/devspaces/dashboard-rhel9@sha256:adea9256b3e9ff929f054325d167c4412c61d2d0e89b5975d751c261a3985414_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8d2586b7-16a8-357e-ae0c-f0c1f33eb5a8",
+       "product": {
+        "name": "registry.redhat.io/devspaces/code-sshd-rhel9@sha256:20e1309511f84fb268d23fc50ef0756dfc4fdb917b6647e6b09c24d59439288d_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "92401b95-2634-3189-aba0-40795dae5af4",
+       "product": {
+        "name": "registry.redhat.io/devspaces/pluginregistry-rhel9@sha256:82fe544aa4f03ca665ad23acbb5472032ccdb04fc9e96d77b3b8e764e544f846_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "95aa6ec0-3061-3eb1-9a05-cb3bbd09c65f",
+       "product": {
+        "name": "registry.redhat.io/devspaces/openvsx-rhel9@sha256:94d4124c7884916fbce4af4655b8a5eef5b62df6a21afabf6461bbb898d895b9_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "98c6b833-25e2-3d31-8062-73da972051e9",
+       "product": {
+        "name": "registry.redhat.io/devspaces/code-rhel9@sha256:d752b1a872d03c454c7a2e8a6141fe41df0a62d5e968be7a69f0203fefcb6559_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9923b4f5-8311-3c76-a3c0-75d9a28264bd",
+       "product": {
+        "name": "registry.redhat.io/devspaces/configbump-rhel9@sha256:4805d4c6d4c2d53d3515ad28ac35c6360413bef3dc5399ce328449b16bcac729_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9b5624e0-5d17-3d87-a4ab-f6da1d7629f2",
+       "product": {
+        "name": "registry.redhat.io/devspaces/server-rhel9@sha256:811c26489ddc1729faa31a91a4a1ca7f6486e3aec6b846f7d9cb3c353ac2fa50_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a348cfb7-9744-3f4f-868f-2b166799e030",
+       "product": {
+        "name": "registry.redhat.io/devspaces/traefik-rhel9@sha256:36af8b9a1a82fb3f1db23701ba3c1d28c0e8d517e0b2c5f15802c30ed38335ff_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a45f35b6-9e70-3a17-a07a-666d733aa659",
+       "product": {
+        "name": "registry.redhat.io/devspaces/configbump-rhel9@sha256:ae093c3335e1d3ebc56814a7482cf5783e6bf5bfab536b1e04dd88a74a8260e4_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a8e07ada-82e3-3e78-af9f-8ec863ed1a6a",
+       "product": {
+        "name": "registry.redhat.io/devspaces/traefik-rhel9@sha256:aedada1f3dc1aae7c0314be8f91dcb55f2334dba587b274a0e51e12aa082287b_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "abdd90dd-cf80-3b3d-9403-eda003f4fa6c",
+       "product": {
+        "name": "registry.redhat.io/devspaces/multicluster-redirector-rhel9@sha256:7296dbe969621fa457003014943f4a109e913dfef63def00ac079eb700b51ecd_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aff4cfaf-54a2-32b3-9d7c-9931205a0fd8",
+       "product": {
+        "name": "registry.redhat.io/devspaces/jetbrains-ide-rhel9@sha256:2d4c066361ac0ba3b0113a03d1b8710d9fe96b666f090853ed9a5bf8bd5aadea_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b4ce1d0c-3250-3ce3-83c9-b4ffede67c4b",
+       "product": {
+        "name": "registry.redhat.io/devspaces/code-sshd-rhel9@sha256:1a5fb68c1f62c66f2d62c3b6a3ef48ed902e59307b1a9e50c658132ee870f3cd_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b622145d-8621-3ce1-b038-b920f99a7f23",
+       "product": {
+        "name": "registry.redhat.io/devspaces/jetbrains-ide-rhel9@sha256:d23f8c49b65d7f605c661c01183e2da4fa7ea6c34aa69a9d9b7f552aeb759945_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b640dbd9-0198-3b64-9f2b-1f4f553e5a4f",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-base-rhel9@sha256:dc74ddfbd325e06a2245681854942b461ab6eb919d1f2de62e4c89403e1ef8a1_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bd13d935-6871-3354-a8d8-bdcacc9a60aa",
+       "product": {
+        "name": "registry.redhat.io/devspaces/configbump-rhel9@sha256:561ca113c28e37b1753d902d2f42dc698bfcbbc2f2e3eb5e0b4d549fb5593309_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c169f9e7-7e27-3945-b711-22560ae7b6de",
+       "product": {
+        "name": "registry.redhat.io/devspaces/jetbrains-ide-rhel9@sha256:2babef463b6f97f7befd13ea628baae2d4d893cc9f81158ff91d82cca428d801_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c3705395-4d5f-38f2-bf71-6077474278c0",
+       "product": {
+        "name": "registry.redhat.io/devspaces/devspaces-rhel9-operator@sha256:32489db0d434bcd83578d77acb7c3e8cbbcb7458ffe47bc003423df9b2437133_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ce70692f-7431-3958-bb5c-cdf1e030ee7b",
+       "product": {
+        "name": "registry.redhat.io/devspaces/openvsx-rhel9@sha256:341c8f0f91bd41d4bded00443cd7ab2ddab4972a5ee1ddff4dcbfcdd5c2764f4_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cef5675c-f5e4-33b9-9b65-4899a32e1218",
+       "product": {
+        "name": "registry.redhat.io/devspaces/code-rhel9@sha256:cbe05937b330c830b280fcde70ddc04e76fc01770f519db54385e62d3cdc4365_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d2055746-fe98-3d1b-a1aa-39f2c5f5bdf4",
+       "product": {
+        "name": "registry.redhat.io/devspaces/code-rhel9@sha256:b86a03ffcc1fc359116cc0ca231c64e5d612f047d41b5a2d44d1f3a9d880c14b_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d60f7382-45d6-3b7c-899d-f5c04e90d1e3",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-base-rhel10@sha256:9fef848f79f7157c9eb8433f7ffe25d7c6077bcfbb33aa7f6f773c5b39ae0f80_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d7caaf8d-63a4-3c51-b003-880181b64215",
+       "product": {
+        "name": "registry.redhat.io/devspaces/pluginregistry-rhel9@sha256:d0250c5ec7cd6f6a1584680bb23a9b86c7791a8b8176561b9d093301d41a6218_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d956ce57-651e-3786-a367-0138b0445378",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-rhel9@sha256:f038896c7e017a505e47d7d30aae8dea85d4573e271e41664e3bb020c3bd2be6_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "db261ae2-6be4-3b57-a10d-8c77b9fc6433",
+       "product": {
+        "name": "registry.redhat.io/devspaces/udi-rhel9@sha256:09d59e6aa6fb229afdebe446d5de28255af78bcfae328edfbd57b83e81b31557_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e83ac6b2-3fcf-3ef1-94ba-ca4810aa1437",
+       "product": {
+        "name": "registry.redhat.io/devspaces/pluginregistry-rhel9@sha256:e16a96851641fe2f7a92889a3ca6e8357d4a8f762bdd5b6116332965fdbd3a19_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "edb2e948-0057-355b-b120-6dc7c78f676b",
+       "product": {
+        "name": "registry.redhat.io/devspaces/devspaces-operator-bundle@sha256:aea41739b819bbf8d1bfbb67d82606f651c196fa31e44a55df0c54b9bbaba589_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eebbff49-30a0-3080-94ec-6152b29edae2",
+       "product": {
+        "name": "registry.redhat.io/devspaces/imagepuller-rhel9@sha256:d9e4872d43f955438cd3f7bd7bc1498941e6e830ea156781f066fdd8ee892d8e_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ef62fc87-6f9c-3e21-96b9-d3f7610025bc",
+       "product": {
+        "name": "registry.redhat.io/devspaces/code-rhel9@sha256:cc5228f1a81ab52552eff2f4b4147affa898ffa429a49f7fb47ca394e892c482_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ff901b00-4d04-3319-8467-f45c916fc246",
+       "product": {
+        "name": "registry.redhat.io/devspaces/devspaces-rhel9-operator@sha256:586e3c00134033b5371c6eb5c839c65c89e7833918122db6ad6de7b286caf2da_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-14813\nCVE-2025-68121\nCVE-2026-0636\nCVE-2026-1525\nCVE-2026-1526\nCVE-2026-1528\nCVE-2026-1605\nCVE-2026-2229\nCVE-2026-2327\nCVE-2026-5588\nCVE-2026-26996\nCVE-2026-27904\nCVE-2026-29074\nCVE-2026-30827\nCVE-2026-31802\nCVE-2026-32141\nCVE-2026-32280\nCVE-2026-32282\nCVE-2026-32305\nCVE-2026-33252\nCVE-2026-33810\nCVE-2026-34742\nCVE-2026-35051\nCVE-2026-39858\nCVE-2026-40477\nCVE-2026-40478\nCVE-2026-40611\nCVE-2026-40895\nCVE-2026-40912\nCVE-2026-40972\nCVE-2026-40973\nCVE-2026-40975\nCVE-2026-41240\nCVE-2026-42033\nCVE-2026-42035\nCVE-2026-42039\nCVE-2026-42041\nCVE-2026-42043\nCVE-2026-42044\n",
+     "baseScore": 0.0,
+     "datePublished": "May 28, 2026, 9:29:20 PM",
+     "dateUpdated": "Oct 10, 2026, 9:51:20 AM",
+     "description": "Red Hat Security Advisory: Red Hat OpenShift Dev Spaces 3.28.0 Release.",
+     "id": "RHSA-2026:21772",
+     "references": "https://access.redhat.com/errata/RHSA-2026:21772\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_21772.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat OpenShift Dev Spaces 3.28.0 has been released."
+    },
+    "id": "881fcbe9-2ab1-3ee9-880a-52c61ca1e336"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "0ac5bf89-31a1-3e25-aabe-081348ccf671",
+    "product": {
+     "name": "org.thymeleaf:thymeleaf-spring5",
+     "vendor": {
+      "name": "thymeleaf"
+     }
+    },
+    "product_version": "< 3.1.4.RELEASE"
+   },
+   {
+    "id": "201202fc-6553-3bdf-8af7-f3ade6bfa972",
+    "product": {
+     "name": "org.thymeleaf:thymeleaf-spring6",
+     "vendor": {
+      "name": "thymeleaf"
+     }
+    },
+    "product_version": "< 3.1.4.RELEASE"
+   },
+   {
+    "id": "d5cc2693-005e-31e8-928a-56300fa481d2",
+    "product": {
+     "name": "thymeleaf",
+     "vendor": {
+      "name": "thymeleaf"
+     }
+    },
+    "product_version": "< 3.1.4.RELEASE"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "24b102b8-8cce-3aa1-8b42-292ceb936354",
+    "vendor": {
+     "name": "thymeleaf"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "6316026a-9172-3e25-b4bf-b64aa01b4efa",
+    "vulnerability": {
+     "assigner": "GitHub_M",
+     "baseScore": 9.1,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 17, 2026, 7:13:46 AM",
+     "datePublished": "Apr 17, 2026, 9:53:47 PM",
+     "dateUpdated": "Aug 17, 2026, 12:04:57 PM",
+     "description": "Thymeleaf is a server-side Java template engine for web and standalone environments. Versions 3.1.3.RELEASE and prior contain a security bypass vulnerability in the expression execution mechanisms. Although the library provides mechanisms to prevent expression injection, it fails to properly restrict the scope of accessible objects, allowing specific potentially sensitive objects to be reached from within a template. If an application developer passes unvalidated user input directly to the template engine, an unauthenticated remote attacker can bypass the library's protections to achieve Server-Side Template Injection (SSTI). This issue has ben fixed in version 3.1.4.RELEASE.",
+     "enisa_id": "EUVD-2026-23571\n",
+     "epss": 0.94,
+     "exploitedSince": "Oct 10, 2026, 12:00:00 AM",
+     "id": "CVE-2026-40477",
+     "references": "https://github.com/thymeleaf/thymeleaf/security/advisories/GHSA-r4v4-5mwr-2fwr\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "7fa090d4-d205-3f6e-a122-f196d262208f",
+       "product": {
+        "name": "org.thymeleaf:thymeleaf-spring5",
+        "vendor": {
+         "name": "thymeleaf"
+        }
+       },
+       "product_version": "< 3.1.4.RELEASE"
+      },
+      {
+       "id": "90f83a4a-6fbe-3415-8764-aa88525be826",
+       "product": {
+        "name": "thymeleaf",
+        "vendor": {
+         "name": "thymeleaf"
+        }
+       },
+       "product_version": "< 3.1.4.RELEASE"
+      },
+      {
+       "id": "c1c7fb5f-6385-31d2-adc8-6f56a94af15d",
+       "product": {
+        "name": "org.thymeleaf:thymeleaf-spring6",
+        "vendor": {
+         "name": "thymeleaf"
+        }
+       },
+       "product_version": "< 3.1.4.RELEASE"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "160fb061-2141-3cb4-b340-50497faffb8d",
+       "vendor": {
+        "name": "thymeleaf"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "e8a4ef34-5e49-33a3-8231-ab65a7e05477",
+    "vulnerability": {
+     "aliases": "CVE-2026-40477\nGHSA-r4v4-5mwr-2fwr\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 11, 2026, 1:52:15 AM",
+     "datePublished": "Apr 15, 2026, 7:46:04 PM",
+     "dateUpdated": "Apr 24, 2026, 8:51:36 PM",
+     "description": "Improper restriction of the scope of accessible objects in Thymeleaf expressions",
+     "enisa_id": "EUVD-2026-23571\n",
+     "epss": 0.0,
+     "id": "GHSA-r4v4-5mwr-2fwr",
+     "references": "https://github.com/thymeleaf/thymeleaf/security/advisories/GHSA-r4v4-5mwr-2fwr\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-40477\nhttps://github.com/thymeleaf/thymeleaf\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "a54eac74-6089-363a-82d6-19dc160e8578",
+  "epss": 0.94,
+  "exploitedSince": "Oct 10, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-23571",
+  "references": "https://github.com/thymeleaf/thymeleaf/security/advisories/GHSA-r4v4-5mwr-2fwr\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-23571",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 10, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "thymeleaf",
+      "vendor": "thymeleaf",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "< 3.1.4.RELEASE"
+       }
+      ]
+     },
+     {
+      "product": "org.thymeleaf:thymeleaf-spring5",
+      "vendor": "thymeleaf",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "< 3.1.4.RELEASE"
+       }
+      ]
+     },
+     {
+      "product": "org.thymeleaf:thymeleaf-spring6",
+      "vendor": "thymeleaf",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "< 3.1.4.RELEASE"
+       }
+      ]
+     }
+    ],
+    "source": "security-advisories@github.com"
+   },
+   {
+    "affectedData": [
+     {
+      "collectionURL": "https://catalog.redhat.com/software/containers/",
+      "cpes": [
+       "cpe:/a:redhat:openshift_devspaces:3.28::el9"
+      ],
+      "defaultStatus": "affected",
+      "packageName": "devspaces/openvsx-rhel9",
+      "product": "Red Hat OpenShift Dev Spaces 3.28",
+      "vendor": "Red Hat",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "1779528224",
+        "versionType": "rpm"
+       }
+      ]
+     },
+     {
+      "collectionURL": "https://catalog.redhat.com/software/containers/",
+      "cpes": [
+       "cpe:/a:redhat:openshift_devspaces:3.28::el9"
+      ],
+      "defaultStatus": "affected",
+      "packageName": "devspaces/pluginregistry-rhel9",
+      "product": "Red Hat OpenShift Dev Spaces 3.28",
+      "vendor": "Red Hat",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "1779359423",
+        "versionType": "rpm"
+       }
+      ]
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:camel_spring_boot:4"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "camel-thymeleaf",
+      "product": "Red Hat build of Apache Camel for Spring Boot 4",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:camel_spring_boot:4"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "thymeleaf",
+      "product": "Red Hat build of Apache Camel for Spring Boot 4",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jboss_fuse:7"
+      ],
+      "defaultStatus": "affected",
+      "packageName": "thymeleaf",
+      "product": "Red Hat Fuse 7",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "smallrye-mutiny-vertx-web-templ-thymeleaf",
+      "product": "Red Hat JBoss Enterprise Application Platform 7",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "thymeleaf",
+      "product": "Red Hat JBoss Enterprise Application Platform 7",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "vertx-web-templ-thymeleaf",
+      "product": "Red Hat JBoss Enterprise Application Platform 7",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "smallrye-mutiny-vertx-web-templ-thymeleaf",
+      "product": "Red Hat JBoss Enterprise Application Platform 8",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "thymeleaf",
+      "product": "Red Hat JBoss Enterprise Application Platform 8",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "vertx-web-templ-thymeleaf",
+      "product": "Red Hat JBoss Enterprise Application Platform 8",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jbosseapxp"
+      ],
+      "defaultStatus": "affected",
+      "packageName": "smallrye-mutiny-vertx-web-templ-thymeleaf",
+      "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jbosseapxp"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "spring-boot-starter-thymeleaf",
+      "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jbosseapxp"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "thymeleaf",
+      "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jbosseapxp"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "thymeleaf-extras-java8time",
+      "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jbosseapxp"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "thymeleaf-spring5",
+      "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:jbosseapxp"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "vertx-web-templ-thymeleaf",
+      "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:red_hat_single_sign_on:7"
+      ],
+      "defaultStatus": "affected",
+      "packageName": "spring-boot-starter-thymeleaf",
+      "product": "Red Hat Single Sign-On 7",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:red_hat_single_sign_on:7"
+      ],
+      "defaultStatus": "affected",
+      "packageName": "thymeleaf",
+      "product": "Red Hat Single Sign-On 7",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:red_hat_single_sign_on:7"
+      ],
+      "defaultStatus": "affected",
+      "packageName": "thymeleaf-extras-java8time",
+      "product": "Red Hat Single Sign-On 7",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:red_hat_single_sign_on:7"
+      ],
+      "defaultStatus": "affected",
+      "packageName": "thymeleaf-spring5",
+      "product": "Red Hat Single Sign-On 7",
+      "vendor": "Red Hat"
+     }
+    ],
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+   }
+  ],
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:thymeleaf:thymeleaf:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "1719DA8A-E398-4802-AF24-0A2558214772",
+        "versionEndExcluding": "3.1.4",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Thymeleaf is a server-side Java template engine for web and standalone environments. Versions 3.1.3.RELEASE and prior contain a security bypass vulnerability in the expression execution mechanisms. Although the library provides mechanisms to prevent expression injection, it fails to properly restrict the scope of accessible objects, allowing specific potentially sensitive objects to be reached from within a template. If an application developer passes unvalidated user input directly to the template engine, an unauthenticated remote attacker can bypass the library's protections to achieve Server-Side Template Injection (SSTI). This issue has ben fixed in version 3.1.4.RELEASE."
+   }
+  ],
+  "id": "CVE-2026-40477",
+  "lastModified": "2026-08-04T13:18:33.790",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.0,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.2,
+     "impactScore": 6.0,
+     "source": "security-advisories@github.com",
+     "type": "Secondary"
+    },
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.5,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 1.8,
+     "impactScore": 6.0,
+     "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-40477",
+      "options": [
+       {
+        "exploitation": "none"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-04-21T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-04-17T22:16:33.500",
+  "references": [
+   {
+    "source": "security-advisories@github.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://github.com/thymeleaf/thymeleaf/security/advisories/GHSA-r4v4-5mwr-2fwr"
+   },
+   {
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+    "url": "https://access.redhat.com/errata/RHSA-2026:21772"
+   },
+   {
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+    "url": "https://access.redhat.com/security/cve/CVE-2026-40477"
+   },
+   {
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2459344"
+   },
+   {
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+    "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-40477.json"
+   }
+  ],
+  "sourceIdentifier": "security-advisories@github.com",
+  "vulnStatus": "Modified",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-917"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-1336"
+     }
+    ],
+    "source": "security-advisories@github.com",
+    "type": "Secondary"
+   },
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-917"
+     }
+    ],
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

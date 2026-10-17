@@ -255,18 +255,18 @@
  "honeypot": [
   {
    "avg30d": 11.0,
-   "avg7d": 13.0,
+   "avg7d": 12.0,
    "avg90d": 3.0,
    "cisaKevFlag": true,
-   "connections1d": 2479,
+   "connections1d": 988,
    "cveId": "CVE-2026-88771",
    "firstSeenAt": "Sep 29, 2026, 3:00:00 AM",
    "isNew": false,
-   "lastSeenAt": "Oct 16, 2026, 7:13:51 AM",
+   "lastSeenAt": "Oct 17, 2026, 7:13:14 AM",
    "product": "NetScaler ADC and NetScaler Gateway",
    "source": "shadowserver",
    "trend": "UPTICK",
-   "uniqueIps1d": 18,
+   "uniqueIps1d": 6,
    "vendor": "Citrix",
    "vulnClass": "app-delivery-controller",
    "vulnSeverity": "Critical"

@@ -1,0 +1,314 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102764"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-102764",
+  "cwes": [
+   "CWE-290"
+  ],
+  "dateAdded": "2026-10-16",
+  "dueDate": "2026-10-19",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102764",
+  "product": "Remote Support",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.",
+  "vendorProject": "BeyondTrust",
+  "vulnerabilityName": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-102764\nGHSA-pf95-v8m2-73q8\n",
+  "assigner": "BT",
+  "baseScore": 9.3,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Oct 15, 2026, 8:30:32 PM",
+  "dateUpdated": "Oct 16, 2026, 7:58:23 PM",
+  "description": "The vulnerability exists within internal components of BeyondTrust’s Remote Support product. The components did not adequately validate the origin of the messages it received. Under the right conditions, this could allow an attacker to perform file operations on the appliance.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "1c774d99-fcd0-3190-9030-15fff6779aeb",
+    "product": {
+     "name": "Remote Support",
+     "vendor": {
+      "name": "BeyondTrust"
+     }
+    },
+    "product_version": "0 ≤26.2.3"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "314d6e10-3617-316d-9c36-d8b21c7a621e",
+    "vendor": {
+     "name": "BeyondTrust"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "64f55297-9462-3cdb-a822-24aa7975ebb6",
+    "vulnerability": {
+     "assigner": "BT",
+     "baseScore": 9.3,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 17, 2026, 7:13:23 AM",
+     "datePublished": "Oct 15, 2026, 8:30:32 PM",
+     "dateUpdated": "Oct 16, 2026, 7:58:23 PM",
+     "description": "The vulnerability exists within internal components of BeyondTrust’s Remote Support product. The components did not adequately validate the origin of the messages it received. Under the right conditions, this could allow an attacker to perform file operations on the appliance.",
+     "enisa_id": "EUVD-2026-102427\n",
+     "epss": 0.6,
+     "exploitedSince": "Oct 16, 2026, 12:00:00 AM",
+     "id": "CVE-2026-102764",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764\nhttps://www.beyondtrust.com/blog/entry/bt26-05\nhttps://beyondtrustcorp.service-now.com/csm?id=csm_kb_article&sysparm_article=KB0024066\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "4bebebc4-01d8-3262-af11-71e69dd284ab",
+       "product": {
+        "name": "Remote Support",
+        "vendor": {
+         "name": "BeyondTrust"
+        }
+       },
+       "product_version": "0 ≤26.2.3"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "62aa6fbe-8417-30a4-8505-4b2be67528db",
+       "vendor": {
+        "name": "BeyondTrust"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "ed11e6c3-d528-37fc-a401-db25c6eec06a",
+    "vulnerability": {
+     "aliases": "GHSA-pf95-v8m2-73q8\nCVE-2026-102764\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 17, 2026, 7:04:36 AM",
+     "datePublished": "Oct 15, 2026, 9:36:14 PM",
+     "dateUpdated": "Oct 16, 2026, 9:32:45 PM",
+     "description": "The vulnerability exists within internal components of BeyondTrust’s Remote Support product. The components did not adequately validate the origin of the messages it received. Under the right conditions, this could allow an attacker to perform file operations on the appliance.",
+     "enisa_id": "EUVD-2026-102427\n",
+     "epss": 0.0,
+     "id": "GHSA-pf95-v8m2-73q8",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764\nhttps://beyondtrustcorp.service-now.com/csm?id=csm_kb_article&sysparm_article=KB0024066\nhttps://www.beyondtrust.com/blog/entry/bt26-05\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102764\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "62908a97-686c-3466-8dbf-36ed9b125452",
+  "epss": 0.6,
+  "exploitedSince": "Oct 16, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-102427",
+  "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764\nhttps://www.beyondtrust.com/blog/entry/bt26-05\nhttps://beyondtrustcorp.service-now.com/csm?id=csm_kb_article&sysparm_article=KB0024066\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-102427",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 16, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "Remote Support",
+      "vendor": "BeyondTrust",
+      "versions": [
+       {
+        "lessThanOrEqual": "26.2.3",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "13061848-ea10-403d-bd75-c83a022c2891"
+   }
+  ],
+  "cisaActionDue": "2026-10-19",
+  "cisaExploitAdd": "2026-10-16",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:beyondtrust:remote_support:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A0D7C73F-5086-40AA-B153-B086CFCA79A5",
+        "versionEndIncluding": "26.2.3",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "The vulnerability exists within internal components of BeyondTrust’s Remote Support product. The components did not adequately validate the origin of the messages it received. Under the right conditions, this could allow an attacker to perform file operations on the appliance."
+   }
+  ],
+  "id": "CVE-2026-102764",
+  "lastModified": "2026-10-17T04:16:47.117",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.3,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "13061848-ea10-403d-bd75-c83a022c2891",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-102764",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-16T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-15T21:17:00.117",
+  "references": [
+   {
+    "source": "13061848-ea10-403d-bd75-c83a022c2891",
+    "tags": [
+     "Permissions Required"
+    ],
+    "url": "https://beyondtrustcorp.service-now.com/csm?id=csm_kb_article&sysparm_article=KB0024066"
+   },
+   {
+    "source": "13061848-ea10-403d-bd75-c83a022c2891",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764"
+   },
+   {
+    "source": "13061848-ea10-403d-bd75-c83a022c2891",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://www.beyondtrust.com/blog/entry/bt26-05"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102764"
+   }
+  ],
+  "sourceIdentifier": "13061848-ea10-403d-bd75-c83a022c2891",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-290"
+     }
+    ],
+    "source": "13061848-ea10-403d-bd75-c83a022c2891",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
