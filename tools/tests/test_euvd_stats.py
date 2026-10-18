@@ -103,6 +103,35 @@ class Case(unittest.TestCase):
         self.assertEqual(out["all"]["2026-10"], 7)
         self.assertEqual(out["all"]["2026-01"], 1)
 
+    def test_day_cache_refetches_only_the_two_open_months(self):
+        calls = []
+        orig = bs.search_total
+        bs.search_total = lambda q: calls.append(q) or 3
+        self.addCleanup(setattr, bs, "search_total", orig)
+        slept = bs.time.sleep
+        bs.time.sleep = lambda _: None
+        self.addCleanup(setattr, bs.time, "sleep", slept)
+        wins = bs.month_windows("2026-10-07", bs.DAYS_BACK)
+        cached = {}
+        import datetime as dt
+        for _, a, b in wins:
+            d, end = dt.date.fromisoformat(a), dt.date.fromisoformat(b)
+            while d <= end:
+                cached[d.isoformat()] = 1
+                d += dt.timedelta(days=1)
+        out = bs.count_days("2026-10-07", cached, full=False)
+        self.assertEqual(len(calls), 30 + 7)                              # September in full, October to the 7th
+        self.assertEqual(out["2026-10-07"], 3)
+        self.assertEqual(out["2026-07-01"], 1)                            # kept from the cache
+        self.assertEqual(sorted(out)[0], wins[0][1])                      # the window slides: nothing older
+        self.assertEqual(len(bs.count_days("2026-10-07", cached, full=True)), len(cached))
+
+    def test_base_2025_is_carried_forward_once_the_window_drops_it(self):
+        full = {f"2025-{m:02d}": 100 * m for m in range(1, 13)}
+        self.assertEqual(bs.base_2025(full, None), 650)
+        self.assertEqual(bs.base_2025({"2026-01": 9000}, {"base_2025": 650}), 650)
+        self.assertIsNone(bs.base_2025({"2026-01": 9000}, None))
+
     def test_failed_fetch_writes_nothing(self):
         orig = bs.fetch_everything
         def boom(*a):
@@ -122,11 +151,11 @@ class Case(unittest.TestCase):
         html = open(page, encoding="utf-8").read()
         self.assertNotIn("could not be drawn", html)
         self.assertNotIn("<script", html)
-        self.assertEqual(html.count('class="p"'), 25)
+        self.assertEqual(html.count('class="p"'), 26)
         self.assertEqual(html.count('<h2 class="g"'), 6)
         titles = re.findall(r'<h2><span class="tag">[^<]*</span>\d+\. (.*?)</h2>', html)
-        self.assertEqual(len(titles), 25)
-        self.assertEqual(len(set(titles)), 25, "a panel appears twice")
+        self.assertEqual(len(titles), 26)
+        self.assertEqual(len(set(titles)), 26, "a panel appears twice")
         for i in range(1, 7):
             self.assertIn(f'href="#g{i}"', html)
             self.assertIn(f'id="g{i}"', html)
@@ -204,7 +233,7 @@ class Honeypot(unittest.TestCase):
         self.assertEqual(bs.main(["--root", root, "--render-only"]), 0)
         html = open(os.path.join(root, "euvd", "stats.html"), encoding="utf-8").read()
         self.assertNotIn("could not be drawn", html)
-        self.assertEqual(html.count('class="p"'), 22)
+        self.assertEqual(html.count('class="p"'), 23)
 
     def test_pages_have_breadcrumbs_and_relative_links_resolve(self):
         import enrich

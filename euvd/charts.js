@@ -71,6 +71,39 @@ panel('Records published per month', 'Volume', `<code>/api/search</code> totals 
   'The date is when the EUVD published the record, not when the vulnerability was found. A jump can mean the EUVD ingested a new source rather than that more vulnerabilities exist; the API does not say which. The last bar is the current, unfinished month.',
   c => { const r = monthBars(c, G.months, [['up', G.crit, 'critical'], ['cisa', G.all.map((v, i) => v - G.crit[i]), 'other']], {step: 2000, H: 280}); legend(c, [['up', 'critical (CVSS 9+)'], ['cisa', 'other records']]); });
 
+// Per-day counts, cumulative per month, against two fixed reference months. The 2025 base comes from
+// stats.json (euvd/build_stats.py) because the 24-month window drops 2025 during 2027.
+const DAYS = G.days || {}, DKEYS = Object.keys(DAYS).sort();
+const DM = [...new Set(DKEYS.map(k => k.slice(0, 7)))].sort(), CURM = DM[DM.length - 1];
+const CUM = {}; DM.forEach(m => { let t = 0; CUM[m] = DKEYS.filter(k => k.slice(0, 7) === m).map(k => (t += DAYS[k])); });
+const FULLIX = G.months.length - 2;
+const B3 = Math.round(sum(G.all.slice(Math.max(0, FULLIX - 2), FULLIX + 1)) / Math.min(3, FULLIX + 1));
+const REFS = [[G.base_2025, 'steady', 'the average month of 2025'], [B3, 'up', 'the average of the last three full months']].filter(r => r[0] > 0);
+const crossDay = (m, ref) => { const i = (CUM[m] || []).findIndex(v => v >= ref); return i < 0 ? null : i + 1; };
+const crossTxt = (m, ref) => { const d = crossDay(m, ref); return d ? `on ${B('day ' + d)}` : (m === CURM ? `${B('not reached yet')} (day ${CUM[m].length} so far)` : B('not reached')); };
+
+panel('Days a month needs for an average month', 'Cumulative', `<code>/api/search</code> totals one day at a time (<code>fromDate</code> = <code>toDate</code>), the last ${Math.max(DM.length, 1)} months, cached day by day in <code>stats.json</code>.`,
+  () => { if (!DM.length) return 'Per-day counts are recorded from the next run of the monitor on; until then there is nothing to draw here. The panel will show, for each of the last few months, how many days of the month the EUVD needed to publish as many records as an average month of 2025.';
+    const n = CUM[CURM].length, tot = CUM[CURM][n - 1];
+    return `Each line is one month's running total of published records, day by day; ${B(mlong(CURM))} in blue is the current, unfinished month. The dashed lines are the references: ${REFS.map(([v, , name]) => `${name} (${fmt(v)} records)`).join(' and ')}. A dot marks the day a line crosses one. ${B('The scale is inverse')}: the fewer days a month needs, the more the EUVD is publishing. ${mlong(CURM)} has ${B(fmt(tot))} records in ${n} days and reached ${REFS.map(([v, , name]) => `${name} ${crossTxt(CURM, v)}`).join(', ')}. A month that never reaches a reference is <em>not reached</em>, not zero. Unlike the bars in panel 1, this panel is already readable for the running month: the crossing day is settled the moment it happens and does not wait for the month to end.`; },
+  `The publication date, as in panel 1; a jump can mean the EUVD ingested a new source rather than that more vulnerabilities exist. Today counts the day so far, not a whole day, so the last point of the blue line is still rising. The 2025 base is fixed on purpose and is not a rolling twelve-month average: a rolling average contains the rise itself, so the figure would drift back towards a full month even at constant volume. The three-month average is the current month's reference; for the earlier months it is a figure from their own future, so only the current month's crossing of it is marked. Only the last ${Math.max(DM.length, 1)} months are kept, and the window slides.`,
+  c => { if (!DM.length) { const p = document.createElement('p'); p.className = 'limit'; p.textContent = 'No per-day counts in this data yet.'; c.appendChild(p); return; }
+    const W = 900, H = 300, L = 58, R = 110, T = 16, Bm = 30, g = $('g', {}, svg(W, H, c));
+    const maxDay = Math.max(...DM.map(m => CUM[m].length), 28);
+    const [top, tk] = nice(Math.max(...DM.map(m => CUM[m][CUM[m].length - 1]), ...REFS.map(r => r[0])));
+    yAxis(g, L, W - R, H - Bm, T, top, tk);
+    const X = d => L + (W - L - R) * (d - 1) / Math.max(1, maxDay - 1), Y = v => H - Bm - (H - Bm - T) * v / top;
+    for (let d = 1; d <= maxDay; d++) if (d === 1 || d % 5 === 0) tx(g, X(d), H - Bm + 14, d, {'text-anchor': 'middle'});
+    tx(g, L, H - 4, 'day of the month');
+    REFS.forEach(([v, cc]) => { const y = Y(v); $('line', {x1: L, x2: W - R, y1: y, y2: y, stroke: col(cc), 'stroke-dasharray': '5 4'}, g); tx(g, W - R + 4, y + 4, fmt(v)); });
+    DM.forEach(m => { const cur = m === CURM, cc = cur ? 'acc' : 'cisa', e = CUM[m].length, last = CUM[m][e - 1];
+      $('polyline', {points: CUM[m].map((v, j) => `${X(j + 1)},${Y(v)}`).join(' '), fill: 'none', stroke: col(cc), 'stroke-width': cur ? 2.5 : 1.5, opacity: cur ? 1 : .55}, g);
+      tip(tx(g, X(e) + 5, Y(last) + 4, mlabel(m), cur ? {class: 't'} : {}), `${mlong(m)}: ${fmt(last)} records in ${e} days`);
+      REFS.forEach(([v, rc]) => { if (rc === 'up' && !cur) return; const d = crossDay(m, v); if (d) tip($('circle', {cx: X(d), cy: Y(v), r: 4, fill: col(cc)}, g), `${mlong(m)} reached ${fmt(v)} on day ${d}`); }); });
+    legend(c, [['acc', mlong(CURM) + ', still running'], ['cisa', 'earlier months'], ...REFS.map(([v, cc, n]) => [cc, `${n} (${fmt(v)})`])]);
+    if (REFS.length && G.base_2025) table(c, ['Month', 'Records', 'Days counted', 'Average month of 2025 reached'],
+      DM.slice().reverse().map(m => [mlong(m), fmt(CUM[m][CUM[m].length - 1]), CUM[m].length, crossTxt(m, G.base_2025)])); });
+
 panel('European assigners, month by month', 'Small multiples', `<code>/api/search?assigner=...</code> totals per month for ${G.assigners.length} European CNAs, national CSIRTs and European vendors. The assigner is the body that issued the CVE record.`,
   () => { const last = G.assigners.map(([k, n, v, t]) => [n, sum(v.slice(-13, -1)), sum(v.slice(-7, -1)), sum(v.slice(-13, -7))]).sort((a, b) => b[1] - a[1]);
     const grow = last.filter(r => r[3] > 0 && r[2] >= 2 * r[3] && r[2] >= 10).map(r => r[0]);
