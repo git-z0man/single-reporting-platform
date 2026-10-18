@@ -645,6 +645,22 @@ details.more{margin:.5rem 0 0;border-top:1px solid var(--line);padding-top:.4rem
 details.more>summary{cursor:pointer;font-size:.88rem;color:var(--acc);padding:.6rem 0}
 details.more>summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 @media(max-width:700px){.c{overflow-x:auto}.c svg.wide{min-width:800px}.swipe{display:block}h1{font-size:1.35rem}}
+/* One panel per page when printed or saved as PDF: a panel is the unit people copy, so it must not be
+   torn apart, and it must keep its colours, its legend and both texts. */
+@media print{
+ :root{--bg:#fff;--card:#fff;--note:#f4f7fb}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ body{padding:0;font-size:11pt}
+ .bar,.toc,.top,.swipe{display:none}
+ section.p{break-inside:avoid;page-break-inside:avoid;border:1px solid #bbb;margin:0 0 10mm}
+ section.p>.c,.see,.leg,.tbl{break-inside:avoid;page-break-inside:avoid}
+ h2.g{break-after:avoid;page-break-after:avoid}
+ .c svg.wide{min-width:0}
+ details.more{display:none}
+ details.more[open]{display:block}
+ a{color:inherit;text-decoration:none}
+ .lede a[href^="http"]::after{content:" (" attr(href) ")";font-size:.85em;color:#555}
+}
 </style></head><body><main id="top">
 <header class="bar"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">SRP guide</a></li><li><a href="../index.html#euvd">EUVD</a></li><li><span aria-current="page">Statistics</span></li></ol></nav></header>
 <h1>EUVD statistics</h1>
