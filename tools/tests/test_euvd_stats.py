@@ -256,7 +256,7 @@ class Honeypot(unittest.TestCase):
         self.assertEqual(bs.main(["--root", root, "--render-only"]), 0)
         html = open(os.path.join(root, "euvd", "stats.html"), encoding="utf-8").read()
         self.assertNotIn("could not be drawn", html)
-        self.assertEqual(html.count('class="p"'), 23)
+        self.assertEqual(html.count('class="p"'), 24)
 
     def test_pages_have_breadcrumbs_and_relative_links_resolve(self):
         import enrich
