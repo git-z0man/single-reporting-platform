@@ -73,6 +73,7 @@ class Case(unittest.TestCase):
         self.assertEqual([r[0] for r in S["origin"]][:2], ["CSIRTs Network", "NCSC-NL"])
         self.assertEqual(S["lead"]["recent"]["eu_first"], 1)               # EU KEV two days before CISA
         self.assertEqual({r[0]: r[1] for r in S["urgency"]}["2026-09"], 1)   # one 3-day window in Sep 2026
+        self.assertEqual(S["ft_windows"], [[3, 1]])                       # the triage mark goes with the 3-day window
         self.assertEqual(S["gen"]["detail"]["n"], 1)
         self.assertEqual([(v["assigner"], v["n"], v["exploited"]) for v in S["gen"]["details"]],
                          [("CERTVDE", 1, 0), ("CERT-PL", 1, 0), ("INCIBE", 0, 0), ("CIRCL", 1, 1)])

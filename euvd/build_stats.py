@@ -328,17 +328,21 @@ def compute(data, today):
     cisa = list(data["cisa"].values())
     S["cisa_n"] = len(cisa)
     urg = collections.defaultdict(lambda: collections.Counter())
+    ftw = collections.Counter()  # which remediation window the forensic-triage mark goes with, over the whole catalogue
     for v in cisa:
         try:
             a, due = dt.date.fromisoformat(v["dateAdded"]), dt.date.fromisoformat(v["dueDate"])
         except (KeyError, ValueError):
             continue
+        w = (due - a).days
+        if v.get("forensicTriage") == "Yes":
+            ftw[w] += 1
         if a < start:
             continue
-        w = (due - a).days
         urg[a.strftime("%Y-%m")][str(w) if w in (3, 7, 14, 21) else "other"] += 1
         urg[a.strftime("%Y-%m")]["ft"] += v.get("forensicTriage") == "Yes"
     S["urgency"] = [[m, urg[m]["3"], urg[m]["7"], urg[m]["14"], urg[m]["21"], urg[m]["other"], urg[m]["ft"]] for m in sorted(urg)]
+    S["ft_windows"] = [[w, n] for w, n in sorted(ftw.items())]
     ry = collections.defaultdict(lambda: [0, 0])
     for v in cisa:
         y = (v.get("dateAdded") or "")[:4]
