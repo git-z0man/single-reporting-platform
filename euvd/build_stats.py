@@ -394,7 +394,7 @@ def compute(data, today, old=None):
                 "rank": sorted([[n, data["totals"][a], 1] for a, n in ASSIGNERS] + [[n, data["totals"][a], 0] for a, n in GLOBAL],
                                key=lambda r: -r[1]),
                 "euvd_total": data["euvd_total"], "details": details, "detail": details[0] if details else None,
-                "days": data.get("days", {}), "base_2025": base_2025(mo["all"], (old or {}).get("gen"))}
+                "days": data.get("days", {}), "days_back": DAYS_BACK, "base_2025": base_2025(mo["all"], (old or {}).get("gen"))}
     return S
 
 

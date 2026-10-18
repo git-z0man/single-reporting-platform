@@ -10,6 +10,7 @@ import unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
+import sys; sys.path.insert(0, os.path.join(REPO, "euvd"))
 spec = importlib.util.spec_from_file_location("build_stats", os.path.join(REPO, "euvd", "build_stats.py"))
 bs = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(bs)
@@ -125,6 +126,25 @@ class Case(unittest.TestCase):
         self.assertEqual(out["2026-07-01"], 1)                            # kept from the cache
         self.assertEqual(sorted(out)[0], wins[0][1])                      # the window slides: nothing older
         self.assertEqual(len(bs.count_days("2026-10-07", cached, full=True)), len(cached))
+
+    def test_search_total_retries_a_rate_limited_answer(self):
+        import check_exploited as ce
+        calls = []
+        orig = ce.get
+        def flaky(url):
+            calls.append(url)
+            if len(calls) < 3:
+                raise ce.CheckError("not JSON: '<html>403 Forbidden'")
+            return {"total": 5}
+        ce.get = flaky
+        self.addCleanup(setattr, ce, "get", orig)
+        slept = bs.time.sleep
+        bs.time.sleep = lambda _: None
+        self.addCleanup(setattr, bs.time, "sleep", slept)
+        self.assertEqual(bs.search_total("fromDate=2026-10-01&toDate=2026-10-01"), 5)
+        self.assertEqual(len(calls), 3)
+        ce.get = lambda url: (_ for _ in ()).throw(ce.CheckError("403"))
+        self.assertRaises(bs.StatsError, bs.search_total, "x")
 
     def test_base_2025_is_carried_forward_once_the_window_drops_it(self):
         full = {f"2025-{m:02d}": 100 * m for m in range(1, 13)}
