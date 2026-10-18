@@ -64,19 +64,6 @@ const G = S.gen;
 const DET = G.details || (G.detail ? [G.detail] : []), DETN = new Set(DET.map(v => v.assigner));
 group('Part 1: The EUVD as a whole', `All ${fmt(G.euvd_total)} records, not only the exploited ones. Counts come from <code>/api/search</code> with <code>fromDate</code>/<code>toDate</code> (publication date) and the <code>assigner</code> and <code>fromScore</code> filters; the field <code>total</code> gives the count without downloading the records.`);
 
-panel('Records published per month', 'Volume', `<code>/api/search</code> totals per month, ${mlong(G.months[0])} to ${dlabel(S.generated)} (documented filters).`,
-  () => { const full = G.months.length - 2, m = G.months[full], prev12 = G.all.slice(Math.max(0, full - 12), full), avg = Math.round(sum(prev12) / Math.max(1, prev12.length));
-    const mx = Math.max(...G.all), mm = G.months[G.all.indexOf(mx)];
-    const y25 = G.all.filter((v, i) => G.months[i].slice(0, 4) === '2025'), prev3 = G.all.slice(Math.max(0, full - 3), full);
-    const mean = a => a.length ? Math.round(sum(a) / a.length) : null;
-    const dim = new Date(+m.slice(0, 4), +m.slice(5, 7), 0).getDate();
-    const pace = b => b == null ? null : (b <= G.all[full] ? `${Math.max(1, Math.round(dim * b / G.all[full]))} days` : 'more than the whole month');
-    const b25 = y25.length === 12 ? mean(y25) : null, b3 = mean(prev3);
-    const how = b25 ? `At that pace, what the EUVD published in an average month of 2025 (${fmt(b25)} records) took ${B(pace(b25))}, and an average of the three months before it (${fmt(b3)}) ${B(pace(b3))}. ` : '';
-    return `Each bar is the number of records the EUVD published that month; the <span style="color:var(--up)">red part</span> is the critical ones (CVSS 9 or more). The last full month, ${B(mlong(m))}, had ${B(fmt(G.all[full]))} records (${fmt(G.crit[full])} critical), against an average of ${fmt(avg)} a month over the twelve months before it. ${how}${mm === m ? 'It is the busiest month shown.' : `The busiest month shown is ${mlong(mm)} with ${fmt(mx)}.`}`; },
-  'The date is when the EUVD published the record, not when the vulnerability was found. A jump can mean the EUVD ingested a new source rather than that more vulnerabilities exist; the API does not say which. The last bar is the current, unfinished month. The two pace figures assume the records are spread evenly over the month, which monthly totals cannot show; 2025 is used as the fixed yardstick because a rolling average rises with the surge and would hide it.',
-  c => { const r = monthBars(c, G.months, [['up', G.crit, 'critical'], ['cisa', G.all.map((v, i) => v - G.crit[i]), 'other']], {step: 2000, H: 280}); legend(c, [['up', 'critical (CVSS 9+)'], ['cisa', 'other records']]); });
-
 // Per-day counts, cumulative per month, against two fixed reference months. The 2025 base comes from
 // stats.json (euvd/build_stats.py) because the 24-month window drops 2025 during 2027.
 const DAYS = G.days || {}, DKEYS = Object.keys(DAYS).sort();
@@ -91,6 +78,18 @@ const B3M = new Set(G.months.slice(Math.max(0, FULLIX - 2), FULLIX + 2));
 const REFS = [[G.base_2025, 'steady', 'the average month of 2025'], [B3, 'up', 'the average of the last three full months']].filter(r => r[0] > 0);
 const crossDay = (m, ref) => { const i = (CUM[m] || []).findIndex(v => v >= ref); return i < 0 ? null : i + 1; };
 const crossTxt = (m, ref) => { const d = crossDay(m, ref); return d ? B('day ' + d) : (m === CURM ? `${B('not yet')} (day ${CUM[m].length} so far)` : B('not reached')); };
+
+panel('Records published per month', 'Volume', `<code>/api/search</code> totals per month, ${mlong(G.months[0])} to ${dlabel(S.generated)} (documented filters).`,
+  () => { const full = G.months.length - 2, m = G.months[full], prev12 = G.all.slice(Math.max(0, full - 12), full), avg = Math.round(sum(prev12) / Math.max(1, prev12.length));
+    const mx = Math.max(...G.all), mm = G.months[G.all.indexOf(mx)];
+    // The same per-day counts and the same two references as panel 2, so a reader who copies either
+    // panel on its own gets the same days out of it.
+    const onDay = ref => { const d = crossDay(m, ref); return d ? `on ${B('day ' + d)}` : B('not within the month'); };
+    const how = (CUM[m] || []).length && REFS.length
+      ? `Counting its days one by one, ${mlong(m)} had published as much as ${REFS.map(([v, , name]) => `${name} (${fmt(v)} records) ${onDay(v)}`).join(', and as much as ')}. ` : '';
+    return `Each bar is the number of records the EUVD published that month; the <span style="color:var(--up)">red part</span> is the critical ones (CVSS 9 or more). The last full month, ${B(mlong(m))}, had ${B(fmt(G.all[full]))} records (${fmt(G.crit[full])} critical), against an average of ${fmt(avg)} a month over the twelve months before it. ${how}${mm === m ? 'It is the busiest month shown.' : `The busiest month shown is ${mlong(mm)} with ${fmt(mx)}.`}`; },
+  'The date is when the EUVD published the record, not when the vulnerability was found. A jump can mean the EUVD ingested a new source rather than that more vulnerabilities exist; the API does not say which. The last bar is the current, unfinished month. The two days come from the per-day counts behind panel 2, not from an assumed even spread; 2025 is the fixed yardstick because a rolling average rises with the surge and would hide it. They are left out when the data file holds no per-day counts for that month.',
+  c => { const r = monthBars(c, G.months, [['up', G.crit, 'critical'], ['cisa', G.all.map((v, i) => v - G.crit[i]), 'other']], {step: 2000, H: 280}); legend(c, [['up', 'critical (CVSS 9+)'], ['cisa', 'other records']]); });
 
 panel('Days a month needs for an average month', 'Cumulative', `<code>/api/search</code> totals one day at a time (<code>fromDate</code> = <code>toDate</code>), a sliding window of the last ${DWIN} months, cached day by day in <code>stats.json</code>.`,
   () => { if (!DM.length) return 'Per-day counts are recorded from the next run of the monitor on; until then there is nothing to draw here. The panel will show, for each of the last few months, how many days of the month the EUVD needed to publish as many records as an average month of 2025.';

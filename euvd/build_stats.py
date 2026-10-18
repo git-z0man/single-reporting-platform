@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Build the EUVD statistics page: euvd/stats.json, euvd/history.jsonl, euvd/stats.html.
+"""Build the EUVD statistics page: euvd/stats.json, euvd/history.jsonl, euvd/stats.html,
+and, when it is pre-rendered, one standalone image per panel in euvd/panels/.
 
     python3 euvd/build_stats.py [--full] [--no-prerender] [--today YYYY-MM-DD]
 
@@ -641,10 +642,27 @@ a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .5rem;text-decoration:none;font-size:.92rem}.toc a:first-child{padding-left:0}
 h2.g{font-size:1.35rem;margin:2rem 0 .2rem;scroll-margin-top:6.6rem}.top{font-size:.85rem;margin:.4rem 0 0;text-align:right}
 .swipe{display:none;font-size:.8rem;color:var(--mut);margin:.2rem 0}
+.dl{font-size:.85rem;margin:.5rem 0 0}.dl a{text-decoration:none}.dl a::before{content:"\2913  "}
 details.more{margin:.5rem 0 0;border-top:1px solid var(--line);padding-top:.4rem}
 details.more>summary{cursor:pointer;font-size:.88rem;color:var(--acc);padding:.6rem 0}
 details.more>summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 @media(max-width:700px){.c{overflow-x:auto}.c svg.wide{min-width:800px}.swipe{display:block}h1{font-size:1.35rem}}
+/* One panel per page when printed or saved as PDF: a panel is the unit people copy, so it must not be
+   torn apart, and it must keep its colours, its legend and both texts. */
+@media print{
+ :root{--bg:#fff;--card:#fff;--note:#f4f7fb}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ body{padding:0;font-size:11pt}
+ .bar,.toc,.top,.swipe,.dl{display:none}
+ section.p{break-inside:avoid;page-break-inside:avoid;border:1px solid #bbb;margin:0 0 10mm}
+ section.p>.c,.see,.leg,.tbl{break-inside:avoid;page-break-inside:avoid}
+ h2.g{break-after:avoid;page-break-after:avoid}
+ .c svg.wide{min-width:0}
+ details.more{display:none}
+ details.more[open]{display:block}
+ a{color:inherit;text-decoration:none}
+ .lede a[href^="http"]::after{content:" (" attr(href) ")";font-size:.85em;color:#555}
+}
 </style></head><body><main id="top">
 <header class="bar"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">SRP guide</a></li><li><a href="../index.html#euvd">EUVD</a></li><li><span aria-current="page">Statistics</span></li></ol></nav></header>
 <h1>EUVD statistics</h1>
@@ -670,7 +688,12 @@ def prerender(path):
     if not node:
         return False
     env = dict(os.environ)
-    env.setdefault("NODE_PATH", "/opt/node22/lib/node_modules")
+    if "NODE_PATH" not in env:   # the monitor's image keeps Playwright in /opt; a normal machine has it under npm's global root
+        roots = ["/opt/node22/lib/node_modules"]
+        npm = shutil.which("npm")
+        if npm:
+            roots.append(subprocess.run([npm, "root", "-g"], capture_output=True, text=True).stdout.strip())
+        env["NODE_PATH"] = next((d for d in roots if d and os.path.isdir(os.path.join(d, "playwright"))), roots[0])
     r = subprocess.run([node, os.path.join(HERE, "prerender.js"), path], capture_output=True, text=True, env=env, timeout=180)
     if r.returncode:
         print(f"prerender skipped: {(r.stderr or r.stdout).strip()[:300]}", file=sys.stderr)
