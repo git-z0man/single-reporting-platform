@@ -67,9 +67,52 @@ group('Part 1: The EUVD as a whole', `All ${fmt(G.euvd_total)} records, not only
 panel('Records published per month', 'Volume', `<code>/api/search</code> totals per month, ${mlong(G.months[0])} to ${dlabel(S.generated)} (documented filters).`,
   () => { const full = G.months.length - 2, m = G.months[full], prev12 = G.all.slice(Math.max(0, full - 12), full), avg = Math.round(sum(prev12) / Math.max(1, prev12.length));
     const mx = Math.max(...G.all), mm = G.months[G.all.indexOf(mx)];
-    return `Each bar is the number of records the EUVD published that month; the <span style="color:var(--up)">red part</span> is the critical ones (CVSS 9 or more). The last full month, ${B(mlong(m))}, had ${B(fmt(G.all[full]))} records (${fmt(G.crit[full])} critical), against an average of ${fmt(avg)} a month over the twelve months before it. ${mm === m ? 'It is the busiest month shown.' : `The busiest month shown is ${mlong(mm)} with ${fmt(mx)}.`}`; },
-  'The date is when the EUVD published the record, not when the vulnerability was found. A jump can mean the EUVD ingested a new source rather than that more vulnerabilities exist; the API does not say which. The last bar is the current, unfinished month.',
+    const y25 = G.all.filter((v, i) => G.months[i].slice(0, 4) === '2025'), prev3 = G.all.slice(Math.max(0, full - 3), full);
+    const mean = a => a.length ? Math.round(sum(a) / a.length) : null;
+    const dim = new Date(+m.slice(0, 4), +m.slice(5, 7), 0).getDate();
+    const pace = b => b == null ? null : (b <= G.all[full] ? `${Math.max(1, Math.round(dim * b / G.all[full]))} days` : 'more than the whole month');
+    const b25 = y25.length === 12 ? mean(y25) : null, b3 = mean(prev3);
+    const how = b25 ? `At that pace, what the EUVD published in an average month of 2025 (${fmt(b25)} records) took ${B(pace(b25))}, and an average of the three months before it (${fmt(b3)}) ${B(pace(b3))}. ` : '';
+    return `Each bar is the number of records the EUVD published that month; the <span style="color:var(--up)">red part</span> is the critical ones (CVSS 9 or more). The last full month, ${B(mlong(m))}, had ${B(fmt(G.all[full]))} records (${fmt(G.crit[full])} critical), against an average of ${fmt(avg)} a month over the twelve months before it. ${how}${mm === m ? 'It is the busiest month shown.' : `The busiest month shown is ${mlong(mm)} with ${fmt(mx)}.`}`; },
+  'The date is when the EUVD published the record, not when the vulnerability was found. A jump can mean the EUVD ingested a new source rather than that more vulnerabilities exist; the API does not say which. The last bar is the current, unfinished month. The two pace figures assume the records are spread evenly over the month, which monthly totals cannot show; 2025 is used as the fixed yardstick because a rolling average rises with the surge and would hide it.',
   c => { const r = monthBars(c, G.months, [['up', G.crit, 'critical'], ['cisa', G.all.map((v, i) => v - G.crit[i]), 'other']], {step: 2000, H: 280}); legend(c, [['up', 'critical (CVSS 9+)'], ['cisa', 'other records']]); });
+
+// Per-day counts, cumulative per month, against two fixed reference months. The 2025 base comes from
+// stats.json (euvd/build_stats.py) because the 24-month window drops 2025 during 2027.
+const DAYS = G.days || {}, DKEYS = Object.keys(DAYS).sort();
+const DM = [...new Set(DKEYS.map(k => k.slice(0, 7)))].sort(), CURM = DM[DM.length - 1];
+const DWIN = G.days_back || 4;   // DAYS_BACK in euvd/build_stats.py; the 4 is only for a stats.json from before this panel
+const CUM = {}; DM.forEach(m => { let t = 0; CUM[m] = DKEYS.filter(k => k.slice(0, 7) === m).map(k => (t += DAYS[k])); });
+const FULLIX = G.months.length - 2;
+const B3 = Math.round(sum(G.all.slice(Math.max(0, FULLIX - 2), FULLIX + 1)) / Math.min(3, FULLIX + 1));
+// The three-month line is only marked on the months it is made of, plus the running one: for an older
+// month it would be a figure from its own future. With DAYS_BACK = 4 that is every month drawn.
+const B3M = new Set(G.months.slice(Math.max(0, FULLIX - 2), FULLIX + 2));
+const REFS = [[G.base_2025, 'steady', 'the average month of 2025'], [B3, 'up', 'the average of the last three full months']].filter(r => r[0] > 0);
+const crossDay = (m, ref) => { const i = (CUM[m] || []).findIndex(v => v >= ref); return i < 0 ? null : i + 1; };
+const crossTxt = (m, ref) => { const d = crossDay(m, ref); return d ? B('day ' + d) : (m === CURM ? `${B('not yet')} (day ${CUM[m].length} so far)` : B('not reached')); };
+
+panel('Days a month needs for an average month', 'Cumulative', `<code>/api/search</code> totals one day at a time (<code>fromDate</code> = <code>toDate</code>), a sliding window of the last ${DWIN} months, cached day by day in <code>stats.json</code>.`,
+  () => { if (!DM.length) return 'Per-day counts are recorded from the next run of the monitor on; until then there is nothing to draw here. The panel will show, for each of the last few months, how many days of the month the EUVD needed to publish as many records as an average month of 2025.';
+    const n = CUM[CURM].length, tot = CUM[CURM][n - 1];
+    return `Each line is one month's running total of published records, day by day; ${B(mlong(CURM))} in blue is the current, unfinished month. The dashed lines are the references: ${REFS.map(([v, , name]) => `${name} (${fmt(v)} records)`).join(' and ')}. A dot marks the day a line crosses one. ${B('The scale is inverse')}: the fewer days a month needs, the more the EUVD is publishing. ${mlong(CURM)} has ${B(fmt(tot))} records in ${n} days &mdash; ${REFS.map(([v, , name]) => `${name}: ${crossTxt(CURM, v)}`).join('; ')}. A month that never reaches a reference is <em>not reached</em>, not zero. Unlike the bars in panel 1, this panel is already readable for the running month: the crossing day is settled the moment it happens and does not wait for the month to end.`; },
+  `The publication date, as in panel 1; a jump can mean the EUVD ingested a new source rather than that more vulnerabilities exist. Today counts the day so far, not a whole day, so the last point of the blue line is still rising. The 2025 base is fixed on purpose and is not a rolling twelve-month average: a rolling average contains the rise itself, so the figure would drift back towards a full month even at constant volume. The three-month average is made of exactly the full months drawn here, so a crossing of it says whether that month ran above or below their average; it is marked only on those months and on the running one, because for an older month it would be a figure from its own future. Only the last ${DWIN} months are kept; the window slides, and earlier months drop out of the chart. A closed month's days and its bar in panel 1 were counted on different days, so its total here can differ from the bar by a few records when the EUVD backdates a publication.`,
+  c => { if (!DM.length) { const p = document.createElement('p'); p.className = 'limit'; p.textContent = 'No per-day counts in this data yet.'; c.appendChild(p); return; }
+    const W = 900, H = 300, L = 58, R = 72, T = 16, Bm = 30, g = $('g', {}, svg(W, H, c));
+    const maxDay = Math.max(...DM.map(m => CUM[m].length), 28);
+    const [top, tk] = nice(Math.max(...DM.map(m => CUM[m][CUM[m].length - 1]), ...REFS.map(r => r[0])));
+    yAxis(g, L, W - R, H - Bm, T, top, tk);
+    const X = d => L + (W - L - R) * (d - 1) / Math.max(1, maxDay - 1), Y = v => H - Bm - (H - Bm - T) * v / top;
+    for (let d = 1; d <= maxDay; d++) if (d === 1 || d % 5 === 0) tx(g, X(d), H - Bm + 14, d, {'text-anchor': 'middle'});
+    tx(g, L, H - 4, 'day of the month');
+    REFS.forEach(([v, cc, name]) => { const y = Y(v); $('line', {x1: L, x2: W - R, y1: y, y2: y, stroke: col(cc), 'stroke-dasharray': '5 4'}, g); tx(g, L + 4, y - 4, `${name} (${fmt(v)})`, {fill: col(cc)}); });
+    DM.forEach(m => { const cur = m === CURM, cc = cur ? 'acc' : 'cisa', e = CUM[m].length, last = CUM[m][e - 1];
+      $('polyline', {points: CUM[m].map((v, j) => `${X(j + 1)},${Y(v)}`).join(' '), fill: 'none', stroke: col(cc), 'stroke-width': cur ? 2.5 : 1.5, opacity: cur ? 1 : .55}, g);
+      tip(tx(g, X(e) + 5, Y(last) + 4, mlabel(m), cur ? {class: 't'} : {}), `${mlong(m)}: ${fmt(last)} records in ${e} days`);
+      REFS.forEach(([v, rc]) => { if (rc === 'up' && !B3M.has(m)) return; const d = crossDay(m, v); if (d) tip($('circle', {cx: X(d), cy: Y(v), r: 4, fill: col(cc)}, g), `${mlong(m)} reached ${fmt(v)} on day ${d}`); }); });
+    legend(c, [['acc', mlong(CURM) + ', still running'], ['cisa', 'earlier months'], ...REFS.map(([v, cc, n]) => [cc, `${n} (${fmt(v)})`])]);
+    if (REFS.length && G.base_2025) table(c, ['Month', 'Records', 'Days counted', 'Average month of 2025 reached'],
+      DM.slice().reverse().map(m => [mlong(m), fmt(CUM[m][CUM[m].length - 1]), CUM[m].length, crossTxt(m, G.base_2025)])); });
 
 panel('European assigners, month by month', 'Small multiples', `<code>/api/search?assigner=...</code> totals per month for ${G.assigners.length} European CNAs, national CSIRTs and European vendors. The assigner is the body that issued the CVE record.`,
   () => { const last = G.assigners.map(([k, n, v, t]) => [n, sum(v.slice(-13, -1)), sum(v.slice(-7, -1)), sum(v.slice(-13, -7))]).sort((a, b) => b[1] - a[1]);
@@ -109,11 +152,17 @@ DET.forEach(profilePanel);
 // ================= Part 2: flagged, and when =================
 group('Part 2: What gets flagged, and when', `The ${fmt(S.total)} EUVD entries flagged as exploited and the KEV catalogues behind them, CISA KEV and the EU KEV: how many arrive, and how long after publication. Colours: <span style="color:var(--cisa)">CISA KEV only</span>, <span style="color:var(--both)">both catalogues</span>, <span style="color:var(--eu)">EU KEV only</span>.`);
 
-panel('Known-exploited additions per month', 'Time series', '<code>/api/kev/dump</code> (documented): one entry per CVE with its earliest date across CISA KEV and EU KEV, refreshed daily by ENISA.',
-  () => { const d = S.kev_month, last = d[d.length - 2] || d[d.length - 1], eu = sum(d.map(r => r[2] + r[3])), all = sum(d.map(r => r[1] + r[2] + r[3]));
-    return `Each bar is one month, split by which catalogue lists the CVE; the dashed line marks the SRP go-live month. CISA dominates: ${fmt(all - eu)} of ${fmt(all)} entries are in CISA's catalogue only, ${fmt(eu)} are also or only in the EU KEV. The last full month, ${mlong(last[0])}, added ${fmt(last[1] + last[2] + last[3])}. The tall bars at the start are CISA building up its catalogue in 2021 and 2022, not surges.`; },
-  'The month of the earliest date, not of the latest listing. It says what is flagged as exploited, not how it reached ENISA; nothing in this chart can show SRP reporting.',
-  c => { const d = S.kev_month; monthBars(c, d.map(r => r[0]), [['cisa', d.map(r => r[1]), 'CISA only'], ['both', d.map(r => r[2]), 'both'], ['eu', d.map(r => r[3]), 'EU KEV only']], {step: 20, H: 300, mark: GO.slice(0, 7)}); });
+const KEVALL = S.kev_month, KEVW = KEVALL.slice(-48), KEVCUT = KEVALL.length > KEVW.length;
+panel('Known-exploited additions per month', 'Time series', `<code>/api/kev/dump</code> (documented): one entry per CVE with its earliest date across CISA KEV and EU KEV, refreshed daily by ENISA. The chart shows the last four years, from ${mlong(KEVW[0][0])}.`,
+  () => { const d = KEVW, last = d[d.length - 2] || d[d.length - 1], eu = sum(d.map(r => r[2] + r[3])), all = sum(d.map(r => r[1] + r[2] + r[3])), older = sum(KEVALL.slice(0, KEVALL.length - KEVW.length).map(r => r[1] + r[2] + r[3]));
+    return `Each bar is one month, split by which catalogue lists the CVE; the dashed line marks the SRP go-live month. CISA dominates: ${fmt(all - eu)} of the ${fmt(all)} entries in these four years are in CISA's catalogue only, ${fmt(eu)} are also or only in the EU KEV. The last full month, ${mlong(last[0])}, added ${fmt(last[1] + last[2] + last[3])}. ${KEVCUT ? `The whole series holds ${fmt(all + older)} entries; the ${fmt(older)} dated before ${mlong(KEVW[0][0])} are CISA building up its catalogue in 2021 and 2022, and their tall bars flatten everything since, so the chart starts after them. Open the panel below it for the full series.` : ''}`; },
+  'The month of the earliest date, not of the latest listing. It says what is flagged as exploited, not how it reached ENISA; nothing in this chart can show SRP reporting. The four-year window is a choice made here, not a property of the data; the full series is one click away.',
+  c => { const draw = (el, d) => monthBars(el, d.map(r => r[0]), [['cisa', d.map(r => r[1]), 'CISA only'], ['both', d.map(r => r[2]), 'both'], ['eu', d.map(r => r[3]), 'EU KEV only']], {step: 20, H: 300, mark: GO.slice(0, 7)});
+    draw(c, KEVW);
+    if (!KEVCUT) return;
+    const more = document.createElement('details'); more.className = 'more';
+    more.innerHTML = `<summary>Show the whole series, from ${mlong(KEVALL[0][0])}</summary>`;
+    c.appendChild(more); draw(more, KEVALL); });
 
 panel('Daily additions, recent weeks', 'Time series', `The same dump, by day, ${dlabel(S.kev_day_from)} to ${dlabel(S.generated)}.`,
   () => { const n = sum(S.kev_day.map(r => r[1] + r[2] + r[3])), dd = days(S.kev_day_from, S.generated) + 1;
@@ -157,10 +206,11 @@ panel('How often do exploited entries change?', 'Change', 'EUVD records: <code>d
 group('Part 3: EU KEV and the SRP', `The EU KEV, the catalogue ENISA keeps with the EU CSIRTs Network, against CISA's, and the entries whose dates fit an early notification. None of this shows the reporting route; the background is in <a href="https://github.com/git-z0man/single-reporting-platform/blob/main/euvd/EU-KEV.md">EU-KEV.md</a>.`);
 
 const LD = S.lead;
-panel('EU KEV against CISA: who lists a vulnerability first', 'Comparison', `<code>/api/kevEntries/batch</code> (undocumented): the day each catalogue added every entry the EU KEV lists. Shown: the entries the EU KEV added since ${dlabel(S.dumb_from)}.`,
+const DUMB = S.dumbbell.slice(0, 42);
+panel('EU KEV against CISA: who lists a vulnerability first', 'Comparison', `<code>/api/kevEntries/batch</code> (undocumented): the day each catalogue added every entry the EU KEV lists. Shown: the ${fmt(DUMB.length)} most recent additions${DUMB.length ? `, back to ${dlabel(DUMB[DUMB.length - 1].eu)}` : ''}.`,
   () => `One row per entry, newest at the top. A <span style="color:var(--eu)">gold</span> dot is the EU KEV date, a <span style="color:var(--cisa)">blue</span> dot the CISA date, joined by a grey line; a triangle at the left edge means CISA listed it before the window. In the last 90 days (${LD.recent.n} entries in both catalogues) the EU KEV was first for ${B(LD.recent.eu_first)}, on the same day for ${B(LD.recent.same)} and later for ${B(LD.recent.cisa_first)}; the median gap is ${fmt(LD.recent.median)} days. Before that (${LD.old.n} entries) CISA was first for ${LD.old.cisa_first}, with a median of ${fmt(Math.abs(LD.old.median ?? 0))} days: the EU KEV largely added older CISA entries. Rows with only a gold dot are not in CISA's catalogue.`,
-  `The EU KEV is not the SRP. Its dates go back to ${S.eu_first_date ? dlabel(S.eu_first_date) : 'n/a'}, and ${S.eu_go_gap.length ? `${S.eu_go_gap.length} entries carry` : 'no entry carries'} an EU KEV date in the ten days from the go-live. An entry the EU KEV listed after the go-live and CISA did not, or did later, is a candidate for an SRP origin, nothing more. The date is when the catalogue added the entry, not when the vulnerability was reported.`,
-  c => { const A = S.dumb_from, d = S.dumbbell.filter(r => r.eu >= A); if (!d.length) { c.innerHTML = '<p>No EU KEV entries in the window.</p>'; return; }
+  `The EU KEV is not the SRP. Its dates go back to ${S.eu_first_date ? dlabel(S.eu_first_date) : 'n/a'}, and ${S.eu_go_gap.length ? `${S.eu_go_gap.length} entries carry` : 'no entry carries'} an EU KEV date in the ten days from the go-live. An entry the EU KEV listed after the go-live and CISA did not, or did later, is a candidate for an SRP origin, nothing more. The date is when the catalogue added the entry, not when the vulnerability was reported. Only the ${fmt(DUMB.length)} most recent additions are drawn, so the rows stay readable without scrolling; the EU KEV holds ${fmt(S.dumbbell.length)} entries in all, and the figures above are counted over all of them, not only the rows shown.`,
+  c => { const d = DUMB; if (!d.length) { c.innerHTML = '<p>No EU KEV entries yet.</p>'; return; } const A = d[d.length - 1].eu;
     const W = 900, rh = 13, L = 24, R = 24, T = 30, H = T + d.length * rh + 30, wrap = document.createElement('div'); wrap.className = 'scroll'; c.appendChild(wrap); const g = $('g', {}, svg(W, H, wrap)), a = +new Date(A), b = +new Date(S.generated) + 864e5, X = v => L + (W - L - R) * (Math.max(+new Date(v), a) - a) / (b - a);
     for (let t = new Date(A); +t <= b; t = new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth() + 1, 1))) { const m = t.toISOString().slice(0, 10), x = X(m); if (m.endsWith('-01')) { $('line', {x1: x, x2: x, y1: T - 8, y2: H - 24, stroke: col('grid')}, g); tx(g, x + 3, T - 12, mlabel(m)); } }
     if (GO >= A) { const x = X(GO); $('line', {x1: x, x2: x, y1: T - 8, y2: H - 24, stroke: col('up'), 'stroke-dasharray': '3 3'}, g); tx(g, x, H - 8, 'SRP live', {'text-anchor': 'middle', class: 't'}); }
@@ -199,8 +249,10 @@ panel('Severity against likelihood of exploitation', 'Scatter', `EUVD records of
 
 panel('How urgently CISA wants new entries fixed', 'Time series', 'CISA KEV catalogue (<code>dateAdded</code>, <code>dueDate</code>, <code>forensicTriage</code>), entries added in the last 24 months, by month.',
   () => { const u = S.urgency, last3 = u.slice(-4, -1), tot3 = sum(last3.map(r => r[1] + r[2] + r[3] + r[4] + r[5])), w3 = sum(last3.map(r => r[1])), ft = u.filter(r => r[6]), ftFirst = ft[0], since = u.slice(u.indexOf(ftFirst)), ftShare = ftFirst ? sum(since.map(r => r[6])) / Math.max(1, sum(since.map(r => r[1] + r[2] + r[3] + r[4] + r[5]))) : 0;
-    return `Each bar splits a month's new entries by the remediation window CISA set for US federal agencies: <span style="color:var(--up)">3 days</span>, <span style="color:var(--eu)">7</span>, <span style="color:var(--both)">14</span>, <span style="color:var(--cisa)">21</span>. Hollow dots count entries marked for forensic triage. In the last three full months ${B(Math.round(100 * w3 / Math.max(1, tot3)) + '%')} of new entries got three days. ${ftFirst ? `Forensic triage first appears in ${mlong(ftFirst[0])} and covers ${Math.round(100 * ftShare)}% of the entries added since.` : 'No entry is marked for forensic triage.'}`; },
-  'These are deadlines for US federal agencies, not for anyone in the EU; they show how CISA rates urgency, not how dangerous a flaw is in Europe. <code>forensicTriage</code> refers to BOD 26-04 and is absent for older entries.',
+    const FTW = S.ft_windows || [], ftN = sum(FTW.map(r => r[1])), only = FTW.length === 1 ? FTW[0] : null;
+    const last21 = u.filter(r => r[4]).map(r => r[0]).pop();
+    return `Each bar splits a month's new entries by the remediation window CISA set for US federal agencies: <span style="color:var(--up)">3 days</span>, <span style="color:var(--eu)">7</span>, <span style="color:var(--both)">14</span>, <span style="color:var(--cisa)">21</span>. Hollow dots count entries marked for forensic triage: under CISA's directive <a href="https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk">BOD 26-04</a> of 10 June 2026 the agency must fix or mitigate the asset within three days ${B('and')} examine it for signs that it has already been broken into. In the last three full months ${B(Math.round(100 * w3 / Math.max(1, tot3)) + '%')} of new entries got three days. ${ftFirst ? `Forensic triage first appears in ${mlong(ftFirst[0])} and covers ${Math.round(100 * ftShare)}% of the entries added since.${ftN ? ` ${only ? `All ${fmt(ftN)} marked entries carry the ${only[0]}-day window` : `Of the ${fmt(ftN)} marked entries ${FTW.map(([w, n]) => `${fmt(n)} carry ${w} days`).join(' and ')}`}, which is what the directive ties the mark to.` : ''}` : 'No entry is marked for forensic triage.'} ${last21 ? `The 21-day window, the old default under BOD 22-01, last appears in ${B(mlong(last21))}, before the new directive: the move away from it had already begun, so it is not the triage mark that ended it.` : ''}`; },
+  'These are deadlines for US federal agencies, not for anyone in the EU; they show how CISA rates urgency, not how dangerous a flaw is in Europe. The triage mark is a duty to look for a compromise, not a finding that one happened, and it says nothing about what anyone in the EU must do. <code>forensicTriage</code> refers to BOD 26-04, which replaced BOD 22-01 on 10 June 2026, and the field is absent for older entries; the windows shown are the ones in the catalogue, which under the directive an agency may have to shorten or lengthen for its own assets.',
   c => { const u = S.urgency, r = monthBars(c, u.map(x => x[0]), [['up', u.map(x => x[1]), '3 days'], ['eu', u.map(x => x[2]), '7 days'], ['both', u.map(x => x[3]), '14 days'], ['cisa', u.map(x => x[4]), '21 days'], ['steady', u.map(x => x[5]), 'other']], {step: 10, H: 260});
     u.forEach((x, i) => { if (x[6]) tip($('circle', {cx: r.L + i * r.bw + r.bw / 2, cy: r.H - r.Bm - (r.H - r.Bm - r.T) * x[6] / r.top, r: 4, fill: 'var(--card)', stroke: col('fg'), 'stroke-width': 1.6}, r.g), `${x[0]} forensic triage: ${x[6]}`); }); });
 
@@ -279,6 +331,24 @@ panel('Did the sensors see it before the KEV listing?', 'Timing', 'The honeypot 
   c => { if (!LE.n) return; hbars(c, LE.buckets.map(([n, v]) => ['sensors ' + n, v]), {L: 230, c1: 'both'});
     if (LE.recent.length) table(c, ['Entry', 'CVE', 'Vendor', 'Flagged', 'EU KEV', 'First seen by sensors', 'Sensors'], LE.recent.map(r => [esc(r.id), esc(r.cve), esc(r.vendor), r.flagged, r.eu || '-', r.seen,
       r.censored ? 'at or before the sensors\' start' : r.lead > 0 ? `${r.lead} days before` : r.lead === 0 ? 'same day' : `${-r.lead} days after`])); });
+
+const FH = S.ft_hp, fmed = a => { if (!a.length) return null; const z = [...a].sort((x, y) => x - y), h = z.length >> 1; return z.length % 2 ? z[h] : Math.round((z[h - 1] + z[h]) / 2); };
+panel('Does the triage mark line up with what the sensors see?', 'Comparison',
+  FH ? `<code>/api/honeypotObservations/batch</code> against <code>forensicTriage</code> in the CISA catalogue, for the exploited entries CISA added on or after ${dlabel(FH.from)}, the day BOD 26-04 took effect.` : 'This data file was built before the comparison existed.',
+  () => { if (!FH) return 'This data file holds no comparison; it will appear with the next build.';
+    const [mt, mv] = FH.marked, [pt, pv] = FH.plain, mm = fmed(mv), pm = fmed(pv), thin = mv.length < 5 || pv.length < 5;
+    return `Each dot is one exploited entry CISA added since ${dlabel(FH.from)}, placed by the connections Shadowserver's sensors counted today: <span style="color:var(--up)">marked for forensic triage</span> on the upper row, <span style="color:var(--steady)">not marked</span> on the lower. Only entries added since the directive are compared, because the mark does not exist for older ones and the two rows would otherwise mostly measure age. The sensors see ${B(fmt(mv.length))} of the ${fmt(mt)} marked entries and ${B(fmt(pv.length))} of the ${fmt(pt)} unmarked ones — the entries CISA rates most urgent are largely ones no sensor emulates, which is the first thing this comparison shows. ${thin ? B('That is too few to read a difference out of, so the dots are shown and the comparison is not made.') : `The median is ${B(fmt(mm))} connections for the marked entries and ${B(fmt(pm))} for the unmarked ones${mm === pm ? ', the same.' : mm > pm ? ', higher for the marked ones.' : ', lower for the marked ones.'} A gap here is not evidence that one causes the other.`}`; },
+  'CISA does not mark entries by honeypot activity: under the directive the window follows from public exposure, KEV status, automatability and technical impact, so anything visible here is those factors showing through, not a cause. The sensors see only the products they emulate, so a low count can mean an unwatched product rather than a quiet one, and "today" is a single day. Both groups are small, and the unmarked one holds entries CISA simply rated lower, not entries it cleared.',
+  c => { if (!FH) { c.innerHTML = '<p>This data file holds no comparison; it will appear with the next build.</p>'; return; }
+    const gs = [['marked for triage', FH.marked, 'up'], ['not marked', FH.plain, 'steady']], W = 900, H = 170, L = 230, R = 30, T = 30;
+    const g = $('g', {}, svg(W, H, c)), lg = v => Math.log10(v + 1), all = gs.flatMap(x => x[1][1]);
+    const top = Math.max(1, Math.ceil(lg(Math.max(1, ...all)))), X = v => L + (W - L - R) * lg(v) / top;
+    for (let k = 0; k <= top; k++) { const x = X(Math.pow(10, k) - 1); $('line', {x1: x, x2: x, y1: T - 10, y2: H - 22, stroke: col('grid')}, g); tx(g, x, H - 6, k ? fmt(Math.pow(10, k)) : '0', {'text-anchor': 'middle'}); }
+    tx(g, L, 12, 'connections counted today (log scale)');
+    gs.forEach(([n, [tt, vals], cl], i) => { const y = T + 26 + i * 48;
+      tx(g, L - 10, y + 4, `${n}: ${fmt(vals.length)} of ${fmt(tt)} seen`, {'text-anchor': 'end', class: 't'});
+      vals.forEach(v => tip($('circle', {cx: X(v), cy: y, r: 4, fill: col(cl), opacity: .55}, g), `${v} connections today`));
+      const m = fmed(vals); if (m != null) { $('line', {x1: X(m), x2: X(m), y1: y - 13, y2: y + 13, stroke: col('fg'), 'stroke-width': 2}, g); tx(g, X(m), y - 17, 'median ' + fmt(m), {'text-anchor': 'middle', class: 't'}); } }); });
 
 // ================= Part 6: the monitor's record =================
 group('Part 6: The monitor\'s own record', 'What this monitor records itself, every day, because the EUVD keeps no history of it.');
