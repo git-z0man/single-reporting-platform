@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Build the EUVD statistics page: euvd/stats.json, euvd/history.jsonl, euvd/stats.html.
+"""Build the EUVD statistics page: euvd/stats.json, euvd/history.jsonl, euvd/stats.html,
+and, when it is pre-rendered, one standalone image per panel in euvd/panels/.
 
     python3 euvd/build_stats.py [--full] [--no-prerender] [--today YYYY-MM-DD]
 
@@ -641,6 +642,7 @@ a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .5rem;text-decoration:none;font-size:.92rem}.toc a:first-child{padding-left:0}
 h2.g{font-size:1.35rem;margin:2rem 0 .2rem;scroll-margin-top:6.6rem}.top{font-size:.85rem;margin:.4rem 0 0;text-align:right}
 .swipe{display:none;font-size:.8rem;color:var(--mut);margin:.2rem 0}
+.dl{font-size:.85rem;margin:.5rem 0 0}.dl a{text-decoration:none}.dl a::before{content:"\2913  "}
 details.more{margin:.5rem 0 0;border-top:1px solid var(--line);padding-top:.4rem}
 details.more>summary{cursor:pointer;font-size:.88rem;color:var(--acc);padding:.6rem 0}
 details.more>summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
@@ -651,7 +653,7 @@ details.more>summary:focus-visible{outline:2px solid var(--acc);outline-offset:2
  :root{--bg:#fff;--card:#fff;--note:#f4f7fb}
  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
  body{padding:0;font-size:11pt}
- .bar,.toc,.top,.swipe{display:none}
+ .bar,.toc,.top,.swipe,.dl{display:none}
  section.p{break-inside:avoid;page-break-inside:avoid;border:1px solid #bbb;margin:0 0 10mm}
  section.p>.c,.see,.leg,.tbl{break-inside:avoid;page-break-inside:avoid}
  h2.g{break-after:avoid;page-break-after:avoid}
