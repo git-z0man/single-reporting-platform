@@ -1,7 +1,9 @@
 host:        es.cra-srp.enisa.europa.eu
 country:     Spanien (ES)
 csirt:       INCIBE-CERT
-contact:     https://www.incibe.es/en/incibe-cert/incidents/incident-handling
+contact:     https://www.incibe.es/en/incibe-cert/early-warning/vulnerabilities/cve-assignment-publication
+  (2026-10-18: ENISA's list now links only the vulnerability pages for Spain; the incident-handling links
+   https://www.incibe.es/en/incibe-cert/incidents/incident-handling and .../incidentes/respuesta-incidentes are gone. Coordinator unchanged: INCIBE-CERT.)
 status:      korrigiert
 verified_on: 2026-09-07
 

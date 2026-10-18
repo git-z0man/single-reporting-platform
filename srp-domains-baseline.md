@@ -9,8 +9,8 @@ expected_go_live: 2026-09-11
 retrieved: 2026-09-06
 purpose: Reachability baseline for the SRP production environment. The routine re-checks all 29 hosts, records the first successful HTTP response per host, detects new hosts appearing in the zone, and verifies the assumed country-to-CSIRT mapping once the platform answers.
 note: Only an HTTP status code relayed from upstream counts as live. TCP and TLS are recorded but are forged by an intercepting egress proxy in the monitoring environment — see "Why a TLS handshake is not evidence" below.
-last_check: 2026-10-17
-last_change: 2026-10-10
+last_check: 2026-10-18
+last_change: 2026-10-18
 ---
 
 # CRA SRP — Production domain reachability baseline
@@ -30,8 +30,8 @@ is the baseline that the reachability routine updates when that changes.
 | Edge | 45-address WEDOS pool `185.8.236.33`–`185.8.236.77` (WEDOS Global, CZ) |
 | State | **LIVE** again since the 2026-10-10 08:39 UTC run (launch confirmed 2026-09-11) |
 | Expected go-live | **reached** — 11 September 2026, 11:24:01 UTC |
-| Last check | 2026-10-17 |
-| Last change | 2026-10-10 08:39 UTC — **all 29 hosts PROVISIONED -> LIVE** (recovery); earlier: 2026-10-10 06:02 UTC all 29 LIVE -> PROVISIONED (timeouts); 2026-09-11 **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
+| Last check | 2026-10-18 |
+| Last change | 2026-10-18 CSIRT list: Spain contact links changed; earlier: 2026-10-10 08:39 UTC — **all 29 hosts PROVISIONED -> LIVE** (recovery); earlier: 2026-10-10 06:02 UTC all 29 LIVE -> PROVISIONED (timeouts); 2026-09-11 **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
 
@@ -274,6 +274,13 @@ signals — no login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-10-18 06:09 UTC (vs. 2026-10-17) — CSIRT list: Spain's incident links removed
+
+ENISA's list ("Last updated 10 September 2026", unchanged stamp) no longer carries Spain's two incident-handling links; only the vulnerability-coordination pages remain.
+
+**Changed** — `es`: `https://www.incibe.es/en/incibe-cert/incidents/incident-handling` and `.../incidentes/respuesta-incidentes` gone; `.../early-warning/vulnerabilities/cve-assignment-publication` (and the Spanish twin) remain. Coordinator stays INCIBE-CERT; manifest `csirt_url` and the `es` evidence file now point at the remaining link. Country table unchanged.
+**Unchanged** — 29/29 LIVE (portal 200, auth 302, countries 307); the other 26 entries match; `mt`/`sk` remain `https://`.
 
 ### 2026-10-10 08:39 UTC (vs. 2026-10-10 06:02 UTC) — RECOVERY, ALL 29 HOSTS LIVE AGAIN
 
