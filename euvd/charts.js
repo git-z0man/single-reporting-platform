@@ -67,8 +67,14 @@ group('Part 1: The EUVD as a whole', `All ${fmt(G.euvd_total)} records, not only
 panel('Records published per month', 'Volume', `<code>/api/search</code> totals per month, ${mlong(G.months[0])} to ${dlabel(S.generated)} (documented filters).`,
   () => { const full = G.months.length - 2, m = G.months[full], prev12 = G.all.slice(Math.max(0, full - 12), full), avg = Math.round(sum(prev12) / Math.max(1, prev12.length));
     const mx = Math.max(...G.all), mm = G.months[G.all.indexOf(mx)];
-    return `Each bar is the number of records the EUVD published that month; the <span style="color:var(--up)">red part</span> is the critical ones (CVSS 9 or more). The last full month, ${B(mlong(m))}, had ${B(fmt(G.all[full]))} records (${fmt(G.crit[full])} critical), against an average of ${fmt(avg)} a month over the twelve months before it. ${mm === m ? 'It is the busiest month shown.' : `The busiest month shown is ${mlong(mm)} with ${fmt(mx)}.`}`; },
-  'The date is when the EUVD published the record, not when the vulnerability was found. A jump can mean the EUVD ingested a new source rather than that more vulnerabilities exist; the API does not say which. The last bar is the current, unfinished month.',
+    const y25 = G.all.filter((v, i) => G.months[i].slice(0, 4) === '2025'), prev3 = G.all.slice(Math.max(0, full - 3), full);
+    const mean = a => a.length ? Math.round(sum(a) / a.length) : null;
+    const dim = new Date(+m.slice(0, 4), +m.slice(5, 7), 0).getDate();
+    const pace = b => b == null ? null : (b <= G.all[full] ? `${Math.max(1, Math.round(dim * b / G.all[full]))} days` : 'more than the whole month');
+    const b25 = y25.length === 12 ? mean(y25) : null, b3 = mean(prev3);
+    const how = b25 ? `At that pace, what the EUVD published in an average month of 2025 (${fmt(b25)} records) took ${B(pace(b25))}, and an average of the three months before it (${fmt(b3)}) ${B(pace(b3))}. ` : '';
+    return `Each bar is the number of records the EUVD published that month; the <span style="color:var(--up)">red part</span> is the critical ones (CVSS 9 or more). The last full month, ${B(mlong(m))}, had ${B(fmt(G.all[full]))} records (${fmt(G.crit[full])} critical), against an average of ${fmt(avg)} a month over the twelve months before it. ${how}${mm === m ? 'It is the busiest month shown.' : `The busiest month shown is ${mlong(mm)} with ${fmt(mx)}.`}`; },
+  'The date is when the EUVD published the record, not when the vulnerability was found. A jump can mean the EUVD ingested a new source rather than that more vulnerabilities exist; the API does not say which. The last bar is the current, unfinished month. The two pace figures assume the records are spread evenly over the month, which monthly totals cannot show; 2025 is used as the fixed yardstick because a rolling average rises with the surge and would hide it.',
   c => { const r = monthBars(c, G.months, [['up', G.crit, 'critical'], ['cisa', G.all.map((v, i) => v - G.crit[i]), 'other']], {step: 2000, H: 280}); legend(c, [['up', 'critical (CVSS 9+)'], ['cisa', 'other records']]); });
 
 panel('European assigners, month by month', 'Small multiples', `<code>/api/search?assigner=...</code> totals per month for ${G.assigners.length} European CNAs, national CSIRTs and European vendors. The assigner is the body that issued the CVE record.`,
@@ -109,11 +115,17 @@ DET.forEach(profilePanel);
 // ================= Part 2: flagged, and when =================
 group('Part 2: What gets flagged, and when', `The ${fmt(S.total)} EUVD entries flagged as exploited and the KEV catalogues behind them, CISA KEV and the EU KEV: how many arrive, and how long after publication. Colours: <span style="color:var(--cisa)">CISA KEV only</span>, <span style="color:var(--both)">both catalogues</span>, <span style="color:var(--eu)">EU KEV only</span>.`);
 
-panel('Known-exploited additions per month', 'Time series', '<code>/api/kev/dump</code> (documented): one entry per CVE with its earliest date across CISA KEV and EU KEV, refreshed daily by ENISA.',
-  () => { const d = S.kev_month, last = d[d.length - 2] || d[d.length - 1], eu = sum(d.map(r => r[2] + r[3])), all = sum(d.map(r => r[1] + r[2] + r[3]));
-    return `Each bar is one month, split by which catalogue lists the CVE; the dashed line marks the SRP go-live month. CISA dominates: ${fmt(all - eu)} of ${fmt(all)} entries are in CISA's catalogue only, ${fmt(eu)} are also or only in the EU KEV. The last full month, ${mlong(last[0])}, added ${fmt(last[1] + last[2] + last[3])}. The tall bars at the start are CISA building up its catalogue in 2021 and 2022, not surges.`; },
-  'The month of the earliest date, not of the latest listing. It says what is flagged as exploited, not how it reached ENISA; nothing in this chart can show SRP reporting.',
-  c => { const d = S.kev_month; monthBars(c, d.map(r => r[0]), [['cisa', d.map(r => r[1]), 'CISA only'], ['both', d.map(r => r[2]), 'both'], ['eu', d.map(r => r[3]), 'EU KEV only']], {step: 20, H: 300, mark: GO.slice(0, 7)}); });
+const KEVALL = S.kev_month, KEVW = KEVALL.slice(-48), KEVCUT = KEVALL.length > KEVW.length;
+panel('Known-exploited additions per month', 'Time series', `<code>/api/kev/dump</code> (documented): one entry per CVE with its earliest date across CISA KEV and EU KEV, refreshed daily by ENISA. The chart shows the last four years, from ${mlong(KEVW[0][0])}.`,
+  () => { const d = KEVW, last = d[d.length - 2] || d[d.length - 1], eu = sum(d.map(r => r[2] + r[3])), all = sum(d.map(r => r[1] + r[2] + r[3])), older = sum(KEVALL.slice(0, KEVALL.length - KEVW.length).map(r => r[1] + r[2] + r[3]));
+    return `Each bar is one month, split by which catalogue lists the CVE; the dashed line marks the SRP go-live month. CISA dominates: ${fmt(all - eu)} of the ${fmt(all)} entries in these four years are in CISA's catalogue only, ${fmt(eu)} are also or only in the EU KEV. The last full month, ${mlong(last[0])}, added ${fmt(last[1] + last[2] + last[3])}. ${KEVCUT ? `The whole series holds ${fmt(all + older)} entries; the ${fmt(older)} dated before ${mlong(KEVW[0][0])} are CISA building up its catalogue in 2021 and 2022, and their tall bars flatten everything since, so the chart starts after them. Open the panel below it for the full series.` : ''}`; },
+  'The month of the earliest date, not of the latest listing. It says what is flagged as exploited, not how it reached ENISA; nothing in this chart can show SRP reporting. The four-year window is a choice made here, not a property of the data; the full series is one click away.',
+  c => { const draw = (el, d) => monthBars(el, d.map(r => r[0]), [['cisa', d.map(r => r[1]), 'CISA only'], ['both', d.map(r => r[2]), 'both'], ['eu', d.map(r => r[3]), 'EU KEV only']], {step: 20, H: 300, mark: GO.slice(0, 7)});
+    draw(c, KEVW);
+    if (!KEVCUT) return;
+    const more = document.createElement('details'); more.className = 'more';
+    more.innerHTML = `<summary>Show the whole series, from ${mlong(KEVALL[0][0])}</summary>`;
+    c.appendChild(more); draw(more, KEVALL); });
 
 panel('Daily additions, recent weeks', 'Time series', `The same dump, by day, ${dlabel(S.kev_day_from)} to ${dlabel(S.generated)}.`,
   () => { const n = sum(S.kev_day.map(r => r[1] + r[2] + r[3])), dd = days(S.kev_day_from, S.generated) + 1;

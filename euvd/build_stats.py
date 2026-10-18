@@ -581,6 +581,9 @@ a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 .5rem;text-decoration:none;font-size:.92rem}.toc a:first-child{padding-left:0}
 h2.g{font-size:1.35rem;margin:2rem 0 .2rem;scroll-margin-top:6.6rem}.top{font-size:.85rem;margin:.4rem 0 0;text-align:right}
 .swipe{display:none;font-size:.8rem;color:var(--mut);margin:.2rem 0}
+details.more{margin:.5rem 0 0;border-top:1px solid var(--line);padding-top:.4rem}
+details.more>summary{cursor:pointer;font-size:.88rem;color:var(--acc);padding:.6rem 0}
+details.more>summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 @media(max-width:700px){.c{overflow-x:auto}.c svg.wide{min-width:800px}.swipe{display:block}h1{font-size:1.35rem}}
 </style></head><body><main id="top">
 <header class="bar"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">SRP guide</a></li><li><a href="../index.html#euvd">EUVD</a></li><li><span aria-current="page">Statistics</span></li></ol></nav></header>
