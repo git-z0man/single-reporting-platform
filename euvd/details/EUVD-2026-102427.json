@@ -28,9 +28,37 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 15, 2026, 8:30:32 PM",
-  "dateUpdated": "Oct 16, 2026, 7:58:23 PM",
+  "dateUpdated": "Oct 17, 2026, 3:55:27 AM",
   "description": "The vulnerability exists within internal components of BeyondTrust’s Remote Support product. The components did not adequately validate the origin of the messages it received. Under the right conditions, this could allow an attacker to perform file operations on the appliance.",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "a7a2ff96-6651-37cf-a93b-dff5c68a3d67",
+       "product": {
+        "name": "Remote Support",
+        "vendor": {
+         "name": "BeyondTrust"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-102764\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 16, 2026, 8:59:16 AM",
+     "dateUpdated": "Oct 16, 2026, 8:59:16 AM",
+     "description": "Kwetsbaarheid verholpen in BeyondTrust Remote Support",
+     "id": "NCSC-2026-0437",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "f0af671d-103f-3b24-9bdd-440de396e1b3"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "1c774d99-fcd0-3190-9030-15fff6779aeb",
@@ -59,12 +87,12 @@
      "baseScore": 9.3,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 17, 2026, 7:13:23 AM",
+     "dataProcessed": "Oct 18, 2026, 12:00:14 PM",
      "datePublished": "Oct 15, 2026, 8:30:32 PM",
-     "dateUpdated": "Oct 16, 2026, 7:58:23 PM",
+     "dateUpdated": "Oct 17, 2026, 3:55:27 AM",
      "description": "The vulnerability exists within internal components of BeyondTrust’s Remote Support product. The components did not adequately validate the origin of the messages it received. Under the right conditions, this could allow an attacker to perform file operations on the appliance.",
      "enisa_id": "EUVD-2026-102427\n",
-     "epss": 0.6,
+     "epss": 1.18,
      "exploitedSince": "Oct 16, 2026, 12:00:00 AM",
      "id": "CVE-2026-102764",
      "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764\nhttps://www.beyondtrust.com/blog/entry/bt26-05\nhttps://beyondtrustcorp.service-now.com/csm?id=csm_kb_article&sysparm_article=KB0024066\n",
@@ -96,7 +124,7 @@
     "vulnerability": {
      "aliases": "GHSA-pf95-v8m2-73q8\nCVE-2026-102764\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 17, 2026, 7:04:36 AM",
+     "dataProcessed": "Oct 18, 2026, 12:00:44 PM",
      "datePublished": "Oct 15, 2026, 9:36:14 PM",
      "dateUpdated": "Oct 16, 2026, 9:32:45 PM",
      "description": "The vulnerability exists within internal components of BeyondTrust’s Remote Support product. The components did not adequately validate the origin of the messages it received. Under the right conditions, this could allow an attacker to perform file operations on the appliance.",
@@ -110,7 +138,7 @@
    }
   ],
   "enisaUuid": "62908a97-686c-3466-8dbf-36ed9b125452",
-  "epss": 0.6,
+  "epss": 1.18,
   "exploitedSince": "Oct 16, 2026, 12:00:00 AM",
   "id": "EUVD-2026-102427",
   "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764\nhttps://www.beyondtrust.com/blog/entry/bt26-05\nhttps://beyondtrustcorp.service-now.com/csm?id=csm_kb_article&sysparm_article=KB0024066\n"

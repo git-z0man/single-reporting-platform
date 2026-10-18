@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H/E:P/RL:O/RC:C",
   "baseScoreVersion": "3.1",
   "datePublished": "Apr 14, 2026, 3:39:51 PM",
-  "dateUpdated": "Oct 16, 2026, 7:58:23 PM",
+  "dateUpdated": "Oct 17, 2026, 3:55:20 AM",
   "description": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') [CWE-22] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.7.0, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.6.0 through 7.6.4, FortiProxy 7.4.0 through 7.4.11, FortiProxy 7.2 all versions, FortiProxy 7.0 all versions, FortiSwitchManager 7.2.0 through 7.2.7, FortiSwitchManager 7.0.0 through 7.0.6 may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
   "enisaIdAdvisory": [
    {
@@ -294,7 +294,7 @@
     "vulnerability": {
      "aliases": "GHSA-f3vf-64gv-cxr8\nCVE-2025-61624\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 17, 2026, 7:04:36 AM",
+     "dataProcessed": "Oct 18, 2026, 12:00:44 PM",
      "datePublished": "Apr 14, 2026, 6:30:34 PM",
      "dateUpdated": "Oct 16, 2026, 6:31:41 PM",
      "description": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') [CWE-22] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.7.0, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.6.0 through 7.6.4, FortiProxy 7.4.0 through 7.4.11, FortiProxy 7.2 all versions, FortiProxy 7.0 all versions, FortiSwitchManager 7.2.0 through 7.2.7, FortiSwitchManager 7.0.0 through 7.0.6 may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
@@ -313,12 +313,12 @@
      "baseScore": 5.4,
      "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H/E:P/RL:O/RC:C",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Oct 17, 2026, 7:20:36 AM",
+     "dataProcessed": "Oct 18, 2026, 12:00:14 PM",
      "datePublished": "Apr 14, 2026, 3:39:51 PM",
-     "dateUpdated": "Oct 16, 2026, 7:58:23 PM",
+     "dateUpdated": "Oct 17, 2026, 3:55:20 AM",
      "description": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') [CWE-22] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.7.0, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.6.0 through 7.6.4, FortiProxy 7.4.0 through 7.4.11, FortiProxy 7.2 all versions, FortiProxy 7.0 all versions, FortiSwitchManager 7.2.0 through 7.2.7, FortiSwitchManager 7.0.0 through 7.0.6 may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
      "enisa_id": "EUVD-2025-209452\n",
-     "epss": 0.58,
+     "epss": 1.08,
      "exploitedSince": "Oct 16, 2026, 12:00:00 AM",
      "id": "CVE-2025-61624",
      "references": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122\n",
@@ -527,7 +527,7 @@
    }
   ],
   "enisaUuid": "67595843-0575-392e-a9c5-52ef88faba84",
-  "epss": 0.58,
+  "epss": 1.08,
   "exploitedSince": "Oct 16, 2026, 12:00:00 AM",
   "id": "EUVD-2025-209452",
   "references": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122\n"
