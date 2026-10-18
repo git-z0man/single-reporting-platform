@@ -343,6 +343,26 @@ def compute(data, today):
         urg[a.strftime("%Y-%m")]["ft"] += v.get("forensicTriage") == "Yes"
     S["urgency"] = [[m, urg[m]["3"], urg[m]["7"], urg[m]["14"], urg[m]["21"], urg[m]["other"], urg[m]["ft"]] for m in sorted(urg)]
     S["ft_windows"] = [[w, n] for w, n in sorted(ftw.items())]
+
+    # Does the triage mark go with what the sensors see? Only entries CISA added on or after the
+    # directive: the field does not exist for older ones, so a wider comparison would measure age.
+    bod = dt.date(2026, 6, 10)
+    tot, seen = collections.Counter(), collections.defaultdict(list)
+    for i, x in items.items():
+        v = data["cisa"].get(cve_of(x)) or {}
+        try:
+            if dt.date.fromisoformat(v["dateAdded"]) < bod:
+                continue
+        except (KeyError, ValueError):
+            continue
+        k = "marked" if v.get("forensicTriage") == "Yes" else "plain"
+        tot[k] += 1
+        o = today_obs.get(i)
+        if o is not None:
+            seen[k].append(o.get("connections1d") or 0)
+    S["ft_hp"] = {"from": bod.isoformat(),
+                  "marked": [tot["marked"], sorted(seen["marked"], reverse=True)],
+                  "plain": [tot["plain"], sorted(seen["plain"], reverse=True)]}
     ry = collections.defaultdict(lambda: [0, 0])
     for v in cisa:
         y = (v.get("dateAdded") or "")[:4]

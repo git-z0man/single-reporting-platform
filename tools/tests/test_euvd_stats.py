@@ -74,6 +74,8 @@ class Case(unittest.TestCase):
         self.assertEqual(S["lead"]["recent"]["eu_first"], 1)               # EU KEV two days before CISA
         self.assertEqual({r[0]: r[1] for r in S["urgency"]}["2026-09"], 1)   # one 3-day window in Sep 2026
         self.assertEqual(S["ft_windows"], [[3, 1]])                       # the triage mark goes with the 3-day window
+        self.assertEqual(S["ft_hp"]["marked"], [1, [120]])                # marked, added since the directive, seen by sensors
+        self.assertEqual(S["ft_hp"]["plain"], [0, []])                    # CVE-2026-3 predates the directive, CVE-2026-2 is not CISA
         self.assertEqual(S["gen"]["detail"]["n"], 1)
         self.assertEqual([(v["assigner"], v["n"], v["exploited"]) for v in S["gen"]["details"]],
                          [("CERTVDE", 1, 0), ("CERT-PL", 1, 0), ("INCIBE", 0, 0), ("CIRCL", 1, 1)])
@@ -123,11 +125,11 @@ class Case(unittest.TestCase):
         html = open(page, encoding="utf-8").read()
         self.assertNotIn("could not be drawn", html)
         self.assertNotIn("<script", html)
-        self.assertEqual(html.count('class="p"'), 25)
+        self.assertEqual(html.count('class="p"'), 26)
         self.assertEqual(html.count('<h2 class="g"'), 6)
         titles = re.findall(r'<h2><span class="tag">[^<]*</span>\d+\. (.*?)</h2>', html)
-        self.assertEqual(len(titles), 25)
-        self.assertEqual(len(set(titles)), 25, "a panel appears twice")
+        self.assertEqual(len(titles), 26)
+        self.assertEqual(len(set(titles)), 26, "a panel appears twice")
         for i in range(1, 7):
             self.assertIn(f'href="#g{i}"', html)
             self.assertIn(f'id="g{i}"', html)

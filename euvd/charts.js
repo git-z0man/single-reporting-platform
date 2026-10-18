@@ -295,6 +295,24 @@ panel('Did the sensors see it before the KEV listing?', 'Timing', 'The honeypot 
     if (LE.recent.length) table(c, ['Entry', 'CVE', 'Vendor', 'Flagged', 'EU KEV', 'First seen by sensors', 'Sensors'], LE.recent.map(r => [esc(r.id), esc(r.cve), esc(r.vendor), r.flagged, r.eu || '-', r.seen,
       r.censored ? 'at or before the sensors\' start' : r.lead > 0 ? `${r.lead} days before` : r.lead === 0 ? 'same day' : `${-r.lead} days after`])); });
 
+const FH = S.ft_hp, fmed = a => { if (!a.length) return null; const z = [...a].sort((x, y) => x - y), h = z.length >> 1; return z.length % 2 ? z[h] : Math.round((z[h - 1] + z[h]) / 2); };
+panel('Does the triage mark line up with what the sensors see?', 'Comparison',
+  FH ? `<code>/api/honeypotObservations/batch</code> against <code>forensicTriage</code> in the CISA catalogue, for the exploited entries CISA added on or after ${dlabel(FH.from)}, the day BOD 26-04 took effect.` : 'This data file was built before the comparison existed.',
+  () => { if (!FH) return 'This data file holds no comparison; it will appear with the next build.';
+    const [mt, mv] = FH.marked, [pt, pv] = FH.plain, mm = fmed(mv), pm = fmed(pv), thin = mv.length < 5 || pv.length < 5;
+    return `Each dot is one exploited entry CISA added since ${dlabel(FH.from)}, placed by the connections Shadowserver's sensors counted today: <span style="color:var(--up)">marked for forensic triage</span> on the upper row, <span style="color:var(--steady)">not marked</span> on the lower. Only entries added since the directive are compared, because the mark does not exist for older ones and the two rows would otherwise mostly measure age. The sensors see ${B(fmt(mv.length))} of the ${fmt(mt)} marked entries and ${B(fmt(pv.length))} of the ${fmt(pt)} unmarked ones — the entries CISA rates most urgent are largely ones no sensor emulates, which is the first thing this comparison shows. ${thin ? B('That is too few to read a difference out of, so the dots are shown and the comparison is not made.') : `The median is ${B(fmt(mm))} connections for the marked entries and ${B(fmt(pm))} for the unmarked ones${mm === pm ? ', the same.' : mm > pm ? ', higher for the marked ones.' : ', lower for the marked ones.'} A gap here is not evidence that one causes the other.`}`; },
+  'CISA does not mark entries by honeypot activity: under the directive the window follows from public exposure, KEV status, automatability and technical impact, so anything visible here is those factors showing through, not a cause. The sensors see only the products they emulate, so a low count can mean an unwatched product rather than a quiet one, and "today" is a single day. Both groups are small, and the unmarked one holds entries CISA simply rated lower, not entries it cleared.',
+  c => { if (!FH) { c.innerHTML = '<p>This data file holds no comparison; it will appear with the next build.</p>'; return; }
+    const gs = [['marked for triage', FH.marked, 'up'], ['not marked', FH.plain, 'steady']], W = 900, H = 170, L = 230, R = 30, T = 30;
+    const g = $('g', {}, svg(W, H, c)), lg = v => Math.log10(v + 1), all = gs.flatMap(x => x[1][1]);
+    const top = Math.max(1, Math.ceil(lg(Math.max(1, ...all)))), X = v => L + (W - L - R) * lg(v) / top;
+    for (let k = 0; k <= top; k++) { const x = X(Math.pow(10, k) - 1); $('line', {x1: x, x2: x, y1: T - 10, y2: H - 22, stroke: col('grid')}, g); tx(g, x, H - 6, k ? fmt(Math.pow(10, k)) : '0', {'text-anchor': 'middle'}); }
+    tx(g, L, 12, 'connections counted today (log scale)');
+    gs.forEach(([n, [tt, vals], cl], i) => { const y = T + 26 + i * 48;
+      tx(g, L - 10, y + 4, `${n}: ${fmt(vals.length)} of ${fmt(tt)} seen`, {'text-anchor': 'end', class: 't'});
+      vals.forEach(v => tip($('circle', {cx: X(v), cy: y, r: 4, fill: col(cl), opacity: .55}, g), `${v} connections today`));
+      const m = fmed(vals); if (m != null) { $('line', {x1: X(m), x2: X(m), y1: y - 13, y2: y + 13, stroke: col('fg'), 'stroke-width': 2}, g); tx(g, X(m), y - 17, 'median ' + fmt(m), {'text-anchor': 'middle', class: 't'}); } }); });
+
 // ================= Part 6: the monitor's record =================
 group('Part 6: The monitor\'s own record', 'What this monitor records itself, every day, because the EUVD keeps no history of it.');
 
