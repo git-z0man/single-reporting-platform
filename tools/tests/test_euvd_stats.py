@@ -18,6 +18,20 @@ spec.loader.exec_module(bs)
 F = "%b %d, %Y, %I:%M:%S %p"
 
 
+def node_modules_with_playwright():
+    """Where Playwright lives, so these tests also run outside the monitor's own image. They hold the
+    panel counts, so a machine that silently skips them lets a broken count reach the daily run."""
+    for d in [os.environ.get("NODE_PATH"), "/opt/node22/lib/node_modules",
+              subprocess.run(["npm", "root", "-g"], capture_output=True, text=True).stdout.strip()
+              if shutil.which("npm") else None]:
+        if d and os.path.isdir(os.path.join(d, "playwright")):
+            return d
+    return None
+
+
+NODE_MODULES = node_modules_with_playwright() if shutil.which("node") else None
+
+
 def d(s):  # "2026-09-20" -> EUVD date string
     import datetime as dt
     return dt.date.fromisoformat(s).strftime("%b %d, %Y, 12:00:00 AM")
@@ -164,11 +178,11 @@ class Case(unittest.TestCase):
         self.assertEqual(bs.main(["--root", self.root, "--today", "2026-10-07", "--no-prerender"]), 2)
         self.assertFalse(os.path.exists(os.path.join(self.root, "euvd", "stats.json")))
 
-    @unittest.skipUnless(shutil.which("node") and os.path.isdir("/opt/node22/lib/node_modules/playwright"), "node/Playwright not available")
+    @unittest.skipUnless(NODE_MODULES, "node/Playwright not available")
     def test_every_panel_draws_from_sparse_data(self):
         self.run_build()
         page = os.path.join(self.root, "euvd", "stats.html")
-        env = dict(os.environ, NODE_PATH="/opt/node22/lib/node_modules")
+        env = dict(os.environ, NODE_PATH=NODE_MODULES)
         r = subprocess.run(["node", os.path.join(REPO, "euvd", "prerender.js"), page], capture_output=True, text=True, env=env, timeout=120)
         self.assertEqual(r.returncode, 0, r.stderr)
         html = open(page, encoding="utf-8").read()
@@ -244,7 +258,7 @@ class Honeypot(unittest.TestCase):
         self.assertEqual(dict(L["buckets"])["1-30 days before"], 1)                               # seen 15 Sep, flagged 20 Sep
         self.assertEqual([(r["id"], r["lead"], r["censored"]) for r in L["recent"]], [("EUVD-2026-1", 5, False)])
 
-    @unittest.skipUnless(shutil.which("node") and os.path.isdir("/opt/node22/lib/node_modules/playwright"), "node/Playwright not available")
+    @unittest.skipUnless(NODE_MODULES, "node/Playwright not available")
     def test_old_stats_json_with_one_profile_still_draws(self):
         root = tempfile.mkdtemp()
         self.addCleanup(shutil.rmtree, root)

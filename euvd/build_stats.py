@@ -688,7 +688,12 @@ def prerender(path):
     if not node:
         return False
     env = dict(os.environ)
-    env.setdefault("NODE_PATH", "/opt/node22/lib/node_modules")
+    if "NODE_PATH" not in env:   # the monitor's image keeps Playwright in /opt; a normal machine has it under npm's global root
+        roots = ["/opt/node22/lib/node_modules"]
+        npm = shutil.which("npm")
+        if npm:
+            roots.append(subprocess.run([npm, "root", "-g"], capture_output=True, text=True).stdout.strip())
+        env["NODE_PATH"] = next((d for d in roots if d and os.path.isdir(os.path.join(d, "playwright"))), roots[0])
     r = subprocess.run([node, os.path.join(HERE, "prerender.js"), path], capture_output=True, text=True, env=env, timeout=180)
     if r.returncode:
         print(f"prerender skipped: {(r.stderr or r.stdout).strip()[:300]}", file=sys.stderr)
