@@ -5,10 +5,10 @@
 
 Reads the EUVD API (documented and undocumented endpoints, see euvd/API.md), the CISA
 KEV catalogue, and the previous euvd/stats.json. Monthly counts for the whole EUVD are
-cached in stats.json: a daily run only recounts the current and the previous month
-(--full recounts all). Every run appends or replaces today's line in history.jsonl, the
-only place where values the EUVD keeps no history of (honeypot counts, set sizes) are
-recorded over time.
+cached in stats.json, monthly and (for the last four months) day by day: a daily run only
+recounts the current and the previous month (--full recounts all). Every run appends or
+replaces today's line in history.jsonl, the only place where values the EUVD keeps no
+history of (honeypot counts, set sizes) are recorded over time.
 
 Honeypot surges: from that history it marks surges, an entry attacked far above its own
 recorded level by many sources ("broad"), or well above it from several sources on several
@@ -33,6 +33,7 @@ import shutil
 import statistics
 import subprocess
 import sys
+import time
 import urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -45,6 +46,7 @@ SEARCH = "https://euvdservices.enisa.europa.eu/api/search?"
 KEV_DUMP = "https://euvdservices.enisa.europa.eu/api/kev/dump"
 GO_LIVE = ce.GO_LIVE
 MONTHS_BACK = 24
+DAYS_BACK = 4        # months of per-day counts kept for the cumulative panel (a sliding window)
 # European assigners counted month by month: (EUVD assigner value, display name)
 ASSIGNERS = [("CERTVDE", "CERT@VDE (DE)"), ("CERT-PL", "CERT Polska (PL)"), ("INCIBE", "INCIBE-CERT (ES)"),
              ("CIRCL", "CIRCL (LU)"), ("ENISA", "ENISA (EU)"), ("NCSC-NL", "NCSC-NL (NL)"), ("NCSC-FI", "NCSC-FI (FI)"),
@@ -84,12 +86,19 @@ class StatsError(Exception):
 
 # ---------- fetching (network) ----------
 
-def search_total(query):
-    d = ce.get(SEARCH + query + "&size=1")
-    try:
-        return int(d["total"])
-    except (KeyError, TypeError, ValueError):
-        raise StatsError(f"no total for {query}")
+def search_total(query, tries=4):
+    """The number of matching records, without downloading any. A long run of these draws a 403 from
+    ENISA's rate limiter, which answers HTML; curl does not see that as an error and does not retry it,
+    so pause and try again here. A 403 that survives the tries is still a failed check."""
+    for k in range(tries):
+        time.sleep(0.2)
+        try:
+            d = ce.get(SEARCH + query + "&size=1")
+            return int(d["total"])
+        except (ce.CheckError, KeyError, TypeError, ValueError):
+            if k == tries - 1:
+                raise StatsError(f"no total for {query}")
+            time.sleep(10 * (k + 1))
 
 
 def search_all(query, cap=2000):
@@ -136,7 +145,32 @@ def count_months(today, cached, full):
     return out
 
 
-def fetch_everything(today, cached_months, full):
+def count_days(today, cached, full):
+    """{YYYY-MM-DD: records published that day} over the last DAYS_BACK months. Days of a month that is
+    no longer filling up are kept from the cache, so a daily run fetches about 60 days, not 110; the
+    window slides, so older days drop out. Same freshness rule as count_months, so the daily counts and
+    the monthly bars cannot disagree after a backfill."""
+    wins = month_windows(today, DAYS_BACK)
+    fresh = {m for m, _, _ in wins[-2:]}
+    old, out = cached or {}, {}
+    for m, a, b in wins:
+        d, end = dt.date.fromisoformat(a), dt.date.fromisoformat(b)
+        while d <= end:
+            k = d.isoformat()
+            out[k] = old[k] if (not full and m not in fresh and k in old) else search_total(f"fromDate={k}&toDate={k}")
+            d += dt.timedelta(days=1)
+    return out
+
+
+def base_2025(months_all, old_gen):
+    """The fixed reference month: the average month of 2025. Kept in stats.json once all twelve months are
+    counted, because the 24-month window drops 2025 during 2027 and a base recomputed from whatever is
+    left would creep upwards with the rise it is meant to measure."""
+    v = [n for m, n in months_all.items() if m.startswith("2025-")]
+    return round(statistics.mean(v)) if len(v) == 12 else (old_gen or {}).get("base_2025")
+
+
+def fetch_everything(today, cached_months, cached_days, full):
     items = ce.fetch_all()
     if len(items) < ce.MIN_TOTAL:
         raise StatsError(f"only {len(items)} exploited entries; the pipeline looks broken, not the EUVD")
@@ -152,8 +186,9 @@ def fetch_everything(today, cached_months, full):
     totals = {a: search_total("assigner=" + urllib.parse.quote(a)) for a, _ in ASSIGNERS + GLOBAL}
     euvd_total = search_total("fromScore=0&toScore=10")
     detail = {a: search_all("assigner=" + urllib.parse.quote(a)) for a in DETAIL_ASSIGNERS}
+    days = count_days(today, cached_days, full)
     return dict(items=items, kev_dump=kev_dump, hp=hp, kev_entries=kev_entries, cisa=cisa, months=months,
-                totals=totals, euvd_total=euvd_total, detail=detail)
+                totals=totals, euvd_total=euvd_total, detail=detail, days=days)
 
 
 # ---------- computing (pure) ----------
@@ -205,7 +240,7 @@ def lead_split(rows, cut):
     return {"cut": cut, "recent": part([r for r in both if r["eu"] >= cut]), "old": part([r for r in both if r["eu"] < cut])}
 
 
-def compute(data, today):
+def compute(data, today, old=None):
     T = dt.date.fromisoformat(today)
     go = dt.date.fromisoformat(GO_LIVE)
     items = {x["id"]: x for x in data["items"]}
@@ -382,7 +417,8 @@ def compute(data, today):
                 "assigners": [[a, n, [mo[a][m] for m in ms], data["totals"][a]] for a, n in ASSIGNERS],
                 "rank": sorted([[n, data["totals"][a], 1] for a, n in ASSIGNERS] + [[n, data["totals"][a], 0] for a, n in GLOBAL],
                                key=lambda r: -r[1]),
-                "euvd_total": data["euvd_total"], "details": details, "detail": details[0] if details else None}
+                "euvd_total": data["euvd_total"], "details": details, "detail": details[0] if details else None,
+                "days": data.get("days", {}), "days_back": DAYS_BACK, "base_2025": base_2025(mo["all"], (old or {}).get("gen"))}
     return S
 
 
@@ -665,8 +701,9 @@ def main(argv=None):
     try:
         old = json.loads(ce.read(stats_p) or "null")
         cached = (old or {}).get("_months")
-        data = json.loads(ce.read(a.data_file)) if a.data_file else fetch_everything(today, cached, a.full)
-        S = compute(data, today)
+        cached_days = ((old or {}).get("gen") or {}).get("days")
+        data = json.loads(ce.read(a.data_file)) if a.data_file else fetch_everything(today, cached, cached_days, a.full)
+        S = compute(data, today, old)
         hist = merge_history(ce.read(hist_p), history_line(S, data, today))
         S["history"] = history_series(hist)
         days_all = hp_days(hist)

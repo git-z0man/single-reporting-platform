@@ -88,7 +88,15 @@ query with `size=1` counts anything the filters can express: records per month
 value is the CNA's short name, `CERT@VDE` returns 0), critical ones
 (`fromScore=9&toScore=10`) or exploited ones (`exploited=true`). The whole EUVD held
 401,624 records on 2026-10-07. Counting 25 months for 16 series took 400 requests and
-about two minutes; a daily run only needs the current month.
+about two minutes; a daily run only recounts the current and the previous month. The same
+query with `fromDate` and `toDate` on one day counts that day: the 30 days of September 2026
+sum to 14,964, exactly the month's own total, so the bounds are inclusive and the day
+boundary matches. `euvd/build_stats.py` keeps the last four months day by day in
+`stats.json` for the cumulative panel, about 60 of them refetched per run.
+
+**A long run of counting queries draws a 403.** ENISA's rate limiter answers HTML, which
+curl does not see as an error and therefore does not retry; `search_total` pauses between
+calls and retries, and a 403 that survives that is a failed check, never a zero.
 
 **No browser access.** The API answers 403 to any request carrying a foreign
 `Origin` header (no CORS for other sites), so a page cannot query it live from the
