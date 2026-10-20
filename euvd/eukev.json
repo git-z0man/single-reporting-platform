@@ -1310,6 +1310,23 @@
    "first_seen": "2026-10-17",
    "first_seen_after": "2026-10-16",
    "changes": []
+  },
+  {
+   "id": "EUVD-2026-102072",
+   "cve": "CVE-2026-110936",
+   "row": 1830,
+   "dateAdded": "2026-10-19",
+   "origin": "CNW",
+   "vendor": "Siemens",
+   "product": "Siemens Software Center",
+   "notes": "https://productcert.siemens.com/news/2026/10/19/active-exploitation-of-cve-2026-110936-in-siemens-software-center/",
+   "cisa": "",
+   "inserted_after": "2026-10-16",
+   "inserted_before": "",
+   "backdated_days": 0,
+   "first_seen": "2026-10-20",
+   "first_seen_after": "2026-10-19",
+   "changes": []
   }
  ],
  "removed": []
