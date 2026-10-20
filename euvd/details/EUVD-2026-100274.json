@@ -28,9 +28,181 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
   "baseScoreVersion": "3.1",
   "datePublished": "Oct 13, 2026, 7:01:26 PM",
-  "dateUpdated": "Oct 16, 2026, 11:25:28 PM",
+  "dateUpdated": "Oct 19, 2026, 11:52:03 PM",
   "description": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0393b397-8156-3d3f-90d9-06dfe5532347",
+       "product": {
+        "name": "Microsoft Office LTSC for Mac 2021",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "13ad48b2-e736-3437-8b52-90a5d8d57491",
+       "product": {
+        "name": "Microsoft 365 Apps for Enterprise for 64-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "22db8b32-fd84-310c-996f-2969fc9aebbf",
+       "product": {
+        "name": "Microsoft Office LTSC 2024 for 64-bit editions",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "26a69c37-ce8a-3f41-afb9-477cdaa23357",
+       "product": {
+        "name": "Microsoft Office LTSC 2021 for 64-bit editions",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "40c7a5cf-a8fb-3950-ba70-ca75bcd0a38c",
+       "product": {
+        "name": "Microsoft SharePoint Enterprise Server 2016",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "438cc134-a494-3849-a2b1-c1f6e4edefba",
+       "product": {
+        "name": "Outlook.com",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "54174edb-1ba3-3e8b-80ff-3e79873def1f",
+       "product": {
+        "name": "Office Online Server",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "54b44f4a-ce26-305f-bf46-fe44fa6f536e",
+       "product": {
+        "name": "Skype for Business Server Subscription Edition CU1",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "5d7e8f7e-4afd-3ebc-bd30-3c42588cdf7e",
+       "product": {
+        "name": "Microsoft SharePoint Server 2019",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "64889722-646f-3e96-b114-f86e9a66cf20",
+       "product": {
+        "name": "Microsoft 365 Apps for Enterprise for 32-bit Systems",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "7a490f9d-36b2-364a-9478-872fe1909069",
+       "product": {
+        "name": "Microsoft Office 365 for Mac",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "7b0a4a4a-804c-39c8-9a1e-75761dc4e8d4",
+       "product": {
+        "name": "Microsoft Office LTSC for Mac 2024",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "991aa544-8cc7-3428-8564-f7dfbbf1ca19",
+       "product": {
+        "name": "Microsoft Office LTSC 2021 for 32-bit editions",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c267dbf5-de69-3dd4-bbc2-ec1931b29d72",
+       "product": {
+        "name": "Microsoft Office LTSC 2024 for 32-bit editions",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d068852e-f3f0-303f-9ea0-8612c76842d8",
+       "product": {
+        "name": "Skype for Business Server 2019 CU8",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "e1aa8359-2b72-320e-a0a6-39e6c535a3a1",
+       "product": {
+        "name": "Skype for Business Server 2015 CU13",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "eebe60c8-a57a-350e-b99b-4c7f5846ffca",
+       "product": {
+        "name": "Microsoft SharePoint Server Subscription Edition",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-100209\nCVE-2026-100210\nCVE-2026-100211\nCVE-2026-100212\nCVE-2026-102849\nCVE-2026-102850\nCVE-2026-102855\nCVE-2026-102856\nCVE-2026-102857\nCVE-2026-102859\nCVE-2026-102860\nCVE-2026-102861\nCVE-2026-102862\nCVE-2026-102863\nCVE-2026-102864\nCVE-2026-102865\nCVE-2026-102866\nCVE-2026-102867\nCVE-2026-105013\nCVE-2026-105591\nCVE-2026-105592\nCVE-2026-105593\nCVE-2026-105595\nCVE-2026-105596\nCVE-2026-105597\nCVE-2026-105598\nCVE-2026-105599\nCVE-2026-105713\nCVE-2026-105714\nCVE-2026-105715\nCVE-2026-105716\nCVE-2026-105717\nCVE-2026-105718\nCVE-2026-105719\nCVE-2026-105720\nCVE-2026-69877\nCVE-2026-69943\nCVE-2026-70096\nCVE-2026-70202\nCVE-2026-70206\nCVE-2026-70214\nCVE-2026-70215\nCVE-2026-70217\nCVE-2026-70219\nCVE-2026-70220\nCVE-2026-70242\nCVE-2026-70246\nCVE-2026-70251\nCVE-2026-70254\nCVE-2026-70256\nCVE-2026-70257\nCVE-2026-70259\nCVE-2026-70263\nCVE-2026-70266\nCVE-2026-70267\nCVE-2026-70268\nCVE-2026-70269\nCVE-2026-70276\nCVE-2026-70281\nCVE-2026-70282\nCVE-2026-70287\nCVE-2026-70291\nCVE-2026-70297\nCVE-2026-70298\nCVE-2026-70300\nCVE-2026-70301\nCVE-2026-70302\nCVE-2026-77902\nCVE-2026-83746\nCVE-2026-83891\nCVE-2026-85340\nCVE-2026-85873\nCVE-2026-85900\nCVE-2026-85922\nCVE-2026-85925\nCVE-2026-85932\nCVE-2026-88132\nCVE-2026-88144\nCVE-2026-88145\nCVE-2026-88150\nCVE-2026-88151\nCVE-2026-88153\nCVE-2026-88154\nCVE-2026-88155\nCVE-2026-88156\nCVE-2026-88163\nCVE-2026-88166\nCVE-2026-88167\nCVE-2026-88169\nCVE-2026-88172\nCVE-2026-88175\nCVE-2026-88178\nCVE-2026-88183\nCVE-2026-88184\nCVE-2026-88185\nCVE-2026-88186\nCVE-2026-88190\nCVE-2026-88192\nCVE-2026-88195\nCVE-2026-88196\nCVE-2026-88197\nCVE-2026-88198\nCVE-2026-88200\nCVE-2026-88201\nCVE-2026-88202\nCVE-2026-88203\nCVE-2026-88204\nCVE-2026-88206\nCVE-2026-88207\nCVE-2026-88208\nCVE-2026-88209\nCVE-2026-88210\nCVE-2026-94506\nCVE-2026-96044\nCVE-2026-96951\nCVE-2026-96995\nCVE-2026-96996\nCVE-2026-96997\nCVE-2026-97001\nCVE-2026-97003\nCVE-2026-97004\nCVE-2026-97005\nCVE-2026-97007\nCVE-2026-97008\nCVE-2026-97009\nCVE-2026-97010\nCVE-2026-97011\nCVE-2026-97012\nCVE-2026-97014\nCVE-2026-97016\nCVE-2026-97017\nCVE-2026-97738\nCVE-2026-97739\nCVE-2026-97740\nCVE-2026-97741\nCVE-2026-97742\nCVE-2026-97743\nCVE-2026-97744\nCVE-2026-97745\nCVE-2026-97746\nCVE-2026-97747\nCVE-2026-97748\nCVE-2026-97749\nCVE-2026-97750\nCVE-2026-97751\nCVE-2026-97752\nCVE-2026-97753\nCVE-2026-97754\nCVE-2026-97755\nCVE-2026-97756\nCVE-2026-97757\nCVE-2026-97758\nCVE-2026-97759\nCVE-2026-97760\nCVE-2026-97761\nCVE-2026-97762\nCVE-2026-97763\nCVE-2026-97765\nCVE-2026-97766\nCVE-2026-97767\nCVE-2026-97768\nCVE-2026-97769\nCVE-2026-97770\nCVE-2026-97771\nCVE-2026-97772\nCVE-2026-97773\nCVE-2026-97775\nCVE-2026-97776\nCVE-2026-97777\nCVE-2026-97778\nCVE-2026-97779\nCVE-2026-97780\nCVE-2026-97782\nCVE-2026-97783\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 13, 2026, 6:36:28 PM",
+     "dateUpdated": "Oct 13, 2026, 6:36:28 PM",
+     "description": "Kwetsbaarheden verholpen in Microsoft Office",
+     "id": "NCSC-2026-0422",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "4a7b953b-ee6d-3dd2-bd34-4be228ec6ac1"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "02d772eb-126b-3ca0-9043-09ffa6d623a7",
@@ -239,9 +411,9 @@
      "baseScore": 8.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Oct 17, 2026, 7:14:33 AM",
+     "dataProcessed": "Oct 20, 2026, 7:13:54 AM",
      "datePublished": "Oct 13, 2026, 7:01:26 PM",
-     "dateUpdated": "Oct 16, 2026, 11:25:28 PM",
+     "dateUpdated": "Oct 19, 2026, 11:52:03 PM",
      "description": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
      "enisa_id": "EUVD-2026-100274\n",
      "epss": 1.51,
@@ -466,7 +638,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-96951\nGHSA-hjr5-mppg-mjq7\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 17, 2026, 7:04:04 AM",
+     "dataProcessed": "Oct 20, 2026, 7:03:41 AM",
      "datePublished": "Oct 13, 2026, 9:37:08 PM",
      "dateUpdated": "Oct 13, 2026, 9:37:08 PM",
      "description": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
