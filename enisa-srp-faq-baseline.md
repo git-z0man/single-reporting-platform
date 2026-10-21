@@ -19,7 +19,7 @@ retrieved: 2026-10-16 (fetched UTC morning run; FAQ changed since 2026-10-13 —
 guidance_retrieved: 2026-10-13 (fetched 06:05 UTC; PEC guidance changed 2026-10-12 — stamp "Last updated: 12 October 2026", "Particular" → "Particularly" ×3; the other three subpages unchanged word-for-word)
 glossary_retrieved: 2026-10-02 (fetched UTC morning run; changed — Version 1.4, two new fields 40/41 — see `enisa-srp-glossary-baseline.md`)
 csirt_list_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 17:11 UTC on 2026-09-12)
-ar_user_manual_retrieved: 2026-10-13 (fetched 06:05 UTC; landing page stamp now "Last updated: 12 October 2026 - version 1.1", Download link points to the v1.1 PDF; see change log)
+ar_user_manual_retrieved: 2026-10-21 (fetched 06:12 UTC; landing page "Last updated: 21 October 2026 - version 1.2", Download now the v1.2 PDF; earlier: 2026-10-13 (fetched 06:05 UTC; landing page stamp now "Last updated: 12 October 2026 - version 1.1", Download link points to the v1.1 PDF; see change log)
 ar_user_manual_pdf_sha256: e2afc96031eceff4bebd9790256183e4ce6b835d9a1c44f9864e4f3995998f86 (the PDF itself, not the landing page; unchanged since 2026-09-21 — hash, size (3,190,657 bytes) and Last-Modified all match. The copy captured 2026-09-10 was 3,119,968 bytes and reversed the AR notification-visibility rule — see `enisa-defect-report.md` G26. Both are stamped "Version: 1.1" with an unchanged Document History table, so **this hash is the only reliable change signal for this document**.)
 ar_user_manual_pdf_last_modified: Thu, 17 Sep 2026 14:30:33 GMT
 ar_user_manual_pdf_v11_url: https://www.enisa.europa.eu/sites/default/files/2026-10/CRA%20SRP%20-%20AR%20User%20Manual%20v1.1.pdf (new 2026-10-13: the manual landing page's "Download" button now points here; the 2026-09 file above is still served, byte-identical to the hash above)
@@ -32,13 +32,37 @@ vulnerability_services_retrieved: 2026-10-08 (fetched 10:56 UTC; first capture. 
 ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage, and (from 2026-10-08) the Vulnerability Services topic page — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-10-20
-last_change: 2026-10-16
+last_check: 2026-10-21
+last_change: 2026-10-21
+ar_user_manual_pdf_v12_url: https://www.enisa.europa.eu/media/57516 (new 2026-10-21: the landing page's "Download" button; served as "SRP - User Manual - ARs v1.2.0.pdf"; the v1.1 URL above still serves the unchanged v1.1 file)
+ar_user_manual_pdf_v12_sha256: c8559c9f21460c2edd719128fe517aa787ea83ee643ef559e03954bde69281d0 (3,302,204 bytes, 55 pages, cover "V1.2 / OCTOBER 2026", PDF CreationDate 21 Oct 2026 05:58 UTC; first captured 2026-10-21)
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-10-21 06:12 UTC (vs. 2026-10-20)
+
+ENISA upgraded the SRP to version 1.2.1 on 20 October 2026 and says the documentation is being updated to match; so far only the AR User Manual (now v1.2) has moved. Secondary ARs are now invited by a different process.
+
+**New**
+- **Main-page note**: "On 20 October 2026, the CRA SRP was upgraded to version 1.2.1. Among the updates applied, the platform now includes a different process to invite Secondary Assigned Representatives (ARs) or Backups, although the SRP will still support the older way for a short period of time. The documentation available on this site is also being currently updated to reflect the changes. Please check the date of release for the most current version."
+- **AR User Manual v1.2** (landing page "Last updated: 21 October 2026 - version 1.2"; Download link `https://www.enisa.europa.eu/media/57516`; SHA-256 and details in the frontmatter, `ar_user_manual_pdf_v12_*`).
+
+**Changed**
+- **Secondary AR registration (manual 2.2, 2.3)**: no longer by clicking a link in an email invitation. The invitee accesses the SRP "from the endpoint indicated by the Primary AR", authenticates through EU Login, and accepts the invitation via the Alerts (reviewing manufacturer, Primary AR and Backup ARs details). Section 2.3 for existing users is reduced to "As described in 2.2, access the alerts, review manufacturer details, and accept the invitation"; "valid SRP email invitation" and the MFA precondition are gone from it. Section 2.2 is retitled "...and associate with a manufacturer".
+
+**Watch**
+- The guidance pages (AR User Registration, Notification Submission, Interface Functions, still stamped 12 September) and FAQ Q9 still describe the email invitation ("Invite Secondary AR" step: "The SRP sends an email invitation"); expect them to change next.
+- The manual's cover, footer stamps and headline all say 1.2, the Download file is named "v1.2.0", and the platform is 1.2.1 - three version labels for related things.
+- Three tracked addresses now answer with a redirect page to the `vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp/` path: the CSIRT list, the PEC guidance and the AR User Manual (the content is unchanged at the new address; frontmatter URLs not yet moved).
+
+**Editorial**
+Manual v1.2 text diff against v1.1: about 576 changed lines, mostly page renumbering and "Version: 1.2" footers; substance as above.
+
+**Unchanged**
+FAQ ("Updated: 15 October 2026"), Glossary (Version 1.5, 15 October 2026), CSIRT list (10 September), guidance stamps (12 Sep ×3, PEC 12 Oct), Terms (10/09/2026), tutorial video, Status page, Vulnerability Services page (EU KEV paragraph still "will be further enriched"), AR User Manual v1.1 PDF (hash `2eaea3fc…`).
 
 ### 2026-10-16 UTC (vs. 2026-10-15)
 
