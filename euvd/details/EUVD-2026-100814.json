@@ -1,0 +1,422 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-106931"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-106931",
+  "cwes": [
+   "CWE-78"
+  ],
+  "dateAdded": "2026-10-20",
+  "dueDate": "2026-10-23",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://www.eg-secure.co.jp/siteguard/news/alert-202610-1 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-106931",
+  "product": "SiteGuard Server Edition",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
+  "vendorProject": "EG Secure Solutions",
+  "vulnerabilityName": "EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-106931\nGHSA-rhmj-5mp2-rq7c\n",
+  "assigner": "jpcert",
+  "baseScore": 8.5,
+  "baseScoreVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Oct 14, 2026, 4:45:07 AM",
+  "dateUpdated": "Oct 20, 2026, 7:58:23 PM",
+  "description": "SiteGuard Server Edition contains an OS command injection vulnerability, which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "48ca327d-3007-3d7e-9318-31e1146f0605",
+    "product": {
+     "name": "SiteGuard Server Edition for Nginx",
+     "vendor": {
+      "name": "EG Secure Solutions Inc."
+     }
+    },
+    "product_version": "Ver2.20 <Ver8.00 Update 5"
+   },
+   {
+    "id": "4c46e78e-ea24-31c7-afa8-537ebce284b2",
+    "product": {
+     "name": "SiteGuard Server Edition for Apache httpd",
+     "vendor": {
+      "name": "EG Secure Solutions Inc."
+     }
+    },
+    "product_version": "Ver2.20 <Ver8.00 Update 5"
+   },
+   {
+    "id": "8fe0e584-aeeb-3eef-b8fd-08455233e220",
+    "product": {
+     "name": "SiteGuard Server Edition for Nginx on FreeBSD",
+     "vendor": {
+      "name": "EG Secure Solutions Inc."
+     }
+    },
+    "product_version": "Ver2.20 <Ver7.00 Update 6"
+   },
+   {
+    "id": "c040dc4a-c6b2-3235-bfc9-df768deb2aea",
+    "product": {
+     "name": "SiteGuard Server Edition for IIS",
+     "vendor": {
+      "name": "EG Secure Solutions Inc."
+     }
+    },
+    "product_version": "Ver2.20 <Ver8.00 Update 5"
+   },
+   {
+    "id": "fe39d414-7222-38c3-9d58-84a572c1f85b",
+    "product": {
+     "name": "SiteGuard Server Edition for Apache httpd on FreeBSD",
+     "vendor": {
+      "name": "EG Secure Solutions Inc."
+     }
+    },
+    "product_version": "Ver2.20 <Ver7.00 Update 6"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "3ed67b91-d1a2-3cda-bf02-8104164ba6c2",
+    "vendor": {
+     "name": "EG Secure Solutions Inc."
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "07650b62-e6d7-323e-8f66-b34d47025567",
+    "vulnerability": {
+     "aliases": "GHSA-rhmj-5mp2-rq7c\nCVE-2026-106931\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 21, 2026, 7:04:22 AM",
+     "datePublished": "Oct 14, 2026, 6:31:14 AM",
+     "dateUpdated": "Oct 20, 2026, 9:30:37 PM",
+     "description": "SiteGuard Server Edition contains an OS command injection vulnerability, which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
+     "enisa_id": "EUVD-2026-100814\n",
+     "epss": 0.0,
+     "id": "GHSA-rhmj-5mp2-rq7c",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-106931\nhttps://jvn.jp/en/jp/JVN88474777\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-106931\nhttps://www.eg-secure.co.jp/siteguard/news/alert-202610-1\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "4b8111d1-6f6c-34d9-80b7-261661e07e32",
+    "vulnerability": {
+     "assigner": "jpcert",
+     "baseScore": 8.5,
+     "baseScoreVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 21, 2026, 7:13:37 AM",
+     "datePublished": "Oct 14, 2026, 4:45:07 AM",
+     "dateUpdated": "Oct 20, 2026, 7:58:23 PM",
+     "description": "SiteGuard Server Edition contains an OS command injection vulnerability, which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
+     "enisa_id": "EUVD-2026-100814\n",
+     "epss": 0.66,
+     "exploitedSince": "Oct 20, 2026, 12:00:00 AM",
+     "id": "CVE-2026-106931",
+     "references": "https://www.eg-secure.co.jp/siteguard/news/alert-202610-1\nhttps://jvn.jp/en/jp/JVN88474777/\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "0674c94f-c19b-3964-95a5-500c4cc1a22f",
+       "product": {
+        "name": "SiteGuard Server Edition for IIS",
+        "vendor": {
+         "name": "EG Secure Solutions Inc."
+        }
+       },
+       "product_version": "Ver2.20 <Ver8.00 Update 5"
+      },
+      {
+       "id": "0d0304a6-9cf1-34f4-96a1-1bdadf3c5d57",
+       "product": {
+        "name": "SiteGuard Server Edition for Nginx",
+        "vendor": {
+         "name": "EG Secure Solutions Inc."
+        }
+       },
+       "product_version": "Ver2.20 <Ver8.00 Update 5"
+      },
+      {
+       "id": "18e01272-33fd-3eaf-a125-a91c4167f5a2",
+       "product": {
+        "name": "SiteGuard Server Edition for Apache httpd",
+        "vendor": {
+         "name": "EG Secure Solutions Inc."
+        }
+       },
+       "product_version": "Ver2.20 <Ver8.00 Update 5"
+      },
+      {
+       "id": "67eeeddb-e4c3-3b1e-8260-c7ad37984a63",
+       "product": {
+        "name": "SiteGuard Server Edition for Nginx on FreeBSD",
+        "vendor": {
+         "name": "EG Secure Solutions Inc."
+        }
+       },
+       "product_version": "Ver2.20 <Ver7.00 Update 6"
+      },
+      {
+       "id": "9c611fcc-8695-3fad-99ef-7ba659b4ecb3",
+       "product": {
+        "name": "SiteGuard Server Edition for Apache httpd on FreeBSD",
+        "vendor": {
+         "name": "EG Secure Solutions Inc."
+        }
+       },
+       "product_version": "Ver2.20 <Ver7.00 Update 6"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "fd54aa29-384f-32f3-966c-3e8a3fd883c0",
+       "vendor": {
+        "name": "EG Secure Solutions Inc."
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "a7cb7390-4bf5-391d-b1e9-5ed20192c487",
+  "epss": 0.66,
+  "exploitedSince": "Oct 20, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-100814",
+  "references": "https://www.eg-secure.co.jp/siteguard/news/alert-202610-1\nhttps://jvn.jp/en/jp/JVN88474777/\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-100814",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 20, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "SiteGuard Server Edition for Apache httpd",
+      "vendor": "EG Secure Solutions Inc.",
+      "versions": [
+       {
+        "lessThan": "Ver8.00 Update 5",
+        "status": "affected",
+        "version": "Ver2.20",
+        "versionType": "semver"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "SiteGuard Server Edition for Nginx",
+      "vendor": "EG Secure Solutions Inc.",
+      "versions": [
+       {
+        "lessThan": "Ver8.00 Update 5",
+        "status": "affected",
+        "version": "Ver2.20",
+        "versionType": "semver"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "SiteGuard Server Edition for IIS",
+      "vendor": "EG Secure Solutions Inc.",
+      "versions": [
+       {
+        "changes": [
+         {
+          "at": "Ver3.10",
+          "status": "unaffected"
+         },
+         {
+          "at": "Ver4.00 Update 5",
+          "status": "affected"
+         }
+        ],
+        "lessThan": "Ver8.00 Update 5",
+        "status": "affected",
+        "version": "Ver2.20",
+        "versionType": "semver"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "SiteGuard Server Edition for Apache httpd on FreeBSD",
+      "vendor": "EG Secure Solutions Inc.",
+      "versions": [
+       {
+        "lessThan": "Ver7.00 Update 6",
+        "status": "affected",
+        "version": "Ver2.20",
+        "versionType": "semver"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "SiteGuard Server Edition for Nginx on FreeBSD",
+      "vendor": "EG Secure Solutions Inc.",
+      "versions": [
+       {
+        "lessThan": "Ver7.00 Update 6",
+        "status": "affected",
+        "version": "Ver2.20",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "vultures@jpcert.or.jp"
+   }
+  ],
+  "cisaActionDue": "2026-10-23",
+  "cisaExploitAdd": "2026-10-20",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "SiteGuard Server Edition contains an OS command injection vulnerability, which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product."
+   }
+  ],
+  "id": "CVE-2026-106931",
+  "lastModified": "2026-10-21T04:17:08.083",
+  "metrics": {
+   "cvssMetricV30": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "LOCAL",
+      "availabilityImpact": "HIGH",
+      "baseScore": 7.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.0"
+     },
+     "exploitabilityScore": 1.8,
+     "impactScore": 5.9,
+     "source": "vultures@jpcert.or.jp",
+     "type": "Secondary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "LOCAL",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 8.5,
+      "baseSeverity": "HIGH",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "LOW",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "vultures@jpcert.or.jp",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-106931",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-20T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-14T05:16:42.633",
+  "references": [
+   {
+    "source": "vultures@jpcert.or.jp",
+    "url": "https://jvn.jp/en/jp/JVN88474777/"
+   },
+   {
+    "source": "vultures@jpcert.or.jp",
+    "url": "https://www.eg-secure.co.jp/siteguard/news/alert-202610-1"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-106931"
+   }
+  ],
+  "sourceIdentifier": "vultures@jpcert.or.jp",
+  "vulnStatus": "Deferred",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-78"
+     }
+    ],
+    "source": "vultures@jpcert.or.jp",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
