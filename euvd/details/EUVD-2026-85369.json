@@ -1,0 +1,381 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96655"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-96655",
+  "cwes": [
+   "CWE-918"
+  ],
+  "dateAdded": "2026-10-20",
+  "dueDate": "2026-11-03",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://forums.plex.tv/t/important-security-update-for-plex-media-server-v1-43-2-and-earlier/942319 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-96655",
+  "product": "Media Server",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656.",
+  "vendorProject": "Plex",
+  "vulnerabilityName": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-96655\nGHSA-9x88-w2p7-56vh\n",
+  "assigner": "cisa-cg",
+  "baseScore": 5.3,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Sep 23, 2026, 4:06:53 PM",
+  "dateUpdated": "Oct 20, 2026, 7:58:24 PM",
+  "description": "Plex Media Server before 1.43.3.10861 allows an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "1d56a6e0-9fed-333d-b5bb-5edd49bf3c24",
+       "product": {
+        "name": "Media Server",
+        "vendor": {
+         "name": "Plex"
+        }
+       }
+      },
+      {
+       "id": "41be50a3-e297-3dd8-b4f6-dccad3fde1de",
+       "product": {
+        "name": "1.43.3.10861",
+        "vendor": {
+         "name": "Plex"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96651\nCVE-2026-96652\nCVE-2026-96654\nCVE-2026-96655\nCVE-2026-96656\n",
+     "baseScore": 0.0,
+     "datePublished": "Sep 23, 2026, 3:39:29 PM",
+     "dateUpdated": "Sep 23, 2026, 3:39:29 PM",
+     "description": "Plex Media Server",
+     "id": "VA-26-266-01",
+     "references": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json\n",
+     "source": {
+      "id": 6,
+      "name": "csaf_cisa"
+     },
+     "summary": "Plex Media Server before 1.43.3.10861 contains multiple vulnerabilities. In the worst case, a remote attacker could steal a legitimate user's account credentials and eventually write arbitrary files or execute code."
+    },
+    "id": "23ef88e3-dff0-30ff-995c-39de777586be"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "1919b32e-1c45-3fa9-b919-9ece01f76d94",
+    "product": {
+     "name": "Media Server",
+     "vendor": {
+      "name": "Plex"
+     }
+    },
+    "product_version": "0 <1.43.3.10861"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "4ee0675f-a822-3379-babf-17f75e6c7a97",
+    "vendor": {
+     "name": "Plex"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "d5343065-e124-3b86-ba37-fb99858e71ae",
+    "vulnerability": {
+     "assigner": "cisa-cg",
+     "baseScore": 5.3,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 21, 2026, 7:14:25 AM",
+     "datePublished": "Sep 23, 2026, 4:06:53 PM",
+     "dateUpdated": "Oct 20, 2026, 7:58:24 PM",
+     "description": "Plex Media Server before 1.43.3.10861 allows an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter.",
+     "enisa_id": "EUVD-2026-85369\n",
+     "epss": 0.22,
+     "exploitedSince": "Oct 20, 2026, 12:00:00 AM",
+     "id": "CVE-2026-96655",
+     "references": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json\nhttps://forums.plex.tv/t/plex-media-server/30447/711\nhttps://www.cve.org/CVERecord?id=CVE-2026-96655\nhttps://zmain.info/blog/plex2shell\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "4105c6c3-b71d-31af-9785-8e01d5b19471",
+       "product": {
+        "name": "Media Server",
+        "vendor": {
+         "name": "Plex"
+        }
+       },
+       "product_version": "0 <1.43.3.10861"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "190bf731-8dfe-3b67-83a5-0d60942dbbf8",
+       "vendor": {
+        "name": "Plex"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "f47400df-c03b-3238-b005-6881a728e032",
+    "vulnerability": {
+     "aliases": "CVE-2026-96655\nGHSA-9x88-w2p7-56vh\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 21, 2026, 7:04:22 AM",
+     "datePublished": "Sep 23, 2026, 6:31:57 PM",
+     "dateUpdated": "Oct 20, 2026, 9:30:35 PM",
+     "description": "Plex Media Server before 1.43.3.10861 allows an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter.",
+     "enisa_id": "EUVD-2026-85369\n",
+     "epss": 0.0,
+     "id": "GHSA-9x88-w2p7-56vh",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-96655\nhttps://forums.plex.tv/t/plex-media-server/30447/711\nhttps://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96655\nhttps://www.cve.org/CVERecord?id=CVE-2026-96655\nhttps://zmain.info/blog/plex2shell\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "6efa559c-2682-3d56-be0e-a90458a7a351",
+  "epss": 0.22,
+  "exploitedSince": "Oct 20, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-85369",
+  "references": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json\nhttps://forums.plex.tv/t/plex-media-server/30447/711\nhttps://www.cve.org/CVERecord?id=CVE-2026-96655\nhttps://zmain.info/blog/plex2shell\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-85369",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 20, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "Media Server",
+      "vendor": "Plex",
+      "versions": [
+       {
+        "lessThan": "1.43.3.10861",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       },
+       {
+        "status": "unaffected",
+        "version": "1.43.3.10861"
+       }
+      ]
+     }
+    ],
+    "source": "9119a7d8-5eab-497f-8521-727c672e3725"
+   }
+  ],
+  "cisaActionDue": "2026-11-03",
+  "cisaExploitAdd": "2026-10-20",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:plex:media_server:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "48C79D09-D197-4165-B027-8BCCE6CD4861",
+        "versionEndExcluding": "1.43.0.10861",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Plex Media Server before 1.43.3.10861 allows an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter."
+   }
+  ],
+  "id": "CVE-2026-96655",
+  "lastModified": "2026-10-21T04:18:12.700",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 4.3,
+      "baseSeverity": "MEDIUM",
+      "confidentialityImpact": "LOW",
+      "integrityImpact": "NONE",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 1.4,
+     "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+     "type": "Secondary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 5.3,
+      "baseSeverity": "MEDIUM",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "LOW",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "NONE",
+      "vulnConfidentialityImpact": "LOW",
+      "vulnIntegrityImpact": "NONE",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+     "ssvcData": {
+      "id": "CVE-2026-96655",
+      "options": [
+       {
+        "exploitation": "none"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-09-14T18:23:48.400949Z",
+      "version": "2.0.3"
+     }
+    },
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-96655",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-20T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-23T17:17:23.677",
+  "references": [
+   {
+    "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://forums.plex.tv/t/plex-media-server/30447/711"
+   },
+   {
+    "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json"
+   },
+   {
+    "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
+    "url": "https://www.cve.org/CVERecord?id=CVE-2026-96655"
+   },
+   {
+    "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://zmain.info/blog/plex2shell"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96655"
+   }
+  ],
+  "sourceIdentifier": "9119a7d8-5eab-497f-8521-727c672e3725",
+  "vulnStatus": "Modified",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-918"
+     }
+    ],
+    "source": "9119a7d8-5eab-497f-8521-727c672e3725",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

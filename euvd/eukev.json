@@ -1320,13 +1320,20 @@
    "vendor": "Siemens",
    "product": "Siemens Software Center",
    "notes": "https://productcert.siemens.com/news/2026/10/19/active-exploitation-of-cve-2026-110936-in-siemens-software-center/",
-   "cisa": "",
+   "cisa": "2026-10-20",
    "inserted_after": "2026-10-16",
-   "inserted_before": "",
+   "inserted_before": "2026-10-20",
    "backdated_days": 0,
    "first_seen": "2026-10-20",
    "first_seen_after": "2026-10-19",
-   "changes": []
+   "changes": [
+    {
+     "day": "2026-10-21",
+     "field": "cisa",
+     "from": "",
+     "to": "2026-10-20"
+    }
+   ]
   }
  ],
  "removed": []
