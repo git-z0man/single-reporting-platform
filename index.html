@@ -285,11 +285,11 @@
             <thead><tr><th>Field</th><th class="c-status">Status</th><th>Note</th></tr></thead>
             <tbody>
               <tr class="group"><td colspan="3">Both notification types</td></tr>
-              <tr><td class="c-field">Notification type (Vulnerability/Incident)<a class="fieldref" href="#f-1" title="Open field 1 in the reference">1</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Chooses which set of fields the form shows from here on.</td></tr>
+              <tr><td class="c-field">Notification type (Actively Exploited Vulnerability/Severe Incident)<a class="fieldref" href="#f-1" title="Open field 1 in the reference">1</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Chooses which set of fields the form shows from here on.</td></tr>
               <tr><td class="c-field">Title<a class="fieldref" href="#f-2" title="Open field 2 in the reference">2</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 255 characters. Enough to recognise product and issue, no confidential detail.</td></tr>
               <tr><td class="c-field">Summary<a class="fieldref" href="#f-3" title="Open field 3 in the reference">3</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters: what happened, affected product or version, known impact, current mitigation status.</td></tr>
               <tr><td class="c-field">Manufacturer name<a class="fieldref" href="#f-4" title="Open field 4 in the reference">4</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Read-only. The platform fills this in from your registration; you only check that it is the right manufacturer.</td></tr>
-              <tr><td class="c-field">Member States where product available (Concerned CSIRT)<a class="fieldref" href="#f-5" title="Open field 5 in the reference">5</a></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Your own CSIRT is pre-selected; add every other Member State where the product is available. This is what decides who else gets the notification.</td></tr>
+              <tr><td class="c-field">Member States where product available (CSIRT Designated as Coordinator and Concerned CSIRTs)<a class="fieldref" href="#f-5" title="Open field 5 in the reference">5</a></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Your own CSIRT is pre-selected; add every other Member State where the product is available. This is what decides who else gets the notification.</td></tr>
               <tr><td class="c-field">Product Name<a class="fieldref" href="#f-6" title="Open field 6 in the reference">6</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Commercial name as it appears to users.</td></tr>
               <tr><td class="c-field">Product version<a class="fieldref" href="#f-7" title="Open field 7 in the reference">7</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Version, release, build or model. A range is acceptable.</td></tr>
               <tr class="group"><td colspan="3">Vulnerability only</td></tr>
@@ -397,7 +397,7 @@
         <p class="intro">Added to the same notification, with the general nature of the vulnerability or incident, an initial assessment and the corrective measures taken so far. Here you can also state reasons against onward dissemination.</p>
 
         <div class="seclabel"><span class="seclabel-bar"></span><span class="seclabel-text">What this stage adds</span><span class="seclabel-hint">field numbers follow ENISA&rsquo;s Glossary</span></div>
-        <p class="fieldgroup-sub">Fields that become mandatory now. Everything from the Early Warning is already there, carried over and editable &mdash; see <a href="#fields">Every field, explained</a>.</p>
+        <p class="fieldgroup-sub">Fields that become mandatory now. What you gave in the Early Warning stays in the notification. Glossary&nbsp;1.6 (21&nbsp;October&nbsp;2026) marks most of those fields &ldquo;N/A&rdquo; at this stage, where&nbsp;1.5 said &ldquo;by default copied from previous step, or updated&rdquo;; whether the platform still lets you correct them here has not been checked since SRP&nbsp;1.2.1 &mdash; see <a href="#fields">Every field, explained</a>.</p>
         <div class="table-wrap">
           <table class="data">
             <colgroup><col class="col-field"><col class="col-status"><col></colgroup>
@@ -409,7 +409,7 @@
               <tr><td class="c-field">Corrective or mitigating measures users can take<a class="fieldref" href="#f-17" title="Open field 17 in the reference">17</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What users should do themselves: update, workaround, configuration change, with the version that fixes it.</td></tr>
               <tr class="group"><td colspan="3">Vulnerability only</td></tr>
               <tr><td class="c-field">General information<a class="fieldref" href="#f-v21" title="Open field v21 in the reference">v21</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">General information about the vulnerability and its exploitation.</td></tr>
-              <tr><td class="c-field">Date and time when the Actively Exploited Vulnerability occurred (UTC time)<a class="fieldref" href="#f-v26a" title="Open field v26a in the reference">v26a</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">New since 26&nbsp;September&nbsp;2026: mandatory at this stage, optional at the Early Warning. Known or estimated &mdash; if the exact time is unknown, give the best supported estimate and say in the vulnerability description that it is one.</td></tr>
+              <tr><td class="c-field">Date and time when the Actively Exploited Vulnerability occurred (UTC time)<a class="fieldref" href="#f-v26a" title="Open field v26a in the reference">v26a</a></td><td class="c-status"><span class="chip carried">Carried over</span></td><td class="c-note">No longer mandatory here: Glossary&nbsp;1.6 (21&nbsp;October&nbsp;2026) says &ldquo;by default copied from previous step&rdquo;, so it is optional at the Early Warning and simply carried over; from 26&nbsp;September to 20&nbsp;October it was required at this stage. Fill it in at the Early Warning if you know it. Known or estimated &mdash; if the exact time is unknown, give the best supported estimate and say in the vulnerability description that it is one.</td></tr>
               <tr><td class="c-field">Particularly Exceptional Circumstances (PEC)<a class="fieldref" href="#f-v28" title="Open field v28 in the reference">v28</a></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Only selectable at this stage — see the PEC note below.</td></tr>
               <tr class="group"><td colspan="3">Incident only</td></tr>
               <tr><td class="c-field">General information about nature of incident<a class="fieldref" href="#f-i32" title="Open field i32 in the reference">i32</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">General information on the nature of the incident.</td></tr>
@@ -442,7 +442,7 @@
             <div class="wstep-head"><span class="wstep-num">2</span><h3>The fields that become mandatory now</h3></div>
             <figure><img class="shot" src="img/enisa/man-n72-form-top.png" alt="The 72h Notification tab of a severe-incident notification: General information about the nature of the incident and Initial assessment of the incident marked Required, Considered sensitivity of information below"><figcaption>The 72h tab, top, for a severe incident &mdash; from the manual, the first published capture of this form. The stage header shows the due date: &ldquo;To be submitted by &hellip;&rdquo;.</figcaption></figure>
             <figure><img class="shot" src="img/enisa/man-n72-form-lower.png" alt="Lower part of the 72h tab: Attack vector, Detailed description of the Severity and of the Impact, Type of threat or root cause, Save draft and Submit 72h Notification"><figcaption>The same tab further down. The Final Report&rsquo;s description fields are already here, optional; &ldquo;Save draft&rdquo; and &ldquo;Submit 72h Notification&rdquo; close the form.</figcaption></figure>
-            <p class="wstep-lede">Everything from the Early Warning is carried over and can be corrected. These are the ones that stop being optional.</p>
+            <p class="wstep-lede">These are the ones that stop being optional. The screenshots predate SRP&nbsp;1.2.1: Glossary&nbsp;1.6 lists most Early Warning fields as &ldquo;N/A&rdquo; at this stage rather than carried over, so do not count on correcting them here.</p>
             <div class="table-wrap">
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
@@ -451,7 +451,7 @@
               <tr><td class="c-field">Corrective or mitigating measures taken<a class="fieldref" href="#f-16" title="Open field 16 in the reference">16</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What you have already done &mdash; containment, configuration changes, withdrawal, credential rotation, monitoring. Max. 2,000 characters.</td></tr>
               <tr><td class="c-field">Corrective or mitigating measures that user can take<a class="fieldref" href="#f-17" title="Open field 17 in the reference">17</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">What users should do themselves, with the version that fixes it.</td></tr>
               <tr><td class="c-field">General information<a class="fieldref" href="#f-v21" title="Open field v21 in the reference">v21</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Vulnerability only: the vulnerability and its exploitation.</td></tr>
-              <tr><td class="c-field">Date and time when the Actively Exploited Vulnerability occurred (UTC time)<a class="fieldref" href="#f-v26a" title="Open field v26a in the reference">v26a</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Vulnerability only, and new since 26&nbsp;September&nbsp;2026. When the vulnerability occurred &mdash; not when you became aware of it, which is a different field. An estimate is fine if marked as one.</td></tr>
+              <tr><td class="c-field">Date and time when the Actively Exploited Vulnerability occurred (UTC time)<a class="fieldref" href="#f-v26a" title="Open field v26a in the reference">v26a</a></td><td class="c-status"><span class="chip carried">Carried over</span></td><td class="c-note">Vulnerability only. Required here from 26&nbsp;September until Glossary&nbsp;1.6 (21&nbsp;October&nbsp;2026), which carries it over from the Early Warning instead. When the vulnerability occurred &mdash; not when you became aware of it, which is a different field. An estimate is fine if marked as one.</td></tr>
               <tr><td class="c-field">General information about nature of incident<a class="fieldref" href="#f-i32" title="Open field i32 in the reference">i32</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only.</td></tr>
               <tr><td class="c-field">Initial assessment of the incident<a class="fieldref" href="#f-i39" title="Open field i39 in the reference">i39</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only: severity, scope, affected functions or data. Separate what is confirmed from what is still under investigation.</td></tr>
               </tbody></table>
@@ -481,8 +481,8 @@
               <table class="data"><colgroup><col class="col-field"><col class="col-status"><col></colgroup>
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
               <tbody>
-              <tr><td class="c-field">PEC Delay Reason<a class="fieldref" href="#f-v29" title="Open field v29 in the reference">v29</a></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Three checkboxes, one per legal ground: exploitation confined to the CDaC&rsquo;s own Member State; dissemination contrary to that Member State&rsquo;s essential interests; imminent high cybersecurity risk from dissemination.</td></tr>
-              <tr><td class="c-field">Please provide further information<a class="fieldref" href="#f-v30" title="Open field v30 in the reference">v30</a></td><td class="c-status"><span class="chip optional">Optional</span></td><td class="c-note">Justification for the CDaC. The screen and, since 10&nbsp;September, the glossary state the limit: <strong>max. 800 characters</strong>.</td></tr>
+              <tr><td class="c-field">PEC Delay Reason<a class="fieldref" href="#f-v29" title="Open field v29 in the reference">v29</a></td><td class="c-status"><span class="chip conditional">Optional if PEC</span></td><td class="c-note">Three checkboxes, one per legal ground: exploitation confined to the CDaC&rsquo;s own Member State; dissemination contrary to that Member State&rsquo;s essential interests; imminent high cybersecurity risk from dissemination.</td></tr>
+              <tr><td class="c-field">Please provide further information<a class="fieldref" href="#f-v30" title="Open field v30 in the reference">v30</a></td><td class="c-status"><span class="chip conditional">Optional if PEC</span></td><td class="c-note">Justification for the CDaC. The screen and, since 10&nbsp;September, the glossary state the limit: <strong>max. 800 characters</strong>.</td></tr>
               </tbody></table>
             </div>
             <div class="callout neutral"><p><strong>One name since SRP&nbsp;1.1.</strong> Until 12&nbsp;October ENISA wrote &ldquo;Particular&rdquo; in the glossary, the guidance and on screen, and &ldquo;particularly&rdquo; in the FAQ. With the upgrade every source says <strong>&ldquo;Particularly Exceptional Circumstances&rdquo;</strong>. The screenshots above are still the guidance page&rsquo;s of 8&nbsp;September, with the old label and &ldquo;essential <strong>intrests</strong>&rdquo; in the second checkbox. The manual for SRP&nbsp;1.1 shows the screen as it is now: a heading &ldquo;Reason for non dissemination&rdquo; above the toggle, &ldquo;Particularly Exceptional Circumstances(PEC)&rdquo; &mdash; still without a space &mdash; and &ldquo;essential interests&rdquo; spelled correctly.</p></div>
@@ -516,8 +516,8 @@
               <tr><td class="c-field">Corrective or mitigating measures users can take<a class="fieldref" href="#f-17" title="Open field 17 in the reference">17</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Same field, updated.</td></tr>
               <tr class="group"><td colspan="3">Vulnerability only</td></tr>
               <tr><td class="c-field">Date when corrective or mitigating measure has been available<a class="fieldref" href="#f-v22" title="Open field v22 in the reference">v22</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">The date a corrective or mitigating measure became available — this is what the 14-day deadline runs from.</td></tr>
-              <tr><td class="c-field">Full description of the severity of the vulnerability<a class="fieldref" href="#f-v24" title="Open field v24 in the reference">v24</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters. ENISA calls the incident equivalent “Detailed description of the Severity”.</td></tr>
-              <tr><td class="c-field">Full description of the impact of the vulnerability<a class="fieldref" href="#f-v25" title="Open field v25 in the reference">v25</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Separate field from the severity description above.</td></tr>
+              <tr><td class="c-field">Description of the severity of the vulnerability<a class="fieldref" href="#f-v24" title="Open field v24 in the reference">v24</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters. ENISA calls the incident equivalent “Detailed description of the Severity”.</td></tr>
+              <tr><td class="c-field">Description of the impact of the vulnerability<a class="fieldref" href="#f-v25" title="Open field v25 in the reference">v25</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Separate field from the severity description above.</td></tr>
               <tr><td class="c-field">Malicious actor that has exploited/is exploiting the vulnerability<a class="fieldref" href="#f-v27" title="Open field v27 in the reference">v27</a></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Mandatory if you know it; do not speculate about attribution.</td></tr>
               <tr class="group"><td colspan="3">Incident only</td></tr>
               <tr><td class="c-field">Applied or ongoing mitigation measures<a class="fieldref" href="#f-i33" title="Open field i33 in the reference">i33</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Measures applied and still running. The FAQ writes “applied and ongoing”, the glossary “applied or ongoing”.</td></tr>
@@ -553,8 +553,8 @@
               <thead><tr><th>Field on this screen</th><th class="c-status">Status</th><th>What goes in it</th></tr></thead>
               <tbody>
               <tr><td class="c-field">Date when corrective or mitigating measure has been available<a class="fieldref" href="#f-v22" title="Open field v22 in the reference">v22</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Vulnerability only &mdash; and the date the 14-day deadline runs from.</td></tr>
-              <tr><td class="c-field">Full description of the severity of the vulnerability<a class="fieldref" href="#f-v24" title="Open field v24 in the reference">v24</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters. ENISA calls the incident equivalent &ldquo;Detailed description of the Severity&rdquo;.</td></tr>
-              <tr><td class="c-field">Full description of the impact of the vulnerability<a class="fieldref" href="#f-v25" title="Open field v25 in the reference">v25</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">A separate field from the severity description.</td></tr>
+              <tr><td class="c-field">Description of the severity of the vulnerability<a class="fieldref" href="#f-v24" title="Open field v24 in the reference">v24</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Max. 4,000 characters. ENISA calls the incident equivalent &ldquo;Detailed description of the Severity&rdquo;.</td></tr>
+              <tr><td class="c-field">Description of the impact of the vulnerability<a class="fieldref" href="#f-v25" title="Open field v25 in the reference">v25</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">A separate field from the severity description.</td></tr>
               <tr><td class="c-field">Malicious actor that has exploited / is exploiting the vulnerability<a class="fieldref" href="#f-v27" title="Open field v27 in the reference">v27</a></td><td class="c-status"><span class="chip conditional">If available</span></td><td class="c-note">Mandatory if known. Do not speculate about attribution.</td></tr>
               <tr><td class="c-field">Applied and ongoing mitigation measures<a class="fieldref" href="#f-i33" title="Open field i33 in the reference">i33</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only. The FAQ writes &ldquo;applied <em>and</em> ongoing&rdquo;, the glossary &ldquo;applied <em>or</em> ongoing&rdquo;.</td></tr>
               <tr><td class="c-field">Detailed description of the Severity of the incident<a class="fieldref" href="#f-i34" title="Open field i34 in the reference">i34</a></td><td class="c-status"><span class="chip mandatory">Required</span></td><td class="c-note">Incident only. Max. 4,000 characters.</td></tr>
@@ -679,12 +679,13 @@
         </div>
 
         <div class="callout neutral">
-          <p class="lead"><strong>The four statuses.</strong> Each field carries one per stage:</p>
+          <p class="lead"><strong>The statuses.</strong> Each field carries one per stage:</p>
           <ul>
-            <li><span class="chip mandatory">Required</span> must be filled in before the notification can be submitted at that stage.</li>
+            <li><span class="chip mandatory">Required</span> must be filled in before the notification can be submitted at that stage. ENISA writes &ldquo;Required&rdquo;, and since Glossary&nbsp;1.6 &ldquo;Mandatory&rdquo; for the two awareness timestamps (v26, i37); the guide treats both the same.</li>
             <li><span class="chip conditional">If available</span> ENISA&rsquo;s &ldquo;required if such information available&rdquo;: mandatory once you have the information, and not a reason to delay.</li>
-            <li><span class="chip carried">Carried over</span> ENISA&rsquo;s &ldquo;by default copied from previous step, or updated&rdquo;. The value you gave earlier is already there and can be corrected. This is why the same field reappears in a later stage.</li>
-            <li><span class="chip optional">Optional</span> and <span class="chip na">n/a</span>, which means the field does not exist at that stage at all.</li>
+            <li><span class="chip conditional">Optional after v17</span> and <span class="chip conditional">Optional if PEC</span> are optional with a condition ENISA attaches, new in Glossary&nbsp;1.6: &ldquo;Optional (after completion of v17)&rdquo; for v22, and &ldquo;Optional upon PEC activation&rdquo; for v29 and v30. ENISA&rsquo;s &ldquo;v17&rdquo; matches no field number; field&nbsp;17, the measures users can take, is the likely reference.</li>
+            <li><span class="chip carried">Carried over</span> ENISA&rsquo;s &ldquo;by default copied from previous step, or updated&rdquo; (since&nbsp;1.6 also without &ldquo;or updated&rdquo;). The value you gave earlier is already there. This is why the same field reappears in a later stage.</li>
+            <li><span class="chip optional">Optional</span> and <span class="chip na">n/a</span>, ENISA&rsquo;s &ldquo;N/A&rdquo;: the field is not asked for at that stage. Until Glossary&nbsp;1.5 that meant it did not exist there yet; since&nbsp;1.6 (21&nbsp;October&nbsp;2026) ENISA also marks most fields already given in an earlier stage &ldquo;N/A&rdquo; instead of carried over.</li>
           </ul>
         </div>
 
@@ -704,7 +705,7 @@
         <p class="fieldgroup-sub">Apply to both an actively exploited vulnerability and a severe incident.</p>
         <div class="faq-wrap">
           <details class="faq field" id="f-1">
-            <summary><span class="faq-qwrap"><span class="faq-num">1</span><span>Notification type (Vulnerability/Incident)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">1</span><span>Notification type (Actively Exploited Vulnerability/Severe Incident)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one: Vulnerability or Incident</span></p>
               <dl class="fdef">
@@ -717,7 +718,7 @@
             </div>
           </details>
           <details class="faq field" id="f-2">
-            <summary><span class="faq-qwrap"><span class="faq-num">2</span><span>Title</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">2</span><span>Title</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Plain text; concise title &middot; max 255&nbsp;characters</span></p>
               <dl class="fdef">
@@ -730,7 +731,7 @@
             </div>
           </details>
           <details class="faq field" id="f-3">
-            <summary><span class="faq-qwrap"><span class="faq-num">3</span><span>Summary</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">3</span><span>Summary</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Short paragraph &middot; max 4&thinsp;000&nbsp;characters</span></p>
               <dl class="fdef">
@@ -743,7 +744,7 @@
             </div>
           </details>
           <details class="faq field" id="f-4">
-            <summary><span class="faq-qwrap"><span class="faq-num">4</span><span>Manufacturer name</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">4</span><span>Manufacturer name</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">System-generated / read-only</span></p>
               <dl class="fdef">
@@ -756,7 +757,7 @@
             </div>
           </details>
           <details class="faq field" id="f-5">
-            <summary><span class="faq-qwrap"><span class="faq-num">5</span><span>Member States where product available (Concerned CSIRT)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">5</span><span>Member States where product available (CSIRT Designated as Coordinator and Concerned CSIRTs)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one or more Member States</span></p>
               <dl class="fdef">
@@ -769,7 +770,7 @@
             </div>
           </details>
           <details class="faq field" id="f-6">
-            <summary><span class="faq-qwrap"><span class="faq-num">6</span><span>Product Name</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">6</span><span>Product Name</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Official product name &middot; max 255&nbsp;characters</span></p>
               <dl class="fdef">
@@ -782,7 +783,7 @@
             </div>
           </details>
           <details class="faq field" id="f-7">
-            <summary><span class="faq-qwrap"><span class="faq-num">7</span><span>Product Version</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">7</span><span>Product Version</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Version or version range &middot; max 255&nbsp;characters</span></p>
               <dl class="fdef">
@@ -795,7 +796,7 @@
             </div>
           </details>
           <details class="faq field" id="f-8">
-            <summary><span class="faq-qwrap"><span class="faq-num">8</span><span>Product Type (Default/Important Product with Digital Elements/Critical Product with Digital Elements)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">8</span><span>Product Type (Default/Important Product with Digital Elements/Critical Product with Digital Elements)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one: Default, Important, Critical</span></p>
               <dl class="fdef">
@@ -808,7 +809,7 @@
             </div>
           </details>
           <details class="faq field" id="f-9">
-            <summary><span class="faq-qwrap"><span class="faq-num">9</span><span>Product class</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">9</span><span>Product class</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one configured Class</span></p>
               <dl class="fdef">
@@ -821,7 +822,7 @@
             </div>
           </details>
           <details class="faq field" id="f-10">
-            <summary><span class="faq-qwrap"><span class="faq-num">10</span><span>Product category</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">10</span><span>Product category</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one configured category</span></p>
               <dl class="fdef">
@@ -834,7 +835,7 @@
             </div>
           </details>
           <details class="faq field" id="f-11">
-            <summary><span class="faq-qwrap"><span class="faq-num">11</span><span>End of support indicator</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">11</span><span>End of the support indicator</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one: Yes or No</span></p>
               <dl class="fdef">
@@ -848,7 +849,7 @@
             </div>
           </details>
           <details class="faq field" id="f-12">
-            <summary><span class="faq-qwrap"><span class="faq-num">12</span><span>Component name</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">12</span><span>Component name</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Component name and optional version &middot; max 255&nbsp;characters</span></p>
               <dl class="fdef">
@@ -861,7 +862,7 @@
             </div>
           </details>
           <details class="faq field" id="f-13">
-            <summary><span class="faq-qwrap"><span class="faq-num">13</span><span>Mitigating measure expected shortly</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">13</span><span>Mitigating measure expected shortly</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select one: "Yes" or "No"</span></p>
               <dl class="fdef">
@@ -874,7 +875,7 @@
             </div>
           </details>
           <details class="faq field" id="f-14">
-            <summary><span class="faq-qwrap"><span class="faq-num">14</span><span>User Action able to reduce impact</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">14</span><span>User Action able to reduce impact</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Action-oriented text &middot; max 4&thinsp;000&nbsp;characters</span></p>
               <dl class="fdef">
@@ -887,7 +888,7 @@
             </div>
           </details>
           <details class="faq field" id="f-15">
-            <summary><span class="faq-qwrap"><span class="faq-num">15</span><span>Considered sensitivity of information</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">15</span><span>Considered sensitivity of information</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Concise justification &middot; max 255&nbsp;characters</span></p>
               <dl class="fdef">
@@ -927,7 +928,7 @@
             </div>
           </details>
           <details class="faq field" id="f-18">
-            <summary><span class="faq-qwrap"><span class="faq-num">18</span><span>Attack vector</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip na">n/a</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip optional">Optional</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">18</span><span>Attack vector</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip na">n/a</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Short, structured description or configured classification</span></p>
               <dl class="fdef">
@@ -972,7 +973,7 @@
         <p class="fieldgroup-sub">Shown only when the notification type is <em>Vulnerability</em>.</p>
         <div class="faq-wrap">
           <details class="faq field" id="f-v19">
-            <summary><span class="faq-qwrap"><span class="faq-num">v19</span><span>CVE ID</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v19</span><span>CVE ID</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">CVE identifier &middot; max 255&nbsp;characters</span></p>
               <dl class="fdef">
@@ -985,7 +986,7 @@
             </div>
           </details>
           <details class="faq field" id="f-v20">
-            <summary><span class="faq-qwrap"><span class="faq-num">v20</span><span>EUVD ID</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v20</span><span>EUVD ID</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">EUVD identifier &middot; max 255&nbsp;characters</span></p>
               <dl class="fdef">
@@ -998,7 +999,7 @@
             </div>
           </details>
           <details class="faq field" id="f-v21">
-            <summary><span class="faq-qwrap"><span class="faq-num">v21</span><span>General information</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v21</span><span>General information</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Structured narrative &middot; max 4&thinsp;000&nbsp;characters</span></p>
               <dl class="fdef">
@@ -1011,7 +1012,7 @@
             </div>
           </details>
           <details class="faq field" id="f-v22">
-            <summary><span class="faq-qwrap"><span class="faq-num">v22</span><span>Date when corrective or mitigating measure has been available</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v22</span><span>Date when corrective or mitigating measure has been available</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip conditional">Optional after v17</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip conditional">Optional after v17</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Date and time</span></p>
               <dl class="fdef">
@@ -1037,7 +1038,7 @@
             </div>
           </details>
           <details class="faq field" id="f-v24">
-            <summary><span class="faq-qwrap"><span class="faq-num">v24</span><span>Full description of the Severity of the vulnerability</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v24</span><span>Description of the severity of the vulnerability</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Detailed structured narrative &middot; max 4&thinsp;000&nbsp;characters</span></p>
               <dl class="fdef">
@@ -1045,13 +1046,13 @@
                 <dt>How to complete it</dt><dd data-k="how">For example, provide the completed technical description of the vulnerability. Including the assessed severity rating, classification, rationale for the assessment and other relevant factors or criteria supporting the assigned severity level (max. 4000 characters).</dd>
               </dl>
               <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">Authentication validation is missing in endpoint X... Severity: High... Affected versions: 4.0–4.2.1...</p></figure>
-              <div class="faq-amend"><span class="amend-label">Note on ENISA’s text</span><p>The FAQ calls the AEV pair “Full description of the severity / impact” and the SI pair “Detailed description of the Severity / Impact”. Same kind of field, two names — both spellings are given here so you recognise them in the portal.</p></div>
+              <div class="faq-amend"><span class="amend-label">Note on ENISA’s text</span><p>The FAQ calls the AEV pair “Full description of the severity / impact” and the SI pair “Detailed description of the Severity / Impact”. Same kind of field, two names — both spellings are given here so you recognise them in the portal. Since Glossary&nbsp;1.6 (21&nbsp;October&nbsp;2026) the Glossary itself drops &ldquo;Full&rdquo;: &ldquo;Description of the severity / impact of the vulnerability&rdquo;.</p></div>
               <!-- OWN-NOTE field-v24: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary v24</span> &middot; applies to AEV</p>
             </div>
           </details>
           <details class="faq field" id="f-v25">
-            <summary><span class="faq-qwrap"><span class="faq-num">v25</span><span>Full description of the Impact of the vulnerability</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v25</span><span>Description of the impact of the vulnerability</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip mandatory">Required</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Detailed structured narrative &middot; max 4&thinsp;000&nbsp;characters</span></p>
               <dl class="fdef">
@@ -1064,7 +1065,7 @@
             </div>
           </details>
           <details class="faq field" id="f-v26">
-            <summary><span class="faq-qwrap"><span class="faq-num">v26</span><span>Date and time when you become aware of the Actively Exploited Vulnerability [1]</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v26</span><span>Date and time when you become aware of the Actively Exploited Vulnerability [1]</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Date and time</span></p>
               <dl class="fdef">
@@ -1078,7 +1079,7 @@
             </div>
           </details>
           <details class="faq field" id="f-v26a">
-            <summary><span class="faq-qwrap"><span class="faq-num">v26a</span><span>Date and time when the Actively Exploited Vulnerability occurred (UTC time)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v26a</span><span>Date and time when the Actively Exploited Vulnerability occurred (UTC time)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Date and time</span></p>
               <dl class="fdef">
@@ -1127,7 +1128,7 @@
             </div>
           </details>
           <details class="faq field" id="f-v29">
-            <summary><span class="faq-qwrap"><span class="faq-num">v29</span><span>PEC Delay Reason</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip na">n/a</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v29</span><span>PEC Delay Reason</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip na">n/a</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip conditional">Optional if PEC</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Select applicable check box</span></p>
               <dl class="fdef">
@@ -1142,7 +1143,7 @@
             </div>
           </details>
           <details class="faq field" id="f-v30">
-            <summary><span class="faq-qwrap"><span class="faq-num">v30</span><span>Please provide further information</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">v30</span><span>Please provide further information</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip na">n/a</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip conditional">Optional if PEC</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Free text</span></p>
               <dl class="fdef">
@@ -1159,7 +1160,7 @@
         <p class="fieldgroup-sub">Shown only when the notification type is <em>Incident</em>.</p>
         <div class="faq-wrap">
           <details class="faq field" id="f-i31">
-            <summary><span class="faq-qwrap"><span class="faq-num">i31</span><span>Incident is suspected of unlawful or malicious acts</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i31</span><span>Incident is suspected of unlawful or malicious acts</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip carried">Carried over</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Free text &middot; max 255&nbsp;characters</span></p>
               <dl class="fdef">
@@ -1173,7 +1174,7 @@
             </div>
           </details>
           <details class="faq field" id="f-i32">
-            <summary><span class="faq-qwrap"><span class="faq-num">i32</span><span>General information, about the nature of the incident</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i32</span><span>General information, about the nature of the incident</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Structured narrative &middot; max 4&thinsp;000&nbsp;characters</span></p>
               <dl class="fdef">
@@ -1240,7 +1241,7 @@
             </div>
           </details>
           <details class="faq field" id="f-i37">
-            <summary><span class="faq-qwrap"><span class="faq-num">i37</span><span>Date and time when you become aware of the incident (UTC time) [2]</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i37</span><span>Date and time when you become aware of the incident (UTC time) [2]</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Date and time</span></p>
               <dl class="fdef">
@@ -1256,7 +1257,7 @@
             </div>
           </details>
           <details class="faq field" id="f-i38">
-            <summary><span class="faq-qwrap"><span class="faq-num">i38</span><span>Date and time when the incident occurred (UTC time)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip optional">Optional</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i38</span><span>Date and time when the incident occurred (UTC time)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip optional">Optional</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Date and time</span></p>
               <dl class="fdef">
@@ -1270,7 +1271,7 @@
             </div>
           </details>
           <details class="faq field" id="f-i39">
-            <summary><span class="faq-qwrap"><span class="faq-num">i39</span><span>Initial assessment of the incident</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip carried">Carried over</span></span></span><span class="faq-chev">+</span></summary>
+            <summary><span class="faq-qwrap"><span class="faq-num">i39</span><span>Initial assessment of the incident</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Structured narrative &middot; max 4&thinsp;000&nbsp;characters</span></p>
               <dl class="fdef">
