@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 14, 2026, 4:45:07 AM",
-  "dateUpdated": "Oct 20, 2026, 7:58:23 PM",
+  "dateUpdated": "Oct 21, 2026, 3:56:27 AM",
   "description": "SiteGuard Server Edition contains an OS command injection vulnerability, which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -97,7 +97,7 @@
     "vulnerability": {
      "aliases": "GHSA-rhmj-5mp2-rq7c\nCVE-2026-106931\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 21, 2026, 7:04:22 AM",
+     "dataProcessed": "Oct 22, 2026, 7:04:15 AM",
      "datePublished": "Oct 14, 2026, 6:31:14 AM",
      "dateUpdated": "Oct 20, 2026, 9:30:37 PM",
      "description": "SiteGuard Server Edition contains an OS command injection vulnerability, which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
@@ -116,12 +116,12 @@
      "baseScore": 8.5,
      "baseScoreVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 21, 2026, 7:13:37 AM",
+     "dataProcessed": "Oct 22, 2026, 7:16:39 AM",
      "datePublished": "Oct 14, 2026, 4:45:07 AM",
-     "dateUpdated": "Oct 20, 2026, 7:58:23 PM",
+     "dateUpdated": "Oct 21, 2026, 3:56:27 AM",
      "description": "SiteGuard Server Edition contains an OS command injection vulnerability, which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
      "enisa_id": "EUVD-2026-100814\n",
-     "epss": 0.66,
+     "epss": 1.37,
      "exploitedSince": "Oct 20, 2026, 12:00:00 AM",
      "id": "CVE-2026-106931",
      "references": "https://www.eg-secure.co.jp/siteguard/news/alert-202610-1\nhttps://jvn.jp/en/jp/JVN88474777/\n",
@@ -190,7 +190,7 @@
    }
   ],
   "enisaUuid": "a7cb7390-4bf5-391d-b1e9-5ed20192c487",
-  "epss": 0.66,
+  "epss": 1.37,
   "exploitedSince": "Oct 20, 2026, 12:00:00 AM",
   "id": "EUVD-2026-100814",
   "references": "https://www.eg-secure.co.jp/siteguard/news/alert-202610-1\nhttps://jvn.jp/en/jp/JVN88474777/\n"
@@ -290,6 +290,229 @@
   "cisaExploitAdd": "2026-10-20",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:*:*:*:*:server:apache:*:*",
+        "matchCriteriaId": "CE725401-7C7C-4D82-B360-77B977733362",
+        "versionEndExcluding": "8.00",
+        "versionStartIncluding": "2.20",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:8.00:-:*:*:server:apache:*:*",
+        "matchCriteriaId": "9388F71D-D2F0-43D7-865C-185288062E99",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:8.00:update1:*:*:server:apache:*:*",
+        "matchCriteriaId": "AAAB5B82-FBE2-4BC0-8337-536D90A5A536",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:8.00:update2:*:*:server:apache:*:*",
+        "matchCriteriaId": "4BB69ADA-6DED-4E61-8D98-4B25E8DB655E",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:8.00:update3:*:*:server:apache:*:*",
+        "matchCriteriaId": "9F46539B-93C6-4A4A-A85B-AF2141EC7E45",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:*:*:*:*:server:apache:*:*",
+        "matchCriteriaId": "D071A470-4010-4D3F-926C-852C4BD11908",
+        "versionEndExcluding": "7.00",
+        "versionStartIncluding": "2.20",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:-:*:*:server:apache:*:*",
+        "matchCriteriaId": "2C90BD0A-3820-49F6-8FB7-99B29999ABDD",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:update1:*:*:server:apache:*:*",
+        "matchCriteriaId": "DF2BB27C-C404-45A1-97CB-664E99BCD4F5",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:update2:*:*:server:apache:*:*",
+        "matchCriteriaId": "F16649B1-ACF8-4A7E-8BDB-A311F14C684C",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:update3:*:*:server:apache:*:*",
+        "matchCriteriaId": "FABFD29E-9AD5-4BFB-B186-F2BDFB0D5DA3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:update4:*:*:server:apache:*:*",
+        "matchCriteriaId": "C2E21869-728C-4CE9-A2F0-EE9E2B334C4F",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:update5:*:*:server:apache:*:*",
+        "matchCriteriaId": "3B921619-301F-41D8-A89F-5FD61F0D7F8D",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:freebsd:freebsd:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3B2AEFCC-A2F6-45A6-A2EF-24F7906E44E2",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:*:*:*:*:server:nginx:*:*",
+        "matchCriteriaId": "890ADE9F-3408-4152-A7A6-DCC1DF0E5FC5",
+        "versionEndExcluding": "8.00",
+        "versionStartIncluding": "2.20",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:8.00:-:*:*:server:nginx:*:*",
+        "matchCriteriaId": "A8E60D41-0C4E-46AE-839F-8649B2BE7518",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:8.00:update1:*:*:server:nginx:*:*",
+        "matchCriteriaId": "8BC776FA-138C-4C88-B308-1C2EC868C0D8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:8.00:update2:*:*:server:nginx:*:*",
+        "matchCriteriaId": "B92D5A40-6BDD-4F2D-93BE-17EAAE263190",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:8.00:update3:*:*:server:nginx:*:*",
+        "matchCriteriaId": "3522B0F7-FBC8-4273-B1FB-650635F2F987",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:*:*:*:*:server:nginx:*:*",
+        "matchCriteriaId": "5610802E-C4B6-4C4D-9AD6-D927510B6E78",
+        "versionEndExcluding": "7.00",
+        "versionStartIncluding": "2.20",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:-:*:*:server:nginx:*:*",
+        "matchCriteriaId": "62E47D6B-8AAD-4744-BD06-F8B1CC86C0F9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:update1:*:*:server:nginx:*:*",
+        "matchCriteriaId": "F388A981-AD78-4A24-BF79-1EC25116D2BF",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:update2:*:*:server:nginx:*:*",
+        "matchCriteriaId": "8FA56A76-C412-4147-BB9C-B9EC498D01C9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:update3:*:*:server:nginx:*:*",
+        "matchCriteriaId": "27ED7B0E-DE8C-4D90-9CD9-EFD97544B697",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:update4:*:*:server:nginx:*:*",
+        "matchCriteriaId": "3E1C8487-C90F-4C82-9BFB-62C661146F31",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:7.00:update5:*:*:server:nginx:*:*",
+        "matchCriteriaId": "F309E6CF-D461-413C-A7D0-39787E842187",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:freebsd:freebsd:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3B2AEFCC-A2F6-45A6-A2EF-24F7906E44E2",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:*:*:*:*:server:internet_information_services:*:*",
+        "matchCriteriaId": "DDAF623F-7E7D-4CDA-AB4A-618632D22A30",
+        "versionEndExcluding": "3.10",
+        "versionStartIncluding": "2.20",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:*:*:*:*:server:internet_information_services:*:*",
+        "matchCriteriaId": "6C3522E7-AFE7-4507-A47D-ABB0C733654C",
+        "versionEndExcluding": "8.00",
+        "versionStartIncluding": "4.10",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:e-guardian:siteguard:8.00:update4:*:*:server:internet_information_services:*:*",
+        "matchCriteriaId": "62592638-F75F-466A-A3EF-49EBEBB71902",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
   "cveTags": [],
   "descriptions": [
    {
@@ -298,7 +521,7 @@
    }
   ],
   "id": "CVE-2026-106931",
-  "lastModified": "2026-10-21T04:17:08.083",
+  "lastModified": "2026-10-21T15:42:24.590",
   "metrics": {
    "cvssMetricV30": [
     {
@@ -393,19 +616,28 @@
   "references": [
    {
     "source": "vultures@jpcert.or.jp",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://jvn.jp/en/jp/JVN88474777/"
    },
    {
     "source": "vultures@jpcert.or.jp",
+    "tags": [
+     "Vendor Advisory"
+    ],
     "url": "https://www.eg-secure.co.jp/siteguard/news/alert-202610-1"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-106931"
    }
   ],
   "sourceIdentifier": "vultures@jpcert.or.jp",
-  "vulnStatus": "Deferred",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [
