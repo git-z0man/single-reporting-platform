@@ -1,21 +1,21 @@
 {
  "schema": 1,
  "source": "https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2",
- "fetched": "2026-10-16",
- "version": "1.5",
- "last_update": "15 October 2026",
+ "fetched": "2026-10-22",
+ "version": "1.6",
+ "last_update": "21 October 2026",
  "fields": [
   {
    "nr": "1",
-   "name": "Notification type (Vulnerability/Incident)",
+   "name": "Notification type (Actively Exploited Vulnerability/Severe Incident)",
    "applies": "Both",
    "means": "Indicates whether the notification concerns an actively exploited vulnerability (AEV) or a severe incident (SI) having an impact on the security of a product with digital elements.",
    "how": "Select Actively Exploited Vulnerability when reporting an AEV. Select Severe Incident when reporting a SI having an impact on the security of a product with digital elements.",
    "example": "Vulnerability",
    "format": "Select one: Vulnerability or Incident",
    "ew": "Required",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "2",
@@ -26,8 +26,8 @@
    "example": "Active exploitation affecting Product X version 4.2.",
    "format": "Plain text; concise title",
    "ew": "Required",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "3",
@@ -38,8 +38,8 @@
    "example": "An actively exploited vulnerability affects Product X 4.2. A temporary workaround is available, and a security update is being prepared.",
    "format": "Short paragraph",
    "ew": "Required",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "4",
@@ -50,20 +50,20 @@
    "example": "Automatically populated by the platform during the notification submission or free text during manufacturer registration [Name of the company].",
    "format": "System-generated / read-only",
    "ew": "Required",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "5",
-   "name": "Member States where product available (Concerned CSIRT)",
+   "name": "Member States where product available (CSIRT Designated as Coordinator and Concerned CSIRTs)",
    "applies": "Both",
    "means": "Member States in which territory the manufacturer is aware that the affected product has been made available; used to determine concerned CSIRTs.",
    "how": "The Platform will automatically show your CDaC, however, you may also select other Member States (MS) where the affected product is available, based on the information currently known to the manufacturer. Update the selection if new distribution information becomes available.",
    "example": "Belgium as your CDaC, automatically populated by the platform and you may add Greece and Italy and MS where the affected product has been made available",
    "format": "Select one or more Member States",
    "ew": "Required",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "6",
@@ -74,8 +74,8 @@
    "example": "Product X",
    "format": "Official product name",
    "ew": "Required",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "7",
@@ -86,8 +86,8 @@
    "example": "4.0 to 4.2.1",
    "format": "Version or version range",
    "ew": "Required",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "8",
@@ -98,8 +98,8 @@
    "example": "Important Product with Digital Elements",
    "format": "Select one: Default, Important, Critical",
    "ew": "Optional",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "9",
@@ -110,8 +110,8 @@
    "example": "Class II",
    "format": "Select one configured Class",
    "ew": "Optional",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "10",
@@ -122,20 +122,20 @@
    "example": "Choose between: Hardware devices with Security Boxes; Smart meter gateways within smart metering systems and other devices for advanced security purposes, including secure cryptoprocessing devices; or Smartcards or similar devices, including secure elements.",
    "format": "Select one configured category",
    "ew": "Optional",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "11",
-   "name": "End of support indicator",
+   "name": "End of the support indicator",
    "applies": "Both",
    "means": "Indicates whether the product with digital elements has reached the end of the support period.",
    "how": "You may select one: \"Yes\" when the product with digital elements has reached the end of the support period or \"No\" when it doesn’t.",
    "example": "Yes",
    "format": "Select one: Yes or No",
    "ew": "Optional",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "12",
@@ -146,8 +146,8 @@
    "example": "Authentication module 3.1",
    "format": "Component name and optional version",
    "ew": "Optional",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "13",
@@ -158,8 +158,8 @@
    "example": "Yes",
    "format": "Select one: \"Yes\" or \"No\"",
    "ew": "Optional",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "14",
@@ -170,8 +170,8 @@
    "example": "Disable the affected interface until the security update is installed.",
    "format": "Action-oriented text",
    "ew": "Optional",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "15",
@@ -183,7 +183,7 @@
    "format": "Concise justification",
    "ew": "Optional",
    "h72": "Optional",
-   "fr": "Carried over"
+   "fr": "n/a"
   },
   {
    "nr": "16",
@@ -219,7 +219,7 @@
    "format": "Short, structured description or configured classification",
    "ew": "n/a",
    "h72": "Optional",
-   "fr": "Optional"
+   "fr": "n/a"
   },
   {
    "nr": "v19",
@@ -230,8 +230,8 @@
    "example": "CVE-2026-12345",
    "format": "CVE identifier",
    "ew": "Optional",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "v20",
@@ -242,8 +242,8 @@
    "example": "EUVD-2026-12345",
    "format": "EUVD identifier",
    "ew": "Optional",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "v21",
@@ -255,7 +255,7 @@
    "format": "Structured narrative",
    "ew": "Optional",
    "h72": "Required",
-   "fr": "Carried over"
+   "fr": "n/a"
   },
   {
    "nr": "v22",
@@ -265,8 +265,8 @@
    "how": "For example, enter the date and time when the mitigating measure has been available.",
    "example": "2026-09-02 09:15 UTC",
    "format": "Date and time",
-   "ew": "Optional",
-   "h72": "Optional",
+   "ew": "Optional after v17",
+   "h72": "Optional after v17",
    "fr": "Required"
   },
   {
@@ -283,7 +283,7 @@
   },
   {
    "nr": "v24",
-   "name": "Full description of the Severity of the vulnerability",
+   "name": "Description of the severity of the vulnerability",
    "applies": "AEV",
    "means": "Complete description of the actively exploited vulnerability, including at least its severity.",
    "how": "For example, provide the completed technical description of the vulnerability. Including the assessed severity rating, classification, rationale for the assessment and other relevant factors or criteria supporting the assigned severity level (max. 4000 characters).",
@@ -295,7 +295,7 @@
   },
   {
    "nr": "v25",
-   "name": "Full description of the Impact of the vulnerability",
+   "name": "Description of the impact of the vulnerability",
    "applies": "AEV",
    "means": "Complete description of the actively exploited vulnerability, including at least its impact.",
    "how": "For example, provide the completed technical description of the vulnerability. Including the potential or actual impact of the vulnerability, the affected systems, components, data, users or services, as applicable (max. 4000 characters).",
@@ -307,15 +307,15 @@
   },
   {
    "nr": "v26",
-   "name": "Date and time when you become aware of the Actively Exploited Vulnerability [1]",
+   "name": "Date and time when you become aware of the Actively Exploited Vulnerability",
    "applies": "AEV",
    "means": "Date and time when the manufacturer or another relevant party first detected the vulnerability.",
    "how": "For example, enter the date and time when the vulnerability was first detected. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the vulnerability description.",
    "example": "2026-08-24 09:15 UTC",
    "format": "Date and time",
    "ew": "Required",
-   "h72": "Carried over",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "v26a",
@@ -326,8 +326,8 @@
    "example": "2026-08-24 09:15 UTC",
    "format": "Date and time",
    "ew": "Optional",
-   "h72": "Required",
-   "fr": "Carried over"
+   "h72": "Carried over",
+   "fr": "n/a"
   },
   {
    "nr": "v27",
@@ -362,20 +362,20 @@
    "example": "You may choose: the notified vulnerability has been actively exploited by a malicious actor and, according to the information available, it has been exploited in no other Member State than the one of the CSIRT designated as coordinator to which the manufacturer has notified the vulnerability; or",
    "format": "Select applicable check box",
    "ew": "n/a",
-   "h72": "Optional",
+   "h72": "Optional if PEC",
    "fr": "n/a"
   },
   {
    "nr": "v30",
    "name": "Please provide further information",
    "applies": "AEV",
-   "means": "Description of anything that should be helpful for CSIRT Designated as Coordinator (CDaC)taking their decision.",
+   "means": "Description of anything that should be helpful for CSIRT Designated as Coordinator (CDaC) taking their decision.",
    "how": "You may provide additional information (max. 800 characters).",
    "example": "We consider it very important for national security.",
    "format": "Free text",
-   "ew": "Optional",
-   "h72": "Optional",
-   "fr": "Carried over"
+   "ew": "n/a",
+   "h72": "Optional if PEC",
+   "fr": "n/a"
   },
   {
    "nr": "i31",
@@ -387,7 +387,7 @@
    "format": "Free text",
    "ew": "Required",
    "h72": "Carried over",
-   "fr": "Carried over"
+   "fr": "n/a"
   },
   {
    "nr": "i32",
@@ -399,7 +399,7 @@
    "format": "Structured narrative",
    "ew": "Optional",
    "h72": "Required",
-   "fr": "Carried over"
+   "fr": "n/a"
   },
   {
    "nr": "i33",
@@ -451,15 +451,15 @@
   },
   {
    "nr": "i37",
-   "name": "Date and time when you become aware of the incident (UTC time) [2]",
+   "name": "Date and time when you become aware of the incident (UTC time)",
    "applies": "SI",
    "means": "Date and time when the manufacturer or another relevant entity becomes aware of the incident.",
    "how": "For example, enter the date and time you became aware of the incident. If the exact time is unknown, enter the best supported estimate and identify it as estimated in the incident description.",
    "example": "2026-08-24 09:15 UTC",
    "format": "Date and time",
    "ew": "Required",
-   "h72": "Required",
-   "fr": "Carried over"
+   "h72": "n/a",
+   "fr": "n/a"
   },
   {
    "nr": "i38",
@@ -470,8 +470,8 @@
    "example": "2026-08-24 09:15 UTC",
    "format": "Date and time",
    "ew": "Optional",
-   "h72": "Required",
-   "fr": "Optional"
+   "h72": "Optional",
+   "fr": "n/a"
   },
   {
    "nr": "i39",
@@ -483,7 +483,7 @@
    "format": "Structured narrative",
    "ew": "Optional",
    "h72": "Required",
-   "fr": "Carried over"
+   "fr": "n/a"
   },
   {
    "nr": "40",
