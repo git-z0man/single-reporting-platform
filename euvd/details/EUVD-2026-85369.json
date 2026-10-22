@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Sep 23, 2026, 4:06:53 PM",
-  "dateUpdated": "Oct 20, 2026, 7:58:24 PM",
+  "dateUpdated": "Oct 21, 2026, 3:56:24 AM",
   "description": "Plex Media Server before 1.43.3.10861 allows an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter.",
   "enisaIdAdvisory": [
    {
@@ -97,12 +97,12 @@
      "baseScore": 5.3,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 21, 2026, 7:14:25 AM",
+     "dataProcessed": "Oct 22, 2026, 7:20:32 AM",
      "datePublished": "Sep 23, 2026, 4:06:53 PM",
-     "dateUpdated": "Oct 20, 2026, 7:58:24 PM",
+     "dateUpdated": "Oct 21, 2026, 3:56:24 AM",
      "description": "Plex Media Server before 1.43.3.10861 allows an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter.",
      "enisa_id": "EUVD-2026-85369\n",
-     "epss": 0.22,
+     "epss": 0.42,
      "exploitedSince": "Oct 20, 2026, 12:00:00 AM",
      "id": "CVE-2026-96655",
      "references": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json\nhttps://forums.plex.tv/t/plex-media-server/30447/711\nhttps://www.cve.org/CVERecord?id=CVE-2026-96655\nhttps://zmain.info/blog/plex2shell\n",
@@ -134,7 +134,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-96655\nGHSA-9x88-w2p7-56vh\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 21, 2026, 7:04:22 AM",
+     "dataProcessed": "Oct 22, 2026, 7:04:15 AM",
      "datePublished": "Sep 23, 2026, 6:31:57 PM",
      "dateUpdated": "Oct 20, 2026, 9:30:35 PM",
      "description": "Plex Media Server before 1.43.3.10861 allows an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter.",
@@ -148,7 +148,7 @@
    }
   ],
   "enisaUuid": "6efa559c-2682-3d56-be0e-a90458a7a351",
-  "epss": 0.22,
+  "epss": 0.42,
   "exploitedSince": "Oct 20, 2026, 12:00:00 AM",
   "id": "EUVD-2026-85369",
   "references": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json\nhttps://forums.plex.tv/t/plex-media-server/30447/711\nhttps://www.cve.org/CVERecord?id=CVE-2026-96655\nhttps://zmain.info/blog/plex2shell\n"
@@ -197,8 +197,8 @@
       "cpeMatch": [
        {
         "criteria": "cpe:2.3:a:plex:media_server:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "48C79D09-D197-4165-B027-8BCCE6CD4861",
-        "versionEndExcluding": "1.43.0.10861",
+        "matchCriteriaId": "4C230270-5EBA-476B-84EE-59764545E0FD",
+        "versionEndExcluding": "1.43.3.10861",
         "vulnerable": true
        }
       ],
@@ -216,7 +216,7 @@
    }
   ],
   "id": "CVE-2026-96655",
-  "lastModified": "2026-10-21T04:18:12.700",
+  "lastModified": "2026-10-21T13:09:29.830",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -360,11 +360,14 @@
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-96655"
    }
   ],
   "sourceIdentifier": "9119a7d8-5eab-497f-8521-727c672e3725",
-  "vulnStatus": "Modified",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [

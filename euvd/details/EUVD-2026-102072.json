@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 15, 2026, 2:01:17 PM",
-  "dateUpdated": "Oct 20, 2026, 7:58:25 PM",
+  "dateUpdated": "Oct 21, 2026, 3:56:21 AM",
   "description": "A vulnerability has been identified in Siemens Software Center (All versions < V4.0.9.8). The affected application loads dynamic-link libraries (DLLs) from an uncontrolled search path. This could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.",
   "enisaIdAdvisory": [
    {
@@ -88,12 +88,12 @@
      "baseScore": 8.4,
      "baseScoreVector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 21, 2026, 7:17:48 AM",
+     "dataProcessed": "Oct 22, 2026, 7:14:23 AM",
      "datePublished": "Oct 15, 2026, 2:01:17 PM",
-     "dateUpdated": "Oct 20, 2026, 7:58:25 PM",
+     "dateUpdated": "Oct 21, 2026, 3:56:21 AM",
      "description": "A vulnerability has been identified in Siemens Software Center (All versions < V4.0.9.8). The affected application loads dynamic-link libraries (DLLs) from an uncontrolled search path. This could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.",
      "enisa_id": "EUVD-2026-102072\n",
-     "epss": 0.14,
+     "epss": 0.26,
      "exploitedSince": "Oct 19, 2026, 12:00:00 AM",
      "id": "CVE-2026-110936",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-580366.html\n",
@@ -125,7 +125,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-110936\nGHSA-56h6-r36m-c9xv\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 21, 2026, 7:04:22 AM",
+     "dataProcessed": "Oct 22, 2026, 7:04:15 AM",
      "datePublished": "Oct 15, 2026, 6:32:35 PM",
      "dateUpdated": "Oct 20, 2026, 9:30:43 PM",
      "description": "A vulnerability has been identified in Siemens Software Center (All versions). The affected application loads dynamic-link libraries (DLLs) from an uncontrolled search path. This could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.",
@@ -139,7 +139,7 @@
    }
   ],
   "enisaUuid": "9021035b-0c2c-3073-8bcb-6805691a1cb9",
-  "epss": 0.14,
+  "epss": 0.26,
   "exploitedSince": "Oct 19, 2026, 12:00:00 AM",
   "id": "EUVD-2026-102072",
   "references": "https://cert-portal.siemens.com/productcert/html/ssa-580366.html\n"
@@ -181,6 +181,24 @@
   "cisaExploitAdd": "2026-10-20",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "Siemens Software Center Uncontrolled Search Path Element Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:siemens:software_center:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D830F690-89A4-4D6A-84B0-A840528CF933",
+        "versionEndExcluding": "4.0.9.8",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
   "cveTags": [],
   "descriptions": [
    {
@@ -189,7 +207,7 @@
    }
   ],
   "id": "CVE-2026-110936",
-  "lastModified": "2026-10-21T04:17:09.867",
+  "lastModified": "2026-10-21T13:10:11.553",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -284,19 +302,30 @@
   "references": [
    {
     "source": "productcert@siemens.com",
+    "tags": [
+     "Patch",
+     "Vendor Advisory"
+    ],
     "url": "https://cert-portal.siemens.com/productcert/html/ssa-580366.html"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Patch",
+     "Vendor Advisory"
+    ],
     "url": "https://productcert.siemens.com/news/2026/10/19/active-exploitation-of-cve-2026-110936-in-siemens-software-center/"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-110936"
    }
   ],
   "sourceIdentifier": "productcert@siemens.com",
-  "vulnStatus": "Undergoing Analysis",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [
