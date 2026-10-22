@@ -26,6 +26,18 @@ class RealPages(unittest.TestCase):
         self.assertEqual(by["v28"]["how"].count("\n"), 3)  # the three legal conditions are kept as lines
         self.assertEqual(by["v28"]["example"], "")
 
+    def test_glossary_1_6_stage_wordings(self):
+        gl = g.parse_glossary(H.fx("glossary_table_1_6.html"))
+        self.assertEqual((gl["version"], gl["last_update"], len(gl["fields"])), ("1.6", "21 October 2026", 42))
+        st = {f["nr"]: (f["ew"], f["h72"], f["fr"]) for f in gl["fields"]}
+        self.assertEqual(st["v22"], ("Optional after v17", "Optional after v17", "Required"))  # with and without the space
+        self.assertEqual(st["v26"], ("Required", "n/a", "n/a"))  # "Mandatory"
+        self.assertEqual(st["v26a"], ("Optional", "Carried over", "n/a"))  # "By default copied from previous step"
+        self.assertEqual(st["v29"][1], "Optional if PEC")
+        self.assertEqual(st["v30"], ("n/a", "Optional if PEC", "n/a"))
+        labels = {s for t in st.values() for s in t}
+        self.assertLessEqual(labels, set(H.cg.CHIP_CLASS))  # every label can be rendered
+
     def test_answer_normalisation_changes_presentation_not_wording(self):
         html = g.parse_faq(H.fx("faq_dl.html"))["questions"][30]["html"]  # Q31 has links
         self.assertIn('target="_blank" rel="noopener"', html)
