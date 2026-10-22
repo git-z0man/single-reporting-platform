@@ -26,7 +26,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
           "September", "October", "November", "December"]
 CHIP_CLASS = {"Required": "mandatory", "Optional": "optional", "Carried over": "carried",
-              "n/a": "na", "If available": "conditional"}
+              "n/a": "na", "If available": "conditional",
+              "Optional after v17": "conditional", "Optional if PEC": "conditional"}
 
 CARD = re.compile(r'<details class="faq field" id="(f-[^"]+)">(.*?)</details>', re.S)
 FREF = re.compile(r'<td class="c-field">((?:(?!</td>).)*?)<a class="fieldref" href="#(f-[^"]+)" '

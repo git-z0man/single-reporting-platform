@@ -99,6 +99,14 @@ STAGE = {
     "By default copied from previous step, or updated": "Carried over",
     "N/A": "n/a",
     "Required if such information available": "If available",
+    # Glossary 1.6 (21 October 2026) added these wordings. "Mandatory" and the
+    # shortened "copied" wording mean the same as the older two; the conditional
+    # ones keep their condition in the chip, since nothing else in a card says it.
+    "Mandatory": "Required",
+    "By default copied from previous step": "Carried over",
+    "Optional (after completion of v17)": "Optional after v17",
+    "Optional upon PEC activation": "Optional if PEC",
+    "Optional under PEC activation": "Optional if PEC",
 }
 _NR = re.compile(r"^(\d+|v\d+[a-z]?|i\d+)$")
 
@@ -123,7 +131,7 @@ def parse_glossary(raw):
             continue
         stages = []
         for c in r[7:10]:
-            s = cell_text(c)
+            s = re.sub(r"\s*\(", " (", cell_text(c))  # ENISA writes "Optional(after" and "Optional (after"
             if s not in STAGE:
                 raise ParseError(f"Glossary field {nr}: unknown stage text {s!r}")
             stages.append(STAGE[s])
