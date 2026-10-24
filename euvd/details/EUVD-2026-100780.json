@@ -1,0 +1,261 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-110447"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-110447",
+  "cwes": [
+   "CWE-78"
+  ],
+  "dateAdded": "2026-10-23",
+  "dueDate": "2026-10-26",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://help.nextcloud.com/t/to-collabora-built-in-user-update-asap/250516 ; https://github.com/CollaboraOnline/online/security/advisories/GHSA-g3vx-3m76-fghh ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-110447",
+  "product": "Collabora Online – Built-in CODE Server",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
+  "vendorProject": "Collabora",
+  "vulnerabilityName": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-110447\nGHSA-f97p-r72q-64h2\n",
+  "assigner": "mitre",
+  "baseScore": 9.2,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Oct 14, 2026, 2:27:42 AM",
+  "dateUpdated": "Oct 23, 2026, 8:09:43 PM",
+  "description": "Collabora Online Built-in CODE Server before 26.4.303 (richdocumentscode), a Nextcloud app, allows remote code execution, as exploited in the wild in September and October 2026, a different vulnerability than CVE-2025-66208. This is an OS command injection in proxy.php when the CODE server isn't running (e.g., the product was recently restarted). The vulnerability is not present in standalone Collabora Online servers; only this deployment with CODE Server is affected.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "3dc07247-66e6-3874-88b1-bc4a26439960",
+    "product": {
+     "name": "Collabora Online - Built-in CODE Server",
+     "vendor": {
+      "name": "Collabora"
+     }
+    },
+    "product_version": "0 <26.4.303"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "e2d0ea3f-de17-3211-af18-7958942c0969",
+    "vendor": {
+     "name": "Collabora"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "1acc4d99-23bb-3f3f-a77d-8a5fd1f7f320",
+    "vulnerability": {
+     "aliases": "CVE-2026-110447\nGHSA-f97p-r72q-64h2\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 24, 2026, 7:03:38 AM",
+     "datePublished": "Oct 14, 2026, 3:30:39 AM",
+     "dateUpdated": "Oct 23, 2026, 9:35:40 PM",
+     "description": "Collabora Online Built-in CODE Server before 26.4.303 (richdocumentscode), a Nextcloud app, allows remote code execution, as exploited in the wild in September and October 2026, a different vulnerability than CVE-2025-66208. This is an OS command injection in proxy.php when the CODE server isn't running (e.g., the product was recently restarted). The vulnerability is not present in standalone Collabora Online servers; only this deployment with CODE Server is affected.",
+     "enisa_id": "EUVD-2026-100780\n",
+     "epss": 0.0,
+     "id": "GHSA-f97p-r72q-64h2",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447\nhttps://github.com/CollaboraOnline/richdocumentscode/issues/354\nhttps://help.nextcloud.com/t/to-collabora-built-in-user-update-asap/250516\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-110447\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "e4e95c24-cdd8-30d7-9c11-b7bfc2eda10b",
+    "vulnerability": {
+     "assigner": "mitre",
+     "baseScore": 9.2,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 24, 2026, 7:13:40 AM",
+     "datePublished": "Oct 14, 2026, 2:27:42 AM",
+     "dateUpdated": "Oct 23, 2026, 8:09:43 PM",
+     "description": "Collabora Online Built-in CODE Server before 26.4.303 (richdocumentscode), a Nextcloud app, allows remote code execution, as exploited in the wild in September and October 2026, a different vulnerability than CVE-2025-66208. This is an OS command injection in proxy.php when the CODE server isn't running (e.g., the product was recently restarted). The vulnerability is not present in standalone Collabora Online servers; only this deployment with CODE Server is affected.",
+     "enisa_id": "EUVD-2026-100780\n",
+     "epss": 1.23,
+     "exploitedSince": "Oct 23, 2026, 12:00:00 AM",
+     "id": "CVE-2026-110447",
+     "references": "https://github.com/CollaboraOnline/richdocumentscode/issues/354\nhttps://help.nextcloud.com/t/to-collabora-built-in-user-update-asap/250516\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "2690a3a2-b75d-3d00-91a1-95276e2ca3f0",
+       "product": {
+        "name": "Collabora Online - Built-in CODE Server",
+        "vendor": {
+         "name": "Collabora"
+        }
+       },
+       "product_version": "0 <26.4.303"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "d4186152-7b37-39d0-a357-e88f72c8c2dc",
+       "vendor": {
+        "name": "Collabora"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "f5f0f55d-20d9-3c7d-b6d3-4605a1066c03",
+  "epss": 1.23,
+  "exploitedSince": "Oct 23, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-100780",
+  "references": "https://github.com/CollaboraOnline/richdocumentscode/issues/354\nhttps://help.nextcloud.com/t/to-collabora-built-in-user-update-asap/250516\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-100780",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 23, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "collectionURL": "https://apps.nextcloud.com",
+      "defaultStatus": "affected",
+      "packageName": "richdocumentscode",
+      "product": "Collabora Online - Built-in CODE Server",
+      "repo": "https://github.com/CollaboraOnline/richdocumentscode",
+      "vendor": "Collabora",
+      "versions": [
+       {
+        "lessThan": "26.4.303",
+        "status": "affected",
+        "version": "0",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "cve@mitre.org"
+   }
+  ],
+  "cisaActionDue": "2026-10-26",
+  "cisaExploitAdd": "2026-10-23",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Collabora Online Built-in CODE Server before 26.4.303 (richdocumentscode), a Nextcloud app, allows remote code execution, as exploited in the wild in September and October 2026, a different vulnerability than CVE-2025-66208. This is an OS command injection in proxy.php when the CODE server isn't running (e.g., the product was recently restarted). The vulnerability is not present in standalone Collabora Online servers; only this deployment with CODE Server is affected."
+   }
+  ],
+  "id": "CVE-2026-110447",
+  "lastModified": "2026-10-24T04:18:17.157",
+  "metrics": {
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "PRESENT",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.2,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "cve@mitre.org",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-110447",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-23T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-14T03:17:20.683",
+  "references": [
+   {
+    "source": "cve@mitre.org",
+    "url": "https://github.com/CollaboraOnline/richdocumentscode/issues/354"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://help.nextcloud.com/t/to-collabora-built-in-user-update-asap/250516"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-110447"
+   }
+  ],
+  "sourceIdentifier": "cve@mitre.org",
+  "vulnStatus": "Deferred",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-78"
+     }
+    ],
+    "source": "cve@mitre.org",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
