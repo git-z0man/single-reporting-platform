@@ -178,18 +178,18 @@
  "honeypot": [
   {
    "avg30d": 4.0,
-   "avg7d": 19.0,
+   "avg7d": 20.0,
    "avg90d": 1.0,
    "cisaKevFlag": true,
-   "connections1d": 80,
+   "connections1d": 419,
    "cveId": "CVE-2026-104935",
    "firstSeenAt": "Oct 16, 2026, 3:00:00 AM",
    "isNew": false,
-   "lastSeenAt": "Oct 23, 2026, 7:12:56 AM",
+   "lastSeenAt": "Oct 24, 2026, 7:12:15 AM",
    "product": "Ivanti Connect Secure",
    "source": "shadowserver",
    "trend": "UPTICK",
-   "uniqueIps1d": 6,
+   "uniqueIps1d": 7,
    "vendor": "Ivanti",
    "vulnClass": "vpn",
    "vulnSeverity": "High"
