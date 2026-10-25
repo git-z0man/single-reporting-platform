@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 22, 2026, 8:47:56 PM",
-  "dateUpdated": "Oct 23, 2026, 7:58:23 PM",
+  "dateUpdated": "Oct 24, 2026, 3:55:14 AM",
   "description": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\nOn an affected system, any authenticated user can gain operator privileges and masquerade as a local \"superuser operator\" user. This includes access to functionality that is intended for internal use only and which is not intended to be remotely accessible.\n\nHosted, including Dedicated, versions of VCO were impacted and have already been patched.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -79,12 +79,12 @@
      "baseScore": 9.4,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 24, 2026, 7:14:17 AM",
+     "dataProcessed": "Oct 25, 2026, 6:00:21 AM",
      "datePublished": "Oct 22, 2026, 8:47:56 PM",
-     "dateUpdated": "Oct 23, 2026, 7:58:23 PM",
+     "dateUpdated": "Oct 24, 2026, 3:55:14 AM",
      "description": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\nOn an affected system, any authenticated user can gain operator privileges and masquerade as a local \"superuser operator\" user. This includes access to functionality that is intended for internal use only and which is not intended to be remotely accessible.\n\nHosted, including Dedicated, versions of VCO were impacted and have already been patched.",
      "enisa_id": "EUVD-2026-108511\n",
-     "epss": 0.56,
+     "epss": 0.81,
      "exploitedSince": "Oct 23, 2026, 12:00:00 AM",
      "id": "CVE-2026-114625",
      "references": "https://www.arista.com/en/support/advisories-notices/security-advisory/24838-security-advisory-0199\n",
@@ -136,7 +136,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-114625\nGHSA-964w-6mm5-rm95\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 24, 2026, 7:03:38 AM",
+     "dataProcessed": "Oct 25, 2026, 6:00:33 AM",
      "datePublished": "Oct 22, 2026, 9:32:51 PM",
      "dateUpdated": "Oct 23, 2026, 6:31:34 PM",
      "description": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\nOn an affected system, any authenticated user can gain operator privileges and masquerade as a local \"superuser operator\" user. This includes access to functionality that is intended for internal use only and which is not intended to be remotely accessible.\n\nHosted, including Dedicated, versions of VCO were impacted and have already been patched.",
@@ -150,7 +150,7 @@
    }
   ],
   "enisaUuid": "e0823025-01cd-3081-be04-edc1ad4bc6d0",
-  "epss": 0.56,
+  "epss": 0.81,
   "exploitedSince": "Oct 23, 2026, 12:00:00 AM",
   "id": "EUVD-2026-108511",
   "references": "https://www.arista.com/en/support/advisories-notices/security-advisory/24838-security-advisory-0199\n"
