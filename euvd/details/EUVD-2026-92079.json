@@ -25,11 +25,11 @@
   "aliases": "CVE-2026-105133\nGHSA-fp2j-3cmp-828j\n",
   "assigner": "VulDB",
   "baseScore": 6.9,
-  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:A",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 4, 2026, 5:15:14 AM",
-  "dateUpdated": "Oct 15, 2026, 3:57:04 AM",
-  "description": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 10.3.4 is able to mitigate this issue. It is recommended to upgrade the affected component.",
+  "dateUpdated": "Oct 26, 2026, 2:31:10 PM",
+  "description": "A vulnerability was detected in Ahsay AhsayCBS up to 9.15.2.69/10.3.4.44. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 9.15.2.70 and 10.3.4.45 is able to mitigate this issue. It is recommended to upgrade the affected component. The initial patch did not fix the security vulnerability properly. An update of the CVE entry to reflect this became necessary.",
   "enisaIdAdvisory": [
    {
     "advisory": {
@@ -61,34 +61,1154 @@
   ],
   "enisaIdProduct": [
    {
-    "id": "4f65fde0-f060-3a85-abb8-b295fbdee423",
+    "id": "00d07fe1-7e54-37c1-b759-ed933987e975",
     "product": {
      "name": "AhsayCBS",
      "vendor": {
       "name": "Ahsay"
      }
     },
-    "product_version": "10.3.1"
+    "product_version": "10.3.4.43"
    },
    {
-    "id": "a12d7951-1bcd-3309-ba11-b0f4d9f75c9f",
+    "id": "00f4a7e1-351c-349d-8191-89726e42637d",
     "product": {
      "name": "AhsayCBS",
      "vendor": {
       "name": "Ahsay"
      }
     },
-    "product_version": "10.3.2"
+    "product_version": "9.15.2.59"
    },
    {
-    "id": "bc8d923a-1daa-3fb1-908c-620d812fcfcf",
+    "id": "03b0da5f-f396-3014-8814-e13f635ebd1f",
     "product": {
      "name": "AhsayCBS",
      "vendor": {
       "name": "Ahsay"
      }
     },
-    "product_version": "10.3.0"
+    "product_version": "10.3.4.36"
+   },
+   {
+    "id": "04fd1e16-3f54-36e4-9b4c-d54e4eb835fc",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.7"
+   },
+   {
+    "id": "0540dbf9-e7b8-3a1d-9454-025b3f4487ad",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.6"
+   },
+   {
+    "id": "062b3b3c-23b2-3199-bbb3-8eadd0fbf68f",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.31"
+   },
+   {
+    "id": "09205a65-9a0d-3a01-8f92-bc5cc53906cc",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.20"
+   },
+   {
+    "id": "0b33ea51-f4c1-33b9-a7f5-620790e8479b",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.67"
+   },
+   {
+    "id": "0d988380-b886-3008-8bb0-9220c1f27e7c",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.5"
+   },
+   {
+    "id": "10bfe576-9608-382c-887e-40b497fa8422",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.58"
+   },
+   {
+    "id": "171c33a8-363e-333f-b77f-0f290237c598",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.2"
+   },
+   {
+    "id": "1a87d020-0955-31b6-839f-d9ad64024153",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.68"
+   },
+   {
+    "id": "1b984560-b333-3856-8048-f865f3c0ad14",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.34"
+   },
+   {
+    "id": "1c730493-604d-3430-b503-bbe8c85ff1db",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.8"
+   },
+   {
+    "id": "1ebc29a5-a18f-346e-b63c-f3dd5854bdae",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.8"
+   },
+   {
+    "id": "1f7a0005-6e1a-37e7-a98c-5a8679a1ad91",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.30"
+   },
+   {
+    "id": "203f00fd-3d32-37dd-98a2-c2bd90c0304d",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.19"
+   },
+   {
+    "id": "207fa1c0-fb74-3f00-a75a-4e76ab9af79e",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.51"
+   },
+   {
+    "id": "21993b7d-0d28-35da-ae18-0bb5fdcec58a",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.34"
+   },
+   {
+    "id": "225d19c7-ec22-3319-a936-6e409fa636b5",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.66"
+   },
+   {
+    "id": "254eced7-6f14-3bcc-9020-40cb17c233a4",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.62"
+   },
+   {
+    "id": "29e21462-1d2d-304d-bd73-46ff5a3e0173",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.22"
+   },
+   {
+    "id": "2c69c885-2e47-3659-8914-277f844a6ff8",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.27"
+   },
+   {
+    "id": "2e446b19-f4f3-3542-ab42-8c4864d85eb4",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.47"
+   },
+   {
+    "id": "2e573aaa-5ba4-33e8-817d-fdc8ae13005d",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.31"
+   },
+   {
+    "id": "2f4542c0-4080-381d-b6aa-d9e62e7faf2e",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.21"
+   },
+   {
+    "id": "30aa87f5-89b7-323a-96d6-b5fe19338996",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.13"
+   },
+   {
+    "id": "34767677-10c6-328e-87c0-9a0181fb3904",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.10"
+   },
+   {
+    "id": "39847811-2a14-3a89-8a52-4ffc9f87aa20",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.11"
+   },
+   {
+    "id": "3bdddbe1-a880-33da-92e3-bf0681e6b9ab",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.69"
+   },
+   {
+    "id": "3d917db2-fa89-3932-83a8-4c445c511060",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.16"
+   },
+   {
+    "id": "3d97ef0b-78f1-31be-870e-43477b3e6cf6",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.44"
+   },
+   {
+    "id": "421d8746-d45c-3050-9804-a6593c749487",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.65"
+   },
+   {
+    "id": "4315e246-ad2f-3404-8e1f-13e01c621381",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.4"
+   },
+   {
+    "id": "43e78b9b-d64b-3935-b612-cd7b23da3442",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.23"
+   },
+   {
+    "id": "447fcac8-9e59-3f8a-a61c-85e17f04d6f3",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.33"
+   },
+   {
+    "id": "476bfb3b-cc7a-3912-8a61-94e96693b6a8",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.63"
+   },
+   {
+    "id": "4cc1d803-a060-3a51-b0e0-7727d0410a38",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.9"
+   },
+   {
+    "id": "4ed5b384-61e9-3e09-844f-31be5e9c2586",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.48"
+   },
+   {
+    "id": "59699af1-a0e5-3c37-bd04-7753c081085b",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.22"
+   },
+   {
+    "id": "5a114b78-5838-3389-94d7-14fc2cd5490a",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.1"
+   },
+   {
+    "id": "5b7c36fa-7819-32fb-a7e6-ca8a6ff57120",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.28"
+   },
+   {
+    "id": "5ff686a7-c079-3d0f-8483-dc31c6752f01",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.42"
+   },
+   {
+    "id": "6302bb89-57d6-3239-8f91-d19e1c60d039",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.19"
+   },
+   {
+    "id": "63308f28-bf3e-3102-9a0a-9a3108e1b5a1",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.46"
+   },
+   {
+    "id": "643330f8-7502-386f-99c3-29449dc82022",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.14"
+   },
+   {
+    "id": "6643d9df-c908-3bbe-b358-d26d73ee2c0d",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.32"
+   },
+   {
+    "id": "6bf67605-fcb6-3f52-8022-84133b9ff99c",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.60"
+   },
+   {
+    "id": "6c0a1630-c662-3a39-8d4d-6b1e7fc4436a",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.30"
+   },
+   {
+    "id": "6d702d2a-4ecd-3c32-8a7f-0d80b2e26721",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.44"
+   },
+   {
+    "id": "6ee693d0-1d0b-3494-a877-13f3d6af319a",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.50"
+   },
+   {
+    "id": "700ca1c5-f6c5-3504-a7ec-c4feb62055d4",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.18"
+   },
+   {
+    "id": "701b243e-ff15-3104-9110-00426e4cfae6",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.42"
+   },
+   {
+    "id": "70a2048c-67ff-37d7-891b-f23fb0526c59",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.37"
+   },
+   {
+    "id": "7119e9ab-cc1d-3f23-a844-ac1d0e4664ff",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.54"
+   },
+   {
+    "id": "72430837-5ee1-356b-a752-b7a79918636f",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.28"
+   },
+   {
+    "id": "7489fc84-7a1e-3acd-8ddb-993e92634010",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.45"
+   },
+   {
+    "id": "74ab74ec-ebc6-3aaf-9d05-d4ea97cd7990",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.17"
+   },
+   {
+    "id": "77051803-dc85-326d-b9df-8131a3a387cb",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.20"
+   },
+   {
+    "id": "811a8681-02ba-358c-9a45-82f9a000c9de",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.0"
+   },
+   {
+    "id": "817b7dfa-000d-3402-bb93-30d5526f915a",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.16"
+   },
+   {
+    "id": "81830dab-e0f1-3356-8d39-a386d9675644",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.0"
+   },
+   {
+    "id": "82a4bb8d-5eca-3a92-be08-8c83e806a5ca",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.64"
+   },
+   {
+    "id": "82f27784-e91b-3197-b224-afe006f224bc",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.18"
+   },
+   {
+    "id": "83b4cbe8-26be-3838-b171-81b1a76079f4",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.15"
+   },
+   {
+    "id": "85abd074-0cf6-3518-b47d-68326dfc1d20",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.26"
+   },
+   {
+    "id": "86495bf9-8916-383b-ac0f-7e4a692547aa",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.40"
+   },
+   {
+    "id": "88530f73-8088-3938-813a-f939a85c1692",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.25"
+   },
+   {
+    "id": "8a88be4c-e8d5-3669-bbda-4ebd3d006307",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.35"
+   },
+   {
+    "id": "8c523e62-f72e-3cea-ba61-c08414bc582a",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.12"
+   },
+   {
+    "id": "945a3366-8369-3cc8-978d-0942e4589933",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.14"
+   },
+   {
+    "id": "96b935a3-148d-37fe-b115-c1dd395c8382",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.32"
+   },
+   {
+    "id": "97341219-97d0-3e61-bcc9-b742773e936e",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.29"
+   },
+   {
+    "id": "a0e2fce3-c203-3deb-8dc2-e07c9a75a820",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.29"
+   },
+   {
+    "id": "a1b15d43-8802-37df-a2c6-37da95d69b3c",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.9"
+   },
+   {
+    "id": "a27eca69-c90b-3850-8ce7-bb3ddf18d4cc",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.24"
+   },
+   {
+    "id": "a5957d93-de1c-3f53-9b3d-905605d5f054",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.57"
+   },
+   {
+    "id": "a5ea1d62-0fd7-3074-989d-9c0e117588df",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.15"
+   },
+   {
+    "id": "aa07f050-4130-3388-8c84-60e8352e829e",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.17"
+   },
+   {
+    "id": "aafefc19-e3cc-3b8d-82fe-2c264ce62b02",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.3"
+   },
+   {
+    "id": "ab06c330-04b1-3562-b22a-5ba75f5599fa",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.13"
+   },
+   {
+    "id": "ad384a26-dbda-3bd6-8e2a-f9b81e0e66bc",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.38"
+   },
+   {
+    "id": "b0975b59-2720-32c1-aa90-ca62e3f6bd3f",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.43"
+   },
+   {
+    "id": "b0b959a6-3a73-3ce9-9887-e898fb29ec44",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.39"
+   },
+   {
+    "id": "b272a732-bd21-3a1c-a2e6-5d23eaa863b4",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.27"
+   },
+   {
+    "id": "b43b64e2-9081-3e8c-be0e-0a76f1d9f42b",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.7"
+   },
+   {
+    "id": "b70ac3b3-91f6-32f2-bc0b-36ee688cbbf3",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.41"
+   },
+   {
+    "id": "b7ff1ecb-0965-37cc-ac40-943b3a843079",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.56"
+   },
+   {
+    "id": "b803720e-fb63-30e6-b9de-ece67e715053",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.4"
+   },
+   {
+    "id": "bea4bf2f-7a1f-387f-99cf-a9d7f2dcaf06",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.52"
+   },
+   {
+    "id": "c42156bb-1743-33d7-9cc8-75d415796155",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.11"
+   },
+   {
+    "id": "c82cfdaf-dc35-3d05-833c-2e416fd356ac",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.24"
+   },
+   {
+    "id": "c8a27bd4-215c-3105-bd9a-27673af9cbe9",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.1"
+   },
+   {
+    "id": "c9f15fdc-d320-3b08-b48d-c580b945580e",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.41"
+   },
+   {
+    "id": "cbe7ca76-beea-3b9e-b709-a50ef315887c",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.2"
+   },
+   {
+    "id": "cc226460-46db-3ccd-9cc1-d985c5b3ad0d",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.12"
+   },
+   {
+    "id": "cdf7d156-f7d1-3104-a4af-d2ca7a968a15",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.49"
+   },
+   {
+    "id": "d1c89659-db0d-319b-bad1-9660be6e96cb",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.61"
+   },
+   {
+    "id": "d86737ae-60ab-348f-a2c9-6cf3a44af216",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.38"
+   },
+   {
+    "id": "daae1bd2-a074-394f-a886-efe8731a9597",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.53"
+   },
+   {
+    "id": "dc4b51c4-3359-3158-8871-78771387ab1b",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.21"
+   },
+   {
+    "id": "defe2a5c-ba96-39f2-a1b1-09edd96ec25a",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.36"
+   },
+   {
+    "id": "df79767c-e706-3f34-9857-5aa387debcde",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.3"
+   },
+   {
+    "id": "e10e7c85-8511-3cc2-95bf-313988537387",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.35"
+   },
+   {
+    "id": "e5060e80-fa1e-33e9-ac26-428d5254f8ac",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.26"
+   },
+   {
+    "id": "e507bc98-cd28-3df9-8159-6094f1cf1e05",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.39"
+   },
+   {
+    "id": "e53f3638-e673-37d1-b9f7-eb68349e88bf",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.40"
+   },
+   {
+    "id": "e5efa9b2-57ba-3204-a93d-01defc6dab4e",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.23"
+   },
+   {
+    "id": "e7020078-0ec1-337d-a1ed-adef98ec3be5",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.37"
+   },
+   {
+    "id": "eba20ae6-6834-34d9-a51b-f9db72a31f29",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.5"
+   },
+   {
+    "id": "ec12c650-8a4b-3650-89fb-2ae4109b7580",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.55"
+   },
+   {
+    "id": "f4f04d1b-265c-3d43-8104-58d29ddd0abf",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.10"
+   },
+   {
+    "id": "f7f382ee-7f38-3cd2-8529-843ade681851",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.6"
+   },
+   {
+    "id": "f96dd5a3-5530-3389-b768-4c9ea02e740e",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "10.3.4.33"
+   },
+   {
+    "id": "ff5fb6ac-1b7f-34a4-a3fb-9e786be26632",
+    "product": {
+     "name": "AhsayCBS",
+     "vendor": {
+      "name": "Ahsay"
+     }
+    },
+    "product_version": "9.15.2.25"
    }
   ],
   "enisaIdVendor": [
@@ -105,48 +1225,1168 @@
     "vulnerability": {
      "assigner": "VulDB",
      "baseScore": 6.9,
-     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:A",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 16, 2026, 7:21:13 AM",
+     "dataProcessed": "Oct 27, 2026, 6:00:20 AM",
      "datePublished": "Oct 4, 2026, 5:15:14 AM",
-     "dateUpdated": "Oct 15, 2026, 3:57:04 AM",
-     "description": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 10.3.4 is able to mitigate this issue. It is recommended to upgrade the affected component.",
+     "dateUpdated": "Oct 26, 2026, 2:31:10 PM",
+     "description": "A vulnerability was detected in Ahsay AhsayCBS up to 9.15.2.69/10.3.4.44. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 9.15.2.70 and 10.3.4.45 is able to mitigate this issue. It is recommended to upgrade the affected component. The initial patch did not fix the security vulnerability properly. An update of the CVE entry to reflect this became necessary.",
      "enisa_id": "EUVD-2026-92079\n",
-     "epss": 0.67,
+     "epss": 79.24,
      "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
      "id": "CVE-2026-105133",
-     "references": "https://vuldb.com/vuln/413350\nhttps://vuldb.com/vuln/413350/cti\nhttps://vuldb.com/cve/CVE-2026-105133\nhttps://vuldb.com/submit/942688\nhttps://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4\n",
+     "references": "https://vuldb.com/vuln/413350\nhttps://vuldb.com/vuln/413350/cti\nhttps://vuldb.com/cve/CVE-2026-105133\nhttps://vuldb.com/submit/942688\nhttps://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update\nhttps://www.huntress.com/blog/ahsaycbs-flaws-exploit\n",
      "status": "PUBLISHED",
      "vulnerabilityProduct": [
       {
-       "id": "756432cd-108a-38fb-a33d-2b785fd37edf",
+       "id": "04e91b6a-9d79-39a3-8170-319c4e01930c",
        "product": {
         "name": "AhsayCBS",
         "vendor": {
          "name": "Ahsay"
         }
        },
-       "product_version": "10.3.2"
+       "product_version": "9.15.2.45"
       },
       {
-       "id": "9bb0c3e4-9c95-3e64-ab6a-7253062c86b7",
+       "id": "09c437bd-bc4d-348e-9bbb-1f0b6ff36452",
        "product": {
         "name": "AhsayCBS",
         "vendor": {
          "name": "Ahsay"
         }
        },
-       "product_version": "10.3.1"
+       "product_version": "9.15.2.52"
       },
       {
-       "id": "c94a89bd-88a7-34c5-bfad-965c1ac1ec2b",
+       "id": "0a78b869-c70c-3557-92a3-ed27233310f0",
        "product": {
         "name": "AhsayCBS",
         "vendor": {
          "name": "Ahsay"
         }
        },
-       "product_version": "10.3.0"
+       "product_version": "9.15.2.53"
+      },
+      {
+       "id": "12643593-bc74-3756-a80f-c65c309cddca",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.37"
+      },
+      {
+       "id": "1481e3a9-5a1e-3d08-a754-7ad80b0644f7",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.10"
+      },
+      {
+       "id": "15905281-504f-3d3b-ae15-66d525b0b389",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.11"
+      },
+      {
+       "id": "174a940b-45a4-3731-a496-b4eb8db00fa8",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.30"
+      },
+      {
+       "id": "1806aea5-5280-3fe7-a859-2996eb238430",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.33"
+      },
+      {
+       "id": "1b88e28c-5c77-3291-b207-66637655b7c8",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.30"
+      },
+      {
+       "id": "1c4505ed-c9e8-34bb-8334-97751924083b",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.40"
+      },
+      {
+       "id": "1dcca5fa-bb62-3635-8752-898cbe612f8e",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.31"
+      },
+      {
+       "id": "1f245471-0d4b-339e-a6c1-153c9cbd2b5c",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.2"
+      },
+      {
+       "id": "2261bb2f-86f0-3fbd-be18-7acc60eba23b",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.14"
+      },
+      {
+       "id": "23f1ff86-8513-3f29-bd7a-d01e4eb0c64c",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.28"
+      },
+      {
+       "id": "24bc1ec6-2e0d-3eeb-a9f9-a3144eced4eb",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.17"
+      },
+      {
+       "id": "24c78260-4432-33bf-a2ee-42894c6df5b7",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.1"
+      },
+      {
+       "id": "2ea5de31-3280-3a83-9a99-10f050392f6a",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.9"
+      },
+      {
+       "id": "3497a911-75e2-30f1-a0d1-5769cb00bc9a",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.20"
+      },
+      {
+       "id": "358b9cc3-55d5-31e0-9ff6-a5ff7839e811",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.8"
+      },
+      {
+       "id": "397a5f5c-34c2-3dfc-b393-7d694152aa1c",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.62"
+      },
+      {
+       "id": "39f1cb21-8b9c-33a9-a056-120d2bbaad73",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.32"
+      },
+      {
+       "id": "3c417d35-8504-356e-b5c2-99c044ac86c3",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.22"
+      },
+      {
+       "id": "3ca8d9e9-60a2-3444-b669-9f7ce8a71e48",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.50"
+      },
+      {
+       "id": "4067a127-42fc-30c5-8b11-7cfc0943ec40",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.63"
+      },
+      {
+       "id": "41198384-710c-31e9-acaa-86a0775310ac",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.19"
+      },
+      {
+       "id": "42f4224d-57c9-3deb-9daf-8b256c2e86f2",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.56"
+      },
+      {
+       "id": "43acc980-a4ed-3d8d-a687-22329c391e44",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.36"
+      },
+      {
+       "id": "43f371d5-8680-3449-a4d7-290e11c34b74",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.10"
+      },
+      {
+       "id": "4691dd37-52ee-35e9-9bde-9631e2f765a4",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.41"
+      },
+      {
+       "id": "497b0b3e-93a8-30ed-b970-2a312c8b6bb4",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.64"
+      },
+      {
+       "id": "49aaa58b-023c-37be-9a2b-1599a93bbb3b",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.4"
+      },
+      {
+       "id": "4cece421-218b-3a97-bd87-af33a91863f9",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.67"
+      },
+      {
+       "id": "4d6f2446-ce78-3246-8488-8ccb37ce8b70",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.18"
+      },
+      {
+       "id": "4e46fe5f-1fba-38a4-8fcf-e502d49fcec2",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.17"
+      },
+      {
+       "id": "4f92120d-774f-3471-a6e2-2be75aafda8a",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.24"
+      },
+      {
+       "id": "4ff57b30-c638-3ebb-a619-142cc8f26143",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.57"
+      },
+      {
+       "id": "515fbae4-d603-3989-8766-fdfe557b6cda",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.59"
+      },
+      {
+       "id": "5429b988-10cf-37f5-8e2d-04a65876ed91",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.3"
+      },
+      {
+       "id": "5744a234-29b8-3d3e-ba59-d4068b2418ec",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.58"
+      },
+      {
+       "id": "59e44387-25b1-397a-ab6e-52ab0ce620cf",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.3"
+      },
+      {
+       "id": "5a4eef49-7e13-3852-a05c-5a264d56fc8d",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.14"
+      },
+      {
+       "id": "5c3bb267-8450-3876-8a97-3f70e1b3e79c",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.27"
+      },
+      {
+       "id": "5c4ce976-26b9-3ede-96eb-7eeace48c50b",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.46"
+      },
+      {
+       "id": "6282819c-1e9c-3578-af85-8709f7595a51",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.47"
+      },
+      {
+       "id": "6311c251-e40e-33b4-a678-18ae0c9f363c",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.38"
+      },
+      {
+       "id": "63e92aa6-7bda-3121-81f0-1fde7b216faf",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.69"
+      },
+      {
+       "id": "6560dc97-4c6d-3977-80d2-a640a03030d5",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.42"
+      },
+      {
+       "id": "65a44d46-1688-3beb-b42b-1821cf8616f9",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.27"
+      },
+      {
+       "id": "67fb63c9-9c92-39fb-8bf6-84bcf32bfcbe",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.29"
+      },
+      {
+       "id": "693a4c9b-ba22-314c-927e-06c0c6174d7c",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.68"
+      },
+      {
+       "id": "6ab89f67-b396-3d6b-9fac-f78eb247b1e9",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.43"
+      },
+      {
+       "id": "6cbb596a-6134-323d-b6b2-0d412eae40f4",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.34"
+      },
+      {
+       "id": "7221bb55-9da9-30a4-afbb-a14bfd42eb39",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.19"
+      },
+      {
+       "id": "73d48b0c-db70-3c01-be41-5178f14c8434",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.4"
+      },
+      {
+       "id": "79703ef1-3764-3ff2-a2b8-8eab4dc4c2b0",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.42"
+      },
+      {
+       "id": "7bc8de49-47a9-34c3-9d61-0e0193cf824c",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.21"
+      },
+      {
+       "id": "7daf89ff-d64b-3a00-ad6a-f6bcc73d76d9",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.11"
+      },
+      {
+       "id": "7f3e6b65-6650-3abc-af58-c5338e8e76e5",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.16"
+      },
+      {
+       "id": "842e2296-44ae-3441-96a0-ef135474ada8",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.2"
+      },
+      {
+       "id": "84b8007f-9236-3ab5-b07b-af379cfe6fa8",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.60"
+      },
+      {
+       "id": "869fb643-3680-3af2-a3de-bf2975c6dcb1",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.13"
+      },
+      {
+       "id": "8c0bb6e1-7754-32ed-832d-eb6bd8f493f0",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.41"
+      },
+      {
+       "id": "8e5d94e7-f3e6-3471-b71c-a322ecaf41a4",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.26"
+      },
+      {
+       "id": "908cd347-48e2-3b9f-8f10-f936bf42e6e8",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.44"
+      },
+      {
+       "id": "926afcee-15fc-3083-841f-e3a8d00f0058",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.1"
+      },
+      {
+       "id": "93103de0-1fe7-3e24-8531-49ee7c73f7bc",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.32"
+      },
+      {
+       "id": "96308407-5754-3e99-adae-bd56fd322262",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.39"
+      },
+      {
+       "id": "966bf4a7-7140-3fd6-9343-e274e6d85e46",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.23"
+      },
+      {
+       "id": "9a43f52a-efb8-3522-8099-ed9136374397",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.7"
+      },
+      {
+       "id": "9eb711b8-9bd0-399a-b405-dae558346892",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.20"
+      },
+      {
+       "id": "a203a6e4-1197-39d4-b961-437317208613",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.35"
+      },
+      {
+       "id": "a2387f5c-1260-3742-b7a2-4faa1afbaf85",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.7"
+      },
+      {
+       "id": "a24b9f92-2c67-31d4-8c44-eb2929e5cc46",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.0"
+      },
+      {
+       "id": "a26573bc-1576-34c5-8394-55e746ecab77",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.26"
+      },
+      {
+       "id": "a2e519c3-d32b-3c53-84fc-7c35da411342",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.43"
+      },
+      {
+       "id": "a4311baa-7858-3383-adfe-6ad626fbefd3",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.49"
+      },
+      {
+       "id": "a4549255-383a-376f-8896-39c3c6b35b14",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.6"
+      },
+      {
+       "id": "a542a5de-88b3-3754-85ab-456439e7a153",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.31"
+      },
+      {
+       "id": "a6e803f8-0a7b-362a-957c-ef23c621f728",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.61"
+      },
+      {
+       "id": "ab856d76-c4be-39d6-bedf-31544ae22a31",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.24"
+      },
+      {
+       "id": "ae4bd2ed-060c-338d-b048-418e9bea4557",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.39"
+      },
+      {
+       "id": "b1e7a5e9-d8a9-3c3d-a4c4-80fb9b2e5b8f",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.15"
+      },
+      {
+       "id": "b39873a8-b0ca-308d-913d-bafa081657e7",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.29"
+      },
+      {
+       "id": "bcb97b47-e5fd-396d-8be1-2007b05cfe5a",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.40"
+      },
+      {
+       "id": "bd5d0e4b-8983-3154-94a3-bd1accb0bfd5",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.36"
+      },
+      {
+       "id": "bea76a1f-65b2-36da-ab4c-43063e22b1f3",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.21"
+      },
+      {
+       "id": "bedde6bc-a501-3d7c-a249-e96ca5af107c",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.12"
+      },
+      {
+       "id": "bf094903-0c14-3194-b8bd-8e227b9b0617",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.5"
+      },
+      {
+       "id": "c2263f1c-c799-3fbb-aa08-76d68d98c2ba",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.6"
+      },
+      {
+       "id": "c315a44c-ec8a-3a7c-8324-76107dcfc339",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.38"
+      },
+      {
+       "id": "c3bfe9dd-b987-3c69-b219-add5c71d6dce",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.16"
+      },
+      {
+       "id": "c81a5670-5bc1-3229-8571-ded90f9471c1",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.34"
+      },
+      {
+       "id": "c8f99462-b9fd-3d65-9f7b-70fb058cd3e0",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.44"
+      },
+      {
+       "id": "ce8a3c87-09b1-3e4f-9ff1-d77656622015",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.55"
+      },
+      {
+       "id": "d156de01-2eaf-3130-967a-3da1dfa10bf1",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.54"
+      },
+      {
+       "id": "d264e2d3-b631-3476-b307-3e98e3e35d48",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.22"
+      },
+      {
+       "id": "d7a86478-d2fd-368f-b0ea-92d0e4c29b59",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.23"
+      },
+      {
+       "id": "d8ef9e86-f3b8-321f-ac5b-bd0a073d33c5",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.8"
+      },
+      {
+       "id": "d9c9fcb4-bb0a-3540-8956-c1cea07702ce",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.28"
+      },
+      {
+       "id": "db9446c8-b49f-3145-bb04-cf151ef2569b",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.25"
+      },
+      {
+       "id": "de602291-380b-3ab4-80ff-eff936bb6478",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.12"
+      },
+      {
+       "id": "de9e097e-4560-3c90-b873-1468079fa89f",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.51"
+      },
+      {
+       "id": "dff5bf0b-6ff5-365f-91a9-da8aa5318f5c",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.5"
+      },
+      {
+       "id": "e26cd686-bb27-3ac7-a3b5-ea0a6138e85f",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.33"
+      },
+      {
+       "id": "e28b22f6-2ccd-329d-9008-1f13bf90ef0a",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.13"
+      },
+      {
+       "id": "e65b5b64-9158-39c0-a5ae-a846c5cbf15a",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.35"
+      },
+      {
+       "id": "e7b3fc1d-a0bc-369e-a2cf-d5a0429d653f",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.0"
+      },
+      {
+       "id": "eacca75e-dec3-361e-9f92-853d09d46165",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.18"
+      },
+      {
+       "id": "eed8064c-fed2-3443-8387-bd6bf3a620c1",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.9"
+      },
+      {
+       "id": "eedc75fb-ea37-3fe7-b98f-bd8ef4f49d8a",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.15"
+      },
+      {
+       "id": "ef68850c-c4ca-30f6-95cb-c6fdc206e260",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.37"
+      },
+      {
+       "id": "ef893c41-faca-3bf5-a45c-26ec157349f3",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.65"
+      },
+      {
+       "id": "f2d607e9-bdaf-3579-9393-e072b4f68a3a",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "10.3.4.25"
+      },
+      {
+       "id": "f5bd2f8a-7173-3ddb-96d8-9b2ae1886f13",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.66"
+      },
+      {
+       "id": "fd943d6e-7d66-330c-906f-30ba468ef7fa",
+       "product": {
+        "name": "AhsayCBS",
+        "vendor": {
+         "name": "Ahsay"
+        }
+       },
+       "product_version": "9.15.2.48"
       }
      ],
      "vulnerabilityVendor": [
@@ -164,24 +2404,24 @@
     "vulnerability": {
      "aliases": "CVE-2026-105133\nGHSA-fp2j-3cmp-828j\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 16, 2026, 7:04:58 AM",
+     "dataProcessed": "Oct 27, 2026, 6:00:40 AM",
      "datePublished": "Oct 4, 2026, 9:30:20 AM",
-     "dateUpdated": "Oct 14, 2026, 9:33:05 PM",
+     "dateUpdated": "Oct 26, 2026, 3:34:17 PM",
      "description": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 10.3.4 is able to mitigate this issue. It is recommended to upgrade the affected component.",
      "enisa_id": "EUVD-2026-92079\n",
      "epss": 0.0,
      "id": "GHSA-fp2j-3cmp-828j",
-     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-105133\nhttps://vuldb.com/cve/CVE-2026-105133\nhttps://vuldb.com/submit/942688\nhttps://vuldb.com/vuln/413350\nhttps://vuldb.com/vuln/413350/cti\nhttps://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-105133\n",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-105133\nhttps://vuldb.com/cve/CVE-2026-105133\nhttps://vuldb.com/submit/942688\nhttps://vuldb.com/vuln/413350\nhttps://vuldb.com/vuln/413350/cti\nhttps://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update\nhttps://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-105133\nhttps://www.huntress.com/blog/ahsaycbs-flaws-exploit\n",
      "vulnerabilityProduct": [],
      "vulnerabilityVendor": []
     }
    }
   ],
   "enisaUuid": "be5b32f1-ddaf-3b64-99ee-8f109ece9151",
-  "epss": 0.67,
+  "epss": 79.24,
   "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
   "id": "EUVD-2026-92079",
-  "references": "https://vuldb.com/vuln/413350\nhttps://vuldb.com/vuln/413350/cti\nhttps://vuldb.com/cve/CVE-2026-105133\nhttps://vuldb.com/submit/942688\nhttps://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4\n"
+  "references": "https://vuldb.com/vuln/413350\nhttps://vuldb.com/vuln/413350/cti\nhttps://vuldb.com/cve/CVE-2026-105133\nhttps://vuldb.com/submit/942688\nhttps://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update\nhttps://www.huntress.com/blog/ahsaycbs-flaws-exploit\n"
  },
  "honeypot": [],
  "id": "EUVD-2026-92079",
@@ -189,6 +2429,10 @@
   {
    "dateAdded": "Oct 14, 2026, 12:00:00 AM",
    "source": "CISA"
+  },
+  {
+   "dateAdded": "Oct 23, 2026, 12:00:00 AM",
+   "source": "EUKEV"
   }
  ],
  "nvd": {
@@ -207,19 +2451,471 @@
       "versions": [
        {
         "status": "affected",
-        "version": "10.3.0"
+        "version": "9.15.2.0"
        },
        {
         "status": "affected",
-        "version": "10.3.1"
+        "version": "9.15.2.1"
        },
        {
         "status": "affected",
-        "version": "10.3.2"
+        "version": "9.15.2.2"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.3"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.4"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.5"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.6"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.7"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.8"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.9"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.10"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.11"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.12"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.13"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.14"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.15"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.16"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.17"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.18"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.19"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.20"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.21"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.22"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.23"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.24"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.25"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.26"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.27"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.28"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.29"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.30"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.31"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.32"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.33"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.34"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.35"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.36"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.37"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.38"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.39"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.40"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.41"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.42"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.43"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.44"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.45"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.46"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.47"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.48"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.49"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.50"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.51"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.52"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.53"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.54"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.55"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.56"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.57"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.58"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.59"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.60"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.61"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.62"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.63"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.64"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.65"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.66"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.67"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.68"
+       },
+       {
+        "status": "affected",
+        "version": "9.15.2.69"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.0"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.1"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.2"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.3"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.4"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.5"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.6"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.7"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.8"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.9"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.10"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.11"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.12"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.13"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.14"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.15"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.16"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.17"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.18"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.19"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.20"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.21"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.22"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.23"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.24"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.25"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.26"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.27"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.28"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.29"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.30"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.31"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.32"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.33"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.34"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.35"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.36"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.37"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.38"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.39"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.40"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.41"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.42"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.43"
+       },
+       {
+        "status": "affected",
+        "version": "10.3.4.44"
        },
        {
         "status": "unaffected",
-        "version": "10.3.4"
+        "version": "9.15.2.70"
+       },
+       {
+        "status": "unaffected",
+        "version": "10.3.4.45"
        }
       ]
      }
@@ -238,8 +2934,15 @@
       "cpeMatch": [
        {
         "criteria": "cpe:2.3:a:ahsay:cloud_backup_suite:*:*:*:*:*:*:*:*",
-        "matchCriteriaId": "68F3128A-420B-4BD1-BC88-CBEC1BADAC57",
-        "versionEndExcluding": "10.3.4",
+        "matchCriteriaId": "D6A20B7D-F0A0-45EC-B5BC-C3CDE88FE850",
+        "versionEndExcluding": "9.15.2.70",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:ahsay:cloud_backup_suite:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "20845190-89C7-44CE-A749-495EB194808C",
+        "versionEndExcluding": "10.3.4.45",
+        "versionStartIncluding": "10.1.0",
         "vulnerable": true
        }
       ],
@@ -253,11 +2956,11 @@
   "descriptions": [
    {
     "lang": "en",
-    "value": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 10.3.4 is able to mitigate this issue. It is recommended to upgrade the affected component."
+    "value": "A vulnerability was detected in Ahsay AhsayCBS up to 9.15.2.69/10.3.4.44. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 9.15.2.70 and 10.3.4.45 is able to mitigate this issue. It is recommended to upgrade the affected component. The initial patch did not fix the security vulnerability properly. An update of the CVE entry to reflect this became necessary."
    }
   ],
   "id": "CVE-2026-105133",
-  "lastModified": "2026-10-15T13:47:06.283",
+  "lastModified": "2026-10-26T18:07:09.000",
   "metrics": {
    "cvssMetricV2": [
     {
@@ -316,10 +3019,10 @@
       "attackRequirements": "NONE",
       "attackVector": "NETWORK",
       "availabilityRequirement": "NOT_DEFINED",
-      "baseScore": 5.5,
+      "baseScore": 6.9,
       "baseSeverity": "MEDIUM",
       "confidentialityRequirement": "NOT_DEFINED",
-      "exploitMaturity": "PROOF_OF_CONCEPT",
+      "exploitMaturity": "ATTACKED",
       "integrityRequirement": "NOT_DEFINED",
       "modifiedAttackComplexity": "NOT_DEFINED",
       "modifiedAttackRequirements": "NOT_DEFINED",
@@ -339,7 +3042,7 @@
       "subIntegrityImpact": "NONE",
       "userInteraction": "NONE",
       "valueDensity": "NOT_DEFINED",
-      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
       "version": "4.0",
       "vulnAvailabilityImpact": "LOW",
       "vulnConfidentialityImpact": "LOW",
@@ -410,9 +3113,16 @@
    {
     "source": "cna@vuldb.com",
     "tags": [
-     "Release Notes"
+     "Vendor Advisory"
     ],
-    "url": "https://www.ahsay.com/en/support/help-centre/release-notes/cbs/v10.3.4"
+    "url": "https://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update"
+   },
+   {
+    "source": "cna@vuldb.com",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://www.huntress.com/blog/ahsaycbs-flaws-exploit"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
