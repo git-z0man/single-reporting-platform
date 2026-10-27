@@ -1334,6 +1334,40 @@
      "to": "2026-10-20"
     }
    ]
+  },
+  {
+   "id": "EUVD-2026-92079",
+   "cve": "CVE-2026-105133",
+   "row": 1839,
+   "dateAdded": "2026-10-23",
+   "origin": "CNW",
+   "vendor": "Ahsay",
+   "product": "AhsayCBS",
+   "notes": "https://github.com/advisories/GHSA-FP2J-3CMP-828J",
+   "cisa": "2026-10-14",
+   "inserted_after": "2026-10-23",
+   "inserted_before": "2026-10-26",
+   "backdated_days": 0,
+   "first_seen": "2026-10-27",
+   "first_seen_after": "2026-10-26",
+   "changes": []
+  },
+  {
+   "id": "EUVD-2026-92078",
+   "cve": "CVE-2026-105134",
+   "row": 1840,
+   "dateAdded": "2026-10-23",
+   "origin": "CNW",
+   "vendor": "Ahsay",
+   "product": "AhsayCBS",
+   "notes": "https://github.com/advisories/GHSA-MXJ3-2X8Q-2RH9",
+   "cisa": "2026-10-14",
+   "inserted_after": "2026-10-23",
+   "inserted_before": "2026-10-26",
+   "backdated_days": 0,
+   "first_seen": "2026-10-27",
+   "first_seen_after": "2026-10-26",
+   "changes": []
   }
  ],
  "removed": []
