@@ -1,5 +1,10 @@
 {
- "cert_links": [],
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-109618"
+  ]
+ ],
  "cisa_kev": {
   "cveID": "CVE-2026-109618",
   "cwes": [
@@ -27,7 +32,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 21, 2026, 1:48:34 PM",
-  "dateUpdated": "Oct 23, 2026, 2:07:55 PM",
+  "dateUpdated": "Oct 27, 2026, 12:58:23 PM",
   "description": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
   "enisaIdAdvisory": [
    {
@@ -1855,7 +1860,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:06:07 PM",
-     "dateUpdated": "Oct 24, 2026, 12:29:43 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:02 AM",
      "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:87151",
      "references": "https://access.redhat.com/errata/RHSA-2026:87151\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87151.json\n",
@@ -3800,7 +3805,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 5:04:21 PM",
-     "dateUpdated": "Oct 23, 2026, 5:58:03 PM",
+     "dateUpdated": "Oct 26, 2026, 7:24:05 PM",
      "description": "Security update for php8",
      "id": "openSUSE-SU-2026:22151-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_22151-1.json\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -6150,7 +6155,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 7:39:20 PM",
-     "dateUpdated": "Oct 24, 2026, 12:34:23 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:08 AM",
      "description": "Red Hat Security Advisory: php:8.2 security update",
      "id": "RHSA-2026:88835",
      "references": "https://access.redhat.com/errata/RHSA-2026:88835\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88835.json\n",
@@ -7870,7 +7875,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 23, 2026, 5:57:39 PM",
+     "dateUpdated": "Oct 26, 2026, 7:23:29 PM",
      "description": "php8-8.5.12-1.1 on GA media",
      "id": "openSUSE-SU-2026:12219-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12219-1.json\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -9707,7 +9712,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:11:09 PM",
-     "dateUpdated": "Oct 24, 2026, 12:34:03 AM",
+     "dateUpdated": "Oct 27, 2026, 4:09:03 AM",
      "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:87070",
      "references": "https://access.redhat.com/errata/RHSA-2026:87070\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87070.json\n",
@@ -11625,7 +11630,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 4:57:23 PM",
-     "dateUpdated": "Oct 23, 2026, 5:55:22 PM",
+     "dateUpdated": "Oct 26, 2026, 7:19:09 PM",
      "description": "Security update for php8",
      "id": "SUSE-SU-2026:24271-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_24271-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -13975,7 +13980,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 7:29:21 PM",
-     "dateUpdated": "Oct 24, 2026, 12:34:23 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:07 AM",
      "description": "Red Hat Security Advisory: php:8.2 security update",
      "id": "RHSA-2026:88834",
      "references": "https://access.redhat.com/errata/RHSA-2026:88834\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88834.json\n",
@@ -14750,7 +14755,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 2:34:42 AM",
-     "dateUpdated": "Oct 24, 2026, 12:34:20 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:04 AM",
      "description": "Red Hat Security Advisory: php:7.4 security update",
      "id": "RHSA-2026:88533",
      "references": "https://access.redhat.com/errata/RHSA-2026:88533\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88533.json\n",
@@ -16587,7 +16592,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 3:23:07 PM",
-     "dateUpdated": "Oct 24, 2026, 12:34:23 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:07 AM",
      "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:88725",
      "references": "https://access.redhat.com/errata/RHSA-2026:88725\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88725.json\n",
@@ -18424,7 +18429,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 3:23:46 PM",
-     "dateUpdated": "Oct 24, 2026, 12:34:22 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:07 AM",
      "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:88720",
      "references": "https://access.redhat.com/errata/RHSA-2026:88720\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88720.json\n",
@@ -21161,7 +21166,7 @@
      "aliases": "CVE-2025-1218\nCVE-2025-14181\nCVE-2026-6103\nCVE-2026-91765\nCVE-2026-91766\nCVE-2026-91767\nCVE-2026-91768\nCVE-2026-91769\nCVE-2026-92842\nCVE-2026-93682\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 3:53:19 PM",
-     "dateUpdated": "Oct 24, 2026, 12:34:07 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:02 AM",
      "description": "Red Hat Security Advisory: php:7.4 security update",
      "id": "RHSA-2026:87080",
      "references": "https://access.redhat.com/errata/RHSA-2026:87080\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87080.json\n",
@@ -23601,7 +23606,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 3:44:40 PM",
-     "dateUpdated": "Oct 23, 2026, 5:56:01 PM",
+     "dateUpdated": "Oct 26, 2026, 7:21:39 PM",
      "description": "Security update for php8",
      "id": "SUSE-SU-2026:4843-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_4843-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -25438,7 +25443,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:10:03 PM",
-     "dateUpdated": "Oct 24, 2026, 12:34:04 AM",
+     "dateUpdated": "Oct 27, 2026, 4:09:04 AM",
      "description": "Red Hat Security Advisory: php8.4 security update",
      "id": "RHSA-2026:87071",
      "references": "https://access.redhat.com/errata/RHSA-2026:87071\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87071.json\n",
@@ -27788,7 +27793,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:35:47 PM",
-     "dateUpdated": "Oct 24, 2026, 12:34:06 AM",
+     "dateUpdated": "Oct 27, 2026, 4:09:04 AM",
      "description": "Red Hat Security Advisory: php:8.2 security update",
      "id": "RHSA-2026:87072",
      "references": "https://access.redhat.com/errata/RHSA-2026:87072\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87072.json\n",
@@ -29625,7 +29630,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 10:00:37 AM",
-     "dateUpdated": "Oct 24, 2026, 12:34:19 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:05 AM",
      "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:88561",
      "references": "https://access.redhat.com/errata/RHSA-2026:88561\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88561.json\n",
@@ -30400,7 +30405,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 9:48:40 AM",
-     "dateUpdated": "Oct 24, 2026, 12:34:21 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:05 AM",
      "description": "Red Hat Security Advisory: php:7.4 security update",
      "id": "RHSA-2026:88565",
      "references": "https://access.redhat.com/errata/RHSA-2026:88565\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88565.json\n",
@@ -31832,7 +31837,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 2:41:02 AM",
-     "dateUpdated": "Oct 24, 2026, 12:34:20 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:03 AM",
      "description": "Red Hat Security Advisory: php:7.4 security update",
      "id": "RHSA-2026:88532",
      "references": "https://access.redhat.com/errata/RHSA-2026:88532\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88532.json\n",
@@ -33669,7 +33674,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 11:44:40 AM",
-     "dateUpdated": "Oct 24, 2026, 12:34:21 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:06 AM",
      "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:88659",
      "references": "https://access.redhat.com/errata/RHSA-2026:88659\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88659.json\n",
@@ -36740,7 +36745,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 22, 2026, 4:03:33 PM",
-     "dateUpdated": "Oct 23, 2026, 5:56:12 PM",
+     "dateUpdated": "Oct 26, 2026, 7:21:46 PM",
      "description": "Security update for php74",
      "id": "SUSE-SU-2026:4870-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_4870-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -36840,7 +36845,7 @@
      "aliases": "CVE-2026-109618\n",
      "baseScore": 0.0,
      "datePublished": "Oct 22, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 23, 2026, 5:57:41 PM",
+     "dateUpdated": "Oct 26, 2026, 7:23:31 PM",
      "description": "matomo-5.14.2-1.1 on GA media",
      "id": "openSUSE-SU-2026:12228-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12228-1.json\nhttps://www.suse.com/security/cve/CVE-2026-109618/\n",
@@ -39371,7 +39376,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:36:00 PM",
-     "dateUpdated": "Oct 24, 2026, 12:34:05 AM",
+     "dateUpdated": "Oct 27, 2026, 4:11:04 AM",
      "description": "Red Hat Security Advisory: php:8.3 security update",
      "id": "RHSA-2026:87079",
      "references": "https://access.redhat.com/errata/RHSA-2026:87079\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87079.json\n",
@@ -42000,7 +42005,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:30:32 PM",
-     "dateUpdated": "Oct 24, 2026, 12:34:06 AM",
+     "dateUpdated": "Oct 27, 2026, 4:09:05 AM",
      "description": "Red Hat Security Advisory: php:8.2 security update",
      "id": "RHSA-2026:87073",
      "references": "https://access.redhat.com/errata/RHSA-2026:87073\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87073.json\n",
@@ -42854,11 +42859,47 @@
        }
       },
       {
+       "id": "20efbf4d-0070-3540-9ecf-ff41bd49a648",
+       "product": {
+        "name": "5",
+        "vendor": {
+         "name": "ABB"
+        }
+       }
+      },
+      {
+       "id": "2898dfd3-f7d9-3fec-bed2-1effeb3f5f30",
+       "product": {
+        "name": "11.110.0.153",
+        "vendor": {
+         "name": "cPanel"
+        }
+       }
+      },
+      {
        "id": "3d8f8e97-4650-33a1-a1a0-d94118e2b064",
        "product": {
         "name": "Debian Linux",
         "vendor": {
          "name": "Debian"
+        }
+       }
+      },
+      {
+       "id": "471a3eb9-9156-3f14-b1fb-8971dc5865c7",
+       "product": {
+        "name": "PHP",
+        "vendor": {
+         "name": "PHP Group"
+        }
+       }
+      },
+      {
+       "id": "49472c2b-cb49-3200-8fbf-e38021b5a90f",
+       "product": {
+        "name": "8.5.12",
+        "vendor": {
+         "name": "Atlassian"
         }
        }
       },
@@ -42872,6 +42913,15 @@
        }
       },
       {
+       "id": "5bd27954-d51b-31b8-92ca-5a2478975e8d",
+       "product": {
+        "name": "11.136.0.50",
+        "vendor": {
+         "name": "cPanel"
+        }
+       }
+      },
+      {
        "id": "758c0b0f-1025-377c-891e-09f7b1766eeb",
        "product": {
         "name": "Red Hat Enterprise Linux",
@@ -42881,11 +42931,38 @@
        }
       },
       {
+       "id": "7d7004bf-8a17-37c8-ba4c-c62fba2098a3",
+       "product": {
+        "name": "8.2.35",
+        "vendor": {
+         "name": "PHP"
+        }
+       }
+      },
+      {
+       "id": "8d278ced-69d4-392e-9a31-95725f5f7699",
+       "product": {
+        "name": "7",
+        "vendor": {
+         "name": "SafeNet"
+        }
+       }
+      },
+      {
        "id": "989fcd1d-421e-39c5-b42b-ed64ca4c99d0",
        "product": {
         "name": "cPanel cPanel/WHM",
         "vendor": {
          "name": "cPanel"
+        }
+       }
+      },
+      {
+       "id": "a39b0abb-e7c7-383e-89a2-9ea55d56c55e",
+       "product": {
+        "name": "8.3.36",
+        "vendor": {
+         "name": "PHP"
         }
        }
       },
@@ -42908,11 +42985,29 @@
        }
       },
       {
+       "id": "b00b5416-ee9a-35fd-bf16-6b3a046634be",
+       "product": {
+        "name": "8.4.27",
+        "vendor": {
+         "name": "PHP"
+        }
+       }
+      },
+      {
        "id": "be713b50-df10-39fb-80e9-aa761670f685",
        "product": {
         "name": "SUSE Linux",
         "vendor": {
          "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cc27e4ff-9808-3863-86ac-91a75086a9d9",
+       "product": {
+        "name": "11.138.0.18",
+        "vendor": {
+         "name": "cPanel"
         }
        }
       },
@@ -42953,11 +43048,29 @@
        }
       },
       {
+       "id": "eb4f03c3-1b1c-37bc-890b-876fe329be10",
+       "product": {
+        "name": "11.134.0.66",
+        "vendor": {
+         "name": "cPanel"
+        }
+       }
+      },
+      {
        "id": "f0687bba-d526-3311-a067-3aac45931045",
        "product": {
         "name": "2.5.0p17",
         "vendor": {
          "name": "Checkmk"
+        }
+       }
+      },
+      {
+       "id": "f3e441c4-cbc9-3c0b-9fc0-49dd765a0e3b",
+       "product": {
+        "name": "IBM QRadar SIEM",
+        "vendor": {
+         "name": "IBM"
         }
        }
       },
@@ -42978,20 +43091,29 @@
          "name": "open source"
         }
        }
+      },
+      {
+       "id": "fef59dc8-5fc3-39f0-aca9-a22ddf69cbd0",
+       "product": {
+        "name": "cPanel/WHM",
+        "vendor": {
+         "name": "cPanel"
+        }
+       }
       }
      ],
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 20, 2026, 10:00:00 PM",
-     "dateUpdated": "Oct 21, 2026, 10:00:00 PM",
-     "description": "PHP: Mehrere Schwachstellen ermöglichen nicht spezifizierten Angriff",
+     "dateUpdated": "Oct 25, 2026, 11:00:00 PM",
+     "description": "PHP: Mehrere Schwachstellen ermöglichen Codeausführung",
      "id": "WID-SEC-W-2026-4055",
      "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4055.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4055\n",
      "source": {
       "id": 8,
       "name": "csaf_certbund"
      },
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in PHP ausnutzen, um einen nicht näher spezifizierten Angriff durchzuführen."
+     "summary": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in PHP ausnutzen, um Speicherinhalte offenzulegen, einen Denial-of-Service-Zustand auszulösen oder beliebigen Code auszuführen."
     },
     "id": "ef2bf184-b348-373a-a9fc-6e95587cc566"
    }
@@ -43054,9 +43176,9 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 27, 2026, 1:30:01 AM",
+     "dataProcessed": "Oct 28, 2026, 6:00:20 AM",
      "datePublished": "Oct 21, 2026, 1:48:34 PM",
-     "dateUpdated": "Oct 23, 2026, 2:07:55 PM",
+     "dateUpdated": "Oct 27, 2026, 12:58:23 PM",
      "description": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
      "enisa_id": "EUVD-2026-107260\n",
      "epss": 99.98,
@@ -44884,7 +45006,7 @@
    }
   ],
   "id": "CVE-2026-109618",
-  "lastModified": "2026-10-26T10:10:00.140",
+  "lastModified": "2026-10-28T04:17:46.930",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -44959,7 +45081,7 @@
       "id": "CVE-2026-109618",
       "options": [
        {
-        "exploitation": "none"
+        "exploitation": "active"
        },
        {
         "automatable": "no"
@@ -45002,11 +45124,32 @@
     "url": "http://www.openwall.com/lists/oss-security/2026/10/23/5"
    },
    {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://arcticwolf.com/resources/blog/php2shell-critical-php-vulnerabilities-enable-unauthenticated-remote-code-execution/"
+   },
+   {
     "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
     "tags": [
      "Third Party Advisory"
     ],
     "url": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://php2shell.delftintellab.com"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-109618"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
