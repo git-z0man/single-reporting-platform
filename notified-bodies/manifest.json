@@ -71,14 +71,14 @@
       "154428": "Directive 2014/53/EU Radio equipment (RED) — canary"
     }
   },
-  "last_successful_check": "2026-10-27T07:05:01+00:00",
+  "last_successful_check": "2026-10-28T07:08:00+00:00",
   "current_snapshot": {
-    "date": "2026-10-27",
-    "checked_at": "2026-10-27T07:05:01+00:00",
+    "date": "2026-10-28",
+    "checked_at": "2026-10-28T07:08:00+00:00",
     "count": 0,
     "bodies": [],
     "canary_ok": true,
-    "canary_raw_rows": 369,
+    "canary_raw_rows": 370,
     "note": "No change vs prior snapshot (0 active bodies). Request pipeline verified working."
   },
   "history": [
@@ -976,6 +976,15 @@
       "bodies": [],
       "canary_ok": true,
       "canary_raw_rows": 369,
+      "event": "No change. Canary (RED) OK."
+    },
+    {
+      "date": "2026-10-28",
+      "checked_at": "2026-10-28T07:08:00+00:00",
+      "count": 0,
+      "bodies": [],
+      "canary_ok": true,
+      "canary_raw_rows": 370,
       "event": "No change. Canary (RED) OK."
     }
   ]
