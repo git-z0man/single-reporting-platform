@@ -18,7 +18,7 @@ vulnerability_services_url: https://www.enisa.europa.eu/topics/vulnerability-ser
 retrieved: 2026-10-16 (fetched UTC morning run; FAQ changed since 2026-10-13 — "Updated: 15 October 2026", new Q34/Q35, Q4 title and Q24 reworded; earlier: content changed since 2026-10-06 — main-page note on the SRP 1.1 upgrade of 12 October, "Particular" → "Particularly" Exceptional Circumstances in FAQ Q11/Q21, new "CRA SRP Status" page, see change log)
 guidance_retrieved: 2026-10-13 (fetched 06:05 UTC; PEC guidance changed 2026-10-12 — stamp "Last updated: 12 October 2026", "Particular" → "Particularly" ×3; the other three subpages unchanged word-for-word)
 glossary_retrieved: 2026-10-22 (fetched UTC morning run; changed — Version 1.6, 72h/Final Report stages reworked, see `enisa-srp-glossary-baseline.md`; earlier: 2026-10-02 (fetched UTC morning run; changed — Version 1.4, two new fields 40/41 — see `enisa-srp-glossary-baseline.md`)
-csirt_list_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 17:11 UTC on 2026-09-12)
+csirt_list_retrieved: 2026-10-28 (fetched 22:10 UTC; Spain's links changed on or before 2026-10-18 under an unchanged page stamp)
 ar_user_manual_retrieved: 2026-10-21 (fetched 06:12 UTC; landing page "Last updated: 21 October 2026 - version 1.2", Download now the v1.2 PDF; earlier: 2026-10-13 (fetched 06:05 UTC; landing page stamp now "Last updated: 12 October 2026 - version 1.1", Download link points to the v1.1 PDF; see change log)
 ar_user_manual_pdf_sha256: e2afc96031eceff4bebd9790256183e4ce6b835d9a1c44f9864e4f3995998f86 (the PDF itself, not the landing page; unchanged since 2026-09-21 — hash, size (3,190,657 bytes) and Last-Modified all match. The copy captured 2026-09-10 was 3,119,968 bytes and reversed the AR notification-visibility rule — see `enisa-defect-report.md` G26. Both are stamped "Version: 1.1" with an unchanged Document History table, so **this hash is the only reliable change signal for this document**.)
 ar_user_manual_pdf_last_modified: Thu, 17 Sep 2026 14:30:33 GMT
@@ -41,6 +41,20 @@ ar_user_manual_pdf_v12_sha256: c8559c9f21460c2edd719128fe517aa787ea83ee643ef559e
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-10-28 22:28 UTC (vs. 2026-10-18, when the change happened)
+
+Retroactive correction, entered by hand. ENISA removed Spain's two incident-handling links from the CSIRT list on or before 2026-10-18 and left the page's "Last updated: 10 September 2026" stamp in place. The SRP domain routine saw it that day; this baseline carried the old links for ten more days, because nothing here compared the list — the daily runs only spot-checked it. `tools/check_csirt_list.py` now makes that comparison, and section 3 of the routine's prompt runs it.
+
+**Fixed**
+- Spain now shows only the two CVE-assignment links ENISA still lists; the removed pair is named in the annotation.
+- The ten "Unchanged" claims for the CSIRT list from 2026-10-19 to 2026-10-28 were not evidence: the list was never diffed. Nothing else in them is withdrawn — the other pages were checked against their stamps and the FAQ and Glossary mechanically.
+
+**Watch**
+- ENISA's list now names no incident-handling contact for Spain, only vulnerability coordination. Every other country keeps whatever it had.
+
+**Unchanged**
+The other 26 countries, link by link, verified against the live page by `tools/check_csirt_list.py` on 2026-10-28; `srp-domains/manifest.json` already carries the current Spain URL.
 
 ### 2026-10-22 06:20 UTC (vs. 2026-10-21)
 
@@ -1742,7 +1756,7 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 - Romania: https://www.dnsc.ro/contact
 - Slovakia: https://www.sk-cert.sk *(scheme upgraded from http:// 2026-09-10 11:12 UTC — cosmetic, same host/path)*
 - Slovenia: https://www.cert.si/en/about-si-cert/
-- Spain: for incidents — https://www.incibe.es/incibe-cert/incidentes/respuesta-incidentes and https://www.incibe.es/en/incibe-cert/incidents/incident-handling ; for vulnerability coordination — https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/asignacion-publicacion-cve and https://www.incibe.es/en/incibe-cert/early-warning/vulnerabilities/cve-assignment-publication
+- Spain: https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/asignacion-publicacion-cve and https://www.incibe.es/en/incibe-cert/early-warning/vulnerabilities/cve-assignment-publication *(the two incident-handling links, `…/incibe-cert/incidentes/respuesta-incidentes` and its English twin, were removed by ENISA on or before 2026-10-18 without the page's stamp moving; recorded 2026-10-28)*
 - Sweden: https://cert.se/rapportera/
 
 ## Vulnerability Services (topic page, `vulnerability_services_url`)

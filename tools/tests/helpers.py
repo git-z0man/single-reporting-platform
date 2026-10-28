@@ -9,6 +9,7 @@ import tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 TOOLS = os.path.dirname(HERE)
 sys.path.insert(0, TOOLS)
+import check_csirt_list as ccl  # noqa: E402,F401
 import check_guide as cg  # noqa: E402,F401
 import guide_lib as g  # noqa: E402,F401
 import sync_guide as sg  # noqa: E402,F401
