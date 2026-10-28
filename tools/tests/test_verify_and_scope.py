@@ -106,6 +106,30 @@ class ScopeGuard(unittest.TestCase):
         H.write(self.root, "x", "guide-sync-evil.json")
         self.assertEqual(self.guard("guide-sync/")[0], 1)
 
+    def test_a_routine_may_not_merge_a_change_to_the_script_it_runs(self):
+        """euvd/, srp-domains/ and commission-faq/ each hold the code their own Routine
+        executes the next morning. A directory prefix alone would let a run rewrite it."""
+        os.makedirs(os.path.join(self.root, "euvd"))
+        for name in ("euvd/build_stats.py", "euvd/prerender.js", "euvd/check.sh"):
+            H.write(self.root, "print('x')", name)
+            code, out = self.guard("euvd/")
+            self.assertEqual(code, 1, name)
+            self.assertIn(name, out)
+            self.assertIn("a Routine never merges this itself", out)
+            os.remove(os.path.join(self.root, name))
+
+    def test_the_data_those_routines_do_write_stays_in_scope(self):
+        os.makedirs(os.path.join(self.root, "euvd", "panels"))
+        H.write(self.root, "{}", "euvd/stats.json")
+        H.write(self.root, "<svg/>", "euvd/panels/01-x.svg")
+        H.write(self.root, "<html>", "euvd/stats.html")
+        self.assertEqual(self.guard("euvd/")[0], 0)
+
+    def test_a_person_can_override_the_code_rule_by_hand(self):
+        os.makedirs(os.path.join(self.root, "euvd"))
+        H.write(self.root, "print('x')", "euvd/build_stats.py")
+        self.assertEqual(py("scope_guard.py", "euvd/", "--allow-code", "--root", self.root)[0], 0)
+
 
 if __name__ == "__main__":
     unittest.main()

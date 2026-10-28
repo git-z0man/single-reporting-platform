@@ -234,7 +234,8 @@ The reasoning is in the script's header comment.
 
 `euvd-exploited-baseline.md` and everything under `euvd/` (the scripts, the data
 in `euvd/exploited.json`, the statistics page `euvd/stats.html` with its data
-`euvd/stats.json` and the daily record `euvd/history.jsonl`, both written by
+`euvd/stats.json`, the per-chart images under `euvd/panels/` and the daily record
+`euvd/history.jsonl`, all written by
 `euvd/build_stats.py`, one record per entry under `euvd/details/`, including the
 EUVD's honeypot sensor sightings, the EU KEV register `euvd/eukev.json`, and the page `euvd/index.html`) are maintained by a scheduled task that runs
 `euvd/check_exploited.py` daily at 04:50 UTC. The prompt is
