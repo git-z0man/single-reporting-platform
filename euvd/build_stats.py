@@ -698,6 +698,8 @@ def prerender(path):
     if r.returncode:
         print(f"prerender skipped: {(r.stderr or r.stdout).strip()[:300]}", file=sys.stderr)
         return False
+    for line in (r.stderr or "").splitlines():   # the panel images can fail on their own; prerender still exits 0
+        print(line.strip()[:300], file=sys.stderr)
     return True
 
 

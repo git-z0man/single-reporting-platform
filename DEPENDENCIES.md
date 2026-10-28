@@ -43,7 +43,7 @@ As of 2026-10-08.
 |---|---|---|---|---|
 | Python standard library | every script in `tools/`, `euvd/`, `commission-faq/tools/` | the interpreter | nothing to install | no third-party Python code |
 | **pypdf 6.19.0** | `commission-faq/tools/extract_text.py`, run by the Commission CRA FAQ monitor only when a new FAQ version appears | PyPI | `requirements.txt`: exact version and wheel hash, `--require-hashes --only-binary :all:`, throwaway venv | **pinned on 2026-10-08** (was unpinned) |
-| Playwright 1.56.1 with Chromium | `euvd/prerender.js`, pre-renders `euvd/stats.html` | the run environment (`/opt/node22/lib/node_modules`, `/opt/pw-browsers`) | never installed by the repository; no `npm install` anywhere | if absent, the page draws its charts in the browser |
+| Playwright 1.56.1 with Chromium | `euvd/prerender.js`, pre-renders `euvd/stats.html` and writes the per-chart images in `euvd/panels/` | the run environment (`/opt/node22/lib/node_modules`, `/opt/pw-browsers`) | never installed by the repository; no `npm install` anywhere | if absent, the page draws its charts in the browser and `euvd/panels/` is not refreshed |
 | `curl`, `git` | all monitors | the system | | |
 | `pdftotext` (poppler) | ENISA monitor, for the AR User Manual PDF | the system, where present; absent in this environment (checked 2026-10-08) | never installed | the monitor records the hash and says the text diff could not be made |
 | IBM Plex from Google Fonts | `index.html` | fonts.googleapis.com | the reader's browser | a web resource, not a package: outside the skill's scope; falls back to system fonts |
