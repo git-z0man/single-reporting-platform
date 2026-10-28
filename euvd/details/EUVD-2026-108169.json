@@ -1,0 +1,1252 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-111497"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-111497",
+  "cwes": [
+   "CWE-252",
+   "CWE-787"
+  ],
+  "dateAdded": "2026-10-27",
+  "dueDate": "2026-11-10",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/google/brotli/releases/tag/v1.2.1 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-111497",
+  "product": "Brotli",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
+  "vendorProject": "Google",
+  "vulnerabilityName": "Google Brotli Unchecked Return Value Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-111497\nGHSA-9v8h-qqgm-4m35\n",
+  "assigner": "Google",
+  "baseScore": 9.2,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Oct 22, 2026, 1:35:41 PM",
+  "dateUpdated": "Oct 27, 2026, 7:59:03 PM",
+  "description": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0f204078-ea93-3655-8901-fce5692f2b53",
+       "product": {
+        "name": "brotli-devel-0:1.2.1-0.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2292340a-e3ae-38a0-9eda-f35dbba7f9c9",
+       "product": {
+        "name": "libbrotli-0:1.2.1-0.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3a86a70c-cba2-3fd5-aef6-cb1bb434b792",
+       "product": {
+        "name": "brotli-0:1.2.1-0.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3b06e11c-3024-3aa7-9599-b06fe0ba4014",
+       "product": {
+        "name": "python3-brotli-0:1.2.1-0.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "49e34b42-c57f-30ee-9fc1-cd18866d2375",
+       "product": {
+        "name": "python3-brotli-0:1.2.1-0.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5b409bba-acdc-3b93-89fc-f84043b6f1ae",
+       "product": {
+        "name": "brotli-0:1.2.1-0.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5c548a79-bea6-3728-9c61-c831170b8240",
+       "product": {
+        "name": "python3-brotli-0:1.2.1-0.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "611127c9-3786-3cd6-b09d-acccf2a5c3ea",
+       "product": {
+        "name": "Red Hat Hardened Images",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8ed2b745-8f6d-367f-9c85-8e7ad6a6adfd",
+       "product": {
+        "name": "brotli-devel-0:1.2.1-0.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a54313e0-69e7-3650-aa30-f04fe21c39ac",
+       "product": {
+        "name": "brotli-0:1.2.1-0.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c7aeffcb-7149-3f35-8fbe-b7d6c093aaa4",
+       "product": {
+        "name": "libbrotli-0:1.2.1-0.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d45ece49-e7ca-3566-88d8-9280cf67ebb7",
+       "product": {
+        "name": "brotli-devel-0:1.2.1-0.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d9d8b0bc-64d9-37d1-8d8a-adf095c64a35",
+       "product": {
+        "name": "brotli-0:1.2.1-0.1.hum1@src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eb6d4a58-2f01-39e6-9c96-41e92bcddcf9",
+       "product": {
+        "name": "libbrotli-0:1.2.1-0.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 21, 2026, 10:13:35 PM",
+     "dateUpdated": "Oct 27, 2026, 4:11:28 AM",
+     "description": "Red Hat Security Advisory: Red Hat Hardened Images RPMs bug fix and enhancement update",
+     "id": "RHSA-2026:87420",
+     "references": "https://access.redhat.com/errata/RHSA-2026:87420\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87420.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "An update for Red Hat Hardened Images RPMs is now available."
+    },
+    "id": "0af83dc1-d3fe-3d69-9bbb-33374a836dde"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "07fe5375-5b60-372b-bcab-ebf217c108ac",
+       "product": {
+        "name": "libbrotlicommon1-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0af6d239-09b2-3a50-8a0e-faa8150836ba",
+       "product": {
+        "name": "libbrotlicommon1-x86-64-v3-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0f27924a-4794-3ab9-8a25-b2669f0f6975",
+       "product": {
+        "name": "libbrotlicommon1-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "15560598-17cd-3a6e-9162-767ae8935a58",
+       "product": {
+        "name": "libbrotlidec1-x86-64-v3-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "159c51e8-477d-3a66-8823-03b871e46dda",
+       "product": {
+        "name": "libbrotlicommon1-32bit-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1642707f-dddb-3bd7-b920-0f4c22a86675",
+       "product": {
+        "name": "libbrotlicommon1-x86-64-v3-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "17aa0f65-4d48-33a9-bd00-0f8ad414cbf0",
+       "product": {
+        "name": "libbrotlidec1-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "17bd9f75-c4d1-3af6-a0e6-f9af92f5299a",
+       "product": {
+        "name": "libbrotlienc1-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "227a84ae-d9a6-3b05-849e-6de112b9fe96",
+       "product": {
+        "name": "libbrotlienc1-32bit-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "24c9af82-474a-3890-8e52-1824ad8e6853",
+       "product": {
+        "name": "libbrotlicommon1-32bit-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "270ffa30-dda1-3ad1-90af-cee1256eebee",
+       "product": {
+        "name": "libbrotli-devel-32bit-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2854169d-27ba-3f6a-9b30-caa8feae33c4",
+       "product": {
+        "name": "libbrotli-devel-32bit-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "28adb156-941d-31a5-917e-db8f38a1010c",
+       "product": {
+        "name": "libbrotlidec1-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2b3a1008-9f42-3cbb-b0a3-6a4f39203f3e",
+       "product": {
+        "name": "libbrotlienc1-32bit-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "364098b4-3df5-36aa-96e0-c7c6cd1cb86c",
+       "product": {
+        "name": "libbrotlidec1-x86-64-v3-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "36bd2d9f-cc53-370b-838d-2c7af14dfacb",
+       "product": {
+        "name": "libbrotli-devel-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3bbf8b21-dabe-3566-9adf-30a3be452a1f",
+       "product": {
+        "name": "libbrotlienc1-x86-64-v3-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "40caf49f-920c-3134-aeb6-b15d4228bc3a",
+       "product": {
+        "name": "libbrotlicommon1-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "41011a6a-e283-3f5d-892f-9b2fc997aecd",
+       "product": {
+        "name": "libbrotlienc1-x86-64-v3-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4221aae8-cd2e-3591-ba20-0b533ed3b440",
+       "product": {
+        "name": "libbrotlicommon1-x86-64-v3-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "473b7486-2e87-3d92-97d7-5567498dd2fa",
+       "product": {
+        "name": "libbrotli-devel-32bit-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "483dcf90-303f-3ac7-a990-aab2e7a0ecb1",
+       "product": {
+        "name": "libbrotli-devel-32bit-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "545a8690-8a3d-371f-bdc2-1affadd6b6c7",
+       "product": {
+        "name": "libbrotlienc1-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "55c82a5c-df51-36f1-8d68-776954a0d545",
+       "product": {
+        "name": "libbrotlienc1-x86-64-v3-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5a4025b5-a161-3db9-8acf-f3686684ff86",
+       "product": {
+        "name": "libbrotlidec1-x86-64-v3-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5ee8d7a5-2076-37d6-84f0-52e42d1a72ea",
+       "product": {
+        "name": "brotli-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "604ea754-8fa0-3fad-aced-a7840267fa9b",
+       "product": {
+        "name": "openSUSE Tumbleweed",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6ea91a5a-2506-38fe-9be7-5af07837a73c",
+       "product": {
+        "name": "libbrotlidec1-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "730b99c7-8463-3fe0-9bdd-5915310d7f9c",
+       "product": {
+        "name": "libbrotlidec1-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "836ecda0-e5a2-3a36-a6c1-e70909b4f115",
+       "product": {
+        "name": "libbrotlicommon1-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "994d2ddb-e26e-3d7b-ade7-52bc51119374",
+       "product": {
+        "name": "libbrotlicommon1-x86-64-v3-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9c836065-1c24-3296-a075-9882fa8963c5",
+       "product": {
+        "name": "libbrotlidec1-32bit-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a4c00dfa-6205-3355-a87b-758451bdedf2",
+       "product": {
+        "name": "libbrotlicommon1-32bit-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ab9be40b-5ffa-3e94-abac-9950765d433b",
+       "product": {
+        "name": "libbrotlicommon1-32bit-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b0ffcb7c-b167-3058-b8d1-3c2fa11f53a3",
+       "product": {
+        "name": "libbrotlienc1-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ba994621-2562-3abb-9863-ffc3c819fcd0",
+       "product": {
+        "name": "libbrotlidec1-32bit-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bbff6714-b978-3e8d-83c0-97e87325c26a",
+       "product": {
+        "name": "libbrotli-devel-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bca49ff4-547a-324e-afc8-a8e5d21b65b9",
+       "product": {
+        "name": "libbrotlienc1-32bit-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bdb8396d-b43f-3b69-80af-e3b52e7fc27f",
+       "product": {
+        "name": "libbrotlienc1-x86-64-v3-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bdb94c9c-dadc-315e-a1e4-b0c018d3f219",
+       "product": {
+        "name": "libbrotli-devel-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bef00a39-9f98-3f39-b670-b6060ae05648",
+       "product": {
+        "name": "brotli-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c47ef03f-8c14-37c6-b87f-f047af423d68",
+       "product": {
+        "name": "libbrotli-devel-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cef0fb0d-1d68-3c31-822e-37d7b3895e96",
+       "product": {
+        "name": "libbrotlienc1-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "da0aac58-3763-3757-bf65-4bdd6cf04128",
+       "product": {
+        "name": "libbrotlidec1-32bit-0:1.2.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e5f1d3a1-6f30-3f95-a47a-633c93056250",
+       "product": {
+        "name": "brotli-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e609d162-cae6-3846-9e18-1c9f6a87c2bf",
+       "product": {
+        "name": "libbrotlienc1-32bit-0:1.2.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ea45a101-7c5d-3978-9b4b-08861d4fcaf1",
+       "product": {
+        "name": "brotli-0:1.2.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f1aec89f-a0c7-3d68-82fc-38065cd975b4",
+       "product": {
+        "name": "libbrotlidec1-32bit-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fb1bdbf4-3efa-3aea-a3a9-d139afa0f1fb",
+       "product": {
+        "name": "libbrotlidec1-x86-64-v3-0:1.2.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 23, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 26, 2026, 7:23:32 PM",
+     "description": "brotli-1.2.1-1.1 on GA media",
+     "id": "openSUSE-SU-2026:12232-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12232-1.json\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "brotli-1.2.1-1.1 on GA media"
+    },
+    "id": "4e95c028-40e8-3f8b-81bc-4cbf674640ea"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "5e2bc8ba-aeae-3082-a732-59d571a6764f",
+       "product": {
+        "name": "nodejs",
+        "vendor": {
+         "name": "nodejs"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 23, 2026, 9:55:26 AM",
+     "dateUpdated": "Oct 23, 2026, 9:55:26 AM",
+     "description": "Kwetsbaarheid in Google Brotli-decoder",
+     "id": "NCSC-2026-0453",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "516f142d-9032-3a4b-aa8f-2582f62ef346"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0470a903-fa07-3c18-a19d-dd63f3252184",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0a0a35cc-d8cc-30d7-a3a5-d09857b9ef50",
+       "product": {
+        "name": "npm24-0:24.22.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0df329ca-69ce-3ebf-8eea-eb69622b2627",
+       "product": {
+        "name": "npm24-0:24.22.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "15339bce-6581-3b46-855f-0454b5f53b9d",
+       "product": {
+        "name": "nodejs24-0:24.22.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3cacda17-8eaa-3c32-905a-e380a0e8141c",
+       "product": {
+        "name": "npm24-0:24.22.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "46aacb8f-f267-3eb8-ba99-69ff44e340e9",
+       "product": {
+        "name": "nodejs24-0:24.22.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5cc600b9-1ffa-3b66-9340-633224bd77ae",
+       "product": {
+        "name": "nodejs24-docs-0:24.22.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5e7e5bc9-ed27-3346-be42-30fd62fc4be7",
+       "product": {
+        "name": "nodejs24-0:24.22.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "74e44658-f48e-3d8c-b401-ed88c969b42c",
+       "product": {
+        "name": "openSUSE Tumbleweed",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7fbf339e-e400-3266-b70b-a7c129aa5eb9",
+       "product": {
+        "name": "corepack24-0:24.22.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "81bb92a4-87f2-3ca7-82a1-faa0043bf495",
+       "product": {
+        "name": "corepack24-0:24.22.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a64e6821-e806-3b1c-8ab5-f73e97661ccb",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a9444bcc-ebc1-3534-b43e-897078689b07",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a94cf17f-4248-3f71-9c8a-9eed0eee626d",
+       "product": {
+        "name": "nodejs24-0:24.22.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "af66da04-6d7b-36a1-af41-8c99f906e8cd",
+       "product": {
+        "name": "nodejs24-docs-0:24.22.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b9bfaf19-f820-341f-b095-5a5cc1628f97",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ba502c06-544d-3cb9-88d1-f87570dc8b60",
+       "product": {
+        "name": "corepack24-0:24.22.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c4f88813-bcac-3682-be5c-6a42400f7d70",
+       "product": {
+        "name": "npm24-0:24.22.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d5843f2e-5a0a-31de-8d45-f55865a02851",
+       "product": {
+        "name": "nodejs24-docs-0:24.22.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e59a79b8-26ad-359f-ac98-3cae64627c73",
+       "product": {
+        "name": "nodejs24-docs-0:24.22.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ebddc3bd-ef76-3a25-8e6f-4e2591035e24",
+       "product": {
+        "name": "corepack24-0:24.22.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 23, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 26, 2026, 7:23:43 PM",
+     "description": "corepack24-24.22.1-1.1 on GA media",
+     "id": "openSUSE-SU-2026:12248-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12248-1.json\nhttps://www.suse.com/security/cve/CVE-2026-105481/\nhttps://www.suse.com/security/cve/CVE-2026-105482/\nhttps://www.suse.com/security/cve/CVE-2026-105483/\nhttps://www.suse.com/security/cve/CVE-2026-106069/\nhttps://www.suse.com/security/cve/CVE-2026-106073/\nhttps://www.suse.com/security/cve/CVE-2026-106074/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "corepack24-24.22.1-1.1 on GA media"
+    },
+    "id": "cf2a1281-b0f6-355e-8aa3-76b9350155ee"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "3162cbe2-1794-385a-8d96-8a15aa0de535",
+    "product": {
+     "name": "Brotli",
+     "vendor": {
+      "name": "Google LLC"
+     }
+    },
+    "product_version": "1.1.0 <1.1.1"
+   },
+   {
+    "id": "4d846675-d170-38a3-b1c5-f3ace6cc6041",
+    "product": {
+     "name": "Brotli",
+     "vendor": {
+      "name": "Google LLC"
+     }
+    },
+    "product_version": "1.0.3 <1.0.10"
+   },
+   {
+    "id": "9daba050-dd06-37c7-add9-0d10c757b0f9",
+    "product": {
+     "name": "Brotli",
+     "vendor": {
+      "name": "Google LLC"
+     }
+    },
+    "product_version": "1.2.0 <1.2.1"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "3bb0d9af-b66f-3f75-b84f-0ca357930743",
+    "vendor": {
+     "name": "Google"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "1f28ebe6-38de-30ec-a68f-226af19226da",
+    "vulnerability": {
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 28, 2026, 6:01:17 AM",
+     "datePublished": "Oct 23, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 23, 2026, 12:00:00 AM",
+     "description": "Out-of-bounds write in the brotlicffi decoder (\"Node2Shell\") also affects the PyPI Brotli package",
+     "enisa_id": "EUVD-2026-108169\n",
+     "epss": 0.0,
+     "id": "PYSEC-2026-4323",
+     "references": "https://github.com/google/brotli/commit/0ed4268a4401abcb4472096340477cf4af7d1a2b\nhttps://www.cve.org/CVERecord?id=CVE-2026-111497\nhttps://opensourcemalware.com/blog/node2shell-affects-python\nhttps://nodejs.org/en/blog/vulnerability/october-2026-security-releases\nhttps://github.com/google/brotli/releases/tag/v1.2.1\nhttps://pypi.org/project/brotlicffi/\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "9a440f05-5f42-353b-b8bb-ce7b4fd635d9",
+    "vulnerability": {
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 28, 2026, 6:01:17 AM",
+     "datePublished": "Oct 23, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 23, 2026, 12:00:00 AM",
+     "description": "Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
+     "enisa_id": "EUVD-2026-108169\n",
+     "epss": 0.0,
+     "id": "PYSEC-2026-4322",
+     "references": "https://github.com/google/brotli/commit/0ed4268a4401abcb4472096340477cf4af7d1a2b\nhttps://www.cve.org/CVERecord?id=CVE-2026-111497\nhttps://opensourcemalware.com/blog/node2shell-affects-python\nhttps://nodejs.org/en/blog/vulnerability/october-2026-security-releases\nhttps://github.com/google/brotli/releases/tag/v1.2.1\nhttps://pypi.org/project/Brotli/\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "bd6271b4-8cf5-38b1-b44f-7511d34ea4ac",
+    "vulnerability": {
+     "aliases": "GHSA-9v8h-qqgm-4m35\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 27, 2026, 7:03:17 AM",
+     "datePublished": "Oct 22, 2026, 3:32:49 PM",
+     "dateUpdated": "Oct 23, 2026, 7:08:09 PM",
+     "description": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
+     "enisa_id": "EUVD-2026-108169\n",
+     "epss": 0.0,
+     "id": "GHSA-9v8h-qqgm-4m35",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497\nhttps://github.com/google/brotli/commit/0ed4268a4401abcb4472096340477cf4af7d1a2b\nhttps://github.com/google/brotli/commit/50a9b70a4d5e1443fc40927952276b68fffa83a0\nhttps://github.com/google/brotli/commit/b418fa81c48262a86a95332b0bc6d62c30aa78b6\nhttps://github.com/google/brotli/commit/da9806362874b9bd4b552a3af360b5d6347beb12\nhttps://www.cve.org/CVERecord?id=CVE-2026-111497\nhttps://pypi.org/project/brotlicffi\nhttps://pypi.org/project/Brotli\nhttps://opensourcemalware.com/blog/node2shell-affects-python\nhttps://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high\nhttps://nodejs.org/en/blog/vulnerability/october-2026-security-releases\nhttps://github.com/pypa/advisory-database/tree/main/vulns/brotlicffi/PYSEC-2026-4323.yaml\nhttps://github.com/pypa/advisory-database/tree/main/vulns/brotli/PYSEC-2026-4322.yaml\nhttps://github.com/google/brotli/releases/tag/v1.2.1\nhttps://github.com/google/brotli/releases/tag/v1.1.1\nhttps://github.com/google/brotli/releases/tag/v1.0.10\nhttps://github.com/google/brotli\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "f9f5ce45-03e3-33dc-9cae-9b50ed189d96",
+    "vulnerability": {
+     "assigner": "Google",
+     "baseScore": 9.2,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Oct 28, 2026, 6:00:16 AM",
+     "datePublished": "Oct 22, 2026, 1:35:41 PM",
+     "dateUpdated": "Oct 27, 2026, 7:59:03 PM",
+     "description": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
+     "enisa_id": "EUVD-2026-108169\n",
+     "epss": 36.03,
+     "exploitedSince": "Oct 27, 2026, 12:00:00 AM",
+     "id": "CVE-2026-111497",
+     "references": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high\nhttps://github.com/andybalholm/brotli/releases/tag/v1.2.7\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "17e5d9f7-de77-3bb7-8a3f-492a2f65e570",
+       "product": {
+        "name": "Brotli",
+        "vendor": {
+         "name": "Google LLC"
+        }
+       },
+       "product_version": "1.1.0 <1.1.1"
+      },
+      {
+       "id": "bd0c73fd-1360-3f41-adce-b26af338ba09",
+       "product": {
+        "name": "Brotli",
+        "vendor": {
+         "name": "Google LLC"
+        }
+       },
+       "product_version": "1.2.0 <1.2.1"
+      },
+      {
+       "id": "cddefc43-05fa-3732-8b67-074bc54f9e36",
+       "product": {
+        "name": "Brotli",
+        "vendor": {
+         "name": "Google LLC"
+        }
+       },
+       "product_version": "1.0.3 <1.0.10"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "cb260e64-2ce7-3457-95f5-5239949f3116",
+       "vendor": {
+        "name": "Google"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "42d57d45-3372-37f9-9ddd-62b353c64700",
+  "epss": 36.03,
+  "exploitedSince": "Oct 27, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-108169",
+  "references": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high\nhttps://github.com/andybalholm/brotli/releases/tag/v1.2.7\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-108169",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 27, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "packageName": "github.com/google/brotli",
+      "product": "Brotli",
+      "repo": "https://github.com/google/brotli",
+      "vendor": "Google",
+      "versions": [
+       {
+        "lessThan": "1.0.10",
+        "status": "affected",
+        "version": "1.0.3",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "1.1.1",
+        "status": "affected",
+        "version": "1.1.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "1.2.1",
+        "status": "affected",
+        "version": "1.2.0",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "cve-coordination@google.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-10",
+  "cisaExploitAdd": "2026-10-27",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Google Brotli Unchecked Return Value Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1."
+   }
+  ],
+  "id": "CVE-2026-111497",
+  "lastModified": "2026-10-28T04:17:56.950",
+  "metrics": {
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "PRESENT",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.2,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "cve-coordination@google.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-111497",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-23T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-22T14:17:37.190",
+  "references": [
+   {
+    "source": "cve-coordination@google.com",
+    "url": "https://github.com/andybalholm/brotli/releases/tag/v1.2.7"
+   },
+   {
+    "source": "cve-coordination@google.com",
+    "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.openwall.com/lists/oss-security/2026/10/23/25"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.openwall.com/lists/oss-security/2026/10/24/6"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.openwall.com/lists/oss-security/2026/10/26/12"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.openwall.com/lists/oss-security/2026/10/26/13"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.openwall.com/lists/oss-security/2026/10/26/16"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://broccoli2shell.com"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://github.com/advisories/GHSA-9v8h-qqgm-4m35"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://github.com/dotnet/announcements/issues/494"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://github.com/google/brotli/releases/tag/v1.0.10"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://github.com/google/brotli/releases/tag/v1.1.1"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://github.com/google/brotli/releases/tag/v1.2.1"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://lists.debian.org/debian-lts-announce/2026/10/msg00049.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://patchtheplanet.org/brotli"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://www.aikido.dev/blog/node2shell-nodejs-brotli-rce-cve-2026-111497"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://ellio.tech/en/blog/node2shell-cve-2026-111497-rce-on-stock-nodejs-builds/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-111497"
+   }
+  ],
+  "sourceIdentifier": "cve-coordination@google.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-252"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-787"
+     }
+    ],
+    "source": "cve-coordination@google.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
