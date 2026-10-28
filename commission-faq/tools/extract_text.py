@@ -11,8 +11,8 @@ root (see DEPENDENCIES.md; until 2026-10-08 this said to install it unpinned).
 The system Python in some environments ships a broken `cryptography` build that
 pypdf imports, so install it into a throwaway venv, from the repository root:
 
-    python3 -m venv .venv && .venv/bin/pip install --require-hashes --only-binary :all: -r requirements.txt
-    .venv/bin/python commission-faq/tools/extract_text.py in.pdf out.txt
+    python3 -m venv /tmp/venv && /tmp/venv/bin/pip install --require-hashes --only-binary :all: -r requirements.txt
+    /tmp/venv/bin/python commission-faq/tools/extract_text.py in.pdf out.txt
 
 Usage:
     extract_text.py <input.pdf> [output.txt]

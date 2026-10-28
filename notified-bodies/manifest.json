@@ -61,8 +61,9 @@
     "name": "Directive 2014/53/EU (Radio Equipment Directive, RED)",
     "legislationId": "154428",
     "notificationStatusId": "1",
-    "last_observed_raw_rows": 360,
-    "last_observed_date": "2026-06-23"
+    "_rows_note": "Reading taken when this check was set up; it is not maintained. Each run records its own count in history[].canary_raw_rows.",
+    "rows_at_setup": 360,
+    "rows_at_setup_date": "2026-06-23"
   },
   "legislation_id_lookup": {
     "_note": "To map legislation names to IDs, query the same endpoint with { term: { csType: 'nando_legislation' } } (no other filter, pageSize ~100).",

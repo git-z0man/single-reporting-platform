@@ -101,7 +101,7 @@ def lev(a, b):
 
 
 def is_typo_change(a, b):
-    """True if the word lists differ only by same-length, near-identical words."""
+    """True if the word lists differ only by equally many, near-identical words."""
     if a == b:
         return True
     for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():

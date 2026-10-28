@@ -38,9 +38,10 @@ not write to this repository and are not mirrored here.
 
 ## The ENISA monitor ran hourly from 2026-09-07 to 2026-09-14
 
-Weekly by design. For that one week it ran `0 * * * *` instead: ENISA
-signalled frequent edits in the run-up to the 11 September go-live, and a
-Tuesday change would otherwise have sat unnoticed until the following Monday.
+Weekly by design at the time — daily since, see the next section. For that one
+week it ran `0 * * * *` instead: ENISA signalled frequent edits in the run-up to
+the 11 September go-live, and a Tuesday change would otherwise have sat
+unnoticed until the following Monday.
 It earned its keep — 89 dated change-log entries accumulated in
 `enisa-srp-faq-baseline.md` over the week, 38 of them in the last five days
 alone, with no long silent stretch. The documented revert to `0 5 * * 1` on
@@ -311,9 +312,9 @@ text equals the loader with the right file name.
 
 ## Guide sync
 
-A fifth Routine, `guide-sync.md`, keeps `index.html` in line with ENISA's FAQ and
-Glossary. The monitors record what ENISA changed; this is the first thing that
-acts on it. The work is done by scripts under `tools/` (see `tools/README.md`),
+`guide-sync.md`, the one Routine that is not a monitor, keeps `index.html` in
+line with ENISA's FAQ and Glossary. The monitors record what ENISA changed;
+this is the first thing that acts on it. The work is done by scripts under `tools/` (see `tools/README.md`),
 not by the model: the Routine runs them, and merges only when the result is
 provably mechanical (`tools/verify_mechanical.py` recomputes the change and
 demands byte equality) and `tools/guide-sync.paused` is absent from `main`.

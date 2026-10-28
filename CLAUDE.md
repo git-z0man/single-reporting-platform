@@ -41,7 +41,8 @@ pinned by version and wheel hash in `requirements.txt` and installed only with
 `pip install --require-hashes --only-binary :all: -r requirements.txt`, into a throwaway
 venv. Nothing else is installed: no other `pip install`, no `npm install` or `npx` (the
 statistics page uses the Playwright the environment provides, or none), no system
-packages. `tools/tests/test_dependencies.py` enforces this.
+packages. `tools/tests/test_dependencies.py` enforces this for the install commands it knows:
+`pip`, `npm`/`npx`/`yarn`/`pnpm` and the common system package managers.
 
 Before adding, updating or removing a package, or touching `requirements.txt`, apply
 ENISA's **secure-package-consumption** skill (`.claude/skills/secure-package-consumption/`,

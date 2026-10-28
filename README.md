@@ -33,11 +33,11 @@ quietly tidies its source cannot be diffed against it.
 
 | File | Tracks | Notes |
 |---|---|---|
-| [`enisa-srp-faq-baseline.md`](enisa-srp-faq-baseline.md) | ENISA's SRP pages: main page, FAQ (30 entries), CSIRT coordinator list, four AR guidance pages | The FAQ went from 23 to 27 entries in a single September rewrite |
+| [`enisa-srp-faq-baseline.md`](enisa-srp-faq-baseline.md) | ENISA's SRP pages: main page, FAQ (35 entries), CSIRT coordinator list, four AR guidance pages | The FAQ went from 23 to 27 entries in a single September rewrite |
 | [`enisa-srp-glossary-baseline.md`](enisa-srp-glossary-baseline.md) | The CRA SRP Glossary — every reporting field, its meaning, format and per-stage status | The page moved without a redirect — the old URL still returns HTTP 403 — and its content has been edited without the version stamp moving |
 | [`commission-cra-faq-baseline.md`](commission-cra-faq-baseline.md) | The Commission's *FAQs on the CRA*, a versioned 66-page document (now v1.4) | Four versions archived verbatim under [`commission-faq/`](commission-faq/), with side-by-side diffs |
 | [`srp-domains-baseline.md`](srp-domains-baseline.md) | The production DNS zone `cra-srp.enisa.europa.eu` — 29 hosts | Country → CSIRT mapping verified against ENISA's official list; reachability history under [`srp-domains/`](srp-domains/) |
-| [`notified-bodies-baseline.md`](notified-bodies-baseline.md) | Conformity assessment bodies notified under the CRA | **Still zero**, on every working day since 21 June 2026 — 65 checks. Machine state under [`notified-bodies/`](notified-bodies/) |
+| [`notified-bodies-baseline.md`](notified-bodies-baseline.md) | Conformity assessment bodies notified under the CRA | **Still zero**, on every working day since 21 June 2026 — 101 checks. Machine state under [`notified-bodies/`](notified-bodies/) |
 | [`euvd-exploited-baseline.md`](euvd-exploited-baseline.md) | Actively exploited vulnerabilities in the EU Vulnerability Database since 1 September 2026, with everything the EUVD, NIST NVD, the CISA KEV catalogue and CERTs publish about each ([read it here](euvd/index.html); [statistics and charts](euvd/stats.html), regenerated daily) | It does **not** show which entry was the first reported through the SRP: no source records the reporting route, and the list largely follows CISA's catalogue. What the EU KEV catalogue's dates do and do not show, and from when an SRP route into it would be visible: [`euvd/EU-KEV.md`](euvd/EU-KEV.md). Data under [`euvd/`](euvd/) |
 | [`enisa-defect-report.md`](enisa-defect-report.md) | Errors, contradictions and gaps found in ENISA's own SRP pages, written to be handed to ENISA | 37 findings, tracked: within a day ENISA fixed 15, partly addressed 6, 16 open (re-checked 10 September 2026 against the pages, the new AR User Manual and ENISA's own confirmation) |
 
@@ -75,18 +75,19 @@ quietly tidies its source cannot be diffed against it.
 
 ## How it is maintained
 
-Four scheduled tasks re-check the sources and open a pull request when
+Six scheduled tasks re-check the sources and open a pull request when
 something moves. Their prompts, schedules and output paths are mirrored in
 [`routines/`](routines/); the conventions they follow are in
 [`CLAUDE.md`](CLAUDE.md).
 
 | Monitor | Cadence | Writes |
 |---|---|---|
-| ENISA SRP pages | hourly until 14 Sep, then weekly | the two ENISA baselines |
+| ENISA SRP pages | hourly until 14 Sep, then daily | the two ENISA baselines |
 | Commission CRA FAQ | weekly | the Commission baseline and archive |
 | SRP domain reachability | hourly until launch, then daily | the domain baseline and its logs |
 | EUVD exploited vulnerabilities | daily | the EUVD baseline, its records and page |
 | CRA notified bodies | weekdays | the notified-bodies baseline and its state |
+| Guide sync | daily | the guide `index.html` and its sync record |
 
 Each baseline records `last_check` (when it was last verified) and
 `last_change` (when the source last actually moved), so a stale monitor is
@@ -115,7 +116,8 @@ be called by name: `/secure-package-consumption`.
 the skill's format. It also lists what changed when the skill was first applied, on
 8 October 2026, as before, problem and after: pypdf used to be installed unpinned on every
 Commission run. `tools/check_pins.py` checks the pin against OSV before use, and
-`tools/tests/test_dependencies.py` fails on any other install command in the repository.
+`tools/tests/test_dependencies.py` fails on any `pip`, `npm`/`npx`/`yarn`/`pnpm` or
+system-package-manager install command in the repository outside that one pinned line.
 
 ## What this is not
 
