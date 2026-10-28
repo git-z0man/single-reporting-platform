@@ -45,6 +45,23 @@ Extract every download link (PDF and Markdown) and their document ids. Prefer wh
 
 Compare against `current_version` in `commission-faq/versions/manifest.json`.
 
+**A fetch that fails is a failed check, never "unchanged".** The Commission's pages
+answer 403 to this Routine's egress while the same URLs answer 200 from an ordinary
+network: it happened on 2026-10-26 to both the landing page and the factpage, and
+`last_check` has stood at 2026-10-19 since. When either does not return 200 after the
+retries:
+
+- do not touch `last_check`, do not commit, do not open a PR — a 403 says nothing about
+  whether the document changed;
+- do **not** retry with a browser `User-Agent` or any other disguise. That is bot-check
+  circumvention, this platform denies it, and the denial ends the attempt anyway;
+- the newsroom document id above is served by a different host and has kept answering
+  through the 403s, so the version check itself usually still works. Say in the report
+  which of the three checks ran and which did not, as the 2026-10-26 run did.
+
+Two runs in a row blocked this way mean the source needs a person rather than another
+attempt: report it that way.
+
 ## 2a. If there is NO new version
 
 Read `last_check` from `commission-faq/versions/manifest.json` as it stands on `origin/main`:

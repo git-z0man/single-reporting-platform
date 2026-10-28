@@ -36,7 +36,6 @@ diff source and is archived alongside the PDF whenever it is available.
 | Pages | 66 |
 | PDF | [document/122331](https://ec.europa.eu/newsroom/dae/redirection/document/122331) — `sha256:43cd3da1…06b54a` |
 | Markdown | [document/123307](https://ec.europa.eu/newsroom/dae/redirection/document/123307) — `sha256:beb9b79a…9dbc9` |
-| Last check | 2026-09-21 |
 | Last change | 2026-09-04 |
 
 ## Version history
