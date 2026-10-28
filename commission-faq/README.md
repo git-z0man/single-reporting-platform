@@ -51,9 +51,9 @@ trigger. The download URLs are stable newsroom document ids
 # hash in requirements.txt (DEPENDENCIES.md); the venv keeps it away from a system
 # Python whose `cryptography` build may be broken. Run from the repository root.
 python3 tools/check_pins.py
-python3 -m venv .venv && .venv/bin/pip install --require-hashes --only-binary :all: -r requirements.txt
+python3 -m venv /tmp/venv && /tmp/venv/bin/pip install --require-hashes --only-binary :all: -r requirements.txt
 
-.venv/bin/python commission-faq/tools/extract_text.py \
+/tmp/venv/bin/python commission-faq/tools/extract_text.py \
     commission-faq/versions/FAQs-on-the-CRA-v1.5.pdf \
     commission-faq/text/FAQs-on-the-CRA-v1.5.txt
 

@@ -20,7 +20,8 @@ SKIP_DIRS = {".git", ".claude", "node_modules", "__pycache__", "img", os.path.jo
 SKIP_FILES = {"DEPENDENCIES.md",                                   # quotes the old commands as "before"
               os.path.join("tools", "tests", "test_dependencies.py")}
 INSTALL = re.compile(r"\b(?:pip3?|python3? -m pip)\s+install\s+[-\w./]|\bnpm\s+(?:i|install|ci|add)\s+[-\w@./]"
-                     r"|\bnpx\s+\w|\b(?:yarn|pnpm)\s+(?:add|install)\b|\bapt(?:-get)?\s+install\s+\w")
+                     r"|\bnpx\s+\w|\b(?:yarn|pnpm)\s+(?:add|install)\b"
+                     r"|\b(?:apt(?:-get)?|dnf|yum|brew|pipx|conda)\s+install\s+\w|\bapk\s+add\s+\w")
 HASH = "a" * 64
 
 
@@ -39,6 +40,12 @@ class Rules(unittest.TestCase):
         reqs = cp.parse(open(os.path.join(REPO, "requirements.txt"), encoding="utf-8").read())
         self.assertEqual([r["name"] for r in reqs], ["pypdf"])
         self.assertEqual(cp.policy(reqs), [])
+
+    def test_the_pattern_matches_the_package_managers_the_rule_names(self):
+        for line in ("pip install pypdf", "npm install left-pad", "npx cowsay", "yarn add x",
+                     "sudo apt-get install jq", "dnf install jq", "yum install jq", "brew install jq",
+                     "pipx install black", "conda install numpy", "apk add curl"):
+            self.assertRegex(line, INSTALL)
 
     def test_installs_only_from_the_hashed_requirements(self):
         bad = []

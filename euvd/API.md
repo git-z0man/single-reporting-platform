@@ -26,14 +26,18 @@ as a failed check, never as a content change.
 
 | Endpoint | Returns | Notes |
 |---|---|---|
-| `/api/lastvulnerabilities` | latest entries | at most 8 |
-| `/api/exploitedvulnerabilities` | latest exploited entries | **at most 8**, so unusable for a full list |
-| `/api/criticalvulnerabilities` | latest critical entries | at most 8 |
+| `/api/lastvulnerabilities` | latest entries | documented as at most 8, returns 4 |
+| `/api/exploitedvulnerabilities` | latest exploited entries | documented as at most 8, **returns 4**, so unusable for a full list |
+| `/api/criticalvulnerabilities` | latest critical entries | documented as at most 8, returns 4 |
 | `/api/search` | filtered entries, `{"items": [...], "total": n}` | `size` up to 100, `page` from 0 |
 | `/api/enisaid?id=EUVD-...` | one full record | products, vendors, vulnerabilities, advisories |
 | `/api/advisory?id=...` | one advisory | |
 | `/api/dump/cve-euvd-mapping` | CSV `euvd_id,cve_id` | about 11.6 MB, 384,152 rows, refreshed 07:00 UTC |
 | `/api/kev/dump` | JSON list of known-exploited CVEs | about 260 KB, 1,746 entries, refreshed 07:00 UTC |
+
+ENISA's `apidoc.md` states "Maximum 8 records" for the three list endpoints.
+All three returned 4 when checked, on 2026-10-07 and again on 2026-10-28; the
+scripts therefore page `/api/search` instead.
 
 `/api/search` parameters (documented): `fromScore`, `toScore`, `fromEpss`, `toEpss`,
 `fromDate`, `toDate`, `fromUpdatedDate`, `toUpdatedDate`, `product`, `vendor`,

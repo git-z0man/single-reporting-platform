@@ -179,7 +179,7 @@ Rules for it:
 - **Quote verbatim only where the wording is the finding**: a changed obligation, a new field name, a corrected legal reference. Otherwise point at the content sections further down, which already carry the page text in full. Do not reproduce it twice.
 - **Editorial means summarised.** Typos, punctuation, capitalisation, link markup, house-style shifts ("Article" → "Art.") get counted, not enumerated: "three new typos and two stray full stops on the rewritten pages, verbatim in the text below". The defects themselves stay marked in the content sections, so nothing is lost by not listing them here.
 - **Aim for 250 words.** Not a hard limit — a day like 2026-09-07, with a published platform URL and two new questions, earns more. But an entry over budget is usually one that spelled out editorial work.
-- **The heading carries a UTC time** whenever the day already has an entry — rare at a weekly cadence, but still possible if a run is repeated or triggered manually.
+- **The heading carries a UTC time** whenever the day already has an entry — rare at a daily cadence, but still possible if a run is repeated or triggered manually.
 - Separate substantive changes (a question added, deleted or reworded; a changed date, obligation, field, or legal reference) from cosmetic ones (link markup, page numbering) — that separation is what the rubrics are for.
 
 ### Nothing changed anywhere

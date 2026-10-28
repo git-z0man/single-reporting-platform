@@ -1,8 +1,9 @@
 # SRP production domain monitor
 
 Reachability monitoring for the CRA Single Reporting Platform production zone
-`cra-srp.enisa.europa.eu` — the third monitor in this repository, alongside the
-ENISA SRP FAQ baseline and the Commission CRA FAQ version check.
+`cra-srp.enisa.europa.eu` — one of the six scheduled checks in this repository
+(see [`routines/README.md`](../routines/README.md)), and the only one that probes
+hosts rather than pages.
 
 Overview page: [`srp-domains-baseline.md`](../srp-domains-baseline.md)
 
@@ -14,7 +15,7 @@ srp-domains/
   manifest.json         zone, delegation, edge, and per-host state
   status.md             overwritten each run: current table + "X/29 live"
   reachability-log.csv  append-only history, one row per host per run
-  evidence/             per-host proof of the CSIRT mapping, filled at go-live
+  evidence/             per-host proof of the CSIRT mapping, one file per country
 ```
 
 ## What it watches
@@ -30,8 +31,8 @@ below HTTP can be forged by an intercepting proxy, and in the Claude Code cloud
 environment it *is*:
 
 - TCP connect succeeds even to `240.0.0.1`, a reserved unroutable address.
-- The TLS handshake completes against all 29 SRP hosts while the platform is
-  dark, presenting a certificate issued by
+- The TLS handshake completed against all 29 SRP hosts while the platform was
+  still dark, presenting a certificate issued by
   `Anthropic / Egress Gateway SDS Issuing CA (production)` — the same
   certificate `example.com` and `www.enisa.europa.eu` get.
 
@@ -43,10 +44,10 @@ classifies by curl's exit code:
 |---|---|---|
 | HTTP status returned, body is the SRP origin | `LIVE` | upstream answered — go-live |
 | HTTP status returned, body is WEDOS's own error page | `EDGE_BLOCKED` | the edge answered, not the SRP origin |
-| exit 35 / 28 / 7 / 52 | `PROVISIONED` | connected, upstream dropped |
+| exit 56 + `403` | `BLOCKED` | egress policy denied CONNECT — the check was blind |
 | exit 6 | `NXDOMAIN` | curl itself could not resolve the host |
 | exit 28, local DNS also hung | `DNS_TIMEOUT` | nothing answered in time — the check was blind |
-| exit 56 + `403` | `BLOCKED` | egress policy denied CONNECT — the check was blind |
+| any other exit (35, 7, 52, 28 when DNS answered, 56 without `403`) | `PROVISIONED` | connected, upstream dropped |
 
 `BLOCKED` and `DNS_TIMEOUT` are kept distinct on purpose: both mean the
 monitor could not see, and must never be recorded as a platform state or
@@ -114,8 +115,8 @@ bash srp-domains/check.sh --quiet    # only the summary
 Exit code: `0` no state change, `1` at least one host changed state (the
 routine commits a delta), `2` error.
 
-It takes a few minutes — 29 hosts, each with a 20 s ceiling, all currently
-timing out at the TLS stage.
+It takes a few minutes — 29 hosts, each with a 20 s ceiling. Since the go-live
+all 29 answer, so a run is much quicker than it was while they timed out.
 
 ### Two places to run it, and what each tells you
 
@@ -123,15 +124,15 @@ timing out at the TLS stage.
   HTTP response from an arbitrary IP means the allowlist has been lifted. This
   is what the Routine does.
 - **From your own allowlisted IP** — a local `cron`/`launchd` entry runs the
-  identical script and additionally tells you whether *your* access works
-  before the public launch. There TCP and TLS are meaningful and the run
+  identical script unproxied; before the launch it was the only way to tell
+  whether *your* access worked. There TCP and TLS are meaningful and the run
   records `trust=direct`.
 
 ## Verification after go-live
 
-Dormant until a host reports `LIVE`. Then the routine confirms the portal's
-role, identifies the SSO provider, and cross-checks the CSIRT each country
-instance actually serves against the verified table in the baseline.
+Done on 2026-09-11, when the hosts went live: the routine confirmed the portal's
+role, identified the SSO provider, and cross-checked the CSIRT each country
+instance serves against the verified table in the baseline.
 
 The country → CSIRT mapping itself is **already settled** as of 2026-09-07,
 from ENISA's published [List of CSIRTs Designated as

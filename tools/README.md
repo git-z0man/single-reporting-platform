@@ -36,8 +36,9 @@ Auto-merge is allowed only when **every** edit is one of these:
   `glossary-count`, `glossary-version`, `glossary-asof`, `footer-asof`);
 - a link repointed because ENISA moved the page;
 - a new FAQ question, appended verbatim;
-- a typo-class word change: same length, words of five or more letters, at most
-  two letters different;
+- a typo-class word change: the same number of words, each of five or more
+  letters, at most two edits apart — so a dropped or doubled letter passes
+  (`adress` → `address`), not only a same-length swap;
 - a new Glossary card, only if every stage is Optional or n/a.
 
 **Judgment**, never merged unattended: a rewritten FAQ answer, a changed link
