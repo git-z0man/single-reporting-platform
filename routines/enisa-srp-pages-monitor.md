@@ -105,8 +105,21 @@ Note that `enisa-srp-faq-baseline.md` also carries a deliberately trimmed summar
 ## 3. The CSIRT list — diff it, but do not act on it
 
 `csirt_list_url` is the authoritative country → CSIRT-designated-as-coordinator
-mapping. Diff it word-for-word like every other page and record changes in
-`enisa-srp-faq-baseline.md`, the same as you would for the FAQ.
+mapping. **Do not eyeball it.** Run the comparison:
+
+    python3 tools/check_csirt_list.py <the fetched csirt page> enisa-srp-faq-baseline.md
+
+Exit 0 means the country → links mapping matches the baseline, and that is the only
+thing that lets you write "unchanged" for this page. Exit 1 prints the delta per
+country: record it in `enisa-srp-faq-baseline.md` the same as you would an FAQ change,
+and name the affected countries in the report. Exit 2 means the page's markup or the
+baseline's section no longer parses — a finding in itself, to be reported, not worked
+around.
+
+Why this is a script and not a reading: ENISA edits this list without moving its "Last
+updated" stamp. On 2026-10-18 Spain's two incident-handling links were removed under an
+unchanged stamp of 10 September 2026, and ten daily runs afterwards reported the page
+unchanged because they compared the stamp and spot-checked the text.
 
 Do **not** edit `srp-domains-baseline.md` or anything under `srp-domains/`.
 That table is owned by the SRP domain reachability routine, which fetches this
