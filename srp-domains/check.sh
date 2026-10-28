@@ -48,7 +48,8 @@
 #   branded error page      -> EDGE_BLOCKED  (the WEDOS edge answered, not
 #                                             the SRP origin -- see below)
 #   any other exit (35, 7,
-#   52, 56 without "403")   -> PROVISIONED   (connected, upstream dropped)
+#   52, 28 when DNS answered,
+#   56 without "403")       -> PROVISIONED   (connected, upstream dropped)
 #   exit 56 + "403"         -> BLOCKED       (egress policy; check is blind,
 #                                             never a statement about the SRP)
 #   exit 6                  -> NXDOMAIN      (curl itself could not resolve)

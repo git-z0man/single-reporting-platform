@@ -47,7 +47,7 @@ classifies by curl's exit code:
 | exit 56 + `403` | `BLOCKED` | egress policy denied CONNECT — the check was blind |
 | exit 6 | `NXDOMAIN` | curl itself could not resolve the host |
 | exit 28, local DNS also hung | `DNS_TIMEOUT` | nothing answered in time — the check was blind |
-| any other exit (35, 7, 52, 56 without `403`, …) | `PROVISIONED` | connected, upstream dropped |
+| any other exit (35, 7, 52, 28 when DNS answered, 56 without `403`) | `PROVISIONED` | connected, upstream dropped |
 
 `BLOCKED` and `DNS_TIMEOUT` are kept distinct on purpose: both mean the
 monitor could not see, and must never be recorded as a platform state or

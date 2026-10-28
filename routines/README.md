@@ -304,7 +304,7 @@ paste.
 | Routine | Loader status |
 |---|---|
 | Commission, SRP domains | applied by an agent with `update_trigger`; the file header records the date |
-| ENISA pages, notified bodies | **manual paste** of the loader in the Routines UI; the file header says "not applied yet" until someone has |
+| ENISA pages, notified bodies | **manual paste** of the loader in the Routines UI; both were pasted on 2026-10-04 |
 | Guide sync, EUVD exploited monitor | created with the loader from the start |
 
 After applying, read the Routine back (`get_trigger`) and check that the stored
