@@ -76,5 +76,58 @@ class Failure(unittest.TestCase):
             g.parse_faq(H.fx("faq_dl.html").replace("<dt>7. ", "<dt>70. ", 1))
 
 
+CSIRT_BASELINE = """---
+x: y
+---
+
+## List of CSIRTs Designated as Coordinators (new page, `csirt_list_url`)
+
+Some prose about the page.
+
+- Austria: https://www.cert.at/de/ueber-uns/kontakt/ and https://www.cert.at/en/about-us/contact/
+- Malta: https://www.mita.gov.mt *(protocol only, changed 2026-09-10 from `http://www.mita.gov.mt`)*
+- Spain: for incidents \u2014 https://www.incibe.es/incibe-cert/incidentes/respuesta-incidentes ; for vulnerability coordination \u2014 https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/asignacion-publicacion-cve
+
+## Next section
+
+- Not a country: https://example.eu/ignored
+"""
+
+
+class CsirtList(unittest.TestCase):
+    """The list ENISA edits without moving its stamp. See tools/check_csirt_list.py."""
+
+    def test_real_page_parses_into_27_countries(self):
+        live = H.ccl.from_html(H.fx("csirt_list.html"))
+        self.assertEqual(len(live), 27)
+        self.assertEqual(live["Sweden"], ["https://cert.se/rapportera"])
+
+    def test_annotation_in_the_baseline_is_not_a_current_link(self):
+        base = H.ccl.from_baseline(CSIRT_BASELINE)
+        self.assertEqual(base["Malta"], ["https://www.mita.gov.mt"])      # not the quoted http:// one
+        self.assertEqual(len(base), 3)                                   # the next section is not read
+
+    def test_a_removed_link_is_reported_against_its_country(self):
+        base = H.ccl.from_baseline(CSIRT_BASELINE)
+        live = H.deep(base)
+        live["Spain"] = [u for u in live["Spain"] if "incidentes" not in u]
+        d = H.ccl.diff(live, base)
+        self.assertEqual(len(d), 1)
+        self.assertIn("~ Spain", d[0])
+        self.assertIn("removed https://www.incibe.es/incibe-cert/incidentes/respuesta-incidentes", d[0])
+        self.assertEqual(H.ccl.diff(base, base), [])
+
+    def test_markup_that_no_longer_parses_is_an_error_not_a_silent_pass(self):
+        import tempfile, os
+        d = tempfile.mkdtemp()
+        page, base = os.path.join(d, "p.html"), os.path.join(d, "b.md")
+        open(page, "w").write("<html><body><p>Moved.</p></body></html>")
+        open(base, "w").write(CSIRT_BASELINE)
+        self.assertEqual(H.ccl.main([page, base]), 2)
+        open(page, "w").write(H.fx("csirt_list.html"))
+        open(base, "w").write("---\nno section here\n---\n")
+        self.assertEqual(H.ccl.main([page, base]), 2)
+
+
 if __name__ == "__main__":
     unittest.main()
