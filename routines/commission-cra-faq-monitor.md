@@ -62,7 +62,9 @@ asking, not about the pages. When either does not return 200 after the retries:
   A browser `User-Agent`, or any other disguise, is bot-check circumvention: this
   platform denies the call and the denial costs the attempt. The 2026-10-26 run put
   `-A "Mozilla/5.0"` in its very first fetch of both pages and lost it that way before
-  it had a plain answer to record;
+  it had a plain answer to record. It would not have helped: on 2026-10-23 the host
+  answered a CloudFront 403 to a cloud client *with* browser headers, so the request is
+  judged by where it comes from (see the baseline's check log);
 - the newsroom document id above is served by a different host and has kept answering
   through the 403s, so the version check itself usually still works. Say in the report
   which of the three checks ran and which did not, as the 2026-10-26 run did.

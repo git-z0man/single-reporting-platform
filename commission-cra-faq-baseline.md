@@ -111,9 +111,20 @@ Chromium pane) and read from the rendered DOM:**
 
 Nothing was missed while the fetches were blocked. This replaces an earlier
 "both pages answer 200 from an ordinary browser", which rested on a curl status
-code from another network (2026-10-28) and said nothing about content. What the
-browser does **not** establish is why the Routine is refused: that remains the
-bot check above.
+code from another network (2026-10-28) and said nothing about content.
+
+Why the Routine is refused is a separate question, and the answer looks like the
+host rather than these two pages. A session working on the NIS Cooperation Group
+pages — same host, unrelated monitor — recorded on 2026-10-23 that
+`digital-strategy.ec.europa.eu` answered a **CloudFront 403 from a cloud
+environment even with browser headers**, while the pages opened normally from an
+ordinary machine. Same day the Internet Archive's crawler was refused. That
+reads as a WAF rule on where the request comes from, which is the second reason
+a browser `User-Agent` is pointless here: it is denied by this platform, and it
+would not work anyway. The host also sends `X-Frame-Options: SAMEORIGIN`, so the
+pages cannot be embedded either. That observation is another session's report,
+not a measurement logged in this repository — it is recorded as the current best
+explanation, not as a finding of this monitor.
 
 ## Change log
 
