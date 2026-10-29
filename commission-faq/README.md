@@ -48,8 +48,8 @@ trigger. The download URLs are stable newsroom document ids
 Commission replaces the file behind one id in place rather than publishing a
 new id per release: Internet Archive captures of `document/122331` from
 2025-12-03, 2026-02-15, 2026-08-06 and 2026-10-18 are byte-identical (sha256)
-to the archived v1.0, v1.2, v1.3 and v1.4, and the six captures spanning
-v1.4's life all match v1.4. The same holds for the Markdown slot
+to the archived v1.0, v1.2, v1.3 and v1.4, and three further captures inside
+v1.4's life (2026-09-10, 2026-09-14, 2026-10-12) match v1.4 as well. The same holds for the Markdown slot
 `document/123307`, whose 2026-04-18 capture carries the v1.2 Markdown — so the
 Markdown rendering predates the first one this archive holds, and v1.2 and
 probably v1.3 could still be recovered from the Archive for artefact-free

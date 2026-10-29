@@ -8,7 +8,7 @@
   "last_check": "2026-10-19",
   "last_change": "2026-09-04",
   "last_attempt": "2026-10-26",
-  "last_attempt_result": "blocked - landing page and factpage HTTP 403; the version check via newsroom document/122331 ran and still showed v1.4. A blocked fetch moves last_attempt only, never last_check.",
+  "last_attempt_result": "blocked — landing page and factpage HTTP 403; the version check via newsroom document/122331 ran and still showed v1.4",
   "draftable": {
     "base_url": "https://api.draftable.com/v1",
     "status": "unavailable",

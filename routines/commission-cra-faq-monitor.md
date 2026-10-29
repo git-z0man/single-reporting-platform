@@ -133,7 +133,7 @@ Still check the factpage — see section 4.
 
    Do NOT trust the Commission's own one-line "Changes" note in the version table — verify it against the diff. Past releases understated their changes: the v1.2 note said "minor correction of 6.2" but that release removed the NANDO number of the notified body from the module B+C CE marking step.
 
-6. Update `commission-cra-faq-baseline.md`: add a `### v<PREV> → v<VERSION>` section at the top of the change log with the substantive changes, quoting new or changed FAQ text verbatim; refresh the "Current state" table (including its check rows), the version history table, the "Visual comparisons" table (new row with the change counts render_diff.py reported), and `current_version` / `last_change` / `last_check` in the frontmatter.
+6. Update `commission-cra-faq-baseline.md`: add a `### v<PREV> → v<VERSION>` section at the top of the change log with the substantive changes, quoting new or changed FAQ text verbatim; refresh the "Current state" table, the version history table, the "Visual comparisons" table (new row with the change counts render_diff.py reported), and `current_version` / `last_change` / `last_check` in the frontmatter.
 
 7. Update `commission-faq/versions/manifest.json`: new version entry with date, stated change, sha256 and byte size of each archived file, raw URL, and the newsroom document ids; and a new entry under `comparisons.pages`.
 

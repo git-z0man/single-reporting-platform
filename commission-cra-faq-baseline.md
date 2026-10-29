@@ -34,11 +34,11 @@ Commission replaces the file behind `document/122331` (PDF) and
 `document/123307` (Markdown) in place when it releases a version. Verified
 2026-10-29 against the Internet Archive — captures of `document/122331` from
 2025-12-03, 2026-02-15, 2026-08-06 and 2026-10-18 are byte-identical (sha256)
-to the archived v1.0, v1.2, v1.3 and v1.4 respectively, and six captures
-spanning v1.4's life are all identical to v1.4. The id's
-`Content-Disposition` filename is therefore the primary version handle, and it
-sits on a host that has kept answering while the digital-strategy pages return
-403. What it cannot see is a file replaced without a version bump; the sha256
+to the archived v1.0, v1.2, v1.3 and v1.4 respectively, and three further
+captures inside v1.4's life (2026-09-10, 2026-09-14, 2026-10-12) are identical
+to v1.4 as well. The id's `Content-Disposition` filename is therefore the
+primary version handle, and it sits on a host that has kept answering while the
+digital-strategy pages return 403. What it cannot see is a file replaced without a version bump; the sha256
 in the manifest is the cross-check if that is ever suspected.
 
 ## Current state
@@ -51,8 +51,6 @@ in the manifest is the cross-check if that is ever suspected.
 | PDF | [document/122331](https://ec.europa.eu/newsroom/dae/redirection/document/122331) — `sha256:43cd3da1…06b54a` |
 | Markdown | [document/123307](https://ec.europa.eu/newsroom/dae/redirection/document/123307) — `sha256:beb9b79a…9dbc9` |
 | Last change | 2026-09-04 |
-| Last complete check | 2026-10-19 |
-| Last attempt | 2026-10-26 — **blocked**, see the check log |
 
 ## Version history
 
@@ -79,8 +77,9 @@ diffed without PDF-extraction artefacts. Not done.
 ## Check log
 
 Runs that did not complete. A blocked fetch is not a content change: such a run
-moves `last_attempt` and adds a row here, and leaves `last_check`,
-`last_change`, the tables and the change log untouched. A gap between
+moves `last_attempt` in the frontmatter and adds a row here, and leaves
+`last_check`, `last_change`, the tables and the change log untouched. A gap
+between
 `last_attempt` and `last_check` in the frontmatter is the signal that nobody
 has actually seen the source since that date.
 
