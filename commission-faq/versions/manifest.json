@@ -7,6 +7,8 @@
   "current_version": "1.4",
   "last_check": "2026-10-19",
   "last_change": "2026-09-04",
+  "last_attempt": "2026-10-26",
+  "last_attempt_result": "blocked - landing page and factpage HTTP 403; the version check via newsroom document/122331 ran and still showed v1.4. A blocked fetch moves last_attempt only, never last_check.",
   "draftable": {
     "base_url": "https://api.draftable.com/v1",
     "status": "unavailable",
@@ -18,7 +20,7 @@
       "version": "1.0",
       "date": "2025-12-03",
       "changes_stated": "New",
-      "source_document_id": null,
+      "source_document_id": 122331,
       "archived": true,
       "files": {
         "pdf": {
@@ -47,7 +49,7 @@
       "version": "1.2",
       "date": "2026-01-16",
       "changes_stated": "Minor correction of 6.2",
-      "source_document_id": null,
+      "source_document_id": 122331,
       "archived": true,
       "files": {
         "pdf": {
@@ -68,7 +70,7 @@
       "version": "1.3",
       "date": "2026-07-01",
       "changes_stated": "Deletion of subsection 4.6",
-      "source_document_id": null,
+      "source_document_id": 122331,
       "archived": true,
       "files": {
         "pdf": {

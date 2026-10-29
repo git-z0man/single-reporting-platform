@@ -44,6 +44,31 @@ trigger. The download URLs are stable newsroom document ids
 `Content-Disposition` filename carries the version, e.g.
 `FAQs_on_the_CRA__v14_…_122331.pdf` — cheap to check with a HEAD request.
 
+"Stable" was an assumption until 2026-10-29; it now has evidence. The
+Commission replaces the file behind one id in place rather than publishing a
+new id per release: Internet Archive captures of `document/122331` from
+2025-12-03, 2026-02-15, 2026-08-06 and 2026-10-18 are byte-identical (sha256)
+to the archived v1.0, v1.2, v1.3 and v1.4, and the six captures spanning
+v1.4's life all match v1.4. The same holds for the Markdown slot
+`document/123307`, whose 2026-04-18 capture carries the v1.2 Markdown — so the
+Markdown rendering predates the first one this archive holds, and v1.2 and
+probably v1.3 could still be recovered from the Archive for artefact-free
+diffs. The id is therefore the monitor's primary version handle, and it sits on
+a host that kept answering while the digital-strategy pages returned 403 to
+automated fetchers (including the Archive's own crawler, 2026-10-23). What a
+filename check cannot see is a file replaced without a version bump; the
+sha256 per version in `manifest.json` is the cross-check for that.
+
+## last_check, last_attempt
+
+`last_check` is the date of the last check that ran in full; `last_attempt` is
+the date of the last run, whatever came of it, with `last_attempt_result`
+saying what failed. Both live in `manifest.json` and in the baseline's
+frontmatter, and the baseline carries a "Check log" table of the blocked runs.
+A blocked fetch moves `last_attempt` only: a 403 is not a content change, and
+leaving `last_check` to drift silently was how the gap from 2026-10-19 to
+2026-10-26 went unrecorded.
+
 ## Producing a diff
 
 ```bash
