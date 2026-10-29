@@ -55,8 +55,11 @@ after the retries:
   table — a 403 says nothing about whether the document changed;
 - record the attempt instead, per section 1a, so the gap is visible in the baseline and
   not only in a run log;
-- do **not** retry with a browser `User-Agent` or any other disguise. That is bot-check
-  circumvention, this platform denies it, and the denial ends the attempt anyway;
+- send curl's own `User-Agent` and no other, on **every** request including the first.
+  A browser `User-Agent`, or any other disguise, is bot-check circumvention: this
+  platform denies the call and the denial costs the attempt. The 2026-10-26 run put
+  `-A "Mozilla/5.0"` in its very first fetch of both pages and lost it that way before
+  it had a plain answer to record;
 - the newsroom document id above is served by a different host and has kept answering
   through the 403s, so the version check itself usually still works. Say in the report
   which of the three checks ran and which did not, as the 2026-10-26 run did.
