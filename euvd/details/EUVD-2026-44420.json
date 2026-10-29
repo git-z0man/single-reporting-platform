@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
   "baseScoreVersion": "3.1",
   "datePublished": "Jul 14, 2026, 7:44:17 PM",
-  "dateUpdated": "Oct 27, 2026, 7:59:03 PM",
+  "dateUpdated": "Oct 28, 2026, 3:55:44 AM",
   "description": "Adobe Commerce is affected by an Unrestricted Upload of File with Dangerous Type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page. Scope is changed.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -87,7 +87,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-48356\nGHSA-p3ch-8535-fp8j\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 28, 2026, 6:00:59 AM",
+     "dataProcessed": "Oct 29, 2026, 6:01:01 AM",
      "datePublished": "Jul 14, 2026, 9:32:19 PM",
      "dateUpdated": "Oct 27, 2026, 9:33:27 PM",
      "description": "Adobe Commerce is affected by an Unrestricted Upload of File with Dangerous Type vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page. Scope is changed.",
@@ -106,12 +106,12 @@
      "baseScore": 9.3,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Oct 28, 2026, 6:00:16 AM",
+     "dataProcessed": "Oct 29, 2026, 6:00:33 AM",
      "datePublished": "Jul 14, 2026, 7:44:17 PM",
-     "dateUpdated": "Oct 27, 2026, 7:59:03 PM",
+     "dateUpdated": "Oct 28, 2026, 3:55:44 AM",
      "description": "Adobe Commerce is affected by an Unrestricted Upload of File with Dangerous Type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page. Scope is changed.",
      "enisa_id": "EUVD-2026-44420\n",
-     "epss": 1.0,
+     "epss": 30.58,
      "exploitedSince": "Oct 27, 2026, 12:00:00 AM",
      "id": "CVE-2026-48356",
      "references": "https://helpx.adobe.com/security/products/magento/apsb26-73.html\n",
@@ -170,7 +170,7 @@
    }
   ],
   "enisaUuid": "9662f99b-7287-3e77-9e68-814b63dcf681",
-  "epss": 1.0,
+  "epss": 30.58,
   "exploitedSince": "Oct 27, 2026, 12:00:00 AM",
   "id": "EUVD-2026-44420",
   "references": "https://helpx.adobe.com/security/products/magento/apsb26-73.html\n"
@@ -1174,7 +1174,7 @@
    }
   ],
   "id": "CVE-2026-48356",
-  "lastModified": "2026-10-28T04:18:02.533",
+  "lastModified": "2026-10-28T13:34:50.330",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -1252,19 +1252,28 @@
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://sansec.io/research/magento-cms-block-loader-deepveindrilling#indicators-of-compromise"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://sansec.io/research/polyshell-mass-attack-wave"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-48356"
    }
   ],
   "sourceIdentifier": "psirt@adobe.com",
-  "vulnStatus": "Modified",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [
