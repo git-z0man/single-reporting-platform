@@ -29,7 +29,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 22, 2026, 1:35:41 PM",
-  "dateUpdated": "Oct 27, 2026, 7:59:03 PM",
+  "dateUpdated": "Oct 28, 2026, 3:55:48 AM",
   "description": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
   "enisaIdAdvisory": [
    {
@@ -165,7 +165,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 10:13:35 PM",
-     "dateUpdated": "Oct 27, 2026, 4:11:28 AM",
+     "dateUpdated": "Oct 27, 2026, 10:31:58 AM",
      "description": "Red Hat Security Advisory: Red Hat Hardened Images RPMs bug fix and enhancement update",
      "id": "RHSA-2026:87420",
      "references": "https://access.redhat.com/errata/RHSA-2026:87420\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87420.json\n",
@@ -176,6 +176,70 @@
      "summary": "An update for Red Hat Hardened Images RPMs is now available."
     },
     "id": "0af83dc1-d3fe-3d69-9bbb-33374a836dde"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "281d456c-0635-3711-8e08-fb5d19db8a7f",
+       "product": {
+        "name": "Node.js",
+        "vendor": {
+         "name": "Node.js"
+        }
+       }
+      },
+      {
+       "id": "87d15a18-4344-3551-a2d5-4a7c3f4ba157",
+       "product": {
+        "name": "22.23.4",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "88281538-c398-39eb-b59d-e37781476af6",
+       "product": {
+        "name": "Red Hat Enterprise Linux",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ac18f6c3-f5aa-3015-aa86-fa51d2fae11c",
+       "product": {
+        "name": "26.12.1",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "b7d36c9e-97b0-3027-9805-a8cce0fd7084",
+       "product": {
+        "name": "24.22.1",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106070\nCVE-2026-106071\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 21, 2026, 10:00:00 PM",
+     "dateUpdated": "Oct 25, 2026, 11:00:00 PM",
+     "description": "Node.js: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-4117",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4117.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4117\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Node.js ausnutzen, um einen Denial of Service Angriff durchzuführen, um Sicherheitsvorkehrungen zu umgehen und um beliebigen Programmcode auszuführen."
+    },
+    "id": "3afd0b4d-3958-3f79-970d-0baf96773caa"
    },
    {
     "advisory": {
@@ -625,7 +689,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 26, 2026, 7:23:32 PM",
+     "dateUpdated": "Oct 27, 2026, 9:04:52 PM",
      "description": "brotli-1.2.1-1.1 on GA media",
      "id": "openSUSE-SU-2026:12232-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12232-1.json\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
@@ -860,7 +924,7 @@
      "aliases": "CVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 26, 2026, 7:23:43 PM",
+     "dateUpdated": "Oct 27, 2026, 9:05:02 PM",
      "description": "corepack24-24.22.1-1.1 on GA media",
      "id": "openSUSE-SU-2026:12248-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12248-1.json\nhttps://www.suse.com/security/cve/CVE-2026-105481/\nhttps://www.suse.com/security/cve/CVE-2026-105482/\nhttps://www.suse.com/security/cve/CVE-2026-105483/\nhttps://www.suse.com/security/cve/CVE-2026-106069/\nhttps://www.suse.com/security/cve/CVE-2026-106073/\nhttps://www.suse.com/security/cve/CVE-2026-106074/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
@@ -919,7 +983,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 28, 2026, 6:01:17 AM",
+     "dataProcessed": "Oct 29, 2026, 6:01:20 AM",
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
      "dateUpdated": "Oct 23, 2026, 12:00:00 AM",
      "description": "Out-of-bounds write in the brotlicffi decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -936,7 +1000,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 28, 2026, 6:01:17 AM",
+     "dataProcessed": "Oct 29, 2026, 6:01:20 AM",
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
      "dateUpdated": "Oct 23, 2026, 12:00:00 AM",
      "description": "Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -953,7 +1017,7 @@
     "vulnerability": {
      "aliases": "GHSA-9v8h-qqgm-4m35\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 27, 2026, 7:03:17 AM",
+     "dataProcessed": "Oct 28, 2026, 7:03:20 AM",
      "datePublished": "Oct 22, 2026, 3:32:49 PM",
      "dateUpdated": "Oct 23, 2026, 7:08:09 PM",
      "description": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -972,12 +1036,12 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 28, 2026, 6:00:16 AM",
+     "dataProcessed": "Oct 29, 2026, 6:00:33 AM",
      "datePublished": "Oct 22, 2026, 1:35:41 PM",
-     "dateUpdated": "Oct 27, 2026, 7:59:03 PM",
+     "dateUpdated": "Oct 28, 2026, 3:55:48 AM",
      "description": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
      "enisa_id": "EUVD-2026-108169\n",
-     "epss": 36.03,
+     "epss": 55.48,
      "exploitedSince": "Oct 27, 2026, 12:00:00 AM",
      "id": "CVE-2026-111497",
      "references": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high\nhttps://github.com/andybalholm/brotli/releases/tag/v1.2.7\n",
@@ -1026,7 +1090,7 @@
    }
   ],
   "enisaUuid": "42d57d45-3372-37f9-9ddd-62b353c64700",
-  "epss": 36.03,
+  "epss": 55.48,
   "exploitedSince": "Oct 27, 2026, 12:00:00 AM",
   "id": "EUVD-2026-108169",
   "references": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high\nhttps://github.com/andybalholm/brotli/releases/tag/v1.2.7\n"
@@ -1078,6 +1142,384 @@
   "cisaExploitAdd": "2026-10-27",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "Google Brotli Unchecked Return Value Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:google:brotli:*:*:*:*:*:-:*:*",
+        "matchCriteriaId": "8A7BE60F-21B0-4779-8D59-6E5E58C5826B",
+        "versionEndExcluding": "1.0.10",
+        "versionStartIncluding": "1.0.3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:google:brotli:*:*:*:*:*:-:*:*",
+        "matchCriteriaId": "48E72297-AFBD-4460-A732-5A6803CCCDB0",
+        "versionEndExcluding": "1.1.1",
+        "versionStartIncluding": "1.1.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:google:brotli:*:*:*:*:*:-:*:*",
+        "matchCriteriaId": "C8CA5C74-26A8-44E3-B893-1FA01CED49F5",
+        "versionEndExcluding": "1.2.1",
+        "versionStartIncluding": "1.2.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:nodejs:node.js:*:*:*:*:-:*:*:*",
+        "matchCriteriaId": "02348F18-5E17-4427-8B78-63B4082F2FB4",
+        "versionEndExcluding": "22.23.4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:nodejs:node.js:*:*:*:*:-:*:*:*",
+        "matchCriteriaId": "852D09BB-A396-4813-81C9-7D89D5DD5FB6",
+        "versionEndExcluding": "24.22.1",
+        "versionStartIncluding": "23.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:nodejs:node.js:*:*:*:*:-:*:*:*",
+        "matchCriteriaId": "219CA855-3A40-42CE-BAB6-79CCFEE7746F",
+        "versionEndExcluding": "26.12.1",
+        "versionStartIncluding": "25.0.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:python-hyper:brotlicffi:*:*:*:*:*:python:*:*",
+        "matchCriteriaId": "E732E75B-4BEF-4D7E-8520-E03B707FB4F6",
+        "versionEndExcluding": "1.2.1.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "65DCE51C-2CD9-4179-9354-5323D28573AA",
+        "versionEndExcluding": "8.0.33",
+        "versionStartIncluding": "8.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "98654489-8C4E-4801-8728-29B01A22DEED",
+        "versionEndExcluding": "9.0.22",
+        "versionStartIncluding": "9.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "27DF5CF4-58E3-4F01-A3AA-D44B7DCC3D67",
+        "versionEndExcluding": "10.0.14",
+        "versionStartIncluding": "10.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:11.0.0:preview1:*:*:*:*:*:*",
+        "matchCriteriaId": "5DACF2FE-CF61-43E4-8A3F-F7A358DE8A01",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:11.0.0:preview2:*:*:*:*:*:*",
+        "matchCriteriaId": "280B2E64-3163-40AB-A048-14D58DEC42FD",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:11.0.0:preview3:*:*:*:*:*:*",
+        "matchCriteriaId": "12357908-3294-46EF-85A0-DA3F86C97489",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:11.0.0:preview4:*:*:*:*:*:*",
+        "matchCriteriaId": "849FC8F5-86CD-4B5D-ADFD-9CB16EA75D09",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:11.0.0:preview5:*:*:*:*:*:*",
+        "matchCriteriaId": "C86E87E2-B236-4AC9-B6C3-64B9CDEC91EB",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:11.0.0:preview6:*:*:*:*:*:*",
+        "matchCriteriaId": "9B14656E-2BB0-4B4B-B518-F3D5108253ED",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:11.0.0:preview7:*:*:*:*:*:*",
+        "matchCriteriaId": "E09C9DB3-F42C-4442-9CF0-24A780D094C8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:11.0.0:rc1:*:*:*:*:*:*",
+        "matchCriteriaId": "67035E86-61F5-421E-B243-EF64458AD8BA",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:.net:11.0.0:rc2:*:*:*:*:*:*",
+        "matchCriteriaId": "C46300CA-BA84-48B3-85C5-C20CB487C733",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:debian:debian_linux:12.0:*:*:*:*:*:*:*",
+        "matchCriteriaId": "46D69DCC-AE4D-4EA5-861C-D60951444C6C",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:istio:istio:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "9F01FA9D-7190-431F-84DD-24D4EBC41A2D",
+        "versionEndExcluding": "1.29.9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:istio:istio:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B8DE25CE-AFCB-4685-9836-B8EC9C820975",
+        "versionEndExcluding": "1.30.6",
+        "versionStartIncluding": "1.30.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:istio:istio:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "55EBE231-2EB8-4C9C-B279-D07F82EA5B55",
+        "versionEndExcluding": "1.31.2",
+        "versionStartIncluding": "1.31.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:anthropic:bun:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "51DD72B3-85F6-4B10-AEB4-41E0679ED0AA",
+        "versionEndExcluding": "1.4.4",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "8EE6278D-A48A-427C-8A7E-1D4103E2ADF7",
+        "versionEndExcluding": "1.37.8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "CDCA301F-83CA-4DDB-AAE4-24D5235EE2D5",
+        "versionEndExcluding": "1.38.6",
+        "versionStartIncluding": "1.38.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B9A47DD3-2655-4722-9B9D-3888B590C82F",
+        "versionEndExcluding": "1.39.3",
+        "versionStartIncluding": "1.39.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:tianocore:edk2:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "C4CFCBFB-4A38-481B-93AE-7D86CCDC6FB5",
+        "versionEndIncluding": "202608",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:google:woff2:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "6D1FC23A-20F7-48F7-ABB8-8D37903DFB58",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:duckdb:duckdb:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "0DFA4F95-92F9-4369-BE42-387520F0765B",
+        "versionEndIncluding": "2.0.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:clickhouse:clickhouse:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B40EE389-E2AC-4D86-91B2-79A895470317",
+        "versionEndIncluding": "26.10.2.103",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:apache:arrow:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "46A78CA5-1E4A-4DAA-B40D-387B96C1E2F9",
+        "versionEndIncluding": "26.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:apache:arrow:27.0.0:dev:*:*:*:*:*:*",
+        "matchCriteriaId": "130A7077-7885-43CB-8AFF-B6056D380156",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:mcmilk:7-zip-zstd:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "FB91A353-9BE9-49E7-86FD-6B5FBB291351",
+        "versionEndIncluding": "26.02-1.5.7-r2",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:7-zip:p7zip:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "76A26292-08BE-459A-B25A-CA14AF8D3C29",
+        "versionEndIncluding": "16.02",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:andybalholm:brotli:*:*:*:*:*:go:*:*",
+        "matchCriteriaId": "F3E50F12-AEFE-4B4F-B474-3676F145E032",
+        "versionEndExcluding": "1.2.7",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
   "cveTags": [],
   "descriptions": [
    {
@@ -1086,8 +1528,30 @@
    }
   ],
   "id": "CVE-2026-111497",
-  "lastModified": "2026-10-28T04:17:56.950",
+  "lastModified": "2026-10-28T17:47:31.370",
   "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
    "cvssMetricV40": [
     {
      "cvssData": {
@@ -1159,79 +1623,141 @@
   "references": [
    {
     "source": "cve-coordination@google.com",
+    "tags": [
+     "Release Notes"
+    ],
     "url": "https://github.com/andybalholm/brotli/releases/tag/v1.2.7"
    },
    {
     "source": "cve-coordination@google.com",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://www.openwall.com/lists/oss-security/2026/10/23/25"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://www.openwall.com/lists/oss-security/2026/10/24/6"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://www.openwall.com/lists/oss-security/2026/10/26/12"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://www.openwall.com/lists/oss-security/2026/10/26/13"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://www.openwall.com/lists/oss-security/2026/10/26/16"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://broccoli2shell.com"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://github.com/advisories/GHSA-9v8h-qqgm-4m35"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Issue Tracking",
+     "Mitigation",
+     "Third Party Advisory"
+    ],
     "url": "https://github.com/dotnet/announcements/issues/494"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Release Notes"
+    ],
     "url": "https://github.com/google/brotli/releases/tag/v1.0.10"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Release Notes"
+    ],
     "url": "https://github.com/google/brotli/releases/tag/v1.1.1"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Release Notes"
+    ],
     "url": "https://github.com/google/brotli/releases/tag/v1.2.1"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "https://lists.debian.org/debian-lts-announce/2026/10/msg00049.html"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://patchtheplanet.org/brotli"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://www.aikido.dev/blog/node2shell-nodejs-brotli-rce-cve-2026-111497"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://ellio.tech/en/blog/node2shell-cve-2026-111497-rce-on-stock-nodejs-builds/"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-111497"
    }
   ],
   "sourceIdentifier": "cve-coordination@google.com",
-  "vulnStatus": "Undergoing Analysis",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [

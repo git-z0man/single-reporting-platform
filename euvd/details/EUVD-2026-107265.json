@@ -32,7 +32,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 21, 2026, 1:54:43 PM",
-  "dateUpdated": "Oct 27, 2026, 12:58:23 PM",
+  "dateUpdated": "Oct 28, 2026, 3:55:47 AM",
   "description": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
   "enisaIdAdvisory": [
    {
@@ -1968,7 +1968,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 5:04:21 PM",
-     "dateUpdated": "Oct 26, 2026, 7:24:05 PM",
+     "dateUpdated": "Oct 27, 2026, 1:14:27 PM",
      "description": "Security update for php8",
      "id": "openSUSE-SU-2026:22151-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_22151-1.json\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -4725,7 +4725,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 4:57:23 PM",
-     "dateUpdated": "Oct 26, 2026, 7:19:09 PM",
+     "dateUpdated": "Oct 27, 2026, 1:10:49 PM",
      "description": "Security update for php8",
      "id": "SUSE-SU-2026:24271-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_24271-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -6445,7 +6445,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 26, 2026, 7:23:29 PM",
+     "dateUpdated": "Oct 27, 2026, 1:13:31 PM",
      "description": "php8-8.5.12-1.1 on GA media",
      "id": "openSUSE-SU-2026:12219-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12219-1.json\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -6583,6 +6583,15 @@
         "name": "php8.4-debuginfo-0:8.4.27-1.el10_2.aarch64",
         "vendor": {
          "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0a982679-3147-3a04-a572-adf5c6c178b2",
+       "product": {
+        "name": "SUSE Liberty Linux 10",
+        "vendor": {
+         "name": "SUSE"
         }
        }
       },
@@ -8279,18 +8288,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:10:03 PM",
-     "dateUpdated": "Oct 27, 2026, 4:09:04 AM",
-     "description": "Red Hat Security Advisory: php8.4 security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 27, 2026, 1:08:25 PM",
+     "description": "security update for php8.4",
      "id": "RHSA-2026:87071",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87071\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87071.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87071.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008329.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008329.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for php8.4 is now available for Red Hat Enterprise Linux 10.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php8.4"
     },
     "id": "339c10ca-f37c-3010-832a-d17af415324c"
    },
@@ -9666,6 +9675,15 @@
        }
       },
       {
+       "id": "c4d74937-ceea-349d-b101-3c3f727ef923",
+       "product": {
+        "name": "SUSE Liberty Linux 10",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
        "id": "c52afe64-0a14-30fb-9ebf-e442029d2095",
        "product": {
         "name": "php-ldap-0:8.3.36-1.el10_2.s390x",
@@ -10116,18 +10134,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:11:09 PM",
-     "dateUpdated": "Oct 27, 2026, 4:09:03 AM",
-     "description": "Red Hat Security Advisory: php security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 27, 2026, 1:08:24 PM",
+     "description": "security update for php",
      "id": "RHSA-2026:87070",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87070\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87070.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87070.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008327.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008327.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for php is now available for Red Hat Enterprise Linux 10.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php"
     },
     "id": "3832c22a-6f43-31ac-b81e-367b7ee6ffbe"
    },
@@ -12211,6 +12229,15 @@
         "name": "php-snmp-0:7.4.33-8.module+el8.10.0+25117+30337cca.s390x::php:7.4",
         "vendor": {
          "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "11403deb-72e9-339a-9a3d-8a8dd65bfc58",
+       "product": {
+        "name": "SUSE Liberty Linux 8",
+        "vendor": {
+         "name": "SUSE"
         }
        }
       },
@@ -14726,18 +14753,18 @@
        }
       }
      ],
-     "aliases": "CVE-2025-1218\nCVE-2025-14181\nCVE-2026-6103\nCVE-2026-91765\nCVE-2026-91766\nCVE-2026-91767\nCVE-2026-91768\nCVE-2026-91769\nCVE-2026-92842\nCVE-2026-93682\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2025-1218\nCVE-2025-14181\nCVE-2026-109618\nCVE-2026-109619\nCVE-2026-6103\nCVE-2026-91765\nCVE-2026-91766\nCVE-2026-91767\nCVE-2026-91768\nCVE-2026-91769\nCVE-2026-92842\nCVE-2026-93682\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 3:53:19 PM",
-     "dateUpdated": "Oct 27, 2026, 4:11:02 AM",
-     "description": "Red Hat Security Advisory: php:7.4 security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 27, 2026, 1:08:30 PM",
+     "description": "security update for libzip",
      "id": "RHSA-2026:87080",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87080\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87080.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87080.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008322.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008322.html\nhttps://www.suse.com/security/cve/CVE-2025-1218/\nhttps://www.suse.com/security/cve/CVE-2025-14181/\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-6103/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\nhttps://www.suse.com/security/cve/CVE-2026-91766/\nhttps://www.suse.com/security/cve/CVE-2026-91767/\nhttps://www.suse.com/security/cve/CVE-2026-91768/\nhttps://www.suse.com/security/cve/CVE-2026-91769/\nhttps://www.suse.com/security/cve/CVE-2026-92842/\nhttps://www.suse.com/security/cve/CVE-2026-93682/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for the php:7.4 module is now available for Red Hat Enterprise Linux 8.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for libzip"
     },
     "id": "5175a87f-cd2d-3fcb-904e-f7ba7c1e9389"
    },
@@ -17169,7 +17196,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 3:44:40 PM",
-     "dateUpdated": "Oct 26, 2026, 7:21:39 PM",
+     "dateUpdated": "Oct 27, 2026, 1:11:43 PM",
      "description": "Security update for php8",
      "id": "SUSE-SU-2026:4843-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_4843-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -18559,6 +18586,15 @@
         "name": "php-enchant-debuginfo-0:8.2.35-1.module+el9.8.0+25111+a1450321.ppc64le::php:8.2",
         "vendor": {
          "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "464918cd-ef54-3e8c-b1b6-61fb15b19cef",
+       "product": {
+        "name": "SUSE Liberty Linux 9",
+        "vendor": {
+         "name": "SUSE"
         }
        }
       },
@@ -20300,18 +20336,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:35:47 PM",
-     "dateUpdated": "Oct 27, 2026, 4:09:04 AM",
-     "description": "Red Hat Security Advisory: php:8.2 security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 27, 2026, 1:08:26 PM",
+     "description": "security update for php",
      "id": "RHSA-2026:87072",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87072\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87072.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87072.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008336.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008336.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for the php:8.2 module is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php"
     },
     "id": "781f6e53-1364-36c7-b884-e95ab9dfc68c"
    },
@@ -23346,7 +23382,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 22, 2026, 4:03:33 PM",
-     "dateUpdated": "Oct 26, 2026, 7:21:46 PM",
+     "dateUpdated": "Oct 27, 2026, 1:11:51 PM",
      "description": "Security update for php74",
      "id": "SUSE-SU-2026:4870-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_4870-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -24460,6 +24496,15 @@
        }
       },
       {
+       "id": "93cc831d-9b19-3bbd-aa15-ad9e03c04e4d",
+       "product": {
+        "name": "SUSE Liberty Linux 9.6 EMS",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
        "id": "943e5e15-cd69-32a0-b1a2-b6037ad194e1",
        "product": {
         "name": "php-ldap-0:8.0.30-3.el9_6.2.aarch64",
@@ -25182,16 +25227,16 @@
      ],
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 23, 2026, 3:23:46 PM",
-     "dateUpdated": "Oct 27, 2026, 4:11:07 AM",
-     "description": "Red Hat Security Advisory: php security update",
+     "datePublished": "Oct 23, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 27, 2026, 1:08:32 PM",
+     "description": "security update for php",
      "id": "RHSA-2026:88720",
-     "references": "https://access.redhat.com/errata/RHSA-2026:88720\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88720.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_88720.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008372.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008372.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for php is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php"
     },
     "id": "7be93c09-f2ca-3a7e-bbfb-d97eaf23bf05"
    },
@@ -28359,6 +28404,15 @@
        }
       },
       {
+       "id": "d4da3489-2612-32fe-aa0a-e55d23ff6912",
+       "product": {
+        "name": "SUSE Liberty Linux 8",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
        "id": "d5932dc5-f41e-34b0-8559-b3b24edd7112",
        "product": {
         "name": "php-bcmath-0:8.2.35-1.module+el8.10.0+25110+f67151d2.x86_64::php:8.2",
@@ -28755,18 +28809,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:30:32 PM",
-     "dateUpdated": "Oct 27, 2026, 4:09:05 AM",
-     "description": "Red Hat Security Advisory: php:8.2 security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 27, 2026, 1:08:27 PM",
+     "description": "security update for libzip",
      "id": "RHSA-2026:87073",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87073\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87073.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87073.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008331.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008331.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for the php:8.2 module is now available for Red Hat Enterprise Linux 8.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for libzip"
     },
     "id": "834c6e68-b758-33fb-b494-a88b53c879b6"
    },
@@ -30979,6 +31033,15 @@
        }
       },
       {
+       "id": "e6e14d73-93d2-3a6b-83c0-feebc9a2e391",
+       "product": {
+        "name": "SUSE Liberty Linux 9",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
        "id": "e794a7d6-c8d3-3087-91d2-49e55f9784e8",
        "product": {
         "name": "php-pecl-zip-debuginfo-0:1.22.3-1.module+el9.8.0+24343+756b4fcd.s390x::php:8.3",
@@ -31222,18 +31285,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:36:00 PM",
-     "dateUpdated": "Oct 27, 2026, 4:11:04 AM",
-     "description": "Red Hat Security Advisory: php:8.3 security update",
+     "datePublished": "Oct 21, 2026, 4:14:39 AM",
+     "dateUpdated": "Oct 27, 2026, 1:08:28 PM",
+     "description": "Important: php:8.3 security update",
      "id": "RHSA-2026:87079",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87079\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87079.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87079.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008338.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008338.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for the php:8.3 module is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "Important: php:8.3 security update"
     },
     "id": "8d87e412-a430-376a-8394-7f08d0a4855d"
    },
@@ -34060,6 +34123,15 @@
        }
       },
       {
+       "id": "5714b966-1d24-3bec-9318-32a9121382ba",
+       "product": {
+        "name": "SUSE Liberty Linux 9",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
        "id": "592b8f26-57b7-3dcf-8bdf-aeeb5ef536b7",
        "product": {
         "name": "php-pdo-0:8.0.30-8.el9_8.1.x86_64",
@@ -35212,18 +35284,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:06:07 PM",
-     "dateUpdated": "Oct 27, 2026, 4:11:02 AM",
-     "description": "Red Hat Security Advisory: php security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 27, 2026, 1:08:31 PM",
+     "description": "security update for php",
      "id": "RHSA-2026:87151",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87151\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87151.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87151.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008339.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008339.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for php is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php"
     },
     "id": "b9849583-cd1e-33cb-b18e-1acf6af6d236"
    },
@@ -44058,9 +44130,9 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 28, 2026, 6:00:20 AM",
+     "dataProcessed": "Oct 29, 2026, 6:00:33 AM",
      "datePublished": "Oct 21, 2026, 1:54:43 PM",
-     "dateUpdated": "Oct 27, 2026, 12:58:23 PM",
+     "dateUpdated": "Oct 28, 2026, 3:55:47 AM",
      "description": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
      "enisa_id": "EUVD-2026-107265\n",
      "epss": 100.0,

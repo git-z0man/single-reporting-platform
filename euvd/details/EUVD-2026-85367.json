@@ -153,7 +153,26 @@
   "id": "EUVD-2026-85367",
   "references": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-266-01.json\nhttps://forums.plex.tv/t/plex-media-server/30447/711\nhttps://www.cve.org/CVERecord?id=CVE-2026-96652\nhttps://zmain.info/blog/plex2shell\n"
  },
- "honeypot": [],
+ "honeypot": [
+  {
+   "avg30d": 0.0,
+   "avg7d": 0.0,
+   "avg90d": 0.0,
+   "cisaKevFlag": true,
+   "connections1d": 10,
+   "cveId": "CVE-2026-96652",
+   "firstSeenAt": "Oct 28, 2026, 7:12:22 AM",
+   "isNew": true,
+   "lastSeenAt": "Oct 28, 2026, 7:12:22 AM",
+   "product": "Plex Media Server",
+   "source": "shadowserver",
+   "trend": "STEADY",
+   "uniqueIps1d": 3,
+   "vendor": "Plex",
+   "vulnClass": "video-system",
+   "vulnSeverity": "Medium"
+  }
+ ],
  "id": "EUVD-2026-85367",
  "kev_sources": [
   {

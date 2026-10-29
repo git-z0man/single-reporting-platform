@@ -254,11 +254,22 @@
  },
  "honeypot": [
   {
+   "avg30d": 11.0,
+   "avg7d": 0.0,
+   "avg90d": 3.0,
+   "cisaKevFlag": true,
+   "connections1d": 4899,
    "cveId": "CVE-2026-88771",
    "firstSeenAt": "Sep 29, 2026, 3:00:00 AM",
    "isNew": false,
+   "lastSeenAt": "Oct 28, 2026, 7:12:22 AM",
+   "product": "NetScaler ADC and NetScaler Gateway",
    "source": "shadowserver",
-   "trend": "STEADY"
+   "trend": "STEADY",
+   "uniqueIps1d": 1,
+   "vendor": "Citrix",
+   "vulnClass": "app-delivery-controller",
+   "vulnSeverity": "Critical"
   }
  ],
  "id": "EUVD-2026-87958",
