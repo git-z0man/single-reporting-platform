@@ -10,7 +10,7 @@ archive: commission-faq/versions/ (PDF + Markdown per version, manifest.json)
 canonical_text: commission-faq/text/ (diffable plain text per version)
 visual_diffs: commission-faq/diff/ (self-contained HTML, one page per version pair)
 retrieved: 2026-09-05
-factpage_retrieved: 2026-09-05
+factpage_retrieved: 2026-10-29
 purpose: Baseline snapshot for change detection on the Commission's CRA FAQ and its implementation factpage. Future runs compare the live document against the archived version and record the delta here.
 note: Unlike the ENISA baseline, the FAQ content is not inlined here — it is a 66-page document. The archive under `commission-faq/versions/` holds each released version verbatim; this page carries the version history, the substantive deltas, and the comparison links.
 last_check: 2026-10-19
@@ -90,9 +90,41 @@ has actually seen the source since that date.
 The 403 is a bot check rather than a quirk of this monitor's egress: the
 Internet Archive's own crawler was refused the landing page on 2026-10-23
 (capture `20261023091016`, status 403) and the factpage has no capture after
-2026-10-07, while both pages answer 200 from an ordinary browser. Disguising
-the User-Agent is not an option — that is bot-check circumvention, and this
-platform denies it.
+2026-10-07. Disguising the User-Agent is not an option either — that is
+bot-check circumvention, and this platform denies it.
+
+Both pages are up and unchanged, which was checked in a browser rather than
+inferred from a status code.
+
+**2026-10-29 — both pages opened in a browser (the Claude desktop app's own
+Chromium pane) and read from the rendered DOM:**
+
+- *Landing page*: renders normally, states "Last update **4 September 2026**",
+  and its two Download links point at
+  `newsroom/dae/redirection/document/123307` (Markdown) and `…/122331` (PDF),
+  with no third id anywhere on the page. That agrees with the
+  `Content-Disposition` filename `FAQs_on_the_CRA__v14_…_122331.pdf` fetched
+  the same day: page and newsroom slot both say v1.4.
+- *Factpage*: renders normally, states "Last update **27 July 2026**", and
+  carries the same ten milestones as the "Factpage baseline" section below,
+  unchanged in date and in substance.
+
+Nothing was missed while the fetches were blocked. This replaces an earlier
+"both pages answer 200 from an ordinary browser", which rested on a curl status
+code from another network (2026-10-28) and said nothing about content.
+
+Why the Routine is refused is a separate question, and the answer looks like the
+host rather than these two pages. A session working on the NIS Cooperation Group
+pages — same host, unrelated monitor — recorded on 2026-10-23 that
+`digital-strategy.ec.europa.eu` answered a **CloudFront 403 from a cloud
+environment even with browser headers**, while the pages opened normally from an
+ordinary machine. Same day the Internet Archive's crawler was refused. That
+reads as a WAF rule on where the request comes from, which is the second reason
+a browser `User-Agent` is pointless here: it is denied by this platform, and it
+would not work anyway. The host also sends `X-Frame-Options: SAMEORIGIN`, so the
+pages cannot be embedded either. That observation is another session's report,
+not a measurement logged in this repository — it is recorded as the current best
+explanation, not as a finding of this monitor.
 
 ## Change log
 
@@ -151,7 +183,8 @@ Covers both the 1.1 and 1.2 releases, since v1.1 is not archived.
 ## Factpage baseline
 
 `https://digital-strategy.ec.europa.eu/en/factpages/cyber-resilience-act-implementation`
-— last update stated **27 July 2026**, retrieved 2026-09-05. This page is
+— last update stated **27 July 2026**, retrieved 2026-09-05 and re-read in a
+browser 2026-10-29 (unchanged; see the check log). This page is
 watched for changes to the implementation timeline; the milestones as of this
 baseline:
 

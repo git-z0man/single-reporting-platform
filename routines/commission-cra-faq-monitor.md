@@ -48,8 +48,11 @@ Compare against `current_version` in `commission-faq/versions/manifest.json`.
 **A fetch that fails is a failed check, never "unchanged".** The digital-strategy pages
 answer 403 to automated fetchers: it happened on 2026-10-26 to both the landing page and
 the factpage, and the Internet Archive's own crawler was refused the landing page on
-2026-10-23. Both answer 200 from an ordinary browser. When either does not return 200
-after the retries:
+2026-10-23. The pages themselves are fine: on 2026-10-29 both were opened in a browser
+and read from the rendered DOM — landing page "Last update 4 September 2026" with its
+only two download links 123307 and 122331, factpage "Last update 27 July 2026" with its
+ten milestones unchanged; the baseline's check log records it. A 403 here is about who is
+asking, not about the pages. When either does not return 200 after the retries:
 
 - do not touch `last_check`, do not write a change-log entry, do not edit a version
   table — a 403 says nothing about whether the document changed;
@@ -59,7 +62,9 @@ after the retries:
   A browser `User-Agent`, or any other disguise, is bot-check circumvention: this
   platform denies the call and the denial costs the attempt. The 2026-10-26 run put
   `-A "Mozilla/5.0"` in its very first fetch of both pages and lost it that way before
-  it had a plain answer to record;
+  it had a plain answer to record. It would not have helped: on 2026-10-23 the host
+  answered a CloudFront 403 to a cloud client *with* browser headers, so the request is
+  judged by where it comes from (see the baseline's check log);
 - the newsroom document id above is served by a different host and has kept answering
   through the 403s, so the version check itself usually still works. Say in the report
   which of the three checks ran and which did not, as the 2026-10-26 run did.
