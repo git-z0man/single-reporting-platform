@@ -48,8 +48,11 @@ Compare against `current_version` in `commission-faq/versions/manifest.json`.
 **A fetch that fails is a failed check, never "unchanged".** The digital-strategy pages
 answer 403 to automated fetchers: it happened on 2026-10-26 to both the landing page and
 the factpage, and the Internet Archive's own crawler was refused the landing page on
-2026-10-23. Both answer 200 from an ordinary browser. When either does not return 200
-after the retries:
+2026-10-23. The pages themselves are fine: on 2026-10-29 both were opened in a browser
+and read from the rendered DOM — landing page "Last update 4 September 2026" with its
+only two download links 123307 and 122331, factpage "Last update 27 July 2026" with its
+ten milestones unchanged; the baseline's check log records it. A 403 here is about who is
+asking, not about the pages. When either does not return 200 after the retries:
 
 - do not touch `last_check`, do not write a change-log entry, do not edit a version
   table — a 403 says nothing about whether the document changed;
