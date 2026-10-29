@@ -31,36 +31,59 @@ Never push to `main`. Never create a new per-run branch when the session already
 
 ## 1. Detect the current version
 
-The authoritative signal is the FAQ document's own version table on page 1, NOT the landing page's "Last update" date (that also moves for edits which do not change the document).
+The authoritative signal is the version the FAQ document itself carries, NOT the landing page's "Last update" date (that also moves for edits which do not change the document).
 
-Cheapest check: the newsroom download URL's Content-Disposition filename carries the version.
+The newsroom document ids are stable slots: the Commission replaces the file behind `document/122331` (PDF) and `document/123307` (Markdown) in place for a new version, and the `Content-Disposition` filename carries the version. Verified 2026-10-29 against the Internet Archive — captures of 122331 from 2025-12-03, 2026-02-15, 2026-08-06 and 2026-10-18 hash byte-identically to the archived v1.0, v1.2, v1.3 and v1.4. So this one request is the primary version check, and it is the one that keeps answering when the digital-strategy pages do not:
 
     curl -sSLI https://ec.europa.eu/newsroom/dae/redirection/document/122331 | grep -i content-disposition
 
-As of the v1.4 baseline that returns `FAQs_on_the_CRA__v14_..._122331.pdf`.
+As of the v1.4 baseline that returns `FAQs_on_the_CRA__v14_..._122331.pdf`: `v15` or higher is a new version, `v14` is none. What this check cannot see is a file replaced without a version bump; the sha256 in the manifest is the cross-check if that is ever suspected.
 
-Also fetch the landing page, because a new version usually gets a NEW document id:
+Then fetch the landing page as the secondary check, in case the Commission breaks that practice and publishes a new version under a NEW document id:
 https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-implementation-frequently-asked-questions
-Extract every download link (PDF and Markdown) and their document ids. Prefer whatever the landing page currently points at over the ids recorded in the manifest.
+Extract every download link (PDF and Markdown) and their document ids. An id the manifest does not know wins over 122331. If the page is unreachable, the version check above still stands: say so and carry on.
 
 Compare against `current_version` in `commission-faq/versions/manifest.json`.
 
-**A fetch that fails is a failed check, never "unchanged".** The Commission's pages
-answer 403 to this Routine's egress while the same URLs answer 200 from an ordinary
-network: it happened on 2026-10-26 to both the landing page and the factpage, and
-`last_check` has stood at 2026-10-19 since. When either does not return 200 after the
-retries:
+**A fetch that fails is a failed check, never "unchanged".** The digital-strategy pages
+answer 403 to automated fetchers: it happened on 2026-10-26 to both the landing page and
+the factpage, and the Internet Archive's own crawler was refused the landing page on
+2026-10-23. Both answer 200 from an ordinary browser. When either does not return 200
+after the retries:
 
-- do not touch `last_check`, do not commit, do not open a PR — a 403 says nothing about
-  whether the document changed;
+- do not touch `last_check`, do not write a change-log entry, do not edit a version
+  table — a 403 says nothing about whether the document changed;
+- record the attempt instead, per section 1a, so the gap is visible in the baseline and
+  not only in a run log;
 - do **not** retry with a browser `User-Agent` or any other disguise. That is bot-check
   circumvention, this platform denies it, and the denial ends the attempt anyway;
 - the newsroom document id above is served by a different host and has kept answering
   through the 403s, so the version check itself usually still works. Say in the report
   which of the three checks ran and which did not, as the 2026-10-26 run did.
 
-Two runs in a row blocked this way mean the source needs a person rather than another
-attempt: report it that way.
+If `last_attempt_result` on `origin/main` already records a blocked fetch and today's
+run is blocked again, that is two in a row: the source needs a person rather than
+another attempt, and the report says so in those words.
+
+## 1a. Record the attempt
+
+`last_check` is the date of the last check that ran in full; `last_attempt` is the date
+of the last run, whatever came of it. A reader compares the two: equal means the source
+was actually seen, a gap means it was not.
+
+- **Everything returned 200**: move `last_attempt` with `last_check` in section 2a or
+  2b, and set `last_attempt_result` to `ok`.
+- **Something was blocked**: set `last_attempt` to today and `last_attempt_result` to
+  one line naming each check that failed with its status code and each that ran with its
+  result. Leave `last_check` and `last_change` as they are, and add one row to the
+  "Check log" table of `commission-cra-faq-baseline.md`. Nothing else.
+
+Both fields sit in the frontmatter of `commission-cra-faq-baseline.md` and at the top of
+`commission-faq/versions/manifest.json`; keep them equal in the two files. If
+`last_attempt` on `origin/main` is already today's date, end the run silently — one row
+per day, the rhythm the other monitors keep. Otherwise commit, PR and merge per section
+5: a blocked run touches `commission-cra-faq-baseline.md` and `commission-faq/` alone,
+so it stays inside this Routine's auto-merge scope.
 
 ## 2a. If there is NO new version
 
@@ -69,7 +92,7 @@ Read `last_check` from `commission-faq/versions/manifest.json` as it stands on `
     git show origin/main:commission-faq/versions/manifest.json | python3 -c "import json,sys; print(json.load(sys.stdin)['last_check'])"
 
 - If it is already today's date → nothing to record. Do NOT commit, do NOT open an empty PR. End the run and report one line that the check ran.
-- Otherwise → update `last_check` in that manifest and in the frontmatter of `commission-cra-faq-baseline.md` to today's date, leave `last_change` alone, then commit, PR and merge per section 5.
+- Otherwise → update `last_check`, `last_attempt` and `last_attempt_result` in that manifest and in the frontmatter of `commission-cra-faq-baseline.md`, leave `last_change` alone, then commit, PR and merge per section 5.
 
 Still check the factpage — see section 4.
 
@@ -124,7 +147,7 @@ Fetch https://digital-strategy.ec.europa.eu/en/factpages/cyber-resilience-act-im
 
 ## 5. Commit, PR, merge
 
-Only if something actually changed. Commit with a message naming what changed. Push with `git push -u origin HEAD`, retrying up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network errors only.
+Only if something actually changed, or if section 1a recorded a blocked attempt. Commit with a message naming what changed. Push with `git push -u origin HEAD`, retrying up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network errors only.
 
 If the push fails for lack of credentials (403), do NOT try to route around it — no workarounds, no alternate remotes, no GitHub MCP fallback. Leave the commit on the local branch and report that the push failed, with the exact error AND the branch name you pushed to, so a mismatch with the Routine's configured repository outcome can be spotted. That means this Routine is missing its repository outcome configuration and a human needs to attach it.
 
@@ -137,6 +160,9 @@ Otherwise open a pull request as a draft, then mark it ready for review and merg
 If a new version was found: what version, its date, the substantive changes in a few sentences, and the URL of the rendered comparison page — enough to judge whether it matters without opening the PR. Flag anything touching reporting obligations, deadlines, or the Single Reporting Platform, since that is this repository's subject.
 
 If nothing changed: one line confirming the check ran.
+
+If a check was blocked: which ones with their status codes, which ones ran, and whether
+this is the second blocked run in a row.
 
 Either way end with one line:
 CRA FAQ: v<VERSION> (<changed/unchanged>) | factpage: <changed/unchanged> | diff page: <rendered/none> | push: <OK/FAIL/nothing to push>
