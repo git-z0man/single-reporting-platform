@@ -1,0 +1,711 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-97229"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-97229",
+  "cwes": [
+   "CWE-190"
+  ],
+  "dateAdded": "2026-10-29",
+  "dueDate": "2026-11-01",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "Other products can potentially be affected by the same underlying Ruby/Onigmo Integer Overflow issue in CI/CD Regular Expression Compiler. For more information please see: https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves ; https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-97229",
+  "product": "Community Edition and Enterprise Edition",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+  "vendorProject": "GitLab",
+  "vulnerabilityName": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-97229\nGHSA-9hj5-r43h-h3xg\n",
+  "assigner": "GitLab",
+  "baseScore": 10.0,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Oct 13, 2026, 1:05:46 AM",
+  "dateUpdated": "Oct 29, 2026, 7:58:23 PM",
+  "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "b639ca32-7cac-3f0b-86d0-fa0fb5ca8614",
+       "product": {
+        "name": "GitLab",
+        "vendor": {
+         "name": "GitLab"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-97229\nCVE-2026-92883\nCVE-2026-16301\nCVE-2026-14814\nCVE-2026-81839\nCVE-2026-96893\nCVE-2026-101168\nCVE-2026-7767\nCVE-2026-16275\nCVE-2026-84284\nCVE-2026-85529\nCVE-2026-100755\nCVE-2026-14552\nCVE-2026-6567\nCVE-2026-104661\nCVE-2026-14210\nCVE-2026-105458\nCVE-2026-5954\nCVE-2026-92528\nCVE-2026-78335\nCVE-2026-100104\nCVE-2026-82632\nCVE-2026-103549\nCVE-2026-9268\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 13, 2026, 9:39:58 AM",
+     "dateUpdated": "Oct 13, 2026, 9:39:58 AM",
+     "description": "Kwetsbaarheden verholpen in GitLab",
+     "id": "NCSC-2026-0414",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "0066b3f8-9f67-3cfb-ab14-bea83c7edbda"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "06bdd34e-972e-387e-81ee-8327880b5f4b",
+       "product": {
+        "name": "ruby4.0-doc-ri-0:4.0.9-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "165bf2e4-b09e-3766-b204-4036fc2736d1",
+       "product": {
+        "name": "ruby4.0-doc-ri-0:4.0.9-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1b871b0b-d274-3279-8dd5-ebc91f3b0a93",
+       "product": {
+        "name": "libruby4_0-4_0-0:4.0.9-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "25d9260a-dd24-33cc-a105-20dc8b333512",
+       "product": {
+        "name": "libruby4_0-4_0-0:4.0.9-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "275922b0-7340-357d-acd0-70b2612c2517",
+       "product": {
+        "name": "ruby4.0-devel-extra-0:4.0.9-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2e8991bd-8834-3ffc-acb2-1a6445156d42",
+       "product": {
+        "name": "ruby4.0-devel-extra-0:4.0.9-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2fc5ac88-5ce2-340b-936a-59137546f256",
+       "product": {
+        "name": "ruby4.0-devel-0:4.0.9-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "565907a3-ba8b-34d4-bedf-1a62f1ff0eed",
+       "product": {
+        "name": "ruby4.0-0:4.0.9-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5d511ea2-41cf-3eda-886a-12dd71049b54",
+       "product": {
+        "name": "ruby4.0-doc-ri-0:4.0.9-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "65df9b40-8980-3fe6-b3e3-0e96674931a7",
+       "product": {
+        "name": "ruby4.0-devel-0:4.0.9-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "680e7021-c3d2-3838-b184-296dea249288",
+       "product": {
+        "name": "ruby4.0-0:4.0.9-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6ba9dee2-1079-3105-a584-2aa6afab7381",
+       "product": {
+        "name": "ruby4.0-devel-0:4.0.9-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6c43fbc0-082b-3ab4-ba90-46dbaf9a2a7a",
+       "product": {
+        "name": "ruby4.0-devel-extra-0:4.0.9-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "727a1734-9938-32d6-bd42-c0ed5093aba4",
+       "product": {
+        "name": "ruby4.0-0:4.0.9-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9777596b-cdc4-3768-a381-5ff082588ace",
+       "product": {
+        "name": "libruby4_0-4_0-0:4.0.9-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a55328aa-8602-3bf9-a8ae-b66567d908f4",
+       "product": {
+        "name": "libruby4_0-4_0-0:4.0.9-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "af4422fc-a765-3fd1-9f2d-ebcbbb9f7710",
+       "product": {
+        "name": "ruby4.0-doc-ri-0:4.0.9-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b865bd9c-a9a2-3fd8-ba8f-fdecdaeb4e98",
+       "product": {
+        "name": "ruby4.0-doc-0:4.0.9-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b96fd96f-6298-3c05-8f43-507148b8bd1c",
+       "product": {
+        "name": "ruby4.0-doc-0:4.0.9-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bea72830-4183-3414-950a-67ed90c81d51",
+       "product": {
+        "name": "ruby4.0-doc-0:4.0.9-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bfc5085c-ff86-3e5b-83c0-971cd8da321b",
+       "product": {
+        "name": "openSUSE Tumbleweed",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c2767fa4-4082-3621-9990-dbc6584a7c9f",
+       "product": {
+        "name": "ruby4.0-devel-0:4.0.9-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "dc951b6e-4a54-3cf3-a017-69c99412cd65",
+       "product": {
+        "name": "ruby4.0-0:4.0.9-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ec4e4bbf-6a77-375f-80d6-a9c2f85a2916",
+       "product": {
+        "name": "ruby4.0-devel-extra-0:4.0.9-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f4c686e0-e8ac-36ee-adb2-e281305e275f",
+       "product": {
+        "name": "ruby4.0-doc-0:4.0.9-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-89078\nCVE-2026-97229\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 23, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 27, 2026, 1:13:45 PM",
+     "description": "libruby4_0-4_0-4.0.9-1.1 on GA media",
+     "id": "openSUSE-SU-2026:12252-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12252-1.json\nhttps://www.suse.com/security/cve/CVE-2026-89078/\nhttps://www.suse.com/security/cve/CVE-2026-97229/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "libruby4_0-4_0-4.0.9-1.1 on GA media"
+    },
+    "id": "320d1710-72be-30f8-8824-5026daa0feb4"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "75e0c8ab-d3ea-30f2-aa2c-caf148e8da50",
+       "product": {
+        "name": "azl3 ruby 0:3.3.5-10.azl3",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "78262ac1-be29-3186-b837-d1ff75bf8501",
+       "product": {
+        "name": "azl4 ruby 0:3.4.10-36.azl4.azl4",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "96cdd803-4f94-35a8-82a4-44f33480c8da",
+       "product": {
+        "name": "3.0",
+        "vendor": {
+         "name": "Wind River"
+        }
+       }
+      },
+      {
+       "id": "b1734ca1-1bb1-31ad-9777-bbd76d6fa081",
+       "product": {
+        "name": "Azure Linux",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b66280e2-669b-3b1b-8218-57848b957108",
+       "product": {
+        "name": "4.0",
+        "vendor": {
+         "name": "Invensys"
+        }
+       }
+      },
+      {
+       "id": "e56b2df2-765f-3bff-a63a-1131cb1a80d0",
+       "product": {
+        "name": "Ruby",
+        "vendor": {
+         "name": "HackerOne"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-97229\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 25, 2026, 1:02:21 AM",
+     "dateUpdated": "Oct 28, 2026, 1:45:55 AM",
+     "description": "Integer Overflow or Wraparound in GitLab",
+     "id": "msrc_CVE-2026-97229",
+     "references": "https://msrc.microsoft.com/csaf/vex/2026/msrc_cve-2026-97229.json\n",
+     "source": {
+      "id": 20,
+      "name": "csaf_microsoft"
+     }
+    },
+    "id": "f4887ec7-b273-3161-b98b-0977dcd5bbf1"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "87b7f6eb-1460-3645-b20f-f12fe1ed0f5b",
+    "product": {
+     "name": "GitLab",
+     "vendor": {
+      "name": "GitLab"
+     }
+    },
+    "product_version": "19.4 <19.4.2"
+   },
+   {
+    "id": "f4bb29bf-6b2b-314f-a3f2-f71733457f4c",
+    "product": {
+     "name": "GitLab",
+     "vendor": {
+      "name": "GitLab"
+     }
+    },
+    "product_version": "19.3 <19.3.5"
+   },
+   {
+    "id": "f52aefa4-8d08-33a2-9303-fb2ddbff4628",
+    "product": {
+     "name": "GitLab",
+     "vendor": {
+      "name": "GitLab"
+     }
+    },
+    "product_version": "19.2 <19.2.8"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "ce5a7876-9fa1-3847-bcdb-ab41366bccf6",
+    "vendor": {
+     "name": "GitLab"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "453ba8ee-17ba-3472-99b4-fa72f975d418",
+    "vulnerability": {
+     "assigner": "GitLab",
+     "baseScore": 10.0,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 30, 2026, 6:01:00 AM",
+     "datePublished": "Oct 13, 2026, 1:05:46 AM",
+     "dateUpdated": "Oct 29, 2026, 7:58:23 PM",
+     "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+     "enisa_id": "EUVD-2026-98214\n",
+     "epss": 18.43,
+     "exploitedSince": "Oct 29, 2026, 12:00:00 AM",
+     "id": "CVE-2026-97229",
+     "references": "https://gitlab.com/gitlab-org/gitlab/-/work_items/630686\nhttps://hackerone.com/reports/4055749\nhttps://hackerone.com/reports/4058589\nhttps://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "216a820b-bde4-3fd9-a0b5-63818f39b438",
+       "product": {
+        "name": "GitLab",
+        "vendor": {
+         "name": "GitLab"
+        }
+       },
+       "product_version": "19.3 <19.3.5"
+      },
+      {
+       "id": "37820e5a-552d-372e-8d58-f023d54d29cb",
+       "product": {
+        "name": "GitLab",
+        "vendor": {
+         "name": "GitLab"
+        }
+       },
+       "product_version": "19.2 <19.2.8"
+      },
+      {
+       "id": "c9951cef-9e65-3196-ac5e-8fb2739501d4",
+       "product": {
+        "name": "GitLab",
+        "vendor": {
+         "name": "GitLab"
+        }
+       },
+       "product_version": "19.4 <19.4.2"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "28440051-38fc-3df6-8824-09820aa58175",
+       "vendor": {
+        "name": "GitLab"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "c5dcb3e7-3b25-39a7-9130-bbf2143cdf77",
+    "vulnerability": {
+     "aliases": "GHSA-9hj5-r43h-h3xg\nCVE-2026-97229\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 30, 2026, 6:03:56 AM",
+     "datePublished": "Oct 13, 2026, 3:30:36 AM",
+     "dateUpdated": "Oct 29, 2026, 9:30:49 PM",
+     "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+     "enisa_id": "EUVD-2026-98214\n",
+     "epss": 0.0,
+     "id": "GHSA-9hj5-r43h-h3xg",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229\nhttps://hackerone.com/reports/4055749\nhttps://hackerone.com/reports/4058589\nhttps://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/630686\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-97229\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "74dd4a29-2a66-3386-b28d-e7a8b9627933",
+  "epss": 18.43,
+  "exploitedSince": "Oct 29, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-98214",
+  "references": "https://gitlab.com/gitlab-org/gitlab/-/work_items/630686\nhttps://hackerone.com/reports/4055749\nhttps://hackerone.com/reports/4058589\nhttps://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-98214",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 29, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "cpes": [
+       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+      ],
+      "defaultStatus": "unaffected",
+      "product": "GitLab",
+      "repo": "https://gitlab.com/gitlab-org/gitlab",
+      "vendor": "GitLab",
+      "versions": [
+       {
+        "lessThan": "19.2.8",
+        "status": "affected",
+        "version": "19.2",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "19.3.5",
+        "status": "affected",
+        "version": "19.3",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "19.4.2",
+        "status": "affected",
+        "version": "19.4",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "cve@gitlab.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-01",
+  "cisaExploitAdd": "2026-10-29",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+        "matchCriteriaId": "A938C22D-FD14-48A6-B46F-CCA9AC8EBC9F",
+        "versionEndExcluding": "19.2.8",
+        "versionStartIncluding": "19.2.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+        "matchCriteriaId": "EC585668-21D1-41DF-A4FB-17DD48AB9F12",
+        "versionEndExcluding": "19.2.8",
+        "versionStartIncluding": "19.2.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+        "matchCriteriaId": "1304F38C-8780-4412-AE0B-D0B65319E8E6",
+        "versionEndExcluding": "19.3.5",
+        "versionStartIncluding": "19.3.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+        "matchCriteriaId": "75C2C2EE-4DF9-4AB5-9E15-2EC799667C6C",
+        "versionEndExcluding": "19.3.5",
+        "versionStartIncluding": "19.3.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+        "matchCriteriaId": "5FD2476C-E11F-4215-A329-C3B189B6611F",
+        "versionEndExcluding": "19.4.2",
+        "versionStartIncluding": "19.4.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+        "matchCriteriaId": "FAAF2A38-5C01-490C-A191-8532B58C246B",
+        "versionEndExcluding": "19.4.2",
+        "versionStartIncluding": "19.4.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation."
+   }
+  ],
+  "id": "CVE-2026-97229",
+  "lastModified": "2026-10-30T04:18:31.240",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 10.0,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 6.0,
+     "source": "cve@gitlab.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-97229",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-13T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-13T02:17:00.840",
+  "references": [
+   {
+    "source": "cve@gitlab.com",
+    "tags": [
+     "Release Notes",
+     "Vendor Advisory"
+    ],
+    "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/"
+   },
+   {
+    "source": "cve@gitlab.com",
+    "tags": [
+     "Issue Tracking"
+    ],
+    "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/630686"
+   },
+   {
+    "source": "cve@gitlab.com",
+    "tags": [
+     "Permissions Required"
+    ],
+    "url": "https://hackerone.com/reports/4055749"
+   },
+   {
+    "source": "cve@gitlab.com",
+    "tags": [
+     "Permissions Required"
+    ],
+    "url": "https://hackerone.com/reports/4058589"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-97229"
+   }
+  ],
+  "sourceIdentifier": "cve@gitlab.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-190"
+     }
+    ],
+    "source": "cve@gitlab.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

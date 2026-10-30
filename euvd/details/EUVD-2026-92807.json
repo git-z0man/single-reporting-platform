@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 5, 2026, 9:30:00 PM",
-  "dateUpdated": "Oct 19, 2026, 6:26:40 PM",
+  "dateUpdated": "Oct 29, 2026, 12:04:46 PM",
   "description": "This is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to access specific files within the web application root directory in affected versions. Exploitation requires prior knowledge of the target file's exact name and path; this vulnerability does not allow attackers to enumerate or list directory contents. In some configurations, there may be some sensitive files that make this highly severe. This vulnerability allows an unauthenticated remote attacker to access specific files within the web application root directory in affected versions. The vulnerability must be addressed for affected versions of: -- Bitbucket Data Center, introduced in version >= 4.6.0, fix versions: 9.4.26, 10.2.8, 10.5.1 -- Confluence Data Center, introduced in version >= 5.10.0, fix versions 9.2.26, 10.2.19 -- Crowd Data Center, introduced in version >= 2.11.0, fix versions 6.3.7, 7.0.3, 7.1.7, 7.2.4 -- Jira Software Data Center, introduced in version >= 7.1.0, fix versions 9.12.40, 10.3.26, 11.3.12 -- Jira Service Management Data Center, introduced in version >= 3.1.0, fix versions 5.12.40, 10.3.26, 11.3.12 -- Bamboo Data Center >= 7.0.1, fix versions 10.2.24, 12.1.12 -- Crucible, fix versions 4.9.15 -- Fisheye, fix version 4.9.15 -- Exploitation requires prior knowledge of the target file's exact name and path. The vulnerability does not include the capability to enumerate or list directory contents.",
   "enisaIdAdvisory": [
    {
@@ -408,7 +408,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-21589\nGHSA-gr66-x5pq-8g2g\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 20, 2026, 7:04:01 AM",
+     "dataProcessed": "Oct 25, 2026, 2:02:26 AM",
      "datePublished": "Oct 6, 2026, 12:32:50 AM",
      "dateUpdated": "Oct 19, 2026, 9:35:53 PM",
      "description": "h3. Summary\n\nThis is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to access specific files within the web application root directory in affected versions. Exploitation requires prior knowledge of the target file's exact name and path; this vulnerability does not allow attackers to enumerate or list directory contents. In some configurations, there may be some sensitive files that make this highly severe.  \n\nh3. Context\n\nThis vulnerability allows an unauthenticated remote attacker to access specific files within the web application root directory in affected versions.\n\nh3. Details:\n\n* The vulnerability must be addressed for affected versions of:\n Bitbucket Data Center, introduced in version >= 4.6.0, fix versions: 9.4.26, 10.2.8, 10.5.1\n Confluence Data Center, introduced in version >= 5.10.0, fix versions 9.2.26, 10.2.19\n Crowd Data Center, introduced in version >= 2.11.0, fix versions 6.3.7, 7.0.3, 7.1.1, 7.2.4\n Jira Software Data Center, introduced in version >= 7.1.0, fix versions 9.12.40, 10.3.26, 11.3.12\n Jira Service Management Data Center, introduced in version >= 3.1.0, fix versions 5.12.40, 10.3.26, 11.3.12\n Bamboo Data Center >= 7.0.1, fix versions 10.2.24, 12.1.12\n Crucible, fix versions 4.9.15\n Fisheye, fix version 4.9.15\n* Exploitation requires prior knowledge of the target file's exact name and path.\n* The vulnerability does not include the capability to enumerate or list directory contents.",
@@ -427,12 +427,12 @@
      "baseScore": 9.3,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 20, 2026, 7:02:33 AM",
+     "dataProcessed": "Oct 30, 2026, 6:00:38 AM",
      "datePublished": "Oct 5, 2026, 9:30:00 PM",
-     "dateUpdated": "Oct 19, 2026, 6:26:40 PM",
+     "dateUpdated": "Oct 29, 2026, 12:04:46 PM",
      "description": "This is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to access specific files within the web application root directory in affected versions. Exploitation requires prior knowledge of the target file's exact name and path; this vulnerability does not allow attackers to enumerate or list directory contents. In some configurations, there may be some sensitive files that make this highly severe. This vulnerability allows an unauthenticated remote attacker to access specific files within the web application root directory in affected versions. The vulnerability must be addressed for affected versions of: -- Bitbucket Data Center, introduced in version >= 4.6.0, fix versions: 9.4.26, 10.2.8, 10.5.1 -- Confluence Data Center, introduced in version >= 5.10.0, fix versions 9.2.26, 10.2.19 -- Crowd Data Center, introduced in version >= 2.11.0, fix versions 6.3.7, 7.0.3, 7.1.7, 7.2.4 -- Jira Software Data Center, introduced in version >= 7.1.0, fix versions 9.12.40, 10.3.26, 11.3.12 -- Jira Service Management Data Center, introduced in version >= 3.1.0, fix versions 5.12.40, 10.3.26, 11.3.12 -- Bamboo Data Center >= 7.0.1, fix versions 10.2.24, 12.1.12 -- Crucible, fix versions 4.9.15 -- Fisheye, fix version 4.9.15 -- Exploitation requires prior knowledge of the target file's exact name and path. The vulnerability does not include the capability to enumerate or list directory contents.",
      "enisa_id": "EUVD-2026-92807\n",
-     "epss": 12.71,
+     "epss": 99.48,
      "exploitedSince": "Oct 15, 2026, 12:00:00 AM",
      "id": "CVE-2026-21589",
      "references": "https://jira.atlassian.com/browse/BAM-26567\nhttps://jira.atlassian.com/browse/BSERV-20604\nhttps://jira.atlassian.com/browse/CONFSERVER-104488\nhttps://jira.atlassian.com/browse/CRUC-8741\nhttps://jira.atlassian.com/browse/CWD-6610\nhttps://jira.atlassian.com/browse/FE-7583\nhttps://jira.atlassian.com/browse/JRASERVER-79546\nhttps://jira.atlassian.com/browse/JSDSERVER-16809\n",
@@ -531,7 +531,7 @@
    }
   ],
   "enisaUuid": "0dcb8b22-ebf1-38ab-88c6-374d2f9d6083",
-  "epss": 12.71,
+  "epss": 99.48,
   "exploitedSince": "Oct 15, 2026, 12:00:00 AM",
   "id": "EUVD-2026-92807",
   "references": "https://jira.atlassian.com/browse/BAM-26567\nhttps://jira.atlassian.com/browse/BSERV-20604\nhttps://jira.atlassian.com/browse/CONFSERVER-104488\nhttps://jira.atlassian.com/browse/CRUC-8741\nhttps://jira.atlassian.com/browse/CWD-6610\nhttps://jira.atlassian.com/browse/FE-7583\nhttps://jira.atlassian.com/browse/JRASERVER-79546\nhttps://jira.atlassian.com/browse/JSDSERVER-16809\n"
@@ -542,15 +542,15 @@
    "avg7d": 8.0,
    "avg90d": 1.0,
    "cisaKevFlag": true,
-   "connections1d": 8,
+   "connections1d": 2264,
    "cveId": "CVE-2026-21589",
    "firstSeenAt": "Oct 14, 2026, 3:00:00 AM",
    "isNew": false,
-   "lastSeenAt": "Oct 28, 2026, 7:12:22 AM",
+   "lastSeenAt": "Oct 29, 2026, 7:12:31 AM",
    "product": "Confluence",
    "source": "shadowserver",
-   "trend": "STEADY",
-   "uniqueIps1d": 2,
+   "trend": "UPTICK",
+   "uniqueIps1d": 4,
    "vendor": "Atlassian",
    "vulnClass": "other-software",
    "vulnSeverity": "Critical"
@@ -963,10 +963,14 @@
    {
     "lang": "en",
     "value": "This is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to access specific files within the web application root directory in affected versions. Exploitation requires prior knowledge of the target file's exact name and path; this vulnerability does not allow attackers to enumerate or list directory contents. In some configurations, there may be some sensitive files that make this highly severe. This vulnerability allows an unauthenticated remote attacker to access specific files within the web application root directory in affected versions. The vulnerability must be addressed for affected versions of: -- Bitbucket Data Center, introduced in version >= 4.6.0, fix versions: 9.4.26, 10.2.8, 10.5.1 -- Confluence Data Center, introduced in version >= 5.10.0, fix versions 9.2.26, 10.2.19 -- Crowd Data Center, introduced in version >= 2.11.0, fix versions 6.3.7, 7.0.3, 7.1.7, 7.2.4 -- Jira Software Data Center, introduced in version >= 7.1.0, fix versions 9.12.40, 10.3.26, 11.3.12 -- Jira Service Management Data Center, introduced in version >= 3.1.0, fix versions 5.12.40, 10.3.26, 11.3.12 -- Bamboo Data Center >= 7.0.1, fix versions 10.2.24, 12.1.12 -- Crucible, fix versions 4.9.15 -- Fisheye, fix version 4.9.15 -- Exploitation requires prior knowledge of the target file's exact name and path. The vulnerability does not include the capability to enumerate or list directory contents."
+   },
+   {
+    "lang": "es",
+    "value": "Esta es una vulnerabilidad en Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible y Fisheye. Esta vulnerabilidad de Acceso Arbitrario a Archivos permite a un atacante no autenticado acceder a archivos específicos dentro del directorio raíz de la aplicación web en las versiones afectadas. La explotación requiere conocimiento previo del nombre y la ruta exactos del archivo objetivo; esta vulnerabilidad no permite a los atacantes enumerar o listar el contenido del directorio. En algunas configuraciones, puede haber archivos sensibles que la hacen altamente severa. Esta vulnerabilidad permite a un atacante remoto no autenticado acceder a archivos específicos dentro del directorio raíz de la aplicación web en las versiones afectadas. La vulnerabilidad debe abordarse para las versiones afectadas de:\n-- Bitbucket Data Center, introducida en la versión 4.6.0 o posteriores, con versiones corregidas: 9.4.26, 10.2.8, 10.5.1\n-- Confluence Data Center, introducida en la versión 5.10.0 o posteriores, con versiones corregidas: 9.2.26, 10.2.19\n-- Crowd Data Center, introducida en la versión 2.11.0 o posteriores, con versiones corregidas: 6.3.7, 7.0.3, 7.1.7, 7.2.4\n-- Jira Software Data Center, introducida en la versión 7.1.0 o posteriores, con versiones corregidas: 9.12.40, 10.3.26, 11.3.12\n-- Jira Service Management Data Center, introducida en la versión 3.1.0 o posteriores, con versiones corregidas: 5.12.40, 10.3.26, 11.3.12\n-- Bamboo Data Center, versiones 7.0.1 o posteriores, con versiones corregidas: 10.2.24, 12.1.12\n-- Crucible, con versiones corregidas: 4.9.15\n-- Fisheye, con versión corregida: 4.9.15\n-- La explotación requiere conocimiento previo del nombre y la ruta exactos del archivo objetivo. La vulnerabilidad no incluye la capacidad de enumerar o listar el contenido del directorio."
    }
   ],
   "id": "CVE-2026-21589",
-  "lastModified": "2026-10-19T20:31:57.050",
+  "lastModified": "2026-10-29T13:17:09.847",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -1051,7 +1055,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-10-15T00:00:00+00:00",
+      "timestamp": "2026-10-16T03:56:41.309201Z",
       "version": "2.0.3"
      }
     }

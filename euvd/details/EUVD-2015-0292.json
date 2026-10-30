@@ -1,0 +1,322 @@
+{
+ "cert_links": [],
+ "cisa_kev": null,
+ "euvd": {
+  "aliases": "CVE-2015-0279\nGHSA-8cc3-p77g-5pcc\n",
+  "assigner": "redhat",
+  "baseScore": null,
+  "datePublished": "Mar 26, 2015, 2:00:00 PM",
+  "dateUpdated": "Aug 6, 2024, 4:03:10 AM",
+  "description": "JBoss RichFaces before 4.5.4 allows remote attackers to inject expression language (EL) expressions and execute arbitrary Java code via the do parameter.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "8bc065d5-a53e-32dc-9047-8eed95a260af",
+       "product": {
+        "name": "Red Hat JBoss Web Framework Kit 2.7",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2015-0279\n",
+     "baseScore": 0.0,
+     "datePublished": "Mar 24, 2015, 9:06:10 PM",
+     "dateUpdated": "Nov 21, 2025, 5:52:01 PM",
+     "description": "Red Hat Security Advisory: Red Hat JBoss Web Framework Kit 2.7.0 security update",
+     "id": "RHSA-2015:0719",
+     "references": "https://access.redhat.com/errata/RHSA-2015:0719\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2015/rhsa-2015_0719.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "An update for the RichFaces component of Red Hat JBoss Web Framework Kit\n2.7.0 that fixes one security issue is now available from the Red Hat\nCustomer Portal.\n\nRed Hat Product Security has rated this update as having Important security\nimpact. A Common Vulnerability Scoring System (CVSS) base score, which\ngives a detailed severity rating, is available from the CVE link in the\nReferences section."
+    },
+    "id": "9c67cff4-4af2-35b4-8759-818647d76243"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "e867573e-f752-3a29-a847-5ce19c39ef51",
+    "product": {
+     "name": "n/a",
+     "vendor": {
+      "name": "n/a"
+     }
+    },
+    "product_version": "n/a"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "343d1266-4208-3a2e-981c-dbe556782f6c",
+    "vendor": {
+     "name": "n/a"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "8d59b989-75aa-3d95-a6ff-3251bc9e8e89",
+    "vulnerability": {
+     "aliases": "CVE-2015-0279\nGHSA-8cc3-p77g-5pcc\n",
+     "baseScore": 0.0,
+     "dataProcessed": "May 3, 2026, 1:54:30 AM",
+     "datePublished": "May 14, 2022, 12:55:57 AM",
+     "dateUpdated": "May 14, 2022, 12:55:57 AM",
+     "description": "JBoss RichFaces before 4.5.4 allows remote attackers to inject expression language (EL) expressions and execute arbitrary Java code via the do parameter.",
+     "enisa_id": "EUVD-2015-0292\n",
+     "epss": 0.0,
+     "id": "GHSA-8cc3-p77g-5pcc",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2015-0279\nhttps://bugzilla.redhat.com/show_bug.cgi?id=1192140\nhttp://jvn.jp/en/jp/JVN56297719/index.html\nhttp://jvndb.jvn.jp/en/contents/2015/JVNDB-2015-001959.html\nhttp://packetstormsecurity.com/files/153734/Tufin-Secure-Change-Remote-Code-Execution.html\nhttp://packetstormsecurity.com/files/156663/Richsploit-RichFaces-Exploitation-Toolkit.html\nhttp://rhn.redhat.com/errata/RHSA-2015-0719.html\nhttp://seclists.org/fulldisclosure/2019/Jul/21\nhttp://seclists.org/fulldisclosure/2020/Mar/21\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "ae07a9a4-cfc1-3ee5-869b-d81da9766385",
+    "vulnerability": {
+     "assigner": "redhat",
+     "baseScore": null,
+     "dataProcessed": "Oct 29, 2026, 3:30:02 PM",
+     "datePublished": "Mar 26, 2015, 2:00:00 PM",
+     "dateUpdated": "Aug 6, 2024, 4:03:10 AM",
+     "description": "JBoss RichFaces before 4.5.4 allows remote attackers to inject expression language (EL) expressions and execute arbitrary Java code via the do parameter.",
+     "enisa_id": "EUVD-2015-0292\n",
+     "epss": 3.93,
+     "exploitedSince": "Oct 25, 2026, 12:00:00 AM",
+     "id": "CVE-2015-0279",
+     "references": "https://bugzilla.redhat.com/show_bug.cgi?id=1192140\nhttp://rhn.redhat.com/errata/RHSA-2015-0719.html\nhttp://jvn.jp/en/jp/JVN56297719/index.html\nhttp://jvndb.jvn.jp/en/contents/2015/JVNDB-2015-001959.html\nhttp://seclists.org/fulldisclosure/2019/Jul/21\nhttp://packetstormsecurity.com/files/153734/Tufin-Secure-Change-Remote-Code-Execution.html\nhttp://packetstormsecurity.com/files/156663/Richsploit-RichFaces-Exploitation-Toolkit.html\nhttp://seclists.org/fulldisclosure/2020/Mar/21\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "288a76c6-c1b4-3782-81ca-7579dc7ffbc9",
+       "product": {
+        "name": "n/a",
+        "vendor": {
+         "name": "n/a"
+        }
+       },
+       "product_version": "n/a"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "b001d7e6-3abe-3268-aa37-ada4c3632185",
+       "vendor": {
+        "name": "n/a"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "eb9259ba-5a2e-39df-a268-41ce537bcd50",
+  "epss": 3.93,
+  "exploitedSince": "Oct 25, 2026, 12:00:00 AM",
+  "id": "EUVD-2015-0292",
+  "references": "https://bugzilla.redhat.com/show_bug.cgi?id=1192140\nhttp://rhn.redhat.com/errata/RHSA-2015-0719.html\nhttp://jvn.jp/en/jp/JVN56297719/index.html\nhttp://jvndb.jvn.jp/en/contents/2015/JVNDB-2015-001959.html\nhttp://seclists.org/fulldisclosure/2019/Jul/21\nhttp://packetstormsecurity.com/files/153734/Tufin-Secure-Change-Remote-Code-Execution.html\nhttp://packetstormsecurity.com/files/156663/Richsploit-RichFaces-Exploitation-Toolkit.html\nhttp://seclists.org/fulldisclosure/2020/Mar/21\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2015-0292",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 25, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "n/a",
+      "vendor": "n/a",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "n/a"
+       }
+      ]
+     }
+    ],
+    "source": "secalert@redhat.com"
+   }
+  ],
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:redhat:richfaces:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "DF2058B7-E4C6-4759-89F4-BBF0180CDA69",
+        "versionEndIncluding": "4.5.4",
+        "versionStartIncluding": "4.0.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "JBoss RichFaces before 4.5.4 allows remote attackers to inject expression language (EL) expressions and execute arbitrary Java code via the do parameter."
+   },
+   {
+    "lang": "es",
+    "value": "JBoss RichFaces anterior a 4.5.4 permite a atacantes remotos inyectar expresiones del lenguaje de expresiones (EL) y ejecutar código Java arbitrario a través del parámetro do."
+   }
+  ],
+  "id": "CVE-2015-0279",
+  "lastModified": "2026-06-17T00:19:53.980",
+  "metrics": {
+   "cvssMetricV2": [
+    {
+     "acInsufInfo": false,
+     "baseSeverity": "MEDIUM",
+     "cvssData": {
+      "accessComplexity": "MEDIUM",
+      "accessVector": "NETWORK",
+      "authentication": "NONE",
+      "availabilityImpact": "PARTIAL",
+      "baseScore": 6.8,
+      "confidentialityImpact": "PARTIAL",
+      "integrityImpact": "PARTIAL",
+      "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+      "version": "2.0"
+     },
+     "exploitabilityScore": 8.6,
+     "impactScore": 6.4,
+     "obtainAllPrivilege": false,
+     "obtainOtherPrivilege": false,
+     "obtainUserPrivilege": false,
+     "source": "nvd@nist.gov",
+     "type": "Primary",
+     "userInteractionRequired": false
+    }
+   ]
+  },
+  "published": "2015-03-26T14:59:00.070",
+  "references": [
+   {
+    "source": "secalert@redhat.com",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
+    "url": "http://jvn.jp/en/jp/JVN56297719/index.html"
+   },
+   {
+    "source": "secalert@redhat.com",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
+    "url": "http://jvndb.jvn.jp/en/contents/2015/JVNDB-2015-001959.html"
+   },
+   {
+    "source": "secalert@redhat.com",
+    "url": "http://packetstormsecurity.com/files/153734/Tufin-Secure-Change-Remote-Code-Execution.html"
+   },
+   {
+    "source": "secalert@redhat.com",
+    "url": "http://packetstormsecurity.com/files/156663/Richsploit-RichFaces-Exploitation-Toolkit.html"
+   },
+   {
+    "source": "secalert@redhat.com",
+    "tags": [
+     "Broken Link",
+     "Vendor Advisory"
+    ],
+    "url": "http://rhn.redhat.com/errata/RHSA-2015-0719.html"
+   },
+   {
+    "source": "secalert@redhat.com",
+    "url": "http://seclists.org/fulldisclosure/2019/Jul/21"
+   },
+   {
+    "source": "secalert@redhat.com",
+    "url": "http://seclists.org/fulldisclosure/2020/Mar/21"
+   },
+   {
+    "source": "secalert@redhat.com",
+    "tags": [
+     "Issue Tracking",
+     "Vendor Advisory"
+    ],
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1192140"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
+    "url": "http://jvn.jp/en/jp/JVN56297719/index.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory",
+     "VDB Entry"
+    ],
+    "url": "http://jvndb.jvn.jp/en/contents/2015/JVNDB-2015-001959.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://packetstormsecurity.com/files/153734/Tufin-Secure-Change-Remote-Code-Execution.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://packetstormsecurity.com/files/156663/Richsploit-RichFaces-Exploitation-Toolkit.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Broken Link",
+     "Vendor Advisory"
+    ],
+    "url": "http://rhn.redhat.com/errata/RHSA-2015-0719.html"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://seclists.org/fulldisclosure/2019/Jul/21"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://seclists.org/fulldisclosure/2020/Mar/21"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Issue Tracking",
+     "Vendor Advisory"
+    ],
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1192140"
+   }
+  ],
+  "sourceIdentifier": "secalert@redhat.com",
+  "vulnStatus": "Modified",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-94"
+     }
+    ],
+    "source": "nvd@nist.gov",
+    "type": "Primary"
+   }
+  ]
+ }
+}
