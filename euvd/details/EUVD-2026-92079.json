@@ -2423,7 +2423,26 @@
   "id": "EUVD-2026-92079",
   "references": "https://vuldb.com/vuln/413350\nhttps://vuldb.com/vuln/413350/cti\nhttps://vuldb.com/cve/CVE-2026-105133\nhttps://vuldb.com/submit/942688\nhttps://www.ahsay.com/en/company/announcements/patch-cve-105133-105134-update\nhttps://www.huntress.com/blog/ahsaycbs-flaws-exploit\n"
  },
- "honeypot": [],
+ "honeypot": [
+  {
+   "avg30d": 0.0,
+   "avg7d": 0.0,
+   "avg90d": 0.0,
+   "cisaKevFlag": true,
+   "connections1d": 229,
+   "cveId": "CVE-2026-105133",
+   "firstSeenAt": "Oct 29, 2026, 7:12:31 AM",
+   "isNew": true,
+   "lastSeenAt": "Oct 29, 2026, 7:12:31 AM",
+   "product": "AhsayCBS",
+   "source": "shadowserver",
+   "trend": "STEADY",
+   "uniqueIps1d": 3,
+   "vendor": "Ahsay",
+   "vulnClass": "backup",
+   "vulnSeverity": "High"
+  }
+ ],
  "id": "EUVD-2026-92079",
  "kev_sources": [
   {

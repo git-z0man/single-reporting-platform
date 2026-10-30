@@ -32,7 +32,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 21, 2026, 1:48:34 PM",
-  "dateUpdated": "Oct 28, 2026, 3:55:46 AM",
+  "dateUpdated": "Oct 29, 2026, 6:08:47 AM",
   "description": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
   "enisaIdAdvisory": [
    {
@@ -7900,6 +7900,403 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "012ad6c4-3619-3684-a745-53b8d62b47df",
+       "product": {
+        "name": "Solid Edge",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "01d58e1b-0e02-30a3-a689-6a14ccd8842c",
+       "product": {
+        "name": "Xpedition Enterprise XCR",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "04a3eb81-6f86-3ef3-a912-9dcc758ba52a",
+       "product": {
+        "name": "DFMExpress",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "10803b62-5ccd-3d45-968c-477ec174d3bb",
+       "product": {
+        "name": "Designcenter",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "13faa8ba-ecc5-3d83-883c-25511b562e6c",
+       "product": {
+        "name": "Polarion",
+        "vendor": {
+         "name": "Siemens AG"
+        }
+       }
+      },
+      {
+       "id": "19bd0e8d-0f3c-311f-89ae-2e775f8dc279",
+       "product": {
+        "name": "Capital",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "1b85219e-9d0a-3b1c-92ca-e1f48a5618e9",
+       "product": {
+        "name": "Simcenter Flux",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "1c79331e-8f52-32a3-b113-609962ed3437",
+       "product": {
+        "name": "Valor NPI",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "2039b486-cb15-315c-8210-c06ae0144d05",
+       "product": {
+        "name": "Opcenter Connect Electronics",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "26b9b428-734a-3673-9a93-9617298f9a83",
+       "product": {
+        "name": "PADS Pro Student Edition",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "2aeb6b3f-5cfb-3e7b-aadd-cd0bca9e2019",
+       "product": {
+        "name": "QuadView",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "2f3fda99-7261-3033-8d8b-1e1ee401d6ce",
+       "product": {
+        "name": "Xpedition Layout Browser",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "3db26203-4362-34cd-a45a-91f85c344390",
+       "product": {
+        "name": "PADS Professional",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "48f2a8f0-8d12-3327-8457-e7cdb74e7261",
+       "product": {
+        "name": "Teamcenter Product Cost Management",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "4f9ab650-1361-36dc-be4b-f884cb22d16c",
+       "product": {
+        "name": "Opcenter Execution Foundation",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "6df89a6d-f2e2-39f9-a8ca-64c1870004c3",
+       "product": {
+        "name": "HyperLynx",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "6f7acf14-6f38-367e-8c05-aa37b80dce99",
+       "product": {
+        "name": "Teamcenter Visualization",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "74f8c356-5d56-3e82-8b56-7312edf119ca",
+       "product": {
+        "name": "PADS Professional - XCR",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "7574a43b-e1c5-30dd-9e57-7076b7a9d78f",
+       "product": {
+        "name": "TestWay",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "75886b7d-b89d-32e7-96fa-d8624b918d99",
+       "product": {
+        "name": "Opcenter Connect MOM",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "7d62385d-9795-3ffb-b792-1063cd30a195",
+       "product": {
+        "name": "Simcenter Simlab",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "818c803c-f0bd-3d22-a01c-9d7558f89bf0",
+       "product": {
+        "name": "Supply Chain Suite",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "81d62a02-ea01-31c7-b7db-f0059ad7f76e",
+       "product": {
+        "name": "Xcargo",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "8c4fb310-0064-3d87-b5f5-c7c0cb7a20b2",
+       "product": {
+        "name": "Opcenter Intelligence",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "a11e6041-0ff1-33e0-b9bb-7cb87b8a7f70",
+       "product": {
+        "name": "PADS Standard & Standard Plus",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "a7737f43-26c7-3907-b9c3-1176d08f041f",
+       "product": {
+        "name": "CADRA",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "a9152cd9-6fe9-3117-8df7-c4a71fc2599f",
+       "product": {
+        "name": "Opcenter Intra Plant Logistics",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "b4701045-70a8-3c07-835e-62026525750d",
+       "product": {
+        "name": "Xpedition Enterprise",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "b83bdbf8-b219-363b-955a-435e67193b8b",
+       "product": {
+        "name": "AX4",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "b83c0f10-bcbb-3a65-a2f7-429f5d3946d4",
+       "product": {
+        "name": "Insights Hub",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "b90db6c6-9609-3412-be78-1bc658f9ec27",
+       "product": {
+        "name": "Opcenter Quality",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "c5fac0cc-115d-3b90-bf7c-7810aa16849f",
+       "product": {
+        "name": "Designcenter X",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "cf8de197-2381-36de-898a-eb6c292dc596",
+       "product": {
+        "name": "PADS Pro Essentials",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "decc0a47-c604-31f0-a9f2-ed579459fa11",
+       "product": {
+        "name": "Xpedition IC Packaging",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "dfea4866-199a-3eee-95f6-06c9d2693fa4",
+       "product": {
+        "name": "Opcenter RDnL",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "e8155cf2-22c6-3eb5-8cfc-705ce3c9085f",
+       "product": {
+        "name": "PADS Standard - XCR",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "ec127a67-1141-323e-8973-db6a1eed7996",
+       "product": {
+        "name": "Tecnomatix Plant Simulation",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "f125536a-b055-3aa2-8d24-5fa91d41f4d8",
+       "product": {
+        "name": "Simcenter Flomaster",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "f1cff01d-e413-3605-a528-ea2a4fe6170f",
+       "product": {
+        "name": "Opcenter Execution Core",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "f1fdebf8-47f2-33c3-a465-d923092268bd",
+       "product": {
+        "name": "Teamcenter",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "f9e12fb0-f374-3869-8318-d0de9f5dae07",
+       "product": {
+        "name": "Opcenter X",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "fbcac5a1-7953-3351-b8ba-a7ae9acd8a51",
+       "product": {
+        "name": "Xpedition Designer",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 23, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 28, 2026, 12:00:00 AM",
+     "description": "SSA-566435: PHP2Shell Vulnerabilities in Siemens Software Products",
+     "id": "SSA-566435",
+     "references": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-566435.json\n",
+     "source": {
+      "id": 7,
+      "name": "csaf_siemens"
+     },
+     "summary": "On October 21, 2026, the PHP project and security researchers disclosed two critical, unauthenticated remote code execution vulnerabilities in the core PHP language runtime known as \"php2shell\" (tracked as CVE-2026-109618 and CVE-2026-109619). This advisory covers the status of impact of various Siemens software products."
+    },
+    "id": "2d80d16f-aba0-35ba-ad81-542f60ef8057"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
        "id": "00146b24-1747-3a6f-b7bd-fc60f1c423d1",
        "product": {
         "name": "php-xml-debuginfo-0:8.3.36-1.el10_2.aarch64",
@@ -12150,6 +12547,15 @@
        }
       },
       {
+       "id": "3832dcca-bc7c-32bf-80e3-744ee6a666f7",
+       "product": {
+        "name": "SUSE Liberty Linux 9.6 EMS",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
        "id": "38342812-d823-3588-bfd6-8bc10970913e",
        "product": {
         "name": "php-cli-debuginfo-0:8.2.28-1.module+el9.6.0+25176+d8415d54.4.aarch64::php:8.2",
@@ -13997,18 +14403,271 @@
      ],
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 23, 2026, 7:29:21 PM",
-     "dateUpdated": "Oct 27, 2026, 4:11:07 AM",
-     "description": "Red Hat Security Advisory: php:8.2 security update",
+     "datePublished": "Oct 23, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 28, 2026, 11:15:08 AM",
+     "description": "security update for php",
      "id": "RHSA-2026:88834",
-     "references": "https://access.redhat.com/errata/RHSA-2026:88834\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88834.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_88834.json\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for the php:8.2 module is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php"
     },
     "id": "40fa2d5e-3131-357c-813e-de539618f1c0"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "1e0a94c7-f144-3292-95dc-922f8f2bbcd8",
+       "product": {
+        "name": "php-soap-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "274b3725-0d14-37bb-9f5d-cda5b6c4a726",
+       "product": {
+        "name": "php-mbstring-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2d11b170-d762-3069-9037-7535cbeff984",
+       "product": {
+        "name": "php-pdo-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "31304a53-5ab0-3458-a1f5-e8b64bcd7466",
+       "product": {
+        "name": "php-ldap-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "35859395-a0b9-3982-a9ff-a21ffb3114d0",
+       "product": {
+        "name": "php-odbc-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3dfb5434-867f-36de-a01c-06c90dba64e5",
+       "product": {
+        "name": "php-pspell-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "43019a65-bb4b-3ab0-bf62-558bb31aba8f",
+       "product": {
+        "name": "php-mysqlnd-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "45e4ddc2-95b2-3a79-9c95-c918ebd046a8",
+       "product": {
+        "name": "php-gd-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5460290c-81bd-3549-8ba8-6e358459f1ae",
+       "product": {
+        "name": "php-intl-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "58908068-b7cf-3b55-bfe5-45dda69cc208",
+       "product": {
+        "name": "php-xml-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5a50584f-3f06-3c2f-a92a-06bc8d4e2922",
+       "product": {
+        "name": "php-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6aee5c46-588a-3b9d-86aa-a15a26a49c75",
+       "product": {
+        "name": "php-pgsql-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6e0ed9a9-4475-38b8-8f9b-07faebe83662",
+       "product": {
+        "name": "php-dba-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7f6fce6d-d751-3fb5-9122-d392e87bfce8",
+       "product": {
+        "name": "php-embedded-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "885873d9-a182-33bf-8d8c-b0bf7f5be8aa",
+       "product": {
+        "name": "php-enchant-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9163058a-c645-38a7-88ce-f0c717b61e58",
+       "product": {
+        "name": "php-devel-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "aaca5f32-33ed-3344-a759-4b2c051d2c86",
+       "product": {
+        "name": "php-cli-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b27f745a-788f-38bf-b7f2-6540c2fbb406",
+       "product": {
+        "name": "php-process-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b2c67b93-46c2-33b9-8a10-bdaa60dcbc7d",
+       "product": {
+        "name": "php-xmlrpc-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bb918a43-08d5-36e0-92b7-5e6d69f4b5e3",
+       "product": {
+        "name": "SUSE Liberty Linux 7 LTSS",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c08478a1-205f-3797-b3b5-150973af1edf",
+       "product": {
+        "name": "php-fpm-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "dc4956c3-9844-3ce4-95f6-2a4268793933",
+       "product": {
+        "name": "php-common-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ea0efb4f-d45e-3800-8535-40ed561c6877",
+       "product": {
+        "name": "php-bcmath-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "efe13fac-966c-335c-ba69-2de5b82c42d5",
+       "product": {
+        "name": "php-mysql-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f197c3d7-e42c-34b0-a286-f20ea8be2422",
+       "product": {
+        "name": "php-snmp-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f56a8e1c-3fe3-379f-b526-ba8ad3f77afc",
+       "product": {
+        "name": "php-recode-0:5.4.16-48.el7.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 24, 2026, 12:57:37 PM",
+     "dateUpdated": "Oct 27, 2026, 8:59:10 PM",
+     "description": "security update for php",
+     "id": "ESSA-2026:0206",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/essa-2026_0206.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008398.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008398.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "security update for php"
+    },
+    "id": "480b221e-75ee-39b8-b10d-6bbf0e2b701e"
    },
    {
     "advisory": {
@@ -23653,6 +24312,205 @@
      "summary": "Security update for php8"
     },
     "id": "637c921a-3bbf-34f4-a38c-c96ab627b148"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0c89d622-ad12-3ae4-a853-f924ac143277",
+       "product": {
+        "name": "Siveillance Control",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "1b5530f9-79a5-33f1-b11b-74c21220e553",
+       "product": {
+        "name": "cRSP",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "2bc7ff22-41f2-3519-82ed-16a82b6d58c0",
+       "product": {
+        "name": "Climatix Devices",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "42f11aef-9c4c-31c0-8cba-faad4dcdd276",
+       "product": {
+        "name": "Desigo PXC5",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "69d3db4b-a251-3a38-a7df-839767460b6c",
+       "product": {
+        "name": "Connect X200",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "7ec1ea6e-8398-3633-8382-e98867fa61cc",
+       "product": {
+        "name": "Desigo CC",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "90c81a2d-ccea-3eca-b6f8-e7ff611371d3",
+       "product": {
+        "name": "Connect X500",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "94abeaa7-dc75-35e7-a626-9c7bc048ff7c",
+       "product": {
+        "name": "Desigo PXC4",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "96730ca0-a7a2-3f8a-b62b-6bf9a4f47cf9",
+       "product": {
+        "name": "Siveillance Control Pro",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "a7cd7370-fb5f-303f-8874-ddb814ae5aa6",
+       "product": {
+        "name": "Sinteso FS20 EN",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "b0d79712-bc19-354c-b6c3-6a6f49d42177",
+       "product": {
+        "name": "Connect X300",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "ba3010a8-6e3f-37f5-a829-6f7d596df2a7",
+       "product": {
+        "name": "Navigator E&S",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "c16fad23-4681-3ee1-9e03-e7b20bf56757",
+       "product": {
+        "name": "Siveillance Video",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "d0132291-4832-3993-8ccc-32cab75ab2f5",
+       "product": {
+        "name": "SIPORT",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "d18b32b8-612a-3304-9427-140d55689197",
+       "product": {
+        "name": "Climatix Cloud IC",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "d5ecd10d-6aba-3bc1-9139-ede99db53c53",
+       "product": {
+        "name": "Desigo PXC7",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "d646cc92-6061-386a-bdcf-0e9eb3244997",
+       "product": {
+        "name": "Building X",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "de23d41f-3854-3b5a-bd4c-d3953f93e43b",
+       "product": {
+        "name": "Desigo Optic",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "f14dd334-acc9-3aed-9d37-b2e4ba03eb83",
+       "product": {
+        "name": "Siveillance Intrusion",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "f69f2780-e954-385e-9c8f-fd397718bbd5",
+       "product": {
+        "name": "SiPass integrated",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 26, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 27, 2026, 12:00:00 AM",
+     "description": "SSA-166980: PHP2Shell Vulnerabilities in Siemens Products",
+     "id": "SSA-166980",
+     "references": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-166980.json\n",
+     "source": {
+      "id": 7,
+      "name": "csaf_siemens"
+     },
+     "summary": "On October 21, 2026, the PHP project and security researchers disclosed two critical, unauthenticated remote code execution vulnerabilities in the core PHP language runtime known as \"php2shell\" (tracked as CVE-2026-109618 and CVE-2026-109619). This advisory covers the status of impact of various Siemens software products.\n\nAs a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines, and to follow the recommendations in the product manuals.\n\nSiemens is actively monitoring the situation and assessing the implications of these vulnerabilities on our portfolio. Because this evaluation is ongoing, our findings are subject to change as new technical details and vendor updates emerge. We will publish updated findings, guidance, and remediation recommendations as soon as they become available."
+    },
+    "id": "638a06c0-144b-3881-85a5-34051e41182f"
    },
    {
     "advisory": {
@@ -33756,7 +34614,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 23, 2026, 12:00:00 AM",
+     "dateUpdated": "Oct 28, 2026, 12:00:00 AM",
      "description": "SSA-566512: PHP2Shell Vulnerabilities in Palo Alto Networks PAN-OS on RUGGEDCOM APE1808 Devices",
      "id": "SSA-566512",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-566512.json\n",
@@ -43248,9 +44106,9 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 29, 2026, 6:00:33 AM",
+     "dataProcessed": "Oct 30, 2026, 6:00:39 AM",
      "datePublished": "Oct 21, 2026, 1:48:34 PM",
-     "dateUpdated": "Oct 28, 2026, 3:55:46 AM",
+     "dateUpdated": "Oct 29, 2026, 6:08:47 AM",
      "description": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
      "enisa_id": "EUVD-2026-107260\n",
      "epss": 100.0,
@@ -45078,7 +45936,7 @@
    }
   ],
   "id": "CVE-2026-109618",
-  "lastModified": "2026-10-28T04:17:46.930",
+  "lastModified": "2026-10-29T17:30:09.610",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -45178,6 +46036,13 @@
      "Vendor Advisory"
     ],
     "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List"
+    ],
+    "url": "http://seclists.org/fulldisclosure/2026/Oct/51"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",

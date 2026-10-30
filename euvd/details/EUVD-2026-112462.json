@@ -1,0 +1,5229 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76418"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-76418",
+  "cwes": [
+   "CWE-690"
+  ],
+  "dateAdded": "2026-10-29",
+  "dueDate": "2026-11-01",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-76418",
+  "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
+  "vendorProject": "Cisco",
+  "vulnerabilityName": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-76418\nGHSA-3whv-82g3-5cwx\n",
+  "assigner": "cisco",
+  "baseScore": 8.6,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Oct 28, 2026, 8:05:31 PM",
+  "dateUpdated": "Oct 29, 2026, 7:58:23 PM",
+  "description": "A vulnerability in the Remote Access SSL VPN service of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. This vulnerability is due to logic errors when secondary authentication is configured on a tunnel group. An attacker could exploit this vulnerability by sending a crafted request when connecting to the SSL remote access VPN. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "034cd7ea-28ee-3a0a-a0e6-a25f0575a1f9",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.2"
+   },
+   {
+    "id": "03bd3d41-f599-35c5-89b0-8108e419b02f",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.12"
+   },
+   {
+    "id": "052dbc0e-f043-31fe-bdef-025775b5bbdb",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.6.3"
+   },
+   {
+    "id": "05343a57-5818-3ab5-bc1a-a10fb1f5b3d1",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.3.23"
+   },
+   {
+    "id": "055595b5-9f38-3b5f-9b6d-134f42d0d967",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.3.15"
+   },
+   {
+    "id": "06d339f8-73dc-3dd3-8c0d-3d2e8737ee47",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.55"
+   },
+   {
+    "id": "06faadff-8058-3f55-9433-638ef2394b05",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "10.0.0"
+   },
+   {
+    "id": "06fc99a6-ee08-324f-9baa-141fc18cc279",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.2.5"
+   },
+   {
+    "id": "07d21993-5efe-3c09-9a74-b8b71c87819c",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.67"
+   },
+   {
+    "id": "089a6b5d-1262-3d4d-ac15-ec429e49cb5c",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.27"
+   },
+   {
+    "id": "09c6aba3-e24e-3a50-bb8f-7b0983ea6fc8",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "10.1.0"
+   },
+   {
+    "id": "0b0a2324-9a3e-3075-971c-93d801fa09c5",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4"
+   },
+   {
+    "id": "0bbf5076-ce07-3ced-9e89-8e66c2357d97",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.24.1.11"
+   },
+   {
+    "id": "0c8021ea-11c3-3c2b-8d44-5e374280ed93",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.94"
+   },
+   {
+    "id": "0d13caf3-7c9e-3034-82f3-09321c09d4c2",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.2"
+   },
+   {
+    "id": "0dad9245-9758-3043-923c-d16ee9bf1301",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.4"
+   },
+   {
+    "id": "0e164d3a-e1cd-3588-8706-0e0b9c16db90",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.7.0"
+   },
+   {
+    "id": "10349d6c-1245-30fc-b958-68054b0980a6",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.40"
+   },
+   {
+    "id": "10a0755d-90eb-30c1-a4bb-d2b71792e1a1",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.42"
+   },
+   {
+    "id": "111600f8-212d-3b01-9840-12e21d9fd21f",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.3.39"
+   },
+   {
+    "id": "1192354a-c521-3574-a927-3ca6d763cd55",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.6.2"
+   },
+   {
+    "id": "14b2162d-b829-32ed-b482-09d44c12119b",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.0"
+   },
+   {
+    "id": "160601a9-6c39-32f3-85b8-51817f3cfe69",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.8"
+   },
+   {
+    "id": "1ca13d8b-af02-355a-9783-9200d34c721a",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.3"
+   },
+   {
+    "id": "1fae22ce-1f22-3990-92a7-aab7564ee34b",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.3.7"
+   },
+   {
+    "id": "22a71143-970a-3d84-85db-6d2a901d2337",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.1.5"
+   },
+   {
+    "id": "23a63007-c77d-30c3-95e4-91fbb7aeb130",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4.30"
+   },
+   {
+    "id": "254b69b4-d120-3aa5-9011-6c8b650cb658",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.22"
+   },
+   {
+    "id": "276584b5-5c66-3efc-8f4c-8ae8fa11853e",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.1"
+   },
+   {
+    "id": "2a1c537b-8932-3971-98c6-1077de97a944",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.5"
+   },
+   {
+    "id": "2c34aaed-30c2-3270-b999-ba23c7039378",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.2.9"
+   },
+   {
+    "id": "2d96dc60-6ce5-312f-ab52-612ed8af3886",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.7"
+   },
+   {
+    "id": "2fe95f95-e8d2-30d9-a50e-74055d4ce642",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.0.1"
+   },
+   {
+    "id": "30a9419d-7b2f-387e-9d0e-c8d5d97f352a",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.23.1.26"
+   },
+   {
+    "id": "30b9c496-e495-35ad-8b71-06b7e7d42a25",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.10"
+   },
+   {
+    "id": "318ca5a9-4ebb-3069-b661-f9bdab1be1ab",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.85"
+   },
+   {
+    "id": "32f1b307-5bcb-3100-92a7-5c72798987f6",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.3.5"
+   },
+   {
+    "id": "333e05d2-cdfb-3f19-aac2-017f610837f7",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.23.1.195"
+   },
+   {
+    "id": "335eb52b-a397-3137-b250-bf209ef543de",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.9"
+   },
+   {
+    "id": "3385dd07-f03b-3abc-be27-01c672c5cf1a",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.1.3"
+   },
+   {
+    "id": "343f3e09-ca8b-3c76-b806-1327027b8342",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.24.1.5"
+   },
+   {
+    "id": "3476b9db-3bec-3dcc-a2cd-727e50ffa751",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.3"
+   },
+   {
+    "id": "348cf7a4-13e9-33ab-957e-1fb7c9338a33",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.2"
+   },
+   {
+    "id": "36db96c9-9529-39cb-880a-6e4a3fa23693",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.6"
+   },
+   {
+    "id": "37a59c5c-ee8a-35cc-b10c-cd5beeaddb6b",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.10"
+   },
+   {
+    "id": "3833b291-2657-318c-8f70-9a04419e71da",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.2.4"
+   },
+   {
+    "id": "3859154d-92f6-305d-a4a6-ca84025c5778",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.34"
+   },
+   {
+    "id": "397849bf-783b-320a-8a23-1383897c6e03",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.3.1.2"
+   },
+   {
+    "id": "3ba65ecc-c722-389b-a8c0-6ca4948ad1dc",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.6.1"
+   },
+   {
+    "id": "3ec76db6-553b-3516-8cd9-05f638ba25af",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.2.13"
+   },
+   {
+    "id": "41337d7a-e81c-3b1e-a293-06ee459485a2",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.5.1"
+   },
+   {
+    "id": "42051faa-3b86-3e4e-b559-ea33d0b773cb",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1"
+   },
+   {
+    "id": "458cdcb4-c927-3d31-9307-de576dcf61dd",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.82"
+   },
+   {
+    "id": "4718cfcd-06d2-3851-9fa0-0454b946a1dc",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.5"
+   },
+   {
+    "id": "4a964c55-064a-3492-80f0-de8564afe9fb",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.9"
+   },
+   {
+    "id": "4ab107f0-4a9e-3022-a65c-95940747e637",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4.10"
+   },
+   {
+    "id": "4af9ecd3-36a1-3555-a663-42b16a41e2ab",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.61"
+   },
+   {
+    "id": "4d32f714-42bf-3653-9cc7-06511878d03b",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.2.1"
+   },
+   {
+    "id": "4e9ef69a-9497-3b1c-836a-83bcfa4bcbf8",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.24.10"
+   },
+   {
+    "id": "4ea52c29-7e07-3dac-8b5d-19d1074d0838",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.1"
+   },
+   {
+    "id": "556388de-7019-3dec-a8a2-c0b83ef56a72",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.9"
+   },
+   {
+    "id": "55fe605b-b4aa-3171-a6b3-a62e7d54e5d1",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.23.1.47"
+   },
+   {
+    "id": "56a3254c-a39c-30b2-9007-90085f19dd53",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.82"
+   },
+   {
+    "id": "57b68508-9179-3cde-8a19-e97a522177c0",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.6"
+   },
+   {
+    "id": "5804047a-abe7-3216-9997-77a42343b1f5",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.3.46"
+   },
+   {
+    "id": "58cdbdea-571f-352f-be60-83f3d295b9a3",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.2.1"
+   },
+   {
+    "id": "5adf99e5-1dd7-3616-8be2-c4879d255fb2",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.7"
+   },
+   {
+    "id": "5c2f624d-c333-35ba-9f7c-06894a206ba9",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.3.56"
+   },
+   {
+    "id": "5ca01bc1-2646-325a-b718-9f4c1cfa6cb0",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.2"
+   },
+   {
+    "id": "5d3511b2-3f37-3e28-aff8-9e5e9aa4fc66",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.7.13"
+   },
+   {
+    "id": "5e36ddbb-4d76-36f4-95cd-815dfa66c24b",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.70"
+   },
+   {
+    "id": "61b540b4-dc23-36c7-a38f-244a4a9838c1",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.71"
+   },
+   {
+    "id": "629a7ff6-1584-3b55-b12f-2a6a4c337568",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.92"
+   },
+   {
+    "id": "62c00eb2-65f8-3b9f-8b21-c4defcf234bd",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.3.0"
+   },
+   {
+    "id": "648f0deb-77ee-3b11-b3ff-c72546fb81bf",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.1.1"
+   },
+   {
+    "id": "6534a466-4932-3708-94ac-8bf5e40e64b9",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.2.7"
+   },
+   {
+    "id": "66ba3748-45eb-3529-a8e4-5bccc65a74a9",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4.7"
+   },
+   {
+    "id": "68586f71-3f3e-373c-aff6-77552aff26c6",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.29"
+   },
+   {
+    "id": "69116258-f7c3-3ea0-950f-2a98d01753a4",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.53"
+   },
+   {
+    "id": "693e6ebe-4b7c-3052-a19c-d696224ccfac",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.19"
+   },
+   {
+    "id": "697a193c-5a8d-341a-ae8f-7cddb137031e",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.48"
+   },
+   {
+    "id": "6b42fbab-a916-30d7-892c-dcc3354db5b7",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.24.1.9"
+   },
+   {
+    "id": "6ccde411-77e9-3709-8203-e62fa23751cd",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.2.11"
+   },
+   {
+    "id": "6deb23d4-953b-34b7-94cc-083d63c99f23",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.2.10"
+   },
+   {
+    "id": "6fd51908-6b93-3f7f-aa55-cb41d2b9c93e",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.67"
+   },
+   {
+    "id": "701268e7-f7fc-3d9f-8e1d-30b415e6fcba",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.1.2"
+   },
+   {
+    "id": "711a119a-dd42-36d4-af41-2ebd744d2246",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.3.3"
+   },
+   {
+    "id": "737a1e53-33e4-374e-a924-d5823fda65ce",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.5.2"
+   },
+   {
+    "id": "73ae5ab3-5eeb-3ebf-b4c9-6371e8ab3748",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.7.10.1"
+   },
+   {
+    "id": "73b3754a-c8c6-362f-bf1b-b1aa5aadcbc5",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.2.8"
+   },
+   {
+    "id": "7858868a-de78-373b-98f6-36723f7a34c2",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.2"
+   },
+   {
+    "id": "7ada01d4-cd93-39f0-80ba-5df79c8237b7",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.1.6"
+   },
+   {
+    "id": "7c4874b3-a467-3494-b6d3-6cc5d1c3f2d3",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.0"
+   },
+   {
+    "id": "7db50d65-4309-3057-b9c5-8391b05ab407",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.24"
+   },
+   {
+    "id": "7dbd288c-1204-39a5-ac4c-46782dbf3058",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.62"
+   },
+   {
+    "id": "7dea2dbf-fc52-37a8-9706-e3fdb3c988a1",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.84"
+   },
+   {
+    "id": "8019c41b-fbf3-3c17-804d-14d07e0336d1",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.71"
+   },
+   {
+    "id": "811304e8-def1-3686-be76-2d1ecc795af4",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.2.1"
+   },
+   {
+    "id": "817ce31c-b60a-393e-bcc2-d7e12d9669b2",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.66"
+   },
+   {
+    "id": "81ab796b-5ba5-3d0a-8973-3b74e48ddca6",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4.49"
+   },
+   {
+    "id": "87150aeb-1acd-3366-952b-91b1c088b42d",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.23.1.7"
+   },
+   {
+    "id": "87fca646-9525-3353-9ea5-55f1b688e9e0",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.0"
+   },
+   {
+    "id": "88df6038-baa1-3c15-8294-2798820c3bfa",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.3"
+   },
+   {
+    "id": "89a7bb31-7520-3e8e-8e3b-b261e5e56314",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.18"
+   },
+   {
+    "id": "8b5c9fc0-eb7a-354b-98c4-29d3a361ddf2",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.6"
+   },
+   {
+    "id": "8bdba98b-23ec-3206-a8a0-fd262916d63f",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.2.3"
+   },
+   {
+    "id": "8c2ad9f0-2af6-3537-99cd-cd0f515d0235",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.3.16"
+   },
+   {
+    "id": "8ddcb8e7-277a-3e49-b545-8c6f3d368913",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.1"
+   },
+   {
+    "id": "8de0849f-8c23-3673-b8db-75999dbd25e6",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.5"
+   },
+   {
+    "id": "8e339746-b26e-3c97-bf95-9f5e3d04e205",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.23.1"
+   },
+   {
+    "id": "8e7503b9-8a54-363a-b858-8d1b11d82c2f",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.22"
+   },
+   {
+    "id": "9033edc3-75a0-3f18-97b3-4304ba87af8e",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.4.1"
+   },
+   {
+    "id": "9093cd88-b7fe-3bd8-874e-2f22b718639c",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.38"
+   },
+   {
+    "id": "91b362fe-c943-3e73-b248-1e5d0d78994f",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.2.20"
+   },
+   {
+    "id": "921b738b-fdbe-3b72-918f-b19641448ea9",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.23.1.3"
+   },
+   {
+    "id": "9223ff6c-09a7-3c7e-acdc-c31c55f53296",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.24.1.155"
+   },
+   {
+    "id": "92873d6f-293c-314d-9b40-63478794bcf7",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.3"
+   },
+   {
+    "id": "93962f03-f7e0-3b94-be1f-044f4955abc2",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.3.1"
+   },
+   {
+    "id": "952d752f-e340-384f-a50a-e4f3e24541fd",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.11"
+   },
+   {
+    "id": "954e1b73-a062-39aa-ba35-2446eaa0abdc",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.3.14"
+   },
+   {
+    "id": "971793bd-21d5-3f15-91c3-a458d82755a2",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.2.21"
+   },
+   {
+    "id": "97df45cc-f743-3c35-9684-9b55a1d9ab87",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.23.1.19"
+   },
+   {
+    "id": "98678231-7395-3781-9b70-9171885a921b",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.1"
+   },
+   {
+    "id": "9b24b3b7-1ed6-314c-8a3e-1f823382e648",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.3.53"
+   },
+   {
+    "id": "9b9de012-c751-3c4b-bc46-777f350658a9",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.47"
+   },
+   {
+    "id": "9c7fc9da-819e-33ae-9bf0-41d742633ad9",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.1"
+   },
+   {
+    "id": "9e8ff77b-ebf9-3c3b-bc1d-08dceeeafc5c",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.1"
+   },
+   {
+    "id": "9ee06762-2f37-3841-87ec-60abe92c456d",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.2.3"
+   },
+   {
+    "id": "9fa51582-8350-34b9-a6b9-c881f0503417",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.76"
+   },
+   {
+    "id": "a215eebf-da5e-3077-a722-dca5efb7ecc3",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.7.10"
+   },
+   {
+    "id": "a2a4c138-ffb1-3690-b113-ac654065a2d1",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.12"
+   },
+   {
+    "id": "a54d7231-390f-32ed-a4b4-06c27ab8d08f",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.76"
+   },
+   {
+    "id": "a6af3454-83d2-3368-9eb4-f9c5bc951d8f",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.3.13"
+   },
+   {
+    "id": "a7c94aa4-da99-3352-8b5b-4ee8b027344c",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.6.4"
+   },
+   {
+    "id": "a88776b6-4445-3dde-9617-117998e921ce",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4.22"
+   },
+   {
+    "id": "aaca4e43-d982-3802-96b7-17f18d2f00d4",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.7.11"
+   },
+   {
+    "id": "ab66d779-b708-3f89-9ef6-d23fefeeb525",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.103"
+   },
+   {
+    "id": "abad07e0-19ce-3ead-8ff9-66e4c4234496",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.24"
+   },
+   {
+    "id": "ac0c8d89-76d4-327f-be7f-059a4d3d1995",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.3"
+   },
+   {
+    "id": "b006e860-573f-320b-a54a-ff7797d63f5a",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "10.0.2"
+   },
+   {
+    "id": "b022aaff-e81b-3048-9b5d-cd20f448caee",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4.46"
+   },
+   {
+    "id": "b1cbf0e6-88ed-3c75-a6c3-fbbdda13ac73",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.38"
+   },
+   {
+    "id": "b22adba3-c75e-3992-9db0-370143221123",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.2.14"
+   },
+   {
+    "id": "b258f7cd-4558-3ca4-958d-2a861981f187",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.42"
+   },
+   {
+    "id": "b5193f65-fcd6-31b2-be28-c30e3c54a69c",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.0.1"
+   },
+   {
+    "id": "b59ea4c3-a188-3b52-9f4f-1fab45f61885",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.3"
+   },
+   {
+    "id": "b7d2f335-968d-3118-8476-a81d0167be19",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4.19"
+   },
+   {
+    "id": "b7fcb8ab-b34f-32af-a5d9-04a09a22c405",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.52"
+   },
+   {
+    "id": "b812d382-5dae-3077-99ce-38b8e95ad1a2",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.5"
+   },
+   {
+    "id": "b8c04376-64c0-3aa2-a0e5-3f2b3c589ada",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4.28"
+   },
+   {
+    "id": "ba98824d-b4c0-38ba-adf2-c25e8c4d790d",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.1.1"
+   },
+   {
+    "id": "bae189b6-d844-3897-aeb7-d4616ee781ee",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.3.19"
+   },
+   {
+    "id": "bbae7682-065b-34cb-bf9f-2a867bc65bd1",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.4"
+   },
+   {
+    "id": "bd8ca45b-a048-3799-9a64-aae0e4c3060e",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.1.1"
+   },
+   {
+    "id": "bf7ee4f9-f68d-3461-ae24-b983e7f055a6",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.2"
+   },
+   {
+    "id": "c04d1e59-1931-38b9-9b76-2b5d9c10c409",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4"
+   },
+   {
+    "id": "c3e98f62-9ea8-3119-9112-21694b27ec6c",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.3.55"
+   },
+   {
+    "id": "c4e06198-5de6-3cf0-a0e7-ad671515280f",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.3"
+   },
+   {
+    "id": "c4f2b398-8c29-3319-b0ee-57b991181bf0",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.23.1.22"
+   },
+   {
+    "id": "c628b9aa-cb13-3df7-9923-01c3f040bad5",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.3.4"
+   },
+   {
+    "id": "c879206c-a1c5-35cc-8679-8f328bee12be",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.10.2"
+   },
+   {
+    "id": "c9095ff6-7f3f-3c79-92e1-619509025194",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.8.1"
+   },
+   {
+    "id": "cba56739-6457-3eeb-801e-1bbd28e6164a",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.37"
+   },
+   {
+    "id": "cc456508-a0e2-32a6-9e28-4c9c2d09d4ba",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.3.10"
+   },
+   {
+    "id": "ccd628d5-604a-35e4-aaf8-36ba52aab9e5",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.39"
+   },
+   {
+    "id": "cef9b0dc-1702-33f4-b629-68f7a0c53125",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.24.1"
+   },
+   {
+    "id": "d00b53d2-32e3-3273-b386-709355c7081a",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.27"
+   },
+   {
+    "id": "d1c34549-4976-379c-b424-67478ac2c75c",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4.235"
+   },
+   {
+    "id": "d1ddaf9d-44b5-3fc4-9e60-234ecb0313c5",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.2.4"
+   },
+   {
+    "id": "d370c578-bfa1-37cb-914d-c4f0f55907d8",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.2.13"
+   },
+   {
+    "id": "d423385c-dba7-33a0-86be-1ee76d03164e",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.31"
+   },
+   {
+    "id": "d4274b79-387a-33d7-9167-2219d68d5961",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.8"
+   },
+   {
+    "id": "d45d3e1e-30a6-39c2-8ce7-a2ebd4d6c038",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.23.1.13"
+   },
+   {
+    "id": "d5727d32-8aad-348f-96ee-b269b24e570b",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.3.20"
+   },
+   {
+    "id": "d633e65d-215b-3bac-a0c7-0c33feb8deb2",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.7"
+   },
+   {
+    "id": "d77445b5-8543-386c-a64b-2be83e088241",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.2.2"
+   },
+   {
+    "id": "d8832064-817f-3434-935a-03fcb59f464a",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4"
+   },
+   {
+    "id": "da981ec9-e4c8-38e1-9c25-b87269ff7a37",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.28"
+   },
+   {
+    "id": "daaff0b5-4316-35fd-b3c2-98199e1af94b",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.3.26"
+   },
+   {
+    "id": "db9410cd-8727-337e-8369-a5d03c0fc1d5",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4.34"
+   },
+   {
+    "id": "dbb24e3d-aa9f-38b9-9713-ebf566ff2b83",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.135"
+   },
+   {
+    "id": "dbb76876-8108-30cc-a79e-338eebbb856d",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.2"
+   },
+   {
+    "id": "de4c48bb-717d-356b-8aee-6c6c53b66224",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.57"
+   },
+   {
+    "id": "dfb5476a-7615-3b11-9325-c7397d54872e",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.3.1.1"
+   },
+   {
+    "id": "e02d5880-215c-32f7-96a8-e112e9bbb619",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.90"
+   },
+   {
+    "id": "e056f721-4028-3088-86f4-785b1bafec6c",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.0"
+   },
+   {
+    "id": "e1ea8859-6bc4-33b7-9ee3-f2d4d39434d6",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.8"
+   },
+   {
+    "id": "e5740f06-1d57-358c-b93e-11ab2fc2ece6",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.9"
+   },
+   {
+    "id": "e601648d-a6a3-3d81-9a44-eab372583c24",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.2.7"
+   },
+   {
+    "id": "e6ef7f86-0d23-38f2-8777-6f1e4fff96f2",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.2.22"
+   },
+   {
+    "id": "e77bf6b1-4710-3687-858d-850a3d324512",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.2"
+   },
+   {
+    "id": "e782102a-841b-321a-86ce-a71accb3fd07",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.8.1"
+   },
+   {
+    "id": "e918c6f7-ede2-3405-94b6-1b93c128e399",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.23.1.32"
+   },
+   {
+    "id": "ea0dd5e6-abdf-337f-8806-b56f2bd4e00a",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.50"
+   },
+   {
+    "id": "ebadf102-f22b-3dbe-8be6-3dfdd4586400",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.2.14"
+   },
+   {
+    "id": "ed09bb26-9f50-3500-8e14-d4da804ae95c",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.1.3"
+   },
+   {
+    "id": "ed500e2b-a4b7-30fd-b30c-a8771800fef6",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.2.8"
+   },
+   {
+    "id": "ef2a6db9-fa4c-30d7-8632-cec4ec47c0b5",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.19.1.18"
+   },
+   {
+    "id": "f1a2fd5c-87aa-3320-8b29-69ad1cc0a23e",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.4.14"
+   },
+   {
+    "id": "f2add995-77da-30d2-ad7a-b5cde2fe86be",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.24.1.26"
+   },
+   {
+    "id": "f2dfd30b-a983-3dfa-a6e4-bf3ea08a718a",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.18.4.68"
+   },
+   {
+    "id": "f8091246-7f81-315a-8e14-364a52861daa",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.4.4"
+   },
+   {
+    "id": "f9071f0b-f39a-3b60-9b28-e391344f6147",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.22.2.32"
+   },
+   {
+    "id": "fa3e31e1-b0b9-3e1f-af88-8e045c3f7c1e",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.14"
+   },
+   {
+    "id": "fc8ae565-54bd-3b1e-99d7-6bf1a89c547c",
+    "product": {
+     "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "7.0.1"
+   },
+   {
+    "id": "fd65ccba-455e-379c-972d-f0ebfcf718c4",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.57"
+   },
+   {
+    "id": "fee9704f-f8ee-32f5-9b18-511aee8bc111",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.4.89"
+   },
+   {
+    "id": "ff2f1f04-25d6-35dd-bced-171323fd9061",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.16.1.28"
+   },
+   {
+    "id": "ffc29ac2-79e1-3940-958a-49d8913ced68",
+    "product": {
+     "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+     "vendor": {
+      "name": "Cisco"
+     }
+    },
+    "product_version": "9.20.3.9"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "9230b445-c6fa-323a-82e3-26bd0a4b7e9e",
+    "vendor": {
+     "name": "Cisco"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "79a8d526-8a01-394e-89ec-5690ef7c8a48",
+    "vulnerability": {
+     "aliases": "GHSA-3whv-82g3-5cwx\nCVE-2026-76418\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Oct 30, 2026, 6:03:56 AM",
+     "datePublished": "Oct 28, 2026, 9:31:18 PM",
+     "dateUpdated": "Oct 29, 2026, 9:31:24 PM",
+     "description": "A vulnerability in the Remote Access SSL VPN service of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. This vulnerability is due to logic errors when secondary authentication is configured on a tunnel group. An attacker could exploit this vulnerability by sending a crafted request when connecting to the SSL remote access VPN. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.",
+     "enisa_id": "EUVD-2026-112462\n",
+     "epss": 0.0,
+     "id": "GHSA-3whv-82g3-5cwx",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-76418\nhttps://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76418\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "b0357ac1-517d-3a4c-b9be-1d6e186d62aa",
+    "vulnerability": {
+     "assigner": "cisco",
+     "baseScore": 8.6,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Oct 30, 2026, 6:01:00 AM",
+     "datePublished": "Oct 28, 2026, 8:05:31 PM",
+     "dateUpdated": "Oct 29, 2026, 7:58:23 PM",
+     "description": "A vulnerability in the Remote Access SSL VPN service of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. This vulnerability is due to logic errors when secondary authentication is configured on a tunnel group. An attacker could exploit this vulnerability by sending a crafted request when connecting to the SSL remote access VPN. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.",
+     "enisa_id": "EUVD-2026-112462\n",
+     "epss": 0.0,
+     "exploitedSince": "Oct 29, 2026, 12:00:00 AM",
+     "id": "CVE-2026-76418",
+     "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "000fa102-b28c-3d2b-85ae-c4a5fcff77ad",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.29"
+      },
+      {
+       "id": "0184131c-495b-31c1-8bd6-5edbadcae1bd",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.2.4"
+      },
+      {
+       "id": "01af9513-fe51-368f-9527-6a9b730fc201",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.3.1"
+      },
+      {
+       "id": "0236e4e9-44ff-3f6f-ba2b-a38ddcb1e471",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.2.3"
+      },
+      {
+       "id": "052e98b4-ae0a-3501-8941-f1d76eb9006d",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4.19"
+      },
+      {
+       "id": "058ab324-df21-3d5f-b655-6ef049b752e9",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4.7"
+      },
+      {
+       "id": "05dd34c7-9bff-34bc-8aab-4b60a85cd695",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.3.46"
+      },
+      {
+       "id": "085d5976-4c5a-339b-907d-8bb373fc25be",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.82"
+      },
+      {
+       "id": "0c03ba4b-949a-3161-9118-f71f970d3d14",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4.14"
+      },
+      {
+       "id": "0db2b5de-167a-3fb3-9d11-c58495310cf8",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.1"
+      },
+      {
+       "id": "0e7c29df-271b-3145-8848-4c2a9d9080f1",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.7"
+      },
+      {
+       "id": "119f1a50-84aa-3a31-b538-15baa7d21713",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.2"
+      },
+      {
+       "id": "122ac204-8e41-3246-8307-4860c97e4bee",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.27"
+      },
+      {
+       "id": "13940deb-3879-317c-b2d9-956e2b9b8ffe",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4.34"
+      },
+      {
+       "id": "13b938f0-6fcd-3058-974f-9b385c89f51c",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.6.2"
+      },
+      {
+       "id": "17525848-0ced-37f8-b793-9c96a287f0bd",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.38"
+      },
+      {
+       "id": "19c461f8-3de8-36ef-8772-a89aec5ec88f",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.1.3"
+      },
+      {
+       "id": "1c879cb9-3063-3ecc-b135-f43a21c2f247",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.94"
+      },
+      {
+       "id": "1e786ccb-15cc-3d05-b193-916bbfd7e749",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.1.3"
+      },
+      {
+       "id": "1f6047f0-c140-3e1f-91ee-9c261569359b",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.1.6"
+      },
+      {
+       "id": "1f8e3c08-08dc-3656-baa9-179618283617",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.23.1.32"
+      },
+      {
+       "id": "1fccc8e2-b277-309c-abe1-090cdc9f062a",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.10.2"
+      },
+      {
+       "id": "204151b5-f4b4-38f3-83b1-0cb5bfcc34be",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1"
+      },
+      {
+       "id": "206c75fc-2f18-351f-91f7-117ee5da0545",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4.10"
+      },
+      {
+       "id": "2186d392-3b6c-33bc-8417-301acad07dd4",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.76"
+      },
+      {
+       "id": "2348a9ba-8418-3e78-950a-19da4bf8a21e",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4.30"
+      },
+      {
+       "id": "236c0eaa-4658-3adc-a66d-cc60e75ad577",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.2.7"
+      },
+      {
+       "id": "2489f450-0e26-34be-bff7-cd96cf5946c8",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.47"
+      },
+      {
+       "id": "254f64fa-f0e3-3c6b-b83d-2609ccf6dbf3",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.3"
+      },
+      {
+       "id": "27ea6e7d-7c22-3274-af31-283d0b853492",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.2.13"
+      },
+      {
+       "id": "2940e6b8-0cc1-3f6e-9282-b1457d9d3fb2",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.24.1.11"
+      },
+      {
+       "id": "29722dc8-4ced-35e6-a3e0-c02ba80e7727",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.5"
+      },
+      {
+       "id": "2a507def-8645-3584-bf96-ce5d789ab07e",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.1"
+      },
+      {
+       "id": "2bef47e7-54bb-32f2-9b46-c7521de66083",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.89"
+      },
+      {
+       "id": "2c386908-a2ef-38d7-8c8b-852054389365",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.2.8"
+      },
+      {
+       "id": "2e0a6c30-d553-3bac-8b5c-bc5331b3058a",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.31"
+      },
+      {
+       "id": "2eb4afde-834a-390d-907e-5dc76d6a8d24",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.3.53"
+      },
+      {
+       "id": "2f9c5d8a-0776-34ed-a152-26439767215a",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.1"
+      },
+      {
+       "id": "30fa6914-99f9-3f4f-94b4-b1348abe50cf",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.8.1"
+      },
+      {
+       "id": "31320f5c-1947-3087-9bb7-368f49075fc4",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.2"
+      },
+      {
+       "id": "34ea38ee-7bb3-31d9-955a-14831b1666a5",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.5"
+      },
+      {
+       "id": "3651325c-ff75-3008-818b-36d1f0478419",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.3.5"
+      },
+      {
+       "id": "36f41ac2-5c86-3da0-bbcd-cc3d02604daa",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.2"
+      },
+      {
+       "id": "3839d7dd-cb79-347b-9f22-f5b8900a01b5",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.0.1"
+      },
+      {
+       "id": "3919c8fd-eb8c-3425-bc1a-5a33555c52f6",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4.235"
+      },
+      {
+       "id": "39e87923-83f4-355e-8c6d-db437be179a0",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.40"
+      },
+      {
+       "id": "3ece8b43-c283-3fdd-957f-3e7340a32d30",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.2.2"
+      },
+      {
+       "id": "4123a53a-e873-379e-96a4-1581b1daba51",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.2.5"
+      },
+      {
+       "id": "4218fc5d-e7d0-3dfc-8880-db2733f18b5e",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.23.1.3"
+      },
+      {
+       "id": "4253add5-e2de-3fdb-bd68-b1c9605aa9f3",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.57"
+      },
+      {
+       "id": "44acd795-15e2-3ef8-8f2a-080fc77bdbe5",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.3.20"
+      },
+      {
+       "id": "4619bcc4-13dc-3d50-b5b4-6454517cea62",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.38"
+      },
+      {
+       "id": "46eb43ca-2e25-357f-82f5-3d431eb83f97",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.24.1.26"
+      },
+      {
+       "id": "4862c1b7-ae00-3fe8-b450-880b35a5d3d3",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.10"
+      },
+      {
+       "id": "4c10bb45-5bd3-3f75-8cdd-84b60f59f276",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.2.4"
+      },
+      {
+       "id": "4d4b9dbf-bfc7-35a7-b799-f38b60db31d1",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.3.1.2"
+      },
+      {
+       "id": "4e3d5da7-69a6-3363-9fbd-0a72026b8650",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.2.13"
+      },
+      {
+       "id": "4e84a4c0-d9c9-304c-9436-a41cd1a1f34b",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.4.1"
+      },
+      {
+       "id": "5171403b-7e9b-37b5-b743-95c05213cce3",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.7.10"
+      },
+      {
+       "id": "51cce1e7-a350-3ee1-8716-8e6ca0d76d53",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.24.1.5"
+      },
+      {
+       "id": "520c0cbd-7566-37d5-92bd-8fe0cd6f5cb8",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "10.0.2"
+      },
+      {
+       "id": "5497fbd0-4466-32c8-8956-2db0f90f100e",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.3.3"
+      },
+      {
+       "id": "5672cec2-6751-3f46-833f-d9a1e7b49110",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.8"
+      },
+      {
+       "id": "57ccd951-46bd-36c1-b9e2-8fb34a665d60",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.3.26"
+      },
+      {
+       "id": "5a04b1ed-2551-3a16-9c2e-6fd698b148e1",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.14"
+      },
+      {
+       "id": "5f65870e-b00c-3faa-9f7d-69398de26828",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.3.16"
+      },
+      {
+       "id": "61c3e246-98c5-3ff7-b1c3-6ed5b382f688",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.24.1.9"
+      },
+      {
+       "id": "630c94a2-62e2-3140-84d3-3ca2919923f2",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.7.11"
+      },
+      {
+       "id": "660a04a3-d6b7-3cbc-9d4e-50267ed0274c",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.4"
+      },
+      {
+       "id": "662fdb6f-c9d2-3924-8037-2924fd464546",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.135"
+      },
+      {
+       "id": "664a846f-fbc3-3833-94c0-a870e3e90c13",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.23.1.19"
+      },
+      {
+       "id": "67bec4b3-54b0-3ea9-a333-247052ea49c4",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.9"
+      },
+      {
+       "id": "6808177a-cc19-3f10-bb3b-28c6c1bf01be",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.0"
+      },
+      {
+       "id": "69cdab9d-1399-3a47-a422-9279f5018765",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.3"
+      },
+      {
+       "id": "6afb451e-25ab-3501-a61b-5890e52684b7",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.3.19"
+      },
+      {
+       "id": "6b5020f9-d404-33d3-a33f-64e405062d90",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.27"
+      },
+      {
+       "id": "6dd5b265-fb66-3109-959c-ec44aacad74e",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.3.7"
+      },
+      {
+       "id": "6e263d2f-02bb-332a-92bd-f2068f66f5c3",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.1"
+      },
+      {
+       "id": "7021351c-bf4f-3590-b741-6ab6ac49fb01",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.3.1.1"
+      },
+      {
+       "id": "7049d730-275a-3358-ae4e-34698b570102",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.9"
+      },
+      {
+       "id": "7091c8a3-5e35-33c7-9246-1975907d6c48",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.8.1"
+      },
+      {
+       "id": "71539bb4-31cf-3db5-b501-cb3907df0403",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.3.9"
+      },
+      {
+       "id": "75856d9d-7805-3afc-ad17-a0c03d389b69",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.61"
+      },
+      {
+       "id": "76e59916-ff99-3c4e-bd6c-85130aa1b9d1",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.1"
+      },
+      {
+       "id": "78b73d90-415b-395f-b6e6-4bd93b3c2f78",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.2"
+      },
+      {
+       "id": "78e5db3b-0b05-3bc9-81eb-da94deb0fad6",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.23.1.26"
+      },
+      {
+       "id": "7b96aaa1-fee1-3ecf-a5e9-4d9086fc6302",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.42"
+      },
+      {
+       "id": "7c5ba8f7-11e6-394d-90ba-2a257cb533d1",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.71"
+      },
+      {
+       "id": "7def7ad9-b83e-3f8c-97a1-cf0e3f37062d",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.1"
+      },
+      {
+       "id": "80e4eafb-84cb-36e0-b666-88ec150cf960",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.84"
+      },
+      {
+       "id": "8132bb66-2cd5-3343-a258-0de23cace6bb",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.3"
+      },
+      {
+       "id": "8352aaae-7bdd-34c6-b06f-d1b6da5e4e30",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.6.3"
+      },
+      {
+       "id": "8381759c-23d9-3a3a-943c-fa8a98978c8c",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.39"
+      },
+      {
+       "id": "85a6e5ea-7933-33cd-82bd-fd6811ea6798",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.68"
+      },
+      {
+       "id": "85c9288e-fe53-3638-bf50-f6828cffbab3",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.3.0"
+      },
+      {
+       "id": "86139f38-6c57-35f2-aa35-530cf31b72d7",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.0"
+      },
+      {
+       "id": "865f2087-c6c6-3a59-beb8-773caa375718",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.4"
+      },
+      {
+       "id": "86eb3216-0504-321a-9eaa-169120a1dcc1",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.12"
+      },
+      {
+       "id": "87aaab35-f47b-3ff7-8537-a6b72f3c3483",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.37"
+      },
+      {
+       "id": "8801d881-7cd7-3b4d-b91e-dbd1b7812d96",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.5"
+      },
+      {
+       "id": "89b606f4-899d-3f17-b67b-6287ecaa8f96",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.5.1"
+      },
+      {
+       "id": "8a8a9110-97ca-32c5-88f7-4bb4e500c65f",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.19"
+      },
+      {
+       "id": "8c260e39-3711-38c3-b174-e1dbff98014f",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.0"
+      },
+      {
+       "id": "8c4c0d65-f6c2-3239-a27d-120387c2de5a",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.7.13"
+      },
+      {
+       "id": "8cccf243-3152-3a9c-bbb1-2882ebbe6ea9",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.3.56"
+      },
+      {
+       "id": "8e2b678f-1d58-3d92-8a13-7ce176f6269d",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.55"
+      },
+      {
+       "id": "8ee99a4a-e462-3cc4-a044-7ea11a04601b",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.22"
+      },
+      {
+       "id": "8f3d73ea-b978-3ed9-b849-d80a2673e37c",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.62"
+      },
+      {
+       "id": "93aa54ac-ec7a-3b51-9346-69cc8951db4b",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "10.0.0"
+      },
+      {
+       "id": "949e939c-7898-3fcb-9d17-d432b9b88d97",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.3"
+      },
+      {
+       "id": "98424510-d805-3aca-8a65-1243a20a2e88",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.2.22"
+      },
+      {
+       "id": "98ebbfde-c1a8-3330-b3f9-c0cd066837d3",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.8"
+      },
+      {
+       "id": "99b5ccc0-1e3b-38a7-91cd-9baf59d8d8e3",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.1.28"
+      },
+      {
+       "id": "9a754fb0-8af1-3b18-8b4d-c7ffe97a1213",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.23.1"
+      },
+      {
+       "id": "9d11b4e0-bd5a-3464-914c-6041c8837533",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.2.20"
+      },
+      {
+       "id": "9d3758f2-a968-37f0-8c48-d952a6f7d629",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.23.1.195"
+      },
+      {
+       "id": "9dd6aa63-82b7-3d2a-8bbe-0c99c1d6449a",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.48"
+      },
+      {
+       "id": "9f0a779c-4205-3a24-ba7c-1a645d537d7b",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.92"
+      },
+      {
+       "id": "a007aa05-d494-3ebb-b4bc-065a401de0af",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.7.10.1"
+      },
+      {
+       "id": "a0d3a685-80d9-3112-9b14-997bf5ba8ba7",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.0.1"
+      },
+      {
+       "id": "a0d922da-041f-3352-a3c3-eb8963a2204f",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.10"
+      },
+      {
+       "id": "a1c212e9-b01c-3f0a-8857-7cb0514f02e8",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.24"
+      },
+      {
+       "id": "a1fd51fd-c6fc-366b-b513-70bc0d66af17",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.82"
+      },
+      {
+       "id": "a3fcbeda-ef55-37f9-be0c-11add121675f",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.52"
+      },
+      {
+       "id": "a49bd2e9-e530-3611-a10b-9a665306290e",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.28"
+      },
+      {
+       "id": "a4dbe056-8532-3e28-8efb-429cf503b5ad",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.70"
+      },
+      {
+       "id": "a6d2b7be-74ef-3e13-b126-e3a6afc3fe36",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.3.13"
+      },
+      {
+       "id": "a8fcb4ab-c03b-35a4-a73b-22b0d6359b19",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.7.0"
+      },
+      {
+       "id": "a9063577-a9f3-3a40-96ef-5ebb3c32f34d",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.24.1"
+      },
+      {
+       "id": "ac441027-959c-3ae4-b8c5-59448ce3491a",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.2"
+      },
+      {
+       "id": "adb74193-3a77-3662-9247-70e103a56668",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.11"
+      },
+      {
+       "id": "ae868e68-5cfc-3d56-b047-f912b8b38a59",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.5.2"
+      },
+      {
+       "id": "af007460-37e5-30dd-9f0e-b3a0e4bcde57",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.2.3"
+      },
+      {
+       "id": "b032b7de-a964-3f20-af7b-cf64a94ef593",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.6.1"
+      },
+      {
+       "id": "b16c708a-8173-38c8-bb0f-204d51a9b496",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.24.10"
+      },
+      {
+       "id": "b1b24e46-0b1d-3d42-b52f-8f4c1608b918",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.3.55"
+      },
+      {
+       "id": "b1d5f103-667e-38a0-ba37-ab86854220ef",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4.46"
+      },
+      {
+       "id": "b228169c-eed8-3562-ad99-5f9ad87c9203",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.2"
+      },
+      {
+       "id": "b6913a0b-f2a3-3e16-bb1c-a00f777a4007",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.42"
+      },
+      {
+       "id": "ba21a135-9dc7-3ce5-b09e-164e6935f453",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.8"
+      },
+      {
+       "id": "bb430ee7-cde0-3dd7-bee3-c0f0826de27e",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.9"
+      },
+      {
+       "id": "bb5ca639-6162-366e-b4e3-ef9ed92a9d2d",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.2.14"
+      },
+      {
+       "id": "bb70601d-e716-3ce3-a571-1acaea739bbd",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.3.10"
+      },
+      {
+       "id": "bbd13c37-0231-3eae-b47e-4975c9f9c469",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4"
+      },
+      {
+       "id": "bcc0426a-0d04-3962-81bc-9b3bcd1d25ae",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.3.23"
+      },
+      {
+       "id": "bebad330-6d41-3047-bf14-342d220fc783",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.23.1.7"
+      },
+      {
+       "id": "bfaf9e99-8c7f-39f6-a7eb-213768bcf341",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.3.14"
+      },
+      {
+       "id": "c2d11880-0593-3187-94f3-c5372ef1c470",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.0"
+      },
+      {
+       "id": "c2d782c6-39ce-3452-8453-0f55470d123e",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4"
+      },
+      {
+       "id": "c3f52b07-b0d7-37f4-8546-8b125d9e9ea6",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.67"
+      },
+      {
+       "id": "c47f4db5-207c-3b3e-bff7-7dda044a826d",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.2.11"
+      },
+      {
+       "id": "c5d819dc-6a78-3b23-99c7-0c56819cf4a6",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.76"
+      },
+      {
+       "id": "c722d7b7-ff29-30ad-ab76-72bc4bcd6109",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.2.1"
+      },
+      {
+       "id": "c8393dc6-46f6-39a3-a764-aaa072f21bcb",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.24"
+      },
+      {
+       "id": "ca478fa6-442f-3c63-862d-86102496cf4f",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.4"
+      },
+      {
+       "id": "ca562f39-7e4a-337e-a5c8-cadef435b248",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.23.1.47"
+      },
+      {
+       "id": "cb5aaf22-30a8-32e8-b38a-569dc8a8d1c1",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.7"
+      },
+      {
+       "id": "ccdfeff4-863a-3301-9f5b-6041c6154290",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.53"
+      },
+      {
+       "id": "ce64fe87-b9db-3bf9-bdb7-ff2c6e2e47a9",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.90"
+      },
+      {
+       "id": "cee9baeb-8131-3d27-b8a9-7e9dbfb73ae4",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.18"
+      },
+      {
+       "id": "d0e15b3d-5760-35c1-83b4-efc05bb49d02",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4"
+      },
+      {
+       "id": "d2c166aa-02dc-3531-a95c-21326a50b472",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.1.1"
+      },
+      {
+       "id": "d47fda7f-71cd-328f-9076-182d506fde3f",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.3.15"
+      },
+      {
+       "id": "d62d47c5-da2a-3b95-9d52-fbc4a03e2863",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.1.2"
+      },
+      {
+       "id": "d718a4e6-c5e6-3b39-8c38-257b6cf5d448",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.1.1"
+      },
+      {
+       "id": "d73b0ba4-6474-333c-aec4-80ff904bbc64",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.2.1"
+      },
+      {
+       "id": "d78b6d30-65ae-3299-b6a3-dd77ccacf159",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4.49"
+      },
+      {
+       "id": "d7eaefb2-d33c-3fc4-b039-7ecad9f5ea13",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.50"
+      },
+      {
+       "id": "d99cd1a5-1561-3a78-be86-200fc02cdf9a",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.6"
+      },
+      {
+       "id": "d9eaf53f-3d67-33e9-8e5f-5bedafcb779d",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.85"
+      },
+      {
+       "id": "da04fcbb-31b6-36ae-980a-729a9c04abe5",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4.28"
+      },
+      {
+       "id": "dafb0a88-550b-36cc-a215-3e7990190907",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.2.7"
+      },
+      {
+       "id": "db234bc6-02c0-3bdb-b691-662e5630bd72",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.2.21"
+      },
+      {
+       "id": "dea2cbbd-c786-3ea6-aebc-655cda7d65d9",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.2.10"
+      },
+      {
+       "id": "dea49ff4-09b7-330d-8b38-5fd3a603986d",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.4"
+      },
+      {
+       "id": "dedd92c7-2acb-32ac-8d95-9a2f98760912",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.2.14"
+      },
+      {
+       "id": "e1bc7743-5a7d-34f9-ab5c-d440a749eadf",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "10.1.0"
+      },
+      {
+       "id": "e27216b8-1cca-32ef-a45b-5b426e8a219f",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.3"
+      },
+      {
+       "id": "e30f2270-1f5a-3ad4-9274-3a1ebefb4003",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.57"
+      },
+      {
+       "id": "e4f4e7f6-fbe2-3dd0-a185-693749334315",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.7"
+      },
+      {
+       "id": "e85cccc9-ed2d-35c8-b8b4-e8afe3e512d6",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.4.3"
+      },
+      {
+       "id": "e887d3a0-7ff3-3eea-ab3a-c4a5a73c9af7",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.8"
+      },
+      {
+       "id": "ea57d86a-bfc2-33ed-9030-0ac2cdfd534b",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.2.32"
+      },
+      {
+       "id": "ebd0518f-b756-316b-9076-ecddcfdde909",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.4.22"
+      },
+      {
+       "id": "ed4fb654-bef3-38b5-924e-de1dfaf291b0",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.2"
+      },
+      {
+       "id": "ee04120f-8084-3a0d-802d-b81b651c16f7",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.6"
+      },
+      {
+       "id": "f02d17dd-4599-353c-a34b-8e1226460ed0",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.24.1.155"
+      },
+      {
+       "id": "f1145856-945c-3867-957f-62eaed1cbf3b",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.2.1"
+      },
+      {
+       "id": "f21ebd19-df34-3c2d-89c1-1683b96511d7",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.2.9"
+      },
+      {
+       "id": "f29cdede-0b2c-3a10-a61d-decba9757578",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.0.9"
+      },
+      {
+       "id": "f494c670-a628-3f9d-8871-6f36ae9fcbc7",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.18"
+      },
+      {
+       "id": "f51923b3-baea-320d-8f56-c1ba235b19a4",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.1"
+      },
+      {
+       "id": "f63083c5-e11b-3cf2-89dd-46eca209ce31",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.34"
+      },
+      {
+       "id": "f65b6101-df62-3c6a-8873-80197a06b9c5",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.22.1.1"
+      },
+      {
+       "id": "f72c22e0-4e79-337f-9be5-2a912dc9d0b3",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.3"
+      },
+      {
+       "id": "f749edcd-9273-36b2-983f-b602e3bf5933",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.6.6"
+      },
+      {
+       "id": "f7fe232e-e3f7-3a6e-86b5-d5dd0075610e",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense (FTD) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "7.2.12"
+      },
+      {
+       "id": "f9cf1d54-de85-3932-9783-b532e0af0392",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.23.1.13"
+      },
+      {
+       "id": "fa5bacd1-fe55-34c9-9488-124d3d2827ef",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.103"
+      },
+      {
+       "id": "fa69a028-2ab0-316d-a202-bbc1fde70174",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.1.5"
+      },
+      {
+       "id": "faacc522-683a-3bea-b13a-369eae70977f",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.67"
+      },
+      {
+       "id": "faf22ce2-18eb-3afc-8d62-34fb517788fa",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.20.3.4"
+      },
+      {
+       "id": "faf69200-f1ac-3e0c-bb2f-00a13959ea84",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.22"
+      },
+      {
+       "id": "fb2a9bcf-c114-36eb-8e2f-f83804bf7b17",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.23.1.22"
+      },
+      {
+       "id": "fb71f171-00d5-375c-8151-39af5c1a4a32",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.2"
+      },
+      {
+       "id": "fd0b03c3-5034-3c06-8f76-3429f368561f",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.4.66"
+      },
+      {
+       "id": "fd3a92fa-03c1-3772-b2ed-dfbbb9a7bee3",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.18.3.39"
+      },
+      {
+       "id": "fdb99a93-3ab7-3ed3-8330-ac651e411a24",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.19.1.5"
+      },
+      {
+       "id": "ff2e7755-bf63-3dbe-8a38-0a8751ba90a3",
+       "product": {
+        "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+        "vendor": {
+         "name": "Cisco"
+        }
+       },
+       "product_version": "9.16.4.71"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "9354861b-40b5-34c2-b5d9-9f8f76e75372",
+       "vendor": {
+        "name": "Cisco"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "2ebecd7b-7202-39ee-a1cd-bbbd39e43ad7",
+  "epss": 0.0,
+  "exploitedSince": "Oct 29, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-112462",
+  "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-112462",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 29, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+      "vendor": "Cisco",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "9.16.1"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.1.28"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.2"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.2.3"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.2.7"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.2.11"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.2.13"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.2.14"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.3.3"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.3"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.3.14"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.1"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.3.15"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.1.3"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.2"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.3.19"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.3.23"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.2.5"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.2.7"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.9"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.2.8"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.14"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.3"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.5"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.18"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.9"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.3.39"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.19"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.12"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.3.46"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.27"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.18"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.3.53"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.3.55"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.38"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.39"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.3.56"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.1"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.42"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.22"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.1.5"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.5"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.24"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.48"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.8"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.2"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.27"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.55"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.22"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.2.10"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.57"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.28"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.24"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.2.21"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.61"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.31"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.29"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.2.22"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.62"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.34"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.3"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.67"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.70"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.40"
+       },
+       {
+        "status": "affected",
+        "version": "9.23.1"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.1.1"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.71"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.3.4"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.47"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.3.7"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.37"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.76"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.3.9"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.38"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.50"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.1.3"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.3.10"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.1.2"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.52"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.3.13"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.1.6"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.53"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.82"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.2"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.3.16"
+       },
+       {
+        "status": "affected",
+        "version": "9.19.1.42"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.57"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.84"
+       },
+       {
+        "status": "affected",
+        "version": "9.23.1.3"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.3.20"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.2.4"
+       },
+       {
+        "status": "affected",
+        "version": "9.23.1.7"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.2.9"
+       },
+       {
+        "status": "affected",
+        "version": "9.23.1.13"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4.7"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.2.13"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.66"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4.10"
+       },
+       {
+        "status": "affected",
+        "version": "9.23.1.19"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.85"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.2.14"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.67"
+       },
+       {
+        "status": "affected",
+        "version": "9.24.1"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.68"
+       },
+       {
+        "status": "affected",
+        "version": "9.23.1.22"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4.14"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.2.20"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.71"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4.19"
+       },
+       {
+        "status": "affected",
+        "version": "9.23.1.26"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.89"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.2.32"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.76"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.3"
+       },
+       {
+        "status": "affected",
+        "version": "9.24.1.5"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4.22"
+       },
+       {
+        "status": "affected",
+        "version": "9.24.1.9"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4.28"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.3.5"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.92"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.135"
+       },
+       {
+        "status": "affected",
+        "version": "9.23.1.195"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4.30"
+       },
+       {
+        "status": "affected",
+        "version": "9.24.1.155"
+       },
+       {
+        "status": "affected",
+        "version": "9.23.1.32"
+       },
+       {
+        "status": "affected",
+        "version": "9.24.1.11"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4.34"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.82"
+       },
+       {
+        "status": "affected",
+        "version": "9.24.10"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.90"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4.46"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4.235"
+       },
+       {
+        "status": "affected",
+        "version": "9.20.4.49"
+       },
+       {
+        "status": "affected",
+        "version": "9.22.3.26"
+       },
+       {
+        "status": "affected",
+        "version": "9.16.4.103"
+       },
+       {
+        "status": "affected",
+        "version": "9.18.4.94"
+       },
+       {
+        "status": "affected",
+        "version": "9.23.1.47"
+       },
+       {
+        "status": "affected",
+        "version": "9.24.1.26"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Cisco Secure Firewall Threat Defense (FTD) Software",
+      "vendor": "Cisco",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "7.0.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.0.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.1.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.2.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.3"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.0.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.4"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.5"
+       },
+       {
+        "status": "affected",
+        "version": "7.3.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.3"
+       },
+       {
+        "status": "affected",
+        "version": "7.3.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.4"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.6"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.5"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.4.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.3.1.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.6.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.5.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.6"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.6.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.1.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.7"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.5.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.3.1.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.8"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.8.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.6.3"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.2.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.9"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.7"
+       },
+       {
+        "status": "affected",
+        "version": "7.7.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.2.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.10"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.2.3"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.8"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.7.10"
+       },
+       {
+        "status": "affected",
+        "version": "7.7.11"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.8.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.2.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.7.10.1"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.2.4"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.10.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.3"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.4"
+       },
+       {
+        "status": "affected",
+        "version": "10.0.0"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.4"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.9"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.11"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.7"
+       },
+       {
+        "status": "affected",
+        "version": "7.4.8"
+       },
+       {
+        "status": "affected",
+        "version": "7.2.12"
+       },
+       {
+        "status": "affected",
+        "version": "7.6.6"
+       },
+       {
+        "status": "affected",
+        "version": "7.7.13"
+       },
+       {
+        "status": "affected",
+        "version": "10.0.2"
+       },
+       {
+        "status": "affected",
+        "version": "7.0.10"
+       },
+       {
+        "status": "affected",
+        "version": "10.1.0"
+       }
+      ]
+     }
+    ],
+    "source": "psirt@cisco.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-01",
+  "cisaExploitAdd": "2026-10-29",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A vulnerability in the Remote Access SSL VPN service of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. This vulnerability is due to logic errors when secondary authentication is configured on a tunnel group. An attacker could exploit this vulnerability by sending a crafted request when connecting to the SSL remote access VPN. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition."
+   }
+  ],
+  "id": "CVE-2026-76418",
+  "lastModified": "2026-10-30T04:18:24.797",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.6,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "NONE",
+      "integrityImpact": "NONE",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 4.0,
+     "source": "psirt@cisco.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-76418",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-10-28T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-28T20:18:47.063",
+  "references": [
+   {
+    "source": "psirt@cisco.com",
+    "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76418"
+   }
+  ],
+  "sourceIdentifier": "psirt@cisco.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-690"
+     }
+    ],
+    "source": "psirt@cisco.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

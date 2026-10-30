@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
   "baseScoreVersion": "3.1",
   "datePublished": "Oct 13, 2026, 7:01:26 PM",
-  "dateUpdated": "Oct 26, 2026, 7:14:57 PM",
+  "dateUpdated": "Oct 29, 2026, 3:19:57 PM",
   "description": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
   "enisaIdAdvisory": [
    {
@@ -335,6 +335,16 @@
     "product_version": "1.0.0 <20260925.100"
    },
    {
+    "id": "be957056-1c28-3506-bfb3-a407fc0026e9",
+    "product": {
+     "name": "Microsoft Edge (Chromium-based)",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "1.0.0.0 <154.0.4258.62"
+   },
+   {
     "id": "c450b4eb-3362-35e8-8194-8b616c302b85",
     "product": {
      "name": "Windows Server 2019 (Server Core installation)",
@@ -411,13 +421,13 @@
      "baseScore": 8.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Oct 27, 2026, 6:00:12 AM",
+     "dataProcessed": "Oct 30, 2026, 6:00:16 AM",
      "datePublished": "Oct 13, 2026, 7:01:26 PM",
-     "dateUpdated": "Oct 26, 2026, 7:14:57 PM",
+     "dateUpdated": "Oct 29, 2026, 3:19:57 PM",
      "description": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
      "enisa_id": "EUVD-2026-100274\n",
      "epss": 9.81,
-     "exploitedSince": "Oct 13, 2026, 12:00:00 AM",
+     "exploitedSince": "Sep 25, 2026, 12:00:00 AM",
      "id": "CVE-2026-96951",
      "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951\n",
      "status": "PUBLISHED",
@@ -613,6 +623,16 @@
        "product_version": "10.0.14393.0 <10.0.14393.9612"
       },
       {
+       "id": "f909c13b-92fa-30ed-ab00-36b5fe7e31de",
+       "product": {
+        "name": "Microsoft Edge (Chromium-based)",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "1.0.0.0 <154.0.4258.62"
+      },
+      {
        "id": "ffd8a01f-34ce-363d-bbc8-c911c86b21aa",
        "product": {
         "name": "Windows Server 2025",
@@ -653,7 +673,7 @@
   ],
   "enisaUuid": "2fef80fc-8113-3efa-aa67-4b4ac56aadbf",
   "epss": 9.81,
-  "exploitedSince": "Oct 13, 2026, 12:00:00 AM",
+  "exploitedSince": "Sep 25, 2026, 12:00:00 AM",
   "id": "EUVD-2026-100274",
   "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951\n"
  },
@@ -663,12 +683,28 @@
   {
    "dateAdded": "Oct 13, 2026, 12:00:00 AM",
    "source": "CISA"
+  },
+  {
+   "dateAdded": "Sep 25, 2026, 12:00:00 AM",
+   "source": "EUKEV"
   }
  ],
  "nvd": {
   "affected": [
    {
     "affectedData": [
+     {
+      "product": "Microsoft Edge (Chromium-based)",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "154.0.4258.62",
+        "status": "affected",
+        "version": "1.0.0.0",
+        "versionType": "custom"
+       }
+      ]
+     },
      {
       "product": "Outlook.com",
       "vendor": "Microsoft",
@@ -1158,7 +1194,7 @@
    }
   ],
   "id": "CVE-2026-96951",
-  "lastModified": "2026-10-16T17:18:00.760",
+  "lastModified": "2026-10-29T16:20:22.137",
   "metrics": {
    "cvssMetricV31": [
     {

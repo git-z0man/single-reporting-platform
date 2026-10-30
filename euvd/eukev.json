@@ -1368,6 +1368,40 @@
    "first_seen": "2026-10-27",
    "first_seen_after": "2026-10-26",
    "changes": []
+  },
+  {
+   "id": "EUVD-2026-100274",
+   "cve": "CVE-2026-96951",
+   "row": 1847,
+   "dateAdded": "2026-09-25",
+   "origin": "CSIRT-IE",
+   "vendor": "Microsoft",
+   "product": "Windows version 8.1 and above",
+   "notes": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951",
+   "cisa": "2026-10-13",
+   "inserted_after": "2026-10-28",
+   "inserted_before": "2026-10-29",
+   "backdated_days": 33,
+   "first_seen": "2026-10-30",
+   "first_seen_after": "2026-10-29",
+   "changes": []
+  },
+  {
+   "id": "EUVD-2015-0292",
+   "cve": "CVE-2015-0279",
+   "row": 1848,
+   "dateAdded": "2026-10-25",
+   "origin": "CNW",
+   "vendor": "Red Hat",
+   "product": "JBoss RichFaces",
+   "notes": "",
+   "cisa": "",
+   "inserted_after": "2026-10-28",
+   "inserted_before": "2026-10-29",
+   "backdated_days": 3,
+   "first_seen": "2026-10-30",
+   "first_seen_after": "2026-10-29",
+   "changes": []
   }
  ],
  "removed": []
