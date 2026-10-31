@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Oct 13, 2026, 1:05:46 AM",
-  "dateUpdated": "Oct 29, 2026, 7:58:23 PM",
+  "dateUpdated": "Oct 30, 2026, 11:18:16 PM",
   "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
   "enisaIdAdvisory": [
    {
@@ -306,6 +306,2061 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "01596c1f-60e0-3a81-99c0-71b2e1f3969a",
+       "product": {
+        "name": "rubygem3.4-rake-0:13.2.1-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "071bb1f9-1f9e-3cf8-a1ac-286bcda848e1",
+       "product": {
+        "name": "ruby3.4-doc-0:3.4.12-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0a0c7dd5-27d7-3106-9e30-2e30bce33b53",
+       "product": {
+        "name": "Red Hat Hardened Images",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0c7da234-5695-370b-93be-c3b78eddab91",
+       "product": {
+        "name": "rubygem3.4-json-0:2.9.1-33.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0f756d39-d44e-3ccf-90f9-64361822f07d",
+       "product": {
+        "name": "rubygem3.4-psych-0:5.2.2-33.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0f91b12c-2595-3b4f-b5df-5bd582fd9fa8",
+       "product": {
+        "name": "rubygem3.4-power_assert-0:2.0.5-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "10b66cad-0d94-3152-99db-f1b2c595e42b",
+       "product": {
+        "name": "ruby3.4-bundled-gems-0:3.4.12-33.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "13b24a30-83ed-3749-aac7-5d3a82774dbe",
+       "product": {
+        "name": "rubygem3.4-typeprof-0:0.30.1-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "182c42c9-6788-3873-adc5-d2e90d0a5e5c",
+       "product": {
+        "name": "rubygem3.4-bigdecimal-0:3.1.8-33.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "19c469e0-3dc8-3fa4-995c-c26c7070a119",
+       "product": {
+        "name": "rubygem3.4-rexml-0:3.4.4-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1c97cb57-14ea-3d0d-80b9-aa7172108c04",
+       "product": {
+        "name": "rubygem3.4-io-console-0:0.8.1-33.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1ca315bb-4701-3cf8-9591-a3fc95f26643",
+       "product": {
+        "name": "ruby3.4-0:3.4.12-33.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "21eeef30-69c1-35c6-9ebd-fa1bb7440561",
+       "product": {
+        "name": "ruby3.4-bundled-gems-0:3.4.12-33.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "25100718-7334-33c1-af28-1858b53a2ad6",
+       "product": {
+        "name": "rubygem3.4-io-console-0:0.8.1-33.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "27d533bc-ca06-373a-809e-5437b76aeacd",
+       "product": {
+        "name": "ruby3.4-default-gems-0:3.4.12-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "28853467-1efd-3075-b24f-afe6acd70725",
+       "product": {
+        "name": "rubygem3.4-rexml-0:3.4.4-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2aa80985-2184-31ff-a7d7-b610dbe1ff03",
+       "product": {
+        "name": "rubygem3.4-json-0:2.9.1-33.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "33f7272a-f004-334f-9981-7dba176aefbd",
+       "product": {
+        "name": "ruby3.4-doc-0:3.4.12-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "363edbe2-200e-3707-b3ba-bd90561388c2",
+       "product": {
+        "name": "rubygem3.4-rdoc-0:6.14.0-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "363f820e-8c0c-3eeb-99d0-0cf8a89d9df0",
+       "product": {
+        "name": "ruby3.4-default-gems-0:3.4.12-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3e00b006-3e2c-3d56-90f7-3496518d8528",
+       "product": {
+        "name": "rubygem3.4-rexml-0:3.4.4-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "46a8bbb9-509d-3d3c-b971-486784196dc4",
+       "product": {
+        "name": "rubygem3.4-racc-0:1.8.1-33.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "52b1f4b9-9c60-3a54-8cab-b622970a1221",
+       "product": {
+        "name": "rubygem3.4-devel-0:3.6.9-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "53d96410-978e-324e-add8-8e89e565d7a9",
+       "product": {
+        "name": "rubygem3.4-typeprof-0:0.30.1-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "54acc696-897d-3afa-bd2b-1cea6eac6936",
+       "product": {
+        "name": "rubygem3.4-minitest-0:5.25.4-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5c2137fc-550e-3c0b-8c1f-0d141bd7b01a",
+       "product": {
+        "name": "rubygem3.4-irb-0:1.14.3-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "633280ab-0dcd-33ef-8aab-9893ac5c4688",
+       "product": {
+        "name": "rubygem3.4-rss-0:0.3.1-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "637d41fe-b1bb-315f-8595-15b1f2c543aa",
+       "product": {
+        "name": "ruby3.4-devel-0:3.4.12-33.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6d3be5fa-a216-31a8-ae24-425cef58ed20",
+       "product": {
+        "name": "ruby3.4-devel-0:3.4.12-33.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6db4f7a4-b4f0-3a2d-8dec-592dc65e98aa",
+       "product": {
+        "name": "rubygem3.4-test-unit-0:3.6.7-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6e9646da-c124-3ada-b864-f4e371d621a3",
+       "product": {
+        "name": "rubygem3.4-rbs-0:3.8.0-33.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "73b4b33c-9045-3a4a-aa25-0021eae79797",
+       "product": {
+        "name": "ruby3.4-0:3.4.12-33.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "747d8d74-8ca4-3ffe-b8ba-88fa64db5f40",
+       "product": {
+        "name": "ruby3.4-bundled-gems-0:3.4.12-33.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "75a5593d-8a4a-3e61-a141-e0c1e9bb0b3c",
+       "product": {
+        "name": "rubygem3.4-rubygems-0:3.6.9-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "85485aec-8639-3621-8925-91c97cab6fd2",
+       "product": {
+        "name": "ruby3.4-0:3.4.12-33.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "85b251f6-4cd6-3ceb-b6b6-d721f6caa757",
+       "product": {
+        "name": "rubygem3.4-bundler-0:2.6.9-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8762866d-68a2-30e4-b040-5494c6cdb8b3",
+       "product": {
+        "name": "rubygem3.4-psych-0:5.2.2-33.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "889928b4-3f35-3f99-8471-2cb1df8af4c0",
+       "product": {
+        "name": "rubygem3.4-test-unit-0:3.6.7-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "894df6bf-585a-3c17-87d0-2170b346438b",
+       "product": {
+        "name": "rubygem3.4-racc-0:1.8.1-33.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8a0f954d-73dc-3889-82d0-1d8f4056bc76",
+       "product": {
+        "name": "ruby3.4-0:3.4.12-33.1.hum1@src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "93a4423f-eab5-3721-8612-5f11c8d8cf4d",
+       "product": {
+        "name": "rubygem3.4-test-unit-0:3.6.7-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9498a33d-d5b6-32ee-97b6-02376707c889",
+       "product": {
+        "name": "ruby3.4-doc-0:3.4.12-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "963d155e-1520-347e-9ae1-c6c897d4fcf0",
+       "product": {
+        "name": "rubygem3.4-bundler-0:2.6.9-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "96421ffc-e1b7-362b-94f5-5f316358390f",
+       "product": {
+        "name": "rubygem3.4-rdoc-0:6.14.0-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9b67a762-d44a-380e-9e51-f24b0465cf6b",
+       "product": {
+        "name": "rubygem3.4-json-0:2.9.1-33.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9bbfa3ca-60d8-3f65-86a4-ffd0a893ced2",
+       "product": {
+        "name": "rubygem3.4-typeprof-0:0.30.1-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a02704fe-dc2f-37f1-a445-b679a607c22e",
+       "product": {
+        "name": "rubygem3.4-rss-0:0.3.1-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a2200ac4-beec-326d-9ad7-26ac73d6aa22",
+       "product": {
+        "name": "rubygem3.4-racc-0:1.8.1-33.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a5b5c948-47d4-3286-9d96-5d581b693975",
+       "product": {
+        "name": "rubygem3.4-rake-0:13.2.1-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a92b6537-dea9-3631-b678-e4a6f88b0459",
+       "product": {
+        "name": "rubygem3.4-rake-0:13.2.1-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ad89f3ad-afbc-3d55-bd3a-4e3bc4fdc5c0",
+       "product": {
+        "name": "rubygem3.4-devel-0:3.6.9-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ae252354-d973-3f3b-a506-b72719f8e7c5",
+       "product": {
+        "name": "rubygem3.4-bigdecimal-0:3.1.8-33.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "af3ec97f-f2bd-3c96-a6ca-9d6130c0bfe3",
+       "product": {
+        "name": "rubygem3.4-minitest-0:5.25.4-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b2ff918d-fd8e-3ff3-85c8-bc9a23cab94a",
+       "product": {
+        "name": "rubygem3.4-irb-0:1.14.3-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b3acf089-9343-3afe-807f-d4f75e80a78e",
+       "product": {
+        "name": "ruby3.4-libs-0:3.4.12-33.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b802972a-e49a-3936-8291-b6f4a904f633",
+       "product": {
+        "name": "rubygem3.4-rdoc-0:6.14.0-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b888f5a7-fbe4-34e7-a947-f6ad786fdc43",
+       "product": {
+        "name": "ruby3.4-libs-0:3.4.12-33.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ba8cbb5e-5024-3ed5-adb7-4813f6eaada5",
+       "product": {
+        "name": "rubygem3.4-rbs-0:3.8.0-33.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c1ce8015-207b-3dbc-b28b-e980f2bd25d2",
+       "product": {
+        "name": "rubygem3.4-devel-0:3.6.9-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c3f26b61-fef4-3ead-b90f-b461e79eb36e",
+       "product": {
+        "name": "rubygem3.4-power_assert-0:2.0.5-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c5d1efb9-1f54-3c7c-916d-b17776a9b406",
+       "product": {
+        "name": "ruby3.4-default-gems-0:3.4.12-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cb1b4605-9a5a-3afe-afb9-069478398760",
+       "product": {
+        "name": "ruby3.4-devel-0:3.4.12-33.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cc3444dc-c32a-3cae-8b38-0caf50cde807",
+       "product": {
+        "name": "rubygem3.4-rbs-0:3.8.0-33.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d90ba1da-2b4b-3b35-9a12-b78864931e8f",
+       "product": {
+        "name": "rubygem3.4-bigdecimal-0:3.1.8-33.1.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "daf22b38-61c9-39ee-b6d9-925ace8792e9",
+       "product": {
+        "name": "rubygem3.4-rubygems-0:3.6.9-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dbd5d7fd-ce97-3ea0-9767-e88f73327404",
+       "product": {
+        "name": "rubygem3.4-minitest-0:5.25.4-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e08b9bda-eb3c-380f-9c41-ac5da0f2cf31",
+       "product": {
+        "name": "rubygem3.4-irb-0:1.14.3-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e5e44d6e-6ddb-3751-a486-4faeb3b8dbfd",
+       "product": {
+        "name": "rubygem3.4-rss-0:0.3.1-33.1.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eb0b8d90-694a-36a9-a245-4f3d51042fb9",
+       "product": {
+        "name": "rubygem3.4-power_assert-0:2.0.5-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eb48383d-92a2-381c-8508-b4a2cb4665b9",
+       "product": {
+        "name": "ruby3.4-libs-0:3.4.12-33.1.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eca1b980-d532-3527-b5da-891984eab681",
+       "product": {
+        "name": "rubygem3.4-io-console-0:0.8.1-33.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ee2e1941-d789-3131-a520-c2a0f93f6f21",
+       "product": {
+        "name": "rubygem3.4-bundler-0:2.6.9-33.1.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f2b326d3-1acb-3098-8c3f-fedca74597e1",
+       "product": {
+        "name": "rubygem3.4-rubygems-0:3.6.9-33.1.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f2f4f87c-8ea0-3524-8caf-3610cbe39ee2",
+       "product": {
+        "name": "rubygem3.4-psych-0:5.2.2-33.1.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-89078\nCVE-2026-93577\nCVE-2026-97229\nCVE-2026-110264\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 23, 2026, 9:28:41 PM",
+     "dateUpdated": "Oct 30, 2026, 7:05:39 AM",
+     "description": "Red Hat Security Advisory: Red Hat Hardened Images RPMs bug fix and enhancement update",
+     "id": "RHSA-2026:88861",
+     "references": "https://access.redhat.com/errata/RHSA-2026:88861\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88861.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "An update for Red Hat Hardened Images RPMs is now available."
+    },
+    "id": "392e1a11-fc11-3f49-9c6e-c8f2ae997819"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "03daa881-cb25-3ad4-a732-25ffe8dcff3c",
+       "product": {
+        "name": "Red Hat Hardened Images",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "05a97ff5-66e6-3bce-ad93-e68e30226f91",
+       "product": {
+        "name": "rubygem3.3-power_assert-0:2.0.3-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "066a5949-b087-3069-9625-ada6de5c00e2",
+       "product": {
+        "name": "ruby3.3-0:3.3.13-23.8.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "076bcf14-53c8-3081-bb07-2a696c555b0f",
+       "product": {
+        "name": "rubygem3.3-rss-0:0.3.1-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "081bda24-82f8-3342-9d80-44daab037431",
+       "product": {
+        "name": "rubygem3.3-minitest-0:5.20.0-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0b75b128-30be-3baf-93ca-1af6528298f9",
+       "product": {
+        "name": "rubygem3.3-rdoc-0:6.6.3.1-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0d34d4e2-315b-3c3f-be6a-e8979f795a1a",
+       "product": {
+        "name": "rubygem3.3-io-console-0:0.7.1-23.8.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "114ad942-70f9-3fd6-a73b-8b5000bcff4c",
+       "product": {
+        "name": "ruby3.3-devel-0:3.3.13-23.8.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "13378c1a-baa0-3d1d-a09c-13bf1ae93db7",
+       "product": {
+        "name": "rubygem3.3-power_assert-0:2.0.3-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "13a99c26-1b1e-305e-ba0d-e05dc84689b5",
+       "product": {
+        "name": "rubygem3.3-typeprof-0:0.21.9-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "143605c5-7ad6-39de-ab9e-b27da3909bee",
+       "product": {
+        "name": "rubygem3.3-rss-0:0.3.1-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "15878610-2526-38ec-8ba9-a1b60614bb44",
+       "product": {
+        "name": "rubygem3.3-rbs-0:3.4.0-23.8.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1977820a-a391-3213-8aaf-45461d0ad8c9",
+       "product": {
+        "name": "rubygem3.3-typeprof-0:0.21.9-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1ec08b4f-6b87-3752-b36b-a4107f88b2f3",
+       "product": {
+        "name": "ruby3.3-0:3.3.13-23.8.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "255ee45c-b30b-31ca-931d-c783777df695",
+       "product": {
+        "name": "ruby3.3-devel-0:3.3.13-23.8.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2cc677c8-8140-3d88-bb33-7df1b225d753",
+       "product": {
+        "name": "rubygem3.3-test-unit-0:3.6.1-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "30e0d2d8-70fe-3c18-a9b2-1844439313a7",
+       "product": {
+        "name": "ruby3.3-libs-0:3.3.13-23.8.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "35022602-02bb-31b4-b7c1-7d777e8ff2a5",
+       "product": {
+        "name": "rubygem3.3-test-unit-0:3.6.1-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "38ce35c0-e74d-3b7c-a016-ae33fd9bebd1",
+       "product": {
+        "name": "rubygem3.3-json-0:2.7.2-23.8.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "39a66460-3b35-3fef-96e5-5c90a03c9570",
+       "product": {
+        "name": "rubygem3.3-rdoc-0:6.6.3.1-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4182230c-9c27-3fdc-a64b-24f6daff2d84",
+       "product": {
+        "name": "rubygem3.3-rss-0:0.3.1-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "461083af-c037-3e8b-8684-aa5516772d82",
+       "product": {
+        "name": "rubygem3.3-psych-0:5.1.2-23.8.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "48c34c86-7217-3b0a-b299-d307779f0bf9",
+       "product": {
+        "name": "rubygem3.3-bundler-0:2.5.22-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4aded621-4978-357e-a70a-0734f0a2c9e4",
+       "product": {
+        "name": "rubygem3.3-rubygems-0:3.5.22-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4d48a1b5-1d41-3a8f-bb3c-c68c8f3020c1",
+       "product": {
+        "name": "rubygem3.3-json-0:2.7.2-23.8.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "56f62f66-07b7-30b8-b6e2-ce9a92e4c901",
+       "product": {
+        "name": "ruby3.3-bundled-gems-0:3.3.13-23.8.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "583370ee-d034-30f3-a977-aacd8d535fe6",
+       "product": {
+        "name": "rubygem3.3-devel-0:3.5.22-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5a6d84cf-4a48-3c64-b48b-1147949b97a8",
+       "product": {
+        "name": "rubygem3.3-racc-0:1.7.3-23.8.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5b6b0972-dfa4-36d0-8cfe-64ec5aa8ff36",
+       "product": {
+        "name": "rubygem3.3-bundler-0:2.5.22-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6089969e-7b8c-3566-b4b9-b89c7f3b8d15",
+       "product": {
+        "name": "ruby3.3-0:3.3.13-23.8.hum1@src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "652cfafc-d4aa-34a3-ac16-64f39c246cdd",
+       "product": {
+        "name": "ruby3.3-default-gems-0:3.3.13-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "67686b6a-af90-3fa2-8f6c-7c28182f9e8d",
+       "product": {
+        "name": "rubygem3.3-minitest-0:5.20.0-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6e54aae3-b616-3592-a922-d85edae5a483",
+       "product": {
+        "name": "rubygem3.3-bigdecimal-0:3.1.5-23.8.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "70808ba4-3d95-32ca-80dc-da459ff60014",
+       "product": {
+        "name": "rubygem3.3-psych-0:5.1.2-23.8.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "732234d7-291d-3d1b-8036-413dd46ede29",
+       "product": {
+        "name": "rubygem3.3-rubygems-0:3.5.22-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "73e327bb-b078-376e-83f9-0da798ce2fb5",
+       "product": {
+        "name": "rubygem3.3-rubygems-0:3.5.22-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7490f747-daf6-3166-9a64-5aa5b7190f5a",
+       "product": {
+        "name": "rubygem3.3-devel-0:3.5.22-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7bd0ef16-74f5-3be4-89e4-b40f145e2534",
+       "product": {
+        "name": "rubygem3.3-rexml-0:3.4.4-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7e0b26ae-ab1b-3691-a7d5-58ecc041fca3",
+       "product": {
+        "name": "rubygem3.3-psych-0:5.1.2-23.8.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "80094c0b-8144-3648-90c6-3b290e1c50d6",
+       "product": {
+        "name": "rubygem3.3-test-unit-0:3.6.1-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8b750d92-000f-35b1-a393-266a7e87e26e",
+       "product": {
+        "name": "rubygem3.3-rdoc-0:6.6.3.1-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8f2883fc-a6a9-3aac-9006-0188ee2106e7",
+       "product": {
+        "name": "rubygem3.3-bundler-0:2.5.22-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "932f223d-8698-3b99-af29-0cad04f77a44",
+       "product": {
+        "name": "rubygem3.3-io-console-0:0.7.1-23.8.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "96adf7d1-33b1-3146-8652-56031ce7bbbd",
+       "product": {
+        "name": "rubygem3.3-racc-0:1.7.3-23.8.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "96d4c55e-4058-35ca-9e0a-4ef10d9a8e41",
+       "product": {
+        "name": "ruby3.3-devel-0:3.3.13-23.8.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "96dcb8de-69a0-38b6-8e4e-010efd7fda42",
+       "product": {
+        "name": "rubygem3.3-rake-0:13.1.0-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9787cc1c-8e8d-314b-b179-67e83b45baf3",
+       "product": {
+        "name": "rubygem3.3-irb-0:1.13.1-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9b186f1a-5374-3a75-9498-f5dfc6644c80",
+       "product": {
+        "name": "rubygem3.3-minitest-0:5.20.0-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9dafc9a5-6938-312e-93fb-2cdb7712557c",
+       "product": {
+        "name": "ruby3.3-doc-0:3.3.13-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9f328044-f460-3202-9eee-9377341dc4ce",
+       "product": {
+        "name": "rubygem3.3-rake-0:13.1.0-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a5f8e629-6168-37bf-990e-a5fea37a0c1c",
+       "product": {
+        "name": "ruby3.3-libs-0:3.3.13-23.8.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ae6d07f6-340b-3884-9ba5-5afaa7a71d13",
+       "product": {
+        "name": "ruby3.3-bundled-gems-0:3.3.13-23.8.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b1d233ae-07b9-38f5-a556-d290878749c7",
+       "product": {
+        "name": "rubygem3.3-bigdecimal-0:3.1.5-23.8.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b2b09227-d8da-36d3-b7f7-73dd33872331",
+       "product": {
+        "name": "rubygem3.3-bigdecimal-0:3.1.5-23.8.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bbffe81f-2c6f-3edd-8139-15e59355c909",
+       "product": {
+        "name": "ruby3.3-libs-0:3.3.13-23.8.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bc2b8e0b-6a64-3a4f-8182-44efc9f58030",
+       "product": {
+        "name": "rubygem3.3-irb-0:1.13.1-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c0bb16b4-da7b-3f14-8ade-0c93dc9e21c9",
+       "product": {
+        "name": "rubygem3.3-rbs-0:3.4.0-23.8.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c17207a8-5e5f-3d64-9972-1aeefea36a8c",
+       "product": {
+        "name": "rubygem3.3-racc-0:1.7.3-23.8.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c554fb9f-b5c5-31c2-8b6f-14e09f29dcb3",
+       "product": {
+        "name": "ruby3.3-doc-0:3.3.13-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c5bc108d-54e8-3e27-b2ae-386c3f6ed148",
+       "product": {
+        "name": "rubygem3.3-devel-0:3.5.22-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cb601238-9157-3be3-99a6-4c422199b589",
+       "product": {
+        "name": "rubygem3.3-rbs-0:3.4.0-23.8.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d356ba58-f1f1-3e47-a4ca-4e9835edd9a2",
+       "product": {
+        "name": "rubygem3.3-power_assert-0:2.0.3-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d5900207-3f33-39e7-b708-d77685765c45",
+       "product": {
+        "name": "ruby3.3-doc-0:3.3.13-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d85d978e-94e8-3fed-a9a6-6c03cc5a7d51",
+       "product": {
+        "name": "ruby3.3-default-gems-0:3.3.13-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d8a39a88-eaf4-3ec8-8dfb-99d7f6524910",
+       "product": {
+        "name": "rubygem3.3-json-0:2.7.2-23.8.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "da5bb2fa-b577-352c-a3f1-3e92f3a33863",
+       "product": {
+        "name": "ruby3.3-default-gems-0:3.3.13-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dc44a556-fda2-396b-980b-532b26e55350",
+       "product": {
+        "name": "rubygem3.3-rake-0:13.1.0-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e1e85c35-944f-3d45-bd06-730ab51fe73e",
+       "product": {
+        "name": "rubygem3.3-io-console-0:0.7.1-23.8.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e6195b53-79d9-3f3e-a32b-03f8ed964307",
+       "product": {
+        "name": "rubygem3.3-irb-0:1.13.1-23.8.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f0e47307-0150-3fc0-ba5b-573e17f0691a",
+       "product": {
+        "name": "rubygem3.3-typeprof-0:0.21.9-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f2db41e2-eace-3d38-be4f-81f388d1dd9b",
+       "product": {
+        "name": "rubygem3.3-rexml-0:3.4.4-23.8.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f5ef65ee-d635-3bf8-8c08-e85a37e7d41b",
+       "product": {
+        "name": "ruby3.3-bundled-gems-0:3.3.13-23.8.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f7c51d04-e947-34c0-afcf-da118c7a7b6c",
+       "product": {
+        "name": "ruby3.3-0:3.3.13-23.8.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fdd40af0-fa32-3bc4-819d-9912cd3fab6d",
+       "product": {
+        "name": "rubygem3.3-rexml-0:3.4.4-23.8.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-89078\nCVE-2026-93577\nCVE-2026-97229\nCVE-2026-110264\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 24, 2026, 1:48:15 AM",
+     "dateUpdated": "Oct 30, 2026, 7:05:41 AM",
+     "description": "Red Hat Security Advisory: Red Hat Hardened Images RPMs bug fix and enhancement update",
+     "id": "RHSA-2026:88880",
+     "references": "https://access.redhat.com/errata/RHSA-2026:88880\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88880.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "An update for Red Hat Hardened Images RPMs is now available."
+    },
+    "id": "b7c7bd46-045f-311a-9b54-ccdefea6339d"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0b6f623e-666b-3b14-a1a0-7ef7c68fda39",
+       "product": {
+        "name": "rubygem4.0-json-0:2.18.0-41.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1117b6b8-d5e0-3fb3-b3af-0e393a93817b",
+       "product": {
+        "name": "rubygem4.0-minitest-0:6.0.0-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1157e4ad-b3e4-3f15-90e7-0a0f8a0f8e56",
+       "product": {
+        "name": "rubygem4.0-racc-0:1.8.1-41.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "12868f85-0ae9-346d-8eb7-71875af8d490",
+       "product": {
+        "name": "rubygem4.0-rexml-0:3.4.4-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "15741aad-1420-3c81-9f63-3b6a9243e43d",
+       "product": {
+        "name": "rubygem4.0-rss-0:0.3.2-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1df208ef-1721-3fe2-a807-dd76ede27d87",
+       "product": {
+        "name": "rubygem4.0-rss-0:0.3.2-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2131b418-25c7-3599-ac6d-87f1d44fd5df",
+       "product": {
+        "name": "ruby4.0-libs-0:4.0.9-41.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "25928a82-7f16-30bc-8eb9-42fe4a9ffd74",
+       "product": {
+        "name": "rubygem4.0-typeprof-0:0.31.1-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "28731c7b-9646-3b27-8fcc-57616e43d6e2",
+       "product": {
+        "name": "rubygem4.0-irb-0:1.16.0-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2b1b021f-e424-3e48-a85d-4d24743a1221",
+       "product": {
+        "name": "ruby4.0-devel-0:4.0.9-41.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "30f24c7a-5a6a-30cc-8eda-e6330530ddc0",
+       "product": {
+        "name": "rubygem4.0-rubygems-0:4.0.20-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "31378ac5-ba41-3867-9c07-0f9044f510f6",
+       "product": {
+        "name": "ruby4.0-doc-0:4.0.9-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "314bde46-672d-3e03-bf8c-dd4acb6a7246",
+       "product": {
+        "name": "rubygem4.0-rexml-0:3.4.4-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "34f351a0-6bb0-3ff9-b30d-3843ac461a4f",
+       "product": {
+        "name": "rubygem4.0-io-console-0:0.8.2-41.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3823569a-133e-3f06-964a-cb4c5a267adc",
+       "product": {
+        "name": "ruby4.0-0:4.0.9-41.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "38b8e7b2-0842-3c11-a581-4a72dda1349f",
+       "product": {
+        "name": "rubygem4.0-typeprof-0:0.31.1-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "39461484-e79b-3158-8573-124b4f0447e4",
+       "product": {
+        "name": "rubygem4.0-bigdecimal-0:4.0.1-41.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3cedfde1-9abb-3b69-a724-b17a6bc20567",
+       "product": {
+        "name": "rubygem4.0-rss-0:0.3.2-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3d9c9d47-f41d-3db0-b63f-b2a641e58490",
+       "product": {
+        "name": "ruby4.0-0:4.0.9-41.hum1@src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "461f7d54-1645-365a-8e3a-76062f9b4c23",
+       "product": {
+        "name": "rubygem4.0-rdoc-0:7.0.4-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "46d92e0a-4cfa-3875-bccc-c6789b114d56",
+       "product": {
+        "name": "rubygem4.0-minitest-0:6.0.0-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4bd4436e-fb60-31c0-a5c4-d92db3fa7d56",
+       "product": {
+        "name": "rubygem4.0-rubygems-0:4.0.20-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4c3e4b02-44a3-3498-8c4f-569556209f37",
+       "product": {
+        "name": "ruby4.0-default-gems-0:4.0.9-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4e2f8b7b-6772-3cca-8aa6-a95b24346d8e",
+       "product": {
+        "name": "ruby4.0-bundled-gems-0:4.0.9-41.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4fb0c3cc-e389-3d08-9b70-9738b948c81c",
+       "product": {
+        "name": "ruby4.0-doc-0:4.0.9-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "54e623a7-6039-30c6-9e8c-7d0cd0adde0b",
+       "product": {
+        "name": "rubygem4.0-power_assert-0:3.0.1-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "564a964f-51cd-3432-9757-5015ca8e898d",
+       "product": {
+        "name": "rubygem4.0-racc-0:1.8.1-41.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "57b5973d-1cca-3f51-95bd-09ef4865a419",
+       "product": {
+        "name": "rubygem4.0-bigdecimal-0:4.0.1-41.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5e445a6a-d236-3c55-aa22-d1367b1ca0d8",
+       "product": {
+        "name": "rubygem4.0-rake-0:13.3.1-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5f659a37-e5e7-33ef-98f6-52cb8fbf71d1",
+       "product": {
+        "name": "rubygem4.0-irb-0:1.16.0-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "65a54247-fdba-3fd9-87a3-0324cf1ad247",
+       "product": {
+        "name": "rubygem4.0-bundler-0:4.0.20-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "67833aba-fa14-3d8e-8540-be2dddba09d8",
+       "product": {
+        "name": "rubygem4.0-json-0:2.18.0-41.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6d996bf3-a986-37d5-8159-e761cf9278fc",
+       "product": {
+        "name": "rubygem4.0-power_assert-0:3.0.1-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7729c5b3-f754-3116-9630-2ed3f455420a",
+       "product": {
+        "name": "rubygem4.0-rake-0:13.3.1-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "78c55028-114d-3c51-9a7b-ba0fada4eaf2",
+       "product": {
+        "name": "ruby4.0-0:4.0.9-41.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7aac1f16-ea2e-372f-949b-a51b0b5676b3",
+       "product": {
+        "name": "ruby4.0-default-gems-0:4.0.9-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7e0b7835-ec88-3a2c-93d5-d9ceb6b23de1",
+       "product": {
+        "name": "rubygem4.0-psych-0:5.3.1-41.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7e4cdb67-d314-39ad-a7eb-5d37e9a52c2e",
+       "product": {
+        "name": "rubygem4.0-bundler-0:4.0.20-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "819da3dd-2d14-3061-8dfd-2372784bb007",
+       "product": {
+        "name": "Red Hat Hardened Images",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "872ac055-1c8f-3f7b-b464-2115a26f0ddd",
+       "product": {
+        "name": "rubygem4.0-rake-0:13.3.1-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "87a48a8f-53d0-38ba-922e-1e72a9064948",
+       "product": {
+        "name": "rubygem4.0-minitest-0:6.0.0-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "94af63a8-6476-3495-b9c0-2cefb84b36be",
+       "product": {
+        "name": "ruby4.0-devel-0:4.0.9-41.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9608d952-9a66-3af3-a260-52a06b4d133d",
+       "product": {
+        "name": "rubygem4.0-psych-0:5.3.1-41.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "993bf18a-10d3-305f-8a03-4b96fd15f5b1",
+       "product": {
+        "name": "ruby4.0-doc-0:4.0.9-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9d32bc11-17c2-3600-8633-0725b2c91b78",
+       "product": {
+        "name": "rubygem4.0-rbs-0:3.10.0-41.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9fef99e7-4931-3be2-b1b1-ac1d1ad78d83",
+       "product": {
+        "name": "ruby4.0-0:4.0.9-41.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a3de07ef-2529-3412-be6d-81a86e9baf8e",
+       "product": {
+        "name": "rubygem4.0-test-unit-0:3.7.5-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a45ab106-21ad-3d73-af5e-808a91993a10",
+       "product": {
+        "name": "rubygem4.0-irb-0:1.16.0-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a48d82ce-cbbd-390a-bd09-a43a1de1d71a",
+       "product": {
+        "name": "rubygem4.0-typeprof-0:0.31.1-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "af95fb59-1cb7-3ed8-b759-549923c1f4a5",
+       "product": {
+        "name": "rubygem4.0-devel-0:4.0.20-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b12781ea-61f6-36f5-b859-157cb6e3a2a4",
+       "product": {
+        "name": "rubygem4.0-test-unit-0:3.7.5-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b4b8c177-3b88-3bdc-9ab2-7ce533b20b58",
+       "product": {
+        "name": "rubygem4.0-rubygems-0:4.0.20-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c3d0c246-2ae3-3682-b945-c2ad16cfb39d",
+       "product": {
+        "name": "rubygem4.0-racc-0:1.8.1-41.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c7246c97-02f6-30bd-98e2-d839e1d93e3e",
+       "product": {
+        "name": "rubygem4.0-psych-0:5.3.1-41.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c9b10062-43a0-3b97-8456-2ea814cbd92d",
+       "product": {
+        "name": "ruby4.0-devel-0:4.0.9-41.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ca1b8922-c4b9-3441-8cea-85bd8750af8f",
+       "product": {
+        "name": "rubygem4.0-power_assert-0:3.0.1-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cb84cc35-55f3-3ee5-942b-2de676374082",
+       "product": {
+        "name": "rubygem4.0-devel-0:4.0.20-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cee65111-0ead-38eb-a7cc-f1eff2150b9f",
+       "product": {
+        "name": "rubygem4.0-rdoc-0:7.0.4-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d01d2144-0837-3c76-8fc4-6d6e9538937a",
+       "product": {
+        "name": "ruby4.0-default-gems-0:4.0.9-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d12353ae-cb49-3be6-8e62-c7da6eac1ec1",
+       "product": {
+        "name": "rubygem4.0-rdoc-0:7.0.4-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d285d99c-fbe1-39cc-a0e7-0f56a55e104f",
+       "product": {
+        "name": "rubygem4.0-bundler-0:4.0.20-41.hum1@noarch@public-hummingbird-x86_64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d71a4ca1-8a2a-3b7c-b149-fbe7bbe55429",
+       "product": {
+        "name": "rubygem4.0-json-0:2.18.0-41.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d99b8410-5805-3e8d-91b9-987af319994d",
+       "product": {
+        "name": "rubygem4.0-rbs-0:3.10.0-41.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dbc9bdfe-4ea5-33da-857f-0fd09471a5c0",
+       "product": {
+        "name": "rubygem4.0-io-console-0:0.8.2-41.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dc531a98-cbbc-3050-a6fa-f40017f52fdb",
+       "product": {
+        "name": "rubygem4.0-rbs-0:3.10.0-41.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dd789f50-a423-3f3a-b8e1-866c32692670",
+       "product": {
+        "name": "ruby4.0-bundled-gems-0:4.0.9-41.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dd8301c9-529e-359b-a250-d04b22f66c93",
+       "product": {
+        "name": "rubygem4.0-io-console-0:0.8.2-41.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e0305e6c-6ebe-361a-ba02-23b1a6055865",
+       "product": {
+        "name": "ruby4.0-libs-0:4.0.9-41.hum1@aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e86026c5-8e51-3df7-be1e-6093df8d012e",
+       "product": {
+        "name": "rubygem4.0-devel-0:4.0.20-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f19edb0c-2813-3467-9f6c-ced577eb9bc7",
+       "product": {
+        "name": "rubygem4.0-rexml-0:3.4.4-41.hum1@noarch@public-hummingbird-aarch64-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f1bd656f-ec51-307e-a103-0d4fe940eb07",
+       "product": {
+        "name": "ruby4.0-libs-0:4.0.9-41.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f97bd024-1486-3225-b99b-e50e3c334bf9",
+       "product": {
+        "name": "rubygem4.0-bigdecimal-0:4.0.1-41.hum1@s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fa0e781b-8302-3cab-8e5e-9cbce5aa3736",
+       "product": {
+        "name": "rubygem4.0-test-unit-0:3.7.5-41.hum1@noarch@public-hummingbird-s390x-rpms",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ff4e3ebd-7d67-3577-a5e1-82a7de42de49",
+       "product": {
+        "name": "ruby4.0-bundled-gems-0:4.0.9-41.hum1@x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-89078\nCVE-2026-93577\nCVE-2026-97229\nCVE-2026-110264\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 24, 2026, 1:26:39 AM",
+     "dateUpdated": "Oct 30, 2026, 7:05:40 AM",
+     "description": "Red Hat Security Advisory: Red Hat Hardened Images RPMs bug fix and enhancement update",
+     "id": "RHSA-2026:88865",
+     "references": "https://access.redhat.com/errata/RHSA-2026:88865\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88865.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "An update for Red Hat Hardened Images RPMs is now available."
+    },
+    "id": "c2cc2c0d-b58f-3df0-86ed-2c5ed836d3e1"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
        "id": "75e0c8ab-d3ea-30f2-aa2c-caf148e8da50",
        "product": {
         "name": "azl3 ruby 0:3.3.5-10.azl3",
@@ -423,12 +2478,12 @@
      "baseScore": 10.0,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Oct 30, 2026, 6:01:00 AM",
+     "dataProcessed": "Oct 31, 2026, 3:00:30 PM",
      "datePublished": "Oct 13, 2026, 1:05:46 AM",
-     "dateUpdated": "Oct 29, 2026, 7:58:23 PM",
+     "dateUpdated": "Oct 30, 2026, 11:18:16 PM",
      "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
      "enisa_id": "EUVD-2026-98214\n",
-     "epss": 18.43,
+     "epss": 26.57,
      "exploitedSince": "Oct 29, 2026, 12:00:00 AM",
      "id": "CVE-2026-97229",
      "references": "https://gitlab.com/gitlab-org/gitlab/-/work_items/630686\nhttps://hackerone.com/reports/4055749\nhttps://hackerone.com/reports/4058589\nhttps://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/\n",
@@ -480,21 +2535,21 @@
     "vulnerability": {
      "aliases": "GHSA-9hj5-r43h-h3xg\nCVE-2026-97229\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 30, 2026, 6:03:56 AM",
+     "dataProcessed": "Oct 31, 2026, 3:01:29 PM",
      "datePublished": "Oct 13, 2026, 3:30:36 AM",
-     "dateUpdated": "Oct 29, 2026, 9:30:49 PM",
+     "dateUpdated": "Oct 31, 2026, 12:30:31 AM",
      "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
      "enisa_id": "EUVD-2026-98214\n",
      "epss": 0.0,
      "id": "GHSA-9hj5-r43h-h3xg",
-     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229\nhttps://hackerone.com/reports/4055749\nhttps://hackerone.com/reports/4058589\nhttps://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/630686\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-97229\n",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229\nhttps://github.com/rapid7/metasploit-framework/pull/22017\nhttps://hackerone.com/reports/4055749\nhttps://hackerone.com/reports/4058589\nhttps://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/630686\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-97229\nhttps://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves\n",
      "vulnerabilityProduct": [],
      "vulnerabilityVendor": []
     }
    }
   ],
   "enisaUuid": "74dd4a29-2a66-3386-b28d-e7a8b9627933",
-  "epss": 18.43,
+  "epss": 26.57,
   "exploitedSince": "Oct 29, 2026, 12:00:00 AM",
   "id": "EUVD-2026-98214",
   "references": "https://gitlab.com/gitlab-org/gitlab/-/work_items/630686\nhttps://hackerone.com/reports/4055749\nhttps://hackerone.com/reports/4058589\nhttps://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/\n"
@@ -610,7 +2665,7 @@
    }
   ],
   "id": "CVE-2026-97229",
-  "lastModified": "2026-10-30T04:18:31.240",
+  "lastModified": "2026-10-31T00:16:52.007",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -670,7 +2725,7 @@
    {
     "source": "cve@gitlab.com",
     "tags": [
-     "Issue Tracking"
+     "Broken Link"
     ],
     "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/630686"
    },
@@ -689,12 +2744,23 @@
     "url": "https://hackerone.com/reports/4058589"
    },
    {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://github.com/rapid7/metasploit-framework/pull/22017"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves/"
+   },
+   {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-97229"
    }
   ],
   "sourceIdentifier": "cve@gitlab.com",
-  "vulnStatus": "Undergoing Analysis",
+  "vulnStatus": "Modified",
   "weaknesses": [
    {
     "description": [

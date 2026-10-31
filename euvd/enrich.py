@@ -9,6 +9,8 @@ Sources, all public and read-only:
            every entry on every run (one call per 50 entries); the EUVD page shows them as "Honeypot sensors"
   - EUVD   /api/kevEntries/batch?ids=...   the day each KEV catalogue (CISA KEV, EU KEV) added the entry,
            per source; read for every entry on every run
+  - EUVD   /api/kevEntries?cveId=...   the same records for one CVE; the only way to reach a kev/dump
+           row the EUVD has not matched to an EUVD id (eukev.by_cve), one call per such row
   - EUVD   /api/kev/dump   every KEV entry the EUVD holds, both catalogues; read once per run for the
            EU KEV register (eukev.py)
 
@@ -29,6 +31,7 @@ NVD = "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId="
 CISA = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 HONEYPOT = "https://euvdservices.enisa.europa.eu/api/honeypotObservations/batch?ids="
 KEV_ENTRIES = "https://euvdservices.enisa.europa.eu/api/kevEntries/batch?ids="
+KEV_BY_CVE = "https://euvdservices.enisa.europa.eu/api/kevEntries?cveId="
 KEV_DUMP = "https://euvdservices.enisa.europa.eu/api/kev/dump"
 HONEYPOT_VOLATILE = {"lastSeenAt", "connections1d", "uniqueIps1d", "avg7d", "avg30d", "avg90d", "trend", "isNew"}
 VOLATILE = {"epss", "dataProcessed"} | HONEYPOT_VOLATILE
@@ -119,6 +122,19 @@ def honeypot_batch(ids):
 def kev_batch(ids):
     """{EUVD-ID: [{"kevSource": {"code": "CISA" | "EUKEV", ...}, "dateAdded": ...}]}"""
     return _batch(KEV_ENTRIES, "kevEntries", ids)
+
+
+def kev_by_cve(cve):
+    """[{"kevSource": {"code": ...}, "dateAdded": ...}] for one CVE, whether or not the EUVD holds a
+    record for it. /api/kevEntries/batch takes EUVD ids only, so this is the only way to a dump row
+    without one."""
+    try:
+        d = json.loads(_get(KEV_BY_CVE + urllib.parse.quote(cve)))
+    except ValueError:
+        raise FetchError(f"kevEntries answer for {cve} is not JSON")
+    if not isinstance(d, list) or not all(isinstance(o, dict) for o in d):
+        raise FetchError(f"kevEntries answer for {cve} is not a list of objects")
+    return d
 
 
 def kev_dump():
