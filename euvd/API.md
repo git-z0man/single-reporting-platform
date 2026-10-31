@@ -2,7 +2,10 @@
 
 What the EU Vulnerability Database serves, which parts ENISA documents, and which
 parts only its own web page uses. Checked on 2026-10-07 against
-`https://euvdservices.enisa.europa.eu/api`. The undocumented endpoints can change
+`https://euvdservices.enisa.europa.eu/api` and re-checked endpoint by endpoint on
+2026-10-31: no endpoint has moved, disappeared or been added, and the documented and
+undocumented lists below are still complete. What changed is the data, not the surface -
+see the `kev/dump` note below. The undocumented endpoints can change
 without notice; `euvd/check_exploited.py` treats an incomplete or unparseable answer
 as a failed check, never as a content change.
 
@@ -12,8 +15,11 @@ as a failed check, never as a content change.
   `apidoc.md` from <https://github.com/enisaeu/euvd-docs-public>. That repository
   holds only three prose pages (`apidoc.md`, `faq.md`, `about.md`), no code or schema.
 - **The frontend bundle** `https://euvd.enisa.europa.eu/static/js/main.<hash>.js`
-  (hash `bdd2ef30` today). Every call the web page makes is a `fetch(base + path)`
-  there, and the API documentation page's endpoint table is data in the same file.
+  (hash `bdd2ef30` on 2026-10-07, `61fcf30f` on 2026-10-31). Every call the web page makes
+  is a `fetch(base + path)` there, and the API documentation page's endpoint table is data
+  in the same file. The bundle also holds the host map
+  `{localhost: localhost:8080, euvdpp.enisa.europa.eu: euvdppservices..., euvd.enisa.europa.eu: euvdservices...}`:
+  `euvdppservices` is the same API in front of another instance, not a second interface.
 - **No OpenAPI schema.** `/v3/api-docs`, `/api-docs`, `/swagger-ui.html` and
   `/actuator/health` all return 404.
 - **Guessing paths does not work.** About 25 plausible names (`stats`, `vendors`,
@@ -32,8 +38,8 @@ as a failed check, never as a content change.
 | `/api/search` | filtered entries, `{"items": [...], "total": n}` | `size` up to 100, `page` from 0 |
 | `/api/enisaid?id=EUVD-...` | one full record | products, vendors, vulnerabilities, advisories |
 | `/api/advisory?id=...` | one advisory | |
-| `/api/dump/cve-euvd-mapping` | CSV `euvd_id,cve_id` | about 11.6 MB, 384,152 rows, refreshed 07:00 UTC |
-| `/api/kev/dump` | JSON list of known-exploited CVEs | about 260 KB, 1,746 entries, refreshed 07:00 UTC |
+| `/api/dump/cve-euvd-mapping` | CSV `euvd_id,cve_id` | 12.1 MB, 398,715 rows on 2026-10-31 (11.6 MB, 384,152 on 2026-10-07), refreshed 07:00 UTC; only CVEs with an EUVD record |
+| `/api/kev/dump` | JSON list of known-exploited CVEs | 263 KB, 1,783 entries on 2026-10-31 (260 KB, 1,746 on 2026-10-07), refreshed 07:00 UTC |
 
 ENISA's `apidoc.md` states "Maximum 8 records" for the three list endpoints.
 All three returned 4 when checked, on 2026-10-07 and again on 2026-10-28; the
@@ -47,6 +53,15 @@ and **`fromKEVDate` / `toKEVDate`**, which the API page does not list but which 
 
 `/api/kev/dump` entry: `cveId`, `euvdId`, `dateAdded` (the earliest day across all
 sources), `sources` (`cisa_kev`, `eukev_kev`). It has no vendor and no per-source date.
+
+**`euvdId` can be absent.** The API page lists all four fields as response fields, but since
+2026-10-30 the dump also carries rows that leave `euvdId` out entirely - a CISA entry for a
+CVE the EUVD itself does not hold. The first was `{"cveId": "CVE-2026-118527", "dateAdded":
+"2026-10-30", "sources": ["cisa_kev"]}`: `/api/enisaid?id=CVE-2026-118527` answers 404,
+`/api/search` finds nothing and the mapping CSV has no row for it. Such a row is still
+reachable by CVE - `/api/kevEntries?cveId=CVE-2026-118527` returns its KEV row (id 1852,
+CISA, 2026-10-30) - which is how `euvd/eukev.py` keeps the insertion clock complete. It
+cost the 2026-10-31 run of the monitor, which treated the missing key as a broken answer.
 
 ## Undocumented (used by the web page)
 

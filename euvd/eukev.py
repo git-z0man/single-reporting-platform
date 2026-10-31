@@ -43,6 +43,7 @@ FMT = "%b %d, %Y, %I:%M:%S %p"
 CLOCK_FROM = "2026-03-01"   # CISA rows from here on are in insertion order (euvd/EU-KEV.md)
 MIN_DUMP = 1000             # canary: the dump has held 1,700+ entries since 2026-10
 MIN_EU = 50                 # canary: the EU KEV has held 73 entries since 2026-10-07
+MAX_BY_CVE = 50             # the dump has held one row without an EUVD id since 2026-10-30
 FIELDS = ("cve", "row", "dateAdded", "origin", "vendor", "product", "notes", "cisa")
 
 
@@ -66,16 +67,23 @@ def is_eu(sources):
 
 
 def from_dump(dump):
-    """(EU KEV ids, the ids whose kevEntries the clock needs) from /api/kev/dump."""
+    """(EU KEV ids, the ids whose kevEntries the clock needs, the rows with no EUVD id) from /api/kev/dump.
+
+    Since 2026-10-30 the dump also carries rows with a CVE and no `euvdId` at all: a CISA entry for
+    a CVE the EUVD itself does not hold (CVE-2026-118527, which /api/search does not know). They are
+    returned rather than skipped: `by_cve` reaches their KEV rows by CVE for the insertion clock, and
+    the check reports them. They are never a change on their own.
+    """
     if not isinstance(dump, list) or len(dump) < MIN_DUMP:
         raise RegisterError(f"kev/dump has {len(dump) if isinstance(dump, list) else 'no'} entries; the pipeline looks broken")
-    eu, clock = set(), set()
+    eu, clock, unmatched = set(), set(), []
     for r in dump:
         try:
-            i, d, src = r["euvdId"], r["dateAdded"], r["sources"]
+            d, src, i = r["dateAdded"], r["sources"], r.get("euvdId")
         except (KeyError, TypeError):
             raise RegisterError(f"unexpected kev/dump row {r!r:.120}")
         if not i:
+            unmatched.append({"cve": r.get("cveId") or "", "dateAdded": d or "", "eu": is_eu(src)})
             continue
         if is_eu(src):
             eu.add(i)
@@ -84,7 +92,17 @@ def from_dump(dump):
             clock.add(i)
     if len(eu) < MIN_EU:
         raise RegisterError(f"only {len(eu)} EU KEV entries in kev/dump; the pipeline looks broken")
-    return sorted(eu), sorted(clock)
+    return sorted(eu), sorted(clock), unmatched
+
+
+def by_cve(unmatched):
+    """kevEntries for the dump rows with no EUVD id, keyed by CVE: the clock needs their row numbers,
+    and /api/kevEntries/batch cannot be asked for them. One call per row, so above MAX_BY_CVE rows the
+    shape has changed and the clock does better without the fetches than with an hour of them. An EU
+    KEV row without an EUVD id is left out: the register has nothing to key or link it by, and it is
+    reported instead."""
+    rs = [u for u in unmatched if u["cve"] and not u["eu"]]
+    return {} if len(rs) > MAX_BY_CVE else {u["cve"]: enrich.kev_by_cve(u["cve"]) for u in rs}
 
 
 def rows(recs, eu):
@@ -198,8 +216,8 @@ def render(reg, since, go_live):
 
 def fetch(dump=None):
     """(EU ids, kevEntries for the clock) from the EUVD."""
-    eu, clock = from_dump(enrich.kev_dump() if dump is None else dump)
-    return eu, enrich.kev_batch(clock)
+    eu, clock, unmatched = from_dump(enrich.kev_dump() if dump is None else dump)
+    return eu, {**enrich.kev_batch(clock), **by_cve(unmatched)}
 
 
 def last_check(path):

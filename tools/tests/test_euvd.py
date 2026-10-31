@@ -67,10 +67,11 @@ class Case(unittest.TestCase):
         FETCHED.clear()
         self.catalog = {"CVE-2026-5001": {"cveID": "CVE-2026-5001", "dateAdded": "2026-09-12", "vulnerabilityName": "N",
                                           "vendorProject": "Acme", "forensicTriage": "No", "futureField": "x"}}
-        self.hp, self.ks, self.dump = {}, {}, []
+        self.hp, self.ks, self.dump, self.kc = {}, {}, [], {}
         for name, fn in (("euvd_record", fake_euvd), ("nvd_record", fake_nvd), ("cisa_catalog", lambda: self.catalog),
                          ("honeypot_batch", lambda ids: {i: self.hp.get(i, []) for i in ids}),
                          ("kev_batch", lambda ids: {i: self.ks.get(i, []) for i in ids}),
+                         ("kev_by_cve", lambda cve: self.kc.get(cve, [])),
                          ("kev_dump", lambda: self.dump)):
             old = getattr(ce.enrich, name)
             setattr(ce.enrich, name, fn)
@@ -348,6 +349,25 @@ class Case(unittest.TestCase):
         self.assertEqual(self.register()["EUVD-2026-901"]["inserted_before"], "")
         self.assertEqual(self.run_json("--heartbeat")[0], 0)
         self.assertEqual(self.register()["EUVD-2026-901"]["inserted_before"], "2026-09-06")
+
+    def test_a_dump_row_without_an_euvd_id_is_resolved_by_cve_not_fatal(self):
+        """Since 2026-10-30 the dump carries CISA rows with a CVE and no euvdId at all."""
+        self.eukev_setup()
+        self.dump = self.dump[:2]                   # no CISA row after A yet
+        del self.ks["EUVD-2026-802"]
+        self.ks["EUVD-2026-901"] = self.ks["EUVD-2026-901"][:1]
+        self.run_check(base_items())
+        self.assertEqual(self.register()["EUVD-2026-901"]["inserted_before"], "")
+        for cve, src in (("CVE-no-id", "cisa_kev"), ("CVE-no-id-eu", "eukev_kev")):
+            self.dump.append({"cveId": cve, "dateAdded": "2026-10-30", "sources": [src]})
+        self.kc["CVE-no-id"] = [kev("CISA", "Oct 30, 2026", 99)]
+        code, out = self.run_json()
+        self.assertEqual(code, 0)                   # such a row is never a change of its own
+        self.assertEqual(out["eukev_unmatched"], [{"cve": "CVE-no-id", "dateAdded": "2026-10-30", "eu": False},
+                                                  {"cve": "CVE-no-id-eu", "dateAdded": "2026-10-30", "eu": True}])
+        self.run_json("--heartbeat")
+        self.assertEqual(self.register()["EUVD-2026-901"]["inserted_before"], "2026-10-30")   # the clock used it
+        self.assertNotIn("CVE-no-id-eu", self.register())   # an EU row with no id is reported, not registered
 
     def test_eukev_missing_record_or_small_dump_fails_and_writes_nothing(self):
         self.eukev_setup()
