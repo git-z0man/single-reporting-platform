@@ -28,9 +28,281 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Oct 28, 2026, 8:05:31 PM",
-  "dateUpdated": "Oct 29, 2026, 7:58:23 PM",
+  "dateUpdated": "Oct 30, 2026, 3:55:57 AM",
   "description": "A vulnerability in the Remote Access SSL VPN service of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. This vulnerability is due to logic errors when secondary authentication is configured on a tunnel group. An attacker could exploit this vulnerability by sending a crafted request when connecting to the SSL remote access VPN. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "1397651d-7fa1-3c5b-9a51-b52e3d4644bd",
+       "product": {
+        "name": "Cisco Secure Firewall Threat Defense Virtual",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "1889f6ad-029f-3f39-a2a6-803268e4aaed",
+       "product": {
+        "name": "Cisco Secure Firewall 4200 Series",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "1b3a9f26-8533-31c7-b74b-1f4f7ddd4fcf",
+       "product": {
+        "name": "Cisco Firepower 9000 Series",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "270f2ebc-d598-3b9c-b3d6-e126ea290f3c",
+       "product": {
+        "name": "7.3",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
+       "id": "34209175-8e88-321e-8a2c-f16d665d91f8",
+       "product": {
+        "name": "Cisco Firepower 4100 Series",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "395e0539-1ba4-3e4b-bd7a-01b3492aafe6",
+       "product": {
+        "name": "9.24",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "3c86058b-4b70-3b8c-aa06-c882641f3464",
+       "product": {
+        "name": "9.19",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "47e1da15-feb9-3e94-abe1-6b532c7820d7",
+       "product": {
+        "name": "Cisco Adaptive Security Virtual Appliance (ASAv)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "545fb6b2-aa85-3f91-bedd-79b79d2b5d6b",
+       "product": {
+        "name": "7.0",
+        "vendor": {
+         "name": "Automated Logic"
+        }
+       }
+      },
+      {
+       "id": "5a321ab2-34e9-3dac-ad16-c0d778bb76a0",
+       "product": {
+        "name": "7.7",
+        "vendor": {
+         "name": "OpenBSD"
+        }
+       }
+      },
+      {
+       "id": "64d95621-f2f7-33e4-a28a-7c70c81a6930",
+       "product": {
+        "name": "Cisco 3000 Series Industrial Security Appliances (ISA)",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "6d57fd2e-ecbc-38ee-9148-6ef0ea836d38",
+       "product": {
+        "name": "9.16",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "73e4f5ce-eed1-38a4-b4b8-b8eaf494f5d6",
+       "product": {
+        "name": "7.4",
+        "vendor": {
+         "name": "AVEVA Software, LLC"
+        }
+       }
+      },
+      {
+       "id": "777f642d-8781-3308-a73d-01eaa9423fec",
+       "product": {
+        "name": "Cisco Secure Firewall 1200 Series",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "7e3daa7b-b862-34ec-bee2-b8fc4c8c652f",
+       "product": {
+        "name": "9.18",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "824becfa-40eb-39ae-95aa-f1db012dec38",
+       "product": {
+        "name": "Cisco Secure Firewall 3100 Series",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "95881209-ae14-3b8e-9e79-1024759c050a",
+       "product": {
+        "name": "Cisco ASA 5500-X Series Firewalls",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "a8687c4c-deff-3ef4-aa60-fb65000dae3d",
+       "product": {
+        "name": "10.0",
+        "vendor": {
+         "name": "General Electric (GE)"
+        }
+       }
+      },
+      {
+       "id": "af7055f9-a952-3234-867b-886ac0ba4e07",
+       "product": {
+        "name": "9.23",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "b2e7fa6b-ba39-3cc9-b321-a52c25b8ccb1",
+       "product": {
+        "name": "9.22",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "c19580d8-9fce-3e78-a620-3a53d3e4bfbc",
+       "product": {
+        "name": "9.20",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "d11a39d0-8d47-3d20-809e-d6814cab3214",
+       "product": {
+        "name": "7.6",
+        "vendor": {
+         "name": "OpenBSD"
+        }
+       }
+      },
+      {
+       "id": "dd0dad88-2708-3281-815b-83fc1f81121f",
+       "product": {
+        "name": "Cisco Firepower 1000 Series",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "e87abb91-e302-3158-9871-1aadf99b416c",
+       "product": {
+        "name": "Cisco Secure Firewall 200 Series",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "ea1448b4-ecc4-3ac1-9b0b-5306ee482f85",
+       "product": {
+        "name": "7.2",
+        "vendor": {
+         "name": "Advantech"
+        }
+       }
+      },
+      {
+       "id": "ee8964d0-8844-36a1-8bd7-b759a1d7908a",
+       "product": {
+        "name": "Cisco Secure Firewall 6100 Series",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "f72adb7d-12e5-344c-b671-3544b2ffff84",
+       "product": {
+        "name": "10.1",
+        "vendor": {
+         "name": "Johnson Controls Inc"
+        }
+       }
+      },
+      {
+       "id": "f7caedce-3661-3fce-acc7-5287065c577d",
+       "product": {
+        "name": "Cisco Firepower 2100 Series",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-76418\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 28, 2026, 7:15:00 PM",
+     "dateUpdated": "Oct 28, 2026, 4:00:00 PM",
+     "description": "Cisco Secure Firewall Adaptive Security Appliance and Secure Firewall Threat Defense Software Remote Access SSL VPN Tunnel Denial of Service Vulnerability",
+     "id": "cisco-sa-asaftd-tunnel-dos-s6mgkb75",
+     "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75\n",
+     "source": {
+      "id": 10,
+      "name": "csaf_cisco"
+     },
+     "summary": "A vulnerability in the Remote Access SSL VPN service of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.\r\n\r\nThis vulnerability is due to logic errors when secondary authentication is configured on a tunnel group. An attacker could exploit this vulnerability by sending a crafted request when connecting to the SSL remote access VPN. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.\r\n\r\nCisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.\r\n\r\n"
+    },
+    "id": "a8d32ca5-e750-3464-857f-7aeae439210e"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "034cd7ea-28ee-3a0a-a0e6-a25f0575a1f9",
@@ -2137,7 +2409,7 @@
     "vulnerability": {
      "aliases": "GHSA-3whv-82g3-5cwx\nCVE-2026-76418\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 30, 2026, 6:03:56 AM",
+     "dataProcessed": "Oct 31, 2026, 3:01:29 PM",
      "datePublished": "Oct 28, 2026, 9:31:18 PM",
      "dateUpdated": "Oct 29, 2026, 9:31:24 PM",
      "description": "A vulnerability in the Remote Access SSL VPN service of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. This vulnerability is due to logic errors when secondary authentication is configured on a tunnel group. An attacker could exploit this vulnerability by sending a crafted request when connecting to the SSL remote access VPN. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.",
@@ -2156,12 +2428,12 @@
      "baseScore": 8.6,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Oct 30, 2026, 6:01:00 AM",
+     "dataProcessed": "Oct 31, 2026, 3:00:56 PM",
      "datePublished": "Oct 28, 2026, 8:05:31 PM",
-     "dateUpdated": "Oct 29, 2026, 7:58:23 PM",
+     "dateUpdated": "Oct 30, 2026, 3:55:57 AM",
      "description": "A vulnerability in the Remote Access SSL VPN service of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. This vulnerability is due to logic errors when secondary authentication is configured on a tunnel group. An attacker could exploit this vulnerability by sending a crafted request when connecting to the SSL remote access VPN. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.",
      "enisa_id": "EUVD-2026-112462\n",
-     "epss": 0.0,
+     "epss": 0.91,
      "exploitedSince": "Oct 29, 2026, 12:00:00 AM",
      "id": "CVE-2026-76418",
      "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75\n",
@@ -4270,7 +4542,7 @@
    }
   ],
   "enisaUuid": "2ebecd7b-7202-39ee-a1cd-bbbd39e43ad7",
-  "epss": 0.0,
+  "epss": 0.91,
   "exploitedSince": "Oct 29, 2026, 12:00:00 AM",
   "id": "EUVD-2026-112462",
   "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75\n"
@@ -5145,6 +5417,120 @@
   "cisaExploitAdd": "2026-10-29",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "805F181F-FE27-4ABF-AC29-559C6809FD27",
+        "versionEndExcluding": "9.16.4.104",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "C29AE7AB-46AA-40AC-A049-8C9C0F245501",
+        "versionEndExcluding": "9.18.4.96",
+        "versionStartIncluding": "9.18",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "6A4F41AE-BD2D-4DFE-85CA-241E16CA2914",
+        "versionEndExcluding": "9.20.4.50",
+        "versionStartIncluding": "9.19",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "DB422EAF-D8B7-48B8-8725-EC841A376092",
+        "versionEndExcluding": "9.22.3.200",
+        "versionStartIncluding": "9.22",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D2C12B2A-5E17-4FB0-945A-9D276C7C1CB8",
+        "versionEndExcluding": "9.23.1.48",
+        "versionStartIncluding": "9.23",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "4941C4C8-8178-4C9C-AF37-92FE80C18446",
+        "versionEndExcluding": "9.24.1.27",
+        "versionStartIncluding": "9.24.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:9.24.10:*:*:*:*:*:*:*",
+        "matchCriteriaId": "55397A10-5201-4F54-9640-B8F9E3903A50",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "60DFD7DE-3F86-4445-861E-43707945522E",
+        "versionEndExcluding": "7.0.11",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "BA819EC0-042F-40BD-A894-5F79FEA7A950",
+        "versionEndExcluding": "7.2.13",
+        "versionStartIncluding": "7.2.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "C52DB437-B0EE-4144-8207-46AAB05E9E6E",
+        "versionEndExcluding": "7.4.9",
+        "versionStartIncluding": "7.3.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "0AAD421F-AFB6-4544-9C69-13492E9A92D7",
+        "versionEndIncluding": "7.6.7",
+        "versionStartIncluding": "7.6.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5C2723CE-3F8A-424D-AEA9-6BEC6BA81998",
+        "versionEndExcluding": "7.7.14",
+        "versionStartIncluding": "7.7.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3050C93D-1E56-4D1B-BAB9-53862EE7E0FB",
+        "versionEndExcluding": "10.0.3",
+        "versionStartIncluding": "10.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:cisco:secure_firewall_threat_defense:10.1.0:*:*:*:*:*:*:*",
+        "matchCriteriaId": "CE4A0681-8718-4EAE-889E-57E081D6C2C6",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
   "cveTags": [],
   "descriptions": [
    {
@@ -5153,7 +5539,7 @@
    }
   ],
   "id": "CVE-2026-76418",
-  "lastModified": "2026-10-30T04:18:24.797",
+  "lastModified": "2026-10-30T10:36:01.130",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -5204,15 +5590,21 @@
   "references": [
    {
     "source": "psirt@cisco.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
     "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76418"
    }
   ],
   "sourceIdentifier": "psirt@cisco.com",
-  "vulnStatus": "Undergoing Analysis",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [
