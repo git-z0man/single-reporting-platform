@@ -5,10 +5,10 @@
   "landing_page": "https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-implementation-frequently-asked-questions",
   "factpage": "https://digital-strategy.ec.europa.eu/en/factpages/cyber-resilience-act-implementation",
   "current_version": "1.4",
-  "last_check": "2026-10-19",
+  "last_check": "2026-11-02",
   "last_change": "2026-09-04",
-  "last_attempt": "2026-10-26",
-  "last_attempt_result": "blocked — landing page and factpage HTTP 403; the version check via newsroom document/122331 ran and still showed v1.4",
+  "last_attempt": "2026-11-02",
+  "last_attempt_result": "ok",
   "draftable": {
     "base_url": "https://api.draftable.com/v1",
     "status": "unavailable",
