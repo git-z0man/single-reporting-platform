@@ -187,7 +187,9 @@ class Case(unittest.TestCase):
         self.assertEqual(r.returncode, 0, r.stderr)
         html = open(page, encoding="utf-8").read()
         self.assertNotIn("could not be drawn", html)
-        self.assertNotIn("<script", html)
+        self.assertEqual(html.count("<script"), 1)   # only the PNG converter; the charts need no JavaScript
+        self.assertIn("toBlob", html)
+        self.assertEqual(html.count("panels/01-"), 1)
         self.assertEqual(html.count('class="p"'), 27)
         self.assertEqual(html.count('<h2 class="g"'), 6)
         titles = re.findall(r'<h2><span class="tag">[^<]*</span>\d+\. (.*?)</h2>', html)

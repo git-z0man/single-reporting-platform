@@ -1,9 +1,38 @@
 // Draws the charts of euvd/stats.html into the file itself, so the page reads in viewers that run
 // no JavaScript, and writes one standalone SVG per panel into euvd/panels/ so a panel can be saved
-// or pasted elsewhere with its chart, legend and both texts together. Called by euvd/build_stats.py;
+// or pasted elsewhere with its chart, legend and both texts together, with a PNG of the same image
+// offered beside it for readers whose tools do not take SVG. Called by euvd/build_stats.py;
 // needs node and Playwright with a Chromium.
 //   node euvd/prerender.js euvd/stats.html
 const fs = require('fs'), path = require('path');
+
+// The reader's PNG, converted in the browser from the panel's SVG. A second set of images in the
+// repository would cost 2.4 MB of binary churn a day, and this costs nothing. The only script the
+// page keeps: it is added after the others are stripped, and a reader without JavaScript, or on a
+// file:// copy where the canvas is tainted, is left with the SVG link that was there anyway.
+const PNG_SCRIPT = `<script>document.querySelectorAll('p.dl a[download]').forEach(function (a) {
+  var b = document.createElement('a');
+  b.href = a.href; b.textContent = 'PNG';
+  a.after(document.createTextNode(' '), b);
+  b.onclick = function (e) {
+    e.preventDefault();
+    var im = new Image();
+    im.onerror = function () { location.href = a.href; };
+    im.onload = function () {
+      try {
+        var c = document.createElement('canvas');
+        c.width = im.naturalWidth * 2; c.height = im.naturalHeight * 2;
+        var x = c.getContext('2d'); x.scale(2, 2); x.drawImage(im, 0, 0);
+        c.toBlob(function (bl) {
+          var u = URL.createObjectURL(bl), d = document.createElement('a');
+          d.href = u; d.download = a.href.split('/').pop().replace(/\\.svg$/, '.png');
+          d.click(); URL.revokeObjectURL(u);
+        });
+      } catch (err) { location.href = a.href; }
+    };
+    im.src = a.href;
+  };
+});<\/script>`;
 let chromium;
 try { ({ chromium } = require('playwright')); } catch (e) { console.error('playwright not installed'); process.exit(3); }
 
@@ -98,9 +127,10 @@ function exportPanels() {
       console.log(`panel images: ${files.length}`);
     } catch (e) { console.error('panel images skipped: ' + String(e).slice(0, 200)); }
     await page.evaluate(() => {
-      document.getElementById('mode').textContent = 'This page is pre-rendered: the charts are drawn into the file, so it needs no JavaScript. Hover a bar or dot for its value where your viewer supports it. Each panel can be saved on its own as an image.';
+      document.getElementById('mode').textContent = 'This page is pre-rendered: the charts are drawn into the file, so it needs no JavaScript. Hover a bar or dot for its value where your viewer supports it. Each panel can be saved on its own as an image: SVG always, PNG where the browser runs JavaScript.';
       document.querySelectorAll('script').forEach(s => s.remove());
     });
-    fs.writeFileSync(file, '<!doctype html>\n' + await page.evaluate(() => document.documentElement.outerHTML) + '\n');
+    const html = await page.evaluate(() => document.documentElement.outerHTML);
+    fs.writeFileSync(file, '<!doctype html>\n' + html.replace('</body>', PNG_SCRIPT + '</body>') + '\n');
   } finally { await browser.close(); }
 })().catch(e => { console.error(String(e)); process.exit(5); });
