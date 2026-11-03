@@ -54,7 +54,7 @@ trig_012AzfKXKrPnRCEjXXYWBgY4  Commission FAQ     0 5 * * 1
 trig_01SB5rkv7M4VXgtRtNzPeNYD  Guide sync         30 7 * * *
 ```
 
-Red is: `enabled` false, a cron that differs from this table, `last_run.status` not SUCCEEDED, or a run whose own result says it could not do its work. A run that succeeded and committed nothing is **not** red — that is the daily-rhythm rule working. If the tool is unavailable, say so in one line and judge by section 1 alone.
+Red is: `enabled` false, a cron that differs from this table, `last_run.status` not SUCCEEDED, or a run whose own result says it could not do its work. A run that succeeded and committed nothing is **not** red — that is the daily-rhythm rule working. If the tool is unavailable - which it often is - judge by section 1 alone. That alone is never a reason to break the silence of section 7: the heartbeats are the signal that matters, and a daily line saying a tool was missing would train you to ignore the report.
 
 ## 3. Repair
 
