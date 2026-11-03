@@ -1,6 +1,7 @@
 # Repository watch
 
-- **Trigger**: `trig_0143wWwXFLDgzSDLs539xs1W`, created 2026-11-03 with the repository already attached as source and outcome
+- **Trigger**: `trig_01NFjrqErTyJ3muZ6nhqsJ2j`, created 2026-11-03 with the repository already attached as source and outcome
+- **Connectors**: none. A Routine created through the HTTP API gets every connector of the account attached; this one was cleared afterwards - see "Connectors come attached" in `routines/README.md`. The first attempt, `trig_0143wWwXFLDgzSDLs539xs1W`, is disabled and renamed, waiting to be deleted in the Routines UI.
 - **Schedule**: `20 8 * * *` (daily, 08:20 UTC — after the last of the six routines, Guide sync at 07:30)
 - **Writes**: nothing of its own. It commits under the scope of the routine it is repairing, and opens its own pull requests for fixes to `tools/`, `euvd/*.py`, `srp-domains/check.sh` and the like. What it may merge by itself is in `CLAUDE.md`, "Repository watch routine".
 - **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt.

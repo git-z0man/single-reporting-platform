@@ -19,7 +19,7 @@ says which of the two it is.
 | `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
 | `guide-sync.md` | **Guide sync** | `trig_01SB5rkv7M4VXgtRtNzPeNYD` | `30 7 * * *` |
 | `euvd-exploited-monitor.md` | **EUVD exploited monitor** | `trig_01Sfn7X2MMSSdBDZv9v51Z1D` | `50 4 * * *` |
-| `repo-watch.md` | **SRP repo watch (daily)** | `trig_0143wWwXFLDgzSDLs539xs1W` | `20 8 * * *` |
+| `repo-watch.md` | **SRP repo watch (daily)** | `trig_01NFjrqErTyJ3muZ6nhqsJ2j` | `20 8 * * *` |
 
 The UI name and the file name differ for the first one: an attempt to rename it
 to "ENISA SRP pages monitor" was refused along with the prompt update (see
@@ -413,3 +413,33 @@ EUVD monitor — `POST /v1/code/triggers` accepts the full `session_request`,
 which `create_trigger` does not. No manual attach step was needed. Nothing is
 armed until `routines/repo-watch.md` is on `main`: the loader stops at step 4
 while the file is missing.
+
+## Connectors come attached, and only an update removes them
+
+A Routine created with `POST /v1/code/triggers` gets **every connector of the
+account** attached — Spotify, Suno, Rome2Rio, Notion, Drive and the rest —
+whether or not it could ever need them. Routines created through the agent tool
+(`create_trigger`, `meta_mcp`) get none, which is why the six monitors show an
+empty list and the repository watch did not.
+
+`mcp_connections: []` in the create body is ignored, and so is the same field in
+an update. What works is a separate flag on the update:
+
+```
+POST /v1/code/triggers/{id}   {"clear_mcp_connections": true}
+```
+
+Read the Routine back afterwards: `mcp_connections` must be `[]`. A partial
+`session_request` in an update is rejected (`session_request.worker: Field
+required`), so clear connectors with that flag alone, not as part of a larger
+body.
+
+Found on 2026-11-03, when the repository watch was created through the API to
+get its sources and outcomes set in one call — which `create_trigger` cannot do.
+The trade is worth knowing: the API sets the repository and attaches every
+connector; the agent tool attaches no connector and no repository. Either way
+one follow-up call or one click in the UI is needed.
+
+There is no delete in the API tool. The first attempt at the watch,
+`trig_0143wWwXFLDgzSDLs539xs1W`, is disabled and renamed "… alt, ersetzt am
+3.11.2026, bitte loeschen"; deleting it is a click in the Routines UI.
