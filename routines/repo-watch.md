@@ -1,7 +1,7 @@
 # Repository watch
 
 - **Trigger**: `trig_01NFjrqErTyJ3muZ6nhqsJ2j`, created 2026-11-03 with the repository already attached as source and outcome
-- **Connectors**: none. A Routine created through the HTTP API gets every connector of the account attached; this one was cleared afterwards - see "Connectors come attached" in `routines/README.md`. The first attempt, `trig_0143wWwXFLDgzSDLs539xs1W`, is disabled and renamed, waiting to be deleted in the Routines UI.
+- **Connectors**: none. A Routine created through the HTTP API gets every connector of the account attached; this one was cleared afterwards - see "Connectors come attached" in `routines/README.md`. The first attempt, `trig_0143wWwXFLDgzSDLs539xs1W`, was deleted by the owner on 2026-11-03.
 - **Schedule**: `20 8 * * *` (daily, 08:20 UTC — after the last of the six routines, Guide sync at 07:30)
 - **Writes**: nothing of its own. It commits under the scope of the routine it is repairing, and opens its own pull requests for fixes to `tools/`, `euvd/*.py`, `srp-domains/check.sh` and the like. What it may merge by itself is in `CLAUDE.md`, "Repository watch routine".
 - **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt.
@@ -54,7 +54,7 @@ trig_012AzfKXKrPnRCEjXXYWBgY4  Commission FAQ     0 5 * * 1
 trig_01SB5rkv7M4VXgtRtNzPeNYD  Guide sync         30 7 * * *
 ```
 
-Red is: `enabled` false, a cron that differs from this table, `last_run.status` not SUCCEEDED, or a run whose own result says it could not do its work. A run that succeeded and committed nothing is **not** red — that is the daily-rhythm rule working. If the tool is unavailable, say so in one line and judge by section 1 alone.
+Red is: `enabled` false, a cron that differs from this table, `last_run.status` not SUCCEEDED, or a run whose own result says it could not do its work. A run that succeeded and committed nothing is **not** red — that is the daily-rhythm rule working. If the tool is unavailable - which it often is - judge by section 1 alone. That alone is never a reason to break the silence of section 7: the heartbeats are the signal that matters, and a daily line saying a tool was missing would train you to ignore the report.
 
 ## 3. Repair
 

@@ -440,6 +440,8 @@ The trade is worth knowing: the API sets the repository and attaches every
 connector; the agent tool attaches no connector and no repository. Either way
 one follow-up call or one click in the UI is needed.
 
-There is no delete in the API tool. The first attempt at the watch,
-`trig_0143wWwXFLDgzSDLs539xs1W`, is disabled and renamed "… alt, ersetzt am
-3.11.2026, bitte loeschen"; deleting it is a click in the Routines UI.
+There is no delete in the API tool, so an agent can only disable a Routine and
+rename it. The first attempt at the watch, `trig_0143wWwXFLDgzSDLs539xs1W`, was
+disabled and renamed that way and the owner deleted it in the Routines UI on
+2026-11-03. Anything an agent replaces this way needs that one click, or the
+account collects disabled duplicates.
