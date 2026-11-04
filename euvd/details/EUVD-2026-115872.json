@@ -1,0 +1,309 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-118527"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-118527",
+  "cwes": [
+   "CWE-340"
+  ],
+  "dateAdded": "2026-10-30",
+  "dueDate": "2026-11-13",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-118527",
+  "product": "Connect Secure",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-111357.",
+  "vendorProject": "Ivanti",
+  "vulnerabilityName": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-118527\nGHSA-4hjv-6c7p-cpmq\n",
+  "assigner": "ivanti",
+  "baseScore": 4.3,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 3, 2026, 2:53:28 PM",
+  "dateUpdated": "Nov 3, 2026, 3:32:56 PM",
+  "description": "Use of predictable filenames in Ivanti Connect Secure before versions 25.1.1.3 and 22.8R2.6 allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "c019c81b-e5cf-3b1a-8283-53c51e906cdd",
+    "product": {
+     "name": "Connect Secure",
+     "vendor": {
+      "name": "Ivanti"
+     }
+    },
+    "product_version": "patch: 22.8R2.6"
+   },
+   {
+    "id": "c7abfb2e-0add-3b19-afd0-4c6e8d6c5d18",
+    "product": {
+     "name": "Connect Secure",
+     "vendor": {
+      "name": "Ivanti"
+     }
+    },
+    "product_version": "patch: 25.1.1.3"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "f5c0597d-bef7-3b3e-8f32-558e14c79e28",
+    "vendor": {
+     "name": "Ivanti"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "6bbc844e-b734-36d1-8859-a32a8ddac4d7",
+    "vulnerability": {
+     "assigner": "ivanti",
+     "baseScore": 4.3,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 4, 2026, 6:00:17 AM",
+     "datePublished": "Nov 3, 2026, 2:53:28 PM",
+     "dateUpdated": "Nov 3, 2026, 3:32:56 PM",
+     "description": "Use of predictable filenames in Ivanti Connect Secure before versions 25.1.1.3 and 22.8R2.6 allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk.",
+     "enisa_id": "EUVD-2026-115872\n",
+     "epss": 0.0,
+     "exploitedSince": "Oct 30, 2026, 12:00:00 AM",
+     "id": "CVE-2026-118527",
+     "references": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "4e9b8318-c94f-3a58-8a3b-d9c488109ce8",
+       "product": {
+        "name": "Connect Secure",
+        "vendor": {
+         "name": "Ivanti"
+        }
+       },
+       "product_version": "patch: 25.1.1.3"
+      },
+      {
+       "id": "b65e1780-fa4e-3f4c-8d78-721be81ff495",
+       "product": {
+        "name": "Connect Secure",
+        "vendor": {
+         "name": "Ivanti"
+        }
+       },
+       "product_version": "patch: 22.8R2.6"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "982b9a14-6636-3937-9886-0ac188a736c1",
+       "vendor": {
+        "name": "Ivanti"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "c05629af-bd0f-3756-80f7-6a521adb2875",
+    "vulnerability": {
+     "aliases": "CVE-2026-118527\nGHSA-4hjv-6c7p-cpmq\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 4, 2026, 6:00:45 AM",
+     "datePublished": "Nov 3, 2026, 3:31:56 PM",
+     "dateUpdated": "Nov 3, 2026, 6:31:00 PM",
+     "description": "Use of predictable filenames in Ivanti Connect Secure before versions 25.1.1.3 and 22.8R2.6 allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk.",
+     "enisa_id": "EUVD-2026-115872\n",
+     "epss": 0.0,
+     "id": "GHSA-4hjv-6c7p-cpmq",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-118527\nhttps://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-118527\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "c256b92c-a8eb-32ba-a4e3-c90b2c5da248",
+  "epss": 0.0,
+  "exploitedSince": "Oct 30, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-115872",
+  "references": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-115872",
+ "kev_sources": [
+  {
+   "dateAdded": "Oct 30, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "affected",
+      "product": "Connect Secure",
+      "vendor": "Ivanti",
+      "versions": [
+       {
+        "status": "unaffected",
+        "version": "25.1.1.3"
+       },
+       {
+        "status": "unaffected",
+        "version": "22.8R2.6"
+       }
+      ]
+     }
+    ],
+    "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75"
+   }
+  ],
+  "cisaActionDue": "2026-11-13",
+  "cisaExploitAdd": "2026-10-30",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:ivanti:connect_secure:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B04FDDB3-6879-4C9B-AB2D-6A54884797E0",
+        "versionEndExcluding": "25.1.1.3",
+        "versionStartIncluding": "25.1.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2:*:*:*:*:*:*",
+        "matchCriteriaId": "56FEC223-8FF7-4A05-9577-CFFE0AA6526C",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.1:*:*:*:*:*:*",
+        "matchCriteriaId": "5569D323-6ADF-4B16-822D-FBA6760356C3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.2:*:*:*:*:*:*",
+        "matchCriteriaId": "FF4D400F-49DA-4C5F-8F63-5A15738360AE",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.3:*:*:*:*:*:*",
+        "matchCriteriaId": "9CA7EF35-D0BC-4714-A38A-91660BE1BA55",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.4:*:*:*:*:*:*",
+        "matchCriteriaId": "F22EC396-A447-4175-8A30-C8DC10ACFFE9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:ivanti:connect_secure:22.8:r2.5:*:*:*:*:*:*",
+        "matchCriteriaId": "8B173211-BFCF-40E7-8651-4E8C4CEFAFFF",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Use of predictable filenames in Ivanti Connect Secure before versions 25.1.1.3 and 22.8R2.6 allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk."
+   }
+  ],
+  "id": "CVE-2026-118527",
+  "lastModified": "2026-11-03T17:48:12.873",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 4.3,
+      "baseSeverity": "MEDIUM",
+      "confidentialityImpact": "NONE",
+      "integrityImpact": "LOW",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 1.4,
+     "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-118527",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-03T15:32:15.250213Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-03T15:17:24.920",
+  "references": [
+   {
+    "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-118527"
+   }
+  ],
+  "sourceIdentifier": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-340"
+     }
+    ],
+    "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

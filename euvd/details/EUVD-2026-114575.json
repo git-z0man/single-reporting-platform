@@ -1,0 +1,888 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-119977"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-119977",
+  "cwes": [
+   "CWE-367"
+  ],
+  "dateAdded": "2026-11-03",
+  "dueDate": "2026-11-06",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://wordpress.org/news/2026/10/wordpress-7-1-4 ; https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-core/wordpress-core-470-713-unauthenticated-upgrade-window-staged-installer-remote-code-execution ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-119977",
+  "product": "WordPress Core",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
+  "vendorProject": "WordPress",
+  "vulnerabilityName": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-119977\nGHSA-p6jj-qrp3-7m4g\n",
+  "assigner": "Wordfence",
+  "baseScore": 8.1,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Oct 31, 2026, 5:33:07 AM",
+  "dateUpdated": "Nov 3, 2026, 8:58:23 PM",
+  "description": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgrade window.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "09b43cf0-8e88-37e2-b3e4-f0f670af32d1",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "5.4.0 ≤5.4.24"
+   },
+   {
+    "id": "11b259c0-2b30-34bc-a5a6-070c5ef8df65",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "5.2.0 ≤5.2.29"
+   },
+   {
+    "id": "138e8ba2-3ba8-3c3e-99bf-5635c7779b57",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "4.9.0 ≤4.9.34"
+   },
+   {
+    "id": "19d2e395-7fd7-3e14-827a-6a4606a22b6f",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "5.5.0 ≤5.5.23"
+   },
+   {
+    "id": "26b245cf-d3e7-373a-9f35-890c4b7b71c0",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.6.0 ≤6.6.10"
+   },
+   {
+    "id": "39d5ec6b-841b-3af6-a4fd-0aa678ec29ae",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "5.8.0 ≤5.8.18"
+   },
+   {
+    "id": "3d929c24-d441-3126-adbb-5c7c3eabd171",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.3.0 ≤6.3.13"
+   },
+   {
+    "id": "50b4387e-9383-33cb-85ee-dfc7b2fa0fa5",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.2.0 ≤6.2.14"
+   },
+   {
+    "id": "5ece1f10-01ba-3257-8d00-814cdbdfb6b4",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "4.8.0 ≤4.8.33"
+   },
+   {
+    "id": "6c499e3b-66cf-33d6-b9d3-e4930117e436",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "5.3.0 ≤5.3.26"
+   },
+   {
+    "id": "7b077cf3-e0ad-3189-9221-308c1c5c40e7",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "7.1.0 ≤7.1.3"
+   },
+   {
+    "id": "83c0c2d3-6ccc-3512-a9d0-12a70eb318fa",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.8.0 ≤6.8.11"
+   },
+   {
+    "id": "85903af7-88a2-36ee-929d-d22f0bd191f5",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "5.1.0 ≤5.1.27"
+   },
+   {
+    "id": "99496d02-4218-3641-8f92-537befdb3487",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.4.0 ≤6.4.13"
+   },
+   {
+    "id": "99c7cc9c-98af-3971-ba73-6c489b95d701",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "4.7.0 ≤4.7.38"
+   },
+   {
+    "id": "9c7ec2b0-5f24-3bb6-95cb-d9b93c3ba7c0",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.7.0 ≤6.7.10"
+   },
+   {
+    "id": "a2170863-5630-35cc-be1b-4a2264dcd01d",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "5.0.0 ≤5.0.30"
+   },
+   {
+    "id": "a2db79bb-efb7-33b4-b055-19a124d6e923",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.0.0 ≤6.0.17"
+   },
+   {
+    "id": "a3d18074-941b-3e23-a61c-248d87457d89",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.9.0 ≤6.9.10"
+   },
+   {
+    "id": "b8613c17-5db3-3dd5-a495-9791cb6aa4d3",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "5.6.0 ≤5.6.22"
+   },
+   {
+    "id": "bff54932-b9cb-399b-a7a8-5b27c6311566",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.5.0 ≤6.5.13"
+   },
+   {
+    "id": "c479339b-23a5-3455-858e-2d2c2c1ecf0b",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "5.7.0 ≤5.7.20"
+   },
+   {
+    "id": "eace5fe0-44e8-3136-8da3-2acec54b1313",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "6.1.0 ≤6.1.15"
+   },
+   {
+    "id": "f86dd2be-37aa-311d-bac8-83969ea3804b",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "5.9.0 ≤5.9.19"
+   },
+   {
+    "id": "facd4c25-2860-3f09-9799-e4a815e11240",
+    "product": {
+     "name": "WordPress",
+     "vendor": {
+      "name": "WordPress Foundation"
+     }
+    },
+    "product_version": "7.0.0 ≤7.0.7"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "6cb1c1b5-1508-3720-98b9-7d76bb8221fa",
+    "vendor": {
+     "name": "WordPress Foundation"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "5cd00dc6-7563-39c9-a7c4-e16443d4f5ed",
+    "vulnerability": {
+     "aliases": "GHSA-p6jj-qrp3-7m4g\nCVE-2026-119977\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 4, 2026, 6:00:45 AM",
+     "datePublished": "Oct 31, 2026, 6:30:28 AM",
+     "dateUpdated": "Nov 3, 2026, 9:31:57 PM",
+     "description": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgrade window.",
+     "enisa_id": "EUVD-2026-114575\n",
+     "epss": 0.0,
+     "id": "GHSA-p6jj-qrp3-7m4g",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-119977\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-core-upgrader.php#L162\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-wp-upgrader.php#L378\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/update-core.php#L1549\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/setup-config.php#L282\nhttps://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/class-wp-upgrader.php#L346\nhttps://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/update-core.php#L1545\nhttps://wordpress.org/news/2026/10/wordpress-7-1-4\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-119977\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/4b4da0cf-d9f4-47c4-a0e8-6c4dc5a6f250?source=cve\nhttps://www.wordfence.com/threat-intel/vulnerabilities/wordpress-core/wordpress-core-470-713-unauthenticated-upgrade-window-staged-installer-remote-code-execution\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "b491a67c-c53d-3c3a-94de-0a19bf5e6be6",
+    "vulnerability": {
+     "assigner": "Wordfence",
+     "baseScore": 8.1,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 4, 2026, 6:00:09 AM",
+     "datePublished": "Oct 31, 2026, 5:33:07 AM",
+     "dateUpdated": "Nov 3, 2026, 8:58:23 PM",
+     "description": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgrade window.",
+     "enisa_id": "EUVD-2026-114575\n",
+     "epss": 0.6,
+     "exploitedSince": "Nov 3, 2026, 12:00:00 AM",
+     "id": "CVE-2026-119977",
+     "references": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4b4da0cf-d9f4-47c4-a0e8-6c4dc5a6f250?source=cve\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-wp-upgrader.php#L378\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-core-upgrader.php#L162\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/update-core.php#L1549\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/setup-config.php#L282\nhttps://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/class-wp-upgrader.php#L346\nhttps://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/update-core.php#L1545\nhttps://wordpress.org/news/2026/10/wordpress-7-1-4/\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "110bb30c-9e3d-33c1-a6d7-bf99d0f4a1ef",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "5.2.0 ≤5.2.29"
+      },
+      {
+       "id": "1ed03d14-c41c-37c1-8db7-e40312f2fda8",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.6.0 ≤6.6.10"
+      },
+      {
+       "id": "1fccc7d9-2b60-3bf8-a637-163f095a6b48",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "7.0.0 ≤7.0.7"
+      },
+      {
+       "id": "2deb04c8-fe00-3eed-a63b-0745c5236362",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.8.0 ≤6.8.11"
+      },
+      {
+       "id": "3a11ec5b-8b39-3c62-a8e5-3f1670551341",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "5.7.0 ≤5.7.20"
+      },
+      {
+       "id": "3bd991aa-2025-34a8-8755-d3a0a33a885b",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "5.4.0 ≤5.4.24"
+      },
+      {
+       "id": "44c38a58-9d50-35ab-8b82-b242d6b5df9a",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "5.8.0 ≤5.8.18"
+      },
+      {
+       "id": "4955dec3-693d-3982-bba2-a4074c0c4c18",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.4.0 ≤6.4.13"
+      },
+      {
+       "id": "591d0b7c-97fc-39f2-a6ba-76f18917a04a",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.0.0 ≤6.0.17"
+      },
+      {
+       "id": "5d95ad07-8767-374b-ae39-6be04586441b",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.3.0 ≤6.3.13"
+      },
+      {
+       "id": "6730abb0-3418-3cc1-bc4e-4e1d7669e1d9",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.7.0 ≤6.7.10"
+      },
+      {
+       "id": "674e5049-c6fc-3214-9bc4-7a9bf3e5629b",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "5.1.0 ≤5.1.27"
+      },
+      {
+       "id": "76fb8632-0c93-31db-9844-f881d93f2691",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "4.8.0 ≤4.8.33"
+      },
+      {
+       "id": "7875f917-0782-367a-9ec1-1ac6c4666b4d",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "4.9.0 ≤4.9.34"
+      },
+      {
+       "id": "8c4bb4d0-d5c6-3330-8d7e-db1c2cf35769",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.2.0 ≤6.2.14"
+      },
+      {
+       "id": "96be55ac-b2fb-362e-868c-911cf89924f9",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "5.3.0 ≤5.3.26"
+      },
+      {
+       "id": "9e4a6a62-29d0-365c-bcfa-6ff665551b8b",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "5.0.0 ≤5.0.30"
+      },
+      {
+       "id": "9e5535ce-bfd6-32d2-bf83-1ac6aa324e8f",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.1.0 ≤6.1.15"
+      },
+      {
+       "id": "af5f585d-8158-39ae-9be6-7b9f6264807f",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.9.0 ≤6.9.10"
+      },
+      {
+       "id": "bac5690d-f519-3e49-8e44-e89081782620",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "5.9.0 ≤5.9.19"
+      },
+      {
+       "id": "c28854ba-9002-3771-a6d5-933b7417caea",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "7.1.0 ≤7.1.3"
+      },
+      {
+       "id": "c854ab90-663e-38df-a8b7-131c28467121",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "5.5.0 ≤5.5.23"
+      },
+      {
+       "id": "e66d190f-0106-37a5-928d-c784b000fa28",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "5.6.0 ≤5.6.22"
+      },
+      {
+       "id": "f4e714f7-bf82-3f22-b4fb-5bd71963a434",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "6.5.0 ≤6.5.13"
+      },
+      {
+       "id": "f9a9ab5e-db03-3b1a-a1d6-f043c3c4f23b",
+       "product": {
+        "name": "WordPress",
+        "vendor": {
+         "name": "WordPress Foundation"
+        }
+       },
+       "product_version": "4.7.0 ≤4.7.38"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "cfab6258-736d-32b0-819f-101909b765cd",
+       "vendor": {
+        "name": "WordPress Foundation"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "4f41dc2f-a493-377d-8d60-52af8021860b",
+  "epss": 0.6,
+  "exploitedSince": "Nov 3, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-114575",
+  "references": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4b4da0cf-d9f4-47c4-a0e8-6c4dc5a6f250?source=cve\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-wp-upgrader.php#L378\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-core-upgrader.php#L162\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/update-core.php#L1549\nhttps://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/setup-config.php#L282\nhttps://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/class-wp-upgrader.php#L346\nhttps://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/update-core.php#L1545\nhttps://wordpress.org/news/2026/10/wordpress-7-1-4/\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-114575",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 3, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "WordPress",
+      "vendor": "WordPress Foundation",
+      "versions": [
+       {
+        "lessThanOrEqual": "4.7.38",
+        "status": "affected",
+        "version": "4.7.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "4.8.33",
+        "status": "affected",
+        "version": "4.8.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "4.9.34",
+        "status": "affected",
+        "version": "4.9.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "5.0.30",
+        "status": "affected",
+        "version": "5.0.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "5.1.27",
+        "status": "affected",
+        "version": "5.1.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "5.2.29",
+        "status": "affected",
+        "version": "5.2.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "5.3.26",
+        "status": "affected",
+        "version": "5.3.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "5.4.24",
+        "status": "affected",
+        "version": "5.4.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "5.5.23",
+        "status": "affected",
+        "version": "5.5.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "5.6.22",
+        "status": "affected",
+        "version": "5.6.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "5.7.20",
+        "status": "affected",
+        "version": "5.7.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "5.8.18",
+        "status": "affected",
+        "version": "5.8.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "5.9.19",
+        "status": "affected",
+        "version": "5.9.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "6.0.17",
+        "status": "affected",
+        "version": "6.0.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "6.1.15",
+        "status": "affected",
+        "version": "6.1.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "6.2.14",
+        "status": "affected",
+        "version": "6.2.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "6.3.13",
+        "status": "affected",
+        "version": "6.3.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "6.4.13",
+        "status": "affected",
+        "version": "6.4.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "6.5.13",
+        "status": "affected",
+        "version": "6.5.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "6.6.10",
+        "status": "affected",
+        "version": "6.6.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "6.7.10",
+        "status": "affected",
+        "version": "6.7.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "6.8.11",
+        "status": "affected",
+        "version": "6.8.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "6.9.10",
+        "status": "affected",
+        "version": "6.9.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.0.7",
+        "status": "affected",
+        "version": "7.0.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThanOrEqual": "7.1.3",
+        "status": "affected",
+        "version": "7.1.0",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "security@wordfence.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-06",
+  "cisaExploitAdd": "2026-11-03",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgrade window."
+   }
+  ],
+  "id": "CVE-2026-119977",
+  "lastModified": "2026-11-03T21:45:31.220",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.1,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.2,
+     "impactScore": 5.9,
+     "source": "security@wordfence.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-119977",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-03T20:50:05.434105Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-31T06:16:34.550",
+  "references": [
+   {
+    "source": "security@wordfence.com",
+    "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-core-upgrader.php#L162"
+   },
+   {
+    "source": "security@wordfence.com",
+    "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-wp-upgrader.php#L378"
+   },
+   {
+    "source": "security@wordfence.com",
+    "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/update-core.php#L1549"
+   },
+   {
+    "source": "security@wordfence.com",
+    "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/setup-config.php#L282"
+   },
+   {
+    "source": "security@wordfence.com",
+    "url": "https://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/class-wp-upgrader.php#L346"
+   },
+   {
+    "source": "security@wordfence.com",
+    "url": "https://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/update-core.php#L1545"
+   },
+   {
+    "source": "security@wordfence.com",
+    "url": "https://wordpress.org/news/2026/10/wordpress-7-1-4/"
+   },
+   {
+    "source": "security@wordfence.com",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4b4da0cf-d9f4-47c4-a0e8-6c4dc5a6f250?source=cve"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-119977"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-core/wordpress-core-470-713-unauthenticated-upgrade-window-staged-installer-remote-code-execution"
+   }
+  ],
+  "sourceIdentifier": "security@wordfence.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-367"
+     }
+    ],
+    "source": "security@wordfence.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
