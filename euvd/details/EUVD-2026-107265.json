@@ -32,7 +32,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 21, 2026, 1:54:43 PM",
-  "dateUpdated": "Oct 30, 2026, 6:31:36 PM",
+  "dateUpdated": "Nov 4, 2026, 5:47:40 PM",
   "description": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
   "enisaIdAdvisory": [
    {
@@ -18369,7 +18369,7 @@
      "aliases": "CVE-2023-54404\nCVE-2025-62718\nCVE-2026-8643\nCVE-2026-9496\nCVE-2026-12185\nCVE-2026-13697\nCVE-2026-14682\nCVE-2026-15076\nCVE-2026-16308\nCVE-2026-17106\nCVE-2026-18427\nCVE-2026-19203\nCVE-2026-19534\nCVE-2026-39820\nCVE-2026-41178\nCVE-2026-41707\nCVE-2026-42499\nCVE-2026-42502\nCVE-2026-45416\nCVE-2026-47884\nCVE-2026-47886\nCVE-2026-47888\nCVE-2026-47890\nCVE-2026-47892\nCVE-2026-50010\nCVE-2026-55831\nCVE-2026-55833\nCVE-2026-55851\nCVE-2026-56745\nCVE-2026-56746\nCVE-2026-56819\nCVE-2026-56852\nCVE-2026-56854\nCVE-2026-58062\nCVE-2026-59280\nCVE-2026-59282\nCVE-2026-59283\nCVE-2026-59296\nCVE-2026-59313\nCVE-2026-59323\nCVE-2026-59651\nCVE-2026-59887\nCVE-2026-59899\nCVE-2026-59901\nCVE-2026-62243\nCVE-2026-64607\nCVE-2026-67213\nCVE-2026-67312\nCVE-2026-67313\nCVE-2026-67314\nCVE-2026-67320\nCVE-2026-67321\nCVE-2026-68494\nCVE-2026-68497\nCVE-2026-69152\nCVE-2026-69192\nCVE-2026-71290\nCVE-2026-71324\nCVE-2026-71325\nCVE-2026-71327\nCVE-2026-73500\nCVE-2026-73508\nCVE-2026-74835\nCVE-2026-75838\nCVE-2026-75899\nCVE-2026-75931\nCVE-2026-76169\nCVE-2026-81521\nCVE-2026-82417\nCVE-2026-82562\nCVE-2026-84292\nCVE-2026-84375\nCVE-2026-84394\nCVE-2026-84428\nCVE-2026-84445\nCVE-2026-84469\nCVE-2026-84504\nCVE-2026-84961\nCVE-2026-85062\nCVE-2026-85124\nCVE-2026-85152\nCVE-2026-85595\nCVE-2026-85597\nCVE-2026-86063\nCVE-2026-87743\nCVE-2026-88004\nCVE-2026-88007\nCVE-2026-88008\nCVE-2026-88009\nCVE-2026-88011\nCVE-2026-88012\nCVE-2026-88031\nCVE-2026-88878\nCVE-2026-88879\nCVE-2026-90711\nCVE-2026-93749\nCVE-2026-100655\nCVE-2026-100656\nCVE-2026-100666\nCVE-2026-101916\nCVE-2026-102925\nCVE-2026-102930\nCVE-2026-103435\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 2:24:21 PM",
-     "dateUpdated": "Oct 31, 2026, 4:09:23 AM",
+     "dateUpdated": "Nov 3, 2026, 9:11:40 PM",
      "description": "Red Hat Security Advisory: Red Hat OpenShift Dev Spaces 3.31.0 Release.",
      "id": "RHSA-2026:90321",
      "references": "https://access.redhat.com/errata/RHSA-2026:90321\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90321.json\n",
@@ -43861,11 +43861,29 @@
        }
       },
       {
+       "id": "132426a2-174a-3967-9738-19f2ebddd58e",
+       "product": {
+        "name": "Pathway to Learning Engineering",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "13faa8ba-ecc5-3d83-883c-25511b562e6c",
        "product": {
         "name": "Polarion",
         "vendor": {
          "name": "Siemens AG"
+        }
+       }
+      },
+      {
+       "id": "1833bba9-7659-3759-b006-71317b6c6535",
+       "product": {
+        "name": "Teamcenter Share",
+        "vendor": {
+         "name": "Siemens"
         }
        }
       },
@@ -44005,6 +44023,15 @@
        }
       },
       {
+       "id": "7d2dc217-ed6c-37c1-9342-1f2a23cec7ed",
+       "product": {
+        "name": "Opcenter Execution Pharma",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "7d62385d-9795-3ffb-b792-1063cd30a195",
        "product": {
         "name": "Simcenter Simlab",
@@ -44113,6 +44140,15 @@
        }
       },
       {
+       "id": "c75ba020-8bae-3902-9731-7e732ea0105f",
+       "product": {
+        "name": "Designcenter X Essentials",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "cf8de197-2381-36de-898a-eb6c292dc596",
        "product": {
         "name": "PADS Pro Essentials",
@@ -44206,7 +44242,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 28, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 3, 2026, 12:00:00 AM",
      "description": "SSA-566435: PHP2Shell Vulnerabilities in Siemens Software Products",
      "id": "SSA-566435",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-566435.json\n",
@@ -46644,6 +46680,15 @@
        }
       },
       {
+       "id": "65ad10d8-b1a1-376d-bebf-1321382c38cb",
+       "product": {
+        "name": "SUSE Liberty Linux 9.6 EMS",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
        "id": "65bb6227-b3a5-3331-a363-980f87993169",
        "product": {
         "name": "php-dbg-0:8.3.19-1.module+el9.6.0+25160+f8b750a4.3.s390x::php:8.3",
@@ -48104,16 +48149,16 @@
      ],
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 26, 2026, 8:43:00 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:45 PM",
-     "description": "Red Hat Security Advisory: php:8.3 security update",
+     "datePublished": "Oct 26, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 1, 2026, 10:25:31 AM",
+     "description": "security update for php",
      "id": "RHSA-2026:89111",
-     "references": "https://access.redhat.com/errata/RHSA-2026:89111\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_89111.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_89111.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008440.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008440.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for the php:8.3 module is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php"
     },
     "id": "f72b06de-41f1-3de1-9664-12ad478f2b92"
    }
@@ -48176,9 +48221,9 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 31, 2026, 3:00:31 PM",
+     "dataProcessed": "Nov 5, 2026, 6:00:12 AM",
      "datePublished": "Oct 21, 2026, 1:54:43 PM",
-     "dateUpdated": "Oct 30, 2026, 6:31:36 PM",
+     "dateUpdated": "Nov 4, 2026, 5:47:40 PM",
      "description": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
      "enisa_id": "EUVD-2026-107265\n",
      "epss": 100.0,
@@ -48369,6 +48414,19 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "Designcenter X Essentials",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "DFMExpress",
       "vendor": "Siemens",
       "versions": [
@@ -48447,6 +48505,19 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "Opcenter Execution Discrete",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "Opcenter Execution Foundation",
       "vendor": "Siemens",
       "versions": [
@@ -48461,6 +48532,19 @@
      {
       "defaultStatus": "unknown",
       "product": "Opcenter Execution Pharma",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter Execution Process",
       "vendor": "Siemens",
       "versions": [
        {
@@ -48616,6 +48700,19 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "Pathway to Learning Engineering",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "Polarion",
       "vendor": "Siemens",
       "versions": [
@@ -48747,6 +48844,19 @@
      {
       "defaultStatus": "unknown",
       "product": "Teamcenter Product Cost Management",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Teamcenter Share",
       "vendor": "Siemens",
       "versions": [
        {
@@ -50707,6 +50817,125 @@
      }
     ],
     "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:siemens:amis_ts:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "99E7DE5D-421E-4537-834B-E76E370DA202",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:siemens:blueplanet_360_nx3_m6_wm_od_iisx-s_firmware:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F087AAC6-F14D-4C22-8437-2372677D8BDE",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:siemens:blueplanet_360_nx3_m6_wm_od_iisx-s:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B7A6B581-C514-4E07-ABCD-FDE1399C11B7",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:siemens:energy_engage:2.0:service_pack9:*:*:*:*:*:*",
+        "matchCriteriaId": "D09A129E-0EFD-46D1-9991-66803604FC5E",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:energy_engage:3.1:service_pack1:*:*:*:*:*:*",
+        "matchCriteriaId": "3C71DADE-DA90-43B8-ADA7-1A396A7034E7",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:siemens:spectrum_power_3:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5DB3EB0B-E784-4CC2-A055-AC13F8E84FC8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:spectrum_power_4:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3D40B786-1DB0-444A-86F5-C4C8785E1DE7",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:spectrum_power_7:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "24683BF6-BEE0-48E6-92C6-89B20569FE92",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:spectrum_power_tg:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "C257A2CE-2F13-491D-A993-0C4F19F8720E",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:siemens:blueplanet_360_nx3_m6_wm_od_iisx_firmware:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F595238B-DADB-47C6-A080-0ED08C2AD8AB",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:siemens:blueplanet_360_nx3_m6_wm_od_iisx:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3B340780-E6A9-4FB0-A131-B177CC1F0C1E",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
    }
   ],
   "cveTags": [],
@@ -50721,7 +50950,7 @@
    }
   ],
   "id": "CVE-2026-109619",
-  "lastModified": "2026-10-30T19:18:07.753",
+  "lastModified": "2026-11-04T18:17:37.170",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -50919,10 +51148,16 @@
    },
    {
     "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html"
    },
    {
     "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html"
    },
    {
@@ -50955,7 +51190,7 @@
    }
   ],
   "sourceIdentifier": "security@php.net",
-  "vulnStatus": "Undergoing Analysis",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [

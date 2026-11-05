@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Oct 31, 2026, 5:33:07 AM",
-  "dateUpdated": "Nov 3, 2026, 8:58:23 PM",
+  "dateUpdated": "Nov 4, 2026, 4:56:31 AM",
   "description": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgrade window.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -297,7 +297,7 @@
     "vulnerability": {
      "aliases": "GHSA-p6jj-qrp3-7m4g\nCVE-2026-119977\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 4, 2026, 6:00:45 AM",
+     "dataProcessed": "Nov 5, 2026, 6:01:36 AM",
      "datePublished": "Oct 31, 2026, 6:30:28 AM",
      "dateUpdated": "Nov 3, 2026, 9:31:57 PM",
      "description": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgrade window.",
@@ -316,9 +316,9 @@
      "baseScore": 8.1,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 4, 2026, 6:00:09 AM",
+     "dataProcessed": "Nov 5, 2026, 6:00:21 AM",
      "datePublished": "Oct 31, 2026, 5:33:07 AM",
-     "dateUpdated": "Nov 3, 2026, 8:58:23 PM",
+     "dateUpdated": "Nov 4, 2026, 4:56:31 AM",
      "description": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgrade window.",
      "enisa_id": "EUVD-2026-114575\n",
      "epss": 0.6,
@@ -772,6 +772,193 @@
   "cisaExploitAdd": "2026-11-03",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F9A3BB19-029C-4289-9D7E-3AAED10673D6",
+        "versionEndExcluding": "4.7.39",
+        "versionStartIncluding": "4.7",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "9998D1B3-DEF0-4728-B2C4-D3D6792CDF0E",
+        "versionEndExcluding": "4.8.34",
+        "versionStartIncluding": "4.8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "4A996748-2A2D-48B9-8AB7-CB138018CD8A",
+        "versionEndExcluding": "4.9.35",
+        "versionStartIncluding": "4.9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "1A8E7D30-6E7F-41A8-80DF-AF11BD6884C8",
+        "versionEndExcluding": "5.0.31",
+        "versionStartIncluding": "5.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "2C1E9F24-71B2-46E4-B24D-EA10E298D1AC",
+        "versionEndExcluding": "5.1.28",
+        "versionStartIncluding": "5.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7EF4C0E7-7A64-4270-96C7-C0BD05F3FCDE",
+        "versionEndExcluding": "5.2.30",
+        "versionStartIncluding": "5.2",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3C86DD96-D9A4-45AA-81A6-5695AA08A689",
+        "versionEndExcluding": "5.3.27",
+        "versionStartIncluding": "5.3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A46E8759-8A85-414F-9C46-A34BC060C111",
+        "versionEndExcluding": "5.4.25",
+        "versionStartIncluding": "5.4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "01531FD1-8548-4949-8256-E10A8FAFC3B5",
+        "versionEndExcluding": "5.5.24",
+        "versionStartIncluding": "5.5",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "778551C7-722F-4366-9D86-736A924C6062",
+        "versionEndExcluding": "5.6.23",
+        "versionStartIncluding": "5.6",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B4D242D6-693F-4338-AB59-0FB4C2EC01F6",
+        "versionEndExcluding": "5.7.21",
+        "versionStartIncluding": "5.7",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "72DFACDD-FAE4-4DD5-A1A3-57C0597251D3",
+        "versionEndExcluding": "5.8.19",
+        "versionStartIncluding": "5.8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3BE2DE77-1F2A-40F7-8DE9-EEE29D883337",
+        "versionEndExcluding": "5.9.20",
+        "versionStartIncluding": "5.9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "C52767EC-E4F4-4F16-9BE7-2CE4495C9BE7",
+        "versionEndExcluding": "6.0.18",
+        "versionStartIncluding": "6.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F5E86746-433B-4158-95CE-8B58F37CDD69",
+        "versionEndExcluding": "6.1.16",
+        "versionStartIncluding": "6.1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "DE25F568-450E-4A22-8632-523712F46194",
+        "versionEndExcluding": "6.2.15",
+        "versionStartIncluding": "6.2",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "314E0CC8-537E-4BF4-9CBC-6BC455B258A6",
+        "versionEndExcluding": "6.3.14",
+        "versionStartIncluding": "6.3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D7853BDB-8F3A-4019-B0EB-E5D1A9CB3AB4",
+        "versionEndExcluding": "6.4.14",
+        "versionStartIncluding": "6.4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A52505F2-B26E-4831-AD05-2F0905F85CDB",
+        "versionEndExcluding": "6.5.14",
+        "versionStartIncluding": "6.5",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B2A16228-BBEF-467D-B934-6A4CE0308E20",
+        "versionEndExcluding": "6.6.11",
+        "versionStartIncluding": "6.6",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "9E165096-E752-4DC2-8666-830F87725FDC",
+        "versionEndExcluding": "6.7.11",
+        "versionStartIncluding": "6.7",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "903E5D89-7D08-4232-887B-6874DCB17070",
+        "versionEndExcluding": "6.8.12",
+        "versionStartIncluding": "6.8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "27559BDC-624A-4D07-BC9E-069CABCAE64C",
+        "versionEndExcluding": "6.9.11",
+        "versionStartIncluding": "6.9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F5BD7802-3450-4A82-9960-23A8F85DB2D7",
+        "versionEndExcluding": "7.0.8",
+        "versionStartIncluding": "7.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "BF4C2627-2EF5-4D3B-B857-FC103D4E3E7E",
+        "versionEndExcluding": "7.1.4",
+        "versionStartIncluding": "7.1",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
   "cveTags": [],
   "descriptions": [
    {
@@ -780,7 +967,7 @@
    }
   ],
   "id": "CVE-2026-119977",
-  "lastModified": "2026-11-03T21:45:31.220",
+  "lastModified": "2026-11-04T12:52:38.683",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -821,7 +1008,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-03T20:50:05.434105Z",
+      "timestamp": "2026-11-03T00:00:00+00:00",
       "version": "2.0.3"
      }
     }
@@ -831,47 +1018,77 @@
   "references": [
    {
     "source": "security@wordfence.com",
+    "tags": [
+     "Product"
+    ],
     "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-core-upgrader.php#L162"
    },
    {
     "source": "security@wordfence.com",
+    "tags": [
+     "Product"
+    ],
     "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-wp-upgrader.php#L378"
    },
    {
     "source": "security@wordfence.com",
+    "tags": [
+     "Product"
+    ],
     "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/update-core.php#L1549"
    },
    {
     "source": "security@wordfence.com",
+    "tags": [
+     "Product"
+    ],
     "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/setup-config.php#L282"
    },
    {
     "source": "security@wordfence.com",
+    "tags": [
+     "Patch"
+    ],
     "url": "https://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/class-wp-upgrader.php#L346"
    },
    {
     "source": "security@wordfence.com",
+    "tags": [
+     "Patch"
+    ],
     "url": "https://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/update-core.php#L1545"
    },
    {
     "source": "security@wordfence.com",
+    "tags": [
+     "Release Notes"
+    ],
     "url": "https://wordpress.org/news/2026/10/wordpress-7-1-4/"
    },
    {
     "source": "security@wordfence.com",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4b4da0cf-d9f4-47c4-a0e8-6c4dc5a6f250?source=cve"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-119977"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-core/wordpress-core-470-713-unauthenticated-upgrade-window-staged-installer-remote-code-execution"
    }
   ],
   "sourceIdentifier": "security@wordfence.com",
-  "vulnStatus": "Undergoing Analysis",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [
