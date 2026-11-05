@@ -19,7 +19,7 @@ retrieved: 2026-10-16 (fetched UTC morning run; FAQ changed since 2026-10-13 —
 guidance_retrieved: 2026-10-13 (fetched 06:05 UTC; PEC guidance changed 2026-10-12 — stamp "Last updated: 12 October 2026", "Particular" → "Particularly" ×3; the other three subpages unchanged word-for-word)
 glossary_retrieved: 2026-10-22 (fetched UTC morning run; changed — Version 1.6, 72h/Final Report stages reworked, see `enisa-srp-glossary-baseline.md`; earlier: 2026-10-02 (fetched UTC morning run; changed — Version 1.4, two new fields 40/41 — see `enisa-srp-glossary-baseline.md`)
 csirt_list_retrieved: 2026-10-28 (fetched 22:10 UTC; Spain's links changed on or before 2026-10-18 under an unchanged page stamp)
-ar_user_manual_retrieved: 2026-10-21 (fetched 06:12 UTC; landing page "Last updated: 21 October 2026 - version 1.2", Download now the v1.2 PDF; earlier: 2026-10-13 (fetched 06:05 UTC; landing page stamp now "Last updated: 12 October 2026 - version 1.1", Download link points to the v1.1 PDF; see change log)
+ar_user_manual_retrieved: 2026-11-05 (fetched UTC morning run; landing page "Last updated: 4 November 2026 - version 1.3", Download now the v1.3 PDF; earlier: 2026-10-21 (landing page "Last updated: 21 October 2026 - version 1.2", Download the v1.2 PDF); 2026-10-13 (fetched 06:05 UTC; landing page stamp now "Last updated: 12 October 2026 - version 1.1", Download link points to the v1.1 PDF; see change log)
 ar_user_manual_pdf_sha256: e2afc96031eceff4bebd9790256183e4ce6b835d9a1c44f9864e4f3995998f86 (the PDF itself, not the landing page; unchanged since 2026-09-21 — hash, size (3,190,657 bytes) and Last-Modified all match. The copy captured 2026-09-10 was 3,119,968 bytes and reversed the AR notification-visibility rule — see `enisa-defect-report.md` G26. Both are stamped "Version: 1.1" with an unchanged Document History table, so **this hash is the only reliable change signal for this document**.)
 ar_user_manual_pdf_last_modified: Thu, 17 Sep 2026 14:30:33 GMT
 ar_user_manual_pdf_v11_url: https://www.enisa.europa.eu/sites/default/files/2026-10/CRA%20SRP%20-%20AR%20User%20Manual%20v1.1.pdf (new 2026-10-13: the manual landing page's "Download" button now points here; the 2026-09 file above is still served, byte-identical to the hash above)
@@ -32,15 +32,39 @@ vulnerability_services_retrieved: 2026-10-08 (fetched 10:56 UTC; first capture. 
 ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage, and (from 2026-10-08) the Vulnerability Services topic page — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-11-04
-last_change: 2026-10-22
+last_check: 2026-11-05
+last_change: 2026-11-05
 ar_user_manual_pdf_v12_url: https://www.enisa.europa.eu/media/57516 (new 2026-10-21: the landing page's "Download" button; served as "SRP - User Manual - ARs v1.2.0.pdf"; the v1.1 URL above still serves the unchanged v1.1 file)
+ar_user_manual_pdf_v13_url: https://www.enisa.europa.eu/sites/default/files/2026-11/SRP%20-%20User%20Manual%20-%20ARs%20v1.3.pdf (new 2026-11-05: the landing page's "Download" button; the v1.2 URL above still serves the unchanged v1.2 file, hash `c8559c9f…` re-verified)
+ar_user_manual_pdf_v13_sha256: 9d01b7dcedc8b84fbdf21807266e6a1d86d55529b34508b7a1181b597cca12c6 (3,376,334 bytes, cover "V1.3 / NOVEMBER 2026"; first captured 2026-11-05)
+ar_user_manual_pdf_v13_last_modified: Wed, 04 Nov 2026 20:05:36 GMT
 ar_user_manual_pdf_v12_sha256: c8559c9f21460c2edd719128fe517aa787ea83ee643ef559e03954bde69281d0 (3,302,204 bytes, 55 pages, cover "V1.2 / OCTOBER 2026", PDF CreationDate 21 Oct 2026 05:58 UTC; first captured 2026-10-21)
 ---
 
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-11-05 UTC (vs. 2026-10-22)
+
+ENISA upgraded the SRP to version 1.3 on 4 November 2026 and published AR User Manual v1.3 the same day. The manual gains an invitation-revocation step and a cap on manufacturer associations; the FAQ, Glossary and guidance pages have not moved yet.
+
+**New**
+- **Main-page note** (replaces the 1.2.1 note): "On 4 November 2026, the CRA SRP was upgraded to version 1.3. The documentation available on this site is currently being updated to reflect the changes. Please check the date of release for the most current version."
+- **AR User Manual v1.3** (landing page "Last updated: 4 November 2026 - version 1.3"; new Download address and SHA-256 in the frontmatter, `ar_user_manual_pdf_v13_*`).
+
+**Changed**
+- **Manual 4.2, Invite Secondary AR**: after the confirmation pop-up the text now reads "You can revoke the invitation:", followed by what is presumably a screenshot; the manual does not say how a Primary AR revokes.
+- **Manual 4.3, Add Additional Manufacturer Association**: new note "a limit is set to the maximum number of possible associations; a popup message will be displayed in case the limit is reached." The limit is not stated.
+
+**Watch**
+- The FAQ (still "Updated: 15 October 2026"), the Glossary (1.6) and the three guidance pages (12 September, PEC 12 October) are not yet updated for 1.3; ENISA says they are being worked on. Expect changes next.
+
+**Editorial**
+Manual v1.3 vs v1.2: cover V1.2 → V1.3 and "OCTOBER" → "NOVEMBER", footers, table-of-contents page numbers (shifted by one from section 3), page-break reflow; 55 pages not re-counted.
+
+**Unchanged**
+FAQ Q1-Q35 and Glossary 1.6 word for word (`tools/fetch_enisa.py --dry-run`), CSIRT list (`tools/check_csirt_list.py` exit 0, 27 countries), Terms, tutorial video, Status page, Vulnerability Services page (EU KEV paragraph still "will be further enriched"), guidance stamps, AR User Manual v1.2 PDF (hash `c8559c9f…`) and v1.1. 13 pages HTTP 200 (three via redirect).
 
 ### 2026-10-28 22:28 UTC (vs. 2026-10-18, when the change happened)
 
