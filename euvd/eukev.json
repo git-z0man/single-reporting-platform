@@ -1402,6 +1402,23 @@
    "first_seen": "2026-10-30",
    "first_seen_after": "2026-10-29",
    "changes": []
+  },
+  {
+   "id": "EUVD-2026-56119",
+   "cve": "CVE-2026-58115",
+   "row": 1855,
+   "dateAdded": "2026-11-03",
+   "origin": "CNW",
+   "vendor": "Siemens",
+   "product": "SIMATIC IoT2050",
+   "notes": "https://cert-portal.siemens.com/productcert/html/ssa-834709.html",
+   "cisa": "",
+   "inserted_after": "2026-11-04",
+   "inserted_before": "",
+   "backdated_days": 1,
+   "first_seen": "2026-11-06",
+   "first_seen_after": "2026-11-05",
+   "changes": []
   }
  ],
  "removed": []

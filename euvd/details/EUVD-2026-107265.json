@@ -32,7 +32,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 21, 2026, 1:54:43 PM",
-  "dateUpdated": "Nov 4, 2026, 5:47:40 PM",
+  "dateUpdated": "Nov 5, 2026, 6:17:39 PM",
   "description": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
   "enisaIdAdvisory": [
    {
@@ -1968,7 +1968,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 5:04:21 PM",
-     "dateUpdated": "Oct 27, 2026, 1:14:27 PM",
+     "dateUpdated": "Nov 4, 2026, 9:58:23 PM",
      "description": "Security update for php8",
      "id": "openSUSE-SU-2026:22151-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_22151-1.json\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -4725,7 +4725,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 4:57:23 PM",
-     "dateUpdated": "Oct 27, 2026, 1:10:49 PM",
+     "dateUpdated": "Nov 4, 2026, 9:51:09 PM",
      "description": "Security update for php8",
      "id": "SUSE-SU-2026:24271-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_24271-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -6445,7 +6445,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 27, 2026, 1:13:31 PM",
+     "dateUpdated": "Nov 4, 2026, 9:56:52 PM",
      "description": "php8-8.5.12-1.1 on GA media",
      "id": "openSUSE-SU-2026:12219-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12219-1.json\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -8288,18 +8288,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:10:03 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:29 PM",
-     "description": "Red Hat Security Advisory: php8.4 security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 9:47:20 PM",
+     "description": "security update for php8.4",
      "id": "RHSA-2026:87071",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87071\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87071.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87071.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008329.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008329.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for php8.4 is now available for Red Hat Enterprise Linux 10.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php8.4"
     },
     "id": "339c10ca-f37c-3010-832a-d17af415324c"
    },
@@ -10134,18 +10134,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:11:09 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:29 PM",
-     "description": "Red Hat Security Advisory: php security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 9:47:18 PM",
+     "description": "security update for php",
      "id": "RHSA-2026:87070",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87070\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87070.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87070.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008327.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008327.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for php is now available for Red Hat Enterprise Linux 10.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php"
     },
     "id": "3832c22a-6f43-31ac-b81e-367b7ee6ffbe"
    },
@@ -12606,7 +12606,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 24, 2026, 12:57:37 PM",
-     "dateUpdated": "Oct 27, 2026, 8:59:10 PM",
+     "dateUpdated": "Nov 4, 2026, 9:46:30 PM",
      "description": "security update for php",
      "id": "ESSA-2026:0206",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/essa-2026_0206.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008398.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008398.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -15349,18 +15349,18 @@
        }
       }
      ],
-     "aliases": "CVE-2025-1218\nCVE-2025-14181\nCVE-2026-6103\nCVE-2026-91765\nCVE-2026-91766\nCVE-2026-91767\nCVE-2026-91768\nCVE-2026-91769\nCVE-2026-92842\nCVE-2026-93682\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2025-1218\nCVE-2025-14181\nCVE-2026-109618\nCVE-2026-109619\nCVE-2026-6103\nCVE-2026-91765\nCVE-2026-91766\nCVE-2026-91767\nCVE-2026-91768\nCVE-2026-91769\nCVE-2026-92842\nCVE-2026-93682\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 3:53:19 PM",
-     "dateUpdated": "Oct 29, 2026, 8:39:33 PM",
-     "description": "Red Hat Security Advisory: php:7.4 security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 9:47:28 PM",
+     "description": "security update for libzip",
      "id": "RHSA-2026:87080",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87080\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87080.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87080.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008322.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008322.html\nhttps://www.suse.com/security/cve/CVE-2025-1218/\nhttps://www.suse.com/security/cve/CVE-2025-14181/\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-6103/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\nhttps://www.suse.com/security/cve/CVE-2026-91766/\nhttps://www.suse.com/security/cve/CVE-2026-91767/\nhttps://www.suse.com/security/cve/CVE-2026-91768/\nhttps://www.suse.com/security/cve/CVE-2026-91769/\nhttps://www.suse.com/security/cve/CVE-2026-92842/\nhttps://www.suse.com/security/cve/CVE-2026-93682/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for the php:7.4 module is now available for Red Hat Enterprise Linux 8.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for libzip"
     },
     "id": "5175a87f-cd2d-3fcb-904e-f7ba7c1e9389"
    },
@@ -17792,7 +17792,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 3:44:40 PM",
-     "dateUpdated": "Oct 27, 2026, 1:11:43 PM",
+     "dateUpdated": "Nov 4, 2026, 9:53:30 PM",
      "description": "Security update for php8",
      "id": "SUSE-SU-2026:4843-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_4843-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -18369,7 +18369,7 @@
      "aliases": "CVE-2023-54404\nCVE-2025-62718\nCVE-2026-8643\nCVE-2026-9496\nCVE-2026-12185\nCVE-2026-13697\nCVE-2026-14682\nCVE-2026-15076\nCVE-2026-16308\nCVE-2026-17106\nCVE-2026-18427\nCVE-2026-19203\nCVE-2026-19534\nCVE-2026-39820\nCVE-2026-41178\nCVE-2026-41707\nCVE-2026-42499\nCVE-2026-42502\nCVE-2026-45416\nCVE-2026-47884\nCVE-2026-47886\nCVE-2026-47888\nCVE-2026-47890\nCVE-2026-47892\nCVE-2026-50010\nCVE-2026-55831\nCVE-2026-55833\nCVE-2026-55851\nCVE-2026-56745\nCVE-2026-56746\nCVE-2026-56819\nCVE-2026-56852\nCVE-2026-56854\nCVE-2026-58062\nCVE-2026-59280\nCVE-2026-59282\nCVE-2026-59283\nCVE-2026-59296\nCVE-2026-59313\nCVE-2026-59323\nCVE-2026-59651\nCVE-2026-59887\nCVE-2026-59899\nCVE-2026-59901\nCVE-2026-62243\nCVE-2026-64607\nCVE-2026-67213\nCVE-2026-67312\nCVE-2026-67313\nCVE-2026-67314\nCVE-2026-67320\nCVE-2026-67321\nCVE-2026-68494\nCVE-2026-68497\nCVE-2026-69152\nCVE-2026-69192\nCVE-2026-71290\nCVE-2026-71324\nCVE-2026-71325\nCVE-2026-71327\nCVE-2026-73500\nCVE-2026-73508\nCVE-2026-74835\nCVE-2026-75838\nCVE-2026-75899\nCVE-2026-75931\nCVE-2026-76169\nCVE-2026-81521\nCVE-2026-82417\nCVE-2026-82562\nCVE-2026-84292\nCVE-2026-84375\nCVE-2026-84394\nCVE-2026-84428\nCVE-2026-84445\nCVE-2026-84469\nCVE-2026-84504\nCVE-2026-84961\nCVE-2026-85062\nCVE-2026-85124\nCVE-2026-85152\nCVE-2026-85595\nCVE-2026-85597\nCVE-2026-86063\nCVE-2026-87743\nCVE-2026-88004\nCVE-2026-88007\nCVE-2026-88008\nCVE-2026-88009\nCVE-2026-88011\nCVE-2026-88012\nCVE-2026-88031\nCVE-2026-88878\nCVE-2026-88879\nCVE-2026-90711\nCVE-2026-93749\nCVE-2026-100655\nCVE-2026-100656\nCVE-2026-100666\nCVE-2026-101916\nCVE-2026-102925\nCVE-2026-102930\nCVE-2026-103435\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 2:24:21 PM",
-     "dateUpdated": "Nov 3, 2026, 9:11:40 PM",
+     "dateUpdated": "Nov 4, 2026, 4:01:46 PM",
      "description": "Red Hat Security Advisory: Red Hat OpenShift Dev Spaces 3.31.0 Release.",
      "id": "RHSA-2026:90321",
      "references": "https://access.redhat.com/errata/RHSA-2026:90321\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90321.json\n",
@@ -21509,18 +21509,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:35:47 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:29 PM",
-     "description": "Red Hat Security Advisory: php:8.2 security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 9:47:21 PM",
+     "description": "security update for php",
      "id": "RHSA-2026:87072",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87072\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87072.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87072.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008336.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008336.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for the php:8.2 module is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php"
     },
     "id": "781f6e53-1364-36c7-b884-e95ab9dfc68c"
    },
@@ -24555,7 +24555,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 22, 2026, 4:03:33 PM",
-     "dateUpdated": "Oct 27, 2026, 1:11:51 PM",
+     "dateUpdated": "Nov 4, 2026, 9:53:41 PM",
      "description": "Security update for php74",
      "id": "SUSE-SU-2026:4870-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_4870-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -26400,16 +26400,16 @@
      ],
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 23, 2026, 3:23:46 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:43 PM",
-     "description": "Red Hat Security Advisory: php security update",
+     "datePublished": "Oct 23, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 9:47:32 PM",
+     "description": "security update for php",
      "id": "RHSA-2026:88720",
-     "references": "https://access.redhat.com/errata/RHSA-2026:88720\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88720.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_88720.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008372.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008372.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for php is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php"
     },
     "id": "7be93c09-f2ca-3a7e-bbfb-d97eaf23bf05"
    },
@@ -29982,18 +29982,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:30:32 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:30 PM",
-     "description": "Red Hat Security Advisory: php:8.2 security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 9:47:23 PM",
+     "description": "security update for libzip",
      "id": "RHSA-2026:87073",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87073\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87073.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87073.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008331.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008331.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for the php:8.2 module is now available for Red Hat Enterprise Linux 8.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for libzip"
     },
     "id": "834c6e68-b758-33fb-b494-a88b53c879b6"
    },
@@ -32458,18 +32458,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:36:00 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:32 PM",
-     "description": "Red Hat Security Advisory: php:8.3 security update",
+     "datePublished": "Oct 21, 2026, 4:14:39 AM",
+     "dateUpdated": "Nov 4, 2026, 9:47:25 PM",
+     "description": "Important: php:8.3 security update",
      "id": "RHSA-2026:87079",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87079\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87079.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87079.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008338.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008338.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for the php:8.3 module is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "Important: php:8.3 security update"
     },
     "id": "8d87e412-a430-376a-8394-7f08d0a4855d"
    },
@@ -36457,18 +36457,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 8:06:07 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:32 PM",
-     "description": "Red Hat Security Advisory: php security update",
+     "datePublished": "Oct 21, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 9:47:30 PM",
+     "description": "security update for php",
      "id": "RHSA-2026:87151",
-     "references": "https://access.redhat.com/errata/RHSA-2026:87151\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87151.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87151.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008339.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008339.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for php is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php"
     },
     "id": "b9849583-cd1e-33cb-b18e-1acf6af6d236"
    },
@@ -37263,7 +37263,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 28, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 12:00:00 AM",
      "description": "SSA-566512: PHP2Shell Vulnerabilities in Palo Alto Networks PAN-OS on RUGGEDCOM APE1808 Devices",
      "id": "SSA-566512",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-566512.json\n",
@@ -43808,16 +43808,16 @@
      ],
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 23, 2026, 7:29:21 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:46 PM",
-     "description": "Red Hat Security Advisory: php:8.2 security update",
+     "datePublished": "Oct 23, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 9:47:34 PM",
+     "description": "security update for php",
      "id": "RHSA-2026:88834",
-     "references": "https://access.redhat.com/errata/RHSA-2026:88834\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88834.json\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_88834.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008415.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008415.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "An update for the php:8.2 module is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+     "summary": "security update for php"
     },
     "id": "dd7b3424-4499-3c98-8b34-3a2fb02729ea"
    },
@@ -44104,6 +44104,15 @@
        }
       },
       {
+       "id": "b4734d4f-a178-3baa-8c8e-87e4452dab21",
+       "product": {
+        "name": "Opcenter Execution Process",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "b83bdbf8-b219-363b-955a-435e67193b8b",
        "product": {
         "name": "AX4",
@@ -44176,6 +44185,15 @@
        }
       },
       {
+       "id": "e4adcb10-dec5-30e8-bc38-87325b1d60fe",
+       "product": {
+        "name": "Opcenter Execution Discrete",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "e8155cf2-22c6-3eb5-8cfc-705ce3c9085f",
        "product": {
         "name": "PADS Standard - XCR",
@@ -44242,7 +44260,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 3, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 12:00:00 AM",
      "description": "SSA-566435: PHP2Shell Vulnerabilities in Siemens Software Products",
      "id": "SSA-566435",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-566435.json\n",
@@ -48150,7 +48168,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 1, 2026, 10:25:31 AM",
+     "dateUpdated": "Nov 4, 2026, 9:47:36 PM",
      "description": "security update for php",
      "id": "RHSA-2026:89111",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_89111.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008440.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008440.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -48221,9 +48239,9 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 5, 2026, 6:00:12 AM",
+     "dataProcessed": "Nov 6, 2026, 6:00:19 AM",
      "datePublished": "Oct 21, 2026, 1:54:43 PM",
-     "dateUpdated": "Nov 4, 2026, 5:47:40 PM",
+     "dateUpdated": "Nov 5, 2026, 6:17:39 PM",
      "description": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
      "enisa_id": "EUVD-2026-107265\n",
      "epss": 100.0,
@@ -48349,7 +48367,59 @@
     "affectedData": [
      {
       "defaultStatus": "unknown",
+      "product": "AMIS TS",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "AX4",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "blueplanet 360 NX3 M6 WM OD IISX",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "blueplanet 360 NX3 M6 WM OD IISX - S",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Building X",
       "vendor": "Siemens",
       "versions": [
        {
@@ -48375,7 +48445,137 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "Call stations",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "Capital",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Chargesight",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Climatix Cloud IC",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Climatix Devices",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Connect Insights",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Connect X200",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Connect X300",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Connect X500",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "cRSP",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Depotfinity",
       "vendor": "Siemens",
       "versions": [
        {
@@ -48427,7 +48627,228 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "Desigo CC",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Desigo DXR2",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Desigo DXR3",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Desigo Optic",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Desigo PXC3",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Desigo PXC4",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Desigo PXC5",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Desigo PXC7",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "DFMExpress",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Energy Engage V2.0SP9",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Energy Engage V3.1SP1",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Energy Management System",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Enlighted RTLS",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Enlighted Space",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Heliox Flex Pro",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Heliox Flex Pro",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Heliox H60",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Heliox Rapid",
       "vendor": "Siemens",
       "versions": [
        {
@@ -48454,6 +48875,58 @@
      {
       "defaultStatus": "unknown",
       "product": "Insights Hub",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Local Monitoring bt-monitoring-vm",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V20261103",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Navigator E&S",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Novigo VANSYS",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Novigo VANSYS core",
       "vendor": "Siemens",
       "versions": [
        {
@@ -48622,6 +49095,19 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "PACE-Design",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "PADS Pro Essentials",
       "vendor": "Siemens",
       "versions": [
@@ -48752,6 +49238,97 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "Sicharge D",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Sicharge D Configuration Backend",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SICHARGE FLEX",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SICHARGE UC",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Sifinity Control",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Sifinity Go",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Sifinity Setup",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "Simcenter Flomaster",
       "vendor": "Siemens",
       "versions": [
@@ -48791,6 +49368,97 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "Sinteso FS20 EN",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SiPass integrated",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIPORT",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Siveillance Control",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Siveillance Control Pro",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Siveillance Intrusion",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Siveillance Video",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "Solid Edge",
       "vendor": "Siemens",
       "versions": [
@@ -48810,6 +49478,84 @@
        {
         "lessThan": "*",
         "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Spectrum Power 3",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Spectrum Power 4",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Spectrum Power 4",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Spectrum Power 4",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Spectrum Power 7",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Spectrum Power TG",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
         "version": "0",
         "versionType": "custom"
        }
@@ -48921,6 +49667,71 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "Verischarge",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "VersiCloudHeliox Dual Port 60kW",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Voice alarm panels",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Voice alarm systems and audio matrices",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Workplace Experience",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "Xcargo",
       "vendor": "Siemens",
       "versions": [
@@ -48992,149 +49803,6 @@
        {
         "lessThan": "*",
         "status": "unaffected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "AMIS TS",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "blueplanet 360 NX3 M6 WM OD IISX",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "blueplanet 360 NX3 M6 WM OD IISX - S",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Energy Engage V2.0SP9",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Energy Engage V3.1SP1",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Spectrum Power 3",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Spectrum Power 4",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Spectrum Power 4",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Spectrum Power 4",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Spectrum Power 7",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Spectrum Power TG",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
         "version": "0",
         "versionType": "custom"
        }
@@ -50950,7 +51618,7 @@
    }
   ],
   "id": "CVE-2026-109619",
-  "lastModified": "2026-11-04T18:17:37.170",
+  "lastModified": "2026-11-05T19:17:08.397",
   "metrics": {
    "cvssMetricV31": [
     {
