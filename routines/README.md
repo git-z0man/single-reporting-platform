@@ -388,8 +388,12 @@ nothing watched them. A failed run leaves no commit, and no commit is also
 what a quiet day looks like — which is why the EUVD monitor's exit 2 of
 31 October sat unnoticed until someone opened the repository.
 
-Its first signal is therefore not the trigger API, which these sessions often
-lack, but the heartbeat the daily rule already requires: `last_check` in each
+It does not read the trigger API at all. Another Routine on the account,
+"Routinen-Monitor (tägliches Update)" (`trig_01W6ViV4DyWyorLnBpjZA3W2`), reads
+every Routine read-only and reports enabled state, schedule and last run; the
+watch would only duplicate that, and the tool is usually missing from these
+sessions in any case. Its signal is instead the heartbeat the daily rule already
+requires: `last_check` in each
 baseline, 29 rows in `srp-domains/reachability-log.csv`, today's line in
 `euvd/history.jsonl`. A missing point for today is a failed run whatever the
 run status says; a missing point for an earlier day is reported and never

@@ -292,7 +292,9 @@ change.
 `routines/repo-watch.md` is the prompt of a seventh Routine
 (`trig_01NFjrqErTyJ3muZ6nhqsJ2j`, daily at 08:20 UTC, after the other six). It
 watches the six routines themselves: whether each left today's measurement
-point, whether its last run succeeded, what it left open. It repairs what broke
+point, and what it left open. It does not read the trigger API — "Routinen-Monitor
+(tägliches Update)" already reports enabled state, schedule and last run to the
+owner, and the tool is usually missing from these sessions anyway. It repairs what broke
 and finishes what was left open. Nothing watched the watchers before, and a run
 that failed left no commit — which looks exactly like a quiet day. That is how
 the EUVD monitor's exit 2 of 2026-10-31 went unnoticed for a day.

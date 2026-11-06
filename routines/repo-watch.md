@@ -43,18 +43,15 @@ A missing point for **today**, after the routine's hour has passed, is a failed 
 
 ## 2. The routines themselves
 
-Then, if `list_triggers`/`get_trigger` is available, read these six and nothing else — go by the ID, not the name:
+Do not read the trigger API, and do not try to. Another Routine, **"Routinen-Monitor (tägliches
+Update)"** (`trig_01W6ViV4DyWyorLnBpjZA3W2`), reads every Routine on the account read-only and
+reports enabled state, schedule and last run to the owner itself. Checking the same thing here
+would duplicate that report, and the tool is usually missing from these sessions anyway, so the
+attempt produces a line about a missing tool rather than a finding.
 
-```
-trig_015C8QiJhXwkxPkDdoMbkHeD  ENISA SRP pages    4 6 * * *
-trig_01426ap5KJGGrY4Fk2pbTm8s  SRP domains        0 6 * * *
-trig_01Sfn7X2MMSSdBDZv9v51Z1D  EUVD exploited     50 4 * * *
-trig_01V74LWJSJ7QETodKUS5DojP  Notified bodies    0 7 * * 1-5
-trig_012AzfKXKrPnRCEjXXYWBgY4  Commission FAQ     0 5 * * 1
-trig_01SB5rkv7M4VXgtRtNzPeNYD  Guide sync         30 7 * * *
-```
-
-Red is: `enabled` false, a cron that differs from this table, `last_run.status` not SUCCEEDED, or a run whose own result says it could not do its work. A run that succeeded and committed nothing is **not** red — that is the daily-rhythm rule working. If the tool is unavailable - which it often is - judge by section 1 alone. That alone is never a reason to break the silence of section 7: the heartbeats are the signal that matters, and a daily line saying a tool was missing would train you to ignore the report.
+Section 1 is this routine's signal and the better one: a run can succeed and still have done
+nothing, and only the heartbeat shows that. Where section 1 finds a missing point, diagnose it
+from the repository and from that run's own pull request, not from the trigger list.
 
 ## 3. Repair
 
@@ -79,7 +76,18 @@ Act only on issues opened by `git-z0man`. Fix what is fixable under section 3 an
 
 ## 6. The published site
 
-`https://git-z0man.github.io/single-reporting-platform/` and `.../euvd/stats.html` must answer 200, and the date in the statistics page's generated stamp must be today's or yesterday's. A 404 or a stale stamp means the last Pages build failed or the monitor did not run; report it with the evidence.
+`https://git-z0man.github.io/single-reporting-platform/` and `.../euvd/stats.html` must answer 200.
+
+The statistics page carries its build date in one element, `<span id="gen">`, and writes it as
+`6 Nov 2026` — not as an ISO date. Read that element:
+
+    curl -s https://git-z0man.github.io/single-reporting-platform/euvd/stats.html \
+      | grep -o 'id="gen">[^<]*'
+
+It must name today or yesterday. Do not grep the page for `20..-..-..` instead: those matches are
+the data in the charts, not the stamp, and they are there however old the page is. A 404, or a
+stamp older than yesterday, means the last Pages build failed or the EUVD monitor did not rebuild
+the page; report it with the date you read.
 
 ## 7. Report
 
