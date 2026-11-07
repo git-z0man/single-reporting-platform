@@ -139,6 +139,13 @@ Do not commit. Report the failure and its cause. Do not work around it.
 
 ## 4. Post-launch conformance
 
+**When this section runs.** Not on every run. It costs an OAuth redirect per host and has found nothing since the architecture settled, so run it when either of these holds:
+
+- `last_architecture_check` in `srp-domains-baseline.md`'s frontmatter is missing, or is more than seven days before today;
+- section 3 found anything at all — a host that changed state, a new host in the zone, a host that fell away, or a changed CSIRT coordinator list.
+
+Never on a silent run: section 3 has already ended that run, and there would be no commit to record the check in. When the section does run, set `last_architecture_check:` to today's date in the frontmatter, in the same commit, creating the field if it is not there yet. That field is what the next run decides on, so writing it is not optional. Skipping the section on the other days is correct, and is not reported.
+
 The platform went live on 2026-09-11 at 11:24:01 UTC (28 hosts; `es` followed at 11:36:58). Use publicly visible signals ONLY — NO login attempts, NO form input, NO authentication, no credentials of any kind. Fetch pages and read what is publicly served, nothing more.
 
 Two things were settled at go-live and are recorded in `srp-domains-baseline.md`. Do NOT re-derive either. What this section asks for is a drift check against them.
