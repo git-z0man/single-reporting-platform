@@ -29,9 +29,336 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 22, 2026, 1:35:41 PM",
-  "dateUpdated": "Nov 4, 2026, 5:47:42 PM",
+  "dateUpdated": "Nov 6, 2026, 3:39:57 PM",
   "description": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
   "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0a8c5828-9e0b-3cbf-933f-f0d84e19c57a",
+       "product": {
+        "name": "MozillaFirefox-0:153.6.0-118.19.2.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1deb019e-356c-3e5a-a567-c1252db3576c",
+       "product": {
+        "name": "MozillaFirefox-branding-upstream-0:153.6.0-118.19.2.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "231ec08a-97f8-3db0-908a-ffacb279182d",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 12 SP5",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3973f800-0bdc-3b4c-b00b-cebd7f1db484",
+       "product": {
+        "name": "MozillaFirefox-branding-upstream-0:153.6.0-118.19.2.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "39985af0-e242-3e48-9631-7b5c4c8be1b9",
+       "product": {
+        "name": "MozillaFirefox-0:153.6.0-118.19.2.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "41f7dcc3-dbce-3065-8f6a-68451cf5f490",
+       "product": {
+        "name": "MozillaFirefox-translations-other-0:153.6.0-118.19.2.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4edd4e9b-ae33-30dd-8aa4-f024aa924524",
+       "product": {
+        "name": "SUSE Linux Enterprise High Performance Computing 12 SP5",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6a341be1-e959-323a-8698-8476516bb4c6",
+       "product": {
+        "name": "MozillaFirefox-devel-0:153.6.0-118.19.2.noarch",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6b392910-9939-399d-a3a0-421715cbc691",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 12 SP5-LTSS",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "88d2950f-4aad-3cf0-bc3d-bb6e689e5c99",
+       "product": {
+        "name": "MozillaFirefox-translations-other-0:153.6.0-118.19.2.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8b9d3096-f568-3b4b-b252-36d86f11d393",
+       "product": {
+        "name": "MozillaFirefox-branding-upstream-0:153.6.0-118.19.2.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "95f8511b-d683-302f-be71-6b2e3e02cc05",
+       "product": {
+        "name": "MozillaFirefox-0:153.6.0-118.19.2.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a6eecc50-b17e-3976-9439-9b4eaa099dba",
+       "product": {
+        "name": "MozillaFirefox-translations-common-0:153.6.0-118.19.2.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ac089843-01f4-3dc2-ae31-5d3cabbd97ce",
+       "product": {
+        "name": "MozillaFirefox-translations-common-0:153.6.0-118.19.2.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "af770033-6a1a-35da-8d79-0a0c19673364",
+       "product": {
+        "name": "MozillaFirefox-translations-other-0:153.6.0-118.19.2.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b662e702-b5b5-3319-a6cf-b82905e344b7",
+       "product": {
+        "name": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bb648c85-c4a2-3397-8037-d3bf7fd20eb0",
+       "product": {
+        "name": "MozillaFirefox-branding-upstream-0:153.6.0-118.19.2.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ca65b6ad-0b17-3f93-93fe-12c5b9133065",
+       "product": {
+        "name": "MozillaFirefox-translations-common-0:153.6.0-118.19.2.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "dc83cdbb-f21d-33b9-a443-1dbdcedad336",
+       "product": {
+        "name": "MozillaFirefox-translations-common-0:153.6.0-118.19.2.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ddeacb83-0531-37dc-bf5c-828c65531374",
+       "product": {
+        "name": "MozillaFirefox-0:153.6.0-118.19.2.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fc164448-b7a2-3aae-b737-537b999f87c7",
+       "product": {
+        "name": "MozillaFirefox-translations-other-0:153.6.0-118.19.2.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fe6e6575-f2bc-3f9c-b9d0-3379d36e2578",
+       "product": {
+        "name": "SUSE Linux Enterprise Server LTSS Extended Security 12 SP5",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-100801\nCVE-2026-111497\nCVE-2026-113470\nCVE-2026-117860\nCVE-2026-117861\nCVE-2026-117862\nCVE-2026-117863\nCVE-2026-117864\nCVE-2026-117865\nCVE-2026-117866\nCVE-2026-117867\nCVE-2026-117868\nCVE-2026-117869\nCVE-2026-117870\nCVE-2026-117871\nCVE-2026-117872\nCVE-2026-117873\nCVE-2026-117874\nCVE-2026-117875\nCVE-2026-117876\nCVE-2026-117877\nCVE-2026-117878\nCVE-2026-117879\nCVE-2026-117880\nCVE-2026-117881\nCVE-2026-117882\nCVE-2026-117883\nCVE-2026-117884\nCVE-2026-117885\nCVE-2026-117886\nCVE-2026-117887\nCVE-2026-117888\nCVE-2026-117889\nCVE-2026-117890\nCVE-2026-117891\nCVE-2026-117892\nCVE-2026-117893\nCVE-2026-117894\nCVE-2026-117895\nCVE-2026-117896\nCVE-2026-117897\nCVE-2026-117898\nCVE-2026-117899\nCVE-2026-117900\nCVE-2026-117901\nCVE-2026-117902\nCVE-2026-117903\nCVE-2026-117904\nCVE-2026-117905\nCVE-2026-117906\nCVE-2026-117907\nCVE-2026-117908\nCVE-2026-117909\nCVE-2026-117910\nCVE-2026-117911\nCVE-2026-117912\nCVE-2026-117913\nCVE-2026-117914\nCVE-2026-117915\nCVE-2026-117916\nCVE-2026-117917\nCVE-2026-117918\nCVE-2026-117919\nCVE-2026-117920\nCVE-2026-117921\nCVE-2026-117922\nCVE-2026-117923\nCVE-2026-117924\nCVE-2026-117925\nCVE-2026-117926\nCVE-2026-117927\nCVE-2026-117928\nCVE-2026-117929\nCVE-2026-117930\nCVE-2026-117931\nCVE-2026-117932\nCVE-2026-117933\nCVE-2026-117934\nCVE-2026-117935\nCVE-2026-117936\nCVE-2026-117937\nCVE-2026-117938\nCVE-2026-117939\nCVE-2026-117940\nCVE-2026-117941\nCVE-2026-117942\nCVE-2026-117943\nCVE-2026-117944\nCVE-2026-117945\nCVE-2026-117946\nCVE-2026-117947\nCVE-2026-117948\nCVE-2026-117949\nCVE-2026-117950\nCVE-2026-117951\nCVE-2026-117952\nCVE-2026-117953\nCVE-2026-117954\nCVE-2026-117955\nCVE-2026-117956\nCVE-2026-117957\nCVE-2026-117958\nCVE-2026-117959\nCVE-2026-117960\nCVE-2026-117961\nCVE-2026-117962\nCVE-2026-117963\nCVE-2026-117964\nCVE-2026-117965\nCVE-2026-117966\nCVE-2026-117967\nCVE-2026-117968\nCVE-2026-117969\nCVE-2026-117970\nCVE-2026-117971\nCVE-2026-117972\nCVE-2026-117973\nCVE-2026-117974\nCVE-2026-117975\nCVE-2026-117976\nCVE-2026-117977\nCVE-2026-117978\nCVE-2026-117979\nCVE-2026-117980\nCVE-2026-117981\nCVE-2026-117982\nCVE-2026-117983\nCVE-2026-117984\nCVE-2026-117985\nCVE-2026-117986\nCVE-2026-117987\nCVE-2026-117988\nCVE-2026-117989\nCVE-2026-117990\nCVE-2026-117991\nCVE-2026-117992\nCVE-2026-117993\nCVE-2026-117994\nCVE-2026-117995\nCVE-2026-117996\nCVE-2026-117997\nCVE-2026-117998\nCVE-2026-117999\nCVE-2026-118000\nCVE-2026-118002\nCVE-2026-118003\nCVE-2026-118004\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 29, 2026, 8:52:15 AM",
+     "dateUpdated": "Nov 4, 2026, 9:53:44 PM",
+     "description": "Security update for MozillaFirefox",
+     "id": "SUSE-SU-2026:4928-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_4928-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264928-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264928-1/\nhttps://bugzilla.suse.com/1286261\nhttps://bugzilla.suse.com/1286385\nhttps://bugzilla.suse.com/1286955\nhttps://bugzilla.suse.com/1287809\nhttps://www.suse.com/security/cve/CVE-2026-100801/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\nhttps://www.suse.com/security/cve/CVE-2026-113470/\nhttps://www.suse.com/security/cve/CVE-2026-117860/\nhttps://www.suse.com/security/cve/CVE-2026-117861/\nhttps://www.suse.com/security/cve/CVE-2026-117862/\nhttps://www.suse.com/security/cve/CVE-2026-117863/\nhttps://www.suse.com/security/cve/CVE-2026-117864/\nhttps://www.suse.com/security/cve/CVE-2026-117865/\nhttps://www.suse.com/security/cve/CVE-2026-117866/\nhttps://www.suse.com/security/cve/CVE-2026-117867/\nhttps://www.suse.com/security/cve/CVE-2026-117868/\nhttps://www.suse.com/security/cve/CVE-2026-117869/\nhttps://www.suse.com/security/cve/CVE-2026-117870/\nhttps://www.suse.com/security/cve/CVE-2026-117871/\nhttps://www.suse.com/security/cve/CVE-2026-117872/\nhttps://www.suse.com/security/cve/CVE-2026-117873/\nhttps://www.suse.com/security/cve/CVE-2026-117874/\nhttps://www.suse.com/security/cve/CVE-2026-117875/\nhttps://www.suse.com/security/cve/CVE-2026-117876/\nhttps://www.suse.com/security/cve/CVE-2026-117877/\nhttps://www.suse.com/security/cve/CVE-2026-117878/\nhttps://www.suse.com/security/cve/CVE-2026-117879/\nhttps://www.suse.com/security/cve/CVE-2026-117880/\nhttps://www.suse.com/security/cve/CVE-2026-117881/\nhttps://www.suse.com/security/cve/CVE-2026-117882/\nhttps://www.suse.com/security/cve/CVE-2026-117883/\nhttps://www.suse.com/security/cve/CVE-2026-117884/\nhttps://www.suse.com/security/cve/CVE-2026-117885/\nhttps://www.suse.com/security/cve/CVE-2026-117886/\nhttps://www.suse.com/security/cve/CVE-2026-117887/\nhttps://www.suse.com/security/cve/CVE-2026-117888/\nhttps://www.suse.com/security/cve/CVE-2026-117889/\nhttps://www.suse.com/security/cve/CVE-2026-117890/\nhttps://www.suse.com/security/cve/CVE-2026-117891/\nhttps://www.suse.com/security/cve/CVE-2026-117892/\nhttps://www.suse.com/security/cve/CVE-2026-117893/\nhttps://www.suse.com/security/cve/CVE-2026-117894/\nhttps://www.suse.com/security/cve/CVE-2026-117895/\nhttps://www.suse.com/security/cve/CVE-2026-117896/\nhttps://www.suse.com/security/cve/CVE-2026-117897/\nhttps://www.suse.com/security/cve/CVE-2026-117898/\nhttps://www.suse.com/security/cve/CVE-2026-117899/\nhttps://www.suse.com/security/cve/CVE-2026-117900/\nhttps://www.suse.com/security/cve/CVE-2026-117901/\nhttps://www.suse.com/security/cve/CVE-2026-117902/\nhttps://www.suse.com/security/cve/CVE-2026-117903/\nhttps://www.suse.com/security/cve/CVE-2026-117904/\nhttps://www.suse.com/security/cve/CVE-2026-117905/\nhttps://www.suse.com/security/cve/CVE-2026-117906/\nhttps://www.suse.com/security/cve/CVE-2026-117907/\nhttps://www.suse.com/security/cve/CVE-2026-117908/\nhttps://www.suse.com/security/cve/CVE-2026-117909/\nhttps://www.suse.com/security/cve/CVE-2026-117910/\nhttps://www.suse.com/security/cve/CVE-2026-117911/\nhttps://www.suse.com/security/cve/CVE-2026-117912/\nhttps://www.suse.com/security/cve/CVE-2026-117913/\nhttps://www.suse.com/security/cve/CVE-2026-117914/\nhttps://www.suse.com/security/cve/CVE-2026-117915/\nhttps://www.suse.com/security/cve/CVE-2026-117916/\nhttps://www.suse.com/security/cve/CVE-2026-117917/\nhttps://www.suse.com/security/cve/CVE-2026-117918/\nhttps://www.suse.com/security/cve/CVE-2026-117919/\nhttps://www.suse.com/security/cve/CVE-2026-117920/\nhttps://www.suse.com/security/cve/CVE-2026-117921/\nhttps://www.suse.com/security/cve/CVE-2026-117922/\nhttps://www.suse.com/security/cve/CVE-2026-117923/\nhttps://www.suse.com/security/cve/CVE-2026-117924/\nhttps://www.suse.com/security/cve/CVE-2026-117925/\nhttps://www.suse.com/security/cve/CVE-2026-117926/\nhttps://www.suse.com/security/cve/CVE-2026-117927/\nhttps://www.suse.com/security/cve/CVE-2026-117928/\nhttps://www.suse.com/security/cve/CVE-2026-117929/\nhttps://www.suse.com/security/cve/CVE-2026-117930/\nhttps://www.suse.com/security/cve/CVE-2026-117931/\nhttps://www.suse.com/security/cve/CVE-2026-117932/\nhttps://www.suse.com/security/cve/CVE-2026-117933/\nhttps://www.suse.com/security/cve/CVE-2026-117934/\nhttps://www.suse.com/security/cve/CVE-2026-117935/\nhttps://www.suse.com/security/cve/CVE-2026-117936/\nhttps://www.suse.com/security/cve/CVE-2026-117937/\nhttps://www.suse.com/security/cve/CVE-2026-117938/\nhttps://www.suse.com/security/cve/CVE-2026-117939/\nhttps://www.suse.com/security/cve/CVE-2026-117940/\nhttps://www.suse.com/security/cve/CVE-2026-117941/\nhttps://www.suse.com/security/cve/CVE-2026-117942/\nhttps://www.suse.com/security/cve/CVE-2026-117943/\nhttps://www.suse.com/security/cve/CVE-2026-117944/\nhttps://www.suse.com/security/cve/CVE-2026-117945/\nhttps://www.suse.com/security/cve/CVE-2026-117946/\nhttps://www.suse.com/security/cve/CVE-2026-117947/\nhttps://www.suse.com/security/cve/CVE-2026-117948/\nhttps://www.suse.com/security/cve/CVE-2026-117949/\nhttps://www.suse.com/security/cve/CVE-2026-117950/\nhttps://www.suse.com/security/cve/CVE-2026-117951/\nhttps://www.suse.com/security/cve/CVE-2026-117952/\nhttps://www.suse.com/security/cve/CVE-2026-117953/\nhttps://www.suse.com/security/cve/CVE-2026-117954/\nhttps://www.suse.com/security/cve/CVE-2026-117955/\nhttps://www.suse.com/security/cve/CVE-2026-117956/\nhttps://www.suse.com/security/cve/CVE-2026-117957/\nhttps://www.suse.com/security/cve/CVE-2026-117958/\nhttps://www.suse.com/security/cve/CVE-2026-117959/\nhttps://www.suse.com/security/cve/CVE-2026-117960/\nhttps://www.suse.com/security/cve/CVE-2026-117961/\nhttps://www.suse.com/security/cve/CVE-2026-117962/\nhttps://www.suse.com/security/cve/CVE-2026-117963/\nhttps://www.suse.com/security/cve/CVE-2026-117964/\nhttps://www.suse.com/security/cve/CVE-2026-117965/\nhttps://www.suse.com/security/cve/CVE-2026-117966/\nhttps://www.suse.com/security/cve/CVE-2026-117967/\nhttps://www.suse.com/security/cve/CVE-2026-117968/\nhttps://www.suse.com/security/cve/CVE-2026-117969/\nhttps://www.suse.com/security/cve/CVE-2026-117970/\nhttps://www.suse.com/security/cve/CVE-2026-117971/\nhttps://www.suse.com/security/cve/CVE-2026-117972/\nhttps://www.suse.com/security/cve/CVE-2026-117973/\nhttps://www.suse.com/security/cve/CVE-2026-117974/\nhttps://www.suse.com/security/cve/CVE-2026-117975/\nhttps://www.suse.com/security/cve/CVE-2026-117976/\nhttps://www.suse.com/security/cve/CVE-2026-117977/\nhttps://www.suse.com/security/cve/CVE-2026-117978/\nhttps://www.suse.com/security/cve/CVE-2026-117979/\nhttps://www.suse.com/security/cve/CVE-2026-117980/\nhttps://www.suse.com/security/cve/CVE-2026-117981/\nhttps://www.suse.com/security/cve/CVE-2026-117982/\nhttps://www.suse.com/security/cve/CVE-2026-117983/\nhttps://www.suse.com/security/cve/CVE-2026-117984/\nhttps://www.suse.com/security/cve/CVE-2026-117985/\nhttps://www.suse.com/security/cve/CVE-2026-117986/\nhttps://www.suse.com/security/cve/CVE-2026-117987/\nhttps://www.suse.com/security/cve/CVE-2026-117988/\nhttps://www.suse.com/security/cve/CVE-2026-117989/\nhttps://www.suse.com/security/cve/CVE-2026-117990/\nhttps://www.suse.com/security/cve/CVE-2026-117991/\nhttps://www.suse.com/security/cve/CVE-2026-117992/\nhttps://www.suse.com/security/cve/CVE-2026-117993/\nhttps://www.suse.com/security/cve/CVE-2026-117994/\nhttps://www.suse.com/security/cve/CVE-2026-117995/\nhttps://www.suse.com/security/cve/CVE-2026-117996/\nhttps://www.suse.com/security/cve/CVE-2026-117997/\nhttps://www.suse.com/security/cve/CVE-2026-117998/\nhttps://www.suse.com/security/cve/CVE-2026-117999/\nhttps://www.suse.com/security/cve/CVE-2026-118000/\nhttps://www.suse.com/security/cve/CVE-2026-118002/\nhttps://www.suse.com/security/cve/CVE-2026-118003/\nhttps://www.suse.com/security/cve/CVE-2026-118004/\n",
+     "source": {
+      "id": 22,
+      "name": "csaf_suse"
+     },
+     "summary": "Security update for MozillaFirefox"
+    },
+    "id": "028a5dad-f1c3-351d-b5ce-5a61af56356a"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0213ef7c-d5b9-35a9-9202-7afd70a71486",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cpu-rhel9@sha256:94280215f32b262aeef0bd041f38a3717c6124088a3878634cf1eed83e1cf0e0_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "85b5949e-c053-3c42-b817-3dd4ad717c98",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cpu-rhel9@sha256:3c34e011ea4775f73c4f97cb3069529d0d6259ce890a3b6f99e0bc11c4bdf138_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ff107dd3-cfa3-32c6-a242-b934ff86d4e1",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-8869\nCVE-2025-13327\nCVE-2025-69418\nCVE-2026-1703\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114406\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:55:30 AM",
+     "dateUpdated": "Nov 5, 2026, 3:46:05 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (CPU)",
+     "id": "RHSA-2026:94459",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94459\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94459.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.0.8 (CPU) is now available."
+    },
+    "id": "029c5177-35f9-3957-a0c7-291192af3577"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "03909e0d-4085-3f36-bd75-67d1c10f4d58",
+       "product": {
+        "name": "trufflehog-0:3.99.7-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a307a952-2504-3c41-b480-237079de7a1b",
+       "product": {
+        "name": "trufflehog-0:3.99.7-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ba5cc957-7116-3339-ba56-6e654d9563c9",
+       "product": {
+        "name": "openSUSE Tumbleweed",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "eb66078b-1ac0-3519-b402-723c033648f2",
+       "product": {
+        "name": "trufflehog-0:3.99.7-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f1c37c1a-f74a-37ed-8855-e45feb51e0fc",
+       "product": {
+        "name": "trufflehog-0:3.99.7-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 29, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 9:57:14 PM",
+     "description": "trufflehog-3.99.7-1.1 on GA media",
+     "id": "openSUSE-SU-2026:12353-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12353-1.json\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "trufflehog-3.99.7-1.1 on GA media"
+    },
+    "id": "05b0dfc9-c7c5-3945-9f54-5e1a99cce236"
+   },
    {
     "advisory": {
      "advisoryProduct": [
@@ -165,7 +492,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 10:13:35 PM",
-     "dateUpdated": "Nov 3, 2026, 9:53:26 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:09 PM",
      "description": "Red Hat Security Advisory: Red Hat Hardened Images RPMs bug fix and enhancement update",
      "id": "RHSA-2026:87420",
      "references": "https://access.redhat.com/errata/RHSA-2026:87420\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87420.json\n",
@@ -1158,7 +1485,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 5:24:20 PM",
-     "dateUpdated": "Nov 4, 2026, 12:10:54 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:42 PM",
      "description": "Red Hat Security Advisory: .NET 8.0 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92420",
      "references": "https://access.redhat.com/errata/RHSA-2026:92420\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92420.json\n",
@@ -1321,7 +1648,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 1:04:50 PM",
-     "dateUpdated": "Nov 4, 2026, 12:07:14 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:35 PM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90893",
      "references": "https://access.redhat.com/errata/RHSA-2026:90893\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90893.json\n",
@@ -1555,6 +1882,52 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "3008f404-76a8-35b9-b221-17d97ff27b33",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cuda-12.9-rhel9@sha256:74a914a148a2ccb6d3d6027e36e4daac71d967dcd4c9da278d981ad7ea1ce2f2_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6963f797-4b91-37dc-b241-ddfe7f0e414f",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cuda-12.9-rhel9@sha256:d2c50a7e8b5838ccd0a9b2eb961053e536aa06e33872b120b25eeb07dbb7fca8_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f8039bd1-419b-328f-8e2e-900fd5dd53d8",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-44172\nCVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:57:19 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:05 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (CUDA 12.9)",
+     "id": "RHSA-2026:94469",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94469\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94469.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.4.7 (CUDA 12.9) is now available."
+    },
+    "id": "1ea084fd-e1b9-39ee-af83-084e60c90b07"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
        "id": "09787932-3689-30ca-bd8b-e163672208f8",
        "product": {
         "name": "python3.12-brotli-0:1.2.1-1.el9ap.src",
@@ -1684,7 +2057,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 10:18:50 PM",
-     "dateUpdated": "Nov 4, 2026, 12:15:52 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:58 PM",
      "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.6 Product Security and Bug Fix Update",
      "id": "RHSA-2026:94101",
      "references": "https://access.redhat.com/errata/RHSA-2026:94101\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94101.json\n",
@@ -1943,6 +2316,15 @@
        }
       },
       {
+       "id": "93e30867-35a5-3623-a4b2-169ef26dcc58",
+       "product": {
+        "name": "SUSE Liberty Linux 9.6 EMS",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
        "id": "9e57d97e-4bd6-3d87-835c-fc69d61a9c21",
        "product": {
         "name": "libbrotli-0:1.0.9-7.el9_6.3.ppc64le",
@@ -2081,7 +2463,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 3:20:17 PM",
-     "dateUpdated": "Nov 4, 2026, 12:07:15 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:35 PM",
      "description": "Red Hat Security Advisory: brotli security, bug fix, and enhancement update",
      "id": "RHSA-2026:90890",
      "references": "https://access.redhat.com/errata/RHSA-2026:90890\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90890.json\n",
@@ -2334,7 +2716,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Oct 28, 2026, 1:10:31 PM",
-     "dateUpdated": "Nov 3, 2026, 9:53:34 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:39 PM",
      "description": "Red Hat Security Advisory: Red Hat Hardened Images RPMs Security Update",
      "id": "RHSA-2026:91709",
      "references": "https://access.redhat.com/errata/RHSA-2026:91709\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_91709.json\n",
@@ -2560,7 +2942,7 @@
      "aliases": "CVE-2026-15307\nCVE-2026-18660\nCVE-2026-19203\nCVE-2026-56853\nCVE-2026-59646\nCVE-2026-68497\nCVE-2026-73619\nCVE-2026-78667\nCVE-2026-78669\nCVE-2026-78677\nCVE-2026-84445\nCVE-2026-87819\nCVE-2026-89407\nCVE-2026-89425\nCVE-2026-94440\nCVE-2026-96640\nCVE-2026-96643\nCVE-2026-96778\nCVE-2026-97031\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-110856\nCVE-2026-110857\nCVE-2026-110858\nCVE-2026-110859\nCVE-2026-111497\nCVE-2026-111943\nCVE-2026-112390\nCVE-2026-112391\nCVE-2026-112392\nCVE-2026-112393\nCVE-2026-112397\nCVE-2026-112398\nCVE-2026-112399\nCVE-2026-112400\nCVE-2026-112402\nCVE-2026-112403\nCVE-2026-112404\nCVE-2026-112405\nCVE-2026-112406\nCVE-2026-112892\nCVE-2026-112893\nCVE-2026-112894\nCVE-2026-112895\nCVE-2026-112896\nCVE-2026-112897\nCVE-2026-114145\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 9:37:34 PM",
-     "dateUpdated": "Nov 4, 2026, 12:06:41 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:53 PM",
      "description": "Red Hat Security Advisory: Satellite 6.19 security update",
      "id": "RHSA-2026:92861",
      "references": "https://access.redhat.com/errata/RHSA-2026:92861\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92861.json\n",
@@ -2894,7 +3276,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 12:27:37 PM",
-     "dateUpdated": "Nov 4, 2026, 12:07:15 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:34 PM",
      "description": "Red Hat Security Advisory: brotli security, bug fix, and enhancement update",
      "id": "RHSA-2026:90889",
      "references": "https://access.redhat.com/errata/RHSA-2026:90889\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90889.json\n",
@@ -2905,6 +3287,43 @@
      "summary": "An update for brotli is now available for Red Hat Enterprise Linux 10.0 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "2a763e84-3d69-30d1-aa13-d7dc8387be66"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "25b4f2ce-8265-328a-a8e7-2c4a3c5b6754",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-neuron-rhel9@sha256:0f0f817c33b01c41ccc51a040c796a33f411788a649751713beebc135ad7e26d_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "71099bd0-f1b5-348a-adb0-630f63b3e098",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:53:31 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:03 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (Neuron)",
+     "id": "RHSA-2026:94457",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94457\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94457.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.4.7 (Neuron) is now available."
+    },
+    "id": "2a94b0d9-8598-3fd0-9f42-93a87e737d15"
    },
    {
     "advisory": {
@@ -3077,6 +3496,115 @@
      "summary": "An update for thunderbird is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "2ac04893-f4d1-3abe-a366-212cfb9df61a"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0d6a3cbc-81e4-3d56-946a-c415da34c2e8",
+       "product": {
+        "name": "Sifinity Setup",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "14d0463e-fef9-3c31-8f62-f00c8f72a4be",
+       "product": {
+        "name": "Sifinity Go",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "2aa22552-dfb7-3c81-985b-1ec943f0e51b",
+       "product": {
+        "name": "SICHARGE UC",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "2aab1567-4e74-3eee-9253-d44662948e39",
+       "product": {
+        "name": "Heliox Flex Pro",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "2b03930e-5fef-3811-8046-97ecc1e8307e",
+       "product": {
+        "name": "VersiCloud",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "9140ab64-dd55-3a5d-9d92-60820f4ecf66",
+       "product": {
+        "name": "VersiCharge AC Series",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "b7987c32-51ea-327b-a55d-b4e03701d8d2",
+       "product": {
+        "name": "Desigo CC family V8",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "c3f71741-9376-360b-a947-4e39bf6e35b5",
+       "product": {
+        "name": "SICHARGE FLEX",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "e831f736-d058-32d4-97a0-4a57c84bd695",
+       "product": {
+        "name": "Heliox Dual Port 60kW",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "fc5ef18c-2b31-374e-b5ae-837620d28945",
+       "product": {
+        "name": "Desigo CC family V9",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 30, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 4, 2026, 12:00:00 AM",
+     "description": "SSA-045512: Node2Shell Vulnerability in Siemens Products",
+     "id": "SSA-045512",
+     "references": "https://cert-portal.siemens.com/productcert/html/ssa-045512.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-045512.json\n",
+     "source": {
+      "id": 7,
+      "name": "csaf_siemens"
+     },
+     "summary": "On October 21, 2026, the Node.js project released security updates addressing a critical vulnerability in the Brotli decoder bundled with Node.js, commonly referred to as \"Node2Shell\" (tracked as CVE-2026-111497). The vulnerability is an out-of-bounds write that could allow a remote attacker to cause memory corruption and potentially execute arbitrary code. This advisory covers the status of impact of various Siemens software products.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions."
+    },
+    "id": "306f31ed-fcb3-3573-89f9-b181777c5a38"
    },
    {
     "advisory": {
@@ -3608,7 +4136,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 3:17:46 PM",
-     "dateUpdated": "Nov 4, 2026, 12:07:15 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:36 PM",
      "description": "Red Hat Security Advisory: brotli security, bug fix, and enhancement update",
      "id": "RHSA-2026:90914",
      "references": "https://access.redhat.com/errata/RHSA-2026:90914\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90914.json\n",
@@ -3781,7 +4309,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 6:07:27 PM",
-     "dateUpdated": "Nov 3, 2026, 9:53:37 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:56 PM",
      "description": "Red Hat Security Advisory: Red Hat build of Quarkus 3.27.6.SP2 release and security update",
      "id": "RHSA-2026:93908",
      "references": "https://access.redhat.com/errata/RHSA-2026:93908\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93908.json\n",
@@ -4638,7 +5166,7 @@
      "aliases": "CVE-2026-101911\nCVE-2026-102276\nCVE-2026-102277\nCVE-2026-102278\nCVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106071\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 2:26:32 PM",
-     "dateUpdated": "Nov 4, 2026, 12:15:25 AM",
+     "dateUpdated": "Nov 5, 2026, 3:58:27 PM",
      "description": "Red Hat Security Advisory: nodejs:24 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92376",
      "references": "https://access.redhat.com/errata/RHSA-2026:92376\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92376.json\n",
@@ -5296,7 +5824,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 3:38:12 AM",
-     "dateUpdated": "Nov 4, 2026, 12:15:26 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:52 PM",
      "description": "Red Hat Security Advisory: .NET 8.0 security update",
      "id": "RHSA-2026:93455",
      "references": "https://access.redhat.com/errata/RHSA-2026:93455\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93455.json\n",
@@ -5307,6 +5835,70 @@
      "summary": "An update for .NET 8.0 is now available for Red Hat Enterprise Linux 10.0 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "43cec61c-3799-3877-a255-75c1771432fe"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "451dd79a-138a-366f-b3fe-5fe5dfc2a7cb",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cpu-rhel9@sha256:87d149e24b06d051bade82c31654df5affcde6320c8dc39e8536ce29478d813b_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "53391048-0d04-3acd-9901-3c99af3ae324",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cpu-rhel9@sha256:441c49ccb09fe1239fb6ace6a4cda2a3d53469dfef5a2a5d6a736fe21df894e8_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "54a45d10-afc3-394f-999e-94b6315c97f9",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cpu-rhel9@sha256:a76b9556e65ce0dc0e1e52377acb355b8ce7e2f621a36c0fef07a9062e42f7cb_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "83ce14ce-a15a-3e21-8e68-d9f583e28e1b",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "de0e763f-bcb6-3ad0-bd70-5a536db065a0",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cpu-rhel9@sha256:0e7b9473fc5d111cfee36d97fb23a26f612ec4d58b22ec53c2e7a919db4ee5b6_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-44172\nCVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:54:38 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:00 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (CPU)",
+     "id": "RHSA-2026:94455",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94455\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94455.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.4.7 (CPU) is now available."
+    },
+    "id": "460e221d-d1e4-3f52-932c-0c19754a7578"
    },
    {
     "advisory": {
@@ -5480,6 +6072,70 @@
      "summary": "Palo Alto Networks has published [1] information on a vulnerability in PAN-OS related to the Node2Shell vulnerability. This advisory lists the related Siemens Industrial products affected by this vulnerability.\n\nCustomers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications.\n\n[1] https://security.paloaltonetworks.com/CVE-2026-111497"
     },
     "id": "4cbaf4c6-f5ba-3a95-a943-97337601fbd0"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "26d9bfcb-ac91-3c34-984a-9d36f885c679",
+       "product": {
+        "name": "registry.redhat.io/discovery/discovery-ui-rhel9@sha256:84419ba38b148dfd0faf60bc6a604f1cb85878854520bf59f0514acc6e0fb49e_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c47eba4d-de24-3fc5-b2a3-dd26f335a0ee",
+       "product": {
+        "name": "registry.redhat.io/discovery/discovery-ui-rhel9@sha256:2348157c3e6fbea084390c0bee502b8efecad3387b97cdca790e8ee725b93ce0_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e0932ffe-d495-3334-931d-d459af5f9414",
+       "product": {
+        "name": "registry.redhat.io/discovery/discovery-server-rhel9@sha256:f61cac028ee7bb6606b6baad72ed5018bf80622422308279d27669c259de5d73_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f7fe6fd3-bba2-3d13-b733-fda733c81a69",
+       "product": {
+        "name": "registry.redhat.io/discovery/discovery-server-rhel9@sha256:ca92ccbc631ef611a3bdb41ce782955ec386ebe150a8cdaefadc1237f6b79ba0_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fbfd7116-30cd-390e-a91b-7c69a6d8bf42",
+       "product": {
+        "name": "Red Hat Discovery 2",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-8932\nCVE-2026-12345\nCVE-2026-19445\nCVE-2026-19553\nCVE-2026-34743\nCVE-2026-59997\nCVE-2026-59998\nCVE-2026-60000\nCVE-2026-77214\nCVE-2026-88806\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-102633\nCVE-2026-111497\nCVE-2026-114136\nCVE-2026-114137\nCVE-2026-114138\nCVE-2026-114406\nCVE-2026-118669\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 4, 2026, 12:36:55 AM",
+     "dateUpdated": "Nov 5, 2026, 4:06:19 PM",
+     "description": "Red Hat Security Advisory: A Subscription Management tool for finding and reporting Red Hat product usage",
+     "id": "RHSA-2026:94802",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94802\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94802.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "A Subscription Management tool for finding and reporting Red Hat product usage"
+    },
+    "id": "4dd6c8ac-e824-32bd-8ebb-68511ff4b593"
    },
    {
     "advisory": {
@@ -5929,7 +6585,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 29, 2026, 6:23:04 PM",
+     "dateUpdated": "Nov 4, 2026, 9:56:54 PM",
      "description": "brotli-1.2.1-1.1 on GA media",
      "id": "openSUSE-SU-2026:12232-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12232-1.json\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
@@ -6262,6 +6918,52 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "5931d477-0f2a-31fa-aba9-a4e4940349a2",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7f0e66d4-12a7-3209-a225-bd4edf54bf99",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cuda-rhel9@sha256:7e5aaa3fbcdf6a661054c9d368e0e339b287eba03b1ed67ef84c2a26945396d2_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9ef752d7-6e88-3590-ad23-b399ea40ec36",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cuda-rhel9@sha256:c3a123bb2d79b093d366b5ca9dfb0f0e0536dbe8b2bcb1b7c618f979e1580452_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-8869\nCVE-2025-13327\nCVE-2025-69418\nCVE-2026-1703\nCVE-2026-3219\nCVE-2026-6357\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114109\nCVE-2026-114110\nCVE-2026-114406\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 9:01:44 AM",
+     "dateUpdated": "Nov 5, 2026, 3:46:08 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (CUDA)",
+     "id": "RHSA-2026:94476",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94476\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94476.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.0.8 (CUDA) is now available."
+    },
+    "id": "53c03ab9-509b-3614-ad31-67975fc8fe8b"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
        "id": "0b3acf99-dd6f-375b-b783-ad2bbb617dd5",
        "product": {
         "name": "brotli-0:1.0.6-4.el8_4.1.x86_64",
@@ -6409,7 +7111,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 2:29:14 PM",
-     "dateUpdated": "Nov 4, 2026, 12:07:14 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:35 PM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90892",
      "references": "https://access.redhat.com/errata/RHSA-2026:90892\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90892.json\n",
@@ -6420,6 +7122,43 @@
      "summary": "An update for brotli is now available for Red Hat Enterprise Linux 8.4 Advanced Mission Critical Update Support and Red Hat Enterprise Linux 8.4 Extended Update Support Long-Life Add-On.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "53fd12cf-5648-3c12-bf68-d5d3ee743d2f"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "54ddc01f-d27f-3744-94ee-8c4d8821da9c",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-gaudi-rhel9@sha256:5f1bf0f8ad15bf3e2d7a44b69ed376ded873807c9bd278e2c572bee2b8095e2d_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d609628e-ca8a-3a38-a535-6b9cff100026",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.5",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:55:30 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:06 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (Gaudi)",
+     "id": "RHSA-2026:94460",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94460\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94460.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.5.6 (Gaudi) is now available."
+    },
+    "id": "5bd8c393-7106-3e83-bde8-bae2a3d682c6"
    },
    {
     "advisory": {
@@ -6473,7 +7212,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 5:09:41 PM",
-     "dateUpdated": "Nov 3, 2026, 9:53:38 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:57 PM",
      "description": "Red Hat Security Advisory: Red Hat OpenShift Dev Spaces 3.31.2 RHEL 10 Container Release.",
      "id": "RHSA-2026:93984",
      "references": "https://access.redhat.com/errata/RHSA-2026:93984\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93984.json\n",
@@ -6816,7 +7555,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 7:45:54 PM",
-     "dateUpdated": "Nov 4, 2026, 12:07:13 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:36 PM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90449",
      "references": "https://access.redhat.com/errata/RHSA-2026:90449\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90449.json\n",
@@ -6827,6 +7566,52 @@
      "summary": "An update for brotli is now available for Red Hat Enterprise Linux 10.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "5ce4e8ea-8130-3b62-a237-c527483c2996"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "54d05471-7184-30f7-a4d4-97cb0209efef",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cuda-13.0-rhel9@sha256:c789d0691a8b105daa87265044d08b8bdee3ecb0a13b6c3ab9bfcd0705d0ece8_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6298e1a4-476e-3d38-8944-da1cea4dad31",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cuda-13.0-rhel9@sha256:b878249de49310a719d4243b2bc87096bb133c2339eca0edd324db11afb2bbdc_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eaec82b4-7e10-38c3-bf13-3884eca69ba6",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-69418\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-44172\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114406\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:57:03 AM",
+     "dateUpdated": "Nov 5, 2026, 3:46:06 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (CUDA 13.0)",
+     "id": "RHSA-2026:94468",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94468\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94468.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.4.7 (CUDA 13.0) is now available."
+    },
+    "id": "5f5e7901-2733-366c-8b3b-86d62d79095a"
    },
    {
     "advisory": {
@@ -7008,6 +7793,98 @@
      "summary": "An update for firefox is now available for Red Hat Enterprise Linux 9.2 Update Services for SAP Solutions.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "60778872-7e28-3adf-ae0e-023600073484"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "4014c0e2-4fb0-35a5-abec-334acea17571",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.5",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "537355ca-0498-3e76-aa47-34bafa01e1b3",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-spyre-rhel9@sha256:dfd7ad2c1ff32baad327786b0ceab184aaa27a8ef1dbd8f1fdf98cef49d89ef9_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6836aeef-5bf0-3482-8da0-5b654a766b40",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-spyre-rhel9@sha256:c85ca0ad750650605c4c5aa26dfc204e9100ebbbda1c5d5c55ee393ccd6bda4e_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7d2ecc2b-4aa6-39fc-8805-07bf31f6211a",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-spyre-rhel9@sha256:c864783ac6783307f62ddc246da3a1ed0d07d6a2386e107e001bb6a5aa6b096c_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:58:45 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:06 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (Spyre)",
+     "id": "RHSA-2026:94473",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94473\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94473.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.5.6 (Spyre) is now available."
+    },
+    "id": "61b493c7-be0c-3444-b5c4-543211094c2c"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "60624bac-ba3b-312d-afad-96595233ddaf",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "92bbf3b0-6cb1-322f-acb3-1ded05c17106",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-tpu-rhel9@sha256:ad7fc22ca583160a6857b1d0408913bd0ce2f7d7941aae665271746a259ad165_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:53:44 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:59 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (TPU)",
+     "id": "RHSA-2026:94452",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94452\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94452.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.4.7 (TPU) is now available."
+    },
+    "id": "632fe485-9a5a-348a-8b38-c2630e304064"
    },
    {
     "advisory": {
@@ -7720,7 +8597,7 @@
      "aliases": "CVE-2026-101911\nCVE-2026-102276\nCVE-2026-102277\nCVE-2026-102278\nCVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106071\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 10:34:48 PM",
-     "dateUpdated": "Nov 4, 2026, 12:15:25 AM",
+     "dateUpdated": "Nov 5, 2026, 3:58:27 PM",
      "description": "Red Hat Security Advisory: nodejs:24 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92378",
      "references": "https://access.redhat.com/errata/RHSA-2026:92378\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92378.json\n",
@@ -8387,7 +9264,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 6:30:26 PM",
-     "dateUpdated": "Nov 4, 2026, 12:10:52 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:42 PM",
      "description": "Red Hat Security Advisory: .NET 8.0 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92428",
      "references": "https://access.redhat.com/errata/RHSA-2026:92428\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92428.json\n",
@@ -8498,6 +9375,107 @@
      "summary": "An update for firefox is now available for Red Hat Enterprise Linux 7 Extended Lifecycle Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "71179bd3-1cc2-3651-b47e-ac67997354bd"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "045f56f9-a37f-36f0-b929-377ee35c5ba9",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.5",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "077442b0-fb82-3a9d-88f6-1e6009e4e1d9",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-rocm-7.14-rhel9@sha256:b76c02544928444c73028802d9923879b29cf70adf813ff766d11b682dfa7902_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:58:03 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:09 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (ROCm 7.14)",
+     "id": "RHSA-2026:94471",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94471\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94471.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.5.6 (ROCm 7.14) is now available."
+    },
+    "id": "746d7c04-ae51-3196-90f9-b2a9824960fa"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "7eb73e59-e747-3bf9-98f1-3770f2c6c77a",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.5",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aeb74714-e185-3c8c-ae18-bc702ca3c514",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cpu-rhel9@sha256:574c47808b4b6e83c726bd03a9d9a6f95ddeac994dc80c4d51c9c0de6c0ad3d8_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b30a9ffb-1167-372a-962c-4f91ebb0a2e2",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cpu-rhel9@sha256:21b4fc7f98bc403b3c399d82fbdba6c73e4ed6cf0ae964d1ada68dad1533b224_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fed9fbf2-a3c5-35ff-a552-3436918a5f71",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cpu-rhel9@sha256:2e59d365bafd296d278fb19616be5b96361fb8b6c89aa6d0bf496f9b1f28f73e_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "feee82bc-234b-3243-b4da-c9f7fe81dac4",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cpu-rhel9@sha256:7070f6e2283dd4b24bb6b9934872b2258e692980637adf35d56d9ea6465a1f27_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:55:54 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:07 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (CPU)",
+     "id": "RHSA-2026:94462",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94462\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94462.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.5.6 (CPU) is now available."
+    },
+    "id": "74a179b8-3e4a-3f8c-b8d1-41b455e48d27"
    },
    {
     "advisory": {
@@ -8804,7 +9782,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 28, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 29, 2026, 6:23:33 PM",
+     "dateUpdated": "Nov 4, 2026, 9:57:10 PM",
      "description": "ghostscript-10.08.0-3.1 on GA media",
      "id": "openSUSE-SU-2026:12322-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12322-1.json\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
@@ -8815,6 +9793,43 @@
      "summary": "ghostscript-10.08.0-3.1 on GA media"
     },
     "id": "78232b27-ecf0-3552-8ae5-a13052d3b672"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "750e64ca-67c2-3cb2-af30-16cd2cef9fbd",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cb6c7ead-63bb-312d-99dd-d5770516bb2c",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-gaudi-rhel9@sha256:b17ec972197d7c40d49d00f8e399147ebf15de6de745fbb5e7480085cc1847cf_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:56:01 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:03 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (Gaudi)",
+     "id": "RHSA-2026:94464",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94464\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94464.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.4.7 (Gaudi) is now available."
+    },
+    "id": "7e57e461-23fd-3bf1-85fd-9d0c4b7d8c39"
    },
    {
     "advisory": {
@@ -9507,7 +10522,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 10:56:52 PM",
-     "dateUpdated": "Nov 4, 2026, 12:07:16 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:46 PM",
      "description": "Red Hat Security Advisory: .NET 8.0 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92492",
      "references": "https://access.redhat.com/errata/RHSA-2026:92492\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92492.json\n",
@@ -12424,7 +13439,7 @@
      "aliases": "CVE-2023-54404\nCVE-2026-11822\nCVE-2026-11824\nCVE-2026-13717\nCVE-2026-16221\nCVE-2026-17106\nCVE-2026-18446\nCVE-2026-25681\nCVE-2026-26007\nCVE-2026-27136\nCVE-2026-33814\nCVE-2026-33818\nCVE-2026-39821\nCVE-2026-39834\nCVE-2026-41178\nCVE-2026-42502\nCVE-2026-45819\nCVE-2026-45820\nCVE-2026-56853\nCVE-2026-56858\nCVE-2026-56859\nCVE-2026-56860\nCVE-2026-56862\nCVE-2026-57516\nCVE-2026-59951\nCVE-2026-63209\nCVE-2026-63374\nCVE-2026-65898\nCVE-2026-67312\nCVE-2026-67314\nCVE-2026-67320\nCVE-2026-67321\nCVE-2026-69097\nCVE-2026-69153\nCVE-2026-73086\nCVE-2026-73088\nCVE-2026-73089\nCVE-2026-73643\nCVE-2026-75838\nCVE-2026-75899\nCVE-2026-75931\nCVE-2026-75975\nCVE-2026-76172\nCVE-2026-76844\nCVE-2026-77301\nCVE-2026-78679\nCVE-2026-82397\nCVE-2026-83663\nCVE-2026-84375\nCVE-2026-84445\nCVE-2026-85393\nCVE-2026-85525\nCVE-2026-87018\nCVE-2026-90711\nCVE-2026-91990\nCVE-2026-92599\nCVE-2026-93690\nCVE-2026-93749\nCVE-2026-94637\nCVE-2026-96640\nCVE-2026-96643\nCVE-2026-96644\nCVE-2026-96778\nCVE-2026-96804\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-102267\nCVE-2026-102271\nCVE-2026-102272\nCVE-2026-102276\nCVE-2026-102278\nCVE-2026-102282\nCVE-2026-104150\nCVE-2026-104851\nCVE-2026-105922\nCVE-2026-106445\nCVE-2026-106446\nCVE-2026-109156\nCVE-2026-109383\nCVE-2026-109527\nCVE-2026-109829\nCVE-2026-109869\nCVE-2026-109956\nCVE-2026-110856\nCVE-2026-110857\nCVE-2026-110858\nCVE-2026-110859\nCVE-2026-111064\nCVE-2026-111066\nCVE-2026-111497\nCVE-2026-112390\nCVE-2026-112391\nCVE-2026-112392\nCVE-2026-112397\nCVE-2026-112399\nCVE-2026-112400\nCVE-2026-112402\nCVE-2026-112404\nCVE-2026-112405\nCVE-2026-112893\nCVE-2026-112894\nCVE-2026-112895\nCVE-2026-112896\nCVE-2026-112897\nCVE-2026-112940\nCVE-2026-114145\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 3:22:35 PM",
-     "dateUpdated": "Nov 4, 2026, 1:44:51 AM",
+     "dateUpdated": "Nov 5, 2026, 11:43:38 AM",
      "description": "Red Hat Security Advisory: RHOAI 3.4.6 - Red Hat OpenShift AI",
      "id": "RHSA-2026:92510",
      "references": "https://access.redhat.com/errata/RHSA-2026:92510\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92510.json\n",
@@ -13001,7 +14016,7 @@
      "aliases": "CVE-2025-12999\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 5:25:28 PM",
-     "dateUpdated": "Nov 4, 2026, 3:52:45 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:57 PM",
      "description": "Red Hat Security Advisory: Red Hat OpenShift Dev Spaces 3.31.2 Release.",
      "id": "RHSA-2026:93987",
      "references": "https://access.redhat.com/errata/RHSA-2026:93987\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93987.json\n",
@@ -13218,7 +14233,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 2:15:59 PM",
-     "dateUpdated": "Nov 4, 2026, 12:07:15 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:35 PM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90891",
      "references": "https://access.redhat.com/errata/RHSA-2026:90891\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90891.json\n",
@@ -13229,6 +14244,80 @@
      "summary": "An update for brotli is now available for Red Hat Enterprise Linux 8.8 Update Services for SAP Solutions and Red Hat Enterprise Linux 8.8 Telecommunications Update Service.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "8e38a8dd-975d-318a-8114-b04bf0002f4d"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "82b8e84e-c10f-35e9-8dba-df65570a9216",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-rubin-rhel9@sha256:20f940dc9274c9b51874d6a23263b3252c0f7a578e066e254e2a72706bc487c8_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ef309793-d3fd-391c-bd72-559a742440f2",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.5",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:56:46 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:05 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (Rubin)",
+     "id": "RHSA-2026:94467",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94467\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94467.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.5.6 (Rubin) is now available."
+    },
+    "id": "90bb5612-5213-3e09-8ede-46db1d30189d"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "6aa51b1e-8a90-36eb-9cd8-9857486d8ac9",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-neuron-rhel9@sha256:47a833c2e51401401452ff1f5a08d330db51841ece28b7892ea865c9ced8b7eb_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c985a224-631c-3e7f-96a4-b7ab95ac9ccd",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.5",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:53:50 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:59 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (Neuron)",
+     "id": "RHSA-2026:94453",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94453\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94453.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.5.6 (Neuron) is now available."
+    },
+    "id": "93d6a14b-240a-3f48-8aa3-1fd59441156f"
    },
    {
     "advisory": {
@@ -13624,7 +14713,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 10:08:33 PM",
-     "dateUpdated": "Nov 4, 2026, 12:07:12 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:32 PM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90495",
      "references": "https://access.redhat.com/errata/RHSA-2026:90495\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90495.json\n",
@@ -14381,7 +15470,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 4:37:46 AM",
-     "dateUpdated": "Nov 4, 2026, 12:15:26 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:53 PM",
      "description": "Red Hat Security Advisory: .NET 8.0 security update",
      "id": "RHSA-2026:93456",
      "references": "https://access.redhat.com/errata/RHSA-2026:93456\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93456.json\n",
@@ -14392,6 +15481,187 @@
      "summary": "An update for .NET 8.0 is now available for Red Hat Enterprise Linux 9.4 Update Services for SAP Solutions.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "97ddb2ca-2b51-33fb-95cf-75c7d68b5c6e"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "03753b3d-153b-3016-a837-acc0540888c2",
+       "product": {
+        "name": "nodejs22-0:22.23.4-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "190d0713-2a7e-3953-855a-3cf7956f2977",
+       "product": {
+        "name": "nodejs22-devel-0:22.23.4-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1c027be4-5a8b-3fd8-8b3f-f12885c8d44e",
+       "product": {
+        "name": "nodejs22-devel-0:22.23.4-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "21478e84-e173-3e66-9515-33d6d848e87e",
+       "product": {
+        "name": "nodejs22-0:22.23.4-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2344661d-6cb3-3d11-8443-f4733ae5bf9a",
+       "product": {
+        "name": "nodejs22-devel-0:22.23.4-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2fd4ac57-b180-3cbd-8508-17dd5c2c479a",
+       "product": {
+        "name": "npm22-0:22.23.4-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "30fd426a-48b0-3ac6-9b39-9a084753a4c6",
+       "product": {
+        "name": "corepack22-0:22.23.4-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3ad779f9-3960-3ac2-90c6-78a58942311e",
+       "product": {
+        "name": "npm22-0:22.23.4-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4f331cd3-1ba5-320e-98a1-a1ec93ba00d6",
+       "product": {
+        "name": "nodejs22-0:22.23.4-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7b58a14f-7cab-38f9-b16d-2bf839aca647",
+       "product": {
+        "name": "nodejs22-docs-0:22.23.4-160000.1.1.noarch",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8c976093-cd1d-3dd0-9550-3e5d5564df26",
+       "product": {
+        "name": "nodejs22-0:22.23.4-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9717ec36-f995-303b-91eb-fe77725cad5a",
+       "product": {
+        "name": "npm22-0:22.23.4-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a348f114-d0e1-3ea1-b21b-8360da0854a4",
+       "product": {
+        "name": "corepack22-0:22.23.4-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "aa77c9d6-917b-3762-bf76-f92d816b4927",
+       "product": {
+        "name": "corepack22-0:22.23.4-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ae3a1679-7225-3bc4-97d7-b80f8ac8b219",
+       "product": {
+        "name": "openSUSE Leap 16.0",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b32bccac-0811-3729-b35e-c96771d87465",
+       "product": {
+        "name": "nodejs22-devel-0:22.23.4-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ecfd221b-d841-3437-af6d-067599731cec",
+       "product": {
+        "name": "npm22-0:22.23.4-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f48b32ac-bde7-3975-bd9a-c9975899f48f",
+       "product": {
+        "name": "corepack22-0:22.23.4-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-105481\nCVE-2026-105482\nCVE-2026-106069\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 30, 2026, 1:44:42 PM",
+     "dateUpdated": "Nov 4, 2026, 9:58:31 PM",
+     "description": "Security update for nodejs22",
+     "id": "openSUSE-SU-2026:22210-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_22210-1.json\nhttps://bugzilla.suse.com/1286261\nhttps://bugzilla.suse.com/1286561\nhttps://bugzilla.suse.com/1286563\nhttps://bugzilla.suse.com/1286564\nhttps://bugzilla.suse.com/1286565\nhttps://bugzilla.suse.com/1286566\nhttps://bugzilla.suse.com/1286567\nhttps://bugzilla.suse.com/1286570\nhttps://www.suse.com/security/cve/CVE-2026-105481/\nhttps://www.suse.com/security/cve/CVE-2026-105482/\nhttps://www.suse.com/security/cve/CVE-2026-106069/\nhttps://www.suse.com/security/cve/CVE-2026-106072/\nhttps://www.suse.com/security/cve/CVE-2026-106073/\nhttps://www.suse.com/security/cve/CVE-2026-106074/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "Security update for nodejs22"
+    },
+    "id": "9bd4f723-65dd-392e-9ad6-72439d6bb807"
    },
    {
     "advisory": {
@@ -14509,7 +15779,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 6:07:42 PM",
-     "dateUpdated": "Nov 3, 2026, 9:53:36 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:56 PM",
      "description": "Red Hat Security Advisory: Red Hat build of Quarkus 3.33.4.SP2 release and security update",
      "id": "RHSA-2026:93902",
      "references": "https://access.redhat.com/errata/RHSA-2026:93902\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93902.json\n",
@@ -14520,6 +15790,592 @@
      "summary": "An update is now available for Red Hat build of Quarkus.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for the vulnerability. For more information, see the CVE link in the References section."
     },
     "id": "9dde68ee-426a-38b8-a266-3042e6589755"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0192a3d5-caaa-3bff-b089-2de188979f7b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/de-supported-rhel9@sha256:6fc01ffa6c8ac5b7286b32f5988e178676394d0758d8642993a02208d6196203_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "024ef1ef-874a-31f3-aa9b-ef4d0c150ca6",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/gateway-rhel9@sha256:60dba0a217daa47ddc39e09e68c86ac2d186836e7b62042736ba6899f5313f03_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "060f62ac-353e-334d-a0bd-bb5b96d6234c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/eda-controller-rhel9@sha256:bb5769aa8e9a4db8911fbf2499ba496b8ff7d5ca9cb5c566981501ab07e620da_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "08db2428-79d0-3d57-aaad-7a5a85a7a065",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/eda-controller-rhel9-operator@sha256:442ab6abfaad51f26ac3b3dea40c381b806fc1c97fc7bef6077684a9a8484dd4_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0990da37-09d3-38f9-bbe3-a2f7992d98f4",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ansible-devspaces-rhel9@sha256:0c8790a45f65c446664bd2d73f91b36d2388b9518c2af55015b3ffcfc77c50cc_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0cd04d0d-609c-3170-b676-9b73f39f22c3",
+       "product": {
+        "name": "Red Hat Ansible Automation Platform 2.7",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0cf2ee4d-d233-3b68-bfff-1061bdebb1cb",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/de-minimal-rhel9@sha256:157b8a5c7e1aabecbd08b86191703f4d373c853c85c10bcc76d33796e6a685de_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1359770b-37d4-3546-bd85-f7c24b93228d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/controller-rhel9@sha256:76f6e60104f81fdc8376abe62e9a793d617abc366ddd96bf1621c4c3f878bda9_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "13a7fcec-3f80-3307-bb46-f927a326c948",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ee-supported-rhel9@sha256:478010307f8794cf96dac319201f81dfeba5d1b8ab826387dd9781bc41849bd0_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "14fa61a2-d2aa-38f2-82d6-50f1c730d9fd",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/platform-resource-runner-rhel9@sha256:7c10cdee893092df25ed4ae532a3aee3f44d5cd2897acdfd9937fdc8a67625d2_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "175f3d1b-5c6b-352c-b3f3-a169e4b43edc",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/mcp-server-rhel9@sha256:67cc37cddb6f8ded2eb0c7a4c2636e09d5e0e9efd190b3a6d7bcbecfccbb3499_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1bd076bc-fb87-3c0f-9808-303d3934a786",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ee-minimal-rhel9@sha256:aea45867ebbfcb57bba69b3b6e33542dbbe95f237dfdf35e8b68773b4f3268f8_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "28349ec0-0bf1-3847-848d-cfcbc13755a7",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/aap-must-gather-rhel9@sha256:447f1b38d66a7c482cfb196134711a37703b46cc0e2373ce7e6894d403df3aba_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2c68ca22-460e-3903-8f24-9dfd62fe32db",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/hub-web-rhel9@sha256:8889c4be4fdae876ba2f7004899d98694a2177a522944aa9235d582251b5fd2d_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2f1847c2-9ccf-3a19-8142-7f0e44a0cced",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/eda-controller-rhel9-operator@sha256:0843475c56d151cf3b3bf530c6445c468dbcd41506445ef4149ea348f0122ddb_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "31ef5b97-6b30-3021-95f0-c036055adfe2",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/gateway-proxy-rhel9@sha256:9dd235581ac133d2fd38950615e0ff9e337aa46f39028e9d50715c61c17d23aa_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "32e59ff2-0a11-3924-b835-40641b457937",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ee-supported-rhel9@sha256:366158df801b58326fcffc597118920fd4bbac1d8a71236a7212e0b7db6cb440_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "349884d9-2fad-3b4d-80d4-4f6f0795b80f",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/lightspeed-chatbot-rhel9@sha256:688e6383f922d4a91b808020e7327e6d41f40da0bc80b2c98377dc09178400d1_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "37a60b4a-1470-3f97-a9ae-105637000317",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/de-minimal-rhel9@sha256:3923c9066044d292a7750b296aaad3377506bdd9f8825da9a3051741ba9380fd_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "41343adc-6915-32be-973b-d940c2e9c330",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/eda-controller-ui-rhel9@sha256:5b87f826c427e48107d002faf87fdff0d944f651e76d9c2c03d83749c91b51b9_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "46f5ac7e-cf88-3da2-b7d8-b78ccf86a87c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/lightspeed-rhel9-operator@sha256:708a627c68d05a3574f44caaabf109a616fe999e7f17104a958601b726e8e1a7_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "472b4ffd-de98-3be4-9646-37374d2670c4",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/lightspeed-chatbot-rhel9@sha256:a29d4ee1fac07efd62f7dc4b2f5d7fc4b1a973b023add8c183b39e2de4ccb7a6_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "49b7a71b-c3b4-39c1-9b76-1a82928ed6a9",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/eda-controller-ui-rhel9@sha256:f4b4a83c492e50bf472cf73e440583a1f352b3df578df926e95af9d7492d4ef0_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4abcd2a5-6731-31f2-a039-1a15b36464fe",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/mcp-tools-rhel9@sha256:74e5b337aec28f567feff96671713c4ec268d229ace53d4ead7bded4397c877d_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4ae5a8bb-0811-31fc-bd74-f73d38b3ae0b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/de-supported-rhel9@sha256:5b620371f6098799cfe8bf3a73938fc1aebd064dfe7d8ed4a63c038d6ee11595_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4af726ce-6d76-3b87-85b9-6ef280d70ce6",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/metrics-service-rhel9@sha256:4ab75ea18fbd8b2c99c73d7138e4ad168068ea6f125baaee0b20d89a99f9d8c6_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4eb1f53b-5c56-3175-9338-6f53b1628c98",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ansible-dev-tools-rhel9@sha256:7221a03a2387772bd41c984b96b507067703e727d79e55ccb213f704e3bd7ccd_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "57e56805-8321-3f0a-9e9d-e5f2fe5b7a3f",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/controller-rhel9@sha256:f933c3f1435f03edc4ab66193c1a60f9fcb6ac74b1dc72bf29d9ac32ca555330_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "595de08b-169c-3f7c-a180-a967014aae94",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/gateway-rhel9-operator@sha256:2db373e03ed2b81407a39d8ea44d3cec9372f457b8e0ac19bc4f9f8e5d7216ae_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "622b1a76-6833-3ef6-b3ec-272d15a9271c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/lightspeed-rhel9-operator@sha256:2bfb002b1e80d53c56e4cafb4e863bf39190a9e4a2cad86e7515f64f8e25eed3_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "64453327-3682-3ea9-8439-8a2a18a519c1",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/hub-web-rhel9@sha256:071007c50f8f5aaeb5a6b723ecc9be0105d92852bc3a67feaaa78cd4653932e9_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "666e7b23-7116-3a10-a96c-ffd0dbc40a18",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/platform-resource-rhel9-operator@sha256:fdf772d6d993be4820dd2fa5632815f45f9059f1ddccd95c777a1c9b87d56683_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "667cb878-b7d1-34fd-9314-f557718cdeb0",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/platform-resource-runner-rhel9@sha256:e761fa592b9095754e75c901b9ffd0f36cd222e2be5101dd4abba36c3aa704b9_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "66ab8ed4-e5f2-3ef9-b6a8-1cff7b9d2cd2",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/lightspeed-rhel9@sha256:e104cb63a860f50bbb20b28bdd8ecb1d3d2681f221b129cbc7bf9ccf37f2af2f_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "70ead59e-4250-3c14-910a-4ce15edf557d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/hub-rhel9-operator@sha256:0276c37ebd303275a60b63ed50399006b79ad37367fbcc85ba4bfa67363d140e_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "976e12e0-f2dc-3ba1-b5c5-77d8ae4c09b5",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/gateway-rhel9@sha256:4c9596ea7f2984880603df72b61e7ebef6307c14d574af098082f336729a9f09_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9da613ab-3e5b-39f2-a039-d9bebaf30599",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/receptor-rhel9@sha256:eb0e4d38923de37555ceb34581c71265bfe4e0385e3a451d6f3b14ce1b6b4921_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9ff04c38-27e4-3a01-8104-3e9243293f93",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/metrics-service-rhel9@sha256:66302b71997be77e59f76e879c72031d266c4424a5ae14e9b85076400e1ad50e_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a3d24022-33a0-3a4c-838e-62cd95b81c12",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform/platform-operator-bundle@sha256:d77a3f1146eeaaaf605888fb55010efb51921a14d0cf3fe2fcc8c0cfcee10a45_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a44cc1e7-6114-3468-af15-6b9b2bc662ef",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/hub-rhel9@sha256:6c816cfd8e8599a790f0ccb1a04ad0b22a2b904dabbf4ef1308df347637a4f79_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a8af0430-127f-340d-b009-01d54dfbeb05",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/mcp-server-rhel9@sha256:ae5890520700b0da398abbe5af810ff1b0f6097f3d304a111230c78585813a51_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b0eed9c5-a30f-37b1-8d05-31177ce322d5",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ansible-builder-rhel9@sha256:adf89da03d0c8be66b3b31a3d4cd08b8be09ae9c8c0aa57f3cb6f25cdd9639f7_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b3637381-5b52-3542-b0ea-67ba21e93105",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/platform-resource-rhel9-operator@sha256:fbf6947276873dbce1c5e0fbcd54dbe09b76392ac6b46128d3d556293863548a_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bc4e97ce-8a5b-3bee-995e-1db39d157e00",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/gateway-rhel9-operator@sha256:fa53df9793f7fba06794e97a2492f41915cd2b47f063dd07d74cdecb101c7cef_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c7c294a9-ba9d-3be8-88b4-26760387ebe7",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ee-minimal-rhel9@sha256:9a432805215d851b924fd81c8b20e49457028e2ce24dd068fc96a33accfc8b32_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c7df9320-1c4c-3f9f-bef0-2bac8012835b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/controller-rhel9-operator@sha256:c602a36388221fce1f467cb0cab5cb817d95a60a45cae0903119910b66b49e71_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ca77b35d-a2d4-37a3-84bd-b696567d1514",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform/platform-operator-bundle@sha256:ae3487c4739f0356309b655df79faa41c39386e6e53580907971fb83105c3cd5_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cea08528-6d9e-3857-9e25-c8982c7158b2",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/hub-rhel9@sha256:eca202a49cac14a841ffb833a9a981ce31465725514035f59e61fd58ab8482bd_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d4d34ede-3c69-3392-b6bd-5122e755ae76",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/eda-controller-rhel9@sha256:6f02a9f47cbc94681228c1762e240ba65f1388c9bd9d753e88e4106817174b1b_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d879b831-a4c7-3a01-a6b9-ac67f577c1f3",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/receptor-rhel9@sha256:d27b959adb15e030bff6c99004c13b0ca7250e028ea18d468586008bc19c9172_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dae13399-25d1-353c-82d7-ea9ded9f0cb3",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/lightspeed-rhel9@sha256:8a5f22d9ba1ab1548230e2f30f1f5c50b4638f1b15edae11117f3828e8b88759_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "db48c6ad-0b27-3d66-bf83-eb39b253a2f2",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/mcp-tools-rhel9@sha256:3ceb9253d0c1334e342947312735035c87dba91903296aef32dffe1975bee25d_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dda54d35-2cb0-357c-8f97-5e308a9b51d1",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ee-control-plane-rhel9@sha256:3167133361bbefe9f70866d4933c24146d71190b45250c22e2426d95d4c4f017_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e1ef46d2-e4a2-3aba-8aed-e3813689f9a3",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ee-minimal-rhel9@sha256:f8309f49c66f0080b371b33de3853b97c3c290c54855ef2cc8d81217c18d8186_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e9e18677-6048-3547-8f9c-8c80efe22bcd",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ansible-devspaces-rhel9@sha256:7306ac9bf923260bb0650cbbd3945c59cf13a5444da4543c0fccc1e430d803d1_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ee6ace9c-e7c0-365e-8efa-5db8cd979fed",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ee-minimal-rhel9@sha256:351b29576db6ebe9e7e204b1c5b395dd8779f5a0d09bded1d3769a23f36b4e2a_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f2acae43-cdd3-3fea-900d-e04458114018",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/hub-rhel9-operator@sha256:10efc0e222d83779a3edab41a22c92e79b467b12a00c930a695ebcefc64cb86d_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f492a9e0-3191-3ac3-81bd-d73ceb6cab90",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/aap-must-gather-rhel9@sha256:acef60aaea73fbf7efdf9edebc38978e718fe1d2fee5680829742f6b69a95f7f_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f50c40dd-0c3d-3763-b931-bec1cd6301ff",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ansible-dev-tools-rhel9@sha256:a07b81c188734fca3ec62c52eef9948c5cdebee93a6b7d672ccad42d2ce00a75_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f9a9624c-df73-3b4b-bfef-265aeb2a3482",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/controller-rhel9-operator@sha256:06786b48314fa481188ffe5520af884b481e2ec1764ca4eb3c9555d3d9cb8048_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fb9395bc-e9b9-3042-b552-8a6b96afb9c5",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ansible-builder-rhel9@sha256:56a03186fa60309897da8a15709b544c9aded8f54bb4140b3dc8ec8925fc7956_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fc71cc76-006f-3a64-b368-9df22c431250",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/ee-control-plane-rhel9@sha256:0babc2be050b29a03b763388d35f9e46afc957a515e8afa3b057ece2d79a8c4b_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ffa695a3-d118-358e-9b7e-48cfc1b9d756",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-27/gateway-proxy-rhel9@sha256:af201bca469f3de14c96cfbc6deaba761478cf0af0af9d11c9e264ec48619589_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 2, 2026, 10:44:17 PM",
+     "dateUpdated": "Nov 5, 2026, 4:31:59 PM",
+     "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.7 Container Release Update",
+     "id": "RHSA-2026:94108",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94108\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94108.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "An update is now available for Red Hat Ansible Automation Platform 2.7"
+    },
+    "id": "9e4d8491-26f1-39e7-8453-1ffda0991185"
    },
    {
     "advisory": {
@@ -14573,7 +16429,7 @@
      "aliases": "CVE-2025-6176\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 2:55:24 PM",
-     "dateUpdated": "Oct 31, 2026, 5:19:37 PM",
+     "dateUpdated": "Nov 4, 2026, 9:58:26 PM",
      "description": "Security update for python-Brotli",
      "id": "openSUSE-SU-2026:22183-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_22183-1.json\nhttps://bugzilla.suse.com/1252945\nhttps://bugzilla.suse.com/1287779\nhttps://www.suse.com/security/cve/CVE-2025-6176/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
@@ -14584,6 +16440,43 @@
      "summary": "Security update for python-Brotli"
     },
     "id": "9ebe4bb0-0f1b-38be-9014-a381d2348c91"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "26bb8d9a-0a08-3738-88d8-d57c81341f8f",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d7feaa98-2f4d-3d22-a24a-4b208127f4be",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-tpu-rhel9@sha256:f85216e1ecc08d4b4eda7edd29043fa2d380659f2f805f86574c38b234ecac25_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:55:24 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:02 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (TPU)",
+     "id": "RHSA-2026:94458",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94458\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94458.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.0.8 (TPU) is now available."
+    },
+    "id": "a0502d09-1489-36c2-9259-86ce78164abc"
    },
    {
     "advisory": {
@@ -14729,6 +16622,43 @@
      "summary": "An update for thunderbird is now available for Red Hat Enterprise Linux 9.4 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "a1d0ecd2-9300-3725-be65-a6afa32a1b84"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "39cff7b3-1bd1-3854-a6af-dd8997668570",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ede4993a-ff69-35f5-ab99-fab48d84d52b",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-rocm-6.4-rhel9@sha256:2046e002fe8ab3620eccc2a75064cfb15c893717fc81f171c3b301d55fc5d9d8_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:56:25 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:04 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (ROCm 6.4)",
+     "id": "RHSA-2026:94465",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94465\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94465.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.4.7 (ROCm 6.4) is now available."
+    },
+    "id": "a3d2f4d2-0885-3919-9708-62eb9b8917c3"
    },
    {
     "advisory": {
@@ -15089,7 +17019,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 30, 2026, 2:02:45 PM",
-     "dateUpdated": "Nov 4, 2026, 12:15:25 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:52 PM",
      "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.4 Product Security and Bug Fix Update",
      "id": "RHSA-2026:93065",
      "references": "https://access.redhat.com/errata/RHSA-2026:93065\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93065.json\n",
@@ -15100,6 +17030,61 @@
      "summary": "An update is now available for Red Hat Ansible Automation Platform 2.4\n\nRed Hat Product Security has rated this update as having a security impact\nof Important. A Common Vulnerability Scoring System (CVSS) base score,\nwhich gives a detailed severity rating, is available for each vulnerability\nfrom the CVE link(s) in the References section."
     },
     "id": "ab559afc-b2b0-3d6e-9a22-f9173b051935"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "22eb82bf-f0ee-358c-8452-2804da80ff99",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "85433810-4878-3724-b8d0-5d973d313291",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-spyre-rhel9@sha256:df5a93b241f0582b1051536b18ee7c58db8fa3172d06829cf0d6c466c9614565_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ca02124f-6268-3516-b620-80e9ddb8af6c",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-spyre-rhel9@sha256:3003decba8baae0946b4ee1fb58ef34d1bfe12b83fca8d5fe45d10bd7f022316_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eb280b2e-8613-3cc8-9d3c-c6a628fcad27",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-spyre-rhel9@sha256:213ef2e7b26a3000398f91a71ccdbb421750809ec05051abf07a4a4ad54af441_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-44172\nCVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:55:45 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:02 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (Spyre)",
+     "id": "RHSA-2026:94461",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94461\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94461.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.4.7 (Spyre) is now available."
+    },
+    "id": "adad5bbf-791a-347a-a134-cb0c0323b886"
    },
    {
     "advisory": {
@@ -15198,7 +17183,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 6:00:52 AM",
-     "dateUpdated": "Nov 3, 2026, 9:53:36 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:55 PM",
      "description": "Red Hat Security Advisory: RHOAI 3.4.6 - Red Hat OpenShift AI",
      "id": "RHSA-2026:93550",
      "references": "https://access.redhat.com/errata/RHSA-2026:93550\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93550.json\n",
@@ -15209,6 +17194,43 @@
      "summary": "Updated images are now available for Red Hat OpenShift AI."
     },
     "id": "b19431df-1b3c-31f4-a035-a3df7332abaa"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "07287b68-274a-3dd6-b880-aaf6ea4818c4",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "27c6e2cb-a97b-32a1-8407-3732df489d7c",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-rocm-7.1-rhel9@sha256:3f53a810384072dac863012c9146f8389a1d173b549c62fa6ca49f246f51f1c3_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:58:25 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:06 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (ROCm 7.1)",
+     "id": "RHSA-2026:94472",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94472\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94472.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.4.7 (ROCm 7.1) is now available."
+    },
+    "id": "b1bcf698-089a-371e-b708-a364918243e4"
    },
    {
     "advisory": {
@@ -30022,7 +32044,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 10:41:47 PM",
-     "dateUpdated": "Nov 4, 2026, 12:15:51 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:56 PM",
      "description": "Red Hat Security Advisory: Red Hat Build of Apache Camel 4.18 for Quarkus 3.33 update is now available",
      "id": "RHSA-2026:93980",
      "references": "https://access.redhat.com/errata/RHSA-2026:93980\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93980.json\n",
@@ -30033,6 +32055,324 @@
      "summary": "An update for Red Hat Build of Apache Camel 4.18 for Quarkus 3.33 update is now available (Red Hat build of Quarkus 3.33.4.SP2).\nThe purpose of this text-only errata is to inform you about the enhancements that improve your developer experience and ensure the security and stability of your products.\nRed Hat Product Security has rated this update as having a security impact of Important."
     },
     "id": "b9dafa21-f3a0-3f95-a6f2-6f822bcca29d"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "6c6ad806-5982-3a6a-9f65-4db88dbb3a57",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cuda-13.0-rhel9@sha256:d9b231dec41f6b17c93a5a21c2cc8aae9ca2ad69e81039c38d773ba2fbb26fab_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b5a9d44e-9f77-3222-9559-c8e53aaff364",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cuda-13.0-rhel9@sha256:b81f9f0d33a8d392a3acd7ffcf4bb733667370c83a15a7167c3e3a969798262e_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b9f336da-9645-3e5d-bb31-ab85c55890bb",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.5",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:57:34 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:06 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (CUDA 13.0)",
+     "id": "RHSA-2026:94470",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94470\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94470.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.5.6 (CUDA 13.0) is now available."
+    },
+    "id": "bc64b4dc-c1a4-3223-86b9-96732d7bedcd"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0d555d86-338c-3f5f-b394-e73501e908fc",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160000.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0d5fed79-4fd8-32c7-9fb5-2061fdc49c0b",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160000.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0fa3bf26-8a0d-3f53-a3ca-75befccfafda",
+       "product": {
+        "name": "libbrotlienc1-0:1.1.0-160000.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "16943267-93fe-39a7-bab9-c27b3d9bb171",
+       "product": {
+        "name": "brotli-0:1.1.0-160000.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "17255409-6174-319e-b9b7-b0947e193443",
+       "product": {
+        "name": "brotli-0:1.1.0-160000.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "33d3dce9-a49d-31b4-bd3c-a47390529bf7",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160000.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3acf356e-dbe3-3b10-b0ae-680b6ab07a98",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160000.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3cf2ad40-2f33-3f67-89a4-8c35ea0ece1f",
+       "product": {
+        "name": "libbrotli-devel-0:1.1.0-160000.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4260d660-5ce1-3924-96e0-d96bfb37c726",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160000.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4cda76f1-ea3e-3dac-8b77-3f85af8203bf",
+       "product": {
+        "name": "libbrotlicommon1-x86-64-v3-0:1.1.0-160000.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4dbc5415-e8b7-3601-bd2c-ba62108d968f",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160000.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4fc899e1-efc0-3fe6-a4ce-35789a0a7f55",
+       "product": {
+        "name": "libbrotlidec1-x86-64-v3-0:1.1.0-160000.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "53a36434-0209-35b5-942d-5e5edb04a3a6",
+       "product": {
+        "name": "libbrotlienc1-0:1.1.0-160000.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "68506bc5-98a6-35c3-83df-6f8a62bf00c2",
+       "product": {
+        "name": "libbrotli-devel-0:1.1.0-160000.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6ad33eb1-3209-3d14-a562-f88048bf8a50",
+       "product": {
+        "name": "libbrotlienc1-0:1.1.0-160000.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "71dbb1d8-123e-331f-a896-7ca53b307b71",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160000.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7ce2fc53-9dbb-3aba-bf40-a282597bb079",
+       "product": {
+        "name": "libbrotli-devel-0:1.1.0-160000.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7d811b86-abc0-3fb0-a599-cf9cd259d0c6",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160000.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8e2491bb-4ad2-3eb8-bfe1-fc225d0c35c4",
+       "product": {
+        "name": "libbrotli-devel-0:1.1.0-160000.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a44fd68b-faa1-3a16-ae4a-348ccefddb47",
+       "product": {
+        "name": "openSUSE Leap 16.0",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d53eaf3e-f4aa-3223-aa6c-122fe9ef914f",
+       "product": {
+        "name": "brotli-0:1.1.0-160000.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d889fa32-3309-304f-b2ad-9954c5b5d834",
+       "product": {
+        "name": "brotli-0:1.1.0-160000.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f681d4e5-24d0-342f-a870-464b20675b3f",
+       "product": {
+        "name": "libbrotlienc1-x86-64-v3-0:1.1.0-160000.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fd6f3034-4e00-3317-8721-b8105eb7960f",
+       "product": {
+        "name": "libbrotlienc1-0:1.1.0-160000.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 1, 2026, 3:07:55 AM",
+     "dateUpdated": "Nov 4, 2026, 9:58:32 PM",
+     "description": "Security update for brotli",
+     "id": "openSUSE-SU-2026:22213-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_22213-1.json\nhttps://bugzilla.suse.com/1287778\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "Security update for brotli"
+    },
+    "id": "bcdb8bc2-0221-3606-80bf-61d53cadeddc"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "1020615c-ae12-31a6-8c2a-d10bc1399510",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.5",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1752cb8e-9ec9-3a60-997b-509e1717bff2",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-tpu-rhel9@sha256:8b33cb30908ee9be7572ef225914aafab4555dced73999cf1583feb0fc2fb9b1_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:54:22 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:59 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (TPU)",
+     "id": "RHSA-2026:94454",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94454\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94454.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.5.6 (TPU) is now available."
+    },
+    "id": "c21476ca-fbf5-3ac7-b440-94725db22ef5"
    },
    {
     "advisory": {
@@ -30133,6 +32473,1377 @@
      "summary": "An update for firefox is now available for Red Hat Enterprise Linux 8.8 Update Services for SAP Solutions and Red Hat Enterprise Linux 8.8 Telecommunications Update Service.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "c370230c-e318-3d39-91f7-f20c2216d1ee"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "05ecc6da-9792-30ab-b6a8-2ff91eca8966",
+       "product": {
+        "name": "nodejs22-0:22.23.4-150600.13.27.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "11099118-d26d-39c7-92b5-e066598b104a",
+       "product": {
+        "name": "nodejs22-devel-0:22.23.4-150600.13.27.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1340ba01-fa58-3f05-8359-ec75fc3af8a0",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 15 SP6-LTSS",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "2d0dbd84-70a5-31f5-95fd-c847141836e3",
+       "product": {
+        "name": "npm22-0:22.23.4-150600.13.27.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "46fdf64c-fd59-380b-b228-0c7cbedb8832",
+       "product": {
+        "name": "SUSE Linux Enterprise Server for SAP Applications 15 SP6",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "53c2e71f-974a-3ed1-984c-fe8c7da67a93",
+       "product": {
+        "name": "npm22-0:22.23.4-150600.13.27.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6324be53-50c5-3319-9741-e4964f5a7b8d",
+       "product": {
+        "name": "corepack22-0:22.23.4-150600.13.27.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "64680dcd-bf38-3f8f-9892-b456fe26100c",
+       "product": {
+        "name": "npm22-0:22.23.4-150600.13.27.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6e7dae4d-d48a-3534-8ae6-a9a37f1c07e5",
+       "product": {
+        "name": "nodejs22-devel-0:22.23.4-150600.13.27.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "762e44cb-f897-39c2-b1a5-0d2aa9fc65c2",
+       "product": {
+        "name": "nodejs22-devel-0:22.23.4-150600.13.27.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "91378c18-a2c0-3914-ad80-0c45bbb361bf",
+       "product": {
+        "name": "corepack22-0:22.23.4-150600.13.27.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a0c69844-d139-302c-9923-483f21589c2f",
+       "product": {
+        "name": "nodejs22-0:22.23.4-150600.13.27.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a1235abe-b0f9-3dc7-ad71-8b513955b101",
+       "product": {
+        "name": "npm22-0:22.23.4-150600.13.27.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a1c39cce-6408-3e91-866d-102546f232ff",
+       "product": {
+        "name": "nodejs22-0:22.23.4-150600.13.27.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b20d38e7-3f59-3a08-a6bf-5b039500f308",
+       "product": {
+        "name": "corepack22-0:22.23.4-150600.13.27.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ba4e1be0-f6c1-37a8-85dd-1e88663c483e",
+       "product": {
+        "name": "nodejs22-devel-0:22.23.4-150600.13.27.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bd4cf904-e225-3f41-b33a-4518619866e4",
+       "product": {
+        "name": "nodejs22-devel-0:22.23.4-150600.13.27.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bf6227d2-c68e-37af-98b6-bbab50c11a48",
+       "product": {
+        "name": "nodejs22-docs-0:22.23.4-150600.13.27.1.noarch",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c10f34af-6145-3629-82c8-e7b4b686cd22",
+       "product": {
+        "name": "nodejs22-0:22.23.4-150600.13.27.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c2da05b3-501e-3d27-841f-38bb8db261cd",
+       "product": {
+        "name": "npm22-0:22.23.4-150600.13.27.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d01f4b8d-591c-3dcb-9fdc-487bac7a608c",
+       "product": {
+        "name": "corepack22-0:22.23.4-150600.13.27.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d9f037be-4dc3-362f-a984-1e2f5fa14e08",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 15 SP6",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "deaef4a2-82a2-3ca4-b25c-e321806d232a",
+       "product": {
+        "name": "nodejs22-0:22.23.4-150600.13.27.1.i586",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f4d14aa6-c0d6-36e6-b6b4-28b3f7b92d5f",
+       "product": {
+        "name": "corepack22-0:22.23.4-150600.13.27.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-105481\nCVE-2026-105482\nCVE-2026-106069\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 30, 2026, 7:12:23 PM",
+     "dateUpdated": "Nov 4, 2026, 9:54:05 PM",
+     "description": "Security update for nodejs22",
+     "id": "SUSE-SU-2026:4957-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_4957-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264957-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264957-1/\nhttps://bugzilla.suse.com/1286261\nhttps://bugzilla.suse.com/1286561\nhttps://bugzilla.suse.com/1286563\nhttps://bugzilla.suse.com/1286564\nhttps://bugzilla.suse.com/1286565\nhttps://bugzilla.suse.com/1286566\nhttps://bugzilla.suse.com/1286567\nhttps://bugzilla.suse.com/1286570\nhttps://www.suse.com/security/cve/CVE-2026-105481/\nhttps://www.suse.com/security/cve/CVE-2026-105482/\nhttps://www.suse.com/security/cve/CVE-2026-106069/\nhttps://www.suse.com/security/cve/CVE-2026-106072/\nhttps://www.suse.com/security/cve/CVE-2026-106073/\nhttps://www.suse.com/security/cve/CVE-2026-106074/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 22,
+      "name": "csaf_suse"
+     },
+     "summary": "Security update for nodejs22"
+    },
+    "id": "c37aa61f-41b0-3fbf-9f9d-ae2f1ad4c322"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "024bcf0b-2039-30f8-b1ad-0c3e09c3745d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-dev-tools-rhel9@sha256:e9b5804db4d9437f341745a53d712e752c322a4d166146744b1d6b7a201c5dc3_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0267d34e-b46b-31e0-9765-0c34f9adaa9c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/receptor-rhel9@sha256:ff027811ae7ce8043817bea514117ce5e3a8840da798147fe4c6f6cf633a808c_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "04907bd4-5ba0-363f-9cc3-4a51cb2beea8",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9-operator@sha256:19aca17f560754d85216fa65ab9b856dcd560392e6dc64fe0ed64035ace2a999_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "08f31e49-f52a-3c15-bdae-311c238fe3fa",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-supported-rhel9@sha256:d38925a50fba24dd601446025a096982c8fd5bbbab7c909035bc7c33f17ba508_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "098c3df4-cdcb-3f71-a437-3caf8f5f0c4a",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-tools-rhel9@sha256:66f2ece0a8893047c516469debb80d7ea4c0b2b3484120181d8fcdc02a133a4b_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0d48c026-5210-3b87-a160-fb7f76a00379",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9-operator@sha256:e87760000567dddf2b6d54b3818c940dceacaea8c3a9d4af3d53130f898d0703_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0d9c4e8f-1690-3fdc-9be2-4fd459dd8c3a",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-minimal-rhel9@sha256:9c8f30680e5abfe112e20eed0c28f9c2df781e8e198e02d7f139d5e1888c7406_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0fbda9cb-44ea-34b3-9f7d-6051b16779a6",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9@sha256:dd6615c430f72e76262df01386d459fa65921e8cfc5c049afa285fa1851b4112_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "110cf02f-9d59-32e5-943d-6e415ad71774",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9-operator@sha256:d58054fe1b5813750e2d3cefa0456f00d1763cbd86fe1c54e68471a1d799f0e0_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1260ed6b-f016-320e-95a7-93c24d177c2d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9@sha256:b9dda2df42b5794330665607b2d1046218adbce970deef497ef88b00fe994506_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "130b2a40-f067-3ea4-90f9-8efef6f1212b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-server-rhel9@sha256:a6967349cff4c9c1db0b1b67f7662815330651aac163ebd3f1c8813b38ac286d_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1481875a-0825-3f5d-985f-1052e75dfe0b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-minimal-rhel9@sha256:a3e24eecb079c69e1dcff0f2c1e6c47eec56761a3cf512794d9e98615df92080_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "15f6eafa-f924-3c81-a611-8f4f7ab07f12",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-ui-rhel9@sha256:90cad0cf3527ea30754d4f4bee94c7af1e0b1b7a575b06eb59716d4d6525eb43_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1654de0d-fd27-3aac-a374-913a27134d28",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9@sha256:6e3c0bf65c5100d8569d207dba694c5660c897766a74d241927dff63639fdf9d_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "18b62dd7-1b26-3425-86c4-d6b30fa08b51",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9-operator@sha256:e3df7fd10831c791063beaaaff6d50b8ed8bbd77d0b27b64a3788cc7ff068429_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "18e5b991-2d1f-3c9a-b8b0-fb37e8888300",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-runner-rhel9@sha256:18d6c723cdb716def4da4300bba91f52bfcb70cf60ab14dab9d823431de0dde5_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "19cab16e-cbcb-3bf2-b88c-8fb5b86362c4",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9@sha256:3b5ce33f469cfd948247e3e3b971ed0f5bbf885a4a41b2f1ce5fe7405f7c6030_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1b9a6d91-d515-32c1-8fa7-2fc94b92098c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-tools-rhel9@sha256:f2297b194d995f42211aa92d6293ef35804679146ca2531689eceaf692d51ef0_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1d61937f-37ef-37c1-966f-737ae16851b8",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-rhel9-operator@sha256:7947e656e6ae5f44a4948346f193552271a64d1b6a8bff47827227ea704c56fb_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "210f3d3e-c4fb-3879-b32a-65fd72b964b4",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-dev-tools-rhel9@sha256:128a1bb06a6656dfcbf06591626bd1d460c998ad8c10ad220b960b6b83066034_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2236378a-8cd1-33f8-92bc-f2eb2faa82c5",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9-operator@sha256:61adab635802475fe2102b553d646165463059b4764400a2c1649bb3bf68a48e_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "226f8b2a-9969-3662-900a-819f806d255e",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-web-rhel9@sha256:6c40e1da86307acda95c3ee019270a1b65ad63aca69830e8ab6c8aef70ae48c1_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2280262c-8174-3cfb-9bae-265ab77f3786",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-server-rhel9@sha256:92b6a5c49d35fa497ee6f88bad964aaa816f4975f7102eb78dc11abd9d0e2f51_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "22c633c3-a685-3ea8-8521-822796a45acc",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9-operator@sha256:05044421278c739ecd258a636e9c2842db6274dd2ae3a34df29b36e00184baa6_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "23498bb7-41b9-3fbd-b33c-2d6becdedb78",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/receptor-rhel9@sha256:a4e7f2e5529b67b432c1b6ae529e3574f161243e82e26a078f76c177518bd832_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "26dbb502-a455-32b1-9089-aa64a0142c09",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform/platform-operator-bundle@sha256:01010e9742ea9daf3b201026a826fa18f343a314c576e100f6c23020c9313c32_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "27307314-487f-307c-a094-0d18446c9119",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9@sha256:393b85b5c301f83ec7f53dfa324d0c40708a0f281dbdffabe132bb8e47011996_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "293494e8-c361-39b5-b884-5930afdbea82",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/aap-must-gather-rhel9@sha256:308dd58ddc4270ccaaa66c0f0257cfe3b26f0c7c237bac78560617564717e19d_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2a732b0a-4817-3ff6-bd3a-a1464b3ec305",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/aap-must-gather-rhel9@sha256:40cd27bace51a79e83b196b4b1a918155f47bd8db422193463a96fac49b155c7_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2abeb879-a7eb-341a-abe8-9e6a4895c191",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9@sha256:755fc719a75e2e30ef7e09a9e1fd547929d925ea19599f65b6db717f01b661a8_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2d638de0-c98a-3c54-904a-4c1d3d9dbdc7",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9-operator@sha256:b698ee5892a7605192e39a7dca7ed8910a9df9bc254704e50042b2a0b1e972ae_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2daa2cf0-7fa0-3085-8058-5b31096131f6",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-builder-rhel9@sha256:8db64d8f310526e44ed2bcb79d94d9c05ec6e6884b60f822c431a93961368e07_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "31d943aa-701d-3b3f-93da-ce7b9d6a63da",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9@sha256:51233b2485fe5c75b1ac048a118b71cbc777050eb4b3f223b576c424b7d252b8_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3776c0f1-1b47-3919-8947-ba87696a7372",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9@sha256:68694ac69a576227479c1090dbd6c55a130c585225d14cdfab0551c0223209f0_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "389d1a0a-cdbf-3dee-bf30-f282e4b5cb4c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/receptor-rhel9@sha256:ec10a22f8ca5e9bb91ed836ba5c24e29f9355de11cd80753e6614ef327ece046_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "38addae2-f242-37a5-a57f-ec350ac81fac",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-web-rhel9@sha256:dbab52b933ff112274f5da969eb67ade7905c31e56678254a3940550f1da54d2_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3a86953f-1979-32d5-9b4f-4af08db32fea",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9-operator@sha256:607a7c9923345039426d76fb2a0123a77158726913d8dec9a509d070c3dc9293_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3d00ebe8-e73d-36fc-a34e-a5bffc815d67",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9@sha256:7354644b2064300cdfb864e671c6ebd5b13ab319880f8555445681824cffa812_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "43710752-02ec-38a6-ae3f-bb39dc3129bb",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9@sha256:ce7b98a5716df45db8d8dab88734e2d14665222fcdbb831591c604c61aa67a5b_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4382e25a-1809-3c21-9903-6999af1b3f9b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-proxy-rhel9@sha256:d4dcd311b6cac1fe68d18080daf1b399fe3ca52cb3b85ce5f67d0d83a689e011_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "458177ec-49c0-3b3a-852a-3a67905aa600",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-builder-rhel9@sha256:c3bb2dc6669da470a11c2cbaa09c2731a4bae3c22c7a7690bd1ed5db3bc1adae_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "48aa5899-7ff0-34c8-b573-f6deddc7be49",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-minimal-rhel9@sha256:481157407a12703287a0cfb3fdbef6dd718c24d0bdecd6210e92200ddd4fb7de_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "49aebf94-5ea2-3dc6-ab3d-1cba1b757124",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9@sha256:fda5cd5ecbe5690c4dd0bc63238990db1fa1f12bc8d29c7c0d53d4fd50cf5176_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4ea1b467-2ad0-352a-9e0b-228207ed5415",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9@sha256:a78e7f74c0d0200eabe85029fac922c412cf91f09b1061f829247f9c64b95f00_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5e8291b6-d144-305b-ac76-f7058dfda6c5",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9@sha256:6fe3f04e7a68e29f8933dd81bd9c2e5706cb66ffe3a8437ee66d4573d034f34c_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "637fd6c9-aae0-34a0-ac1b-2571b7dd4f4f",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/ansible-devspaces-rhel9@sha256:18426643d6d94805a03280ba4e683659beef490f438e237bc2691d91e27bebda_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6656ef0d-1243-382e-847b-e5a64d316e4b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9-operator@sha256:a212d4303dc5f67d3deedcc32d7c5c366ed9097501941b4c99e4779f70e355a1_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6967f6b6-36d0-3192-a6aa-539447b72ef3",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9@sha256:ce8d4fa92503c28c62acc23196c44984ba2689b2b57f37d44319b1cbfca76d6d_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6cd790cf-138a-375c-ad08-2f0f0146ffbd",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9@sha256:7d60d92956591e09aac1ce0a883edd2208f555bc6f027000d1ae8876312183db_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6d86420c-039c-3752-9390-e2e962ffafd8",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/ansible-devspaces-rhel9@sha256:9f6eb474e40f8ce399ddca3432bc21de835330e1a7e0b6efb0f5eb82ad7c7bbd_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7324e9e2-344c-34e2-9f82-77a8a2c065db",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-dev-tools-rhel9@sha256:3d8fbf141c5ad33d98e0ce5d962b08aa1677766787d27107c6b1e05c9be6a68d_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "73937d3e-3ad1-3947-b762-11796c81ea23",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9-operator@sha256:b5ee2e1fade46910e45195e597a43fa6735fad406cd4ed7e75a599faf2f82598_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "74dffe04-62da-30c9-881c-d8bbd501868e",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-proxy-rhel9@sha256:b2ae8674399ae9255f2e1d016cda62b4d97ad02a01e85a6dcabeedd6a94037aa_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "781f2dcb-03de-3bfd-a38d-9a72957187f1",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9-operator@sha256:4c02366a3471b094e009de970c670d82fdeb742562f2067fbc9dde6343866c10_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7866b311-2e95-3c16-94a1-01b30625af67",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-tools-rhel9@sha256:4ef8678ffcb0c51784bcda987aed2ddc96ec61fbdef0e67eaf5a682316314bab_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7bed481b-1be6-3bf0-a88d-447326034d68",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-server-rhel9@sha256:8405a1a192d2c1dfa37406e13f14d9236a47e3d68c71639f15903090d4bec8c5_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7e542ec9-ce15-3fd5-9c80-647396d1e46e",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9-operator@sha256:7a070e49067b4a96a936754406dc463e5e386af29b1b341dd6ad7fcfa84d05ba_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "80133dde-86d5-327f-b743-2955fe328f23",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9@sha256:c4358a02aec053058fc7cbd530216ae09ad6b9a2fe91a3fd0027af4a228d309b_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8080143e-7257-31eb-bd97-fc7236e6766a",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9-operator@sha256:b49a7a59426aa6f4ce5928121ee46e5c71b752cf488e3b02cde729dde3460d0b_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "823b2109-cc3e-3258-8bcf-60ef03e8d2a1",
+       "product": {
+        "name": "Red Hat Ansible Automation Platform 2.6",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "84d682c1-0d7f-3cf4-83c5-f2eac8abc993",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-ui-rhel9@sha256:f7476038957dd461116c7ddae96d6dba6a7c666d4ecf415cc37c636966c6a69d_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "850d67f8-af35-38d0-8943-da5e4226f681",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-web-rhel9@sha256:4561a6424acfb7c48291af0d9db83e10208b86482bb0c15a56b9b439aaf69a74_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "851a8bf2-c037-3c56-9bee-188ac2af2721",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-minimal-rhel9@sha256:c277faff99156da2cb66915bb8df205b14d98281d24c9c2c338c1ee2cedf40f7_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "88552b66-01f0-3862-abed-9a3e584aa8bc",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-chatbot-rhel9@sha256:622a3dde5b913607dc6c85322f767a14746bbca31fde781c8e5d0bf9aa83062d_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8890d51d-feb4-3152-bb85-6c7de379372d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9@sha256:94e9331965cf05e4efc6c6faefb321ffb394d35301afed8d71b3adb75619ca4d_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "88c506eb-5dbf-3ede-84e7-e8f0c983fea3",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-proxy-rhel9@sha256:f599890cfb2b735744b162e4b25a250605791b83f5fbc9e1c60fb13cca4aa030_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "89fcfbf1-e843-311c-b437-1629a9caf1f1",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9-operator@sha256:15fe63449e5d038c48b053277edbfe88ba75692d94c39adcb4a856fc341294f9_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8b8b3628-774b-30e1-bfbc-1a871fcd2abc",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9-operator@sha256:0dbe68f5e4db95383e9fcf883df94aad1db58ceff81c11ec20c577c3ec827159_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8c0ea031-be8e-3e4c-b386-6f1d9f303b47",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-minimal-rhel9@sha256:364a7befcf76d68a837acf82794d01a2453952505494ffba7834e5f92844ff2b_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8c63b864-4372-38ca-9bb5-29d2e4fd57fa",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9-operator@sha256:ba8e1a4c9c0eef4a32664868bc59c4826b20e532ff6474c4cea439521fd32d48_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8ddb827d-356e-39f8-a1ef-ed6b6cf72f93",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9-operator@sha256:bea3a1018ffc0612fc088886d2157696eb29532bfcae77fd8bec35e304bbaf50_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "927a8f02-1647-370c-bd24-d328f78c3875",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9-operator@sha256:fc0669160c4cbf57e55fcd1f207935310eeb20a007fadca7d3e619f07efdecca_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "93d4c5e0-1207-3e0c-9b2d-9837048efc93",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9@sha256:38b44cc361fc9c3421be349361dd938e5d13b6cf6f7c993f61e07ada1238df2b_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9515755c-d5fb-3fe6-99c7-f739d3999476",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9-operator@sha256:8227ba90be4572e5575697875f311ac40d24663972f3253c884930881a5d6737_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "983a2f70-329d-3884-983a-4c7cef16d701",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-supported-rhel9@sha256:d7b98582f322a03c335886b53e48f64a45077eca41e5ef51a52b57710f21f0cc_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9c4a0671-5047-34bd-a14a-04740e4f656d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9@sha256:f553d991b68fcae2ed202431afa42629b5893df99a47cf8799cc30fbc3511cd1_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9e76f7ca-c396-3f93-a0e4-6a015341d138",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-supported-rhel9@sha256:c09118e9b784c15a39e16e9373d6acb53c63fcc7a04d1f379dff79f20ef5be09_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a3b7e9c5-0df9-37dd-a1b1-6daf53ebb185",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-chatbot-rhel9@sha256:e9397eac91348ca4915789ecfadef7fd8bf8dd7e2ea5fb7a7c12663a54a04312_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a5b52526-7f1e-30c2-9aab-f1d7856f48f9",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform/platform-operator-bundle@sha256:1fdd0b70c64eaa8d8705644f8a6539dfda77dd3a5e9fc5d98160e1b0cf54c880_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a61bb147-ebc5-3adb-8be2-d450c56cb6d5",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/receptor-rhel9@sha256:f3262142c736ff94404cb1587a492544f9dc14e8873ed827434fb5b76b11dd75_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a671849c-038d-3d09-87a8-038c6faf2dea",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-tools-rhel9@sha256:4fb582096c894b146049fef7762d44abee6e844fff428649bdd571df54ac85d1_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a846bedc-cc06-3732-a7c3-e2524932b4be",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9@sha256:453139769da6f6accf81eab2099621caf9389cf62d46058cd8db53855779a5eb_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aaaf8e4a-5e69-3933-9637-e4dfa67498a8",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/aap-must-gather-rhel9@sha256:25abee0be360bb27cab330ff5eeb226bfe9afe77aa8877aa8ddd586ddc1d6cc9_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ab859125-77cd-36df-83f9-7a9ee9182d07",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-runner-rhel9@sha256:92206ab6e67a65394202ef81ca3f62bdc64c253d1bc6e3fed0d30df863ba0a1d_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b09a0b60-f12f-3c39-a59c-ea2a008dd335",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-chatbot-rhel9@sha256:dd49fe8dc36b1d93a56a1ab186794f9a949790a02cad399c2a460166299bf76f_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b0d25cbd-1d83-35b3-a4f0-313690890c89",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9-operator@sha256:6f8e5e54ad93ac9822dc83a15a628411506660b7b68c811c3a9e2d7dbbada805_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b1c7fc5f-4173-3aad-ab36-9a82b1ca2138",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-ui-rhel9@sha256:5174812c8695117435746c5b947bb0617c559504db6d13b13addd44559c288d8_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b3ff7bdc-9af3-3b67-a420-ff5a78088019",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/ansible-devspaces-rhel9@sha256:7017320b9fd5e372e2968face59a9c60dde81eb7977fd13e5536c1fd98985235_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b5698a8e-5e3f-3cc3-ae4a-88a5835f865b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9@sha256:52aaabd3a21c3ff18a9238aa63e41370db3c3f48424c42e9e8d9eecd9454565a_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b73a10af-5490-390a-ac1f-99a45dc465b3",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9@sha256:48e5d75cb0b53d203a5aa76d7549a420a47212b9bfe1d98b491fd828edbffc9d_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ba57f1ad-1423-35d4-99ce-feea7e4c54b6",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-dev-tools-rhel9@sha256:354893b91368ac8b86d613593cafb48831c6eb2a9f2d5febc4bce6baa0900de2_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bc674856-3dc5-3244-aa8f-ff5eba927c92",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9@sha256:9b9c964bf2bb7a1df12db51ae8b9815a5c490e6f04271934b2ee585bbb4e8b1a_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bd72a7f8-9e4f-365c-9ec7-5d8532ca4977",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-builder-rhel9@sha256:56a78fb21a92a6b13c10e7032d90eafdba51be4a1b8dfe6fba2c186b2d3ae8b7_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cbac9c69-5855-3231-8300-8a770f0f9730",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9-operator@sha256:de278720411ebf1685db4cfd26dd2a687b333c2abd5b4fbe1c73e4958a8de87c_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cc54058c-493e-304a-8cc7-af5ee15a4c69",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-minimal-rhel9@sha256:0f98d30e3ff784eef2d7978287ddec36849790dff101e233f3f209a85437bae8_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d4ea20fe-e44a-3ccb-9c9b-1f2f5e3cdfe4",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-server-rhel9@sha256:ba7475fc35e93f141e70732e5f5cf1fae349d690952597d6608af9baa254a3df_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d793d489-b5d0-33bd-abea-be1718ea69eb",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-minimal-rhel9@sha256:02a8f3e1e0508a921ab445060840e76ed9790947f695dcbe83a0391a7cae64e2_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d8427331-d995-38a3-90b5-3e8c8fb5e986",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-runner-rhel9@sha256:6081336c88b5492c070263c66626daeace1447d4ace878ce7a10dfff54eb3419_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d8588b0c-4c53-3d6d-924d-9600f8b5760c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9@sha256:e9594cf5d57f138d911cfdef6b66442cecb0f1e487dca04e1115f864f25b5c30_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d8a1f9c3-eb6b-3f77-8865-137d863d0faf",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-ui-rhel9@sha256:6bf673e1a0674e7bbcb4d37ece250ae2a60f6f9af8d7f5be5b00fe4a4f34e97b_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dcb1aa54-7069-3ddf-aa3c-a38d74758f5c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-web-rhel9@sha256:94a567c41f4a75a2acf964c6054e3a871aa243c0b587072f178f33a6b66f726a_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e37ccee8-6c8e-3307-b25c-4739cbbb9ffe",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9@sha256:6b27a6ba14050361f896298a214c5390940d39c720edd4366d381000cb94e475_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e55e2987-c78a-35e4-826d-2f894f225721",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9@sha256:57ac2747b8493f4b22798eb1aafdb9756065610c3a73774829ec9759046d1c5c_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e565fc78-658d-3cca-bd4c-2ee6a34bed52",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/aap-must-gather-rhel9@sha256:c9e0e4c5982fbea031efd2580086208c8225f9c782e63a082ee7a48a6a55ef6a_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e74b411c-a025-356c-b77a-317e1d7563e1",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9-operator@sha256:1036a767da2b145abb4554ed961cfbf2a8de3b8bfd3f65ef1f454b7eb4f5d98b_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e7adbbd9-6f03-3dac-8a96-bc45bcce8e8a",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-rhel9-operator@sha256:ebf79828d0b7cf95b7d8a51af9fd746f179a6ffc8c0502a7efb790df26434a0f_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e871287a-f4da-34dd-b36e-8438862c0c99",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-proxy-rhel9@sha256:6bc837d5e1ba5d8eaedbbe26daca60a8a6d4f6c1f75b7df6245015106825a03e_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e935288c-6384-3855-94ff-59fb665933b8",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-builder-rhel9@sha256:cddb19ece306d118be963e78792e861bea52085b1149fdc38d074200687eedda_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e97879c2-fc05-3709-b9c2-44a1b37a5087",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-chatbot-rhel9@sha256:4e30092678ca942626a717ad5bdf926a45b134fe28297e96b842a8b629908068_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eba54759-04d5-389c-9b16-52ae6b4016d8",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9-operator@sha256:40279c82d45f0ce679c89bdefd73771499e266877561dbaac5152ecfb9618945_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ecc9578c-ec92-3281-8024-1dd4db112853",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9-operator@sha256:0c0cbb11df42ea7dfd85546a7a504d9a86316ae60eea9f6c903db8de72f2400e_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eec212e9-0989-35e3-b1e2-2d4dac602378",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-supported-rhel9@sha256:96442ea7f6dca894fcb37873745599809bae3dc6f7d239f906c60ff8d95b37e8_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "efda99c0-fd4b-3ee5-8951-33fbed20e17a",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-rhel9-operator@sha256:f4bf30589aa1e3753264e9fc5424d8f123ad9631299c72a83dfebb0326feb19e_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f38d85d3-fb66-300c-876f-809d09b2e5d0",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/ansible-devspaces-rhel9@sha256:3064ad3a2b77caab1c1bb68303c7c2d9b4320f6b5af22e1b4291b4019fc90695_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f594c00f-c63b-30e7-beef-527945ff4478",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9@sha256:9b8ba2a97fef00e9620f0be5deaa68151c9ce298ea8c1d8d3b43ddf56b6fd979_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f672c8a0-d9c9-318c-ab2b-bee776429de4",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-minimal-rhel9@sha256:6146a207d2c3b38b0f684546c12fe0bbbd45572a061e473a9a39c2db32cfd738_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f92d1ec5-7ac2-3c30-96fb-2622e9eb6672",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9@sha256:3afe55998f02cb668c4f1ccbf78d469bc4fd174afdce0492274b5840812e0643_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fb49988a-09ae-38f7-a6ae-6f956cd9b16a",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-rhel9-operator@sha256:e666904e5affa7819d51b26db8242ae0b95998e26c9c7c8b800b42ab5a2df8c5_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fdde5ae0-2078-3c9a-95cb-7cfafe25d763",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-runner-rhel9@sha256:56ea586761b6822749cf224dad7825ce72b34d082219932467660bc7e046a2e7_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-84782\nCVE-2026-111064\nCVE-2026-111066\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 29, 2026, 8:31:32 PM",
+     "dateUpdated": "Nov 6, 2026, 1:14:47 AM",
+     "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.6 Container Release Update",
+     "id": "RHSA-2026:92856",
+     "references": "https://access.redhat.com/errata/RHSA-2026:92856\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92856.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "An update is now available for Red Hat Ansible Automation Platform 2.6"
+    },
+    "id": "c9a34f9c-f3b2-31d6-912f-d9fdf5861b1a"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "7a6f858e-86ec-3447-9880-343986d2f0fb",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cuda-12.9-rhel9@sha256:e293be56fd35de1197c994d5a792fa28c8c5361e8923f16e070eae28218fa99c_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8c20b11c-8024-3dd8-a476-3113c361a65b",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-cuda-12.9-rhel9@sha256:e7c113213ca3f3f7d9e0d23eecdfc8384b9656b94d964bd041acdafaa8f1813d_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9e5b26b5-be28-3749-9b20-1849a59db1a6",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.5",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-69418\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114406\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:59:48 AM",
+     "dateUpdated": "Nov 5, 2026, 3:46:08 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (CUDA 12.9)",
+     "id": "RHSA-2026:94474",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94474\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94474.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.5.6 (CUDA 12.9) is now available."
+    },
+    "id": "ce037bfc-170a-3ad0-8e8e-54e443d7516b"
    },
    {
     "advisory": {
@@ -30475,7 +34186,7 @@
      "aliases": "CVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 31, 2026, 5:18:16 PM",
+     "dateUpdated": "Nov 4, 2026, 9:57:05 PM",
      "description": "corepack24-24.22.1-1.1 on GA media",
      "id": "openSUSE-SU-2026:12248-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12248-1.json\nhttps://www.suse.com/security/cve/CVE-2026-105481/\nhttps://www.suse.com/security/cve/CVE-2026-105482/\nhttps://www.suse.com/security/cve/CVE-2026-105483/\nhttps://www.suse.com/security/cve/CVE-2026-106069/\nhttps://www.suse.com/security/cve/CVE-2026-106073/\nhttps://www.suse.com/security/cve/CVE-2026-106074/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
@@ -30791,7 +34502,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 10:31:12 PM",
-     "dateUpdated": "Nov 4, 2026, 12:07:13 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:32 PM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90501",
      "references": "https://access.redhat.com/errata/RHSA-2026:90501\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90501.json\n",
@@ -31188,7 +34899,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 1:40:24 PM",
-     "dateUpdated": "Nov 4, 2026, 12:07:16 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:34 PM",
      "description": "Red Hat Security Advisory: brotli security, bug fix, and enhancement update",
      "id": "RHSA-2026:90888",
      "references": "https://access.redhat.com/errata/RHSA-2026:90888\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90888.json\n",
@@ -31362,6 +35073,88 @@
      "summary": "An update for firefox is now available for Red Hat Enterprise Linux 8.6 Advanced Mission Critical Update Support, Red Hat Enterprise Linux 8.6 Update Services for SAP Solutions, and Red Hat Enterprise Linux 8.6 Telecommunications Update Service.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "d749d600-cc46-3be9-b363-d857b577aa87"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "45ffa4ec-6ec6-3db5-aaf4-dbcb51e9951b",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-159998.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4df7174e-a998-37e8-81c3-b2dfef85f069",
+       "product": {
+        "name": "SUSE Linux Micro 6.0",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6e18a673-f8d2-3c95-b90d-d2c0a79a472c",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-159998.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "96782838-e4e9-3b2e-a848-6c67e43b2c20",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-159998.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9adcfcba-de4d-3cae-9c1b-543999029f10",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-159998.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c0be0533-bd31-3239-9a2a-c823b7f46047",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-159998.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c8983607-4c69-3ac4-b81e-ac7d77bf1d90",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-159998.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 29, 2026, 5:41:59 PM",
+     "dateUpdated": "Nov 4, 2026, 9:51:23 PM",
+     "description": "Security update for brotli",
+     "id": "SUSE-SU-2026:24476-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_24476-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624476-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624476-1/\nhttps://bugzilla.suse.com/1287778\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 22,
+      "name": "csaf_suse"
+     },
+     "summary": "Security update for brotli"
+    },
+    "id": "db76c126-4b34-360e-b8ce-5a0335f3e340"
    },
    {
     "advisory": {
@@ -31622,7 +35415,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 10:20:11 PM",
-     "dateUpdated": "Nov 4, 2026, 12:15:49 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:58 PM",
      "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.5 Product Security and Bug Fix Update",
      "id": "RHSA-2026:94100",
      "references": "https://access.redhat.com/errata/RHSA-2026:94100\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94100.json\n",
@@ -31633,6 +35426,106 @@
      "summary": "An update is now available for Red Hat Ansible Automation Platform 2.5\n\nRed Hat Product Security has rated this update as having a security impact\nof Important. A Common Vulnerability Scoring System (CVSS) base score,\nwhich gives a detailed severity rating, is available for each vulnerability\nfrom the CVE link(s) in the References section."
     },
     "id": "dedd0cd3-ea88-38b3-9918-af08419d51d7"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "320b5f62-4538-349a-b601-0ec748c987ca",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160000.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "40fd3f36-db2c-3dfe-8028-9d9c700086cc",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160000.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4b5a62c2-b94d-3bcc-ac52-7c665691b0fe",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160000.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "56418ded-d0c7-38ef-9caa-51ade4f6f423",
+       "product": {
+        "name": "SUSE Linux Micro 6.2",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "679c961d-9258-359d-9ddf-0c28d48c785c",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160000.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "961b16f3-fae7-3591-a974-1fbc02cad249",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160000.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bcd8e7c0-5ff4-3b65-805c-7a76fb7fdaab",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160000.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c64a396f-8fee-35aa-a126-341c40f289f8",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160000.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fa81185f-3e0d-3a8e-b18b-57c4b4cf1ac4",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160000.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 1, 2026, 3:08:23 AM",
+     "dateUpdated": "Nov 4, 2026, 9:52:18 PM",
+     "description": "Security update for brotli",
+     "id": "SUSE-SU-2026:24518-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_24518-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624518-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624518-1/\nhttps://bugzilla.suse.com/1287778\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 22,
+      "name": "csaf_suse"
+     },
+     "summary": "Security update for brotli"
+    },
+    "id": "df5e60fe-e20c-3369-a7c4-4877e7df0899"
    },
    {
     "advisory": {
@@ -32223,6 +36116,15 @@
        }
       },
       {
+       "id": "d4054c77-9ee3-3ee3-910e-dad467a06d48",
+       "product": {
+        "name": "SUSE Liberty Linux 9.6 EMS",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
        "id": "d4acc462-76b9-35bf-99d6-cafaaa0e0267",
        "product": {
         "name": "dotnet-sdk-dbg-8.0-0:8.0.133-1.el9_6.aarch64",
@@ -32316,7 +36218,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 5:32:35 AM",
-     "dateUpdated": "Nov 4, 2026, 12:15:25 AM",
+     "dateUpdated": "Nov 5, 2026, 4:31:53 PM",
      "description": "Red Hat Security Advisory: .NET 8.0 security update",
      "id": "RHSA-2026:93457",
      "references": "https://access.redhat.com/errata/RHSA-2026:93457\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93457.json\n",
@@ -32513,6 +36415,43 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "4f12c912-17ce-3e17-9a81-6015cb553c10",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "641a6f81-fe01-3d0e-ba8d-a091c2ff931b",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-rocm-rhel9@sha256:9e1ff86f3226d42f1da854e3347686d84b067a48e1b8cddc4f3b2480f0c1fa61_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:56:42 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:04 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (ROCm)",
+     "id": "RHSA-2026:94466",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94466\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94466.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.0.8 (ROCm) is now available."
+    },
+    "id": "f89ad840-64dd-374d-9487-e948af3253b2"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
        "id": "081f21f0-d239-335d-82aa-a03af5cc80ef",
        "product": {
         "name": "python313-Brotli-0:1.2.1-1.1.aarch64",
@@ -32597,7 +36536,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 29, 2026, 6:23:17 PM",
+     "dateUpdated": "Nov 4, 2026, 9:57:07 PM",
      "description": "python313-Brotli-1.2.1-1.1 on GA media",
      "id": "openSUSE-SU-2026:12305-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12305-1.json\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
@@ -32608,6 +36547,52 @@
      "summary": "python313-Brotli-1.2.1-1.1 on GA media"
     },
     "id": "f89ccbf5-914f-3f0d-bc16-3056e7b83ce2"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0683f9cb-1516-3904-b7c6-6c5b7b35709d",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-spyre-rhel9@sha256:ef3e5487aee5e71e20dcd2f2e9d16b2bc8ab3fbc1a5f73a916ce14cc39be366e_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2535d95c-c7f7-375f-beac-29c1768baa5c",
+       "product": {
+        "name": "registry.redhat.io/rhai/base-image-spyre-rhel9@sha256:2d4137c802f16539a37799844cc4cc5d72974689d688ede71929fa64f5c85935_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b8723ab2-6f30-35a8-a9b6-af016391293b",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 3, 2026, 8:55:59 AM",
+     "dateUpdated": "Nov 5, 2026, 4:32:03 PM",
+     "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (Spyre)",
+     "id": "RHSA-2026:94463",
+     "references": "https://access.redhat.com/errata/RHSA-2026:94463\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94463.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat AI Base Images 3.0.8 (Spyre) is now available."
+    },
+    "id": "fafba2af-6227-397c-94c1-e18b3b7be80e"
    },
    {
     "advisory": {
@@ -32892,7 +36877,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 5, 2026, 6:01:58 AM",
+     "dataProcessed": "Nov 7, 2026, 6:01:37 AM",
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
      "dateUpdated": "Oct 23, 2026, 12:00:00 AM",
      "description": "Out-of-bounds write in the brotlicffi decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -32909,7 +36894,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 5, 2026, 6:01:58 AM",
+     "dataProcessed": "Nov 7, 2026, 6:01:37 AM",
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
      "dateUpdated": "Oct 23, 2026, 12:00:00 AM",
      "description": "Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -32926,7 +36911,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111497\nGHSA-9v8h-qqgm-4m35\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 5, 2026, 6:01:36 AM",
+     "dataProcessed": "Nov 6, 2026, 7:03:49 AM",
      "datePublished": "Oct 22, 2026, 3:32:49 PM",
      "dateUpdated": "Nov 3, 2026, 5:10:27 PM",
      "description": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -32945,9 +36930,9 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 5, 2026, 6:00:12 AM",
+     "dataProcessed": "Nov 7, 2026, 6:00:25 AM",
      "datePublished": "Oct 22, 2026, 1:35:41 PM",
-     "dateUpdated": "Nov 4, 2026, 5:47:42 PM",
+     "dateUpdated": "Nov 6, 2026, 3:39:57 PM",
      "description": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
      "enisa_id": "EUVD-2026-108169\n",
      "epss": 82.64,
@@ -33050,6 +37035,84 @@
     "affectedData": [
      {
       "defaultStatus": "unknown",
+      "product": "Cloud Connector Configurator",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V1.24.3",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Common Configurator (CC on IEM)",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Common Configurator on Device (CC on Edge)",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Data Flow Monitoring",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V3.0.18",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Databus Configurator",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V4.0.1",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "DataXess Configurator",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V1.5.7",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "Desigo CC family V8",
       "vendor": "Siemens",
       "versions": [
@@ -33068,6 +37131,58 @@
       "versions": [
        {
         "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Edge OPC UA Server Configurator",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V2.3.10",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Flow Creator Configurator",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V1.15.1",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Gridscale X DSA",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V5.4",
+        "status": "affected",
+        "version": "V5.3",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Gridscale X PSS®E",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V36.8.0",
         "status": "affected",
         "version": "0",
         "versionType": "custom"
@@ -33095,6 +37210,32 @@
        {
         "lessThan": "*",
         "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Industrial Edge Hub",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Industrial Edge Management Cloud",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
         "version": "0",
         "versionType": "custom"
        }
@@ -33173,123 +37314,6 @@
        {
         "lessThan": "*",
         "status": "unaffected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Cloud Connector Configurator",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Common Configurator (CC on IEM)",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Common Configurator on Device (CC on Edge)",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Data Flow Monitoring",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Databus Configurator",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Edge OPC UA Server Configurator",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Flow Creator Configurator",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Industrial Edge Hub",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Industrial Edge Management Cloud",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
         "version": "0",
         "versionType": "custom"
        }
@@ -33779,7 +37803,7 @@
    }
   ],
   "id": "CVE-2026-111497",
-  "lastModified": "2026-11-04T18:17:37.727",
+  "lastModified": "2026-11-06T16:17:37.393",
   "metrics": {
    "cvssMetricV31": [
     {

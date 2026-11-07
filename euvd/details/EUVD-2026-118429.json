@@ -1,0 +1,258 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-19868"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-19868",
+  "cwes": [
+   "CWE-308"
+  ],
+  "dateAdded": "2026-11-06",
+  "dueDate": "2026-11-20",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-19868",
+  "product": "SonicOS SSLVPN",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+  "vendorProject": "SonicWall",
+  "vulnerabilityName": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-19868\nGHSA-mq8w-j7h6-7q9w\n",
+  "assigner": "sonicwall",
+  "baseScore": 7.5,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 6, 2026, 7:03:00 PM",
+  "dateUpdated": "Nov 6, 2026, 8:58:23 PM",
+  "description": "An authentication enforcement vulnerability in SonicOS SSLVPN service may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "c5a9667e-b159-3c4d-9604-8e6cf8d966ca",
+    "product": {
+     "name": "SonicOS",
+     "vendor": {
+      "name": "SonicWall"
+     }
+    },
+    "product_version": "8.2.2-8015 and older versions"
+   },
+   {
+    "id": "cc8eb81c-3ee3-323a-ae2f-9d3a4262a030",
+    "product": {
+     "name": "SonicOS",
+     "vendor": {
+      "name": "SonicWall"
+     }
+    },
+    "product_version": "7.3.3-7015 and older versions"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "f3410d07-3a4c-3427-8c51-f07b88e62c40",
+    "vendor": {
+     "name": "SonicWall"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "4d0f7ea3-fad8-3b68-8bbb-4e725d233d83",
+    "vulnerability": {
+     "assigner": "sonicwall",
+     "baseScore": 7.5,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 7, 2026, 6:00:26 AM",
+     "datePublished": "Nov 6, 2026, 7:03:00 PM",
+     "dateUpdated": "Nov 6, 2026, 8:58:23 PM",
+     "description": "An authentication enforcement vulnerability in SonicOS SSLVPN service may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+     "enisa_id": "EUVD-2026-118429\n",
+     "epss": 0.0,
+     "exploitedSince": "Nov 6, 2026, 12:00:00 AM",
+     "id": "CVE-2026-19868",
+     "references": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "2065d1b3-9c42-31ba-bed2-9e134baad391",
+       "product": {
+        "name": "SonicOS",
+        "vendor": {
+         "name": "SonicWall"
+        }
+       },
+       "product_version": "8.2.2-8015 and older versions"
+      },
+      {
+       "id": "f5a6aa64-5c32-3442-b9c8-4383dbf07530",
+       "product": {
+        "name": "SonicOS",
+        "vendor": {
+         "name": "SonicWall"
+        }
+       },
+       "product_version": "7.3.3-7015 and older versions"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "15163223-9ea8-372e-b123-83ce5f246eb3",
+       "vendor": {
+        "name": "SonicWall"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "b24f7537-2cf5-3160-bc5a-6565048e6e80",
+    "vulnerability": {
+     "aliases": "CVE-2026-19868\nGHSA-mq8w-j7h6-7q9w\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 7, 2026, 6:01:16 AM",
+     "datePublished": "Nov 6, 2026, 9:31:27 PM",
+     "dateUpdated": "Nov 6, 2026, 9:31:27 PM",
+     "description": "An authentication enforcement vulnerability in SonicOS SSLVPN service may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+     "enisa_id": "EUVD-2026-118429\n",
+     "epss": 0.0,
+     "id": "GHSA-mq8w-j7h6-7q9w",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-19868\nhttps://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-19868\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "a950268f-97c4-3774-a83e-63717a31e570",
+  "epss": 0.0,
+  "exploitedSince": "Nov 6, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-118429",
+  "references": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-118429",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 6, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "platforms": [
+       "Gen7",
+       "Gen8"
+      ],
+      "product": "SonicOS",
+      "vendor": "SonicWall",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "7.3.3-7015 and older versions"
+       },
+       {
+        "status": "affected",
+        "version": "8.2.2-8015 and older versions"
+       }
+      ]
+     }
+    ],
+    "source": "PSIRT@sonicwall.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-20",
+  "cisaExploitAdd": "2026-11-06",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "An authentication enforcement vulnerability in SonicOS SSLVPN service may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA)."
+   }
+  ],
+  "id": "CVE-2026-19868",
+  "lastModified": "2026-11-06T21:17:08.737",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 7.5,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "LOW",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.2,
+     "impactScore": 4.7,
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-19868",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-06T20:37:20.602909Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-06T19:17:48.437",
+  "references": [
+   {
+    "source": "PSIRT@sonicwall.com",
+    "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-19868"
+   }
+  ],
+  "sourceIdentifier": "PSIRT@sonicwall.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-308"
+     }
+    ],
+    "source": "PSIRT@sonicwall.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
