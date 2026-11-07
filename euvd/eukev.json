@@ -1402,7 +1402,9 @@
    "first_seen": "2026-10-30",
    "first_seen_after": "2026-10-29",
    "changes": []
-  },
+  }
+ ],
+ "removed": [
   {
    "id": "EUVD-2026-56119",
    "cve": "CVE-2026-58115",
@@ -1418,8 +1420,9 @@
    "backdated_days": 1,
    "first_seen": "2026-11-06",
    "first_seen_after": "2026-11-05",
-   "changes": []
+   "changes": [],
+   "removed": "2026-11-07",
+   "removed_after": "2026-11-06"
   }
- ],
- "removed": []
+ ]
 }
