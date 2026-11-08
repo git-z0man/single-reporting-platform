@@ -178,18 +178,18 @@
  "honeypot": [
   {
    "avg30d": 2.0,
-   "avg7d": 8.0,
+   "avg7d": 5.0,
    "avg90d": 0.0,
    "cisaKevFlag": true,
-   "connections1d": 30,
+   "connections1d": 36,
    "cveId": "CVE-2026-104935",
    "firstSeenAt": "Oct 16, 2026, 3:00:00 AM",
    "isNew": false,
-   "lastSeenAt": "Nov 6, 2026, 7:13:23 AM",
+   "lastSeenAt": "Nov 8, 2026, 4:00:30 AM",
    "product": "Pulse Secure VPN",
    "source": "shadowserver",
    "trend": "UPTICK",
-   "uniqueIps1d": 2,
+   "uniqueIps1d": 12,
    "vendor": "Ivanti",
    "vulnClass": "vpn",
    "vulnSeverity": "High"
