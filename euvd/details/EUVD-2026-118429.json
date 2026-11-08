@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 6, 2026, 7:03:00 PM",
-  "dateUpdated": "Nov 6, 2026, 8:58:23 PM",
+  "dateUpdated": "Nov 7, 2026, 4:55:51 AM",
   "description": "An authentication enforcement vulnerability in SonicOS SSLVPN service may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -69,12 +69,12 @@
      "baseScore": 7.5,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 7, 2026, 6:00:26 AM",
+     "dataProcessed": "Nov 8, 2026, 6:00:31 AM",
      "datePublished": "Nov 6, 2026, 7:03:00 PM",
-     "dateUpdated": "Nov 6, 2026, 8:58:23 PM",
+     "dateUpdated": "Nov 7, 2026, 4:55:51 AM",
      "description": "An authentication enforcement vulnerability in SonicOS SSLVPN service may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
      "enisa_id": "EUVD-2026-118429\n",
-     "epss": 0.0,
+     "epss": 0.62,
      "exploitedSince": "Nov 6, 2026, 12:00:00 AM",
      "id": "CVE-2026-19868",
      "references": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014\n",
@@ -116,7 +116,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-19868\nGHSA-mq8w-j7h6-7q9w\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 7, 2026, 6:01:16 AM",
+     "dataProcessed": "Nov 8, 2026, 6:00:45 AM",
      "datePublished": "Nov 6, 2026, 9:31:27 PM",
      "dateUpdated": "Nov 6, 2026, 9:31:27 PM",
      "description": "An authentication enforcement vulnerability in SonicOS SSLVPN service may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
@@ -130,7 +130,7 @@
    }
   ],
   "enisaUuid": "a950268f-97c4-3774-a83e-63717a31e570",
-  "epss": 0.0,
+  "epss": 0.62,
   "exploitedSince": "Nov 6, 2026, 12:00:00 AM",
   "id": "EUVD-2026-118429",
   "references": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014\n"
@@ -182,7 +182,7 @@
    }
   ],
   "id": "CVE-2026-19868",
-  "lastModified": "2026-11-06T21:17:08.737",
+  "lastModified": "2026-11-07T05:19:01.300",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -223,7 +223,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-06T20:37:20.602909Z",
+      "timestamp": "2026-11-06T00:00:00+00:00",
       "version": "2.0.3"
      }
     }
