@@ -13,8 +13,8 @@ retrieved: 2026-09-05
 factpage_retrieved: 2026-10-29
 purpose: Baseline snapshot for change detection on the Commission's CRA FAQ and its implementation factpage. Future runs compare the live document against the archived version and record the delta here.
 note: Unlike the ENISA baseline, the FAQ content is not inlined here — it is a 66-page document. The archive under `commission-faq/versions/` holds each released version verbatim; this page carries the version history, the substantive deltas, and the comparison links.
-last_check: 2026-11-02
-last_attempt: 2026-11-02
+last_check: 2026-11-09
+last_attempt: 2026-11-09
 last_attempt_result: ok
 last_change: 2026-09-04
 ---
