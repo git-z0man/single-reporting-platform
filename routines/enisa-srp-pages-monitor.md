@@ -29,12 +29,26 @@ If the repository is already checked out in the working directory, use it. Other
 
 Read `CLAUDE.md` first — it records the conventions for this routine.
 
-Do NOT hard-code a state branch name. The platform assigns this Routine's outcome branch a fresh name whenever the Routine is edited, so any name written here goes stale. Instead:
+### The branch: decide once, record it, never change it
 
-- If the session already has a branch checked out that is not `main`, stay on it and refresh it: `git fetch origin main && git reset --hard origin/main`.
-- Otherwise create one from main: `git fetch origin main && git checkout -B enisa-srp-monitor origin/main`.
+This run uses exactly one branch, decided here, before anything else touches git. Run this as the first git command of the run, before any `reset`, `checkout` or `switch`:
 
-Never push to `main`. Never create a new per-run branch when the session already gave you one.
+    git fetch origin
+    git rev-parse --abbrev-ref HEAD | tee .git/run-branch
+
+`.git/run-branch` lives inside `.git`, so it is never committed. It exists because a shell variable does not survive from one command to the next; section 5 reads it back.
+
+**Case A: it printed anything other than `main` or `HEAD`.** This is the normal case, and the name is usually `claude/<two words>-<suffix>`. That is the branch the platform gave this session, and it is this run's branch. Refresh it with `git reset --hard origin/main` and do everything on it. After that reset its content is identical to `main`. It is still not `main`, and it does not need a branch of its own before you commit.
+
+**Case B: it printed `main` or `HEAD`, and only then.** Create the fallback branch, named exactly `enisa-srp-monitor`, with no date, no counter and no variant, and record that name instead:
+
+    git checkout -B enisa-srp-monitor origin/main && echo enisa-srp-monitor > .git/run-branch
+
+Say in the report that the fallback was used.
+
+In either case, nothing after this point creates, renames or switches a branch: no `git checkout -b`/`-B`, no `git switch -c`, no `git branch <name>`, and that includes the commit in section 5. The branch name is never invented, never dated and never "made unique" to get past a branch that already exists on the remote. Never push to `main`.
+
+This replaces a looser rule (2026-11-09). The SRP domains monitor, which had the same wording, pushed a branch it created itself on 8 and 9 November, although the session had given it one; the EUVD monitor did the same on 6 November. In each case the branch was created at commit time. The old wording made the fallback's `checkout -B` the only ready-made command and did not say how to recognise the session's branch once `reset --hard origin/main` had made it look exactly like `main`.
 
 ## 1. The pages to check — all thirteen
 
@@ -195,7 +209,19 @@ Never invent a change and never open an empty PR. This silence applies only when
 
 ## 5. Commit, PR, merge
 
-Only if something actually changed. Commit with a message naming what changed. Push with `git push -u origin HEAD`, retrying up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network errors only.
+Only if something actually changed. Commit on the branch you are already on, with a message naming what changed; do not create a branch for the commit (section 0). Check first that you are still on the branch section 0 recorded:
+
+    test "$(git rev-parse --abbrev-ref HEAD)" = "$(cat .git/run-branch)" || echo "BRANCH MISMATCH"
+
+If that prints `BRANCH MISMATCH`, do not push. Report it with both names. Otherwise push. In case A of section 0:
+
+    git push -u origin HEAD
+
+In case B (the fallback):
+
+    git push -u --force-with-lease origin HEAD:enisa-srp-monitor
+
+The fallback branch is this Routine's scratch space and is overwritten, never renamed. Retry up to 4 times with exponential backoff (2s, 4s, 8s, 16s), on network errors only.
 
 If the push fails for lack of credentials (403), do NOT try to route around it — no workarounds, no alternate remotes, no GitHub MCP fallback. Leave the commit on the local branch and report that the push failed, with the exact error AND the branch name you pushed to, so a mismatch with this Routine's configured repository outcome can be spotted.
 
