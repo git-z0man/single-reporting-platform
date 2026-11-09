@@ -12,7 +12,8 @@ replaces today's line in history.jsonl, the only place where values the EUVD kee
 history of (honeypot counts, set sizes) are recorded over time.
 
 Honeypot surges: from that history it marks surges, an entry attacked far above its own
-recorded level by many sources ("broad"), or well above it from several sources on several
+recorded level by many sources ("broad"), with a very large number of connections from fewer
+but still several sources ("concentrated"), or well above it from several sources on several
 recorded days in a row ("persistent"). The level is the median of the entry's own daily
 connections on the previous recorded days. The EUVD's avg7d/avg30d/avg90d are not used: they
 are on another, undocumented scale (on 2026-10-13 the median entry had 17 times its avg30d in
@@ -78,6 +79,13 @@ SURGE_IPS = 25       # ... from at least this many source IPs (fewer: one or a f
 PERSIST_RATIO = 5    # "persistent": connections at least this many times the level before the run ...
 PERSIST_IPS = 10     # ... from at least this many source IPs ...
 SURGE_DAYS = 3       # ... on this many recorded days in a row
+# "concentrated", added 2026-11-09: on 2026-11-07 EUVD-2026-102427 (BeyondTrust) went from 33
+# connections to 32,511 from 18 addresses, and nothing fired: too few addresses for "broad", one day
+# only for "persistent". Lowering SURGE_IPS instead would have added 234 marks in a month, replayed
+# on history.jsonl; requiring the volume as well adds 10. Fewer than CONC_IPS addresses is still
+# one or a few scanners, however loud.
+CONC_CONNECTIONS = 10000  # "concentrated": SURGE_RATIO times the level and at least this many connections ...
+CONC_IPS = 10             # ... from at least this many source IPs (and fewer than SURGE_IPS, else it is broad)
 TREND_CODE = {"UPTICK": "U", "STEADY": "S", "DECLINE": "D"}
 
 
@@ -528,8 +536,11 @@ def surge_kinds(day_rows, i):
     if not day_rows or i not in day_rows[-1][1]:
         return []
     n, kinds = len(day_rows), []
-    if above(day_rows[-1][1][i], own_base(day_rows, i, n - 1), SURGE_RATIO, SURGE_IPS):
+    today, base = day_rows[-1][1][i], own_base(day_rows, i, n - 1)
+    if above(today, base, SURGE_RATIO, SURGE_IPS):
         kinds.append("broad")
+    elif above(today, base, SURGE_RATIO, CONC_IPS) and today[0] >= CONC_CONNECTIONS:
+        kinds.append("concentrated")
     start = n - SURGE_DAYS
     if start >= 0:
         base = own_base(day_rows, i, start)
@@ -553,7 +564,7 @@ def hp_surges(days_all, S):
             before = set(surge_kinds(days_all[:-1], i))
             # A persistent-only surge is measured, and reported, against the level before its run:
             # the median of all previous days already contains the run.
-            upto = n - 1 if "broad" in kinds else n - SURGE_DAYS
+            upto = n - SURGE_DAYS if kinds == ["persistent"] else n - 1
             base = own_base(days_all, i, upto)
             m = meta.get(i, {})
             out.append({"id": i, "cve": m.get("cve", ""), "vendor": m.get("vendor", ""), "product": m.get("product", ""),
