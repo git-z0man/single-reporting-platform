@@ -42,12 +42,26 @@ If the repository is already checked out in the working directory, use it. Other
 
 Then read `srp-domains/README.md` — it documents the layout, the detection signal and the proxy trap.
 
-Do NOT hard-code a state branch name. This Routine's configured repository outcome gets a fresh branch name assigned by the platform whenever the Routine is edited, so any name written here goes stale. Instead:
+## 0b. The branch — decide once, record it, never change it
 
-- If the session already has a branch checked out that is not `main`, stay on it and refresh it from main: `git fetch origin main && git reset --hard origin/main`.
-- Otherwise create one from main: `git fetch origin main && git checkout -B srp-domains-monitor origin/main`.
+This run uses exactly one branch, decided here, before anything else touches git. Run this as the first git command of the run, before any `reset`, `checkout` or `switch`:
 
-Never push to `main`. Never create a new per-run branch when the session already gave you one.
+    git fetch origin
+    git rev-parse --abbrev-ref HEAD | tee .git/srp-run-branch
+
+`.git/srp-run-branch` lives inside `.git`, so it is never committed; it is there because a shell variable does not survive from one command to the next, and section 5 reads it back.
+
+**Case A: it printed anything other than `main` or `HEAD`.** This is the normal case, and the name is usually `claude/<two words>-<suffix>`. That is the branch the platform gave this session, and it is this run's branch. Refresh it with `git reset --hard origin/main` and do everything on it. After that reset its content is identical to `main`. It is still not `main`, and it does not need a branch of its own before you commit.
+
+**Case B: it printed `main` or `HEAD`, and only then.** Create the fallback branch, named exactly `srp-domains-monitor`, with no date, no counter and no variant, and record that name instead:
+
+    git checkout -B srp-domains-monitor origin/main && echo srp-domains-monitor > .git/srp-run-branch
+
+Say in the report that the fallback was used.
+
+In either case, nothing after this section creates, renames or switches a branch: no `git checkout -b`/`-B`, no `git switch -c`, no `git branch <name>`. That holds in section 5 too, when committing, which is where it went wrong before. The branch name is never invented, never dated and never "made unique" to get past a branch that already exists on the remote. Never push to `main`.
+
+Why this is spelled out (2026-11-09): on 8 November the run pushed `srp-domains-monitor` (PR #369), and on 9 November `srp-domains-monitor-2026-11-09` (PR #373). In both runs `git branch --show-current` had printed `claude/trusting-hawking-njca17` at the start. Each time the branch was created at commit time, in one line with `git add`, `git commit` and `git push`. The previous wording of this section allowed that in three ways. The only copy-ready command in it was the fallback's `git checkout -B srp-domains-monitor`. The normal case came with no command and no name to carry forward. And "never create a new per-run branch when the session already gave you one" did not say how to recognise the session's branch, after a `reset --hard origin/main` had made it look exactly like `main`. A fixed name like `srp-domains-monitor` did not read as "per-run" either. The EUVD monitor's section 0 was rewritten the same way on 2026-11-07, after the same fault on 6 November, and its runs have used the session's branch since.
 
 ## 1. Run the check
 
@@ -165,7 +179,19 @@ Also note whether the platform still matches the scope ENISA stated for launch: 
 
 ## 5. Commit, PR, merge
 
-Only when section 3 says to commit. Commit with a message naming what changed. Push with `git push -u origin HEAD`, retrying up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network errors only.
+Only when section 3 says to commit. Commit on the branch you are already on, with a message naming what changed; do not create a branch for the commit (section 0b). Check first that you are still on the branch section 0b recorded, then push it:
+
+    test "$(git rev-parse --abbrev-ref HEAD)" = "$(cat .git/srp-run-branch)" || echo "BRANCH MISMATCH"
+
+If that prints `BRANCH MISMATCH`, do not push. Report it with both names. Otherwise push. In case A of section 0b:
+
+    git push -u origin HEAD
+
+In case B (the fallback):
+
+    git push -u --force-with-lease origin HEAD:srp-domains-monitor
+
+The fallback branch is this Routine's scratch space and is overwritten, never renamed. Retry up to 4 times with exponential backoff (2s, 4s, 8s, 16s), on network errors only.
 
 If the push fails for lack of credentials (403), do NOT try to route around it — no workarounds, no alternate remotes, no GitHub MCP fallback. Leave the commit on the local branch and report that the push failed, with the exact error AND the branch name you pushed to, so a mismatch with the Routine's configured repository outcome can be spotted.
 

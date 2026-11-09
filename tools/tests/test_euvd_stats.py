@@ -227,6 +227,25 @@ class Honeypot(unittest.TestCase):
         self.assertEqual([(r["id"], r["kinds"], r["new"]) for r in bs.hp_surges(days, {})],    # but held three days
                          [("A", ["persistent"], True)])
 
+    def test_huge_jump_from_fewer_than_broad_addresses_is_a_concentrated_surge(self):
+        # EUVD-2026-102427 (BeyondTrust) on 2026-11-07: unseen for weeks, 33 connections the day before,
+        # then 32,511 from 18 addresses. Not broad (18 < 25), not persistent (one day): nothing fired.
+        days = [(f"2026-10-{n:02}", {"Z": (5, 30, "S", 1.0)}) for n in range(10, 31)]
+        days.append(("2026-11-06", {"A": (33, 11, "U", 0.0), "Z": (5, 30, "S", 1.0)}))
+        days.append(("2026-11-07", {"A": (32511, 18, "U", 0.0), "B": (32511, 5, "U", 0.0),
+                                    "C": (9000, 18, "U", 0.0), "Z": (5, 30, "S", 1.0)}))
+        s = bs.hp_surges(days, {})
+        self.assertEqual([(r["id"], r["kinds"], r["ips"], r["base"], r["new"]) for r in s],
+                         [("A", ["concentrated"], 18, 0, True)])   # B: a few scanners; C: below the volume
+        self.assertEqual(s[0]["ratio"], 32511.0)
+        days[-1][1]["A"] = (32511, 30, "U", 0.0)                   # from 25 or more addresses it is broad,
+        self.assertEqual([r["kinds"] for r in bs.hp_surges(days, {})], [["broad"]])   # not both
+
+    def test_concentrated_needs_the_ratio_against_its_own_level(self):
+        days = [(f"2026-10-0{n}", {"A": (20000, 15, "S", 1.0)}) for n in range(1, 6)]
+        days.append(("2026-10-06", {"A": (25000, 15, "U", 1.0)}))   # busy but steady: 1.25x its level
+        self.assertEqual(bs.hp_surges(days, {}), [])
+
     def test_steady_entry_far_above_the_euvd_average_is_no_surge(self):
         # NetScaler on 2026-10-10..13: thousands of connections a day against an avg30d of 25-28.
         days = [(f"2026-10-0{n}", {"A": (6000 + 100 * n, 50, "U", 27.0)}) for n in range(1, 8)]
