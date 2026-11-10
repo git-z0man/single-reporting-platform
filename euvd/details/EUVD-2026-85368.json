@@ -155,22 +155,11 @@
  },
  "honeypot": [
   {
-   "avg30d": 0.0,
-   "avg7d": 0.0,
-   "avg90d": 0.0,
-   "cisaKevFlag": true,
-   "connections1d": 1,
    "cveId": "CVE-2026-96654",
    "firstSeenAt": "Nov 5, 2026, 2:00:00 AM",
    "isNew": false,
-   "lastSeenAt": "Nov 8, 2026, 7:12:36 AM",
-   "product": "Plex Media Server",
    "source": "shadowserver",
-   "trend": "STEADY",
-   "uniqueIps1d": 1,
-   "vendor": "Plex",
-   "vulnClass": "other-software",
-   "vulnSeverity": "Medium"
+   "trend": "STEADY"
   }
  ],
  "id": "EUVD-2026-85368",

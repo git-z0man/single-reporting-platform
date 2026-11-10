@@ -1,0 +1,232 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123218"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-123218",
+  "cwes": [
+   "CWE-863"
+  ],
+  "dateAdded": "2026-11-09",
+  "dueDate": "2026-11-12",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://www.ibm.com/support/pages/node/7295921 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-123218",
+  "product": "Aspera Faspex",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
+  "vendorProject": "IBM",
+  "vulnerabilityName": "IBM Aspera Faspex Incorrect Authorization Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-123218\nGHSA-29m7-hw74-2gwc\n",
+  "assigner": "ibm",
+  "baseScore": 9.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 7, 2026, 3:47:19 AM",
+  "dateUpdated": "Nov 9, 2026, 8:58:24 PM",
+  "description": "IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain full administrative privileges.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "39f8b59a-42bf-325f-84d8-efe6757a90f0",
+    "product": {
+     "name": "Aspera Faspex",
+     "vendor": {
+      "name": "IBM"
+     }
+    },
+    "product_version": "5.0.0 ≤5.0.19"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "9b4097d3-d519-325e-aa14-631bd3e6f55e",
+    "vendor": {
+     "name": "IBM"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "105f5eca-853b-3d27-b642-ef6d6e88816d",
+    "vulnerability": {
+     "assigner": "ibm",
+     "baseScore": 9.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 10, 2026, 6:00:18 AM",
+     "datePublished": "Nov 7, 2026, 3:47:19 AM",
+     "dateUpdated": "Nov 9, 2026, 8:58:24 PM",
+     "description": "IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain full administrative privileges.",
+     "enisa_id": "EUVD-2026-118902\n",
+     "epss": 0.4,
+     "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
+     "id": "CVE-2026-123218",
+     "references": "https://www.ibm.com/support/pages/node/7295921\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "4eb35a37-7b00-3282-a814-532d410090a4",
+       "product": {
+        "name": "Aspera Faspex",
+        "vendor": {
+         "name": "IBM"
+        }
+       },
+       "product_version": "5.0.0 ≤5.0.19"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "1ea15953-d0df-3cff-9ca2-2fccefbd7966",
+       "vendor": {
+        "name": "IBM"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "e61990d0-595c-3e1e-ae13-1cb9b4805686",
+    "vulnerability": {
+     "aliases": "CVE-2026-123218\nGHSA-29m7-hw74-2gwc\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 10, 2026, 6:00:45 AM",
+     "datePublished": "Nov 7, 2026, 6:31:14 AM",
+     "dateUpdated": "Nov 10, 2026, 12:31:32 AM",
+     "description": "IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain full administrative privileges.",
+     "enisa_id": "EUVD-2026-118902\n",
+     "epss": 0.0,
+     "id": "GHSA-29m7-hw74-2gwc",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-123218\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123218\nhttps://www.ibm.com/support/pages/node/7295921\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "f4729414-24a5-3bd0-a55f-5533d47e1024",
+  "epss": 0.4,
+  "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-118902",
+  "references": "https://www.ibm.com/support/pages/node/7295921\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-118902",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 9, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "Aspera Faspex",
+      "vendor": "IBM",
+      "versions": [
+       {
+        "lessThanOrEqual": "5.0.19",
+        "status": "affected",
+        "version": "5.0.0",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "psirt@us.ibm.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-12",
+  "cisaExploitAdd": "2026-11-09",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "IBM Aspera Faspex Incorrect Authorization Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain full administrative privileges."
+   }
+  ],
+  "id": "CVE-2026-123218",
+  "lastModified": "2026-11-09T22:18:36.323",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "psirt@us.ibm.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-123218",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-09T20:40:42.498022Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-07T04:17:28.900",
+  "references": [
+   {
+    "source": "psirt@us.ibm.com",
+    "url": "https://www.ibm.com/support/pages/node/7295921"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123218"
+   }
+  ],
+  "sourceIdentifier": "psirt@us.ibm.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-863"
+     }
+    ],
+    "source": "psirt@us.ibm.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

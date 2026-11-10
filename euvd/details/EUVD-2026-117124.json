@@ -1,0 +1,286 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102895"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-102895",
+  "cwes": [
+   "CWE-287",
+   "CWE-290",
+   "CWE-346"
+  ],
+  "dateAdded": "2026-11-09",
+  "dueDate": "2026-11-12",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: ; https://github.com/gpustack/gpustack/security/advisories/GHSA-gj9m-f8ph-pmhr ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102895",
+  "product": "GPUStack",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
+  "vendorProject": "GPUStack",
+  "vulnerabilityName": "GPUStack Improper Authentication Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-102895\nGHSA-gj9m-f8ph-pmhr\n",
+  "assigner": "GitHub_M",
+  "baseScore": 9.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 4, 2026, 9:16:59 PM",
+  "dateUpdated": "Nov 9, 2026, 8:58:23 PM",
+  "description": "GPUStack is an open-source GPU cluster manager for AI model serving and GPU instance provisioning. Prior to 2.2.0, get_current_user in gpustack/api/auth.py treated a loopback request source as the built-in administrator when force_auth_localhost was false, which was the default. A remote request could appear to originate from 127.0.0.1 because client_ip_getter accepted a same-host reverse proxy peer or a client-supplied X-GPUStack-Real-IP loopback value. The bypass allowed unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml. Exploitation was observed in the wild against a 2.1.1 deployment. This issue is fixed in version 2.2.0.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "3fee0198-2983-3b30-b96a-e9d6061ad6f4",
+    "product": {
+     "name": "gpustack",
+     "vendor": {
+      "name": "gpustack"
+     }
+    },
+    "product_version": "< 2.2.0"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "26e9ce4e-29cd-3c8f-b94e-6d191330b6f5",
+    "vendor": {
+     "name": "gpustack"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "3c56bb34-4beb-3042-a81a-f5331dd88d67",
+    "vulnerability": {
+     "aliases": "GHSA-gj9m-f8ph-pmhr\nCVE-2026-102895\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 10, 2026, 6:00:45 AM",
+     "datePublished": "Nov 9, 2026, 10:15:27 PM",
+     "dateUpdated": "Nov 9, 2026, 10:15:27 PM",
+     "description": "GPUStack: Authentication bypass via trusted loopback source (reverse-proxy TCP peer or X-GPUStack-Real-IP header) grants unauthenticated admin",
+     "enisa_id": "EUVD-2026-117124\n",
+     "epss": 0.0,
+     "id": "GHSA-gj9m-f8ph-pmhr",
+     "references": "https://github.com/gpustack/gpustack/security/advisories/GHSA-gj9m-f8ph-pmhr\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-102895\nhttps://github.com/gpustack/gpustack/pull/5346\nhttps://github.com/gpustack/gpustack/commit/53f42a6a553542974396d16a4ff6b12bcbedb48d\nhttps://github.com/gpustack/gpustack\nhttps://github.com/gpustack/gpustack/releases/tag/v2.2.0\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102895\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "ea9e57bf-5675-31a1-9cdb-19a172a4825d",
+    "vulnerability": {
+     "assigner": "GitHub_M",
+     "baseScore": 9.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 10, 2026, 6:00:18 AM",
+     "datePublished": "Nov 4, 2026, 9:16:59 PM",
+     "dateUpdated": "Nov 9, 2026, 8:58:23 PM",
+     "description": "GPUStack is an open-source GPU cluster manager for AI model serving and GPU instance provisioning. Prior to 2.2.0, get_current_user in gpustack/api/auth.py treated a loopback request source as the built-in administrator when force_auth_localhost was false, which was the default. A remote request could appear to originate from 127.0.0.1 because client_ip_getter accepted a same-host reverse proxy peer or a client-supplied X-GPUStack-Real-IP loopback value. The bypass allowed unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml. Exploitation was observed in the wild against a 2.1.1 deployment. This issue is fixed in version 2.2.0.",
+     "enisa_id": "EUVD-2026-117124\n",
+     "epss": 0.33,
+     "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
+     "id": "CVE-2026-102895",
+     "references": "https://github.com/gpustack/gpustack/security/advisories/GHSA-gj9m-f8ph-pmhr\nhttps://github.com/gpustack/gpustack/pull/5346\nhttps://github.com/gpustack/gpustack/commit/53f42a6a553542974396d16a4ff6b12bcbedb48d\nhttps://github.com/gpustack/gpustack/releases/tag/v2.2.0\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "0ea3a72f-ca41-3897-af08-6c14d1fa7dad",
+       "product": {
+        "name": "gpustack",
+        "vendor": {
+         "name": "gpustack"
+        }
+       },
+       "product_version": "< 2.2.0"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "2b37a72a-6113-3bbc-9712-a3f26d5d7816",
+       "vendor": {
+        "name": "gpustack"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "53441db0-3152-3407-a37e-d4a7a51ac254",
+  "epss": 0.33,
+  "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-117124",
+  "references": "https://github.com/gpustack/gpustack/security/advisories/GHSA-gj9m-f8ph-pmhr\nhttps://github.com/gpustack/gpustack/pull/5346\nhttps://github.com/gpustack/gpustack/commit/53f42a6a553542974396d16a4ff6b12bcbedb48d\nhttps://github.com/gpustack/gpustack/releases/tag/v2.2.0\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-117124",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 9, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "gpustack",
+      "vendor": "gpustack",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "< 2.2.0"
+       }
+      ]
+     }
+    ],
+    "source": "security-advisories@github.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-12",
+  "cisaExploitAdd": "2026-11-09",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "GPUStack Improper Authentication Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:gpustack:gpustack:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3439BFF0-7E02-4EFF-B772-F42FFB05A582",
+        "versionEndExcluding": "2.2.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "GPUStack is an open-source GPU cluster manager for AI model serving and GPU instance provisioning. Prior to 2.2.0, get_current_user in gpustack/api/auth.py treated a loopback request source as the built-in administrator when force_auth_localhost was false, which was the default. A remote request could appear to originate from 127.0.0.1 because client_ip_getter accepted a same-host reverse proxy peer or a client-supplied X-GPUStack-Real-IP loopback value. The bypass allowed unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml. Exploitation was observed in the wild against a 2.1.1 deployment. This issue is fixed in version 2.2.0."
+   }
+  ],
+  "id": "CVE-2026-102895",
+  "lastModified": "2026-11-09T19:42:09.450",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "security-advisories@github.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-102895",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-09T16:50:07.009163Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-04T22:17:44.613",
+  "references": [
+   {
+    "source": "security-advisories@github.com",
+    "tags": [
+     "Patch"
+    ],
+    "url": "https://github.com/gpustack/gpustack/commit/53f42a6a553542974396d16a4ff6b12bcbedb48d"
+   },
+   {
+    "source": "security-advisories@github.com",
+    "tags": [
+     "Issue Tracking",
+     "Patch"
+    ],
+    "url": "https://github.com/gpustack/gpustack/pull/5346"
+   },
+   {
+    "source": "security-advisories@github.com",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://github.com/gpustack/gpustack/releases/tag/v2.2.0"
+   },
+   {
+    "source": "security-advisories@github.com",
+    "tags": [
+     "Mitigation",
+     "Vendor Advisory"
+    ],
+    "url": "https://github.com/gpustack/gpustack/security/advisories/GHSA-gj9m-f8ph-pmhr"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102895"
+   }
+  ],
+  "sourceIdentifier": "security-advisories@github.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-287"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-290"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-346"
+     }
+    ],
+    "source": "security-advisories@github.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
