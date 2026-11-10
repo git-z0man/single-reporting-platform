@@ -1,0 +1,447 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123158"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-123158",
+  "cwes": [
+   "CWE-394"
+  ],
+  "dateAdded": "2026-11-09",
+  "dueDate": "2026-11-12",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://www.openssh.org/releasenotes.html ; https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/ ; https://github.com/openssh/openssh-portable/commit/4353fdc43ef646c43a8dda7025cc1a898caf1482 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-123158",
+  "product": "OpenSSH",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
+  "vendorProject": "OpenBSD",
+  "vulnerabilityName": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-123158\nGHSA-4fcc-vm97-gx3x\n",
+  "assigner": "mitre",
+  "baseScore": 8.1,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 5, 2026, 3:46:26 PM",
+  "dateUpdated": "Nov 10, 2026, 12:11:05 AM",
+  "description": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lacks a workaround for a password authentication bypass (related to misinterpretation of whether a string is intended to be a password hash). For some configurations of accounts, any password between 256 and 1024 characters succeeds. An example of a platform using musl libc without PAM is Alpine Linux.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "245d3dda-f287-3d5e-bee4-fd179bab726c",
+       "product": {
+        "name": "OpenSSH",
+        "vendor": {
+         "name": "OpenBSD"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-123158\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 6, 2026, 7:54:37 AM",
+     "dateUpdated": "Nov 6, 2026, 7:54:37 AM",
+     "description": "Kwetsbaarheid verholpen in OpenSSH door OpenSSH Project",
+     "id": "NCSC-2026-0469",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "21bc9bf8-941d-3b9a-9b5b-e3a7a1f64f29"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "8c648353-9649-30ea-912a-0366c1c3a303",
+    "product": {
+     "name": "OpenSSH",
+     "vendor": {
+      "name": "OpenBSD"
+     }
+    },
+    "product_version": "0 <10.6p2"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "e9803f60-f580-3983-ad3b-949185c0b5b8",
+    "vendor": {
+     "name": "OpenBSD"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "174ed8c6-2e06-3df6-9156-3dd10c8926c7",
+    "vulnerability": {
+     "aliases": "CVE-2026-123158\nGHSA-4fcc-vm97-gx3x\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 10, 2026, 6:00:45 AM",
+     "datePublished": "Nov 5, 2026, 6:33:14 PM",
+     "dateUpdated": "Nov 10, 2026, 3:30:23 AM",
+     "description": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lacks a workaround for a password authentication bypass (related to misinterpretation of whether a string is intended to be a password hash). For some configurations of accounts, any password between 256 and 1024 characters succeeds. An example of a platform using musl libc without PAM is Alpine Linux.",
+     "enisa_id": "EUVD-2026-117552\n",
+     "epss": 0.0,
+     "id": "GHSA-4fcc-vm97-gx3x",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-123158\nhttps://github.com/panubo/docker-sshd/issues/93\nhttps://github.com/google/goonami-scanner/pull/277\nhttps://github.com/openssh/openssh-portable/commit/4353fdc43ef646c43a8dda7025cc1a898caf1482\nhttps://www.openssh.org/releasenotes.html#10.6p2\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123158\nhttps://sshole.events.greynoise.io\nhttps://sshhole.com\nhttps://news.ycombinator.com/item?id=50379704\nhttps://news.ycombinator.com/item?id=50378228\nhttps://news.ycombinator.com/item?id=50377976\nhttps://marc.info/?l=openssh-unix-dev&m=179388064263131&w=2\nhttps://isc.sans.edu/diary.html?storyid=33498\nhttps://hachyderm.io/@damienmiller/117563026759098135\nhttps://github.com/predkambrij/sshhole-repro\nhttps://github.com/leonjza/sshhole-lab\nhttps://github.com/coollabsio/coolify/discussions/12484\nhttps://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass\nhttp://www.openwall.com/lists/oss-security/2026/11/09/27\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "c770c7a8-338e-3a2c-b3a0-d702359093cf",
+    "vulnerability": {
+     "assigner": "mitre",
+     "baseScore": 8.1,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 10, 2026, 6:00:07 AM",
+     "datePublished": "Nov 5, 2026, 3:46:26 PM",
+     "dateUpdated": "Nov 10, 2026, 12:11:05 AM",
+     "description": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lacks a workaround for a password authentication bypass (related to misinterpretation of whether a string is intended to be a password hash). For some configurations of accounts, any password between 256 and 1024 characters succeeds. An example of a platform using musl libc without PAM is Alpine Linux.",
+     "enisa_id": "EUVD-2026-117552\n",
+     "epss": 1.01,
+     "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
+     "id": "CVE-2026-123158",
+     "references": "https://www.openssh.org/releasenotes.html#10.6p2\nhttps://github.com/openssh/openssh-portable/commit/4353fdc43ef646c43a8dda7025cc1a898caf1482\nhttps://news.ycombinator.com/item?id=50377976\nhttps://news.ycombinator.com/item?id=50378228\nhttps://marc.info/?l=openssh-unix-dev&m=179388064263131&w=2\nhttps://hachyderm.io/@damienmiller/117563026759098135\nhttps://github.com/predkambrij/sshhole-repro\nhttps://github.com/leonjza/sshhole-lab\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "6024d69d-6026-3209-8a62-816169d9db28",
+       "product": {
+        "name": "OpenSSH",
+        "vendor": {
+         "name": "OpenBSD"
+        }
+       },
+       "product_version": "0 <10.6p2"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "e061c372-a35e-3ae7-b73a-fc42bd4e5355",
+       "vendor": {
+        "name": "OpenBSD"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "32c5a3bb-78b6-3dc8-bcf3-2bf9007910de",
+  "epss": 1.01,
+  "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-117552",
+  "references": "https://www.openssh.org/releasenotes.html#10.6p2\nhttps://github.com/openssh/openssh-portable/commit/4353fdc43ef646c43a8dda7025cc1a898caf1482\nhttps://news.ycombinator.com/item?id=50377976\nhttps://news.ycombinator.com/item?id=50378228\nhttps://marc.info/?l=openssh-unix-dev&m=179388064263131&w=2\nhttps://hachyderm.io/@damienmiller/117563026759098135\nhttps://github.com/predkambrij/sshhole-repro\nhttps://github.com/leonjza/sshhole-lab\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-117552",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 9, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "platforms": [
+       "Linux"
+      ],
+      "product": "OpenSSH",
+      "vendor": "OpenBSD",
+      "versions": [
+       {
+        "lessThan": "10.6p2",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "cve@mitre.org"
+   }
+  ],
+  "cisaActionDue": "2026-11-12",
+  "cisaExploitAdd": "2026-11-09",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:openbsd:openssh:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "09209468-5A53-45C0-8698-8C668E53EBEA",
+        "versionEndExcluding": "10.6",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:openbsd:openssh:10.6:-:*:*:*:*:*:*",
+        "matchCriteriaId": "4C93748B-FD1E-4BD4-9D18-0D4D2BD9C518",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:openbsd:openssh:10.6:p1:*:*:*:*:*:*",
+        "matchCriteriaId": "AD8BE997-294C-4E7A-A714-6FCED9884258",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:alpinelinux:alpine_linux:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "70B1C408-9879-44A0-ADA0-5E0B0B3447EA",
+        "versionEndExcluding": "3.21.10",
+        "vulnerable": false
+       },
+       {
+        "criteria": "cpe:2.3:o:alpinelinux:alpine_linux:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D4963B56-DEDA-43CE-B636-6715C4C3C1EE",
+        "versionEndExcluding": "3.22.8",
+        "versionStartIncluding": "3.22.0",
+        "vulnerable": false
+       },
+       {
+        "criteria": "cpe:2.3:o:alpinelinux:alpine_linux:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3C30A060-F2D9-4A44-A839-7CE86E222A88",
+        "versionEndExcluding": "3.23.8",
+        "versionStartIncluding": "3.23.0",
+        "vulnerable": false
+       },
+       {
+        "criteria": "cpe:2.3:o:alpinelinux:alpine_linux:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3A5F114B-8B24-43BB-AF9C-F2AB8A12F3B0",
+        "versionEndExcluding": "3.24.4",
+        "versionStartIncluding": "3.24.0",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lacks a workaround for a password authentication bypass (related to misinterpretation of whether a string is intended to be a password hash). For some configurations of accounts, any password between 256 and 1024 characters succeeds. An example of a platform using musl libc without PAM is Alpine Linux."
+   },
+   {
+    "lang": "es",
+    "value": "sshd en OpenSSH anterior a la versión 10.6p2 en Linux, cuando se utiliza musl libc sin PAM, carece de una solución alternativa para una omisión de autenticación de contraseña (relacionado con la mala interpretación de si una cadena está destinada a ser un hash de contraseña). Para algunas configuraciones de cuentas, cualquier contraseña entre 256 y 1024 caracteres tiene éxito. Un ejemplo de plataforma que utiliza musl libc sin PAM es Alpine Linux."
+   }
+  ],
+  "id": "CVE-2026-123158",
+  "lastModified": "2026-11-10T01:17:16.970",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.1,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.2,
+     "impactScore": 5.9,
+     "source": "cve@mitre.org",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-123158",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-09T16:50:17.920404Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-05T16:17:47.110",
+  "references": [
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/leonjza/sshhole-lab"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Patch"
+    ],
+    "url": "https://github.com/openssh/openssh-portable/commit/4353fdc43ef646c43a8dda7025cc1a898caf1482"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Exploit",
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/predkambrij/sshhole-repro"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://hachyderm.io/@damienmiller/117563026759098135"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Mailing List",
+     "Vendor Advisory"
+    ],
+    "url": "https://marc.info/?l=openssh-unix-dev&m=179388064263131&w=2"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Issue Tracking"
+    ],
+    "url": "https://news.ycombinator.com/item?id=50377976"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Issue Tracking"
+    ],
+    "url": "https://news.ycombinator.com/item?id=50378228"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Release Notes"
+    ],
+    "url": "https://www.openssh.org/releasenotes.html#10.6p2"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.openwall.com/lists/oss-security/2026/11/09/27"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/coollabsio/coolify/discussions/12484"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/google/goonami-scanner/pull/277"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/panubo/docker-sshd/issues/93"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Issue Tracking"
+    ],
+    "url": "https://news.ycombinator.com/item?id=50379704"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Not Applicable"
+    ],
+    "url": "https://isc.sans.edu/diary.html?storyid=33498"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://sshhole.com"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://sshole.events.greynoise.io/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123158"
+   }
+  ],
+  "sourceIdentifier": "cve@mitre.org",
+  "vulnStatus": "Modified",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-394"
+     }
+    ],
+    "source": "cve@mitre.org",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
