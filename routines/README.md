@@ -389,7 +389,7 @@ what a quiet day looks like — which is why the EUVD monitor's exit 2 of
 31 October sat unnoticed until someone opened the repository.
 
 It does not read the trigger API at all. Another Routine on the account,
-"Routinen-Monitor (tägliches Update)" (`trig_01W6ViV4DyWyorLnBpjZA3W2`), reads
+"Routinen-Monitor (tägliches Update)" (`trig_01ULufyAbLGUKHzTYB83gnpf`), reads
 every Routine read-only and reports enabled state, schedule and last run; the
 watch would only duplicate that, and the tool is usually missing from these
 sessions in any case. Its signal is instead the heartbeat the daily rule already
