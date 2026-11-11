@@ -28,12 +28,12 @@ ar_user_manual_pdf_v11_last_modified: Mon, 12 Oct 2026 08:50:30 GMT
 cra_srp_status_url: https://www.enisa.europa.eu/topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp/cra-srp-status (new 2026-10-13, found via the "Content" navigation; page 13)
 cra_srp_status_retrieved: 2026-10-13 (fetched 06:07 UTC, first capture)
 terms_conditions_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 2026-09-17)
-vulnerability_services_retrieved: 2026-10-08 (fetched 10:56 UTC; first capture. Word-identical to the Internet Archive copy of 2026-10-04 05:46 UTC; the "EU KEV Catalogue" paragraph is word-identical to the archive's earliest copy, 2026-09-21 07:50 UTC)
+vulnerability_services_retrieved: 2026-11-11 (UTC morning run; VulnOptiCON further-info list removed, EU KEV paragraph unchanged; earlier: 2026-10-08 fetched 10:56 UTC; first capture. Word-identical to the Internet Archive copy of 2026-10-04 05:46 UTC; the "EU KEV Catalogue" paragraph is word-identical to the archive's earliest copy, 2026-09-21 07:50 UTC)
 ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage, and (from 2026-10-08) the Vulnerability Services topic page — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-11-10
-last_change: 2026-11-05
+last_check: 2026-11-11
+last_change: 2026-11-11
 ar_user_manual_pdf_v12_url: https://www.enisa.europa.eu/media/57516 (new 2026-10-21: the landing page's "Download" button; served as "SRP - User Manual - ARs v1.2.0.pdf"; the v1.1 URL above still serves the unchanged v1.1 file)
 ar_user_manual_pdf_v13_url: https://www.enisa.europa.eu/sites/default/files/2026-11/SRP%20-%20User%20Manual%20-%20ARs%20v1.3.pdf (new 2026-11-05: the landing page's "Download" button; the v1.2 URL above still serves the unchanged v1.2 file, hash `c8559c9f…` re-verified)
 ar_user_manual_pdf_v13_sha256: 9d01b7dcedc8b84fbdf21807266e6a1d86d55529b34508b7a1181b597cca12c6 (3,376,334 bytes, cover "V1.3 / NOVEMBER 2026"; first captured 2026-11-05)
@@ -44,6 +44,19 @@ ar_user_manual_pdf_v12_sha256: c8559c9f21460c2edd719128fe517aa787ea83ee643ef559e
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-11-11 UTC (vs. 2026-11-10)
+
+ENISA removed the expired VulnOptiCON 2026 notice from the Vulnerability Services page. The EU KEV paragraph is unchanged: SRP reports still "will" enrich the EU KEV.
+
+**Changed**
+- **Vulnerability Services page**: the further-info list at the end ("ENISA will be at VulnOptiCON 2026 on September 23-25, 2026, in Luxembourg …" and the link to vulnopticon.org) is gone; the page's tracked text now ends with the contact line. When it went is not known: earlier runs checked this page chiefly for the EU KEV paragraph. Old text kept in the page's section below.
+
+**Watch**
+- The routine prompt (section 3a) still says to diff "to the end of the VulnOptiCON list"; this file now says "to the contact line". The prompt needs the same edit by a person.
+
+**Unchanged**
+FAQ Q1-Q35 ("Updated: 15 October 2026") and Glossary 1.6 word for word (`tools/fetch_enisa.py`), CSIRT list (`tools/check_csirt_list.py` exit 0, 27 countries), main page (1.3 note), four guidance pages (12 September, PEC 12 October), Terms (10/09/2026), tutorial video, Status page, manual landing page (version 1.3) and v1.3 PDF (hash `9d01b7dc…`, Last-Modified 4 Nov 2026 20:05:36 GMT). Content navigation 10 entries. 13 pages HTTP 200.
 
 ### 2026-11-05 UTC (vs. 2026-10-22)
 
@@ -1785,7 +1798,7 @@ Footnotes on the page: [1] "This field will be available in the next release of 
 
 ## Vulnerability Services (topic page, `vulnerability_services_url`)
 
-ENISA's topic page for its vulnerability services, one level above the SRP pages (since 2026-09-19 the main SRP page and its FAQ sit under its `/vulnerability-services/` path). Tracked from 2026-10-08 for its "EU KEV Catalogue" paragraph. Diff the text from the breadcrumb to the end of the VulnOptiCON list. **Not tracked:** the "Related content" block below it (Publications / News / Tools teasers), which ENISA's CMS fills automatically. Text as on 2026-10-08 10:56 UTC; `&nbsp;` rendered as a space.
+ENISA's topic page for its vulnerability services, one level above the SRP pages (since 2026-09-19 the main SRP page and its FAQ sit under its `/vulnerability-services/` path). Tracked from 2026-10-08 for its "EU KEV Catalogue" paragraph. Diff the text from the breadcrumb to the contact line ("You can contact the ENISA Vuln Services team …"; until 2026-11 the VulnOptiCON list followed it). **Not tracked:** the "Related content" block below it (Publications / News / Tools teasers), which ENISA's CMS fills automatically. Text as on 2026-10-08 10:56 UTC; `&nbsp;` rendered as a space.
 
 **Navigation.** Breadcrumb "Home > Topics > Vulnerability Services". "Subtopics": "Single Reporting Platform (SRP)", linked as `https://www.enisa.europa.eu//topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp` (sic, double slash). "Content": one entry, "Join the global CVE Program under the ENISA Root" (`/topics/vulnerability-services/join-the-global-cve-program-under-the-enisa-root`). A new entry in either list is a finding to report; it is not tracked without a person's decision.
 
@@ -1827,7 +1840,7 @@ Blockquote, bold: "ENISA provides services that help connect vulnerability ident
 
 Bold: "You can contact the ENISA Vuln Services team at: vuln@enisa.europa.eu" (mailto link)
 
-**Further-info list.** "ENISA will be at VulnOptiCON 2026 on September 23-25, 2026, in Luxembourg.The conference brings together a cross-section of global cybersecurity leadership including representatives from CSIRTs, cybersecurity agencies, such as CISA, NCSC UK, and ENISA, European CNAs, academic research institutions, security and AI startups and end-user organisations." *(sic: no space after "Luxembourg."; the event is over and the future tense stands)* Second item: link "VulnOptiCON 2026" (`https://vulnopticon.org/`).
+**Further-info list.** *Removed; absent on 2026-11-11, the first check to look for it word for word (last recorded present 2026-10-08). The page now ends with the contact line above.* It read: "ENISA will be at VulnOptiCON 2026 on September 23-25, 2026, in Luxembourg.The conference brings together a cross-section of global cybersecurity leadership including representatives from CSIRTs, cybersecurity agencies, such as CISA, NCSC UK, and ENISA, European CNAs, academic research institutions, security and AI startups and end-user organisations." *(sic: no space after "Luxembourg.")*, with a second item linking "VulnOptiCON 2026" (`https://vulnopticon.org/`).
 
 ## Guidance subpages — full content baseline
 
