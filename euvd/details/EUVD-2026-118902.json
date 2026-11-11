@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 7, 2026, 3:47:19 AM",
-  "dateUpdated": "Nov 9, 2026, 8:58:24 PM",
+  "dateUpdated": "Nov 10, 2026, 4:56:17 AM",
   "description": "IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain full administrative privileges.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -59,12 +59,12 @@
      "baseScore": 9.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 10, 2026, 6:00:18 AM",
+     "dataProcessed": "Nov 11, 2026, 7:19:03 AM",
      "datePublished": "Nov 7, 2026, 3:47:19 AM",
-     "dateUpdated": "Nov 9, 2026, 8:58:24 PM",
+     "dateUpdated": "Nov 10, 2026, 4:56:17 AM",
      "description": "IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain full administrative privileges.",
      "enisa_id": "EUVD-2026-118902\n",
-     "epss": 0.4,
+     "epss": 0.71,
      "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
      "id": "CVE-2026-123218",
      "references": "https://www.ibm.com/support/pages/node/7295921\n",
@@ -96,7 +96,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-123218\nGHSA-29m7-hw74-2gwc\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 10, 2026, 6:00:45 AM",
+     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
      "datePublished": "Nov 7, 2026, 6:31:14 AM",
      "dateUpdated": "Nov 10, 2026, 12:31:32 AM",
      "description": "IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain full administrative privileges.",
@@ -110,7 +110,7 @@
    }
   ],
   "enisaUuid": "f4729414-24a5-3bd0-a55f-5533d47e1024",
-  "epss": 0.4,
+  "epss": 0.71,
   "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
   "id": "EUVD-2026-118902",
   "references": "https://www.ibm.com/support/pages/node/7295921\n"
@@ -148,6 +148,37 @@
   "cisaExploitAdd": "2026-11-09",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "IBM Aspera Faspex Incorrect Authorization Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:ibm:aspera_faspex:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "CA93A2D7-D967-470E-B484-3234D8DF4A42",
+        "versionEndExcluding": "5.0.19.1",
+        "versionStartIncluding": "5.0.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   }
+  ],
   "cveTags": [],
   "descriptions": [
    {
@@ -156,7 +187,7 @@
    }
   ],
   "id": "CVE-2026-123218",
-  "lastModified": "2026-11-09T22:18:36.323",
+  "lastModified": "2026-11-10T13:49:00.563",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -197,7 +228,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-09T20:40:42.498022Z",
+      "timestamp": "2026-11-09T00:00:00+00:00",
       "version": "2.0.3"
      }
     }
@@ -207,15 +238,21 @@
   "references": [
    {
     "source": "psirt@us.ibm.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
     "url": "https://www.ibm.com/support/pages/node/7295921"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123218"
    }
   ],
   "sourceIdentifier": "psirt@us.ibm.com",
-  "vulnStatus": "Undergoing Analysis",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [

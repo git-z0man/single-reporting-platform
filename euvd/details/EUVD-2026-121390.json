@@ -1,0 +1,263 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-125350"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-125350",
+  "cwes": [
+   "CWE-416"
+  ],
+  "dateAdded": "2026-11-10",
+  "dueDate": "2026-11-24",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-125350",
+  "product": "Chromium",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+  "vendorProject": "Google",
+  "vulnerabilityName": "Google Chromium Use-After-Free Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-125350\nGHSA-rm6p-3338-xx33\n",
+  "assigner": "Chrome",
+  "baseScore": 8.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 10, 2026, 5:20:21 PM",
+  "dateUpdated": "Nov 10, 2026, 8:58:25 PM",
+  "description": "Use after free in XML in Google Chrome prior to 157.0.8103.50 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "4167cffc-f01f-35fa-9f1e-c78f53170235",
+    "product": {
+     "name": "Chrome",
+     "vendor": {
+      "name": "Google"
+     }
+    },
+    "product_version": "157.0.8103.50 <157.0.8103.50"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "bdc4b4e2-f96e-36f4-ad04-ff50d16311ce",
+    "vendor": {
+     "name": "Google"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "9ce2697d-64ff-34e0-abc7-804cd9d17666",
+    "vulnerability": {
+     "assigner": "Chrome",
+     "baseScore": 8.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 11, 2026, 7:03:23 AM",
+     "datePublished": "Nov 10, 2026, 5:20:21 PM",
+     "dateUpdated": "Nov 10, 2026, 8:58:25 PM",
+     "description": "Use after free in XML in Google Chrome prior to 157.0.8103.50 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+     "enisa_id": "EUVD-2026-121390\n",
+     "epss": 0.0,
+     "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
+     "id": "CVE-2026-125350",
+     "references": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html\nhttps://issues.chromium.org/issues/582442907\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "d0c779d8-cc26-3bea-a345-2bc409636f49",
+       "product": {
+        "name": "Chrome",
+        "vendor": {
+         "name": "Google"
+        }
+       },
+       "product_version": "157.0.8103.50 <157.0.8103.50"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "93300cc3-42c5-3c58-b8ad-4b45ba880d89",
+       "vendor": {
+        "name": "Google"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "eb433522-d9bf-3f23-a850-5ec44ec22311",
+    "vulnerability": {
+     "aliases": "CVE-2026-125350\nGHSA-rm6p-3338-xx33\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
+     "datePublished": "Nov 10, 2026, 6:31:49 PM",
+     "dateUpdated": "Nov 10, 2026, 9:32:16 PM",
+     "description": "Use after free in XML in Google Chrome prior to 157.0.8103.50 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+     "enisa_id": "EUVD-2026-121390\n",
+     "epss": 0.0,
+     "id": "GHSA-rm6p-3338-xx33",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-125350\nhttps://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html\nhttps://issues.chromium.org/issues/582442907\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-125350\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "fce5f0c8-8a73-3d3f-871f-a14b1bf71baa",
+  "epss": 0.0,
+  "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-121390",
+  "references": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html\nhttps://issues.chromium.org/issues/582442907\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-121390",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 10, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "Chrome",
+      "vendor": "Google",
+      "versions": [
+       {
+        "lessThan": "157.0.8103.50",
+        "status": "affected",
+        "version": "157.0.8103.50",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "chrome-cve-admin@google.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-24",
+  "cisaExploitAdd": "2026-11-10",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Google Chromium Use-After-Free Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "6670B19D-D9FF-4276-B04E-F35E8F3BB029",
+        "versionEndExcluding": "157.0.8103.50",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Use after free in XML in Google Chrome prior to 157.0.8103.50 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)"
+   }
+  ],
+  "id": "CVE-2026-125350",
+  "lastModified": "2026-11-11T05:19:38.220",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "REQUIRED",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.9,
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-125350",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-09T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-10T18:17:35.237",
+  "references": [
+   {
+    "source": "chrome-cve-admin@google.com",
+    "tags": [
+     "Release Notes",
+     "Vendor Advisory"
+    ],
+    "url": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html"
+   },
+   {
+    "source": "chrome-cve-admin@google.com",
+    "tags": [
+     "Permissions Required"
+    ],
+    "url": "https://issues.chromium.org/issues/582442907"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-125350"
+   }
+  ],
+  "sourceIdentifier": "chrome-cve-admin@google.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-416"
+     }
+    ],
+    "source": "chrome-cve-admin@google.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

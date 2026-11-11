@@ -28,9 +28,255 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/AU:N/R:U/V:D/RE:M/U:Red",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 14, 2026, 5:26:52 PM",
-  "dateUpdated": "Oct 15, 2026, 3:57:17 AM",
+  "dateUpdated": "Nov 10, 2026, 12:40:25 PM",
   "description": "A remote code execution (RCE) vulnerability in the management interface of Palo Alto Networks PAN-OS® software enables an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.\n\n\n\nThe security risk posed by this issue is minimized by restricting access to the management interface to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 .\n\n\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\n\n\nCloud NGFW and Prisma® Access are not impacted by this vulnerability.",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "06b7ba68-d09f-31a9-ab9a-e8cf127344ec",
+       "product": {
+        "name": "11.2 11.2.10-h15",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "20891f2e-bdd4-3625-b3cc-d3d446dd2970",
+       "product": {
+        "name": "10.2 10.2.13-h26",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "2726717b-6569-309a-97dd-00514fb88ec7",
+       "product": {
+        "name": "12.1 12.1.7-h8",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "32773f13-acb8-3f27-b332-973a494a1666",
+       "product": {
+        "name": "11.1 11.1.13-h15",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "3cb26c16-e128-3c1d-9a86-e8e60d528dc4",
+       "product": {
+        "name": "12.1 12.1.10-h2",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "48192efc-8e6e-39c7-b124-e75302536bb5",
+       "product": {
+        "name": "11.1 11.1.10-h35",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "56ffc4ec-92d0-32e9-8d08-ce29a56ca684",
+       "product": {
+        "name": "11.2 11.2.13-h3",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "5f4eb5c4-9670-31dd-b9ea-22ecb5567a84",
+       "product": {
+        "name": "12.1 12.1.4-h12",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "6663750f-c6dd-3c64-8b93-9d99528c6b81",
+       "product": {
+        "name": "10.2 10.2.16-h11",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "66651eaa-4e74-3851-9239-0f599fc7e72b",
+       "product": {
+        "name": "10.2 10.2.18-h12",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "676106e9-ce4a-334b-a923-115e9eff61ff",
+       "product": {
+        "name": "12.2 12.2.4",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "7f7d5b0b-2950-3c12-8e3f-83fe053042b4",
+       "product": {
+        "name": "PAN-OS",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "7fae7975-82cd-3465-84c0-8e33b8d33d29",
+       "product": {
+        "name": "11.2 11.2.16",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "87a1a5a5-6efa-38f1-8920-810851fe7349",
+       "product": {
+        "name": "11.2 11.2.7-h21",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "9aa91e48-da31-3cb1-a517-e5a78cecae2f",
+       "product": {
+        "name": "10.2 10.2.7-h38",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "ce37ae28-846d-3b77-964b-5579e0c4037f",
+       "product": {
+        "name": "11.2 11.2.4-h22",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "d382f65e-99d2-3c74-afd3-f9bac46964f8",
+       "product": {
+        "name": "11.1 11.1.4-h37",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "d8f8b3b5-269a-32fe-893f-776d548b52bb",
+       "product": {
+        "name": "11.1 11.1.6-h39",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "efe17f4a-3735-3d1f-86af-9ddc73c54e94",
+       "product": {
+        "name": "11.2 11.2.15",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "fe869c5d-d856-3474-a57f-f728a8f3f6a1",
+       "product": {
+        "name": "11.1 11.1.16-h3",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "ff3a1551-57cb-3054-9c0f-ddd76999e2c1",
+       "product": {
+        "name": "10.2 10.2.10-h41",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "ffb844dd-968b-3c6b-8af9-d3a584eb7817",
+       "product": {
+        "name": "11.1 11.1.7-h11",
+        "vendor": {
+         "name": "Palo Alto Networks"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-0316\nCVE-2026-0317\nCVE-2026-0318\nCVE-2026-0319\nCVE-2026-0320\nCVE-2026-0321\nCVE-2026-0322\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 14, 2026, 10:00:00 PM",
+     "dateUpdated": "Oct 14, 2026, 10:00:00 PM",
+     "description": "Palo Alto Networks PAN-OS: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-3947",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-3947.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3947\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Palo Alto Networks PAN-OS ausnutzen, um einen Cross-Site Scripting Angriff durchzuführen, beliebigen Code mit Root-Rechten auszuführen, Sicherheitsmaßnahmen zu umgehen, sich als andere Benutzer auszugeben oder einen Denial-of-Service-Zustand auszulösen."
+    },
+    "id": "4d4c73a1-c41a-395e-9c40-8d43f1c012c1"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "f175894f-29d9-31f0-8677-b09ecb0029d5",
+       "product": {
+        "name": "RUGGEDCOM APE1808",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-0266\nCVE-2026-0272\nCVE-2026-0273\nCVE-2026-0279\nCVE-2026-0280\nCVE-2026-0281\nCVE-2026-0282\nCVE-2026-0283\nCVE-2026-0284\nCVE-2026-0285\nCVE-2026-0286\nCVE-2026-0287\nCVE-2026-0288\nCVE-2026-0308\nCVE-2026-0309\nCVE-2026-0310\nCVE-2026-0316\nCVE-2026-0317\nCVE-2026-0318\nCVE-2026-0319\nCVE-2026-0320\nCVE-2026-0321\nCVE-2026-0322\n",
+     "baseScore": 0.0,
+     "datePublished": "Jul 14, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 10, 2026, 12:00:00 AM",
+     "description": "SSA-104023: Multiple Vulnerabilities in Palo Alto Networks PAN-OS on RUGGEDCOM APE1808 Devices",
+     "id": "SSA-104023",
+     "references": "https://cert-portal.siemens.com/productcert/html/ssa-104023.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-104023.json\n",
+     "source": {
+      "id": 7,
+      "name": "csaf_siemens"
+     },
+     "summary": "Palo Alto Networks has published [1] information on vulnerabilities in PAN-OS. This advisory lists the related Siemens Industrial products affected by these vulnerabilities.\n\nCustomers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications.\n\n[1] https://security.paloaltonetworks.com/"
+    },
+    "id": "99c0a8f4-cedf-3004-8b39-7c0601531728"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "0f2ed7cc-87bd-3ce6-9bd2-07eea50ba105",
@@ -97,14 +343,14 @@
     "vulnerability": {
      "aliases": "GHSA-9fh3-97mp-7wmv\nCVE-2026-0322\n",
      "baseScore": 0.0,
-     "dataProcessed": "Oct 16, 2026, 7:04:39 AM",
+     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
      "datePublished": "Oct 14, 2026, 6:32:28 PM",
-     "dateUpdated": "Oct 15, 2026, 6:32:17 PM",
+     "dateUpdated": "Nov 10, 2026, 3:33:03 PM",
      "description": "A remote code execution (RCE) vulnerability in the management interface of Palo Alto Networks PAN-OS® software enables an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.\n\n\n\nThe security risk posed by this issue is minimized by restricting access to the management interface to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 .\n\n\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\n\n\nCloud NGFW and Prisma® Access are not impacted by this vulnerability.",
      "enisa_id": "EUVD-2026-101495\n",
      "epss": 0.0,
      "id": "GHSA-9fh3-97mp-7wmv",
-     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322\nhttps://security.paloaltonetworks.com/CVE-2026-0322\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-0322\n",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322\nhttps://cert-portal.siemens.com/productcert/html/ssa-104023.html\nhttps://security.paloaltonetworks.com/CVE-2026-0322\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-0322\n",
      "vulnerabilityProduct": [],
      "vulnerabilityVendor": []
     }
@@ -116,12 +362,12 @@
      "baseScore": 8.6,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/AU:N/R:U/V:D/RE:M/U:Red",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Oct 16, 2026, 7:20:55 AM",
+     "dataProcessed": "Nov 11, 2026, 7:21:18 AM",
      "datePublished": "Oct 14, 2026, 5:26:52 PM",
-     "dateUpdated": "Oct 15, 2026, 3:57:17 AM",
+     "dateUpdated": "Nov 10, 2026, 12:40:25 PM",
      "description": "A remote code execution (RCE) vulnerability in the management interface of Palo Alto Networks PAN-OS® software enables an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.\n\n\n\nThe security risk posed by this issue is minimized by restricting access to the management interface to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 .\n\n\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\n\n\nCloud NGFW and Prisma® Access are not impacted by this vulnerability.",
      "enisa_id": "EUVD-2026-101495\n",
-     "epss": 1.08,
+     "epss": 1.74,
      "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
      "id": "CVE-2026-0322",
      "references": "https://security.paloaltonetworks.com/CVE-2026-0322\n",
@@ -190,7 +436,7 @@
    }
   ],
   "enisaUuid": "926d96e0-b92c-340d-bc4f-85a9bb7afc5f",
-  "epss": 1.08,
+  "epss": 1.74,
   "exploitedSince": "Oct 14, 2026, 12:00:00 AM",
   "id": "EUVD-2026-101495",
   "references": "https://security.paloaltonetworks.com/CVE-2026-0322\n"
@@ -645,6 +891,24 @@
      }
     ],
     "source": "psirt@paloaltonetworks.com"
+   },
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "RUGGEDCOM APE1808",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
    }
   ],
   "cisaActionDue": "2026-10-17",
@@ -1919,6 +2183,33 @@
       "operator": "OR"
      }
     ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:siemens:ruggedcom_ape1808_firmware:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "37FDCA69-9049-40B4-88AF-F476901022B6",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:siemens:ruggedcom_ape1808:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B89A6863-B602-4404-8D26-337FECABFFF0",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
    }
   ],
   "cveTags": [],
@@ -1929,7 +2220,7 @@
    }
   ],
   "id": "CVE-2026-0322",
-  "lastModified": "2026-10-15T13:47:26.713",
+  "lastModified": "2026-11-10T18:53:05.820",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -2028,6 +2319,13 @@
      "Vendor Advisory"
     ],
     "url": "https://security.paloaltonetworks.com/CVE-2026-0322"
+   },
+   {
+    "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-104023.html"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",

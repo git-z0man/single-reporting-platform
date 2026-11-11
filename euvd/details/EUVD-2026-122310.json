@@ -1,0 +1,355 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-124194"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-124194",
+  "cwes": [
+   "CWE-356"
+  ],
+  "dateAdded": "2026-11-10",
+  "dueDate": "2026-11-24",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-124194 ; https://nvd.nist.gov/vuln/detail/CVE-2026-124194",
+  "product": "Office",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+  "vendorProject": "Microsoft",
+  "vulnerabilityName": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-124194\nGHSA-69hg-ppjj-gg27\n",
+  "assigner": "microsoft",
+  "baseScore": 6.5,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:H/RL:O/RC:C",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 10, 2026, 6:22:22 PM",
+  "dateUpdated": "Nov 10, 2026, 11:53:58 PM",
+  "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "0700f925-b001-3973-bd2e-8d1176e1453c",
+    "product": {
+     "name": "Microsoft Office LTSC 2021",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "16.0.1 <16.0.14334.21048"
+   },
+   {
+    "id": "d23a154b-81c8-3e24-b471-694497e6908f",
+    "product": {
+     "name": "Microsoft 365 Apps for Enterprise",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "16.0.1 <https://aka.ms/OfficeSecurityReleases"
+   },
+   {
+    "id": "f951c7e3-0d4d-33cf-909e-d608ee37f601",
+    "product": {
+     "name": "Microsoft Office LTSC 2024",
+     "vendor": {
+      "name": "Microsoft"
+     }
+    },
+    "product_version": "16.0.0 <16.0.17932.21140"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "e56e62dc-97e1-31e8-a335-12dd5ef197c3",
+    "vendor": {
+     "name": "Microsoft"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "811cff4a-0dbe-3303-a3d5-6895934d4b76",
+    "vulnerability": {
+     "assigner": "microsoft",
+     "baseScore": 6.5,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:H/RL:O/RC:C",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 11, 2026, 7:03:29 AM",
+     "datePublished": "Nov 10, 2026, 6:22:22 PM",
+     "dateUpdated": "Nov 10, 2026, 11:53:58 PM",
+     "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
+     "enisa_id": "EUVD-2026-122310\n",
+     "epss": 0.0,
+     "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
+     "id": "CVE-2026-124194",
+     "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "27af1874-e8f9-34a1-873b-0701e5e3ab5e",
+       "product": {
+        "name": "Microsoft 365 Apps for Enterprise",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "16.0.1 <https://aka.ms/OfficeSecurityReleases"
+      },
+      {
+       "id": "47c71a56-5a8a-3807-8cf5-e4fb01ca8945",
+       "product": {
+        "name": "Microsoft Office LTSC 2024",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "16.0.0 <16.0.17932.21140"
+      },
+      {
+       "id": "6f1afb49-7def-3651-99af-9e85da0db7fe",
+       "product": {
+        "name": "Microsoft Office LTSC 2021",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       },
+       "product_version": "16.0.1 <16.0.14334.21048"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "3f9ebde6-acc1-3b12-be6a-350021a61bd7",
+       "vendor": {
+        "name": "Microsoft"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "cc333d9b-f2d4-3bb6-aed8-ff5e9cd60657",
+    "vulnerability": {
+     "aliases": "CVE-2026-124194\nGHSA-69hg-ppjj-gg27\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
+     "datePublished": "Nov 10, 2026, 9:33:51 PM",
+     "dateUpdated": "Nov 10, 2026, 9:33:51 PM",
+     "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
+     "enisa_id": "EUVD-2026-122310\n",
+     "epss": 0.0,
+     "id": "GHSA-69hg-ppjj-gg27",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-124194\nhttps://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-124194\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "6fc07f3c-f134-30b6-8b70-8fcbb1332e1d",
+  "epss": 0.0,
+  "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-122310",
+  "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-122310",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 10, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "platforms": [
+       "32-bit Systems",
+       "x64-based Systems"
+      ],
+      "product": "Microsoft 365 Apps for Enterprise",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "https://aka.ms/OfficeSecurityReleases",
+        "status": "affected",
+        "version": "16.0.1",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "32-bit Systems",
+       "x64-based Systems"
+      ],
+      "product": "Microsoft Office LTSC 2021",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "16.0.14334.21048",
+        "status": "affected",
+        "version": "16.0.1",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "platforms": [
+       "32-bit Systems",
+       "x64-based Systems"
+      ],
+      "product": "Microsoft Office LTSC 2024",
+      "vendor": "Microsoft",
+      "versions": [
+       {
+        "lessThan": "16.0.17932.21140",
+        "status": "affected",
+        "version": "16.0.0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "secure@microsoft.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-24",
+  "cisaExploitAdd": "2026-11-10",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:microsoft:365_apps:-:*:*:*:enterprise:*:x64:*",
+        "matchCriteriaId": "3259EBFE-AE2D-48B8-BE9A-E22BBDB31378",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:365_apps:-:*:*:*:enterprise:*:x86:*",
+        "matchCriteriaId": "CD25F492-9272-4836-832C-8439EBE64CCF",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:office_2021:-:*:*:*:ltsc:-:x64:*",
+        "matchCriteriaId": "1D518075-3362-4D15-93B1-0E6C61518D16",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:office_2021:-:*:*:*:ltsc:-:x86:*",
+        "matchCriteriaId": "1059BEC6-C30B-4F0F-A878-5267A21CBD85",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:office_2024:-:*:*:*:ltsc:-:x64:*",
+        "matchCriteriaId": "55A9AFDA-D77B-4CC7-ACE5-3A2ABDA257D8",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:microsoft:office_2024:-:*:*:*:ltsc:-:x86:*",
+        "matchCriteriaId": "8887D177-26A3-4008-89B6-50A9E9830F13",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network."
+   }
+  ],
+  "id": "CVE-2026-124194",
+  "lastModified": "2026-11-11T05:19:35.990",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 6.5,
+      "baseSeverity": "MEDIUM",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "NONE",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "REQUIRED",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 3.6,
+     "source": "secure@microsoft.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-124194",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-09T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-10T19:20:48.180",
+  "references": [
+   {
+    "source": "secure@microsoft.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-124194"
+   }
+  ],
+  "sourceIdentifier": "secure@microsoft.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-356"
+     }
+    ],
+    "source": "secure@microsoft.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
