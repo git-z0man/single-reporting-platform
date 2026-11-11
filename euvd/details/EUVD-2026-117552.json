@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 5, 2026, 3:46:26 PM",
-  "dateUpdated": "Nov 10, 2026, 12:11:05 AM",
+  "dateUpdated": "Nov 10, 2026, 4:55:54 AM",
   "description": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lacks a workaround for a password authentication bypass (related to misinterpretation of whether a string is intended to be a password hash). For some configurations of accounts, any password between 256 and 1024 characters succeeds. An example of a platform using musl libc without PAM is Alpine Linux.",
   "enisaIdAdvisory": [
    {
@@ -57,6 +57,52 @@
      }
     },
     "id": "21bc9bf8-941d-3b9a-9b5b-e3a7a1f64f29"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "82621d76-17aa-3957-9bbb-5a659ff4e1d0",
+       "product": {
+        "name": "10.6p2",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "b6079ba4-5bef-3312-918f-b517e7618066",
+       "product": {
+        "name": "OpenSSH",
+        "vendor": {
+         "name": "OpenBSD"
+        }
+       }
+      },
+      {
+       "id": "dd70c6f7-432f-3a99-ba5f-3ae6fb21b978",
+       "product": {
+        "name": "Open Source Alpine Linux",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-123158\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 5, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 5, 2026, 11:00:00 PM",
+     "description": "OpenSSH: Schwachstelle ermöglicht Erlangen von Administratorrechten",
+     "id": "WID-SEC-W-2026-4365",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4365.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4365\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in OpenSSH (in Kombination mit musl libc und ohne PAM) ausnutzen, um Administratorrechte zu erlangen."
+    },
+    "id": "6a438847-826b-3a4d-abbd-b3701bfac2f3"
    }
   ],
   "enisaIdProduct": [
@@ -85,7 +131,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-123158\nGHSA-4fcc-vm97-gx3x\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 10, 2026, 6:00:45 AM",
+     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
      "datePublished": "Nov 5, 2026, 6:33:14 PM",
      "dateUpdated": "Nov 10, 2026, 3:30:23 AM",
      "description": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lacks a workaround for a password authentication bypass (related to misinterpretation of whether a string is intended to be a password hash). For some configurations of accounts, any password between 256 and 1024 characters succeeds. An example of a platform using musl libc without PAM is Alpine Linux.",
@@ -104,12 +150,12 @@
      "baseScore": 8.1,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 10, 2026, 6:00:07 AM",
+     "dataProcessed": "Nov 11, 2026, 7:19:03 AM",
      "datePublished": "Nov 5, 2026, 3:46:26 PM",
-     "dateUpdated": "Nov 10, 2026, 12:11:05 AM",
+     "dateUpdated": "Nov 10, 2026, 4:55:54 AM",
      "description": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lacks a workaround for a password authentication bypass (related to misinterpretation of whether a string is intended to be a password hash). For some configurations of accounts, any password between 256 and 1024 characters succeeds. An example of a platform using musl libc without PAM is Alpine Linux.",
      "enisa_id": "EUVD-2026-117552\n",
-     "epss": 1.01,
+     "epss": 16.5,
      "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
      "id": "CVE-2026-123158",
      "references": "https://www.openssh.org/releasenotes.html#10.6p2\nhttps://github.com/openssh/openssh-portable/commit/4353fdc43ef646c43a8dda7025cc1a898caf1482\nhttps://news.ycombinator.com/item?id=50377976\nhttps://news.ycombinator.com/item?id=50378228\nhttps://marc.info/?l=openssh-unix-dev&m=179388064263131&w=2\nhttps://hachyderm.io/@damienmiller/117563026759098135\nhttps://github.com/predkambrij/sshhole-repro\nhttps://github.com/leonjza/sshhole-lab\n",
@@ -138,7 +184,7 @@
    }
   ],
   "enisaUuid": "32c5a3bb-78b6-3dc8-bcf3-2bf9007910de",
-  "epss": 1.01,
+  "epss": 16.5,
   "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
   "id": "EUVD-2026-117552",
   "references": "https://www.openssh.org/releasenotes.html#10.6p2\nhttps://github.com/openssh/openssh-portable/commit/4353fdc43ef646c43a8dda7025cc1a898caf1482\nhttps://news.ycombinator.com/item?id=50377976\nhttps://news.ycombinator.com/item?id=50378228\nhttps://marc.info/?l=openssh-unix-dev&m=179388064263131&w=2\nhttps://hachyderm.io/@damienmiller/117563026759098135\nhttps://github.com/predkambrij/sshhole-repro\nhttps://github.com/leonjza/sshhole-lab\n"
@@ -253,7 +299,7 @@
    }
   ],
   "id": "CVE-2026-123158",
-  "lastModified": "2026-11-10T01:17:16.970",
+  "lastModified": "2026-11-10T13:48:52.110",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -294,7 +340,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-09T16:50:17.920404Z",
+      "timestamp": "2026-11-05T00:00:00+00:00",
       "version": "2.0.3"
      }
     }
@@ -363,6 +409,9 @@
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List"
+    ],
     "url": "http://www.openwall.com/lists/oss-security/2026/11/09/27"
    },
    {
@@ -430,7 +479,7 @@
    }
   ],
   "sourceIdentifier": "cve@mitre.org",
-  "vulnStatus": "Modified",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [

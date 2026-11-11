@@ -29,7 +29,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 22, 2026, 1:35:41 PM",
-  "dateUpdated": "Nov 6, 2026, 3:39:57 PM",
+  "dateUpdated": "Nov 10, 2026, 12:50:00 PM",
   "description": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
   "enisaIdAdvisory": [
    {
@@ -237,10 +237,10 @@
      "aliases": "CVE-2026-100801\nCVE-2026-111497\nCVE-2026-113470\nCVE-2026-117860\nCVE-2026-117861\nCVE-2026-117862\nCVE-2026-117863\nCVE-2026-117864\nCVE-2026-117865\nCVE-2026-117866\nCVE-2026-117867\nCVE-2026-117868\nCVE-2026-117869\nCVE-2026-117870\nCVE-2026-117871\nCVE-2026-117872\nCVE-2026-117873\nCVE-2026-117874\nCVE-2026-117875\nCVE-2026-117876\nCVE-2026-117877\nCVE-2026-117878\nCVE-2026-117879\nCVE-2026-117880\nCVE-2026-117881\nCVE-2026-117882\nCVE-2026-117883\nCVE-2026-117884\nCVE-2026-117885\nCVE-2026-117886\nCVE-2026-117887\nCVE-2026-117888\nCVE-2026-117889\nCVE-2026-117890\nCVE-2026-117891\nCVE-2026-117892\nCVE-2026-117893\nCVE-2026-117894\nCVE-2026-117895\nCVE-2026-117896\nCVE-2026-117897\nCVE-2026-117898\nCVE-2026-117899\nCVE-2026-117900\nCVE-2026-117901\nCVE-2026-117902\nCVE-2026-117903\nCVE-2026-117904\nCVE-2026-117905\nCVE-2026-117906\nCVE-2026-117907\nCVE-2026-117908\nCVE-2026-117909\nCVE-2026-117910\nCVE-2026-117911\nCVE-2026-117912\nCVE-2026-117913\nCVE-2026-117914\nCVE-2026-117915\nCVE-2026-117916\nCVE-2026-117917\nCVE-2026-117918\nCVE-2026-117919\nCVE-2026-117920\nCVE-2026-117921\nCVE-2026-117922\nCVE-2026-117923\nCVE-2026-117924\nCVE-2026-117925\nCVE-2026-117926\nCVE-2026-117927\nCVE-2026-117928\nCVE-2026-117929\nCVE-2026-117930\nCVE-2026-117931\nCVE-2026-117932\nCVE-2026-117933\nCVE-2026-117934\nCVE-2026-117935\nCVE-2026-117936\nCVE-2026-117937\nCVE-2026-117938\nCVE-2026-117939\nCVE-2026-117940\nCVE-2026-117941\nCVE-2026-117942\nCVE-2026-117943\nCVE-2026-117944\nCVE-2026-117945\nCVE-2026-117946\nCVE-2026-117947\nCVE-2026-117948\nCVE-2026-117949\nCVE-2026-117950\nCVE-2026-117951\nCVE-2026-117952\nCVE-2026-117953\nCVE-2026-117954\nCVE-2026-117955\nCVE-2026-117956\nCVE-2026-117957\nCVE-2026-117958\nCVE-2026-117959\nCVE-2026-117960\nCVE-2026-117961\nCVE-2026-117962\nCVE-2026-117963\nCVE-2026-117964\nCVE-2026-117965\nCVE-2026-117966\nCVE-2026-117967\nCVE-2026-117968\nCVE-2026-117969\nCVE-2026-117970\nCVE-2026-117971\nCVE-2026-117972\nCVE-2026-117973\nCVE-2026-117974\nCVE-2026-117975\nCVE-2026-117976\nCVE-2026-117977\nCVE-2026-117978\nCVE-2026-117979\nCVE-2026-117980\nCVE-2026-117981\nCVE-2026-117982\nCVE-2026-117983\nCVE-2026-117984\nCVE-2026-117985\nCVE-2026-117986\nCVE-2026-117987\nCVE-2026-117988\nCVE-2026-117989\nCVE-2026-117990\nCVE-2026-117991\nCVE-2026-117992\nCVE-2026-117993\nCVE-2026-117994\nCVE-2026-117995\nCVE-2026-117996\nCVE-2026-117997\nCVE-2026-117998\nCVE-2026-117999\nCVE-2026-118000\nCVE-2026-118002\nCVE-2026-118003\nCVE-2026-118004\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 8:52:15 AM",
-     "dateUpdated": "Nov 4, 2026, 9:53:44 PM",
+     "dateUpdated": "Nov 10, 2026, 7:40:03 PM",
      "description": "Security update for MozillaFirefox",
      "id": "SUSE-SU-2026:4928-1",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_4928-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264928-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264928-1/\nhttps://bugzilla.suse.com/1286261\nhttps://bugzilla.suse.com/1286385\nhttps://bugzilla.suse.com/1286955\nhttps://bugzilla.suse.com/1287809\nhttps://www.suse.com/security/cve/CVE-2026-100801/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\nhttps://www.suse.com/security/cve/CVE-2026-113470/\nhttps://www.suse.com/security/cve/CVE-2026-117860/\nhttps://www.suse.com/security/cve/CVE-2026-117861/\nhttps://www.suse.com/security/cve/CVE-2026-117862/\nhttps://www.suse.com/security/cve/CVE-2026-117863/\nhttps://www.suse.com/security/cve/CVE-2026-117864/\nhttps://www.suse.com/security/cve/CVE-2026-117865/\nhttps://www.suse.com/security/cve/CVE-2026-117866/\nhttps://www.suse.com/security/cve/CVE-2026-117867/\nhttps://www.suse.com/security/cve/CVE-2026-117868/\nhttps://www.suse.com/security/cve/CVE-2026-117869/\nhttps://www.suse.com/security/cve/CVE-2026-117870/\nhttps://www.suse.com/security/cve/CVE-2026-117871/\nhttps://www.suse.com/security/cve/CVE-2026-117872/\nhttps://www.suse.com/security/cve/CVE-2026-117873/\nhttps://www.suse.com/security/cve/CVE-2026-117874/\nhttps://www.suse.com/security/cve/CVE-2026-117875/\nhttps://www.suse.com/security/cve/CVE-2026-117876/\nhttps://www.suse.com/security/cve/CVE-2026-117877/\nhttps://www.suse.com/security/cve/CVE-2026-117878/\nhttps://www.suse.com/security/cve/CVE-2026-117879/\nhttps://www.suse.com/security/cve/CVE-2026-117880/\nhttps://www.suse.com/security/cve/CVE-2026-117881/\nhttps://www.suse.com/security/cve/CVE-2026-117882/\nhttps://www.suse.com/security/cve/CVE-2026-117883/\nhttps://www.suse.com/security/cve/CVE-2026-117884/\nhttps://www.suse.com/security/cve/CVE-2026-117885/\nhttps://www.suse.com/security/cve/CVE-2026-117886/\nhttps://www.suse.com/security/cve/CVE-2026-117887/\nhttps://www.suse.com/security/cve/CVE-2026-117888/\nhttps://www.suse.com/security/cve/CVE-2026-117889/\nhttps://www.suse.com/security/cve/CVE-2026-117890/\nhttps://www.suse.com/security/cve/CVE-2026-117891/\nhttps://www.suse.com/security/cve/CVE-2026-117892/\nhttps://www.suse.com/security/cve/CVE-2026-117893/\nhttps://www.suse.com/security/cve/CVE-2026-117894/\nhttps://www.suse.com/security/cve/CVE-2026-117895/\nhttps://www.suse.com/security/cve/CVE-2026-117896/\nhttps://www.suse.com/security/cve/CVE-2026-117897/\nhttps://www.suse.com/security/cve/CVE-2026-117898/\nhttps://www.suse.com/security/cve/CVE-2026-117899/\nhttps://www.suse.com/security/cve/CVE-2026-117900/\nhttps://www.suse.com/security/cve/CVE-2026-117901/\nhttps://www.suse.com/security/cve/CVE-2026-117902/\nhttps://www.suse.com/security/cve/CVE-2026-117903/\nhttps://www.suse.com/security/cve/CVE-2026-117904/\nhttps://www.suse.com/security/cve/CVE-2026-117905/\nhttps://www.suse.com/security/cve/CVE-2026-117906/\nhttps://www.suse.com/security/cve/CVE-2026-117907/\nhttps://www.suse.com/security/cve/CVE-2026-117908/\nhttps://www.suse.com/security/cve/CVE-2026-117909/\nhttps://www.suse.com/security/cve/CVE-2026-117910/\nhttps://www.suse.com/security/cve/CVE-2026-117911/\nhttps://www.suse.com/security/cve/CVE-2026-117912/\nhttps://www.suse.com/security/cve/CVE-2026-117913/\nhttps://www.suse.com/security/cve/CVE-2026-117914/\nhttps://www.suse.com/security/cve/CVE-2026-117915/\nhttps://www.suse.com/security/cve/CVE-2026-117916/\nhttps://www.suse.com/security/cve/CVE-2026-117917/\nhttps://www.suse.com/security/cve/CVE-2026-117918/\nhttps://www.suse.com/security/cve/CVE-2026-117919/\nhttps://www.suse.com/security/cve/CVE-2026-117920/\nhttps://www.suse.com/security/cve/CVE-2026-117921/\nhttps://www.suse.com/security/cve/CVE-2026-117922/\nhttps://www.suse.com/security/cve/CVE-2026-117923/\nhttps://www.suse.com/security/cve/CVE-2026-117924/\nhttps://www.suse.com/security/cve/CVE-2026-117925/\nhttps://www.suse.com/security/cve/CVE-2026-117926/\nhttps://www.suse.com/security/cve/CVE-2026-117927/\nhttps://www.suse.com/security/cve/CVE-2026-117928/\nhttps://www.suse.com/security/cve/CVE-2026-117929/\nhttps://www.suse.com/security/cve/CVE-2026-117930/\nhttps://www.suse.com/security/cve/CVE-2026-117931/\nhttps://www.suse.com/security/cve/CVE-2026-117932/\nhttps://www.suse.com/security/cve/CVE-2026-117933/\nhttps://www.suse.com/security/cve/CVE-2026-117934/\nhttps://www.suse.com/security/cve/CVE-2026-117935/\nhttps://www.suse.com/security/cve/CVE-2026-117936/\nhttps://www.suse.com/security/cve/CVE-2026-117937/\nhttps://www.suse.com/security/cve/CVE-2026-117938/\nhttps://www.suse.com/security/cve/CVE-2026-117939/\nhttps://www.suse.com/security/cve/CVE-2026-117940/\nhttps://www.suse.com/security/cve/CVE-2026-117941/\nhttps://www.suse.com/security/cve/CVE-2026-117942/\nhttps://www.suse.com/security/cve/CVE-2026-117943/\nhttps://www.suse.com/security/cve/CVE-2026-117944/\nhttps://www.suse.com/security/cve/CVE-2026-117945/\nhttps://www.suse.com/security/cve/CVE-2026-117946/\nhttps://www.suse.com/security/cve/CVE-2026-117947/\nhttps://www.suse.com/security/cve/CVE-2026-117948/\nhttps://www.suse.com/security/cve/CVE-2026-117949/\nhttps://www.suse.com/security/cve/CVE-2026-117950/\nhttps://www.suse.com/security/cve/CVE-2026-117951/\nhttps://www.suse.com/security/cve/CVE-2026-117952/\nhttps://www.suse.com/security/cve/CVE-2026-117953/\nhttps://www.suse.com/security/cve/CVE-2026-117954/\nhttps://www.suse.com/security/cve/CVE-2026-117955/\nhttps://www.suse.com/security/cve/CVE-2026-117956/\nhttps://www.suse.com/security/cve/CVE-2026-117957/\nhttps://www.suse.com/security/cve/CVE-2026-117958/\nhttps://www.suse.com/security/cve/CVE-2026-117959/\nhttps://www.suse.com/security/cve/CVE-2026-117960/\nhttps://www.suse.com/security/cve/CVE-2026-117961/\nhttps://www.suse.com/security/cve/CVE-2026-117962/\nhttps://www.suse.com/security/cve/CVE-2026-117963/\nhttps://www.suse.com/security/cve/CVE-2026-117964/\nhttps://www.suse.com/security/cve/CVE-2026-117965/\nhttps://www.suse.com/security/cve/CVE-2026-117966/\nhttps://www.suse.com/security/cve/CVE-2026-117967/\nhttps://www.suse.com/security/cve/CVE-2026-117968/\nhttps://www.suse.com/security/cve/CVE-2026-117969/\nhttps://www.suse.com/security/cve/CVE-2026-117970/\nhttps://www.suse.com/security/cve/CVE-2026-117971/\nhttps://www.suse.com/security/cve/CVE-2026-117972/\nhttps://www.suse.com/security/cve/CVE-2026-117973/\nhttps://www.suse.com/security/cve/CVE-2026-117974/\nhttps://www.suse.com/security/cve/CVE-2026-117975/\nhttps://www.suse.com/security/cve/CVE-2026-117976/\nhttps://www.suse.com/security/cve/CVE-2026-117977/\nhttps://www.suse.com/security/cve/CVE-2026-117978/\nhttps://www.suse.com/security/cve/CVE-2026-117979/\nhttps://www.suse.com/security/cve/CVE-2026-117980/\nhttps://www.suse.com/security/cve/CVE-2026-117981/\nhttps://www.suse.com/security/cve/CVE-2026-117982/\nhttps://www.suse.com/security/cve/CVE-2026-117983/\nhttps://www.suse.com/security/cve/CVE-2026-117984/\nhttps://www.suse.com/security/cve/CVE-2026-117985/\nhttps://www.suse.com/security/cve/CVE-2026-117986/\nhttps://www.suse.com/security/cve/CVE-2026-117987/\nhttps://www.suse.com/security/cve/CVE-2026-117988/\nhttps://www.suse.com/security/cve/CVE-2026-117989/\nhttps://www.suse.com/security/cve/CVE-2026-117990/\nhttps://www.suse.com/security/cve/CVE-2026-117991/\nhttps://www.suse.com/security/cve/CVE-2026-117992/\nhttps://www.suse.com/security/cve/CVE-2026-117993/\nhttps://www.suse.com/security/cve/CVE-2026-117994/\nhttps://www.suse.com/security/cve/CVE-2026-117995/\nhttps://www.suse.com/security/cve/CVE-2026-117996/\nhttps://www.suse.com/security/cve/CVE-2026-117997/\nhttps://www.suse.com/security/cve/CVE-2026-117998/\nhttps://www.suse.com/security/cve/CVE-2026-117999/\nhttps://www.suse.com/security/cve/CVE-2026-118000/\nhttps://www.suse.com/security/cve/CVE-2026-118002/\nhttps://www.suse.com/security/cve/CVE-2026-118003/\nhttps://www.suse.com/security/cve/CVE-2026-118004/\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/suse-su-2026_4928-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264928-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264928-1/\nhttps://bugzilla.suse.com/1286261\nhttps://bugzilla.suse.com/1286385\nhttps://bugzilla.suse.com/1286955\nhttps://bugzilla.suse.com/1287809\nhttps://www.suse.com/security/cve/CVE-2026-100801/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\nhttps://www.suse.com/security/cve/CVE-2026-113470/\nhttps://www.suse.com/security/cve/CVE-2026-117860/\nhttps://www.suse.com/security/cve/CVE-2026-117861/\nhttps://www.suse.com/security/cve/CVE-2026-117862/\nhttps://www.suse.com/security/cve/CVE-2026-117863/\nhttps://www.suse.com/security/cve/CVE-2026-117864/\nhttps://www.suse.com/security/cve/CVE-2026-117865/\nhttps://www.suse.com/security/cve/CVE-2026-117866/\nhttps://www.suse.com/security/cve/CVE-2026-117867/\nhttps://www.suse.com/security/cve/CVE-2026-117868/\nhttps://www.suse.com/security/cve/CVE-2026-117869/\nhttps://www.suse.com/security/cve/CVE-2026-117870/\nhttps://www.suse.com/security/cve/CVE-2026-117871/\nhttps://www.suse.com/security/cve/CVE-2026-117872/\nhttps://www.suse.com/security/cve/CVE-2026-117873/\nhttps://www.suse.com/security/cve/CVE-2026-117874/\nhttps://www.suse.com/security/cve/CVE-2026-117875/\nhttps://www.suse.com/security/cve/CVE-2026-117876/\nhttps://www.suse.com/security/cve/CVE-2026-117877/\nhttps://www.suse.com/security/cve/CVE-2026-117878/\nhttps://www.suse.com/security/cve/CVE-2026-117879/\nhttps://www.suse.com/security/cve/CVE-2026-117880/\nhttps://www.suse.com/security/cve/CVE-2026-117881/\nhttps://www.suse.com/security/cve/CVE-2026-117882/\nhttps://www.suse.com/security/cve/CVE-2026-117883/\nhttps://www.suse.com/security/cve/CVE-2026-117884/\nhttps://www.suse.com/security/cve/CVE-2026-117885/\nhttps://www.suse.com/security/cve/CVE-2026-117886/\nhttps://www.suse.com/security/cve/CVE-2026-117887/\nhttps://www.suse.com/security/cve/CVE-2026-117888/\nhttps://www.suse.com/security/cve/CVE-2026-117889/\nhttps://www.suse.com/security/cve/CVE-2026-117890/\nhttps://www.suse.com/security/cve/CVE-2026-117891/\nhttps://www.suse.com/security/cve/CVE-2026-117892/\nhttps://www.suse.com/security/cve/CVE-2026-117893/\nhttps://www.suse.com/security/cve/CVE-2026-117894/\nhttps://www.suse.com/security/cve/CVE-2026-117895/\nhttps://www.suse.com/security/cve/CVE-2026-117896/\nhttps://www.suse.com/security/cve/CVE-2026-117897/\nhttps://www.suse.com/security/cve/CVE-2026-117898/\nhttps://www.suse.com/security/cve/CVE-2026-117899/\nhttps://www.suse.com/security/cve/CVE-2026-117900/\nhttps://www.suse.com/security/cve/CVE-2026-117901/\nhttps://www.suse.com/security/cve/CVE-2026-117902/\nhttps://www.suse.com/security/cve/CVE-2026-117903/\nhttps://www.suse.com/security/cve/CVE-2026-117904/\nhttps://www.suse.com/security/cve/CVE-2026-117905/\nhttps://www.suse.com/security/cve/CVE-2026-117906/\nhttps://www.suse.com/security/cve/CVE-2026-117907/\nhttps://www.suse.com/security/cve/CVE-2026-117908/\nhttps://www.suse.com/security/cve/CVE-2026-117909/\nhttps://www.suse.com/security/cve/CVE-2026-117910/\nhttps://www.suse.com/security/cve/CVE-2026-117911/\nhttps://www.suse.com/security/cve/CVE-2026-117912/\nhttps://www.suse.com/security/cve/CVE-2026-117913/\nhttps://www.suse.com/security/cve/CVE-2026-117914/\nhttps://www.suse.com/security/cve/CVE-2026-117915/\nhttps://www.suse.com/security/cve/CVE-2026-117916/\nhttps://www.suse.com/security/cve/CVE-2026-117917/\nhttps://www.suse.com/security/cve/CVE-2026-117918/\nhttps://www.suse.com/security/cve/CVE-2026-117919/\nhttps://www.suse.com/security/cve/CVE-2026-117920/\nhttps://www.suse.com/security/cve/CVE-2026-117921/\nhttps://www.suse.com/security/cve/CVE-2026-117922/\nhttps://www.suse.com/security/cve/CVE-2026-117923/\nhttps://www.suse.com/security/cve/CVE-2026-117924/\nhttps://www.suse.com/security/cve/CVE-2026-117925/\nhttps://www.suse.com/security/cve/CVE-2026-117926/\nhttps://www.suse.com/security/cve/CVE-2026-117927/\nhttps://www.suse.com/security/cve/CVE-2026-117928/\nhttps://www.suse.com/security/cve/CVE-2026-117929/\nhttps://www.suse.com/security/cve/CVE-2026-117930/\nhttps://www.suse.com/security/cve/CVE-2026-117931/\nhttps://www.suse.com/security/cve/CVE-2026-117932/\nhttps://www.suse.com/security/cve/CVE-2026-117933/\nhttps://www.suse.com/security/cve/CVE-2026-117934/\nhttps://www.suse.com/security/cve/CVE-2026-117935/\nhttps://www.suse.com/security/cve/CVE-2026-117936/\nhttps://www.suse.com/security/cve/CVE-2026-117937/\nhttps://www.suse.com/security/cve/CVE-2026-117938/\nhttps://www.suse.com/security/cve/CVE-2026-117939/\nhttps://www.suse.com/security/cve/CVE-2026-117940/\nhttps://www.suse.com/security/cve/CVE-2026-117941/\nhttps://www.suse.com/security/cve/CVE-2026-117942/\nhttps://www.suse.com/security/cve/CVE-2026-117943/\nhttps://www.suse.com/security/cve/CVE-2026-117944/\nhttps://www.suse.com/security/cve/CVE-2026-117945/\nhttps://www.suse.com/security/cve/CVE-2026-117946/\nhttps://www.suse.com/security/cve/CVE-2026-117947/\nhttps://www.suse.com/security/cve/CVE-2026-117948/\nhttps://www.suse.com/security/cve/CVE-2026-117949/\nhttps://www.suse.com/security/cve/CVE-2026-117950/\nhttps://www.suse.com/security/cve/CVE-2026-117951/\nhttps://www.suse.com/security/cve/CVE-2026-117952/\nhttps://www.suse.com/security/cve/CVE-2026-117953/\nhttps://www.suse.com/security/cve/CVE-2026-117954/\nhttps://www.suse.com/security/cve/CVE-2026-117955/\nhttps://www.suse.com/security/cve/CVE-2026-117956/\nhttps://www.suse.com/security/cve/CVE-2026-117957/\nhttps://www.suse.com/security/cve/CVE-2026-117958/\nhttps://www.suse.com/security/cve/CVE-2026-117959/\nhttps://www.suse.com/security/cve/CVE-2026-117960/\nhttps://www.suse.com/security/cve/CVE-2026-117961/\nhttps://www.suse.com/security/cve/CVE-2026-117962/\nhttps://www.suse.com/security/cve/CVE-2026-117963/\nhttps://www.suse.com/security/cve/CVE-2026-117964/\nhttps://www.suse.com/security/cve/CVE-2026-117965/\nhttps://www.suse.com/security/cve/CVE-2026-117966/\nhttps://www.suse.com/security/cve/CVE-2026-117967/\nhttps://www.suse.com/security/cve/CVE-2026-117968/\nhttps://www.suse.com/security/cve/CVE-2026-117969/\nhttps://www.suse.com/security/cve/CVE-2026-117970/\nhttps://www.suse.com/security/cve/CVE-2026-117971/\nhttps://www.suse.com/security/cve/CVE-2026-117972/\nhttps://www.suse.com/security/cve/CVE-2026-117973/\nhttps://www.suse.com/security/cve/CVE-2026-117974/\nhttps://www.suse.com/security/cve/CVE-2026-117975/\nhttps://www.suse.com/security/cve/CVE-2026-117976/\nhttps://www.suse.com/security/cve/CVE-2026-117977/\nhttps://www.suse.com/security/cve/CVE-2026-117978/\nhttps://www.suse.com/security/cve/CVE-2026-117979/\nhttps://www.suse.com/security/cve/CVE-2026-117980/\nhttps://www.suse.com/security/cve/CVE-2026-117981/\nhttps://www.suse.com/security/cve/CVE-2026-117982/\nhttps://www.suse.com/security/cve/CVE-2026-117983/\nhttps://www.suse.com/security/cve/CVE-2026-117984/\nhttps://www.suse.com/security/cve/CVE-2026-117985/\nhttps://www.suse.com/security/cve/CVE-2026-117986/\nhttps://www.suse.com/security/cve/CVE-2026-117987/\nhttps://www.suse.com/security/cve/CVE-2026-117988/\nhttps://www.suse.com/security/cve/CVE-2026-117989/\nhttps://www.suse.com/security/cve/CVE-2026-117990/\nhttps://www.suse.com/security/cve/CVE-2026-117991/\nhttps://www.suse.com/security/cve/CVE-2026-117992/\nhttps://www.suse.com/security/cve/CVE-2026-117993/\nhttps://www.suse.com/security/cve/CVE-2026-117994/\nhttps://www.suse.com/security/cve/CVE-2026-117995/\nhttps://www.suse.com/security/cve/CVE-2026-117996/\nhttps://www.suse.com/security/cve/CVE-2026-117997/\nhttps://www.suse.com/security/cve/CVE-2026-117998/\nhttps://www.suse.com/security/cve/CVE-2026-117999/\nhttps://www.suse.com/security/cve/CVE-2026-118000/\nhttps://www.suse.com/security/cve/CVE-2026-118002/\nhttps://www.suse.com/security/cve/CVE-2026-118003/\nhttps://www.suse.com/security/cve/CVE-2026-118004/\n",
      "source": {
       "id": 22,
       "name": "csaf_suse"
@@ -283,7 +283,7 @@
      "aliases": "CVE-2025-8869\nCVE-2025-13327\nCVE-2025-69418\nCVE-2026-1703\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114406\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:55:30 AM",
-     "dateUpdated": "Nov 5, 2026, 3:46:05 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:16 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (CPU)",
      "id": "RHSA-2026:94459",
      "references": "https://access.redhat.com/errata/RHSA-2026:94459\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94459.json\n",
@@ -358,6 +358,79 @@
      "summary": "trufflehog-3.99.7-1.1 on GA media"
     },
     "id": "05b0dfc9-c7c5-3945-9f54-5e1a99cce236"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0508eca9-0292-381b-8890-0382cb10258f",
+       "product": {
+        "name": "Logistics Diagnostic Analytics",
+        "vendor": {
+         "name": "SICK AG"
+        }
+       }
+      },
+      {
+       "id": "08ee62c8-217f-3638-bc5f-d5655704574c",
+       "product": {
+        "name": "Baggage Analytics",
+        "vendor": {
+         "name": "SICK AG"
+        }
+       }
+      },
+      {
+       "id": "65ceaa2b-65f8-3ffd-8314-a45339722e40",
+       "product": {
+        "name": "Package Analytics",
+        "vendor": {
+         "name": "SICK AG"
+        }
+       }
+      },
+      {
+       "id": "6856cc72-18b1-3ebc-ae7e-ba004f46af29",
+       "product": {
+        "name": "Tire Analytics",
+        "vendor": {
+         "name": "SICK AG"
+        }
+       }
+      },
+      {
+       "id": "c97a0e09-6053-374a-8065-8ca33cb9ff06",
+       "product": {
+        "name": "2026.1.3",
+        "vendor": {
+         "name": "JetBrains"
+        }
+       }
+      },
+      {
+       "id": "fb2e2b4c-b591-38c0-a904-deb29d49f417",
+       "product": {
+        "name": "CorivaHub",
+        "vendor": {
+         "name": "SICK AG"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 6, 2026, 9:59:00 AM",
+     "dateUpdated": "Nov 6, 2026, 9:59:00 AM",
+     "description": "SICK Products affected by Brotli Vulnerability (Broccoli2Shell)",
+     "id": "sca-2026-0017",
+     "references": "https://www.sick.com/.well-known/csaf/white/2026/sca-2026-0017.json\n",
+     "source": {
+      "id": 11,
+      "name": "csaf_sick"
+     },
+     "summary": "SICK identified multiple products affected by the Brotli vulnerability, also known as Broccoli2Shell (CVE-2026-111497). Successful exploitation of this vulnerability could impact the confidentiality, integrity, and availability of affected systems. At the time of publication, SICK is not aware of any active exploitation of this vulnerability targeting SICK products. SICK strongly recommends that customers review and implement the remediation measures provided in this advisory to reduce potential security risks."
+    },
+    "id": "0a1d8507-489e-3c4a-93c3-6247e2bafe58"
    },
    {
     "advisory": {
@@ -492,7 +565,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 10:13:35 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:09 PM",
+     "dateUpdated": "Nov 11, 2026, 1:52:16 AM",
      "description": "Red Hat Security Advisory: Red Hat Hardened Images RPMs bug fix and enhancement update",
      "id": "RHSA-2026:87420",
      "references": "https://access.redhat.com/errata/RHSA-2026:87420\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87420.json\n",
@@ -637,7 +710,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 14, 2026, 7:47:13 PM",
-     "dateUpdated": "Oct 30, 2026, 9:08:32 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:02 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:17690",
      "references": "https://access.redhat.com/errata/RHSA-2026:17690\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_17690.json\n",
@@ -782,7 +855,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Apr 27, 2026, 12:37:03 PM",
-     "dateUpdated": "Oct 30, 2026, 9:08:26 PM",
+     "dateUpdated": "Nov 6, 2026, 10:24:54 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:10766",
      "references": "https://access.redhat.com/errata/RHSA-2026:10766\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_10766.json\n",
@@ -1485,7 +1558,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 5:24:20 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:42 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:05 AM",
      "description": "Red Hat Security Advisory: .NET 8.0 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92420",
      "references": "https://access.redhat.com/errata/RHSA-2026:92420\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92420.json\n",
@@ -1648,7 +1721,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 1:04:50 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:35 PM",
+     "dateUpdated": "Nov 11, 2026, 1:52:51 AM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90893",
      "references": "https://access.redhat.com/errata/RHSA-2026:90893\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90893.json\n",
@@ -1793,7 +1866,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 2:22:28 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:34 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:01 PM",
      "description": "Red Hat Security Advisory: thunderbird security update",
      "id": "RHSA-2026:19463",
      "references": "https://access.redhat.com/errata/RHSA-2026:19463\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19463.json\n",
@@ -1866,7 +1939,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 1:05:25 PM",
-     "dateUpdated": "Oct 30, 2026, 9:08:37 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:04 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:19655",
      "references": "https://access.redhat.com/errata/RHSA-2026:19655\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19655.json\n",
@@ -1912,7 +1985,7 @@
      "aliases": "CVE-2026-44172\nCVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:57:19 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:05 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:19 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (CUDA 12.9)",
      "id": "RHSA-2026:94469",
      "references": "https://access.redhat.com/errata/RHSA-2026:94469\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94469.json\n",
@@ -2057,7 +2130,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 10:18:50 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:58 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:14 AM",
      "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.6 Product Security and Bug Fix Update",
      "id": "RHSA-2026:94101",
      "references": "https://access.redhat.com/errata/RHSA-2026:94101\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94101.json\n",
@@ -2463,7 +2536,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 3:20:17 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:35 PM",
+     "dateUpdated": "Nov 11, 2026, 1:52:45 AM",
      "description": "Red Hat Security Advisory: brotli security, bug fix, and enhancement update",
      "id": "RHSA-2026:90890",
      "references": "https://access.redhat.com/errata/RHSA-2026:90890\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90890.json\n",
@@ -2716,7 +2789,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Oct 28, 2026, 1:10:31 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:39 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:02 AM",
      "description": "Red Hat Security Advisory: Red Hat Hardened Images RPMs Security Update",
      "id": "RHSA-2026:91709",
      "references": "https://access.redhat.com/errata/RHSA-2026:91709\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_91709.json\n",
@@ -2942,7 +3015,7 @@
      "aliases": "CVE-2026-15307\nCVE-2026-18660\nCVE-2026-19203\nCVE-2026-56853\nCVE-2026-59646\nCVE-2026-68497\nCVE-2026-73619\nCVE-2026-78667\nCVE-2026-78669\nCVE-2026-78677\nCVE-2026-84445\nCVE-2026-87819\nCVE-2026-89407\nCVE-2026-89425\nCVE-2026-94440\nCVE-2026-96640\nCVE-2026-96643\nCVE-2026-96778\nCVE-2026-97031\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-110856\nCVE-2026-110857\nCVE-2026-110858\nCVE-2026-110859\nCVE-2026-111497\nCVE-2026-111943\nCVE-2026-112390\nCVE-2026-112391\nCVE-2026-112392\nCVE-2026-112393\nCVE-2026-112397\nCVE-2026-112398\nCVE-2026-112399\nCVE-2026-112400\nCVE-2026-112402\nCVE-2026-112403\nCVE-2026-112404\nCVE-2026-112405\nCVE-2026-112406\nCVE-2026-112892\nCVE-2026-112893\nCVE-2026-112894\nCVE-2026-112895\nCVE-2026-112896\nCVE-2026-112897\nCVE-2026-114145\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 9:37:34 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:53 PM",
+     "dateUpdated": "Nov 11, 2026, 3:37:40 AM",
      "description": "Red Hat Security Advisory: Satellite 6.19 security update",
      "id": "RHSA-2026:92861",
      "references": "https://access.redhat.com/errata/RHSA-2026:92861\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92861.json\n",
@@ -3276,7 +3349,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 12:27:37 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:34 PM",
+     "dateUpdated": "Nov 11, 2026, 1:52:45 AM",
      "description": "Red Hat Security Advisory: brotli security, bug fix, and enhancement update",
      "id": "RHSA-2026:90889",
      "references": "https://access.redhat.com/errata/RHSA-2026:90889\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90889.json\n",
@@ -3313,7 +3386,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:53:31 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:03 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:16 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (Neuron)",
      "id": "RHSA-2026:94457",
      "references": "https://access.redhat.com/errata/RHSA-2026:94457\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94457.json\n",
@@ -3485,7 +3558,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 3:13:23 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:34 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:00 PM",
      "description": "Red Hat Security Advisory: thunderbird security update",
      "id": "RHSA-2026:19462",
      "references": "https://access.redhat.com/errata/RHSA-2026:19462\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19462.json\n",
@@ -3546,6 +3619,15 @@
        }
       },
       {
+       "id": "4d6364c3-3a3d-3542-88ae-f94f85e42b7e",
+       "product": {
+        "name": "Gridscale X DSA",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "9140ab64-dd55-3a5d-9d92-60820f4ecf66",
        "product": {
         "name": "VersiCharge AC Series",
@@ -3582,6 +3664,15 @@
        }
       },
       {
+       "id": "fb8c528b-f9f2-34a6-9c18-25683637120f",
+       "product": {
+        "name": "Gridscale X PSS®E",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "fc5ef18c-2b31-374e-b5ae-837620d28945",
        "product": {
         "name": "Desigo CC family V9",
@@ -3594,7 +3685,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 30, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 6, 2026, 12:00:00 AM",
      "description": "SSA-045512: Node2Shell Vulnerability in Siemens Products",
      "id": "SSA-045512",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-045512.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-045512.json\n",
@@ -3739,7 +3830,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 2:05:23 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:33 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:00 PM",
      "description": "Red Hat Security Advisory: thunderbird security update",
      "id": "RHSA-2026:19461",
      "references": "https://access.redhat.com/errata/RHSA-2026:19461\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19461.json\n",
@@ -4136,7 +4227,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 3:17:46 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:36 PM",
+     "dateUpdated": "Nov 11, 2026, 1:52:51 AM",
      "description": "Red Hat Security Advisory: brotli security, bug fix, and enhancement update",
      "id": "RHSA-2026:90914",
      "references": "https://access.redhat.com/errata/RHSA-2026:90914\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90914.json\n",
@@ -4281,7 +4372,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 2:54:03 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:36 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:03 PM",
      "description": "Red Hat Security Advisory: thunderbird security update",
      "id": "RHSA-2026:19468",
      "references": "https://access.redhat.com/errata/RHSA-2026:19468\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19468.json\n",
@@ -4309,7 +4400,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 6:07:27 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:56 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:12 AM",
      "description": "Red Hat Security Advisory: Red Hat build of Quarkus 3.27.6.SP2 release and security update",
      "id": "RHSA-2026:93908",
      "references": "https://access.redhat.com/errata/RHSA-2026:93908\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93908.json\n",
@@ -4330,6 +4421,15 @@
         "name": "12.2.4-h1",
         "vendor": {
          "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "0558e102-bdb0-3ef7-a592-e2121113b879",
+       "product": {
+        "name": "27.2.1",
+        "vendor": {
+         "name": "Apple"
         }
        }
       },
@@ -4361,6 +4461,24 @@
        }
       },
       {
+       "id": "0f3cb1c7-5e63-3c32-81b9-96e3ce8b0a9a",
+       "product": {
+        "name": "IGEL OS",
+        "vendor": {
+         "name": "IGEL"
+        }
+       }
+      },
+      {
+       "id": "10ccd232-58ae-34d3-bb82-71298e3c82a9",
+       "product": {
+        "name": "Linux 2026.3.2.1",
+        "vendor": {
+         "name": "Devolutions"
+        }
+       }
+      },
+      {
        "id": "14741749-7aba-342e-a978-d2789106d421",
        "product": {
         "name": "BigFix",
@@ -4375,6 +4493,15 @@
         "name": "27.0.1.0.2",
         "vendor": {
          "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "189d0107-b751-313d-9fc0-1c563bb9f5de",
+       "product": {
+        "name": "Siemens Industrial Edge Management",
+        "vendor": {
+         "name": "Siemens"
         }
        }
       },
@@ -4406,6 +4533,15 @@
        }
       },
       {
+       "id": "2a3fecf2-f414-3aaf-aa53-ac59f9d307a9",
+       "product": {
+        "name": "5.2.3.20",
+        "vendor": {
+         "name": "Arista"
+        }
+       }
+      },
+      {
        "id": "30a4e779-71e3-3237-b249-031fae960e3f",
        "product": {
         "name": "Ubuntu Linux",
@@ -4415,11 +4551,29 @@
        }
       },
       {
+       "id": "30c78493-745e-3181-b2c5-4b953cffdfec",
+       "product": {
+        "name": "15.8.3",
+        "vendor": {
+         "name": "Apple"
+        }
+       }
+      },
+      {
        "id": "34000300-3ece-3a52-b92e-631bbbdc1768",
        "product": {
         "name": "SUSE Linux",
         "vendor": {
          "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "35056853-5379-33dc-bbfb-201c41c73c92",
+       "product": {
+        "name": "9.5.6",
+        "vendor": {
+         "name": "open source"
         }
        }
       },
@@ -4478,6 +4632,15 @@
        }
       },
       {
+       "id": "5560cab6-5580-3e0d-bf86-c8f8ff13134c",
+       "product": {
+        "name": "Citrix Systems XenServer",
+        "vendor": {
+         "name": "Citrix Systems"
+        }
+       }
+      },
+      {
        "id": "59c3db31-81bb-3511-a549-003fbff87c57",
        "product": {
         "name": "IBM App Connect Enterprise",
@@ -4505,6 +4668,15 @@
        }
       },
       {
+       "id": "625995dd-2dfe-3110-893e-5e585a666f2e",
+       "product": {
+        "name": "IBM QRadar SIEM",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
        "id": "65558d45-4ba8-333f-b2f0-85b44132adc8",
        "product": {
         "name": "12.1.10-h3",
@@ -4523,11 +4695,29 @@
        }
       },
       {
+       "id": "6a381c52-08c1-316a-abf0-9fe1c792b80c",
+       "product": {
+        "name": "8.19.24",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
        "id": "6c91f5dc-0485-363d-9fee-25eb20a4ecd2",
        "product": {
         "name": "RESF Rocky Linux",
         "vendor": {
          "name": "RESF"
+        }
+       }
+      },
+      {
+       "id": "6e334f98-d01f-33f5-84a8-479e02badf95",
+       "product": {
+        "name": "26.7.3",
+        "vendor": {
+         "name": "open source"
         }
        }
       },
@@ -4559,11 +4749,29 @@
        }
       },
       {
+       "id": "7635c39d-db0c-39db-92bb-195d3ec8920a",
+       "product": {
+        "name": "9.4.9",
+        "vendor": {
+         "name": "Splunk"
+        }
+       }
+      },
+      {
        "id": "768dd4da-dec4-3a73-8e50-0173c8c55b3d",
        "product": {
         "name": "25.0.5.0.2",
         "vendor": {
          "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "77139bb2-be60-37ad-ad74-e6e72cd5088b",
+       "product": {
+        "name": "Google Cloud Platform",
+        "vendor": {
+         "name": "Google"
         }
        }
       },
@@ -4582,6 +4790,24 @@
         "name": "11.2.16-h1",
         "vendor": {
          "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "820cdae4-2046-328e-b940-4fc597df86c8",
+       "product": {
+        "name": "Kibana",
+        "vendor": {
+         "name": "Elastic"
+        }
+       }
+      },
+      {
+       "id": "859a814c-5d85-3340-a66d-da2cc329d3d9",
+       "product": {
+        "name": "Certified Container Operator 13.7.0",
+        "vendor": {
+         "name": "IBM"
         }
        }
       },
@@ -4613,6 +4839,15 @@
        }
       },
       {
+       "id": "88afe43e-45ec-3a6f-8505-6f223d523d19",
+       "product": {
+        "name": "VeloCloud Orchestrator",
+        "vendor": {
+         "name": "Arista Networks"
+        }
+       }
+      },
+      {
        "id": "8953c87e-dc0f-3326-89a5-865f6eab2d84",
        "product": {
         "name": "8u511-b32",
@@ -4631,6 +4866,24 @@
        }
       },
       {
+       "id": "95ba3752-329f-3935-93b9-91d83ac700ca",
+       "product": {
+        "name": "IOS",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "9bb1e11d-e646-38db-8de3-617b463f0f0a",
+       "product": {
+        "name": "2.7.4",
+        "vendor": {
+         "name": "Qardio"
+        }
+       }
+      },
+      {
        "id": "9c7dc42f-73fc-3e51-9d24-23e964f066de",
        "product": {
         "name": "Debian Linux",
@@ -4640,11 +4893,38 @@
        }
       },
       {
+       "id": "9fb5bec0-3a02-3f6e-b1d5-44f664fa2f55",
+       "product": {
+        "name": "SUSE openSUSE",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a6f333a3-c3bc-3f9d-b5f7-26412f295872",
+       "product": {
+        "name": "macOS",
+        "vendor": {
+         "name": "Apple"
+        }
+       }
+      },
+      {
        "id": "a96d4c3a-452b-38dd-b6bd-de493ece93e0",
        "product": {
         "name": "11.2.10-h17",
         "vendor": {
          "name": "Palo Alto Networks"
+        }
+       }
+      },
+      {
+       "id": "ab7ced4b-ac27-3787-8b5c-837ac199cf07",
+       "product": {
+        "name": "App Connect Enterprise",
+        "vendor": {
+         "name": "IBM"
         }
        }
       },
@@ -4667,6 +4947,42 @@
        }
       },
       {
+       "id": "b08b2357-5981-3bad-83ea-bbfb31a9fec1",
+       "product": {
+        "name": "Red Hat Satellite",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b19b460f-2831-38f3-bd77-9bdb481f1388",
+       "product": {
+        "name": "Remote Desktop Manager",
+        "vendor": {
+         "name": "Devolutions"
+        }
+       }
+      },
+      {
+       "id": "b1ea492f-cb9b-357a-bb61-914482a2f599",
+       "product": {
+        "name": "Windows 2026.3.16.0",
+        "vendor": {
+         "name": "Devolutions"
+        }
+       }
+      },
+      {
+       "id": "b63ed697-fcfb-3a8e-9206-fe1d9a80b3e8",
+       "product": {
+        "name": "Certified Container Operator 12.0.29",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
        "id": "b7d36c9e-97b0-3027-9805-a8cce0fd7084",
        "product": {
         "name": "24.22.1",
@@ -4676,11 +4992,29 @@
        }
       },
       {
+       "id": "b945c18e-3980-3ce1-a150-675eef6fa2d1",
+       "product": {
+        "name": "macOS 2026.3.2.3",
+        "vendor": {
+         "name": "Devolutions"
+        }
+       }
+      },
+      {
        "id": "ba8929d4-223f-32d4-aeab-4554c85efac5",
        "product": {
         "name": "SDDC Manager",
         "vendor": {
          "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "c1151735-ba3b-33e4-86eb-70c2ad3c1351",
+       "product": {
+        "name": "2026.3.1",
+        "vendor": {
+         "name": "open source"
         }
        }
       },
@@ -4708,6 +5042,33 @@
         "name": "platform",
         "vendor": {
          "name": "runZero"
+        }
+       }
+      },
+      {
+       "id": "d39b6614-9053-3d83-8625-6ca0692a31a7",
+       "product": {
+        "name": "Navigator",
+        "vendor": {
+         "name": "Anaconda"
+        }
+       }
+      },
+      {
+       "id": "d94dd84c-9f21-3d8f-9532-3ed717cffff2",
+       "product": {
+        "name": "6.1.3.12",
+        "vendor": {
+         "name": "Arista"
+        }
+       }
+      },
+      {
+       "id": "e154b1b9-351a-313c-9552-68abca0c459d",
+       "product": {
+        "name": "Dameware",
+        "vendor": {
+         "name": "SolarWinds "
         }
        }
       },
@@ -4757,6 +5118,24 @@
        }
       },
       {
+       "id": "f3d1461f-ae4b-35b5-a987-59e8d46fa287",
+       "product": {
+        "name": "6.4.2.14",
+        "vendor": {
+         "name": "Arista"
+        }
+       }
+      },
+      {
+       "id": "f714d01d-cc9c-33bb-9098-935d7adce219",
+       "product": {
+        "name": "Synology DiskStation Manager",
+        "vendor": {
+         "name": "Synology"
+        }
+       }
+      },
+      {
        "id": "f935499f-2bbd-3f1b-b512-0825406f9ffc",
        "product": {
         "name": "Cloud Foundation",
@@ -4769,7 +5148,7 @@
      "aliases": "CVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106070\nCVE-2026-106071\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\nCVE-2026-28330\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 10:00:00 PM",
-     "dateUpdated": "Nov 1, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 9, 2026, 11:00:00 PM",
      "description": "Node.js: Mehrere Schwachstellen",
      "id": "WID-SEC-W-2026-4117",
      "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4117.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4117\n",
@@ -5166,7 +5545,7 @@
      "aliases": "CVE-2026-101911\nCVE-2026-102276\nCVE-2026-102277\nCVE-2026-102278\nCVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106071\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 2:26:32 PM",
-     "dateUpdated": "Nov 5, 2026, 3:58:27 PM",
+     "dateUpdated": "Nov 11, 2026, 3:09:39 AM",
      "description": "Red Hat Security Advisory: nodejs:24 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92376",
      "references": "https://access.redhat.com/errata/RHSA-2026:92376\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92376.json\n",
@@ -5824,7 +6203,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 3:38:12 AM",
-     "dateUpdated": "Nov 5, 2026, 4:31:52 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:11 AM",
      "description": "Red Hat Security Advisory: .NET 8.0 security update",
      "id": "RHSA-2026:93455",
      "references": "https://access.redhat.com/errata/RHSA-2026:93455\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93455.json\n",
@@ -5835,6 +6214,106 @@
      "summary": "An update for .NET 8.0 is now available for Red Hat Enterprise Linux 10.0 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "43cec61c-3799-3877-a255-75c1771432fe"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "1b280ddb-287d-3b6f-b313-86e57bd4c1c8",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-slfo.1.1_2.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "1b30523e-2704-363b-9d21-c4090921f8c8",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-slfo.1.1_2.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "24c2eed5-6485-33e9-90a1-68e234d8d8e2",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-slfo.1.1_2.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "4b2187a3-65ac-31e4-abfe-928b70805f67",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-slfo.1.1_2.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "67921bdd-a9f9-3169-8eb4-cf1d5fbdac7d",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-slfo.1.1_2.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6ae698d2-ac25-363b-a896-1060551d8b39",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-slfo.1.1_2.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "7252f88c-5104-389a-b82a-79390bb7cfb9",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-slfo.1.1_2.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8a90214e-d5f7-39d7-8ac7-3ec613453a5d",
+       "product": {
+        "name": "SUSE Linux Micro 6.1",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b88e98cc-8051-364a-933b-0de78e8f156a",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-slfo.1.1_2.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 29, 2026, 5:43:04 PM",
+     "dateUpdated": "Nov 6, 2026, 6:12:14 PM",
+     "description": "Security update for brotli",
+     "id": "SUSE-SU-2026:24556-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_24556-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624556-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624556-1/\nhttps://bugzilla.suse.com/1287778\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 22,
+      "name": "csaf_suse"
+     },
+     "summary": "Security update for brotli"
+    },
+    "id": "444a2b49-c2c9-3ae4-ae6c-eb27eae805c9"
    },
    {
     "advisory": {
@@ -5888,7 +6367,7 @@
      "aliases": "CVE-2026-44172\nCVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:54:38 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:00 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:18 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (CPU)",
      "id": "RHSA-2026:94455",
      "references": "https://access.redhat.com/errata/RHSA-2026:94455\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94455.json\n",
@@ -5899,6 +6378,70 @@
      "summary": "Red Hat AI Base Images 3.4.7 (CPU) is now available."
     },
     "id": "460e221d-d1e4-3f52-932c-0c19754a7578"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "7f823976-319c-33f0-a5a1-7fdc1d0ef90c",
+       "product": {
+        "name": "rhcos-aarch64-414.92.202611040941-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "94d9f97e-336b-3710-8e0d-4d05640e5926",
+       "product": {
+        "name": "rhcos-ppc64le-414.92.202611040941-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "98335ad2-da83-30b2-9fcc-50b4824d9739",
+       "product": {
+        "name": "rhcos-s390x-414.92.202611040941-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ad43eb98-e07d-39ba-b966-6310ad4384ea",
+       "product": {
+        "name": "rhcos-x86_64-414.92.202611040941-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fe4f2987-6de4-335f-bfb6-60f0b4e6985d",
+       "product": {
+        "name": "Red Hat OpenShift Container Platform 4.14",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-47273\nCVE-2026-16313\nCVE-2026-28390\nCVE-2026-34182\nCVE-2026-42011\nCVE-2026-42013\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-59995\nCVE-2026-59999\nCVE-2026-60002\nCVE-2026-80792\nCVE-2026-89846\nCVE-2026-98432\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 9, 2026, 5:10:46 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:29 AM",
+     "description": "Red Hat Security Advisory: OpenShift Container Platform 4.14.78 bug fix and security update",
+     "id": "RHSA-2026:95508",
+     "references": "https://access.redhat.com/errata/RHSA-2026:95508\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95508.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat OpenShift Container Platform release 4.14.78 is now available with updates to packages and images that fix several bugs and add enhancements.\n\nThis release includes a security update for Red Hat OpenShift Container Platform 4.14.\n\nRed Hat Product Security has rated this update as having a security impact of Critical. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+    },
+    "id": "46169356-058b-3bf1-9e1a-08febfc43523"
    },
    {
     "advisory": {
@@ -6033,7 +6576,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 11, 2026, 2:10:19 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:29 PM",
+     "dateUpdated": "Nov 6, 2026, 10:24:57 PM",
      "description": "Red Hat Security Advisory: thunderbird security update",
      "id": "RHSA-2026:15892",
      "references": "https://access.redhat.com/errata/RHSA-2026:15892\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_15892.json\n",
@@ -6125,7 +6668,7 @@
      "aliases": "CVE-2026-8932\nCVE-2026-12345\nCVE-2026-19445\nCVE-2026-19553\nCVE-2026-34743\nCVE-2026-59997\nCVE-2026-59998\nCVE-2026-60000\nCVE-2026-77214\nCVE-2026-88806\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-102633\nCVE-2026-111497\nCVE-2026-114136\nCVE-2026-114137\nCVE-2026-114138\nCVE-2026-114406\nCVE-2026-118669\n",
      "baseScore": 0.0,
      "datePublished": "Nov 4, 2026, 12:36:55 AM",
-     "dateUpdated": "Nov 5, 2026, 4:06:19 PM",
+     "dateUpdated": "Nov 11, 2026, 2:09:25 AM",
      "description": "Red Hat Security Advisory: A Subscription Management tool for finding and reporting Red Hat product usage",
      "id": "RHSA-2026:94802",
      "references": "https://access.redhat.com/errata/RHSA-2026:94802\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94802.json\n",
@@ -6730,7 +7273,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 19, 2026, 4:14:36 PM",
-     "dateUpdated": "Oct 30, 2026, 9:08:32 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:00 PM",
      "description": "Red Hat Security Advisory: thunderbird security update",
      "id": "RHSA-2026:19131",
      "references": "https://access.redhat.com/errata/RHSA-2026:19131\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19131.json\n",
@@ -6902,7 +7445,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Apr 27, 2026, 12:20:43 PM",
-     "dateUpdated": "Oct 30, 2026, 9:08:28 PM",
+     "dateUpdated": "Nov 6, 2026, 10:24:56 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:10767",
      "references": "https://access.redhat.com/errata/RHSA-2026:10767\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_10767.json\n",
@@ -6948,7 +7491,7 @@
      "aliases": "CVE-2025-8869\nCVE-2025-13327\nCVE-2025-69418\nCVE-2026-1703\nCVE-2026-3219\nCVE-2026-6357\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114109\nCVE-2026-114110\nCVE-2026-114406\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 9:01:44 AM",
-     "dateUpdated": "Nov 5, 2026, 3:46:08 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:20 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (CUDA)",
      "id": "RHSA-2026:94476",
      "references": "https://access.redhat.com/errata/RHSA-2026:94476\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94476.json\n",
@@ -7111,7 +7654,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 2:29:14 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:35 PM",
+     "dateUpdated": "Nov 11, 2026, 1:52:48 AM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90892",
      "references": "https://access.redhat.com/errata/RHSA-2026:90892\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90892.json\n",
@@ -7148,7 +7691,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:55:30 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:06 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:16 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (Gaudi)",
      "id": "RHSA-2026:94460",
      "references": "https://access.redhat.com/errata/RHSA-2026:94460\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94460.json\n",
@@ -7212,7 +7755,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 5:09:41 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:57 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:13 AM",
      "description": "Red Hat Security Advisory: Red Hat OpenShift Dev Spaces 3.31.2 RHEL 10 Container Release.",
      "id": "RHSA-2026:93984",
      "references": "https://access.redhat.com/errata/RHSA-2026:93984\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93984.json\n",
@@ -7555,7 +8098,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 7:45:54 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:36 PM",
+     "dateUpdated": "Nov 11, 2026, 1:52:41 AM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90449",
      "references": "https://access.redhat.com/errata/RHSA-2026:90449\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90449.json\n",
@@ -7601,7 +8144,7 @@
      "aliases": "CVE-2025-69418\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-44172\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114406\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:57:03 AM",
-     "dateUpdated": "Nov 5, 2026, 3:46:06 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:19 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (CUDA 13.0)",
      "id": "RHSA-2026:94468",
      "references": "https://access.redhat.com/errata/RHSA-2026:94468\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94468.json\n",
@@ -7782,7 +8325,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 14, 2026, 7:58:33 PM",
-     "dateUpdated": "Oct 30, 2026, 9:08:31 PM",
+     "dateUpdated": "Nov 6, 2026, 10:24:59 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:17689",
      "references": "https://access.redhat.com/errata/RHSA-2026:17689\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_17689.json\n",
@@ -7837,7 +8380,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:58:45 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:06 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:20 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (Spyre)",
      "id": "RHSA-2026:94473",
      "references": "https://access.redhat.com/errata/RHSA-2026:94473\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94473.json\n",
@@ -7874,7 +8417,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:53:44 AM",
-     "dateUpdated": "Nov 5, 2026, 4:31:59 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:14 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (TPU)",
      "id": "RHSA-2026:94452",
      "references": "https://access.redhat.com/errata/RHSA-2026:94452\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94452.json\n",
@@ -8019,7 +8562,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 14, 2026, 7:50:48 PM",
-     "dateUpdated": "Oct 30, 2026, 9:08:31 PM",
+     "dateUpdated": "Nov 6, 2026, 10:24:57 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:17687",
      "references": "https://access.redhat.com/errata/RHSA-2026:17687\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_17687.json\n",
@@ -8200,7 +8743,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 3:08:28 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:34 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:01 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:19464",
      "references": "https://access.redhat.com/errata/RHSA-2026:19464\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19464.json\n",
@@ -8597,7 +9140,7 @@
      "aliases": "CVE-2026-101911\nCVE-2026-102276\nCVE-2026-102277\nCVE-2026-102278\nCVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106071\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 10:34:48 PM",
-     "dateUpdated": "Nov 5, 2026, 3:58:27 PM",
+     "dateUpdated": "Nov 11, 2026, 3:09:39 AM",
      "description": "Red Hat Security Advisory: nodejs:24 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92378",
      "references": "https://access.redhat.com/errata/RHSA-2026:92378\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92378.json\n",
@@ -8608,6 +9151,511 @@
      "summary": "An update for the nodejs:24 module is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "6a55fcb1-b7ae-351c-bc67-c463b2323fd5"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "01126b77-a907-3319-b2e8-ed314adf4d9e",
+       "product": {
+        "name": "python3.11-urllib3-0:2.8.0-1.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "030e5652-0cd5-3af4-ab12-9d465b872721",
+       "product": {
+        "name": "openvox-server-0:8.18.0-1.el8sat.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "03de11cf-6745-3d48-a423-a740a6c41d42",
+       "product": {
+        "name": "python3.11-pillow-0:13.0.0-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0425a549-0d01-3416-b814-db5d8d8cec82",
+       "product": {
+        "name": "python-gitpython-0:3.2.1-1.el8pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "053897d7-d7e7-391e-b281-83c9da10c3db",
+       "product": {
+        "name": "python-pyyaml-0:6.0.1-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "08424499-f92b-31f2-93a7-d1d1ad88d5e8",
+       "product": {
+        "name": "openvox-server-0:8.18.0-1.el8sat.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0c573e0f-a374-3aa5-99ee-414b4ab6a013",
+       "product": {
+        "name": "python-pillow-0:13.0.0-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0f9119e2-10d4-37d2-976a-2914fa32d4e0",
+       "product": {
+        "name": "python3.11-brotli-debuginfo-0:1.2.1-1.el8pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "13df5b0b-7858-3b45-8d3f-bb70e1bdf4e6",
+       "product": {
+        "name": "python-urllib3-0:2.8.0-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1e9aca28-87ed-3d94-8ae8-28e2cbcdbbb0",
+       "product": {
+        "name": "python-pyyaml-0:6.0.1-1.el8pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1fa3dfa8-7547-3561-b579-2b541b6838dd",
+       "product": {
+        "name": "openvox-agent-0:8.32.0-1.el9sat.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2666d430-35bd-38d0-94bf-d43821c3d6b5",
+       "product": {
+        "name": "openvox-agent-0:8.32.0-1.el8sat.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2d9ec0ee-3b72-3420-8713-98eb7e5df177",
+       "product": {
+        "name": "python-nh3-0:0.3.0-2.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3fffbf51-f41f-3dc9-8920-e43e04057268",
+       "product": {
+        "name": "python3.11-brotli-debuginfo-0:1.2.1-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "449fdbbe-74e1-3802-8d82-bb8c7d8a640c",
+       "product": {
+        "name": "python3.11-pyyaml-0:6.0.1-1.el8pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "450db0b5-a218-366a-bcba-9e471b090466",
+       "product": {
+        "name": "python-galaxy-importer-0:0.4.44-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "52cd08e5-2fdf-3ccc-8661-b7b5b7b7ff6e",
+       "product": {
+        "name": "python3.11-pillow-0:13.0.0-1.el8pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5add4816-fc0c-3f5c-9889-2816f669822a",
+       "product": {
+        "name": "python-gitpython-0:3.2.1-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5d8cd47d-66a6-34a2-b9fe-732c352fbe5c",
+       "product": {
+        "name": "python-brotli-0:1.2.1-1.el8pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5ebebb69-b955-3348-b02e-4b10c8f57f03",
+       "product": {
+        "name": "python-galaxy-importer-0:0.4.44-1.el8pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6901a4f0-3c56-3969-b0c4-056282bd3ef4",
+       "product": {
+        "name": "python3.11-urllib3-0:2.8.0-1.el8pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "69ca84c5-3327-372b-81bb-409750b61b12",
+       "product": {
+        "name": "python3.11-pulp-ansible-1:0.21.19-2.el8pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6c087dd7-25bb-3885-9750-66e941f7e20d",
+       "product": {
+        "name": "openvox-server-0:8.18.0-1.el9sat.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6dd943f7-970a-3924-aa8e-e5a89f36df1f",
+       "product": {
+        "name": "python-django-0:4.2.30-2.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "87d5ffda-f298-3018-a04d-12e90b8a7c15",
+       "product": {
+        "name": "python3.11-galaxy-importer-0:0.4.44-1.el8pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8a4fc764-a889-3afe-a0ed-372746fe1536",
+       "product": {
+        "name": "python-pulp-ansible-1:0.21.19-2.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "905249c5-a616-3a73-93cd-9dfa5ce14c4e",
+       "product": {
+        "name": "python-pillow-debugsource-0:13.0.0-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "907883fb-7ce5-3bcf-be56-bc0446fa663b",
+       "product": {
+        "name": "python-urllib3-0:2.8.0-1.el8pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "93efc4f2-917b-345c-9fd2-e469fdfdf5f5",
+       "product": {
+        "name": "python3.11-pyyaml-0:6.0.1-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9577a447-50ab-3d44-ba22-65b7aa7a44bf",
+       "product": {
+        "name": "python3.11-nh3-0:0.3.0-2.el8pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "99c207f8-7fbb-3379-9dd7-6f3c6f7ea2f7",
+       "product": {
+        "name": "python3.11-gitpython-0:3.2.1-1.el8pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9c10b13a-8f10-388a-adf3-1d488f24e381",
+       "product": {
+        "name": "python3.11-pillow-debuginfo-0:13.0.0-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9d33ce0a-aaf5-350a-9c19-48b94567fe1e",
+       "product": {
+        "name": "python3.11-gitpython-0:3.2.1-1.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a443f7ce-4d8b-3c63-ac08-b98d1e984cee",
+       "product": {
+        "name": "python3.11-galaxy-importer-0:0.4.44-1.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aa54a094-126d-35fe-9738-55feca2d57a1",
+       "product": {
+        "name": "python-nh3-0:0.3.0-2.el8pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ab6f3ce9-b6a8-381a-8882-4cf830b532b7",
+       "product": {
+        "name": "python-brotli-0:1.2.1-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b03bd94e-c8e0-39ab-84e8-9a21e03dc164",
+       "product": {
+        "name": "python-django-0:4.2.30-2.el8pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b19f3863-a62a-32f5-a578-2b7cefaebab4",
+       "product": {
+        "name": "python3.11-django-0:4.2.30-2.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b27fedaf-68e0-3bfc-a2eb-881fc404b9cc",
+       "product": {
+        "name": "Red Hat Satellite 6.16 for RHEL 8",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b447f243-4ebd-398c-b644-d97d45d40a20",
+       "product": {
+        "name": "python3.11-pulp-ansible-1:0.21.19-2.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b77e6d23-913f-3920-a44a-013fc0fbb872",
+       "product": {
+        "name": "Red Hat Satellite 6.16 for RHEL 9",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c204c2ad-d548-3a27-bf12-eeccd09d9a97",
+       "product": {
+        "name": "python3.11-django-0:4.2.30-2.el8pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c89ff80d-9b23-365f-94e0-1e9c52fe9359",
+       "product": {
+        "name": "python-brotli-debugsource-0:1.2.1-1.el8pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cb7dac27-cfe7-307e-8689-f1c2cb140afc",
+       "product": {
+        "name": "python-brotli-debugsource-0:1.2.1-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cf0eb8bd-42d3-3f25-b955-c7f7247c0ccc",
+       "product": {
+        "name": "python3.11-brotli-0:1.2.1-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dfeb2045-88e3-3f87-8a49-ad0285a59375",
+       "product": {
+        "name": "openvox-server-0:8.18.0-1.el9sat.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e33ffefc-d777-36be-8dd7-a712ee43b402",
+       "product": {
+        "name": "python3.11-nh3-0:0.3.0-2.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e853b0c7-a9bc-37c6-8d1b-d30e9da2ba18",
+       "product": {
+        "name": "openvox-agent-0:8.32.0-1.el9sat.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ed08edfe-d67c-35d7-bd54-2cddc58a518d",
+       "product": {
+        "name": "python-pulp-ansible-1:0.21.19-2.el8pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ed91b443-a1c3-31e3-a5fa-441cb741f518",
+       "product": {
+        "name": "python3.11-pillow-debuginfo-0:13.0.0-1.el8pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f22ffacf-d81f-30ef-b8a5-6c71e70a77ef",
+       "product": {
+        "name": "python-pillow-0:13.0.0-1.el8pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f3185b84-7043-3825-86d3-d61770afc1c2",
+       "product": {
+        "name": "python3.11-brotli-0:1.2.1-1.el8pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f90b736c-ed03-3551-b90e-286b5724cd5d",
+       "product": {
+        "name": "python-pillow-debugsource-0:13.0.0-1.el8pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f95f9e6e-85ea-3562-a189-0f319a9814ae",
+       "product": {
+        "name": "openvox-agent-0:8.32.0-1.el8sat.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-15307\nCVE-2026-73619\nCVE-2026-89078\nCVE-2026-93577\nCVE-2026-96640\nCVE-2026-96643\nCVE-2026-96778\nCVE-2026-97229\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-104895\nCVE-2026-110264\nCVE-2026-110856\nCVE-2026-110857\nCVE-2026-110858\nCVE-2026-110859\nCVE-2026-111497\nCVE-2026-112390\nCVE-2026-112391\nCVE-2026-112392\nCVE-2026-112393\nCVE-2026-112397\nCVE-2026-112398\nCVE-2026-112399\nCVE-2026-112400\nCVE-2026-112402\nCVE-2026-112403\nCVE-2026-112404\nCVE-2026-112405\nCVE-2026-112406\nCVE-2026-112892\nCVE-2026-112893\nCVE-2026-112894\nCVE-2026-112895\nCVE-2026-112896\nCVE-2026-112897\nCVE-2026-114145\nCVE-2026-115731\nCVE-2026-115732\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 5, 2026, 7:44:20 PM",
+     "dateUpdated": "Nov 11, 2026, 2:09:27 AM",
+     "description": "Red Hat Security Advisory: Satellite 6.16 EUS security update",
+     "id": "RHSA-2026:95655",
+     "references": "https://access.redhat.com/errata/RHSA-2026:95655\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95655.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "A security update for Red Hat Satellite is now available.\n\nRed Hat Product Security has rated this update as having a security impact\nof Important. A Common Vulnerability Scoring System (CVSS) base score,\nwhich gives a detailed severity rating, is available for each vulnerability\nfrom the CVE link(s) in the References section."
+    },
+    "id": "6e3c9345-3952-3b2f-99ee-bf6fe43f432c"
    },
    {
     "advisory": {
@@ -9264,7 +10312,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 6:30:26 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:42 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:05 AM",
      "description": "Red Hat Security Advisory: .NET 8.0 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92428",
      "references": "https://access.redhat.com/errata/RHSA-2026:92428\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92428.json\n",
@@ -9364,7 +10412,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 2:23:05 PM",
-     "dateUpdated": "Oct 30, 2026, 9:08:37 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:04 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:19704",
      "references": "https://access.redhat.com/errata/RHSA-2026:19704\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19704.json\n",
@@ -9401,7 +10449,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:58:03 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:09 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:19 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (ROCm 7.14)",
      "id": "RHSA-2026:94471",
      "references": "https://access.redhat.com/errata/RHSA-2026:94471\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94471.json\n",
@@ -9465,7 +10513,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:55:54 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:07 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:17 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (CPU)",
      "id": "RHSA-2026:94462",
      "references": "https://access.redhat.com/errata/RHSA-2026:94462\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94462.json\n",
@@ -9646,7 +10694,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Apr 27, 2026, 10:51:33 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:25 PM",
+     "dateUpdated": "Nov 6, 2026, 10:24:54 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:10757",
      "references": "https://access.redhat.com/errata/RHSA-2026:10757\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_10757.json\n",
@@ -9657,6 +10705,70 @@
      "summary": "An update for firefox is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "777309dd-1b7c-37bb-bb6e-804b94a17f85"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0ab7394e-a9c2-34c3-9101-2425d949a91b",
+       "product": {
+        "name": "rhcos-aarch64-4.20.9.6.202611042002-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "10ae5a02-c919-3822-b2a9-761891c7b78c",
+       "product": {
+        "name": "Red Hat OpenShift Container Platform 4.20",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "46db3b97-edfb-3f15-af1b-ba4904669154",
+       "product": {
+        "name": "rhcos-s390x-4.20.9.6.202611042002-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "52be871e-538e-35f8-a0c0-f0bdc2b01541",
+       "product": {
+        "name": "rhcos-x86_64-4.20.9.6.202611042002-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f4bcf1b4-9d3a-31c8-b44e-f42d2620714d",
+       "product": {
+        "name": "rhcos-ppc64le-4.20.9.6.202611042002-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-98432\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 9, 2026, 2:14:31 AM",
+     "dateUpdated": "Nov 11, 2026, 1:53:28 AM",
+     "description": "Red Hat Security Advisory: OpenShift Container Platform 4.20.46 bug fix and security update",
+     "id": "RHSA-2026:95377",
+     "references": "https://access.redhat.com/errata/RHSA-2026:95377\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95377.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat OpenShift Container Platform release 4.20.46 is now available with updates to packages and images that fix several bugs and add enhancements.\n\nThis release includes a security update for Red Hat OpenShift Container Platform 4.20.\n\nRed Hat Product Security has rated this update as having a security impact of Critical. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+    },
+    "id": "77a7bd44-8d5a-38c7-a986-2e7b02b56518"
    },
    {
     "advisory": {
@@ -9819,7 +10931,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:56:01 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:03 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:18 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (Gaudi)",
      "id": "RHSA-2026:94464",
      "references": "https://access.redhat.com/errata/RHSA-2026:94464\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94464.json\n",
@@ -10522,7 +11634,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 10:56:52 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:46 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:06 AM",
      "description": "Red Hat Security Advisory: .NET 8.0 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92492",
      "references": "https://access.redhat.com/errata/RHSA-2026:92492\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92492.json\n",
@@ -13439,7 +14551,7 @@
      "aliases": "CVE-2023-54404\nCVE-2026-11822\nCVE-2026-11824\nCVE-2026-13717\nCVE-2026-16221\nCVE-2026-17106\nCVE-2026-18446\nCVE-2026-25681\nCVE-2026-26007\nCVE-2026-27136\nCVE-2026-33814\nCVE-2026-33818\nCVE-2026-39821\nCVE-2026-39834\nCVE-2026-41178\nCVE-2026-42502\nCVE-2026-45819\nCVE-2026-45820\nCVE-2026-56853\nCVE-2026-56858\nCVE-2026-56859\nCVE-2026-56860\nCVE-2026-56862\nCVE-2026-57516\nCVE-2026-59951\nCVE-2026-63209\nCVE-2026-63374\nCVE-2026-65898\nCVE-2026-67312\nCVE-2026-67314\nCVE-2026-67320\nCVE-2026-67321\nCVE-2026-69097\nCVE-2026-69153\nCVE-2026-73086\nCVE-2026-73088\nCVE-2026-73089\nCVE-2026-73643\nCVE-2026-75838\nCVE-2026-75899\nCVE-2026-75931\nCVE-2026-75975\nCVE-2026-76172\nCVE-2026-76844\nCVE-2026-77301\nCVE-2026-78679\nCVE-2026-82397\nCVE-2026-83663\nCVE-2026-84375\nCVE-2026-84445\nCVE-2026-85393\nCVE-2026-85525\nCVE-2026-87018\nCVE-2026-90711\nCVE-2026-91990\nCVE-2026-92599\nCVE-2026-93690\nCVE-2026-93749\nCVE-2026-94637\nCVE-2026-96640\nCVE-2026-96643\nCVE-2026-96644\nCVE-2026-96778\nCVE-2026-96804\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-102267\nCVE-2026-102271\nCVE-2026-102272\nCVE-2026-102276\nCVE-2026-102278\nCVE-2026-102282\nCVE-2026-104150\nCVE-2026-104851\nCVE-2026-105922\nCVE-2026-106445\nCVE-2026-106446\nCVE-2026-109156\nCVE-2026-109383\nCVE-2026-109527\nCVE-2026-109829\nCVE-2026-109869\nCVE-2026-109956\nCVE-2026-110856\nCVE-2026-110857\nCVE-2026-110858\nCVE-2026-110859\nCVE-2026-111064\nCVE-2026-111066\nCVE-2026-111497\nCVE-2026-112390\nCVE-2026-112391\nCVE-2026-112392\nCVE-2026-112397\nCVE-2026-112399\nCVE-2026-112400\nCVE-2026-112402\nCVE-2026-112404\nCVE-2026-112405\nCVE-2026-112893\nCVE-2026-112894\nCVE-2026-112895\nCVE-2026-112896\nCVE-2026-112897\nCVE-2026-112940\nCVE-2026-114145\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 3:22:35 PM",
-     "dateUpdated": "Nov 5, 2026, 11:43:38 AM",
+     "dateUpdated": "Nov 11, 2026, 3:37:33 AM",
      "description": "Red Hat Security Advisory: RHOAI 3.4.6 - Red Hat OpenShift AI",
      "id": "RHSA-2026:92510",
      "references": "https://access.redhat.com/errata/RHSA-2026:92510\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92510.json\n",
@@ -14016,7 +15128,7 @@
      "aliases": "CVE-2025-12999\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 5:25:28 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:57 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:13 AM",
      "description": "Red Hat Security Advisory: Red Hat OpenShift Dev Spaces 3.31.2 Release.",
      "id": "RHSA-2026:93987",
      "references": "https://access.redhat.com/errata/RHSA-2026:93987\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93987.json\n",
@@ -14233,7 +15345,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 2:15:59 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:35 PM",
+     "dateUpdated": "Nov 11, 2026, 1:52:47 AM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90891",
      "references": "https://access.redhat.com/errata/RHSA-2026:90891\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90891.json\n",
@@ -14270,7 +15382,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:56:46 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:05 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:18 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (Rubin)",
      "id": "RHSA-2026:94467",
      "references": "https://access.redhat.com/errata/RHSA-2026:94467\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94467.json\n",
@@ -14307,7 +15419,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:53:50 AM",
-     "dateUpdated": "Nov 5, 2026, 4:31:59 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:14 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (Neuron)",
      "id": "RHSA-2026:94453",
      "references": "https://access.redhat.com/errata/RHSA-2026:94453\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94453.json\n",
@@ -14713,7 +15825,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 10:08:33 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:32 PM",
+     "dateUpdated": "Nov 11, 2026, 1:52:42 AM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90495",
      "references": "https://access.redhat.com/errata/RHSA-2026:90495\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90495.json\n",
@@ -15470,7 +16582,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 4:37:46 AM",
-     "dateUpdated": "Nov 5, 2026, 4:31:53 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:11 AM",
      "description": "Red Hat Security Advisory: .NET 8.0 security update",
      "id": "RHSA-2026:93456",
      "references": "https://access.redhat.com/errata/RHSA-2026:93456\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93456.json\n",
@@ -15481,6 +16593,214 @@
      "summary": "An update for .NET 8.0 is now available for Red Hat Enterprise Linux 9.4 Update Services for SAP Solutions.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "97ddb2ca-2b51-33fb-95cf-75c7d68b5c6e"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "31724aa9-67cf-3595-9e2e-bcc1f8407857",
+       "product": {
+        "name": "python-django-0:4.2.30-2.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "35290097-d37f-3868-98f1-ff22620d7637",
+       "product": {
+        "name": "python3.11-brotli-0:1.2.1-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "35d00825-40ed-32e4-96cc-b10a5bb423fb",
+       "product": {
+        "name": "python3.11-django-0:4.2.30-2.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3b601cf1-80c1-35c8-9ae4-1a0d837b69df",
+       "product": {
+        "name": "openvox-server-0:8.18.0-1.el9sat.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3bc803b7-9ba0-38d1-92ef-3c8622195f68",
+       "product": {
+        "name": "Red Hat Satellite 6.17 for RHEL 9",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4034569e-e715-32f0-bc8c-3010b04e757b",
+       "product": {
+        "name": "openvox-agent-0:8.32.0-1.el9sat.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6590a842-64ef-37fa-8242-89ac26cd8cd9",
+       "product": {
+        "name": "python3.11-pillow-0:13.0.0-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6fb978aa-73eb-311f-89d6-ea148763aa1e",
+       "product": {
+        "name": "python3.11-pulp-ansible-1:0.22.11-1.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "71549d7e-9748-3a18-bf9f-c31b74579eb1",
+       "product": {
+        "name": "python3.11-pillow-debuginfo-0:13.0.0-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "766d94c2-3582-30ba-9e42-a2250b76e6c8",
+       "product": {
+        "name": "python-pillow-0:13.0.0-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "77ff293e-9137-3301-a511-e1a8ce3cb1ca",
+       "product": {
+        "name": "openvox-server-0:8.18.0-1.el9sat.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "805ed1b8-3090-3add-9651-d57813fc6111",
+       "product": {
+        "name": "python-urllib3-0:2.8.0-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bc53d680-3e31-3e37-9b89-427fe0ab47f0",
+       "product": {
+        "name": "python3.11-brotli-debuginfo-0:1.2.1-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c8178d58-b946-3dd6-b0e7-ed3f89d7f0ef",
+       "product": {
+        "name": "openvox-agent-0:8.32.0-1.el9sat.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cb1ff128-4da6-363f-be98-b1ab649663ad",
+       "product": {
+        "name": "python-brotli-debugsource-0:1.2.1-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cb59191c-f880-3177-831f-f8e44a27e345",
+       "product": {
+        "name": "python-brotli-0:1.2.1-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d2818408-e8ec-3e69-bac6-7c7a90572dad",
+       "product": {
+        "name": "python3.11-gitpython-0:3.2.1-1.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e1fa67f2-1f38-37cd-a02b-6a77dbde629b",
+       "product": {
+        "name": "python-pulp-ansible-1:0.22.11-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f14ab9e1-b6f0-3411-96a8-7ef71e6f888e",
+       "product": {
+        "name": "python3.11-urllib3-0:2.8.0-1.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f5460de0-9a34-355b-a434-6c9ffa5a6738",
+       "product": {
+        "name": "python-pillow-debugsource-0:13.0.0-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fe80442e-46bc-333d-a619-b03ad5827008",
+       "product": {
+        "name": "python-gitpython-0:3.2.1-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-15307\nCVE-2026-73619\nCVE-2026-78677\nCVE-2026-87819\nCVE-2026-89078\nCVE-2026-93577\nCVE-2026-96640\nCVE-2026-96643\nCVE-2026-96778\nCVE-2026-97229\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-104895\nCVE-2026-110264\nCVE-2026-110856\nCVE-2026-110857\nCVE-2026-110858\nCVE-2026-110859\nCVE-2026-111497\nCVE-2026-112390\nCVE-2026-112391\nCVE-2026-112392\nCVE-2026-112393\nCVE-2026-112397\nCVE-2026-112398\nCVE-2026-112399\nCVE-2026-112400\nCVE-2026-112402\nCVE-2026-112403\nCVE-2026-112404\nCVE-2026-112405\nCVE-2026-112406\nCVE-2026-112892\nCVE-2026-112893\nCVE-2026-112894\nCVE-2026-112895\nCVE-2026-112896\nCVE-2026-112897\nCVE-2026-114145\nCVE-2026-115731\nCVE-2026-115732\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 5, 2026, 7:44:00 PM",
+     "dateUpdated": "Nov 11, 2026, 2:09:26 AM",
+     "description": "Red Hat Security Advisory: Satellite 6.17 security update",
+     "id": "RHSA-2026:95656",
+     "references": "https://access.redhat.com/errata/RHSA-2026:95656\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95656.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "A security update for Red Hat Satellite 6.17 is now available.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE links in the References section."
+    },
+    "id": "9ba46803-9aad-314c-82bc-df78fb42d248"
    },
    {
     "advisory": {
@@ -15651,10 +16971,10 @@
      "aliases": "CVE-2026-105481\nCVE-2026-105482\nCVE-2026-106069\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 30, 2026, 1:44:42 PM",
-     "dateUpdated": "Nov 4, 2026, 9:58:31 PM",
+     "dateUpdated": "Nov 10, 2026, 4:05:21 PM",
      "description": "Security update for nodejs22",
      "id": "openSUSE-SU-2026:22210-1",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_22210-1.json\nhttps://bugzilla.suse.com/1286261\nhttps://bugzilla.suse.com/1286561\nhttps://bugzilla.suse.com/1286563\nhttps://bugzilla.suse.com/1286564\nhttps://bugzilla.suse.com/1286565\nhttps://bugzilla.suse.com/1286566\nhttps://bugzilla.suse.com/1286567\nhttps://bugzilla.suse.com/1286570\nhttps://www.suse.com/security/cve/CVE-2026-105481/\nhttps://www.suse.com/security/cve/CVE-2026-105482/\nhttps://www.suse.com/security/cve/CVE-2026-106069/\nhttps://www.suse.com/security/cve/CVE-2026-106072/\nhttps://www.suse.com/security/cve/CVE-2026-106073/\nhttps://www.suse.com/security/cve/CVE-2026-106074/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_22210-1.json\nhttps://bugzilla.suse.com/1286261\nhttps://bugzilla.suse.com/1286561\nhttps://bugzilla.suse.com/1286563\nhttps://bugzilla.suse.com/1286564\nhttps://bugzilla.suse.com/1286565\nhttps://bugzilla.suse.com/1286566\nhttps://bugzilla.suse.com/1286567\nhttps://bugzilla.suse.com/1286570\nhttps://www.suse.com/security/cve/CVE-2026-105481/\nhttps://www.suse.com/security/cve/CVE-2026-105482/\nhttps://www.suse.com/security/cve/CVE-2026-106069/\nhttps://www.suse.com/security/cve/CVE-2026-106072/\nhttps://www.suse.com/security/cve/CVE-2026-106073/\nhttps://www.suse.com/security/cve/CVE-2026-106074/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
      "source": {
       "id": 21,
       "name": "csaf_opensuse"
@@ -15712,6 +17032,15 @@
        }
       },
       {
+       "id": "7b29920d-a214-3641-81ff-a5c9924d1ab8",
+       "product": {
+        "name": "DataXess Configurator",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "9ed9f5ef-8b73-34ea-94f6-4e8f81f86d77",
        "product": {
         "name": "Edge OPC UA Server Configurator",
@@ -15751,7 +17080,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 30, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 30, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 6, 2026, 12:00:00 AM",
      "description": "SSA-443410: Node2Shell Vulnerability in Industrial Edge Management Applications",
      "id": "SSA-443410",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-443410.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-443410.json\n",
@@ -15759,7 +17088,7 @@
       "id": 7,
       "name": "csaf_siemens"
      },
-     "summary": "Siemens is currently assessing the impact of Node2Shell (CVE-2026-111497) on Industrial Edge. Please check your Industrial Edge Management (IEM) setup:\n\n- No Management Applications installed: No action is required. Although the affected Brotli library is included in the IEM software stack, the affected functionality is not used or exposed. The same applies to IEDK.\n- Management Applications installed: Follow the specific mitigations until a fix is available.\n\nFor Siemens-managed services, Industrial Edge Hub and Industrial Edge Management Cloud, appropriate Firewall/WAF protection has already been implemented.\n\nSiemens is preparing further fixes and recommends specific mitigations for products where fixes are not or not yet available."
+     "summary": "Siemens is currently assessing the impact of Node2Shell (CVE-2026-111497) on Industrial Edge. Please check your Industrial Edge Management (IEM) setup:   \n\n- No Management Applications installed: No action is required. Although the affected Brotli library is included in the IEM software stack, the affected functionality is not used or exposed. The same applies to IEDK.\n- Management Applications installed: Follow the specific mitigations until a fix is available.\n- Device Applications installed: Follow the specific mitigations until a fix is available.\n\nFor Siemens-managed services, Industrial Edge Hub and Industrial Edge Management Cloud, appropriate Firewall/WAF protection has already been implemented.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fixes and recommends specific mitigations for products where fixes are not or not yet available."
     },
     "id": "9c8a5a03-8353-3f13-8ce9-13fc8b2e1cf8"
    },
@@ -15779,7 +17108,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 6:07:42 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:56 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:12 AM",
      "description": "Red Hat Security Advisory: Red Hat build of Quarkus 3.33.4.SP2 release and security update",
      "id": "RHSA-2026:93902",
      "references": "https://access.redhat.com/errata/RHSA-2026:93902\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93902.json\n",
@@ -16365,7 +17694,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 10:44:17 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:59 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:14 AM",
      "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.7 Container Release Update",
      "id": "RHSA-2026:94108",
      "references": "https://access.redhat.com/errata/RHSA-2026:94108\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94108.json\n",
@@ -16429,10 +17758,10 @@
      "aliases": "CVE-2025-6176\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 2:55:24 PM",
-     "dateUpdated": "Nov 4, 2026, 9:58:26 PM",
+     "dateUpdated": "Nov 10, 2026, 4:04:56 PM",
      "description": "Security update for python-Brotli",
      "id": "openSUSE-SU-2026:22183-1",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_22183-1.json\nhttps://bugzilla.suse.com/1252945\nhttps://bugzilla.suse.com/1287779\nhttps://www.suse.com/security/cve/CVE-2025-6176/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_22183-1.json\nhttps://bugzilla.suse.com/1252945\nhttps://bugzilla.suse.com/1287779\nhttps://www.suse.com/security/cve/CVE-2025-6176/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
      "source": {
       "id": 21,
       "name": "csaf_opensuse"
@@ -16466,7 +17795,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:55:24 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:02 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:16 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (TPU)",
      "id": "RHSA-2026:94458",
      "references": "https://access.redhat.com/errata/RHSA-2026:94458\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94458.json\n",
@@ -16611,7 +17940,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 3:06:33 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:36 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:03 PM",
      "description": "Red Hat Security Advisory: thunderbird security update",
      "id": "RHSA-2026:19469",
      "references": "https://access.redhat.com/errata/RHSA-2026:19469\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19469.json\n",
@@ -16648,7 +17977,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:56:25 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:04 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:18 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (ROCm 6.4)",
      "id": "RHSA-2026:94465",
      "references": "https://access.redhat.com/errata/RHSA-2026:94465\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94465.json\n",
@@ -16748,7 +18077,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 2:56:18 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:35 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:03 PM",
      "description": "Red Hat Security Advisory: thunderbird security update",
      "id": "RHSA-2026:19467",
      "references": "https://access.redhat.com/errata/RHSA-2026:19467\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19467.json\n",
@@ -17019,7 +18348,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 30, 2026, 2:02:45 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:52 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:09 AM",
      "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.4 Product Security and Bug Fix Update",
      "id": "RHSA-2026:93065",
      "references": "https://access.redhat.com/errata/RHSA-2026:93065\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93065.json\n",
@@ -17074,7 +18403,7 @@
      "aliases": "CVE-2026-44172\nCVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:55:45 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:02 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:17 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (Spyre)",
      "id": "RHSA-2026:94461",
      "references": "https://access.redhat.com/errata/RHSA-2026:94461\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94461.json\n",
@@ -17085,6 +18414,24 @@
      "summary": "Red Hat AI Base Images 3.4.7 (Spyre) is now available."
     },
     "id": "adad5bbf-791a-347a-a134-cb0c0323b886"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [],
+     "aliases": "CVE-2026-111497\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-105482\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 27, 2026, 9:30:00 PM",
+     "dateUpdated": "Nov 10, 2026, 9:02:32 PM",
+     "description": "Vulnerabilities in Node.js and Brotli Affecting Cisco Products: October 2026",
+     "id": "cisco-sa-oct2026-node-js-Jj3SQ19u",
+     "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u\n",
+     "source": {
+      "id": 10,
+      "name": "csaf_cisco"
+     },
+     "summary": "On October 21, 2026, Node.js announced the availability of fixes for multiple vulnerabilities across the following supported release lines: 22.x, 24.x, and 26.x.\r\n\r\nThese vulnerabilities impact critical operations such as the Brotli decoder, DNS resolution, and TLS certificate validation. The vulnerabilities pose risks for remote code execution and traffic interception. For more information, see Node.js Security Release [\"https://nodejs.org/en/blog/vulnerability/october-2026-security-releases\"].\r\n\r\nThe following vulnerabilities have a Security Impact Rating (SIR) of High and are addressed in this advisory:\r\n\r\nCVE-2026-111497 - Brotli decoder out-of-bounds write; potential remote code execution\r\nCVE-2026-105482 - DNS resolution truncation involving embedded NUL characters\r\nCVE-2026-105483 - TLS hostname validation bypass using fullwidth IP digits\r\nCVE-2026-106069 - TLS hostname validation bypass with noncanonical IP addresses\r\n\r\nFor information about Splunk products and offerings, see Vulnerabilities in Node.js (CVE-2026-111497, CVE-2026-105482, CVE-2026-105483, CVE-2026-106069) on Splunk Products - October 2026 [\"https://advisory.splunk.com/advisories/SVD-2026-1015\"]\r\n\r\nThis investigation was expanded to cover Brotli outside of Node.js on October 30, 2026. The Brotli decoder flaw (CVE-2026-111497), which is in the Google Brotli C decoder, is often bundled with or linked to other software, so products beyond Node.js may be affected. For software that may be affected, see Broccoli2Shell [\"https://broccoli2shell.com/\"].\r\n\r\nImportant: If a product is not listed within this advisory, Cisco's review indicates that the product is not affected by this vulnerability.\r\n\r\nThis advisory will be updated as additional information becomes available.\r\n\r\n"
+    },
+    "id": "ae348bee-4c71-3788-aaa4-fe3bdc22f58b"
    },
    {
     "advisory": {
@@ -17183,7 +18530,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 6:00:52 AM",
-     "dateUpdated": "Nov 5, 2026, 4:31:55 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:11 AM",
      "description": "Red Hat Security Advisory: RHOAI 3.4.6 - Red Hat OpenShift AI",
      "id": "RHSA-2026:93550",
      "references": "https://access.redhat.com/errata/RHSA-2026:93550\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93550.json\n",
@@ -17220,7 +18567,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:58:25 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:06 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:20 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (ROCm 7.1)",
      "id": "RHSA-2026:94472",
      "references": "https://access.redhat.com/errata/RHSA-2026:94472\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94472.json\n",
@@ -17231,6 +18578,106 @@
      "summary": "Red Hat AI Base Images 3.4.7 (ROCm 7.1) is now available."
     },
     "id": "b1bcf698-089a-371e-b708-a364918243e4"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "13b41971-388c-3f19-93a3-3fdcc7dc363b",
+       "product": {
+        "name": "python314-autobahn-0:26.11.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "55efda15-ea6f-3e1f-9ee0-520421df25b2",
+       "product": {
+        "name": "python313-autobahn-0:26.11.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "61bdfd4b-fd6b-39ea-b85f-4799621cf090",
+       "product": {
+        "name": "python314-autobahn-0:26.11.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6a4929b1-e1da-3c44-bec1-769c7bfd0982",
+       "product": {
+        "name": "openSUSE Tumbleweed",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8544e2d4-f43b-3daf-af1f-b33b8d6b54c5",
+       "product": {
+        "name": "python313-autobahn-0:26.11.1-1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "86163e3c-41c3-3c5a-9088-b56c2443c652",
+       "product": {
+        "name": "python313-autobahn-0:26.11.1-1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "bcd95f16-91a0-32b3-b75f-bf9082523ab1",
+       "product": {
+        "name": "python314-autobahn-0:26.11.1-1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cabcb028-0813-331f-bffa-b3be007c22cd",
+       "product": {
+        "name": "python313-autobahn-0:26.11.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fa230586-f348-3091-b5bf-56b659bf8eb0",
+       "product": {
+        "name": "python314-autobahn-0:26.11.1-1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 5, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 6, 2026, 11:27:32 AM",
+     "description": "python313-autobahn-26.11.1-1.1 on GA media",
+     "id": "openSUSE-SU-2026:12439-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12439-1.json\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "python313-autobahn-26.11.1-1.1 on GA media"
+    },
+    "id": "b7c0c30c-bbae-319c-be96-1fc8fb21ad34"
    },
    {
     "advisory": {
@@ -32044,7 +33491,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 10:41:47 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:56 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:13 AM",
      "description": "Red Hat Security Advisory: Red Hat Build of Apache Camel 4.18 for Quarkus 3.33 update is now available",
      "id": "RHSA-2026:93980",
      "references": "https://access.redhat.com/errata/RHSA-2026:93980\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93980.json\n",
@@ -32090,7 +33537,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:57:34 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:06 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:19 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (CUDA 13.0)",
      "id": "RHSA-2026:94470",
      "references": "https://access.redhat.com/errata/RHSA-2026:94470\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94470.json\n",
@@ -32325,10 +33772,10 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 1, 2026, 3:07:55 AM",
-     "dateUpdated": "Nov 4, 2026, 9:58:32 PM",
+     "dateUpdated": "Nov 10, 2026, 4:05:23 PM",
      "description": "Security update for brotli",
      "id": "openSUSE-SU-2026:22213-1",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_22213-1.json\nhttps://bugzilla.suse.com/1287778\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_22213-1.json\nhttps://bugzilla.suse.com/1287778\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
      "source": {
       "id": 21,
       "name": "csaf_opensuse"
@@ -32362,7 +33809,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:54:22 AM",
-     "dateUpdated": "Nov 5, 2026, 4:31:59 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:15 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (TPU)",
      "id": "RHSA-2026:94454",
      "references": "https://access.redhat.com/errata/RHSA-2026:94454\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94454.json\n",
@@ -32462,7 +33909,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 14, 2026, 8:28:22 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:30 PM",
+     "dateUpdated": "Nov 6, 2026, 10:24:57 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:17477",
      "references": "https://access.redhat.com/errata/RHSA-2026:17477\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_17477.json\n",
@@ -33787,7 +35234,7 @@
      "aliases": "CVE-2026-84782\nCVE-2026-111064\nCVE-2026-111066\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 8:31:32 PM",
-     "dateUpdated": "Nov 6, 2026, 1:14:47 AM",
+     "dateUpdated": "Nov 11, 2026, 2:01:15 AM",
      "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.6 Container Release Update",
      "id": "RHSA-2026:92856",
      "references": "https://access.redhat.com/errata/RHSA-2026:92856\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92856.json\n",
@@ -33833,7 +35280,7 @@
      "aliases": "CVE-2025-69418\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114406\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:59:48 AM",
-     "dateUpdated": "Nov 5, 2026, 3:46:08 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:20 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (CUDA 12.9)",
      "id": "RHSA-2026:94474",
      "references": "https://access.redhat.com/errata/RHSA-2026:94474\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94474.json\n",
@@ -33978,7 +35425,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 4, 2026, 4:55:59 PM",
-     "dateUpdated": "Oct 30, 2026, 9:08:29 PM",
+     "dateUpdated": "Nov 6, 2026, 10:24:57 PM",
      "description": "Red Hat Security Advisory: thunderbird security update",
      "id": "RHSA-2026:13537",
      "references": "https://access.redhat.com/errata/RHSA-2026:13537\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_13537.json\n",
@@ -34502,7 +35949,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 10:31:12 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:32 PM",
+     "dateUpdated": "Nov 11, 2026, 1:52:42 AM",
      "description": "Red Hat Security Advisory: brotli security update",
      "id": "RHSA-2026:90501",
      "references": "https://access.redhat.com/errata/RHSA-2026:90501\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90501.json\n",
@@ -34899,7 +36346,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 27, 2026, 1:40:24 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:34 PM",
+     "dateUpdated": "Nov 11, 2026, 1:52:44 AM",
      "description": "Red Hat Security Advisory: brotli security, bug fix, and enhancement update",
      "id": "RHSA-2026:90888",
      "references": "https://access.redhat.com/errata/RHSA-2026:90888\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90888.json\n",
@@ -34910,6 +36357,232 @@
      "summary": "An update for brotli is now available for Red Hat Enterprise Linux 9.4 Update Services for SAP Solutions.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "d192641c-a081-33ca-8c28-9857d6b9c965"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "00fb6ff4-ffd8-397a-955c-15521fba9ae8",
+       "product": {
+        "name": "openvox-server-0:8.18.0-1.el9sat.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "03a84899-bc84-34f1-bcff-af5f5c4790e3",
+       "product": {
+        "name": "openvox-agent-0:8.32.0-1.el9sat.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "04967a2a-ac69-3a64-99e6-e29ca80491f7",
+       "product": {
+        "name": "python3.12-django-0:4.2.30-3.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0cfc44e0-a114-37f0-8675-e4d04d2b136d",
+       "product": {
+        "name": "python3.12-brotli-0:1.2.1-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "136b6088-a3cb-3f5b-ab87-eb6b60d66d76",
+       "product": {
+        "name": "python3.12-django-0:4.2.30-3.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "16e11ecf-e14f-30e1-b349-9a99a5bf8856",
+       "product": {
+        "name": "python3.12-urllib3-0:2.8.0-1.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1e03bb0b-f18e-354c-8ee2-59668cb9bd8c",
+       "product": {
+        "name": "python3.12-pillow-0:13.0.0-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "37d32b58-b360-3d69-b128-a1da965236e1",
+       "product": {
+        "name": "python3.12-pillow-debugsource-0:13.0.0-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "40584f6c-f74c-33e7-b72f-2b2b6aa4fdb2",
+       "product": {
+        "name": "python3.12-urllib3-0:2.8.0-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4a8f3d4f-3177-3b12-982e-80bff84af509",
+       "product": {
+        "name": "python3.12-pulp-ansible-1:0.24.13-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5a1b4fa9-7e08-3c03-88fc-a4ec1b436fad",
+       "product": {
+        "name": "python3.12-pillow-0:13.0.0-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5d1aa455-17e5-3946-b7b2-a7fcc6ff4961",
+       "product": {
+        "name": "python3.12-gitpython-0:3.2.1-1.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "96ec4db6-3c82-3f47-a842-c15559d1129b",
+       "product": {
+        "name": "pulpcore-obsolete-packages-0:1.3.1-7.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "adc65040-7014-3dc6-9634-ac81c274520d",
+       "product": {
+        "name": "python3.12-pillow-debuginfo-0:13.0.0-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c1de2c93-1a13-3161-9a6c-baef87762547",
+       "product": {
+        "name": "pulpcore-obsolete-packages-0:1.3.1-7.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c5d21a8f-a775-307a-a75e-7752b5df303f",
+       "product": {
+        "name": "python3.12-brotli-debugsource-0:1.2.1-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d5af85b7-851d-37e0-876b-27d07d85a4f0",
+       "product": {
+        "name": "openvox-agent-0:8.32.0-1.el9sat.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d791b617-4ec9-3a19-82a3-9f523326780c",
+       "product": {
+        "name": "python3.12-brotli-0:1.2.1-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e99c5f1a-66bd-33bd-933f-1dbd7ba6403c",
+       "product": {
+        "name": "Red Hat Satellite 6.18 for RHEL 9",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ec7337ef-681b-3079-98a1-baa0de43f988",
+       "product": {
+        "name": "python3.12-gitpython-0:3.2.1-1.el9pc.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ed7cc33c-404c-39ec-bcdf-374802d47828",
+       "product": {
+        "name": "python3.12-pulp-ansible-1:0.24.13-1.el9pc.noarch",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "efc1e638-1b12-3ab3-9f70-fc2131d89998",
+       "product": {
+        "name": "openvox-server-0:8.18.0-1.el9sat.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f9eb8b70-4569-3185-a097-f61cd57522f5",
+       "product": {
+        "name": "python3.12-brotli-debuginfo-0:1.2.1-1.el9pc.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-15307\nCVE-2026-73619\nCVE-2026-78677\nCVE-2026-87819\nCVE-2026-89078\nCVE-2026-93577\nCVE-2026-96640\nCVE-2026-96643\nCVE-2026-96778\nCVE-2026-97229\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-104895\nCVE-2026-110264\nCVE-2026-110856\nCVE-2026-110857\nCVE-2026-110858\nCVE-2026-110859\nCVE-2026-111497\nCVE-2026-112390\nCVE-2026-112391\nCVE-2026-112392\nCVE-2026-112393\nCVE-2026-112397\nCVE-2026-112398\nCVE-2026-112399\nCVE-2026-112400\nCVE-2026-112402\nCVE-2026-112403\nCVE-2026-112404\nCVE-2026-112405\nCVE-2026-112406\nCVE-2026-112892\nCVE-2026-112893\nCVE-2026-112894\nCVE-2026-112895\nCVE-2026-112896\nCVE-2026-112897\nCVE-2026-114145\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 5, 2026, 7:44:05 PM",
+     "dateUpdated": "Nov 11, 2026, 2:09:27 AM",
+     "description": "Red Hat Security Advisory: Satellite 6.18 security update",
+     "id": "RHSA-2026:95657",
+     "references": "https://access.redhat.com/errata/RHSA-2026:95657\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95657.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "A security update for Red Hat Satellite 6.18 is now available.\n\nRed Hat Product Security has rated this update as having a security impact of\nImportant. A Common Vulnerability Scoring System (CVSS) base score, which gives\na detailed severity rating, is available for each vulnerability from the CVE\nlinks in the References section."
+    },
+    "id": "d2496851-6ce7-3add-925f-d15000b85d15"
    },
    {
     "advisory": {
@@ -35062,7 +36735,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 7:37:08 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:37 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:03 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:19542",
      "references": "https://access.redhat.com/errata/RHSA-2026:19542\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19542.json\n",
@@ -35415,7 +37088,7 @@
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 10:20:11 PM",
-     "dateUpdated": "Nov 5, 2026, 4:31:58 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:13 AM",
      "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.5 Product Security and Bug Fix Update",
      "id": "RHSA-2026:94100",
      "references": "https://access.redhat.com/errata/RHSA-2026:94100\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94100.json\n",
@@ -35526,6 +37199,70 @@
      "summary": "Security update for brotli"
     },
     "id": "df5e60fe-e20c-3369-a7c4-4877e7df0899"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "aa17d23f-a362-3994-894e-1db1217f4986",
+       "product": {
+        "name": "rhcos-x86_64-4.19.9.6.202611041921-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b81d00fb-bb4d-396a-94bf-61783c2451e1",
+       "product": {
+        "name": "rhcos-ppc64le-4.19.9.6.202611041921-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c564b43a-7a84-3c6e-9036-e55fcfbe3ba5",
+       "product": {
+        "name": "rhcos-s390x-4.19.9.6.202611041921-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d5f213c8-5b5c-31f3-af09-1a55d7691f15",
+       "product": {
+        "name": "rhcos-aarch64-4.19.9.6.202611041921-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f6bf5df7-2ec3-335a-b383-11c5ddcfaa95",
+       "product": {
+        "name": "Red Hat OpenShift Container Platform 4.19",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-98432\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 9, 2026, 2:23:43 AM",
+     "dateUpdated": "Nov 11, 2026, 1:53:29 AM",
+     "description": "Red Hat Security Advisory: OpenShift Container Platform 4.19.55 bug fix and security update",
+     "id": "RHSA-2026:95523",
+     "references": "https://access.redhat.com/errata/RHSA-2026:95523\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95523.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat OpenShift Container Platform release 4.19.55 is now available with updates to packages and images that fix several bugs and add enhancements.\n\nThis release includes a security update for Red Hat OpenShift Container Platform 4.19.\n\nRed Hat Product Security has rated this update as having a security impact of Critical. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+    },
+    "id": "e291d283-2e4c-3187-b203-043e1bd0cafa"
    },
    {
     "advisory": {
@@ -36218,7 +37955,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-114148\n",
      "baseScore": 0.0,
      "datePublished": "Nov 2, 2026, 5:32:35 AM",
-     "dateUpdated": "Nov 5, 2026, 4:31:53 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:11 AM",
      "description": "Red Hat Security Advisory: .NET 8.0 security update",
      "id": "RHSA-2026:93457",
      "references": "https://access.redhat.com/errata/RHSA-2026:93457\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_93457.json\n",
@@ -36229,6 +37966,70 @@
      "summary": "An update for .NET 8.0 is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "eba6fd17-a587-3442-b154-2fd7446bddbe"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "4e04eac2-4055-3ff2-8188-550b7e8b459c",
+       "product": {
+        "name": "rhcos-aarch64-4.21.9.6.202611042115-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "762ba7ba-d630-33b6-93a5-0675146d4096",
+       "product": {
+        "name": "Red Hat OpenShift Container Platform 4.21",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7ccb7cbc-22eb-3fa9-9625-07e426884656",
+       "product": {
+        "name": "rhcos-ppc64le-4.21.9.6.202611042115-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "88850b95-f54b-38de-ae3d-507bd28e54c4",
+       "product": {
+        "name": "rhcos-s390x-4.21.9.6.202611042115-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ddecca46-699c-3c08-819d-2c666fd02a47",
+       "product": {
+        "name": "rhcos-x86_64-4.21.9.6.202611042115-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-98432\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 9, 2026, 2:02:34 AM",
+     "dateUpdated": "Nov 11, 2026, 1:53:28 AM",
+     "description": "Red Hat Security Advisory: OpenShift Container Platform 4.21.42 bug fix and security update",
+     "id": "RHSA-2026:95408",
+     "references": "https://access.redhat.com/errata/RHSA-2026:95408\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95408.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat OpenShift Container Platform release 4.21.42 is now available with updates to packages and images that fix several bugs and add enhancements.\n\nThis release includes a security update for Red Hat OpenShift Container Platform 4.21.\n\nRed Hat Product Security has rated this update as having a security impact of Critical. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+    },
+    "id": "f50b8837-2763-3611-af2f-4255ab6dba3e"
    },
    {
     "advisory": {
@@ -36399,7 +38200,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 14, 2026, 8:22:28 PM",
-     "dateUpdated": "Oct 30, 2026, 9:08:31 PM",
+     "dateUpdated": "Nov 6, 2026, 10:24:59 PM",
      "description": "Red Hat Security Advisory: firefox security update",
      "id": "RHSA-2026:17688",
      "references": "https://access.redhat.com/errata/RHSA-2026:17688\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_17688.json\n",
@@ -36410,6 +38211,70 @@
      "summary": "An update for firefox is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "f5ba3dad-f922-3934-84f2-71d9e07ab257"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "1c8089a5-0aeb-31f8-8019-313454e60785",
+       "product": {
+        "name": "rhcos-s390x-4.22.9.8.202611032353-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "44aa1568-550c-3883-8d59-3d84f85d6527",
+       "product": {
+        "name": "Red Hat OpenShift Container Platform 4.22",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ab00d238-5b2f-32d7-a989-38abae10416f",
+       "product": {
+        "name": "rhcos-aarch64-4.22.9.8.202611032353-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b0a1cec7-6e4d-3c55-baa6-0345eac2fcd8",
+       "product": {
+        "name": "rhcos-ppc64le-4.22.9.8.202611032353-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bac9b156-9453-3643-aed5-9873b91dca24",
+       "product": {
+        "name": "rhcos-x86_64-4.22.9.8.202611032353-0",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-31936\nCVE-2026-8458\nCVE-2026-8932\nCVE-2026-12080\nCVE-2026-14456\nCVE-2026-18798\nCVE-2026-19630\nCVE-2026-26007\nCVE-2026-50252\nCVE-2026-52929\nCVE-2026-63072\nCVE-2026-63076\nCVE-2026-64597\nCVE-2026-68376\nCVE-2026-71226\nCVE-2026-77206\nCVE-2026-77207\nCVE-2026-77214\nCVE-2026-80824\nCVE-2026-84782\nCVE-2026-89777\nCVE-2026-90003\nCVE-2026-90011\nCVE-2026-94300\nCVE-2026-94453\nCVE-2026-96888\nCVE-2026-97313\nCVE-2026-98222\nCVE-2026-98320\nCVE-2026-98364\nCVE-2026-98432\nCVE-2026-98466\nCVE-2026-98725\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 6, 2026, 6:10:52 PM",
+     "dateUpdated": "Nov 11, 2026, 2:01:11 AM",
+     "description": "Red Hat Security Advisory: OpenShift Container Platform 4.22.22 bug fix and security update",
+     "id": "RHSA-2026:95346",
+     "references": "https://access.redhat.com/errata/RHSA-2026:95346\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95346.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat OpenShift Container Platform release 4.22.22 is now available with updates to packages and images that fix several bugs and add enhancements.\n\nThis release includes a security update for Red Hat OpenShift Container Platform 4.22.\n\nRed Hat Product Security has rated this update as having a security impact of Critical. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from\nthe CVE link(s) in the References section."
+    },
+    "id": "f6bcd7e7-3930-35f3-ad45-662f59bcaac8"
    },
    {
     "advisory": {
@@ -36436,7 +38301,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:56:42 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:04 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:18 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (ROCm)",
      "id": "RHSA-2026:94466",
      "references": "https://access.redhat.com/errata/RHSA-2026:94466\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94466.json\n",
@@ -36582,7 +38447,7 @@
      "aliases": "CVE-2026-96889\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:55:59 AM",
-     "dateUpdated": "Nov 5, 2026, 4:32:03 PM",
+     "dateUpdated": "Nov 11, 2026, 1:53:21 AM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (Spyre)",
      "id": "RHSA-2026:94463",
      "references": "https://access.redhat.com/errata/RHSA-2026:94463\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94463.json\n",
@@ -36745,7 +38610,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 3:08:18 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:35 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:02 PM",
      "description": "Red Hat Security Advisory: thunderbird security update",
      "id": "RHSA-2026:19466",
      "references": "https://access.redhat.com/errata/RHSA-2026:19466\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19466.json\n",
@@ -36818,7 +38683,7 @@
      "aliases": "CVE-2026-6746\nCVE-2026-6747\nCVE-2026-6748\nCVE-2026-6749\nCVE-2026-6750\nCVE-2026-6751\nCVE-2026-6752\nCVE-2026-6753\nCVE-2026-6754\nCVE-2026-6757\nCVE-2026-6759\nCVE-2026-6761\nCVE-2026-6762\nCVE-2026-6763\nCVE-2026-6764\nCVE-2026-6765\nCVE-2026-6766\nCVE-2026-6767\nCVE-2026-6769\nCVE-2026-6770\nCVE-2026-6771\nCVE-2026-6772\nCVE-2026-6776\nCVE-2026-6785\nCVE-2026-6786\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "May 20, 2026, 2:11:03 AM",
-     "dateUpdated": "Oct 30, 2026, 9:08:35 PM",
+     "dateUpdated": "Nov 6, 2026, 10:25:02 PM",
      "description": "Red Hat Security Advisory: thunderbird security update",
      "id": "RHSA-2026:19465",
      "references": "https://access.redhat.com/errata/RHSA-2026:19465\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_19465.json\n",
@@ -36877,7 +38742,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 7, 2026, 6:01:37 AM",
+     "dataProcessed": "Nov 11, 2026, 7:08:48 AM",
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
      "dateUpdated": "Oct 23, 2026, 12:00:00 AM",
      "description": "Out-of-bounds write in the brotlicffi decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -36894,7 +38759,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 7, 2026, 6:01:37 AM",
+     "dataProcessed": "Nov 11, 2026, 7:08:48 AM",
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
      "dateUpdated": "Oct 23, 2026, 12:00:00 AM",
      "description": "Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -36911,7 +38776,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111497\nGHSA-9v8h-qqgm-4m35\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 6, 2026, 7:03:49 AM",
+     "dataProcessed": "Nov 11, 2026, 7:06:55 AM",
      "datePublished": "Oct 22, 2026, 3:32:49 PM",
      "dateUpdated": "Nov 3, 2026, 5:10:27 PM",
      "description": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -36930,9 +38795,9 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 7, 2026, 6:00:25 AM",
+     "dataProcessed": "Nov 11, 2026, 7:19:39 AM",
      "datePublished": "Oct 22, 2026, 1:35:41 PM",
-     "dateUpdated": "Nov 6, 2026, 3:39:57 PM",
+     "dateUpdated": "Nov 10, 2026, 12:50:00 PM",
      "description": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
      "enisa_id": "EUVD-2026-108169\n",
      "epss": 82.64,
@@ -37035,6 +38900,45 @@
     "affectedData": [
      {
       "defaultStatus": "unknown",
+      "product": "Calibre",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Calibre ICE",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Capital",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "Cloud Connector Configurator",
       "vendor": "Siemens",
       "versions": [
@@ -37062,6 +38966,19 @@
      {
       "defaultStatus": "unknown",
       "product": "Common Configurator on Device (CC on Edge)",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "COMOS Walkinside",
       "vendor": "Siemens",
       "versions": [
        {
@@ -37106,6 +39023,19 @@
        {
         "lessThan": "V1.5.7",
         "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Designcenter X Essentials",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
         "version": "0",
         "versionType": "custom"
        }
@@ -37165,6 +39095,19 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "gDAP (gPROMS Digital Application Platform)",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "Gridscale X DSA",
       "vendor": "Siemens",
       "versions": [
@@ -37217,6 +39160,19 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "HyperLynx",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "Industrial Edge Hub",
       "vendor": "Siemens",
       "versions": [
@@ -37231,6 +39187,292 @@
      {
       "defaultStatus": "unknown",
       "product": "Industrial Edge Management Cloud",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Innexis Architecture Native Acceleration 2026",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Insights Hub",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter Connect Electronics",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter Connect MOM",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter Execution Core",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter Execution Discrete",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter Execution Foundation",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter Execution Pharma",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter Execution Process",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter Intelligence",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter Intra Plant Logistics",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter Quality",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter RDnL",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Opcenter X",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "PADS Pro Essentials",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "PADS Pro Student Edition",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "PADS Professional",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Pathway to Learning Engineering",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "PAVE360 Automotive 2026",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Polarion",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Process Preparation X",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Project Server Web Administration Tool",
       "vendor": "Siemens",
       "versions": [
        {
@@ -37295,6 +39537,279 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "SIMATIC BRAUMAT",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V8.2 Update 5",
+        "status": "affected",
+        "version": "V8.2 Update 1",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC Profiling Tool",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC SISTAR",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V8.2 Update 5",
+        "status": "affected",
+        "version": "V8.2 Update 1",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC Companion",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC OA V3.20",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V3.20 P17.1",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC OA V3.21",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC Runtime Professional",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC Unified for Industrial Edge",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC Unified PC Runtime",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC Unified SIQENCE",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC V7/V8",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Simcenter Executable Digital Twin",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Simcenter Studio",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Solid Edge",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Teamcenter Share",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Teamcenter V2412",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Teamcenter V2506",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Teamcenter V2512",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Teamcenter V2606",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "TIA Administrator",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "User Management Component (UMC)",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "VersiCharge AC Series",
       "vendor": "Siemens",
       "versions": [
@@ -37314,6 +39829,32 @@
        {
         "lessThan": "*",
         "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Xpedition Designer",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Xpedition Enterprise",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
         "version": "0",
         "versionType": "custom"
        }
@@ -37754,28 +40295,39 @@
         "vulnerable": true
        },
        {
-        "criteria": "cpe:2.3:a:siemens:data_flow_monitoring:-:*:*:*:*:*:*:*",
-        "matchCriteriaId": "508960FA-9D4A-4D2A-AAD7-7B7F4F0A7718",
+        "criteria": "cpe:2.3:a:siemens:data_flow_monitoring:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3562BB8C-6E76-4B16-A2EF-D343EED30DA0",
+        "versionEndExcluding": "3.0.18",
         "vulnerable": true
        },
        {
-        "criteria": "cpe:2.3:a:siemens:edge_opc_ua_server_configurator:-:*:*:*:*:*:*:*",
-        "matchCriteriaId": "13D7B958-EEB6-422A-9C04-5DE59EC9CA11",
+        "criteria": "cpe:2.3:a:siemens:dataxess_configurator:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "076198F2-9992-4803-8377-8B264E1D7ADA",
+        "versionEndExcluding": "1.5.7",
         "vulnerable": true
        },
        {
-        "criteria": "cpe:2.3:a:siemens:flow_creator_configurator:-:*:*:*:*:*:*:*",
-        "matchCriteriaId": "C869C4D8-EF92-4256-8347-119B413A5554",
+        "criteria": "cpe:2.3:a:siemens:edge_opc_ua_server_configurator:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F1122EBA-DB7C-4680-AEEF-309C95843D0D",
+        "versionEndExcluding": "2.3.10",
         "vulnerable": true
        },
        {
-        "criteria": "cpe:2.3:a:siemens:industrial_edge_cloud_connector_configurator:-:*:*:*:*:*:*:*",
-        "matchCriteriaId": "689172E8-3F11-4E87-852E-846F583D2E4F",
+        "criteria": "cpe:2.3:a:siemens:flow_creator_configurator:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "90BE4EB2-0B14-44F4-881D-F0DBAFCEF322",
+        "versionEndExcluding": "1.15.1",
         "vulnerable": true
        },
        {
-        "criteria": "cpe:2.3:a:siemens:industrial_edge_databus_configurator:-:*:*:*:*:*:*:*",
-        "matchCriteriaId": "B2A6C3C9-3BC3-434B-92C0-5A4B3CC1E30C",
+        "criteria": "cpe:2.3:a:siemens:industrial_edge_cloud_connector_configurator:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D0E0C6F6-40D0-4D71-ABCE-84449C4E743A",
+        "versionEndExcluding": "1.24.3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:industrial_edge_databus_configurator:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B57AD29D-69CF-4C76-AACA-3EAE3F8CBC15",
+        "versionEndExcluding": "4.0.1",
         "vulnerable": true
        },
        {
@@ -37793,6 +40345,263 @@
       "operator": "OR"
      }
     ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:siemens:comos_walkinside:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "8C7AAED9-567F-4EE0-BC1B-F18E1109D316",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_braumat:8.2:update1:*:*:*:*:*:*",
+        "matchCriteriaId": "EFA8804E-1E7E-482F-A701-B988F6C0BCE9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_braumat:8.2:update2:*:*:*:*:*:*",
+        "matchCriteriaId": "A7C12A3B-925A-4219-909B-6D2D0ADA6131",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_braumat:8.2:update3:*:*:*:*:*:*",
+        "matchCriteriaId": "3288CF66-F9D9-4DDD-9CAA-1EB2E075C87A",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_braumat:8.2:update4:*:*:*:*:*:*",
+        "matchCriteriaId": "9B3EF16B-8281-4159-ABDE-A36881CD8460",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_braumat:8.2:update5:*:*:*:*:*:*",
+        "matchCriteriaId": "9DF55BA1-F06B-4868-AC51-15ADC8BFED3C",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_profiling_tool:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "0D473CE5-B139-422C-AFCF-5FBBDB2C0759",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_sistar:8.2:update1:*:*:*:*:*:*",
+        "matchCriteriaId": "28A180EC-5DB8-4E8A-B063-813FA3973068",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_sistar:8.2:update2:*:*:*:*:*:*",
+        "matchCriteriaId": "31122237-42B0-4B10-B33B-D6E6DEBC19B3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_sistar:8.2:update3:*:*:*:*:*:*",
+        "matchCriteriaId": "2955D58B-350F-4F96-A41F-6594639403DA",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_sistar:8.2:update4:*:*:*:*:*:*",
+        "matchCriteriaId": "0E95149C-B212-4670-8DFC-EEC713E87741",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_sistar:8.2:update5:*:*:*:*:*:*",
+        "matchCriteriaId": "173F36F4-23F4-4650-805F-25A9032AF64A",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_wincc:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "DA06F4BD-1512-4700-AD3E-25C6CDA60246",
+        "versionEndIncluding": "8.2",
+        "versionStartIncluding": "7.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_wincc_companion:-:*:*:*:*:-:*:*",
+        "matchCriteriaId": "174C0674-3100-4CCB-B55E-6BB1FB8F8442",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_wincc_runtime:-:*:*:*:professional:*:*:*",
+        "matchCriteriaId": "E6BFBAED-EE2B-4DE4-A76C-824DD15F4608",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_wincc_unified_for_industrial_edge:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "4DC1EDC8-DA6D-476F-9656-0FB9809F9E30",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_wincc_unified_pc_runtime:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "49B72BEA-DE75-4A5E-8658-30E5EBBFFF69",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simatic_wincc_unified_siqence:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "E2E193FF-ED70-432A-8B33-2453A8B2B21B",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:tia_administrator:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "FC8C7680-9033-4ECF-9764-5179A4033F64",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:tia_project-server_web_administration_tool:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "14BA6E1D-4D4E-4133-8869-5ADEC9CE545C",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:user_management_component:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7139EEDB-2DCD-4C55-9DAC-423FB5807D11",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:siemens:hyperlynx:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "92D6ED26-34E3-46A6-B025-F7DC263AA75A",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:innexis_architecture_native_acceleration:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "BE57EA6F-BA70-409D-B037-EDD603FAC0B9",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:insights_hub:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "1B8E91A0-4BF0-4BDE-8F83-4FF374697A76",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:opcenter_connect_electronics:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "0EC96381-D0C9-4949-86E7-1A1E8239A8F2",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:opcenter_connect_manufacturing_operations_management:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B0F5FAC2-E6E0-4ECA-86B6-9D082C1D674B",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:opcenter_execution_core:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "0A6E1786-F0A9-498F-9DE9-F503B5DAD84A",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:opcenter_execution_discrete:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F04BAB87-71BB-4AB4-BC42-F89616698EEF",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:opcenter_execution_foundation:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "9FE353B7-07A1-4B50-8A43-62577C2208EE",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:opcenter_execution_pharma:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "4CC50DA8-906E-4BD5-9861-668273EE3A76",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:opcenter_execution_process:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5CCA2643-1E89-49AE-B8CB-3A9CDA3031A6",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:opcenter_intelligence:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "8E3FA7CB-6931-4D0C-A3E6-1BE71EA0D30F",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:opcenter_quality:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "9D9D89CD-FDA5-42F0-8161-3752C8AED7F3",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:opcenter_rd\\&l:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "69EDC5E0-6CCE-4120-913C-E598E0FE2D24",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:opcenter_x:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A12051E1-2DC9-47C6-A320-927D0A7B9F47",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:pads_professional:-:*:*:*:essentials:*:*:*",
+        "matchCriteriaId": "C9033337-D032-403D-8BBF-3EA50253A40E",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:pads_professional:-:*:*:*:student:*:*:*",
+        "matchCriteriaId": "F06B80D2-6A35-4AF5-A07A-0F5C3370C3E7",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:pave360_automotive:2026:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B8DBFD9C-B213-4238-B39C-D4B537523CB1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:process_preparation_x:-:*:*:*:-:*:*:*",
+        "matchCriteriaId": "FEBDB60C-D759-476D-AF06-3C0691FC72CF",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simcenter_executable_digital_twin:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F6ACF933-A876-4DE5-BBA7-D5BF97DB1AB4",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:simcenter_studio:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B8C684EC-BECB-4833-B1F9-F773225A6172",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:teamcenter:2412.0:*:*:*:*:*:*:*",
+        "matchCriteriaId": "963C8AAA-D3E0-4B10-93AE-DB15619EC5EE",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:teamcenter:2506.0:*:*:*:*:*:*:*",
+        "matchCriteriaId": "261C46FE-1C63-4A1F-8C8E-FC331E8F119E",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:teamcenter:2512.0:*:*:*:*:*:*:*",
+        "matchCriteriaId": "7946C16C-5B81-42D2-BA6D-C8AA8FD5AD0C",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:teamcenter:2606.0:*:*:*:*:*:*:*",
+        "matchCriteriaId": "86E64B27-FE8F-45AD-BE78-219E4067F8DE",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:xpedition_designer:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "F52F6405-0228-4C3D-842F-839192076657",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:siemens:xpedition_enterprise:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "AD525494-2807-48EA-AED0-11B9CB5A6A9B",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
    }
   ],
   "cveTags": [],
@@ -37803,7 +40612,7 @@
    }
   ],
   "id": "CVE-2026-111497",
-  "lastModified": "2026-11-06T16:17:37.393",
+  "lastModified": "2026-11-10T20:25:59.130",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -38036,7 +40845,21 @@
     "tags": [
      "Third Party Advisory"
     ],
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-242944.html"
+   },
+   {
+    "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://cert-portal.siemens.com/productcert/html/ssa-443410.html"
+   },
+   {
+    "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-678870.html"
    },
    {
     "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",

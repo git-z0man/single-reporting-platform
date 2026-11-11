@@ -1,0 +1,551 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-111560"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-111560",
+  "cwes": [
+   "CWE-78"
+  ],
+  "dateAdded": "2026-11-10",
+  "dueDate": "2026-11-13",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection ; https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-111560",
+  "product": "Multiple Products",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606",
+  "vendorProject": "Barracuda Networks",
+  "vulnerabilityName": "Barracuda Networks Multiple Products OS Command Injection Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-111560\nGHSA-fq98-vw8w-5vf9\n",
+  "assigner": "Mandiant",
+  "baseScore": 8.6,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Nov 2, 2026, 12:59:03 PM",
+  "dateUpdated": "Nov 10, 2026, 8:58:24 PM",
+  "description": "Improper neutralization of shell metacharacters in the timezone configuration field in certain Barracuda appliance products using common Barracuda code allows an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "09b88e27-abc5-3b6e-b92a-a5b6ebcb8cbe",
+       "product": {
+        "name": "Email Security Gateway",
+        "vendor": {
+         "name": "Libraesva"
+        }
+       }
+      },
+      {
+       "id": "2fef8b04-b391-3a57-b131-d282f34b3612",
+       "product": {
+        "name": "Barracuda Web Application Firewall (WAF)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      },
+      {
+       "id": "6f33d945-baf4-3066-9e90-2c1d40e29d02",
+       "product": {
+        "name": "Barracuda Load Balancer Application Delivery Controller (ADC)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      },
+      {
+       "id": "9b55d19d-a98b-30f9-a3f9-14be7782f0b8",
+       "product": {
+        "name": "Barracuda WAF Control Center (WCC)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      },
+      {
+       "id": "ac72add8-974c-3021-820f-ad3af0e72fc8",
+       "product": {
+        "name": "Message Archiver",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      },
+      {
+       "id": "f95bfbee-4561-36f7-8d80-9d7447a39d3b",
+       "product": {
+        "name": "Web Security Gateway",
+        "vendor": {
+         "name": "Barracuda"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-116606\nCVE-2026-111560\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 4, 2026, 9:41:25 AM",
+     "dateUpdated": "Nov 4, 2026, 9:41:25 AM",
+     "description": "Kwetsbaarheden verholpen in Barracuda Email Security Gateway",
+     "id": "NCSC-2026-0465",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "25e2c594-d17e-3287-843c-4cc2ac9af424"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "76e74192-50bf-3ec2-8427-711f38433718",
+       "product": {
+        "name": "Web Application Firewall",
+        "vendor": {
+         "name": "TR7 Cyber ​​Defense Inc."
+        }
+       }
+      },
+      {
+       "id": "b748c395-9155-33e5-a3fc-3b20e8098cb8",
+       "product": {
+        "name": "BNSF-40425 (9.4.017+)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      },
+      {
+       "id": "b7b8e67c-f2f6-33f8-840a-7e397d993cb9",
+       "product": {
+        "name": "Email Security Gateway",
+        "vendor": {
+         "name": "Libraesva"
+        }
+       }
+      },
+      {
+       "id": "d75348c6-fedb-33cb-bd5d-64074520b471",
+       "product": {
+        "name": "BNADC-16586",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111560\nCVE-2026-116606\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 2, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 9, 2026, 11:00:00 PM",
+     "description": "Barracuda Networks Email Security Gateway und Web Application Firewall: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-4295",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4295.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4295\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Barracuda Networks Email Security Gateway und Barracuda Networks Web Application Firewall ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen und die Authentifizierung zu umgehen. Durch die Kombination dieser Schwachstellen kann der Angreifer Root-Zugriff auf das Gerät erlangen."
+    },
+    "id": "45fd8cc9-0bef-3c9f-a815-096bd98d891f"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "12c7d1b6-d7c8-3f80-9acc-6ef64a774075",
+    "product": {
+     "name": "Barracuda Web Security Gateway (WSG)",
+     "vendor": {
+      "name": "Barracuda Networks"
+     }
+    },
+    "product_version": "0 ≤16.1.100.100"
+   },
+   {
+    "id": "4606ea5f-6c4b-3a90-a558-12658e3a83bb",
+    "product": {
+     "name": "Barracuda WAF Control Center (WCC)",
+     "vendor": {
+      "name": "Barracuda Networks"
+     }
+    },
+    "product_version": "0 ≤2.2.1"
+   },
+   {
+    "id": "7972c035-ad5e-3df4-bab5-595fd0875d0e",
+    "product": {
+     "name": "Barracuda Web Application Firewall (WAF)",
+     "vendor": {
+      "name": "Barracuda Networks"
+     }
+    },
+    "product_version": "0 ≤11.0.1"
+   },
+   {
+    "id": "a7bb8a59-01db-3024-8b38-cb906dbedd91",
+    "product": {
+     "name": "Barracuda Load Balancer Application Delivery Controller (ADC)",
+     "vendor": {
+      "name": "Barracuda Networks"
+     }
+    },
+    "product_version": "0 ≤6.4.0"
+   },
+   {
+    "id": "bfd814b2-5807-374e-a138-a2e65fc798a9",
+    "product": {
+     "name": "Barracuda Email Security Gateway (ESG)",
+     "vendor": {
+      "name": "Barracuda Networks"
+     }
+    },
+    "product_version": "0 ≤9.4.0.27"
+   },
+   {
+    "id": "ca3b91c8-e401-3b3a-a4ca-61ff5f66d391",
+    "product": {
+     "name": "Barracuda Message Archiver (BMA)",
+     "vendor": {
+      "name": "Barracuda Networks"
+     }
+    },
+    "product_version": "0 ≤5.5.4.0"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "87739d69-0420-3f9c-8b4e-bddef76e1d8c",
+    "vendor": {
+     "name": "Barracuda Networks"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "1a9d30ea-6229-3138-9e92-04b61d292d54",
+    "vulnerability": {
+     "aliases": "CVE-2026-111560\nGHSA-fq98-vw8w-5vf9\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
+     "datePublished": "Nov 2, 2026, 3:31:31 PM",
+     "dateUpdated": "Nov 10, 2026, 9:31:44 PM",
+     "description": "Improper neutralization of shell metacharacters in the timezone configuration field in certain Barracuda appliance products using common Barracuda code allows an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed.",
+     "enisa_id": "EUVD-2026-115148\n",
+     "epss": 0.0,
+     "id": "GHSA-fq98-vw8w-5vf9",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-111560\nhttps://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md\nhttps://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-111560\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "30f86c09-2ed8-301b-a229-208bf25f49be",
+    "vulnerability": {
+     "assigner": "Mandiant",
+     "baseScore": 8.6,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Nov 11, 2026, 7:19:39 AM",
+     "datePublished": "Nov 2, 2026, 12:59:03 PM",
+     "dateUpdated": "Nov 10, 2026, 8:58:24 PM",
+     "description": "Improper neutralization of shell metacharacters in the timezone configuration field in certain Barracuda appliance products using common Barracuda code allows an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed.",
+     "enisa_id": "EUVD-2026-115148\n",
+     "epss": 1.06,
+     "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
+     "id": "CVE-2026-111560",
+     "references": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md\nhttps://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "2a0bea8e-fd53-3a41-a611-df6525a0bd3c",
+       "product": {
+        "name": "Barracuda Email Security Gateway (ESG)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       },
+       "product_version": "0 ≤9.4.0.27"
+      },
+      {
+       "id": "5891a049-2a33-336e-8e70-decee8f9f144",
+       "product": {
+        "name": "Barracuda Load Balancer Application Delivery Controller (ADC)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       },
+       "product_version": "0 ≤6.4.0"
+      },
+      {
+       "id": "7a4c30cc-66ef-3ce1-b9b2-f37ab63ea644",
+       "product": {
+        "name": "Barracuda Message Archiver (BMA)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       },
+       "product_version": "0 ≤5.5.4.0"
+      },
+      {
+       "id": "b2e4162c-775a-3ae9-aefa-a0ab107cb84a",
+       "product": {
+        "name": "Barracuda Web Security Gateway (WSG)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       },
+       "product_version": "0 ≤16.1.100.100"
+      },
+      {
+       "id": "b8df93fe-3bce-372f-bc0a-a659f08bad9a",
+       "product": {
+        "name": "Barracuda Web Application Firewall (WAF)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       },
+       "product_version": "0 ≤11.0.1"
+      },
+      {
+       "id": "f1b60c65-b92f-3bbb-9bc8-783fda3e2bdd",
+       "product": {
+        "name": "Barracuda WAF Control Center (WCC)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       },
+       "product_version": "0 ≤2.2.1"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "e2e355ab-09c2-30b9-a866-59f395637441",
+       "vendor": {
+        "name": "Barracuda Networks"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "b0b38a90-3f89-3563-8e62-2db2e92ba830",
+  "epss": 1.06,
+  "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-115148",
+  "references": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md\nhttps://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-115148",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 10, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "Barracuda Email Security Gateway (ESG)",
+      "vendor": "Barracuda Networks",
+      "versions": [
+       {
+        "lessThanOrEqual": "9.4.0.27",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "Barracuda Load Balancer Application Delivery Controller (ADC)",
+      "vendor": "Barracuda Networks",
+      "versions": [
+       {
+        "lessThanOrEqual": "6.4.0",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "Barracuda Web Application Firewall (WAF)",
+      "vendor": "Barracuda Networks",
+      "versions": [
+       {
+        "lessThanOrEqual": "11.0.1",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "Barracuda Web Security Gateway (WSG)",
+      "vendor": "Barracuda Networks",
+      "versions": [
+       {
+        "lessThanOrEqual": "16.1.100.100",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "Barracuda Message Archiver (BMA)",
+      "vendor": "Barracuda Networks",
+      "versions": [
+       {
+        "lessThanOrEqual": "5.5.4.0",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unaffected",
+      "product": "Barracuda WAF Control Center (WCC)",
+      "vendor": "Barracuda Networks",
+      "versions": [
+       {
+        "lessThanOrEqual": "2.2.1",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "mandiant-cve@google.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-13",
+  "cisaExploitAdd": "2026-11-10",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Improper neutralization of shell metacharacters in the timezone configuration field in certain Barracuda appliance products using common Barracuda code allows an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed."
+   }
+  ],
+  "id": "CVE-2026-111560",
+  "lastModified": "2026-11-11T05:19:20.373",
+  "metrics": {
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 8.6,
+      "baseSeverity": "HIGH",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "HIGH",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "mandiant-cve@google.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-111560",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-02T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-02T13:17:35.190",
+  "references": [
+   {
+    "source": "mandiant-cve@google.com",
+    "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md"
+   },
+   {
+    "source": "mandiant-cve@google.com",
+    "url": "https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-111560"
+   }
+  ],
+  "sourceIdentifier": "mandiant-cve@google.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-78"
+     }
+    ],
+    "source": "mandiant-cve@google.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

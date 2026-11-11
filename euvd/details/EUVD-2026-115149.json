@@ -1,0 +1,386 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-116606"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-116606",
+  "cwes": [
+   "CWE-288"
+  ],
+  "dateAdded": "2026-11-10",
+  "dueDate": "2026-11-13",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection ; https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-116606",
+  "product": "Barracuda Email Security Gateway (ESG)",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
+  "vendorProject": "Barracuda Networks",
+  "vulnerabilityName": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-116606\nGHSA-9fcr-mp7p-hprv\n",
+  "assigner": "Mandiant",
+  "baseScore": 9.3,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Nov 2, 2026, 12:59:11 PM",
+  "dateUpdated": "Nov 10, 2026, 8:58:24 PM",
+  "description": "An authentication bypass in Barracuda Email Security Gateway versions earlier than 9.4.0.030 allows an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "76e74192-50bf-3ec2-8427-711f38433718",
+       "product": {
+        "name": "Web Application Firewall",
+        "vendor": {
+         "name": "TR7 Cyber ​​Defense Inc."
+        }
+       }
+      },
+      {
+       "id": "b748c395-9155-33e5-a3fc-3b20e8098cb8",
+       "product": {
+        "name": "BNSF-40425 (9.4.017+)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      },
+      {
+       "id": "b7b8e67c-f2f6-33f8-840a-7e397d993cb9",
+       "product": {
+        "name": "Email Security Gateway",
+        "vendor": {
+         "name": "Libraesva"
+        }
+       }
+      },
+      {
+       "id": "d75348c6-fedb-33cb-bd5d-64074520b471",
+       "product": {
+        "name": "BNADC-16586",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111560\nCVE-2026-116606\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 2, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 9, 2026, 11:00:00 PM",
+     "description": "Barracuda Networks Email Security Gateway und Web Application Firewall: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-4295",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4295.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4295\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Barracuda Networks Email Security Gateway und Barracuda Networks Web Application Firewall ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen und die Authentifizierung zu umgehen. Durch die Kombination dieser Schwachstellen kann der Angreifer Root-Zugriff auf das Gerät erlangen."
+    },
+    "id": "478dfe2b-3697-3faa-82d5-522eada41651"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "09b88e27-abc5-3b6e-b92a-a5b6ebcb8cbe",
+       "product": {
+        "name": "Email Security Gateway",
+        "vendor": {
+         "name": "Libraesva"
+        }
+       }
+      },
+      {
+       "id": "2fef8b04-b391-3a57-b131-d282f34b3612",
+       "product": {
+        "name": "Barracuda Web Application Firewall (WAF)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      },
+      {
+       "id": "6f33d945-baf4-3066-9e90-2c1d40e29d02",
+       "product": {
+        "name": "Barracuda Load Balancer Application Delivery Controller (ADC)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      },
+      {
+       "id": "9b55d19d-a98b-30f9-a3f9-14be7782f0b8",
+       "product": {
+        "name": "Barracuda WAF Control Center (WCC)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      },
+      {
+       "id": "ac72add8-974c-3021-820f-ad3af0e72fc8",
+       "product": {
+        "name": "Message Archiver",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       }
+      },
+      {
+       "id": "f95bfbee-4561-36f7-8d80-9d7447a39d3b",
+       "product": {
+        "name": "Web Security Gateway",
+        "vendor": {
+         "name": "Barracuda"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-116606\nCVE-2026-111560\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 4, 2026, 9:41:25 AM",
+     "dateUpdated": "Nov 4, 2026, 9:41:25 AM",
+     "description": "Kwetsbaarheden verholpen in Barracuda Email Security Gateway",
+     "id": "NCSC-2026-0465",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "7186806d-3159-37d9-8328-67c715a4c128"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "3f7d60bf-b3c3-310b-a55b-5173d70f006a",
+    "product": {
+     "name": "Barracuda Email Security Gateway (ESG)",
+     "vendor": {
+      "name": "Barracuda Networks"
+     }
+    },
+    "product_version": "0 <9.4.0.030"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "b78dc053-62a4-33c3-a2ac-09143c4bdbfc",
+    "vendor": {
+     "name": "Barracuda Networks"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "0a3106b5-a701-3a53-9d21-c433f80da147",
+    "vulnerability": {
+     "assigner": "Mandiant",
+     "baseScore": 9.3,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Nov 11, 2026, 7:20:46 AM",
+     "datePublished": "Nov 2, 2026, 12:59:11 PM",
+     "dateUpdated": "Nov 10, 2026, 8:58:24 PM",
+     "description": "An authentication bypass in Barracuda Email Security Gateway versions earlier than 9.4.0.030 allows an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration.",
+     "enisa_id": "EUVD-2026-115149\n",
+     "epss": 1.6,
+     "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
+     "id": "CVE-2026-116606",
+     "references": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md\nhttps://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "a633d918-39ea-351f-9112-8ae7f6e49a7b",
+       "product": {
+        "name": "Barracuda Email Security Gateway (ESG)",
+        "vendor": {
+         "name": "Barracuda Networks"
+        }
+       },
+       "product_version": "0 <9.4.0.030"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "f353716e-0207-3245-b012-b9e16e47f3c2",
+       "vendor": {
+        "name": "Barracuda Networks"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "41ce2862-067e-3296-8a32-54b22b85697b",
+    "vulnerability": {
+     "aliases": "GHSA-9fcr-mp7p-hprv\nCVE-2026-116606\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
+     "datePublished": "Nov 2, 2026, 3:31:31 PM",
+     "dateUpdated": "Nov 10, 2026, 9:31:44 PM",
+     "description": "An authentication bypass in Barracuda Email Security Gateway versions earlier than 9.4.0.030 allows an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration.",
+     "enisa_id": "EUVD-2026-115149\n",
+     "epss": 0.0,
+     "id": "GHSA-9fcr-mp7p-hprv",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-116606\nhttps://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md\nhttps://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-116606\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "ddbc1fcd-5551-3808-bf6a-047bc6071674",
+  "epss": 1.6,
+  "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-115149",
+  "references": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md\nhttps://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-115149",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 10, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "Barracuda Email Security Gateway (ESG)",
+      "vendor": "Barracuda Networks",
+      "versions": [
+       {
+        "lessThan": "9.4.0.030",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "mandiant-cve@google.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-13",
+  "cisaExploitAdd": "2026-11-10",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "An authentication bypass in Barracuda Email Security Gateway versions earlier than 9.4.0.030 allows an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration."
+   }
+  ],
+  "id": "CVE-2026-116606",
+  "lastModified": "2026-11-11T05:19:26.320",
+  "metrics": {
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "LOW",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 9.3,
+      "baseSeverity": "CRITICAL",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "NONE",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "NONE",
+      "subIntegrityImpact": "NONE",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "HIGH",
+      "vulnConfidentialityImpact": "HIGH",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "mandiant-cve@google.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-116606",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-02T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-02T13:17:37.017",
+  "references": [
+   {
+    "source": "mandiant-cve@google.com",
+    "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md"
+   },
+   {
+    "source": "mandiant-cve@google.com",
+    "url": "https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-116606"
+   }
+  ],
+  "sourceIdentifier": "mandiant-cve@google.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-288"
+     }
+    ],
+    "source": "mandiant-cve@google.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

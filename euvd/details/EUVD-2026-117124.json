@@ -30,7 +30,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 4, 2026, 9:16:59 PM",
-  "dateUpdated": "Nov 9, 2026, 8:58:23 PM",
+  "dateUpdated": "Nov 10, 2026, 4:55:56 AM",
   "description": "GPUStack is an open-source GPU cluster manager for AI model serving and GPU instance provisioning. Prior to 2.2.0, get_current_user in gpustack/api/auth.py treated a loopback request source as the built-in administrator when force_auth_localhost was false, which was the default. A remote request could appear to originate from 127.0.0.1 because client_ip_getter accepted a same-host reverse proxy peer or a client-supplied X-GPUStack-Real-IP loopback value. The bypass allowed unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml. Exploitation was observed in the wild against a 2.1.1 deployment. This issue is fixed in version 2.2.0.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -59,7 +59,7 @@
     "vulnerability": {
      "aliases": "GHSA-gj9m-f8ph-pmhr\nCVE-2026-102895\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 10, 2026, 6:00:45 AM",
+     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
      "datePublished": "Nov 9, 2026, 10:15:27 PM",
      "dateUpdated": "Nov 9, 2026, 10:15:27 PM",
      "description": "GPUStack: Authentication bypass via trusted loopback source (reverse-proxy TCP peer or X-GPUStack-Real-IP header) grants unauthenticated admin",
@@ -78,12 +78,12 @@
      "baseScore": 9.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 10, 2026, 6:00:18 AM",
+     "dataProcessed": "Nov 11, 2026, 7:20:40 AM",
      "datePublished": "Nov 4, 2026, 9:16:59 PM",
-     "dateUpdated": "Nov 9, 2026, 8:58:23 PM",
+     "dateUpdated": "Nov 10, 2026, 4:55:56 AM",
      "description": "GPUStack is an open-source GPU cluster manager for AI model serving and GPU instance provisioning. Prior to 2.2.0, get_current_user in gpustack/api/auth.py treated a loopback request source as the built-in administrator when force_auth_localhost was false, which was the default. A remote request could appear to originate from 127.0.0.1 because client_ip_getter accepted a same-host reverse proxy peer or a client-supplied X-GPUStack-Real-IP loopback value. The bypass allowed unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml. Exploitation was observed in the wild against a 2.1.1 deployment. This issue is fixed in version 2.2.0.",
      "enisa_id": "EUVD-2026-117124\n",
-     "epss": 0.33,
+     "epss": 0.56,
      "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
      "id": "CVE-2026-102895",
      "references": "https://github.com/gpustack/gpustack/security/advisories/GHSA-gj9m-f8ph-pmhr\nhttps://github.com/gpustack/gpustack/pull/5346\nhttps://github.com/gpustack/gpustack/commit/53f42a6a553542974396d16a4ff6b12bcbedb48d\nhttps://github.com/gpustack/gpustack/releases/tag/v2.2.0\n",
@@ -112,7 +112,7 @@
    }
   ],
   "enisaUuid": "53441db0-3152-3407-a37e-d4a7a51ac254",
-  "epss": 0.33,
+  "epss": 0.56,
   "exploitedSince": "Nov 9, 2026, 12:00:00 AM",
   "id": "EUVD-2026-117124",
   "references": "https://github.com/gpustack/gpustack/security/advisories/GHSA-gj9m-f8ph-pmhr\nhttps://github.com/gpustack/gpustack/pull/5346\nhttps://github.com/gpustack/gpustack/commit/53f42a6a553542974396d16a4ff6b12bcbedb48d\nhttps://github.com/gpustack/gpustack/releases/tag/v2.2.0\n"
@@ -173,7 +173,7 @@
    }
   ],
   "id": "CVE-2026-102895",
-  "lastModified": "2026-11-09T19:42:09.450",
+  "lastModified": "2026-11-10T05:17:40.970",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -214,7 +214,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-09T16:50:07.009163Z",
+      "timestamp": "2026-11-05T00:00:00+00:00",
       "version": "2.0.3"
      }
     }
