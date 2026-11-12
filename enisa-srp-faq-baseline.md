@@ -15,7 +15,7 @@ ar_user_manual_url: https://www.enisa.europa.eu/topics/product-security/single-r
 terms_conditions_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-single-reporting-platform-terms-and-conditions (new 2026-09-10 10:12 UTC, found via the same navigation)
 ar_user_tutorial_video_url: https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-ar-user-tutorial-video (new 2026-09-11 11:10 UTC, found via the same "Content" navigation)
 vulnerability_services_url: https://www.enisa.europa.eu/topics/vulnerability-services (tracked from 2026-10-08 at the owner's request: ENISA's topic page above the SRP, whose "EU KEV Catalogue" paragraph says the EU KEV "will be further enriched" by reports through the CRA SRP)
-retrieved: 2026-10-16 (fetched UTC morning run; FAQ changed since 2026-10-13 — "Updated: 15 October 2026", new Q34/Q35, Q4 title and Q24 reworded; earlier: content changed since 2026-10-06 — main-page note on the SRP 1.1 upgrade of 12 October, "Particular" → "Particularly" Exceptional Circumstances in FAQ Q11/Q21, new "CRA SRP Status" page, see change log)
+retrieved: 2026-11-12 (fetched UTC morning run; main page changed — Factsheet now in 23 languages plus English, see change log; earlier: 2026-10-16 (FAQ changed since 2026-10-13 — "Updated: 15 October 2026", new Q34/Q35, Q4 title and Q24 reworded; earlier: content changed since 2026-10-06 — main-page note on the SRP 1.1 upgrade of 12 October, "Particular" → "Particularly" Exceptional Circumstances in FAQ Q11/Q21, new "CRA SRP Status" page, see change log))
 guidance_retrieved: 2026-10-13 (fetched 06:05 UTC; PEC guidance changed 2026-10-12 — stamp "Last updated: 12 October 2026", "Particular" → "Particularly" ×3; the other three subpages unchanged word-for-word)
 glossary_retrieved: 2026-10-22 (fetched UTC morning run; changed — Version 1.6, 72h/Final Report stages reworked, see `enisa-srp-glossary-baseline.md`; earlier: 2026-10-02 (fetched UTC morning run; changed — Version 1.4, two new fields 40/41 — see `enisa-srp-glossary-baseline.md`)
 csirt_list_retrieved: 2026-10-28 (fetched 22:10 UTC; Spain's links changed on or before 2026-10-18 under an unchanged page stamp)
@@ -32,8 +32,8 @@ vulnerability_services_retrieved: 2026-11-11 (UTC morning run; VulnOptiCON furth
 ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage, and (from 2026-10-08) the Vulnerability Services topic page — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-11-11
-last_change: 2026-11-11
+last_check: 2026-11-12
+last_change: 2026-11-12
 ar_user_manual_pdf_v12_url: https://www.enisa.europa.eu/media/57516 (new 2026-10-21: the landing page's "Download" button; served as "SRP - User Manual - ARs v1.2.0.pdf"; the v1.1 URL above still serves the unchanged v1.1 file)
 ar_user_manual_pdf_v13_url: https://www.enisa.europa.eu/sites/default/files/2026-11/SRP%20-%20User%20Manual%20-%20ARs%20v1.3.pdf (new 2026-11-05: the landing page's "Download" button; the v1.2 URL above still serves the unchanged v1.2 file, hash `c8559c9f…` re-verified)
 ar_user_manual_pdf_v13_sha256: 9d01b7dcedc8b84fbdf21807266e6a1d86d55529b34508b7a1181b597cca12c6 (3,376,334 bytes, cover "V1.3 / NOVEMBER 2026"; first captured 2026-11-05)
@@ -44,6 +44,22 @@ ar_user_manual_pdf_v12_sha256: c8559c9f21460c2edd719128fe517aa787ea83ee643ef559e
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-11-12 UTC (vs. 2026-11-11)
+
+The SRP Factsheet is now available in all 24 official EU languages: the main page's "Also available in" line grew from ten languages to 23 (plus English). Nothing else moved; the EU KEV paragraph still says SRP reports "will" enrich the EU KEV.
+
+**New**
+- **Factsheet translations, main page**: thirteen new language links, BG, CS, DA, ES, ET, FI, GA, HR, IT, LT, MT, PT, SK, all under `/sites/default/files/2026-10/`. The files' `Last-Modified` dates are 22–23 October 2026, so the links may have gone up before today and been missed: earlier runs checked the main page chiefly for its version note. Full list in the "CRA Single Reporting Platform Factsheet" section below.
+
+**Changed**
+- The Factsheet card's text drops ", currently in English": now "It can be downloaded here."
+
+**Editorial**
+Three of the new `href`s (ET, GA, LT) begin with a stray space and tab; all 23 keep the trailing space. Recorded in the section below.
+
+**Unchanged**
+FAQ Q1-Q35 ("Updated: 15 October 2026") and Glossary 1.6 word for word (`tools/fetch_enisa.py --dry-run` exit 0), CSIRT list (`tools/check_csirt_list.py` exit 0, 27 countries), main page 1.3 note, four guidance pages, Terms, tutorial video, Status page, Vulnerability Services page, manual landing page (version 1.3) and v1.3 PDF (hash `9d01b7dc…`, Last-Modified 4 Nov 2026 20:05:36 GMT). 13 pages HTTP 200.
 
 ### 2026-11-11 UTC (vs. 2026-11-10)
 
@@ -1357,7 +1373,9 @@ The CRA and the SRP support a more coordinated EU approach to the reporting and 
 
 ### CRA Single Reporting Platform Factsheet
 
-ENISA has published a Factsheet *(capitalised since 2026-09-10 13:11 UTC, was "a factsheet")* on the CRA Single Reporting Platform. It can be downloaded here, currently in English.&nbsp; *(gained a trailing nbsp 2026-09-17 09:00 UTC; no wording change)* ("Download the SRP factsheet" button links directly to `/sites/default/files/2026-07/ENISA_CRA_SRP_Factsheet_v1.0_0.pdf`; the inline "here" text is no longer itself a hyperlink, unlike the previous check.) **Since 2026-09-11 15:10 UTC**, a new line follows the button: "Also available in: DE, EL, FR, HU, LV, NL, PL, RO, SL, SV" *(gained **PL** 2026-09-23 06:10 UTC — nine languages → ten; see the change log)*, each linking to a translated PDF under `/sites/default/files/2026-09/`, filename per language: DE → `ENISA_SRP_FACTSHEET_01DE.pdf`; EL → `_02EL.pdf`; FR → `_03_FR.pdf`; HU → `_04_HU.pdf`; LV → `_05LV.pdf`; NL → `_NL%20BE.pdf` (anomalous, see Watch below); PL → `_06PL.pdf` *(new 2026-09-23 06:10 UTC — fills what had been a gap in the numbering, between LV/05 and RO, which continues to read _07_RO as before)*; RO → `_07_RO.pdf`; SL → `_08_SL.pdf`; SV → `_09_SV.pdf`. All ten `href`s carry a stray trailing space inside the attribute, reproduced as found.
+ENISA has published a Factsheet *(capitalised since 2026-09-10 13:11 UTC, was "a factsheet")* on the CRA Single Reporting Platform. It can be downloaded here. *(", currently in English" and the trailing nbsp gone, first seen 2026-11-12; was "It can be downloaded here, currently in English.&nbsp;" — the trailing nbsp had been added 2026-09-17 09:00 UTC)* ("Download the SRP factsheet" button links directly to `/sites/default/files/2026-07/ENISA_CRA_SRP_Factsheet_v1.0_0.pdf`; the inline "here" text is no longer itself a hyperlink, unlike the previous check.) **Since 2026-09-11 15:10 UTC**, a new line follows the button: "Also available in: DE, EL, FR, HU, LV, NL, PL, RO, SL, SV" *(gained **PL** 2026-09-23 06:10 UTC — nine languages → ten; see the change log)*, each linking to a translated PDF under `/sites/default/files/2026-09/`, filename per language: DE → `ENISA_SRP_FACTSHEET_01DE.pdf`; EL → `_02EL.pdf`; FR → `_03_FR.pdf`; HU → `_04_HU.pdf`; LV → `_05LV.pdf`; NL → `_NL%20BE.pdf` (anomalous, see Watch below); PL → `_06PL.pdf` *(new 2026-09-23 06:10 UTC — fills what had been a gap in the numbering, between LV/05 and RO, which continues to read _07_RO as before)*; RO → `_07_RO.pdf`; SL → `_08_SL.pdf`; SV → `_09_SV.pdf`. All ten `href`s carry a stray trailing space inside the attribute, reproduced as found.
+
+**Since 2026-11-12 (first seen; date of the change unknown)** the "Also available in" line lists **23 languages**: "BG, CS, DA, DE, EL, ES, ET, FI, FR, GA, HR, HU, IT, LT, LV, MT, NL, PL, PT, RO, SK, SL, SV". The ten older links are unchanged (`/sites/default/files/2026-09/`, numbered filenames, NL anomaly intact). The thirteen new ones (BG, CS, DA, ES, ET, FI, GA, HR, IT, LT, MT, PT, SK) live under `/sites/default/files/2026-10/` with an unnumbered pattern, `ENISA_SRP_FACTSHEET_XX.pdf`; their HTTP `Last-Modified` is 22 October 2026 14:01–14:29 GMT, PT 23 October 2026 10:47 GMT. All 23 `href`s keep the stray trailing space; ET, GA and LT additionally start with a space and a tab (`" \t/sites/…"`), reproduced as found. With English this covers all 24 official EU languages. The paragraph above it describing ten languages is kept as the history.
 
 ### Terms and Conditions (new resource card, 2026-09-11 15:10 UTC)
 
