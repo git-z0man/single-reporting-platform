@@ -189,7 +189,26 @@
   "id": "EUVD-2026-117552",
   "references": "https://www.openssh.org/releasenotes.html#10.6p2\nhttps://github.com/openssh/openssh-portable/commit/4353fdc43ef646c43a8dda7025cc1a898caf1482\nhttps://news.ycombinator.com/item?id=50377976\nhttps://news.ycombinator.com/item?id=50378228\nhttps://marc.info/?l=openssh-unix-dev&m=179388064263131&w=2\nhttps://hachyderm.io/@damienmiller/117563026759098135\nhttps://github.com/predkambrij/sshhole-repro\nhttps://github.com/leonjza/sshhole-lab\n"
  },
- "honeypot": [],
+ "honeypot": [
+  {
+   "avg30d": 0.0,
+   "avg7d": 0.0,
+   "avg90d": 0.0,
+   "cisaKevFlag": true,
+   "connections1d": 6,
+   "cveId": "CVE-2026-123158",
+   "firstSeenAt": "Nov 12, 2026, 7:18:21 AM",
+   "isNew": true,
+   "lastSeenAt": "Nov 12, 2026, 7:18:21 AM",
+   "product": "OpenSSH",
+   "source": "shadowserver",
+   "trend": "STEADY",
+   "uniqueIps1d": 2,
+   "vendor": "OpenBSD",
+   "vulnClass": "remote-access",
+   "vulnSeverity": "High"
+  }
+ ],
  "id": "EUVD-2026-117552",
  "kev_sources": [
   {

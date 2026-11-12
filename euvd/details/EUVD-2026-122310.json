@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:H/RL:O/RC:C",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 10, 2026, 6:22:22 PM",
-  "dateUpdated": "Nov 10, 2026, 11:53:58 PM",
+  "dateUpdated": "Nov 11, 2026, 5:17:53 PM",
   "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -79,12 +79,12 @@
      "baseScore": 6.5,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:H/RL:O/RC:C",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 11, 2026, 7:03:29 AM",
+     "dataProcessed": "Nov 12, 2026, 7:19:20 AM",
      "datePublished": "Nov 10, 2026, 6:22:22 PM",
-     "dateUpdated": "Nov 10, 2026, 11:53:58 PM",
+     "dateUpdated": "Nov 11, 2026, 5:17:53 PM",
      "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
      "enisa_id": "EUVD-2026-122310\n",
-     "epss": 0.0,
+     "epss": 1.62,
      "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
      "id": "CVE-2026-124194",
      "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194\n",
@@ -136,7 +136,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-124194\nGHSA-69hg-ppjj-gg27\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
+     "dataProcessed": "Nov 12, 2026, 7:07:47 AM",
      "datePublished": "Nov 10, 2026, 9:33:51 PM",
      "dateUpdated": "Nov 10, 2026, 9:33:51 PM",
      "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
@@ -150,7 +150,7 @@
    }
   ],
   "enisaUuid": "6fc07f3c-f134-30b6-8b70-8fcbb1332e1d",
-  "epss": 0.0,
+  "epss": 1.62,
   "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
   "id": "EUVD-2026-122310",
   "references": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194\n"

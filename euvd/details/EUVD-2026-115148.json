@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Nov 2, 2026, 12:59:03 PM",
-  "dateUpdated": "Nov 10, 2026, 8:58:24 PM",
+  "dateUpdated": "Nov 11, 2026, 4:55:25 AM",
   "description": "Improper neutralization of shell metacharacters in the timezone configuration field in certain Barracuda appliance products using common Barracuda code allows an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed.",
   "enisaIdAdvisory": [
    {
@@ -235,7 +235,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111560\nGHSA-fq98-vw8w-5vf9\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
+     "dataProcessed": "Nov 12, 2026, 7:07:47 AM",
      "datePublished": "Nov 2, 2026, 3:31:31 PM",
      "dateUpdated": "Nov 10, 2026, 9:31:44 PM",
      "description": "Improper neutralization of shell metacharacters in the timezone configuration field in certain Barracuda appliance products using common Barracuda code allows an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed.",
@@ -254,12 +254,12 @@
      "baseScore": 8.6,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 11, 2026, 7:19:39 AM",
+     "dataProcessed": "Nov 12, 2026, 7:20:10 AM",
      "datePublished": "Nov 2, 2026, 12:59:03 PM",
-     "dateUpdated": "Nov 10, 2026, 8:58:24 PM",
+     "dateUpdated": "Nov 11, 2026, 4:55:25 AM",
      "description": "Improper neutralization of shell metacharacters in the timezone configuration field in certain Barracuda appliance products using common Barracuda code allows an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed.",
      "enisa_id": "EUVD-2026-115148\n",
-     "epss": 1.06,
+     "epss": 6.2,
      "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
      "id": "CVE-2026-111560",
      "references": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md\nhttps://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection\n",
@@ -338,7 +338,7 @@
    }
   ],
   "enisaUuid": "b0b38a90-3f89-3563-8e62-2db2e92ba830",
-  "epss": 1.06,
+  "epss": 6.2,
   "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
   "id": "EUVD-2026-115148",
   "references": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md\nhttps://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection\n"
