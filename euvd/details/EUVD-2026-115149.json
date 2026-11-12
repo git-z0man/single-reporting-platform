@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Nov 2, 2026, 12:59:11 PM",
-  "dateUpdated": "Nov 10, 2026, 8:58:24 PM",
+  "dateUpdated": "Nov 11, 2026, 4:55:23 AM",
   "description": "An authentication bypass in Barracuda Email Security Gateway versions earlier than 9.4.0.030 allows an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration.",
   "enisaIdAdvisory": [
    {
@@ -187,12 +187,12 @@
      "baseScore": 9.3,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 11, 2026, 7:20:46 AM",
+     "dataProcessed": "Nov 12, 2026, 7:21:19 AM",
      "datePublished": "Nov 2, 2026, 12:59:11 PM",
-     "dateUpdated": "Nov 10, 2026, 8:58:24 PM",
+     "dateUpdated": "Nov 11, 2026, 4:55:23 AM",
      "description": "An authentication bypass in Barracuda Email Security Gateway versions earlier than 9.4.0.030 allows an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration.",
      "enisa_id": "EUVD-2026-115149\n",
-     "epss": 1.6,
+     "epss": 8.93,
      "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
      "id": "CVE-2026-116606",
      "references": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md\nhttps://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection\n",
@@ -224,7 +224,7 @@
     "vulnerability": {
      "aliases": "GHSA-9fcr-mp7p-hprv\nCVE-2026-116606\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
+     "dataProcessed": "Nov 12, 2026, 7:07:47 AM",
      "datePublished": "Nov 2, 2026, 3:31:31 PM",
      "dateUpdated": "Nov 10, 2026, 9:31:44 PM",
      "description": "An authentication bypass in Barracuda Email Security Gateway versions earlier than 9.4.0.030 allows an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration.",
@@ -238,7 +238,7 @@
    }
   ],
   "enisaUuid": "ddbc1fcd-5551-3808-bf6a-047bc6071674",
-  "epss": 1.6,
+  "epss": 8.93,
   "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
   "id": "EUVD-2026-115149",
   "references": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md\nhttps://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection\n"

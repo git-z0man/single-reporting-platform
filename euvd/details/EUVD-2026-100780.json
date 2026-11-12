@@ -115,7 +115,26 @@
   "id": "EUVD-2026-100780",
   "references": "https://github.com/CollaboraOnline/richdocumentscode/issues/354\nhttps://help.nextcloud.com/t/to-collabora-built-in-user-update-asap/250516\n"
  },
- "honeypot": [],
+ "honeypot": [
+  {
+   "avg30d": 0.0,
+   "avg7d": 0.0,
+   "avg90d": 0.0,
+   "cisaKevFlag": true,
+   "connections1d": 8,
+   "cveId": "CVE-2026-110447",
+   "firstSeenAt": "Nov 12, 2026, 7:18:21 AM",
+   "isNew": true,
+   "lastSeenAt": "Nov 12, 2026, 7:18:21 AM",
+   "product": "Collabora Online",
+   "source": "shadowserver",
+   "trend": "STEADY",
+   "uniqueIps1d": 1,
+   "vendor": "Collabora",
+   "vulnClass": "other-software",
+   "vulnSeverity": "Critical"
+  }
+ ],
  "id": "EUVD-2026-100780",
  "kev_sources": [
   {

@@ -28,9 +28,65 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 10, 2026, 5:20:21 PM",
-  "dateUpdated": "Nov 10, 2026, 8:58:25 PM",
+  "dateUpdated": "Nov 11, 2026, 4:55:45 AM",
   "description": "Use after free in XML in Google Chrome prior to 157.0.8103.50 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "2e375d30-0f8b-3271-acac-8b7229e19b05",
+       "product": {
+        "name": "157.0.8103.50",
+        "vendor": {
+         "name": "Google"
+        }
+       }
+      },
+      {
+       "id": "4fb39726-0fbc-37d5-a107-187e44076c17",
+       "product": {
+        "name": "Chrome",
+        "vendor": {
+         "name": "Google"
+        }
+       }
+      },
+      {
+       "id": "5ea29744-1f78-3f93-845b-107a858e13d7",
+       "product": {
+        "name": "157.0.8103.51",
+        "vendor": {
+         "name": "Google"
+        }
+       }
+      },
+      {
+       "id": "ad13769c-a7e1-3fa5-8f6a-12682f8b9a19",
+       "product": {
+        "name": "Microsoft Edge",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-125342\nCVE-2026-125343\nCVE-2026-125344\nCVE-2026-125345\nCVE-2026-125346\nCVE-2026-125347\nCVE-2026-125348\nCVE-2026-125349\nCVE-2026-125350\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 9, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 10, 2026, 11:00:00 PM",
+     "description": "Google Chrome / Microsoft Edge: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-4417",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4417.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4417\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Google Chrome und Microsoft Edge ausnutzen, um möglicherweise Sicherheitsmaßnahmen zu umgehen, Daten offenzulegen oder zu manipulieren, einen Denial-of-Service-Zustand zu verursachen oder beliebigen Code auszuführen."
+    },
+    "id": "151fa3d6-981d-3a97-9466-e6ec4eec39fd"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "4167cffc-f01f-35fa-9f1e-c78f53170235",
@@ -59,12 +115,12 @@
      "baseScore": 8.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 11, 2026, 7:03:23 AM",
+     "dataProcessed": "Nov 12, 2026, 7:19:39 AM",
      "datePublished": "Nov 10, 2026, 5:20:21 PM",
-     "dateUpdated": "Nov 10, 2026, 8:58:25 PM",
+     "dateUpdated": "Nov 11, 2026, 4:55:45 AM",
      "description": "Use after free in XML in Google Chrome prior to 157.0.8103.50 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
      "enisa_id": "EUVD-2026-121390\n",
-     "epss": 0.0,
+     "epss": 0.96,
      "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
      "id": "CVE-2026-125350",
      "references": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html\nhttps://issues.chromium.org/issues/582442907\n",
@@ -96,7 +152,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-125350\nGHSA-rm6p-3338-xx33\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 11, 2026, 7:08:10 AM",
+     "dataProcessed": "Nov 12, 2026, 7:07:47 AM",
      "datePublished": "Nov 10, 2026, 6:31:49 PM",
      "dateUpdated": "Nov 10, 2026, 9:32:16 PM",
      "description": "Use after free in XML in Google Chrome prior to 157.0.8103.50 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
@@ -110,7 +166,7 @@
    }
   ],
   "enisaUuid": "fce5f0c8-8a73-3d3f-871f-a14b1bf71baa",
-  "epss": 0.0,
+  "epss": 0.96,
   "exploitedSince": "Nov 10, 2026, 12:00:00 AM",
   "id": "EUVD-2026-121390",
   "references": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html\nhttps://issues.chromium.org/issues/582442907\n"
