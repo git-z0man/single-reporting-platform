@@ -32,7 +32,7 @@ vulnerability_services_retrieved: 2026-11-11 (UTC morning run; VulnOptiCON furth
 ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage, and (from 2026-10-08) the Vulnerability Services topic page — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-11-12
+last_check: 2026-11-13
 last_change: 2026-11-12
 ar_user_manual_pdf_v12_url: https://www.enisa.europa.eu/media/57516 (new 2026-10-21: the landing page's "Download" button; served as "SRP - User Manual - ARs v1.2.0.pdf"; the v1.1 URL above still serves the unchanged v1.1 file)
 ar_user_manual_pdf_v13_url: https://www.enisa.europa.eu/sites/default/files/2026-11/SRP%20-%20User%20Manual%20-%20ARs%20v1.3.pdf (new 2026-11-05: the landing page's "Download" button; the v1.2 URL above still serves the unchanged v1.2 file, hash `c8559c9f…` re-verified)
@@ -44,6 +44,19 @@ ar_user_manual_pdf_v12_sha256: c8559c9f21460c2edd719128fe517aa787ea83ee643ef559e
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-11-13 UTC (vs. 2026-11-12)
+
+Nothing substantive moved on any of the thirteen pages. This entry only brings the FAQ's heading tags in this file into line with the live page; the EU KEV paragraph still says SRP reports "will" enrich the EU KEV.
+
+**Watch**
+- The live FAQ carries three tags, "[UPDATED]" on Q24 and "[NEW]" on Q34 and Q35; this file had "[UPDATED]" on Q5 and Q9 and "[NEW]" on Q32 and Q33 instead. When ENISA moved them is not known, most likely with the 15 October edition: the daily runs since then compared the questions' words (`tools/fetch_enisa.py`), which leaves tags out. No wording changed.
+
+**Editorial**
+Seven FAQ headings re-tagged in the "FAQ entries" section below; `last_change` left at 2026-11-12.
+
+**Unchanged**
+FAQ Q1-Q35 ("Updated: 15 October 2026") and Glossary 1.6 word for word (`tools/fetch_enisa.py --dry-run` exit 0), CSIRT list (`tools/check_csirt_list.py` exit 0, 27 countries), main page (1.3 note, Factsheet in 23 languages plus English), four guidance pages (12 September, PEC 12 October), Terms (10/09/2026), tutorial video, Status page, Vulnerability Services page, manual landing page (version 1.3) and v1.3 PDF (hash `9d01b7dc…`, Last-Modified 4 Nov 2026 20:05:36 GMT). Content navigation 10 entries. 13 pages HTTP 200.
 
 ### 2026-11-12 UTC (vs. 2026-11-11)
 
@@ -1419,7 +1432,7 @@ The platform has become operational on **11 September 2026,** coinciding with th
 
 The platform supports the mandatory reporting of actively exploited vulnerabilities and severe incidents under Art. 14 of the CRA. The corresponding reporting obligations for open-source software stewards under Art. 24(3) will apply from 11 December 2027, in accordance with Art. 71(2) of the CRA.<br>Voluntary reporting under Art. 15 will be introduced in a future phase of the platform. *(merged into the paragraph above via `<br>` 2026-09-13 23:15 UTC — was a separate `<p>`; no wording change.)*
 
-### Q5. [UPDATED] What must be reported via the platform? *(tagged "[UPDATED]" 2026-10-06)*
+### Q5. What must be reported via the platform? *(no tag on the live page 2026-11-13, when it went is not known; was tagged "[UPDATED]" 2026-10-06)*
 
 Under the CRA, manufacturers placing on the EU market products with digital elements are required to notify two specific types of events: *("placing on the EU market products with digital elements" added, seen 2026-10-06)*
 
@@ -1473,7 +1486,7 @@ Once submitted, the notification is simultaneously made available to ENISA, whil
 
 Information on the reporting workflow, the mandatory and optional fields and how to complete them is available in the [SRP Glossary](https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2), User Manuals and the regularly updated ENISA guidance materials.
 
-### Q9. [UPDATED] How do I access and register on the SRP, and what are the roles of Primary and Secondary ARs? *(re-tagged 2026-09-18 06:12 UTC with a real, substantive wording change — see below; retitled 2026-09-09; had lost its "[UPDATED]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above; was "How is the platform accessible and how does the registration process work?")*
+### Q9. How do I access and register on the SRP, and what are the roles of Primary and Secondary ARs? *(no tag on the live page 2026-11-13, when it went is not known; had been re-tagged 2026-09-18 06:12 UTC with a real, substantive wording change — see below; retitled 2026-09-09; had lost its "[UPDATED]" tag 2026-09-11 13:17 UTC in the wider tag sweep — see the "FAQ entries" note above; was "How is the platform accessible and how does the registration process work?")*
 
 The SRP is available at: [https://portal.cra-srp.enisa.europa.eu](https://portal.cra-srp.enisa.europa.eu). *(reverted 2026-09-10 10:12 UTC to this wording — the concrete, hyperlinked production host is back, one day before the 11 September 2026 go-live. Had briefly regressed at 09:09 UTC the same day to "The SRP will be available in due time.", with the hyperlink and host both gone; that lasted roughly one hour.)*
 
@@ -1619,7 +1632,7 @@ The platform will also be periodically reviewed and re-tested as necessary after
 
 As provided for in Art. 16 of the CRA, ENISA has engaged the CSIRTs Network in the development and testing of the CRA SRP. Various CSIRTs participated in user, security and technical testing, providing valuable feedback on the functioning of the platform.
 
-### Q24. In which languages is the SRP available? *(rewritten 2026-10-16; was "In which languages will the SRP be available?", "At launch, the platform will be available in English only.", "ENISA will progressively translate the Factsheet and other supporting materials into all EU languages. This availability ... will be reviewed in the next phase of the project.")*
+### Q24. [UPDATED] In which languages is the SRP available? *(tag recorded 2026-11-13, probably there since the rewrite; rewritten 2026-10-16; was "In which languages will the SRP be available?", "At launch, the platform will be available in English only.", "ENISA will progressively translate the Factsheet and other supporting materials into all EU languages. This availability ... will be reviewed in the next phase of the project.")*
 
 Since its launch, the platform is available in English only.
 
@@ -1679,7 +1692,7 @@ To report security incidents involving the platform, you can contact ENISA at cr
 
 *Distinct from Q30: Q30 covers reporting a product vulnerability/incident when you are not a manufacturer (routes to the national CSIRT); Q31 covers reporting a security problem in the SRP platform itself (routes to ENISA directly). No CRA obligation, deadline, or SRP data field is implicated by this question — it documents a separate contact channel.*
 
-### Q32. [NEW] What should I do if I entered the wrong manufacturer name during registration or want to remove an AR–manufacturer association? *(new question, added 2026-09-21 06:14 UTC; count 31 → 32)*
+### Q32. What should I do if I entered the wrong manufacturer name during registration or want to remove an AR–manufacturer association? *(no "[NEW]" tag on the live page 2026-11-13, when it went is not known; new question, added 2026-09-21 06:14 UTC; count 31 → 32)*
 
 If you make a mistake when entering the manufacturer name during registration, for example a spelling error, you can register the manufacturer again using the correct name. You do not need to take any further action regarding the incorrectly entered manufacturer. If the incorrectly named manufacturer is inadvertently **"Verified"** by the relevant CSIRT Designated as Coordinator (CDaC), please contact the CDaC and ask them to reject the incorrectly registered entity.
 
@@ -1689,11 +1702,11 @@ For further guidance, please consult Section 4.5 "Manage Manufacturer Associatio
 
 *Cross-referenced from Q9, whose own closing paragraph now points here instead of to the general guidance materials — see the change log. Section 4.5 of the AR User Manual PDF itself is not fetched/archived by this routine (PDF contents are out of scope, per the AR User Manual page's own scope note above); this entry cannot confirm whether that section is itself new or pre-existing in the manual.*
 
-### Q33. [NEW] I received an email “Your AR association request with a manufacturer has been rejected by the Designated CSIRT”. What should I do? *(new question, added 2026-10-01 06:15 UTC; count 32 → 33)*
+### Q33. I received an email “Your AR association request with a manufacturer has been rejected by the Designated CSIRT”. What should I do? *(no "[NEW]" tag on the live page 2026-11-13, when it went is not known; new question, added 2026-10-01 06:15 UTC; count 32 → 33)*
 
 The CSIRTs designated as coordinators verify the ARs, ENISA is not intervening in this process. You can find the list of contacts of these CSIRTs on our website.
 
-### Q34. What should I do if I submitted a notification by mistake and would like to cancel it? *(new question, added 2026-10-16; count 33 → 35)*
+### Q34. [NEW] What should I do if I submitted a notification by mistake and would like to cancel it? *(tag recorded 2026-11-13; new question, added 2026-10-16; count 33 → 35)*
 
 Reporting is a legal obligation and should be carried out only after carefully reading the user manual. A report can be closed only by the CSIRT Designated as Coordinator (CDaC) — that is, the CSIRT of the EU Member State where the notification was submitted.
 
@@ -1701,7 +1714,7 @@ To request the closure and invalidation of a report, you can contact the CSIRT u
 
 ENISA may block an account if it considers that the user has violated the SRP Terms and Conditions.
 
-### Q35. Why was I contacted by ENISA after submitting a notification about a vulnerability? *(new question, added 2026-10-16)*
+### Q35. [NEW] Why was I contacted by ENISA after submitting a notification about a vulnerability? *(tag recorded 2026-11-13; new question, added 2026-10-16)*
 
 Under Article 17(5) of the Cyber Resilience Act (CRA), ENISA shall, in agreement with the manufacturer of the product with digital elements concerned, add the publicly known vulnerability notified pursuant to Article 14(1) or Article 15(1) of the CRA to the European Vulnerability Database (EUVD).
 
