@@ -28,9 +28,146 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:H/RL:O/RC:C",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 10, 2026, 6:22:22 PM",
-  "dateUpdated": "Nov 11, 2026, 5:17:53 PM",
+  "dateUpdated": "Nov 12, 2026, 9:49:34 PM",
   "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0d9411f9-9ca7-34b5-ab82-832599e6746f",
+       "product": {
+        "name": "for Mac",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "1907ffe0-abe8-339e-9746-9303eee41275",
+       "product": {
+        "name": "Microsoft Office Online Server",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "6389e6eb-8735-3f1c-829a-2e341179f240",
+       "product": {
+        "name": "Office",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "6a4e1a99-2035-31dc-bfcd-1702d9b1d51c",
+       "product": {
+        "name": "LTSC for Mac 2021",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "6e786688-0730-3f93-90f3-5dcd136387ca",
+       "product": {
+        "name": "Microsoft Office LTSC 2021",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "73cfd2d5-9b74-3551-8d71-af94ca4986dd",
+       "product": {
+        "name": "Server Subscription Edition",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "74bf2884-0207-3f52-8817-42e902fca577",
+       "product": {
+        "name": "Microsoft 365 Apps",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "7d745740-1a23-379e-9858-a927e02e55be",
+       "product": {
+        "name": "Teams",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "8e21c77e-e7f3-3dd1-a4dd-b1fcc86cf01d",
+       "product": {
+        "name": "for Android",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d3f42019-ca6d-39fb-9885-3dbd4ed23815",
+       "product": {
+        "name": "Microsoft Office LTSC 2024",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "d5cd321f-0aff-380d-ac2f-ba15d32b30b4",
+       "product": {
+        "name": "SharePoint",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "dc898d7d-e5ec-39a7-9706-a26183f6f068",
+       "product": {
+        "name": "Office 365",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "e676ad06-a305-3a5c-b7cc-5f9ab10fa649",
+       "product": {
+        "name": "LTSC for Mac 2024",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-109454\nCVE-2026-109455\nCVE-2026-109456\nCVE-2026-109464\nCVE-2026-109466\nCVE-2026-109472\nCVE-2026-109487\nCVE-2026-109491\nCVE-2026-109493\nCVE-2026-109494\nCVE-2026-109495\nCVE-2026-109496\nCVE-2026-109497\nCVE-2026-109498\nCVE-2026-109499\nCVE-2026-109500\nCVE-2026-109501\nCVE-2026-109502\nCVE-2026-109503\nCVE-2026-109504\nCVE-2026-109505\nCVE-2026-110043\nCVE-2026-110044\nCVE-2026-110045\nCVE-2026-110046\nCVE-2026-110047\nCVE-2026-110048\nCVE-2026-110049\nCVE-2026-110050\nCVE-2026-110051\nCVE-2026-110052\nCVE-2026-110053\nCVE-2026-110054\nCVE-2026-110055\nCVE-2026-110056\nCVE-2026-110057\nCVE-2026-110058\nCVE-2026-110059\nCVE-2026-110060\nCVE-2026-110061\nCVE-2026-110062\nCVE-2026-110064\nCVE-2026-110065\nCVE-2026-110066\nCVE-2026-110067\nCVE-2026-110068\nCVE-2026-111285\nCVE-2026-111286\nCVE-2026-111287\nCVE-2026-111288\nCVE-2026-111289\nCVE-2026-111290\nCVE-2026-111291\nCVE-2026-111292\nCVE-2026-111293\nCVE-2026-111294\nCVE-2026-111295\nCVE-2026-111296\nCVE-2026-111297\nCVE-2026-111298\nCVE-2026-111299\nCVE-2026-111300\nCVE-2026-111301\nCVE-2026-111302\nCVE-2026-111303\nCVE-2026-111304\nCVE-2026-111305\nCVE-2026-111306\nCVE-2026-111307\nCVE-2026-111308\nCVE-2026-111309\nCVE-2026-111310\nCVE-2026-112714\nCVE-2026-112715\nCVE-2026-112716\nCVE-2026-112717\nCVE-2026-112718\nCVE-2026-112719\nCVE-2026-112720\nCVE-2026-112721\nCVE-2026-112722\nCVE-2026-112723\nCVE-2026-112724\nCVE-2026-112726\nCVE-2026-112728\nCVE-2026-112729\nCVE-2026-112730\nCVE-2026-112731\nCVE-2026-112733\nCVE-2026-112734\nCVE-2026-112735\nCVE-2026-112736\nCVE-2026-112737\nCVE-2026-112738\nCVE-2026-112739\nCVE-2026-112741\nCVE-2026-113759\nCVE-2026-116717\nCVE-2026-116718\nCVE-2026-116719\nCVE-2026-116720\nCVE-2026-116721\nCVE-2026-116722\nCVE-2026-116922\nCVE-2026-116923\nCVE-2026-116925\nCVE-2026-116926\nCVE-2026-116927\nCVE-2026-118292\nCVE-2026-118293\nCVE-2026-118294\nCVE-2026-118295\nCVE-2026-118296\nCVE-2026-118297\nCVE-2026-118298\nCVE-2026-118299\nCVE-2026-118300\nCVE-2026-118301\nCVE-2026-118302\nCVE-2026-118700\nCVE-2026-118701\nCVE-2026-118702\nCVE-2026-118703\nCVE-2026-118704\nCVE-2026-118705\nCVE-2026-118706\nCVE-2026-118707\nCVE-2026-118708\nCVE-2026-118709\nCVE-2026-118710\nCVE-2026-118711\nCVE-2026-118712\nCVE-2026-118713\nCVE-2026-118714\nCVE-2026-118715\nCVE-2026-118716\nCVE-2026-118717\nCVE-2026-118718\nCVE-2026-118719\nCVE-2026-118720\nCVE-2026-118721\nCVE-2026-118722\nCVE-2026-118723\nCVE-2026-118724\nCVE-2026-118725\nCVE-2026-118726\nCVE-2026-118727\nCVE-2026-118728\nCVE-2026-118729\nCVE-2026-118730\nCVE-2026-118731\nCVE-2026-118732\nCVE-2026-119986\nCVE-2026-119993\nCVE-2026-119995\nCVE-2026-119996\nCVE-2026-119997\nCVE-2026-119998\nCVE-2026-119999\nCVE-2026-120000\nCVE-2026-120001\nCVE-2026-120002\nCVE-2026-120003\nCVE-2026-120005\nCVE-2026-120785\nCVE-2026-120786\nCVE-2026-120788\nCVE-2026-120789\nCVE-2026-120790\nCVE-2026-120791\nCVE-2026-122198\nCVE-2026-122979\nCVE-2026-123375\nCVE-2026-123376\nCVE-2026-123377\nCVE-2026-123378\nCVE-2026-123379\nCVE-2026-123380\nCVE-2026-123381\nCVE-2026-123382\nCVE-2026-123383\nCVE-2026-123384\nCVE-2026-123385\nCVE-2026-123390\nCVE-2026-123391\nCVE-2026-123394\nCVE-2026-123395\nCVE-2026-124170\nCVE-2026-124174\nCVE-2026-124176\nCVE-2026-124178\nCVE-2026-124179\nCVE-2026-124183\nCVE-2026-124185\nCVE-2026-124187\nCVE-2026-124194\nCVE-2026-124210\nCVE-2026-124227\nCVE-2026-124228\nCVE-2026-124229\nCVE-2026-124233\nCVE-2026-69901\nCVE-2026-80095\nCVE-2026-88176\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 10, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 10, 2026, 11:00:00 PM",
+     "description": "Microsoft Office: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-4479",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4479.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4479\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Microsoft Office Online Server, Microsoft 365 Apps, Microsoft Office, Microsoft Office LTSC 2021, Microsoft SharePoint, Microsoft Teams, Microsoft Office LTSC 2024 und Microsoft Office 365 ausnutzen, um erweiterte Berechtigungen – einschließlich Administratorrechte – zu erlangen, beliebigen Code auszuführen, Sicherheitsmaßnahmen zu umgehen, Spoofing-Angriffe durchzuführen oder sensible Informationen offenzulegen, wie beispielsweise den NTLMv2-Hash eines Benutzers, wodurch sich der Angreifer als dieser Benutzer authentifizieren kann."
+    },
+    "id": "8039f792-f719-3758-b134-a03c5ad283e7"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "0700f925-b001-3973-bd2e-8d1176e1453c",
@@ -79,9 +216,9 @@
      "baseScore": 6.5,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:H/RL:O/RC:C",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 12, 2026, 7:19:20 AM",
+     "dataProcessed": "Nov 13, 2026, 7:17:45 AM",
      "datePublished": "Nov 10, 2026, 6:22:22 PM",
-     "dateUpdated": "Nov 11, 2026, 5:17:53 PM",
+     "dateUpdated": "Nov 12, 2026, 9:49:34 PM",
      "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
      "enisa_id": "EUVD-2026-122310\n",
      "epss": 1.62,
@@ -136,7 +273,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-124194\nGHSA-69hg-ppjj-gg27\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 12, 2026, 7:07:47 AM",
+     "dataProcessed": "Nov 13, 2026, 7:06:32 AM",
      "datePublished": "Nov 10, 2026, 9:33:51 PM",
      "dateUpdated": "Nov 10, 2026, 9:33:51 PM",
      "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
