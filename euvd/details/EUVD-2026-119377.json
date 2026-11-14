@@ -1,0 +1,256 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-114713"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-114713",
+  "cwes": [
+   "CWE-140"
+  ],
+  "dateAdded": "2026-11-13",
+  "dueDate": "2026-11-16",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://forums.unrealircd.org/viewtopic.php?t=9487 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-114713",
+  "product": "UnrealIRCd",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+  "vendorProject": "UnrealIRCd",
+  "vulnerabilityName": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-114713\nGHSA-237f-p9h6-wq4r\n",
+  "assigner": "mitre",
+  "baseScore": 8.6,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 8, 2026, 2:31:48 AM",
+  "dateUpdated": "Nov 13, 2026, 8:58:23 PM",
+  "description": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "e5ef648b-c0cf-384f-9d1e-ebc62a910932",
+    "product": {
+     "name": "UnrealIRCd",
+     "vendor": {
+      "name": "UnrealIRCd"
+     }
+    },
+    "product_version": "0 <6.2.7.1"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "f56fd63d-9008-35f2-bd63-009dcc2bfc8c",
+    "vendor": {
+     "name": "UnrealIRCd"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "59c7e209-5a6b-3e81-aaed-75ff48bc76ef",
+    "vulnerability": {
+     "aliases": "CVE-2026-114713\nGHSA-237f-p9h6-wq4r\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 14, 2026, 7:06:36 AM",
+     "datePublished": "Nov 8, 2026, 3:30:38 AM",
+     "dateUpdated": "Nov 13, 2026, 9:31:47 PM",
+     "description": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+     "enisa_id": "EUVD-2026-119377\n",
+     "epss": 0.0,
+     "id": "GHSA-237f-p9h6-wq4r",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-114713\nhttps://forums.unrealircd.org/viewtopic.php?t=9487\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-114713\nhttps://www.unrealircd.org\nhttps://www.unrealircd.org/index/news\nhttp://www.openwall.com/lists/oss-security/2026/11/08/1\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "e9dbbc3f-d3fe-3edc-88d2-4410d1b41439",
+    "vulnerability": {
+     "assigner": "mitre",
+     "baseScore": 8.6,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 14, 2026, 7:18:59 AM",
+     "datePublished": "Nov 8, 2026, 2:31:48 AM",
+     "dateUpdated": "Nov 13, 2026, 8:58:23 PM",
+     "description": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+     "enisa_id": "EUVD-2026-119377\n",
+     "epss": 0.3,
+     "exploitedSince": "Nov 13, 2026, 12:00:00 AM",
+     "id": "CVE-2026-114713",
+     "references": "https://www.unrealircd.org/\nhttps://www.unrealircd.org/index/news\nhttps://forums.unrealircd.org/viewtopic.php?t=9487\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "534c5385-b9c0-3e42-8484-11b86433c205",
+       "product": {
+        "name": "UnrealIRCd",
+        "vendor": {
+         "name": "UnrealIRCd"
+        }
+       },
+       "product_version": "0 <6.2.7.1"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "f3042b8d-801c-3edb-8824-a5d5aa2a72ca",
+       "vendor": {
+        "name": "UnrealIRCd"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "ac3cf00d-a70c-3a43-9e68-6ac7905aa2e6",
+  "epss": 0.3,
+  "exploitedSince": "Nov 13, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-119377",
+  "references": "https://www.unrealircd.org/\nhttps://www.unrealircd.org/index/news\nhttps://forums.unrealircd.org/viewtopic.php?t=9487\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-119377",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 13, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "modules": [
+       "labeled-response"
+      ],
+      "product": "UnrealIRCd",
+      "programFiles": [
+       "src/modules/labeled-response.c"
+      ],
+      "programRoutines": [
+       {
+        "name": "labeled_response_mtag_is_ok()"
+       }
+      ],
+      "repo": "https://github.com/unrealircd/unrealircd",
+      "vendor": "UnrealIRCd",
+      "versions": [
+       {
+        "lessThan": "6.2.7.1",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "cve@mitre.org"
+   }
+  ],
+  "cisaActionDue": "2026-11-16",
+  "cisaExploitAdd": "2026-11-13",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority."
+   }
+  ],
+  "id": "CVE-2026-114713",
+  "lastModified": "2026-11-14T05:18:24.417",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 8.6,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "NONE",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 4.0,
+     "source": "cve@mitre.org",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-114713",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-12T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-08T03:16:33.410",
+  "references": [
+   {
+    "source": "cve@mitre.org",
+    "url": "https://forums.unrealircd.org/viewtopic.php?t=9487"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://www.unrealircd.org/"
+   },
+   {
+    "source": "cve@mitre.org",
+    "url": "https://www.unrealircd.org/index/news"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "http://www.openwall.com/lists/oss-security/2026/11/08/1"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-114713"
+   }
+  ],
+  "sourceIdentifier": "cve@mitre.org",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-140"
+     }
+    ],
+    "source": "cve@mitre.org",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

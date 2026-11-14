@@ -1,0 +1,408 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123039"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-123039",
+  "cwes": [
+   "CWE-732",
+   "CWE-862"
+  ],
+  "dateAdded": "2026-11-13",
+  "dueDate": "2026-11-16",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://support.checkpoint.com/results/sk/sk1000362 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-123039",
+  "product": "Multiple Products",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
+  "vendorProject": "Check Point",
+  "vulnerabilityName": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-123039\nGHSA-m95q-vgfj-2v8g\n",
+  "assigner": "checkpoint",
+  "baseScore": 7.8,
+  "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 12, 2026, 2:02:13 PM",
+  "dateUpdated": "Nov 13, 2026, 8:58:23 PM",
+  "description": "The Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket (/tmp/dynamic_socket) without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "2937a275-928e-335f-84a2-e32503984319",
+    "product": {
+     "name": "Quantum Security Management",
+     "vendor": {
+      "name": "checkpoint"
+     }
+    },
+    "product_version": "R82 with Jumbo Hotfix Take 130 or below"
+   },
+   {
+    "id": "5dde70fe-3a4b-3dbe-a069-392cfd7ed830",
+    "product": {
+     "name": "Quantum Security Management",
+     "vendor": {
+      "name": "checkpoint"
+     }
+    },
+    "product_version": "R82.20 with Jumbo Hotfix Take 10 or below"
+   },
+   {
+    "id": "6c22fb07-55a6-3fd3-9960-9d70358d49a0",
+    "product": {
+     "name": "Quantum Security Gateway",
+     "vendor": {
+      "name": "checkpoint"
+     }
+    },
+    "product_version": "R82.20 with Jumbo Hotfix Take 10 or below"
+   },
+   {
+    "id": "9ba06776-fc83-3b9a-84c8-6570ed4f0527",
+    "product": {
+     "name": "Quantum Security Management",
+     "vendor": {
+      "name": "checkpoint"
+     }
+    },
+    "product_version": "R81.20 with Jumbo Hotfix Take 173 or below"
+   },
+   {
+    "id": "bb983649-ff5e-3623-af1a-c4cfaf369213",
+    "product": {
+     "name": "Quantum Security Management",
+     "vendor": {
+      "name": "checkpoint"
+     }
+    },
+    "product_version": "R82.10 with Jumbo Hotfix Take 50 or below"
+   },
+   {
+    "id": "bdb9f4d4-d95e-3b73-a3fa-c24048cecf07",
+    "product": {
+     "name": "Quantum Security Gateway",
+     "vendor": {
+      "name": "checkpoint"
+     }
+    },
+    "product_version": "R82 with Jumbo Hotfix Take 130 or below"
+   },
+   {
+    "id": "cd9c584c-689e-3483-9eb0-356e1143f663",
+    "product": {
+     "name": "Quantum Security Gateway",
+     "vendor": {
+      "name": "checkpoint"
+     }
+    },
+    "product_version": "R82.10 with Jumbo Hotfix Take 50 or below"
+   },
+   {
+    "id": "feed66a4-981c-3de4-8bb1-73e622ef2ccf",
+    "product": {
+     "name": "Quantum Security Gateway",
+     "vendor": {
+      "name": "checkpoint"
+     }
+    },
+    "product_version": "R81.20 with Jumbo Hotfix Take 173 or below"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "70c6d483-7824-33f7-806e-efad7f7c55f3",
+    "vendor": {
+     "name": "checkpoint"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "230b0f19-f932-352e-85ef-76215ba88988",
+    "vulnerability": {
+     "assigner": "checkpoint",
+     "baseScore": 7.8,
+     "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 14, 2026, 7:18:05 AM",
+     "datePublished": "Nov 12, 2026, 2:02:13 PM",
+     "dateUpdated": "Nov 13, 2026, 8:58:23 PM",
+     "description": "The Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket (/tmp/dynamic_socket) without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
+     "enisa_id": "EUVD-2026-124481\n",
+     "epss": 1.27,
+     "exploitedSince": "Nov 13, 2026, 12:00:00 AM",
+     "id": "CVE-2026-123039",
+     "references": "https://support.checkpoint.com/results/sk/sk1000362\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "41a55d92-b439-3516-b01b-b64b3e81ee2c",
+       "product": {
+        "name": "Quantum Security Management",
+        "vendor": {
+         "name": "checkpoint"
+        }
+       },
+       "product_version": "R82.20 with Jumbo Hotfix Take 10 or below"
+      },
+      {
+       "id": "46e69c20-ae34-3702-a9bb-204137210e29",
+       "product": {
+        "name": "Quantum Security Management",
+        "vendor": {
+         "name": "checkpoint"
+        }
+       },
+       "product_version": "R82.10 with Jumbo Hotfix Take 50 or below"
+      },
+      {
+       "id": "56aca451-002d-3e27-bd45-e7ce762fd71c",
+       "product": {
+        "name": "Quantum Security Gateway",
+        "vendor": {
+         "name": "checkpoint"
+        }
+       },
+       "product_version": "R81.20 with Jumbo Hotfix Take 173 or below"
+      },
+      {
+       "id": "988ec7f5-adb2-39bf-a04d-f0b76cdbbd65",
+       "product": {
+        "name": "Quantum Security Gateway",
+        "vendor": {
+         "name": "checkpoint"
+        }
+       },
+       "product_version": "R82.20 with Jumbo Hotfix Take 10 or below"
+      },
+      {
+       "id": "9a20fc2b-c971-3b00-9bc0-4f2b966d72e3",
+       "product": {
+        "name": "Quantum Security Management",
+        "vendor": {
+         "name": "checkpoint"
+        }
+       },
+       "product_version": "R81.20 with Jumbo Hotfix Take 173 or below"
+      },
+      {
+       "id": "b40376d2-406c-321d-b6e4-33a849fad148",
+       "product": {
+        "name": "Quantum Security Gateway",
+        "vendor": {
+         "name": "checkpoint"
+        }
+       },
+       "product_version": "R82.10 with Jumbo Hotfix Take 50 or below"
+      },
+      {
+       "id": "cca77469-e60a-3e33-a9f5-12adcb5f8ba6",
+       "product": {
+        "name": "Quantum Security Management",
+        "vendor": {
+         "name": "checkpoint"
+        }
+       },
+       "product_version": "R82 with Jumbo Hotfix Take 130 or below"
+      },
+      {
+       "id": "f8dcd55f-cf93-3a2b-943d-aa5de796b87b",
+       "product": {
+        "name": "Quantum Security Gateway",
+        "vendor": {
+         "name": "checkpoint"
+        }
+       },
+       "product_version": "R82 with Jumbo Hotfix Take 130 or below"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "8f7d060a-e13b-3adf-af9c-98f2fb02eda1",
+       "vendor": {
+        "name": "checkpoint"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "3e26719d-254e-30d5-8297-37ad8353649f",
+    "vulnerability": {
+     "aliases": "CVE-2026-123039\nGHSA-m95q-vgfj-2v8g\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 14, 2026, 7:06:36 AM",
+     "datePublished": "Nov 12, 2026, 3:31:56 PM",
+     "dateUpdated": "Nov 13, 2026, 9:31:53 PM",
+     "description": "The Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket (/tmp/dynamic_socket) without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
+     "enisa_id": "EUVD-2026-124481\n",
+     "epss": 0.0,
+     "id": "GHSA-m95q-vgfj-2v8g",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-123039\nhttps://support.checkpoint.com/results/sk/sk1000362\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123039\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "84ce648b-140e-3bf5-a44d-6cd23f8f6127",
+  "epss": 1.27,
+  "exploitedSince": "Nov 13, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-124481",
+  "references": "https://support.checkpoint.com/results/sk/sk1000362\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-124481",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 13, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "product": "Quantum Security Gateway",
+      "vendor": "checkpoint",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "R82.10 with Jumbo Hotfix Take 50 or below"
+       },
+       {
+        "status": "affected",
+        "version": "R82.20 with Jumbo Hotfix Take 10 or below"
+       },
+       {
+        "status": "affected",
+        "version": "R82 with Jumbo Hotfix Take 130 or below"
+       },
+       {
+        "status": "affected",
+        "version": "R81.20 with Jumbo Hotfix Take 173 or below"
+       }
+      ]
+     },
+     {
+      "product": "Quantum Security Management",
+      "vendor": "checkpoint",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "R82.10 with Jumbo Hotfix Take 50 or below"
+       },
+       {
+        "status": "affected",
+        "version": "R82.20 with Jumbo Hotfix Take 10 or below"
+       },
+       {
+        "status": "affected",
+        "version": "R82 with Jumbo Hotfix Take 130 or below"
+       },
+       {
+        "status": "affected",
+        "version": "R81.20 with Jumbo Hotfix Take 173 or below"
+       }
+      ]
+     }
+    ],
+    "source": "cve@checkpoint.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-16",
+  "cisaExploitAdd": "2026-11-13",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "The Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket (/tmp/dynamic_socket) without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root."
+   }
+  ],
+  "id": "CVE-2026-123039",
+  "lastModified": "2026-11-14T05:18:31.413",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "LOCAL",
+      "availabilityImpact": "HIGH",
+      "baseScore": 7.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 1.8,
+     "impactScore": 5.9,
+     "source": "cve@checkpoint.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-123039",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-13T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-12T14:17:24.233",
+  "references": [
+   {
+    "source": "cve@checkpoint.com",
+    "url": "https://support.checkpoint.com/results/sk/sk1000362"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-123039"
+   }
+  ],
+  "sourceIdentifier": "cve@checkpoint.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-732"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-862"
+     }
+    ],
+    "source": "cve@checkpoint.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
