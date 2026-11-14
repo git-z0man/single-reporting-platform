@@ -2,7 +2,7 @@
 
 - **Trigger**: `trig_01NFjrqErTyJ3muZ6nhqsJ2j`, created 2026-11-03 with the repository already attached as source and outcome
 - **Connectors**: none. A Routine created through the HTTP API gets every connector of the account attached; this one was cleared afterwards - see "Connectors come attached" in `routines/README.md`. The first attempt, `trig_0143wWwXFLDgzSDLs539xs1W`, was deleted by the owner on 2026-11-03.
-- **Schedule**: `20 8 * * *` (daily, 08:20 UTC — after the last of the six routines, Guide sync at 07:30)
+- **Schedule**: `50 8 * * *` in UTC, no `CRON_TZ` (daily 08:50 UTC). The six monitors run on Berlin time, so the last of them, Guide sync at 09:30 Berlin, starts at 08:30 UTC in winter and 07:30 UTC in summer; 08:50 UTC is after it all year. Until 2026-11-14 the trigger was `CRON_TZ=Europe/Berlin 20 9 * * *`, which ran before Guide sync in winter.
 - **Writes**: nothing of its own. It commits under the scope of the routine it is repairing, and opens its own pull requests for fixes to `tools/`, `euvd/*.py`, `srp-domains/check.sh` and the like. What it may merge by itself is in `CLAUDE.md`, "Repository watch routine".
 - **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt.
 - **Loader status**: **applied** at creation (2026-11-03), read back and equal to the loader in `routines/README.md` with `[FILE]` = `repo-watch.md`.
@@ -26,18 +26,20 @@ Repository: git-z0man/single-reporting-platform (public). `CLAUDE.md` on `main` 
 
 Find the checkout by `git remote get-url origin`, then `git fetch origin main` and work from `origin/main`, never from a stale local branch. Today is the date `date -u +%F` prints.
 
+For GitHub (pull requests, issues, merges) use the `mcp__github__*` tools; load them with ToolSearch, for example `select:mcp__github__list_pull_requests,mcp__github__list_issues`. A notice that `plugin:github:github` failed to connect is about a different server: it is not a finding and does not belong in the report. Only if the `mcp__github__*` tools themselves are missing, say so in the report.
+
 ## 1. Did every routine leave its measurement point?
 
 This is the first and most important check, and it needs nothing but the repository. For each routine, read the evidence on `origin/main`:
 
-| Routine | Runs | Evidence of today's run |
+| Routine | Runs (Europe/Berlin) | Evidence of today's run |
 |---|---|---|
-| ENISA SRP pages | daily 06:04 | `last_check:` in `enisa-srp-faq-baseline.md` |
-| SRP domains | daily 06:00 | `last_check:` in `srp-domains-baseline.md`, and 29 rows with today's date in `srp-domains/reachability-log.csv` |
-| EUVD exploited | daily 04:50 | `last_check:` in `euvd-exploited-baseline.md`, and today's line in `euvd/history.jsonl` |
-| CRA notified bodies | Mon-Fri 07:00 | `last_check:` in `notified-bodies-baseline.md`; on Saturday and Sunday the last working day is correct |
-| Commission CRA FAQ | Monday 05:00 | none - it commits only when a new version appears. Silence is the normal outcome and is never a finding. |
-| Guide sync | daily 07:30 | none - it commits only when the guide and ENISA disagree. Silence is normal. |
+| ENISA SRP pages | daily 08:04 | `last_check:` in `enisa-srp-faq-baseline.md` |
+| SRP domains | daily 08:00 | `last_check:` in `srp-domains-baseline.md`, and 29 rows with today's date in `srp-domains/reachability-log.csv` |
+| EUVD exploited | daily 06:50 | `last_check:` in `euvd-exploited-baseline.md`, and today's line in `euvd/history.jsonl` |
+| CRA notified bodies | Mon-Fri 09:00 | `last_check:` in `notified-bodies-baseline.md`; on Saturday and Sunday the last working day is correct |
+| Commission CRA FAQ | Monday 07:00 | none - it commits only when a new version appears. Silence is the normal outcome and is never a finding. |
+| Guide sync | daily 09:30 | none - it commits only when the guide and ENISA disagree. Silence is normal. |
 
 A missing point for **today**, after the routine's hour has passed, is a failed run. A missing point for an **earlier** day is recorded in the report, never reconstructed: a backfilled measurement would be a fabricated one.
 
@@ -55,7 +57,7 @@ from the repository and from that run's own pull request, not from the trigger l
 
 ## 3. Repair
 
-- **Transient** (HTTP 429 or 5xx, a clone or push failure, a timeout): fire the routine again, once, and say so. The monitors are idempotent — their own daily rule makes a second run of the same day either a no-op or the catch-up.
+- **Transient** (HTTP 429 or 5xx, a clone or push failure, a timeout): fire the routine again, once, and say so. If `fire_trigger` is not available or refuses (it only fires Routines an agent created, not those created via `http_api`), do not retry: report the routine with the link `https://claude.ai/code/routines/<trigger id>` so the owner can run it. The monitors are idempotent — their own daily rule makes a second run of the same day either a no-op or the catch-up.
 - **Structural** (a parser that no longer matches, a changed API shape, a script that exits non-zero on good data): fix the cause in `tools/`, `euvd/*.py`, `srp-domains/check.sh` or the data, with a test that fails without the fix. Then run the full suite:
 
       python3 -m unittest discover -s tools/tests -t .
@@ -91,7 +93,13 @@ the page; report it with the date you read.
 
 ## 7. Report
 
-Answer in German, in a few lines, and only about what happened or what needs the owner. A day where every routine left its point, nothing is open and the site answers ends **silently** — no report, no commit, no notification. That is the normal outcome.
+**A quiet day:** every routine left its point, no pull request or issue is open, and the site answers with today's or yesterday's stamp. Then your whole final message is exactly this one line and nothing else, no summary, no list, no explanation:
+
+    Repo-Watch: ruhiger Tag, nichts zu tun.
+
+No commit, no notification. That is the normal outcome.
+
+Otherwise answer **in German** (these instructions are in English, the report is not), in a few lines, and only about what happened or what needs the owner.
 
 Report:
 
