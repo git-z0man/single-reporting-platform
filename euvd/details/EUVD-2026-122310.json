@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:H/RL:O/RC:C",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 10, 2026, 6:22:22 PM",
-  "dateUpdated": "Nov 12, 2026, 9:49:34 PM",
+  "dateUpdated": "Nov 13, 2026, 6:11:07 PM",
   "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
   "enisaIdAdvisory": [
    {
@@ -216,9 +216,9 @@
      "baseScore": 6.5,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:H/RL:O/RC:C",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 13, 2026, 7:17:45 AM",
+     "dataProcessed": "Nov 14, 2026, 7:17:53 AM",
      "datePublished": "Nov 10, 2026, 6:22:22 PM",
-     "dateUpdated": "Nov 12, 2026, 9:49:34 PM",
+     "dateUpdated": "Nov 13, 2026, 6:11:07 PM",
      "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
      "enisa_id": "EUVD-2026-122310\n",
      "epss": 1.62,
@@ -273,7 +273,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-124194\nGHSA-69hg-ppjj-gg27\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 13, 2026, 7:06:32 AM",
+     "dataProcessed": "Nov 14, 2026, 7:06:15 AM",
      "datePublished": "Nov 10, 2026, 9:33:51 PM",
      "dateUpdated": "Nov 10, 2026, 9:33:51 PM",
      "description": "Product ui does not warn user of unsafe actions in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.",
