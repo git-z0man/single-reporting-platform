@@ -29,9 +29,92 @@
   "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 12, 2026, 2:02:13 PM",
-  "dateUpdated": "Nov 13, 2026, 8:58:23 PM",
+  "dateUpdated": "Nov 14, 2026, 4:56:46 AM",
   "description": "The Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket (/tmp/dynamic_socket) without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "2d9cd072-8e0f-34ea-8e0a-d8e72013c8d9",
+       "product": {
+        "name": "Security Gateway",
+        "vendor": {
+         "name": "Daikin Europe N.V"
+        }
+       }
+      },
+      {
+       "id": "42960791-e12b-3844-8b76-36136fc91e0e",
+       "product": {
+        "name": "R82.20",
+        "vendor": {
+         "name": "Check Point"
+        }
+       }
+      },
+      {
+       "id": "792d42e2-09d5-3dcf-af87-73fe1d221866",
+       "product": {
+        "name": "R82.20 Take 14",
+        "vendor": {
+         "name": "Check Point"
+        }
+       }
+      },
+      {
+       "id": "7b2f0ccc-06dc-3c2b-ab32-ee93d73d2124",
+       "product": {
+        "name": "R81.20 Take 174",
+        "vendor": {
+         "name": "Check Point"
+        }
+       }
+      },
+      {
+       "id": "96500247-b9e9-3fb1-98aa-c649cea7ac05",
+       "product": {
+        "name": "R82 Take 132",
+        "vendor": {
+         "name": "Check Point"
+        }
+       }
+      },
+      {
+       "id": "a7b698d5-b07a-3174-9ebb-439e9d474c50",
+       "product": {
+        "name": "Security Management",
+        "vendor": {
+         "name": "Check Point"
+        }
+       }
+      },
+      {
+       "id": "f5551e94-0085-3e08-a49c-93baa2b2974a",
+       "product": {
+        "name": "R82.10 Take 52",
+        "vendor": {
+         "name": "Check Point"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-107484\nCVE-2026-123039\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 12, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 12, 2026, 11:00:00 PM",
+     "description": "Check Point Security Management und Security Gateway: Mehrere Schwachstellen ermöglichen Erlangen von Administratorrechten",
+     "id": "WID-SEC-W-2026-4562",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4562.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4562\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Check Point Security Management und Check Point Security Gateway ausnutzen, um Administratorrechte zu erlangen."
+    },
+    "id": "5c8c313d-004f-3cbb-ae0c-4f0f71b16d6e"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "2937a275-928e-335f-84a2-e32503984319",
@@ -130,12 +213,12 @@
      "baseScore": 7.8,
      "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 14, 2026, 7:18:05 AM",
+     "dataProcessed": "Nov 15, 2026, 7:17:41 AM",
      "datePublished": "Nov 12, 2026, 2:02:13 PM",
-     "dateUpdated": "Nov 13, 2026, 8:58:23 PM",
+     "dateUpdated": "Nov 14, 2026, 4:56:46 AM",
      "description": "The Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket (/tmp/dynamic_socket) without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
      "enisa_id": "EUVD-2026-124481\n",
-     "epss": 1.27,
+     "epss": 2.19,
      "exploitedSince": "Nov 13, 2026, 12:00:00 AM",
      "id": "CVE-2026-123039",
      "references": "https://support.checkpoint.com/results/sk/sk1000362\n",
@@ -237,7 +320,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-123039\nGHSA-m95q-vgfj-2v8g\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 14, 2026, 7:06:36 AM",
+     "dataProcessed": "Nov 15, 2026, 7:06:37 AM",
      "datePublished": "Nov 12, 2026, 3:31:56 PM",
      "dateUpdated": "Nov 13, 2026, 9:31:53 PM",
      "description": "The Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket (/tmp/dynamic_socket) without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
@@ -251,7 +334,7 @@
    }
   ],
   "enisaUuid": "84ce648b-140e-3bf5-a44d-6cd23f8f6127",
-  "epss": 1.27,
+  "epss": 2.19,
   "exploitedSince": "Nov 13, 2026, 12:00:00 AM",
   "id": "EUVD-2026-124481",
   "references": "https://support.checkpoint.com/results/sk/sk1000362\n"

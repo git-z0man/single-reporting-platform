@@ -32,7 +32,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 21, 2026, 1:48:34 PM",
-  "dateUpdated": "Nov 5, 2026, 6:17:38 PM",
+  "dateUpdated": "Nov 15, 2026, 12:15:58 AM",
   "description": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
   "enisaIdAdvisory": [
    {
@@ -1866,20 +1866,2487 @@
        }
       }
      ],
-     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
+     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 9:47:30 PM",
-     "description": "security update for php",
+     "datePublished": "Oct 21, 2026, 8:06:07 PM",
+     "dateUpdated": "Nov 11, 2026, 7:10:58 PM",
+     "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:87151",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87151.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008339.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008339.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
+     "references": "https://access.redhat.com/errata/RHSA-2026:87151\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87151.json\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "security update for php"
+     "summary": "An update for php is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "06df0a29-5265-3907-97ef-dc073b348fdc"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "005dc211-66b3-3c73-8afa-38378dd530f1",
+       "product": {
+        "name": "php-gd-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "007b0845-8356-3b64-a241-14352c6a6355",
+       "product": {
+        "name": "php-soap-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "00b7dad5-de12-3017-b3ad-52cfef2a840b",
+       "product": {
+        "name": "php-cli-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "041a3cd2-9a5a-3fec-950c-ed539c5182af",
+       "product": {
+        "name": "php-enchant-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "04e6fe0a-523e-3839-a633-f594ca361e01",
+       "product": {
+        "name": "php-pecl-zip-debuginfo-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "05b836e3-ab8a-314b-b2f8-05f8ab9c01f0",
+       "product": {
+        "name": "php-odbc-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0689eeab-1266-3c4a-bcc6-d85189e58b54",
+       "product": {
+        "name": "php-mbstring-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0a92aadf-128c-3baf-bc98-1ce2ac8d54cd",
+       "product": {
+        "name": "php-pecl-apcu-debugsource-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0c7c704d-0f03-3b51-bc04-584a7545ba58",
+       "product": {
+        "name": "php-embedded-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0cff7d6b-8bea-3733-b6e8-1f0251427bc9",
+       "product": {
+        "name": "php-xml-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0e74595f-42c0-3bfa-b612-d0cf1e4b9477",
+       "product": {
+        "name": "php-process-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0ef0ecd1-5d51-3e14-bb23-6edcd9993a5e",
+       "product": {
+        "name": "php-gd-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "100d84a4-ca6a-3209-b52f-1d6e30bacd24",
+       "product": {
+        "name": "php-pecl-redis6-debugsource-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "106e9d47-53ea-3c57-8bcf-af10628e3e8d",
+       "product": {
+        "name": "php-snmp-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "11014dd9-82d4-37ea-8f4e-7d16f2b56c7b",
+       "product": {
+        "name": "php-pgsql-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "13a0dd6f-4612-3902-b566-7515ac4bc51e",
+       "product": {
+        "name": "php-enchant-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1509088d-69c7-31a0-978d-6d4e8b7372d1",
+       "product": {
+        "name": "php-odbc-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "158647fd-b3f6-3ce3-ad24-abb439a335f1",
+       "product": {
+        "name": "php-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "15c46845-f1de-3d3d-b781-94561ddd6e34",
+       "product": {
+        "name": "php-mbstring-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "16f01b9c-27d0-32ae-a252-80093682d982",
+       "product": {
+        "name": "php-embedded-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "180802c8-6c7e-3e53-b862-5ffa58fbda55",
+       "product": {
+        "name": "php-ffi-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1a39d3f6-a273-3aea-b1cf-f325e49268dc",
+       "product": {
+        "name": "php-bcmath-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1ba09b38-9d82-3771-ade6-898c39381f54",
+       "product": {
+        "name": "php-snmp-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1ba92f38-cef5-3a44-a137-e2bb1fc4dcce",
+       "product": {
+        "name": "php-pecl-apcu-debuginfo-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1d28cd97-5505-3916-8614-5facf590bd52",
+       "product": {
+        "name": "php-common-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1d7da5e3-2658-36a6-9cce-4462dbcee684",
+       "product": {
+        "name": "php-pecl-apcu-debuginfo-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1eb1b806-76f5-30f9-bcc9-1b9c891ef870",
+       "product": {
+        "name": "php-dba-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1ebe9949-fc74-323c-a52f-5102f6bd8125",
+       "product": {
+        "name": "php-dbg-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1f28ca44-6753-3d7e-8866-43989c20e73d",
+       "product": {
+        "name": "php-soap-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2098285a-1a41-3a9b-910e-2e9979d09a40",
+       "product": {
+        "name": "php-dbg-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "20e60520-47a6-33a6-a097-ad0d7d7219be",
+       "product": {
+        "name": "php-dbg-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "21fa0b3c-2631-3871-bfda-8a988da0e80b",
+       "product": {
+        "name": "php-ldap-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "22dc1701-b53f-30ab-a5f5-d41610a79177",
+       "product": {
+        "name": "php-snmp-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "23a236fa-523e-376c-8260-01b6042999d4",
+       "product": {
+        "name": "php-pecl-apcu-devel-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "23b9fa0f-fcae-35b5-b437-79c792fb8b11",
+       "product": {
+        "name": "php-pecl-apcu-debugsource-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "23e770ca-5db3-3d68-8b34-e6a0cd4c7e5e",
+       "product": {
+        "name": "php-common-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "23f12344-8acf-3b36-9b51-3260a7125024",
+       "product": {
+        "name": "php-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "256fd4bb-d6a8-33f1-8986-9ed2147774bc",
+       "product": {
+        "name": "php-pecl-apcu-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.src::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "27099d8e-7d4a-3d5d-9c93-107fa876369b",
+       "product": {
+        "name": "php-intl-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2978bf1c-5ec8-3f98-a0b3-fe8737a794ad",
+       "product": {
+        "name": "php-pecl-redis6-debuginfo-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "29dff72b-f2d3-3d37-8545-5157d4e7d0e3",
+       "product": {
+        "name": "php-pecl-zip-debugsource-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2b1f58e5-e5bb-323c-a206-c6d4f1ea19a9",
+       "product": {
+        "name": "php-pecl-redis6-debuginfo-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2dd6f3da-03ce-33a5-8e09-d9c5da0cb4d4",
+       "product": {
+        "name": "php-bcmath-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2f31d7fc-9ae5-3840-865c-602dac3ab215",
+       "product": {
+        "name": "php-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2f6c4466-30c3-3f40-a03e-97073bc29381",
+       "product": {
+        "name": "php-opcache-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2fc59388-2d91-3549-9189-5e1aad89b585",
+       "product": {
+        "name": "php-gmp-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2fe4c385-8826-378e-ba03-1ddd9de333f7",
+       "product": {
+        "name": "php-odbc-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "31f958dd-4bc2-3768-ad54-2640425c4304",
+       "product": {
+        "name": "php-pecl-xdebug3-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3258c83a-cc08-358d-960e-6d98936cb316",
+       "product": {
+        "name": "php-ldap-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3272c62a-975a-3398-8f24-9e591f4fc93a",
+       "product": {
+        "name": "php-debugsource-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "33351d57-36ad-3d44-a0c3-a854ec530411",
+       "product": {
+        "name": "php-soap-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "33ecad5f-4568-389b-8de5-aeec2d23808d",
+       "product": {
+        "name": "php-mysqlnd-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3476b098-1d1d-3877-a910-99f76333b112",
+       "product": {
+        "name": "php-pecl-redis6-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "37224410-7536-3595-9a17-3eb4f03f7c43",
+       "product": {
+        "name": "php-pecl-zip-debugsource-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "37d1c606-3101-3faf-bf1b-4791e470b7ca",
+       "product": {
+        "name": "php-pdo-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "39271091-951b-387d-9fa5-5da50b4ba661",
+       "product": {
+        "name": "php-pecl-apcu-devel-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "397b6e8a-4115-3fd0-b006-7d779891e660",
+       "product": {
+        "name": "php-gmp-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "39f54ef8-b5b7-31ee-b47a-9d2dc122b120",
+       "product": {
+        "name": "php-pecl-apcu-devel-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3ca352d5-172a-3adc-b1cc-21f65c9f6585",
+       "product": {
+        "name": "php-pecl-xdebug3-debuginfo-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3ccc197e-4078-38ed-8f77-5d2b150607ac",
+       "product": {
+        "name": "php-xml-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3d265794-12b7-35f3-844d-548012e46d34",
+       "product": {
+        "name": "php-debugsource-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3ea18b5d-c6aa-3246-99d0-94fc812455cc",
+       "product": {
+        "name": "php-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3ecda62c-3380-3a85-a670-b0c962dc15fa",
+       "product": {
+        "name": "php-mysqlnd-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3f7404bd-4cf2-37ae-8950-e3b444f24886",
+       "product": {
+        "name": "php-intl-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "41b23c13-158a-38ad-8742-5deb4e99e302",
+       "product": {
+        "name": "php-dbg-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4243d393-016f-3eb7-a2bc-b9780f0f55ec",
+       "product": {
+        "name": "php-fpm-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4464d925-cc2a-3596-a3f1-be99d9f45a2b",
+       "product": {
+        "name": "php-devel-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "44c8efa4-ce4a-3d8f-bf63-8d628c9b1218",
+       "product": {
+        "name": "php-embedded-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4560ac09-f733-3e31-a99c-cddc7e0a3a45",
+       "product": {
+        "name": "php-fpm-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4664dfac-2c16-32e3-8f1c-1c5e8eef614f",
+       "product": {
+        "name": "php-intl-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "47d90127-cfdb-38f9-97a9-a126fc64143e",
+       "product": {
+        "name": "php-fpm-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "47f779f3-f88e-3794-9802-a6e429bce0c6",
+       "product": {
+        "name": "php-ffi-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "485f2993-aeed-339f-ad46-941a62229c2c",
+       "product": {
+        "name": "php-pgsql-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4914470d-1e6e-321c-8ca3-87c73a5fe269",
+       "product": {
+        "name": "php-pecl-apcu-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4ae029d4-20b8-3518-a7da-6d86299131ed",
+       "product": {
+        "name": "php-intl-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4b0a6260-9ca9-339e-b66e-eba742c5b215",
+       "product": {
+        "name": "php-ffi-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4f09e80c-52c9-3fff-adb3-076adc5165c3",
+       "product": {
+        "name": "php-pdo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "50b7077d-f5c3-3bf2-b8cf-71dfdc70c841",
+       "product": {
+        "name": "php-intl-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "50b753bc-db97-3384-b779-9a6957a552cf",
+       "product": {
+        "name": "php-mbstring-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "51dbb65e-638f-31e0-a2aa-234769552d7c",
+       "product": {
+        "name": "php-debugsource-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "527d8e23-f04c-3849-bdd9-44bc8f894948",
+       "product": {
+        "name": "php-ffi-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "52c71383-6322-38ed-9eb3-47cb35fd1d9d",
+       "product": {
+        "name": "php-gmp-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "53a9e363-76f5-3279-af9d-a1731517391e",
+       "product": {
+        "name": "php-common-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "54cbcbe1-d997-38cd-965b-d96aa3fa9daf",
+       "product": {
+        "name": "php-enchant-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5500606b-b8a2-3b88-b8bf-45aa3bc54afc",
+       "product": {
+        "name": "php-mysqlnd-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "57cc3c18-ff3b-33f5-978e-ae0435133fe8",
+       "product": {
+        "name": "php-bcmath-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "57ef44a7-d127-3f9c-9501-5e50ebb66917",
+       "product": {
+        "name": "php-pecl-xdebug3-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "593d704d-6bef-3453-bd9c-2e3c7e806ac2",
+       "product": {
+        "name": "php-mbstring-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "59ba116c-8b9b-3c5b-954e-54874accd5c7",
+       "product": {
+        "name": "php-pecl-rrd-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "59d54e96-8e45-3a64-b937-4a5ec92db77b",
+       "product": {
+        "name": "php-opcache-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5bde791b-7b90-341e-bcd6-5ced1cdfe557",
+       "product": {
+        "name": "php-pecl-xdebug3-debuginfo-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5ca40a3a-45ca-3333-bda3-b85cb5cbf292",
+       "product": {
+        "name": "php-intl-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5f95a1c8-7cf0-37d8-9afc-208b022db2be",
+       "product": {
+        "name": "php-pecl-rrd-debuginfo-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "624192ab-0bb1-3696-8d60-6aeff6beb9dc",
+       "product": {
+        "name": "php-common-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "62fc2db2-9fd9-3e3c-a119-596a980d390f",
+       "product": {
+        "name": "php-pdo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "639af7ef-b3b8-3a69-9efd-32fbcf921edd",
+       "product": {
+        "name": "php-common-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "653f10ad-6582-383b-8788-056f8358026b",
+       "product": {
+        "name": "php-pecl-redis6-debugsource-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "660f757f-893e-3e9e-9a8c-21dff945ba1c",
+       "product": {
+        "name": "php-mysqlnd-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "68bf8aa2-f23f-339a-90c1-7c621782fcf1",
+       "product": {
+        "name": "php-cli-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6974e64e-4a35-390f-971d-f9d10b32b962",
+       "product": {
+        "name": "php-embedded-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "69af7392-2e5b-3e03-8409-c29558249de4",
+       "product": {
+        "name": "php-xml-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6b1a5c95-50ef-3157-9fed-ef76d9c91024",
+       "product": {
+        "name": "php-pecl-redis6-debuginfo-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6c6396d2-4754-35fb-bd2b-0152f30fe3c5",
+       "product": {
+        "name": "php-gd-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6d7472e9-dbee-3a5a-ab4d-a87c874a6643",
+       "product": {
+        "name": "php-pecl-xdebug3-debuginfo-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6e67f7df-e3c2-355f-aa79-1d0995b7cc41",
+       "product": {
+        "name": "php-snmp-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "701c83d7-29d3-39f4-99d2-7cf152d4b356",
+       "product": {
+        "name": "php-devel-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "70a3914b-eefa-329a-9892-6639b10a5923",
+       "product": {
+        "name": "php-mysqlnd-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "718201a7-7ef3-3769-928d-2ce72bc529a5",
+       "product": {
+        "name": "php-cli-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7239494a-a5a9-3e6f-972d-de58a2853156",
+       "product": {
+        "name": "php-gmp-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "72da54b1-bd57-3b55-85aa-85c27c1279d8",
+       "product": {
+        "name": "php-xml-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "74515412-4935-3532-a551-e5875df8de4a",
+       "product": {
+        "name": "php-pecl-apcu-devel-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "74578984-a38d-3d5b-96fc-5d12bfb57211",
+       "product": {
+        "name": "php-soap-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "77d23465-a0bd-31ea-8712-3f5bc349bb75",
+       "product": {
+        "name": "php-soap-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "79db0d3f-a95b-3ad4-9e1f-00505846be98",
+       "product": {
+        "name": "php-dba-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7a3ca9ed-45fa-37ab-9a69-4ac67dab3146",
+       "product": {
+        "name": "php-bcmath-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7a476e1a-8807-34ff-b383-9134e2e7fa18",
+       "product": {
+        "name": "php-pecl-zip-debugsource-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7a480b60-ca4f-3e84-b6e9-d223e5d5b4cd",
+       "product": {
+        "name": "php-pecl-redis6-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7a88f11e-a1ee-34d1-b0c0-9aab82eeba0e",
+       "product": {
+        "name": "php-snmp-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7ad528b2-c824-3393-8a1d-f96ef5780d4b",
+       "product": {
+        "name": "php-ldap-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7af87255-73f7-372a-80b1-e15e258302d4",
+       "product": {
+        "name": "php-pecl-zip-debuginfo-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7be1bf01-476b-35c3-8360-427838039804",
+       "product": {
+        "name": "php-pecl-zip-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7c68aa6c-5e20-3158-813d-7a5236a87172",
+       "product": {
+        "name": "php-devel-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7c79d9b9-c7d1-3272-a3c9-a2d241e6f865",
+       "product": {
+        "name": "php-pecl-redis6-debugsource-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7d0275e2-11be-3f32-95a0-daf9bb5e6d81",
+       "product": {
+        "name": "php-pecl-apcu-debuginfo-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7dcd9f4f-a9ee-3e8f-b1d0-4e07292fc1dc",
+       "product": {
+        "name": "php-pgsql-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "83a3c1ad-4bc5-3835-8be8-20847ee066b7",
+       "product": {
+        "name": "php-pgsql-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "84aea713-a1bd-3799-a088-797df52eab67",
+       "product": {
+        "name": "php-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "850e6868-fbf4-373a-914f-41bc6f9abc8e",
+       "product": {
+        "name": "php-enchant-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8560850c-b27c-3283-93fa-01b02ebe8ec1",
+       "product": {
+        "name": "php-dba-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "86bf9e20-fb14-3768-86f8-7dbea5f6c1d8",
+       "product": {
+        "name": "php-enchant-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "87b2ca84-e68b-3393-a7bb-ba762d105a55",
+       "product": {
+        "name": "php-ffi-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "87e809d8-ecd6-32c6-85d0-5f2d1bf1d84b",
+       "product": {
+        "name": "php-pgsql-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "894e2f75-8085-3215-893e-461e2c491800",
+       "product": {
+        "name": "php-pdo-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8b546b4e-36e9-3f42-b09a-dae1e1beaf1b",
+       "product": {
+        "name": "php-bcmath-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8d83c6f6-e49b-353d-a4e9-c959ed252f68",
+       "product": {
+        "name": "php-pecl-xdebug3-debugsource-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8da0c6c5-e22f-335d-9294-4bb6208ebb2f",
+       "product": {
+        "name": "php-bcmath-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8dddb8c1-a06a-3e81-bcdd-92ba438ab1cb",
+       "product": {
+        "name": "php-process-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8ef6e690-83f4-36fb-a8ed-e140225b1115",
+       "product": {
+        "name": "php-ldap-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "91506ede-a2de-340b-860a-c50dc9de2a60",
+       "product": {
+        "name": "php-dba-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "92cfe4bb-3842-352f-ae76-4b1a0e00f1ef",
+       "product": {
+        "name": "php-mysqlnd-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "937d80e3-fbd5-3ccf-be08-50f78ab12410",
+       "product": {
+        "name": "php-mysqlnd-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "952ee54f-890f-308e-b4f1-58ed3d1b0e6a",
+       "product": {
+        "name": "php-pecl-apcu-debuginfo-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "961c89a5-bf2f-357a-88df-c520e3324ec7",
+       "product": {
+        "name": "apcu-panel-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.noarch::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9680621d-a4c9-390d-9d63-361f365243b7",
+       "product": {
+        "name": "php-intl-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "97463076-0fc4-3425-8ecd-6e6fa363c5a3",
+       "product": {
+        "name": "php-pecl-xdebug3-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "99a18628-955b-3907-9ce5-20aec406f4c0",
+       "product": {
+        "name": "php-mbstring-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "99ebdafd-631e-35b5-aa7c-ca2528540469",
+       "product": {
+        "name": "php-pecl-redis6-debuginfo-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "99ec1d1f-40ec-30d7-a75c-0e8625d58082",
+       "product": {
+        "name": "php-xml-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9a3db55e-2657-3932-b8bf-e05d5640b3b4",
+       "product": {
+        "name": "php-pecl-zip-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.src::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9a5eeebc-a706-37a9-adfd-a39a0974ac7f",
+       "product": {
+        "name": "php-common-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9bd40b43-e01a-3b1c-92cd-cb9f5d64351b",
+       "product": {
+        "name": "php-process-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9ca92485-78b9-3c35-90ed-1c6d222599d1",
+       "product": {
+        "name": "php-gd-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9e16e958-effa-3180-8f33-a6de1a6f224f",
+       "product": {
+        "name": "php-gd-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9ff265b2-6d24-3740-9607-6782877baaca",
+       "product": {
+        "name": "php-pecl-zip-debuginfo-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9ff5a1c1-52e1-351f-9a9a-0c05739f777f",
+       "product": {
+        "name": "php-cli-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a0b84db9-f6d1-34d4-8912-7eb8d6546e1a",
+       "product": {
+        "name": "php-common-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a4b39518-6da6-3045-99f2-86e69e14f57e",
+       "product": {
+        "name": "php-ldap-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a4e019d3-587b-3e74-9f45-a36b9f9d9f65",
+       "product": {
+        "name": "php-ffi-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a6afe0cf-7282-3eb7-8a04-3521b9ba0e55",
+       "product": {
+        "name": "php-soap-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a92e6ec9-810b-3253-b9c9-ce66a4f161eb",
+       "product": {
+        "name": "php-pecl-apcu-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aa4403ae-69e2-34ec-9549-543df8feb6a7",
+       "product": {
+        "name": "php-embedded-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aa927fd4-c34a-371f-a81c-dc5def8799c8",
+       "product": {
+        "name": "php-pecl-xdebug3-debuginfo-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aafcc6d0-6fde-3d17-b3d2-8878930a0bc6",
+       "product": {
+        "name": "php-process-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aba68d65-d309-3e20-9bed-4f3e6c915135",
+       "product": {
+        "name": "php-dbg-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "abc8d6f4-a0e6-3e99-b6d8-eeec63b9a674",
+       "product": {
+        "name": "php-cli-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ad77f712-6c0b-3c01-9d27-3c996987b7f5",
+       "product": {
+        "name": "php-pecl-apcu-debugsource-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ad878526-839f-358f-a22f-946e2e2c77f9",
+       "product": {
+        "name": "php-process-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "adbe9327-829f-3dd2-9cfc-2d5a74acfd38",
+       "product": {
+        "name": "php-common-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b03fc163-0ec9-3a81-bfd5-8cf6939c934c",
+       "product": {
+        "name": "php-pecl-rrd-debuginfo-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b1dc2492-faf6-3689-abd6-eaa951d8ee01",
+       "product": {
+        "name": "php-fpm-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b3583517-02b7-305b-a034-f7409838d427",
+       "product": {
+        "name": "php-fpm-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b380443c-03c8-30c2-a888-297f73e0be3d",
+       "product": {
+        "name": "php-bcmath-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b4c719d0-b8ef-3af0-945d-389e3baa8804",
+       "product": {
+        "name": "php-pdo-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b565d1db-355a-3746-a09c-df975e6c0f39",
+       "product": {
+        "name": "php-embedded-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b5a211f4-452b-3f56-b4a4-09b22468a0d4",
+       "product": {
+        "name": "php-pecl-zip-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b649f385-7f1e-31cd-b960-616ac21a3ecb",
+       "product": {
+        "name": "php-snmp-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b7508a64-b057-3afc-ae00-fc4e023ae66c",
+       "product": {
+        "name": "php-pecl-rrd-debuginfo-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b759de18-3943-3e59-80fa-02ff4bf8c111",
+       "product": {
+        "name": "php-intl-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b83c1b9d-1cb5-3195-8040-58fd9f53af3b",
+       "product": {
+        "name": "php-fpm-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b8fb5298-fc18-3c7c-a983-79aefb222dce",
+       "product": {
+        "name": "php-mbstring-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b91db95a-7df0-3769-bae0-ff11ffe6e4a8",
+       "product": {
+        "name": "php-opcache-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b968f513-d541-3679-886d-43d33caf05f4",
+       "product": {
+        "name": "php-dba-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "baf343dd-3371-3bd8-95be-d1d556777a4d",
+       "product": {
+        "name": "php-fpm-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bc861d90-615f-3100-b585-a520d8444d84",
+       "product": {
+        "name": "php-dba-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bd378c41-fefe-30e3-9881-ef1fc2816787",
+       "product": {
+        "name": "php-odbc-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "be7c373b-c364-347b-9ddb-a4b22632a267",
+       "product": {
+        "name": "php-pecl-redis6-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c01e5406-3310-355f-a806-4e084127a316",
+       "product": {
+        "name": "php-gd-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c1baaffb-7e86-36c8-a7c2-467f0a91c992",
+       "product": {
+        "name": "php-gd-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c21b6766-14ad-3d92-a615-bd90ec11867d",
+       "product": {
+        "name": "php-enchant-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c4356244-505f-3f25-957f-54c40254ac04",
+       "product": {
+        "name": "php-ffi-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c484da1c-4455-394b-b25e-968bf08af635",
+       "product": {
+        "name": "php-ldap-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c57e03fd-1447-3892-8141-5622fda52d15",
+       "product": {
+        "name": "php-pecl-rrd-debugsource-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c61583bb-d2de-39b7-9d1a-fd62b6f207ae",
+       "product": {
+        "name": "php-ldap-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c6249596-d4ca-32ee-b62e-ea7e1ff92a0c",
+       "product": {
+        "name": "php-odbc-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c72057a4-ca9b-35b3-87fc-e1500b2d9f25",
+       "product": {
+        "name": "php-pecl-rrd-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.src::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c7359d4a-197b-3f9a-8b31-f4cf9f337c6f",
+       "product": {
+        "name": "php-xml-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c78714dd-5fba-3bf9-acdc-2b3f76229e2d",
+       "product": {
+        "name": "php-gmp-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c7f78959-772f-355f-8c06-616ac6eb2fc4",
+       "product": {
+        "name": "php-ldap-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c8623008-348c-362f-a153-f0b3939dc21f",
+       "product": {
+        "name": "php-process-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c8f312e6-ed55-3ba2-a7ed-67c63f581bc6",
+       "product": {
+        "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c9cc13ef-6b6e-3a32-9081-5a1647011148",
+       "product": {
+        "name": "php-pecl-rrd-debugsource-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c9f0a75e-0dd6-38d5-aee3-491dbef35bf7",
+       "product": {
+        "name": "php-opcache-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ca62993c-6ca3-38bd-a0ab-5bbde0318760",
+       "product": {
+        "name": "php-pecl-xdebug3-debugsource-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cc19cf60-5cac-3bf3-9530-9085cb9113b7",
+       "product": {
+        "name": "php-process-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cdaef8cf-9562-3cf9-85ee-83d67c238664",
+       "product": {
+        "name": "php-pecl-rrd-debuginfo-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cde12e8d-0e3e-3ed2-9a07-59799a0b8aed",
+       "product": {
+        "name": "php-enchant-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ce459754-f004-323d-8715-bce92dd94770",
+       "product": {
+        "name": "php-dbg-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cf0782a4-8c07-366d-a567-83b99898e043",
+       "product": {
+        "name": "php-pdo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cfefc295-bc44-3bd0-8e10-6d8d8157daf8",
+       "product": {
+        "name": "php-snmp-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d0f49378-dfbf-30da-b92d-cfef80df6b48",
+       "product": {
+        "name": "php-fpm-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d39e67ab-5d59-3a0f-9cdf-b3400caffb78",
+       "product": {
+        "name": "php-odbc-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d4b8bf8c-884c-3c1a-95c6-6ee87a36516a",
+       "product": {
+        "name": "php-pecl-zip-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d56ea62f-d826-3609-bc41-65e242716ae7",
+       "product": {
+        "name": "php-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d58d3d1f-ed1f-3cb9-a9bd-83b790e7ca25",
+       "product": {
+        "name": "php-pecl-zip-debugsource-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d5b36a17-253a-3b31-82bc-7c9c1d8420a7",
+       "product": {
+        "name": "php-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.src::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d6667e9c-a886-3cff-ae13-6e419fb647ac",
+       "product": {
+        "name": "php-mbstring-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d8658acb-ff7b-3fb2-ac54-598b9fa165f0",
+       "product": {
+        "name": "php-cli-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d8809937-b40e-3955-bbd4-6a9c9428a2e0",
+       "product": {
+        "name": "php-pgsql-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d8c74cf7-b10c-38cf-a79a-3cf2bcb9b980",
+       "product": {
+        "name": "php-pdo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d9f20a0b-668a-39e5-a190-f7e1d024b4a5",
+       "product": {
+        "name": "php-opcache-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "da086cfd-06fa-3bac-8fd3-21a68bf03fe7",
+       "product": {
+        "name": "php-enchant-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "da550e8b-ea54-3aa0-b6e1-56a090c2dfd6",
+       "product": {
+        "name": "php-snmp-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "da57b967-8618-36f7-863a-0fda5cb9d9d3",
+       "product": {
+        "name": "php-xml-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dac2559d-dae4-37ce-95df-d4be34dc196e",
+       "product": {
+        "name": "php-pgsql-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "daf5d07f-33b9-3347-abc4-77b804256eaf",
+       "product": {
+        "name": "php-pecl-xdebug3-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.src::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "db5c5332-6561-3669-8f3a-aa5380b22b58",
+       "product": {
+        "name": "php-embedded-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dc3b0b11-eba0-3b4a-bc13-7bb5e8d79d7e",
+       "product": {
+        "name": "php-pecl-redis6-debugsource-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dc3eb33d-5358-38cb-bac7-2f08a798e5b7",
+       "product": {
+        "name": "php-soap-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ddc29294-5f08-3764-ab69-2c04c6ce0c03",
+       "product": {
+        "name": "php-opcache-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "deb2b0d0-8768-36f3-9534-20d6bd53783e",
+       "product": {
+        "name": "php-pecl-rrd-debugsource-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "df630904-4fba-3a1a-ae31-bf347f8d7bf1",
+       "product": {
+        "name": "php-gmp-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dfba1363-9950-3314-ad2a-d1f781ab8fd2",
+       "product": {
+        "name": "php-xml-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e001fbb0-73dd-3cba-ac57-81a1b6a4dba5",
+       "product": {
+        "name": "php-odbc-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e0a80e30-77fb-3cba-8470-859368e49379",
+       "product": {
+        "name": "php-embedded-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e3218523-1ed2-3051-bb06-24b58a9c2c62",
+       "product": {
+        "name": "php-opcache-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e3db7d45-f28e-3799-83ec-5fe260d2ac70",
+       "product": {
+        "name": "php-pecl-zip-debuginfo-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e66c7cbf-cc9c-3cbd-9a9a-5b7c4582eb2f",
+       "product": {
+        "name": "php-pecl-redis6-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.src::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e6d2c2b6-d58e-343b-bd4d-8dc077f1b0d3",
+       "product": {
+        "name": "php-pecl-zip-0:1.22.7-2.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e6f4190e-3efa-381d-9a12-984907bd8063",
+       "product": {
+        "name": "php-opcache-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e74aff8e-4f0c-31c7-aeda-06ecd8aa8e5c",
+       "product": {
+        "name": "php-dba-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e77697b2-d627-3488-8b15-0216a266d7ea",
+       "product": {
+        "name": "php-debugsource-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e847e368-fe11-3a0a-ad21-20df01d30a0b",
+       "product": {
+        "name": "php-pgsql-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e88efd1e-9655-34df-9e43-8050932513a3",
+       "product": {
+        "name": "php-odbc-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e9d86607-eda7-3763-adff-2a40edd25622",
+       "product": {
+        "name": "php-gmp-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e9da6e1a-5c07-3656-83ae-85e58a8b5c52",
+       "product": {
+        "name": "php-process-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eb9499c3-08da-3d87-9b41-8bb1ec47e059",
+       "product": {
+        "name": "php-pecl-xdebug3-debugsource-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ebade392-2038-3488-8fa0-38d2a1431e6f",
+       "product": {
+        "name": "php-pecl-rrd-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ecc79b9f-f658-34e1-b4da-6ada790bde43",
+       "product": {
+        "name": "php-gmp-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ed0e715d-f3fa-316c-91ea-8dc4d2af663b",
+       "product": {
+        "name": "php-pecl-rrd-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ed3471ee-78d3-3112-a72c-b5a09ab65c4c",
+       "product": {
+        "name": "php-ffi-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ed7efe3e-8e2b-35fd-bb4a-e8cb286f3102",
+       "product": {
+        "name": "php-dbg-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ede124f1-7bb8-3596-9d83-9c5af8cf6a70",
+       "product": {
+        "name": "php-pecl-apcu-debugsource-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ee26d44c-462c-3050-a3f3-70a8125a3aa1",
+       "product": {
+        "name": "php-pecl-xdebug3-debugsource-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f02910c7-aed9-38cb-a446-21571e64838a",
+       "product": {
+        "name": "php-dba-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f14c8c5b-c4ba-35cd-ab13-d033cbd9244e",
+       "product": {
+        "name": "php-pecl-xdebug3-0:3.4.7-3.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f1b38da9-1310-3888-b7bf-6aef9a489981",
+       "product": {
+        "name": "php-devel-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f2b39865-fabf-345f-a7f7-67e929042322",
+       "product": {
+        "name": "php-cli-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f2dccd77-43b4-3ee3-8709-b8613b30b41d",
+       "product": {
+        "name": "php-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f36aa046-2845-3e18-b865-bc3a9e46ec76",
+       "product": {
+        "name": "php-pecl-apcu-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f40f2bed-dda3-3245-9045-295f61694757",
+       "product": {
+        "name": "php-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f5bde075-993d-38a6-acae-360e537a545c",
+       "product": {
+        "name": "php-pecl-rrd-debugsource-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f6cfd5b2-115b-332f-8aa0-0f4225178026",
+       "product": {
+        "name": "php-bcmath-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f7ee02a2-b18a-3b63-8185-8f8f4f5e1579",
+       "product": {
+        "name": "php-mysqlnd-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f8b96358-746d-3ca3-b1e2-7fd33dd30a7a",
+       "product": {
+        "name": "php-pdo-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.x86_64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f8f537fc-9863-3330-a098-3afd99689914",
+       "product": {
+        "name": "php-pecl-rrd-0:2.0.3-19.module+el9.9.0+24551+b05e3fee.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f996a730-5f7c-38f5-8a65-a1007011f655",
+       "product": {
+        "name": "php-mbstring-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fa5d884e-4ae8-3a47-b411-cc7764384151",
+       "product": {
+        "name": "php-soap-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fab0f8ba-6ca4-377f-a3e9-ee301bfb688a",
+       "product": {
+        "name": "php-cli-debuginfo-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fbee15ed-8e73-3d19-8a36-e4364efaddff",
+       "product": {
+        "name": "php-gd-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.aarch64::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fd42cc15-7538-3dc7-b890-411b0b314df7",
+       "product": {
+        "name": "php-pecl-apcu-0:5.1.27-2.module+el9.9.0+24551+b05e3fee.ppc64le::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fdb658d8-e468-3c71-953d-1e4ef71b1139",
+       "product": {
+        "name": "php-pecl-redis6-0:6.2.0-3.module+el9.9.0+24551+b05e3fee.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fdc46c5d-5ec4-3b5c-8d02-f0d68465403c",
+       "product": {
+        "name": "php-dbg-0:8.4.27-1.module+el9.9.0+25112+f4f032cf.s390x::php:8.4",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 10, 2026, 10:40:17 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:08 PM",
+     "description": "Red Hat Security Advisory: php:8.4 security update",
+     "id": "RHSA-2026:97880",
+     "references": "https://access.redhat.com/errata/RHSA-2026:97880\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_97880.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "An update for the php:8.4 module is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+    },
+    "id": "09d7b356-61e7-321b-87ee-445c82021d4e"
    },
    {
     "advisory": {
@@ -3814,10 +6281,10 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 5:04:21 PM",
-     "dateUpdated": "Nov 4, 2026, 9:58:23 PM",
+     "dateUpdated": "Nov 10, 2026, 4:04:30 PM",
      "description": "Security update for php8",
      "id": "openSUSE-SU-2026:22151-1",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_22151-1.json\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_22151-1.json\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
      "source": {
       "id": 21,
       "name": "csaf_opensuse"
@@ -6164,7 +8631,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 7:39:20 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:45 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:19 PM",
      "description": "Red Hat Security Advisory: php:8.2 security update",
      "id": "RHSA-2026:88835",
      "references": "https://access.redhat.com/errata/RHSA-2026:88835\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88835.json\n",
@@ -6175,6 +8642,24 @@
      "summary": "An update for the php:8.2 module is now available for Red Hat Enterprise Linux 9.4 Update Services for SAP Solutions.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "0fd00739-1af8-3797-a778-6211fd8b287a"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [],
+     "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 21, 2026, 7:12:00 PM",
+     "dateUpdated": "Nov 6, 2026, 2:21:13 PM",
+     "description": "Vulnerabilities in PHP Affecting Cisco Products: October 2026",
+     "id": "cisco-sa-php-october26-Jj384Daq",
+     "references": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq\n",
+     "source": {
+      "id": 10,
+      "name": "csaf_cisco"
+     },
+     "summary": "On October 21, the PHP Foundation announced the availability of a Critical PHP Security release addressing two critical vulnerabilities:\r\n\r\nCVE-2026-109618 - RCE via OOM corruption\r\nCVE-2026-109619 - RCE via stale global state\r\n\r\nFor information about these vulnerabilities, see the advisories GHSA-w8hw-w9fx-j79w [\"https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w\"] and GHSA-6wmf-4rv5-p3rp [\"https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp\"]. These vulnerabilities are being referenced as PHP2shell.\r\n\r\nFor information about Splunk products and offerings, see Vulnerabilities in PHP (CVE-2026-109618, CVE-2026-109619) on Splunk Products - October 2026 [\"https://advisory.splunk.com/advisories/SVD-2026-1013\"].\r\n\r\nImportant: If a product is not listed within this advisory, Cisco's review indicates that the product is not affected by this vulnerability.\r\n\r\nThis advisory will be updated as additional information becomes available.\r\n\r\n"
+    },
+    "id": "224a5b12-c6c2-3767-99ea-df5e8d791fd9"
    },
    {
     "advisory": {
@@ -8351,6 +10836,1843 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "0005c973-c825-3072-ab77-f6e53b8e1a4e",
+       "product": {
+        "name": "php8.4-bcmath-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "00aa722e-7761-3f11-b8f1-e451c0cf3307",
+       "product": {
+        "name": "php8.4-cli-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "015d774c-f6a7-3b23-b4c6-620664b9a6e7",
+       "product": {
+        "name": "php8.4-gmp-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "02fef9a7-f8c3-35ca-81c7-7e070fb98aca",
+       "product": {
+        "name": "php8.4-soap-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "03aa5aae-3309-3e42-8c76-05143847b9ec",
+       "product": {
+        "name": "php8.4-bcmath-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "055b1cb1-bc68-32da-af3d-5d9ff4aca8e2",
+       "product": {
+        "name": "php8.4-mysqlnd-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "064a8f74-5f04-3d30-b5f3-1e8666a44f0d",
+       "product": {
+        "name": "php8.4-gd-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "06a5edd4-0f18-36d4-82f7-df27af177a13",
+       "product": {
+        "name": "php8.4-ffi-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "06e04e27-f788-3708-9e5c-1596709e7df2",
+       "product": {
+        "name": "php8.4-embedded-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "085bb324-e130-3ecc-8274-ed4fd4d1e446",
+       "product": {
+        "name": "php8.4-fpm-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "09c11b1e-af4e-3ca6-adc4-ebca6ea8c350",
+       "product": {
+        "name": "php8.4-common-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0a8574e4-773a-300e-926e-a03e127ea94d",
+       "product": {
+        "name": "php8.4-ffi-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0b054e5d-1f4f-362c-a817-9e0466c734fe",
+       "product": {
+        "name": "php8.4-xml-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0dd6aeb9-768c-3991-9cb8-9732762325dd",
+       "product": {
+        "name": "php8.4-common-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0fc76b65-f256-3dc2-b116-761deb98c1e5",
+       "product": {
+        "name": "php8.4-devel-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0fcd34b1-5480-3f38-a687-9f0a83237b08",
+       "product": {
+        "name": "php8.4-odbc-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0ff2f47a-4505-3e96-84e8-06a9246c2747",
+       "product": {
+        "name": "php8.4-bcmath-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "10072b0b-5e11-3adc-a84f-f5f65c496993",
+       "product": {
+        "name": "php8.4-debugsource-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "10a974fa-09ef-3360-95af-0f6c0bde382f",
+       "product": {
+        "name": "php8.4-bcmath-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "10df9eea-5bcd-3581-8a51-c68300d9ecb5",
+       "product": {
+        "name": "php8.4-opcache-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "12645d4b-3f37-37ce-a66f-40033a1cba4d",
+       "product": {
+        "name": "php8.4-soap-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "133083d1-2a2e-3295-ba28-5d174c22a1f9",
+       "product": {
+        "name": "php8.4-dba-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "13326f4c-1249-31d0-a50e-b6fb8f79cfaa",
+       "product": {
+        "name": "php8.4-debugsource-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "136bdf97-e0d3-3117-ace1-e98c846cea48",
+       "product": {
+        "name": "php8.4-enchant-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "14447925-b79a-3b67-9aef-897bd6c38828",
+       "product": {
+        "name": "php8.4-snmp-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "15295435-a3c2-3ca3-87c4-adc132e87203",
+       "product": {
+        "name": "php8.4-enchant-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "15676b4d-e089-32c2-adb9-1c7ef351bc92",
+       "product": {
+        "name": "php8.4-xml-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "161e1ee0-f46c-367b-9f4c-4d7a498e4d98",
+       "product": {
+        "name": "php8.4-dba-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "16f6ced7-0abb-3b0a-a409-37bd1eb1a0b9",
+       "product": {
+        "name": "php8.4-ldap-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "17ab59bd-64d4-3125-828b-d232a05650d2",
+       "product": {
+        "name": "php8.4-mbstring-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1870125f-2491-3ee8-a673-f35c020bccb0",
+       "product": {
+        "name": "php8.4-odbc-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1879095d-a301-394d-b5d6-521fc54c53cf",
+       "product": {
+        "name": "php8.4-devel-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1f207254-42ab-3bd7-8c36-96aacd96996e",
+       "product": {
+        "name": "php8.4-gmp-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "20cf561a-344b-3df6-9d08-c6511487f76b",
+       "product": {
+        "name": "php8.4-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "238f072d-1f9c-38ac-b9d3-c01ba1293b64",
+       "product": {
+        "name": "php8.4-common-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "23c3c22b-8f66-30e5-9038-e088113d12bb",
+       "product": {
+        "name": "php8.4-gmp-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "258b7804-be4f-36c8-901d-31ce1ad4a77f",
+       "product": {
+        "name": "php8.4-soap-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "263e8697-d985-3578-b03d-4893f7aacbf0",
+       "product": {
+        "name": "php8.4-ldap-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2755422b-3b99-3c05-acfb-c362b3329735",
+       "product": {
+        "name": "php8.4-gd-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "29972ae2-2297-37af-9e7e-1dd822e6cfad",
+       "product": {
+        "name": "php8.4-intl-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "299fa278-9744-377a-8eb2-84d95115791a",
+       "product": {
+        "name": "php8.4-gd-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "29d0f12b-c47d-3ad1-ba29-2935e6f6717a",
+       "product": {
+        "name": "php8.4-0:8.4.27-2.el10_3.1.src",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2a7c5e8f-5864-32f9-b5d3-76dc2f77dc9b",
+       "product": {
+        "name": "php8.4-odbc-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2c32605b-1c6b-34f0-8418-da3ced84b36b",
+       "product": {
+        "name": "php8.4-xml-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2e5ddba8-25c4-3aea-8001-95dab949540e",
+       "product": {
+        "name": "php8.4-mysqlnd-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3153b534-24c0-3ccd-a814-87d56038bbe1",
+       "product": {
+        "name": "php8.4-common-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "33e0b084-59aa-3478-a39f-b34312a99d91",
+       "product": {
+        "name": "php8.4-enchant-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "34cd88c6-29f3-32e8-94d7-66b9eb052cb4",
+       "product": {
+        "name": "php8.4-odbc-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "35917032-fa6a-37cb-ba5b-a8d561c33646",
+       "product": {
+        "name": "php8.4-debugsource-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "367c2882-7a20-3a1a-868c-146865c0858f",
+       "product": {
+        "name": "php8.4-enchant-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "36c191a3-51e6-3a16-ada3-7fdec98db504",
+       "product": {
+        "name": "php8.4-xml-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3747980d-7601-39df-98fa-b6956b6d8915",
+       "product": {
+        "name": "php8.4-mysqlnd-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3941952c-8f84-38dc-a0f6-d530fd32ab29",
+       "product": {
+        "name": "php8.4-dbg-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3b19be1e-72b3-3449-bdfd-065325c160a9",
+       "product": {
+        "name": "php8.4-gmp-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3b89b764-9272-3cec-87d5-be7d386dabf4",
+       "product": {
+        "name": "php8.4-ldap-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3c4e0608-e61d-3403-ad4c-0179abfa3c79",
+       "product": {
+        "name": "php8.4-ldap-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3d58ea2b-2737-39d6-abef-c01bfd551346",
+       "product": {
+        "name": "Red Hat Enterprise Linux AppStream (v. 10)",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3dd034f2-5666-3dc1-9939-7b3a57e9dc72",
+       "product": {
+        "name": "php8.4-pgsql-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3f2e19a5-72cb-35f6-9eb6-a402303f9fdd",
+       "product": {
+        "name": "php8.4-pgsql-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3fdf2d6a-9cc2-3208-8510-9db765fdc222",
+       "product": {
+        "name": "php8.4-dbg-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "427233fc-ec7a-3300-9f2a-e47166d61e44",
+       "product": {
+        "name": "php8.4-pdo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "434d3bd0-6c7a-30ab-9823-3298c4fffef6",
+       "product": {
+        "name": "php8.4-embedded-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4567eb30-ab68-327a-a403-8e1279e5c302",
+       "product": {
+        "name": "php8.4-process-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "45a7675e-460d-3b97-84c4-a403697126fe",
+       "product": {
+        "name": "php8.4-fpm-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4662f0a0-1c6d-3615-b6f7-568462122c02",
+       "product": {
+        "name": "php8.4-pdo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "482a7931-82d2-3d70-b9cc-92e2efa96f36",
+       "product": {
+        "name": "php8.4-soap-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "49d4bdc9-aa3a-3b0f-90f6-cb4da93a5e09",
+       "product": {
+        "name": "php8.4-devel-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4d8b8482-1c39-31ce-b1a3-50c6efdb92d2",
+       "product": {
+        "name": "php8.4-opcache-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4e3d9473-9d5c-3719-a1be-a52925facf8f",
+       "product": {
+        "name": "php8.4-opcache-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4ea3b559-aaff-34f0-ba64-4d1e9650418b",
+       "product": {
+        "name": "php8.4-mbstring-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4fcf9a66-f2a4-3359-9e6a-694900556a6d",
+       "product": {
+        "name": "php8.4-devel-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "506879e9-09bd-3cb0-a9dd-137c5700e477",
+       "product": {
+        "name": "php8.4-dbg-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "535f5eaf-496d-35f5-87b5-7aa923d9fff8",
+       "product": {
+        "name": "php8.4-embedded-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5585247f-965a-3917-9087-41b9bdad999a",
+       "product": {
+        "name": "php8.4-snmp-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "58ce36cd-cc35-3076-84dd-f7eadfb78523",
+       "product": {
+        "name": "php8.4-snmp-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5b3b4ba8-74c8-378a-8c3f-d3069e9c36d5",
+       "product": {
+        "name": "php8.4-ffi-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5d2aa395-1226-3e0d-a3c9-b54617d09af4",
+       "product": {
+        "name": "php8.4-mysqlnd-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5d467629-64e8-3eff-9e8f-78887a68bf05",
+       "product": {
+        "name": "php8.4-ldap-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5ef88b74-de5a-3673-89ae-f484144073a7",
+       "product": {
+        "name": "php8.4-opcache-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5ff6f40d-17ed-39f9-b4ec-87faba1fa679",
+       "product": {
+        "name": "php8.4-gd-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "628ccbf4-8ac7-3b96-9c89-4ee683f533d6",
+       "product": {
+        "name": "php8.4-cli-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "64bede5f-caad-369f-94d6-7397a8236a6d",
+       "product": {
+        "name": "php8.4-embedded-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6557fe86-be4c-30d8-b3e6-d47365945d97",
+       "product": {
+        "name": "php8.4-mysqlnd-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6580df65-61d7-39ea-b4b0-417787c0f687",
+       "product": {
+        "name": "php8.4-intl-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "65e065f9-1177-3bd1-a849-f7db0c9bbd64",
+       "product": {
+        "name": "php8.4-common-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6746c597-a929-3979-8ed7-7f5461989474",
+       "product": {
+        "name": "php8.4-mbstring-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6768a8b4-c122-3c70-8744-94ff782839b3",
+       "product": {
+        "name": "php8.4-mbstring-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "68c2896d-d88d-3616-9272-92c40a0ca427",
+       "product": {
+        "name": "php8.4-dbg-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6990de18-1aa5-397a-ba9c-b751fbf420e8",
+       "product": {
+        "name": "php8.4-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6c253f74-f792-39b0-9f29-f6dada008274",
+       "product": {
+        "name": "php8.4-xml-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6dd88efd-9a1e-3b9d-9c8d-63ecf4b007d1",
+       "product": {
+        "name": "php8.4-embedded-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6e64a3db-71a8-3694-b0d3-3de45d5f0d10",
+       "product": {
+        "name": "php8.4-fpm-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6f97dc3b-4bbc-377b-a277-24fc7fb8d659",
+       "product": {
+        "name": "php8.4-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "70427dd0-2fd2-3f16-ade8-590217f76add",
+       "product": {
+        "name": "php8.4-process-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7245b9e0-3221-3d8c-9d13-3f1fd7d32d34",
+       "product": {
+        "name": "php8.4-dba-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "724a85dd-8d2f-33e5-9c34-ad15ba96f045",
+       "product": {
+        "name": "php8.4-ffi-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "73e881c6-ea52-3e1c-b90f-26416750659f",
+       "product": {
+        "name": "php8.4-gmp-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "74fd4aee-1e23-35c5-98c5-fedc8c025b74",
+       "product": {
+        "name": "php8.4-fpm-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "75127da2-46ed-3c5d-9677-f2538df726da",
+       "product": {
+        "name": "php8.4-dba-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "756bbfa4-cab9-3441-9247-038beae93e2c",
+       "product": {
+        "name": "php8.4-enchant-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "769be2a3-3dfc-3a32-99c4-6d932a59bb98",
+       "product": {
+        "name": "php8.4-intl-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "76e72ef9-4f49-37d3-9d81-195c851c15f6",
+       "product": {
+        "name": "php8.4-fpm-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7837c24f-1004-3112-8b8f-e61d2d70b89e",
+       "product": {
+        "name": "php8.4-ldap-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "783a0450-dd72-34e8-adb4-95b5939c121e",
+       "product": {
+        "name": "php8.4-snmp-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7a45c452-45da-3d9c-9db6-f21419b77959",
+       "product": {
+        "name": "php8.4-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7b701bc1-3204-3517-9bf5-8c2ada9193fe",
+       "product": {
+        "name": "php8.4-bcmath-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7b9e2b59-4c4c-3439-b465-a7c5b4c64b8f",
+       "product": {
+        "name": "php8.4-pdo-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7c55a98b-b04e-3088-8062-54d59dc7fb74",
+       "product": {
+        "name": "php8.4-process-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7c68e8e7-bd00-39b3-9eee-6fd0f1cfb3f2",
+       "product": {
+        "name": "php8.4-snmp-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7e28ef2b-9351-361a-b6a2-596fbec7f318",
+       "product": {
+        "name": "php8.4-enchant-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7e8cd0e6-58e6-3f60-9e37-646e17da5997",
+       "product": {
+        "name": "php8.4-pdo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "808f37f1-54dc-3422-a55f-c0712d4f9340",
+       "product": {
+        "name": "php8.4-dbg-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "82dcd445-64d3-367a-b46c-abd6c15169f1",
+       "product": {
+        "name": "php8.4-ldap-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "840ccd65-3027-36d2-a551-33f5e8c4417d",
+       "product": {
+        "name": "php8.4-dba-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "851ed88f-ccc4-31f0-a060-a98bb466a6bf",
+       "product": {
+        "name": "php8.4-pdo-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8546befa-0cd4-315c-bdea-2cde391acf90",
+       "product": {
+        "name": "php8.4-soap-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "86753a8b-908a-3229-bb3c-68422ee29b79",
+       "product": {
+        "name": "php8.4-opcache-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "86bb629a-0eb1-3e5b-ad9d-3d73a7d01f31",
+       "product": {
+        "name": "php8.4-opcache-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "87dc1c05-0fe7-3adf-91d5-79fc93c06375",
+       "product": {
+        "name": "php8.4-intl-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8899e3ed-8baa-396b-b5b3-33d18edf19fd",
+       "product": {
+        "name": "php8.4-intl-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8c996bba-486a-3d95-baf8-9ce2235a1fcd",
+       "product": {
+        "name": "php8.4-xml-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8d9e6170-dea0-3361-a480-2ba368539542",
+       "product": {
+        "name": "php8.4-fpm-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "910d8b89-a0ce-3f7b-8edf-61dc79505998",
+       "product": {
+        "name": "php8.4-process-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "93be0270-ef70-3cf8-89c7-61b322f550d2",
+       "product": {
+        "name": "php8.4-opcache-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "93c49b2a-bdaf-3149-830c-5dbec73df081",
+       "product": {
+        "name": "php8.4-ffi-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "946dd61f-7140-339b-8afc-364b8361f282",
+       "product": {
+        "name": "php8.4-dba-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9506ab39-3468-3cbd-b4e5-735ebd5d3b1d",
+       "product": {
+        "name": "php8.4-debugsource-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "95abfbbc-d147-37d1-ad69-3d681e9f265a",
+       "product": {
+        "name": "php8.4-snmp-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "95d641d4-4e4e-382e-ae9b-7a6e3e37c678",
+       "product": {
+        "name": "php8.4-gd-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "99d2ef67-f087-3649-9da3-e97abd0bf7cf",
+       "product": {
+        "name": "php8.4-ffi-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9ba54cab-e200-3dbc-ba04-f81d0daf21a7",
+       "product": {
+        "name": "php8.4-cli-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9bc700f9-0767-3440-8d00-a77641abc9f1",
+       "product": {
+        "name": "php8.4-pgsql-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9e7b3f34-b24e-383d-81e8-fd06d7625267",
+       "product": {
+        "name": "php8.4-gmp-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9f926a7c-f56f-3be7-8735-3823e711b1af",
+       "product": {
+        "name": "php8.4-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a07bb659-8e78-3ba2-8af0-6abc281ad40f",
+       "product": {
+        "name": "php8.4-dba-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a2aae0e6-0cdd-3f08-9463-3c7737349c5c",
+       "product": {
+        "name": "php8.4-pgsql-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a2f0955d-1bc6-3b32-a127-8da829eed122",
+       "product": {
+        "name": "php8.4-dba-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a5257b16-0d47-3b52-9db9-9ee30371a26c",
+       "product": {
+        "name": "php8.4-dbg-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a55281a1-0753-3a81-903a-55672aa2d6d1",
+       "product": {
+        "name": "php8.4-pgsql-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a970c9da-9485-318b-828a-c28849285e04",
+       "product": {
+        "name": "php8.4-enchant-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a9f8c900-8ef9-31da-b712-038dae26a072",
+       "product": {
+        "name": "php8.4-mysqlnd-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aae06117-dca8-3fab-be04-d1ab91504e29",
+       "product": {
+        "name": "php8.4-mbstring-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ad77aba0-9941-31b4-a7f1-ebe794cc54a9",
+       "product": {
+        "name": "php8.4-pgsql-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "af42a161-af8d-321c-96a0-a781e14cab90",
+       "product": {
+        "name": "php8.4-cli-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b3cd7e08-9ca7-32cf-9e6c-aa72e6bb39ce",
+       "product": {
+        "name": "php8.4-snmp-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b43ee28f-6716-3caa-baa5-cac0c30c3fe1",
+       "product": {
+        "name": "php8.4-gmp-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b61460a8-349c-38d7-b8ef-b7d738b90075",
+       "product": {
+        "name": "php8.4-pdo-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ba8e9bd9-65f2-3ca2-94bd-d2e8307a8107",
+       "product": {
+        "name": "php8.4-odbc-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bb3893f1-57f1-31fd-b4db-79db5cf05022",
+       "product": {
+        "name": "php8.4-opcache-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bc1cd83f-88fa-3b80-bfec-12593bf8d07d",
+       "product": {
+        "name": "php8.4-xml-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bca35fc2-358e-3d1c-82c8-e0b97840748d",
+       "product": {
+        "name": "php8.4-cli-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c02fbd69-f744-35db-99ec-5385ba2f6f28",
+       "product": {
+        "name": "php8.4-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c1f65f36-32d9-3f1c-866a-0635166e56b8",
+       "product": {
+        "name": "php8.4-gmp-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c20aee35-a2e8-33a1-a39e-58d2458fd955",
+       "product": {
+        "name": "php8.4-ffi-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c2851604-c5f8-38ea-9130-14fca3f287e5",
+       "product": {
+        "name": "php8.4-bcmath-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c4294f95-85a1-3c2d-9ddf-0aea450536c4",
+       "product": {
+        "name": "php8.4-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c4e32ff2-c7b0-3a7e-bec9-4d579eafb703",
+       "product": {
+        "name": "php8.4-bcmath-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c81d4855-0f51-33b0-8b81-ff5c1c38da49",
+       "product": {
+        "name": "php8.4-enchant-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c8935ea1-bf7e-30d4-afbf-cf6f672a0927",
+       "product": {
+        "name": "php8.4-xml-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ca10ad3f-ab12-3215-95e3-e0e97944394b",
+       "product": {
+        "name": "php8.4-process-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ca14ba05-7340-3e61-829a-868cdbd0f416",
+       "product": {
+        "name": "php8.4-common-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cf5cd413-88bb-3bc0-903b-b4d987bf7cd6",
+       "product": {
+        "name": "php8.4-embedded-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d1a9c946-cbaf-32d1-a24a-d372053308f0",
+       "product": {
+        "name": "php8.4-pdo-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d27d0eb5-51fb-3e7c-9375-b4f9df563b3f",
+       "product": {
+        "name": "php8.4-process-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d4d34740-c1fd-39a9-a44f-072c22828b7c",
+       "product": {
+        "name": "php8.4-pgsql-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d4d5252c-53a4-3798-b7b6-aa8651b29c35",
+       "product": {
+        "name": "php8.4-dbg-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d6f8bf38-df35-3797-8b3c-f152c9f5bbc3",
+       "product": {
+        "name": "php8.4-intl-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "da0e9c66-473f-3e3f-8fcd-42948fd68d5e",
+       "product": {
+        "name": "php8.4-mbstring-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dad01bbc-b418-3db2-8322-5ec49c8fd430",
+       "product": {
+        "name": "php8.4-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "db2767ab-9589-3b8c-b72e-e9c2df8991c9",
+       "product": {
+        "name": "php8.4-ffi-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dbbf55fa-bf09-3c76-bc90-4e360991dc6c",
+       "product": {
+        "name": "php8.4-mbstring-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dc0f3764-1f6f-3ebd-a39d-cc805bd9cde9",
+       "product": {
+        "name": "php8.4-cli-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dd5806a2-7587-3c94-b571-7040cab24a0e",
+       "product": {
+        "name": "php8.4-pdo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e13cb828-2d87-3f72-9e79-25c89353f118",
+       "product": {
+        "name": "php8.4-soap-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e2ccad20-4f2e-329b-92a0-f27e5feee78c",
+       "product": {
+        "name": "php8.4-mbstring-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e304f271-2f4c-3ebc-90b1-db9c8a4fe4ef",
+       "product": {
+        "name": "php8.4-odbc-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e3477f9e-f627-303d-8c7b-5f58449db61d",
+       "product": {
+        "name": "php8.4-odbc-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e433eef0-5c0c-3e47-8d4d-7d8e098fbbab",
+       "product": {
+        "name": "php8.4-fpm-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e5c2142b-52b0-3870-b47a-f42ace2f5545",
+       "product": {
+        "name": "php8.4-soap-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e6872d8f-faed-34d6-a207-0059ca57bdc2",
+       "product": {
+        "name": "php8.4-mysqlnd-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e6d1d7ce-8ad9-3ce6-99ae-27af4848a0f2",
+       "product": {
+        "name": "php8.4-process-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e7a9a0ce-fd6b-3d11-934a-aaecd21528c7",
+       "product": {
+        "name": "php8.4-embedded-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e8ab80e8-7bae-388a-ae3e-f118868345d8",
+       "product": {
+        "name": "php8.4-cli-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e90ec073-29a1-3a21-be8e-296da16a4ca5",
+       "product": {
+        "name": "php8.4-gd-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e9e3f52f-43a6-3a7c-8133-6f2ea71ae891",
+       "product": {
+        "name": "php8.4-common-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ee618600-e304-3f2c-88c7-fdd009853392",
+       "product": {
+        "name": "php8.4-intl-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f22e9947-affe-3ba9-9155-c46fb3015301",
+       "product": {
+        "name": "php8.4-gd-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f404a2e6-f895-314d-99a4-2d61e665d000",
+       "product": {
+        "name": "php8.4-pgsql-debuginfo-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f434bc03-7cbb-3c16-a31a-42b7b4d1f660",
+       "product": {
+        "name": "php8.4-process-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f5585bff-3a7c-3fc5-998a-1ecd821b2c29",
+       "product": {
+        "name": "php8.4-embedded-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f61964d3-33fa-3980-8200-fb73d09ef0c8",
+       "product": {
+        "name": "php8.4-ldap-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f6647ae2-d4bf-3163-8f9e-bb56de658cc4",
+       "product": {
+        "name": "php8.4-fpm-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f8640d49-88fb-3a11-b2df-8788fe3ed2e2",
+       "product": {
+        "name": "php8.4-cli-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fa14a310-f5f8-369a-b818-e1211f7a26cd",
+       "product": {
+        "name": "php8.4-common-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fb039f04-4039-3ebe-8393-1d9de7113710",
+       "product": {
+        "name": "php8.4-soap-debuginfo-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fb32eca8-fef2-31c5-bc8c-584ff61cdbb2",
+       "product": {
+        "name": "php8.4-intl-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fb70f02a-3617-3c94-a3e2-4f2f89ef6bd6",
+       "product": {
+        "name": "php8.4-bcmath-debuginfo-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fbb56f94-f316-3e63-a510-9f7a85985ac7",
+       "product": {
+        "name": "php8.4-snmp-0:8.4.27-2.el10_3.1.s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fc25340e-2e8a-378c-8a52-0d341eaa97e0",
+       "product": {
+        "name": "php8.4-odbc-0:8.4.27-2.el10_3.1.x86_64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fdb9b2f5-0e8c-3f62-8863-f3cee3591c5a",
+       "product": {
+        "name": "php8.4-gd-0:8.4.27-2.el10_3.1.aarch64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fdbbb443-9002-3d87-ab39-498f74881eae",
+       "product": {
+        "name": "php8.4-mysqlnd-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fe71165e-e9f7-3d06-9d5d-e25d626292d3",
+       "product": {
+        "name": "php8.4-dbg-debuginfo-0:8.4.27-2.el10_3.1.ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 11, 2026, 1:45:49 PM",
+     "dateUpdated": "Nov 11, 2026, 7:12:20 PM",
+     "description": "Red Hat Security Advisory: php8.4 security update",
+     "id": "RHSA-2026:98609",
+     "references": "https://access.redhat.com/errata/RHSA-2026:98609\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_98609.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "An update for php8.4 is now available for Red Hat Enterprise Linux 10.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+    },
+    "id": "329ce0be-2e34-3dff-bf88-9d1fa1aff77c"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
        "id": "00146b24-1747-3a6f-b7bd-fc60f1c423d1",
        "product": {
         "name": "php-xml-debuginfo-0:8.3.36-1.el10_2.aarch64",
@@ -10178,18 +14500,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
+     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 9:47:18 PM",
-     "description": "security update for php",
+     "datePublished": "Oct 21, 2026, 8:11:09 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:01 PM",
+     "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:87070",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87070.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008327.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008327.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
+     "references": "https://access.redhat.com/errata/RHSA-2026:87070\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87070.json\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "security update for php"
+     "summary": "An update for php is now available for Red Hat Enterprise Linux 10.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "39561388-c40d-35e5-856a-1167d1a11380"
    },
@@ -14457,16 +18779,16 @@
      ],
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 9:47:34 PM",
-     "description": "security update for php",
+     "datePublished": "Oct 23, 2026, 7:29:21 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:11 PM",
+     "description": "Red Hat Security Advisory: php:8.2 security update",
      "id": "RHSA-2026:88834",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_88834.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008415.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008415.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
+     "references": "https://access.redhat.com/errata/RHSA-2026:88834\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88834.json\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "security update for php"
+     "summary": "An update for the php:8.2 module is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "40fa2d5e-3131-357c-813e-de539618f1c0"
    },
@@ -15486,7 +19808,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 2:34:42 AM",
-     "dateUpdated": "Oct 29, 2026, 9:31:40 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:12 PM",
      "description": "Red Hat Security Advisory: php:7.4 security update",
      "id": "RHSA-2026:88533",
      "references": "https://access.redhat.com/errata/RHSA-2026:88533\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88533.json\n",
@@ -17323,7 +21645,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 3:23:07 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:44 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:14 PM",
      "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:88725",
      "references": "https://access.redhat.com/errata/RHSA-2026:88725\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88725.json\n",
@@ -19168,16 +23490,16 @@
      ],
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 9:47:32 PM",
-     "description": "security update for php",
+     "datePublished": "Oct 23, 2026, 3:23:46 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:14 PM",
+     "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:88720",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_88720.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008372.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008372.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
+     "references": "https://access.redhat.com/errata/RHSA-2026:88720\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88720.json\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "security update for php"
+     "summary": "An update for php is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "5e7f9864-b2d9-3bab-8422-88f2a5f48f68"
    },
@@ -21912,18 +26234,18 @@
        }
       }
      ],
-     "aliases": "CVE-2025-1218\nCVE-2025-14181\nCVE-2026-109618\nCVE-2026-109619\nCVE-2026-6103\nCVE-2026-91765\nCVE-2026-91766\nCVE-2026-91767\nCVE-2026-91768\nCVE-2026-91769\nCVE-2026-92842\nCVE-2026-93682\n",
+     "aliases": "CVE-2025-1218\nCVE-2025-14181\nCVE-2026-6103\nCVE-2026-91765\nCVE-2026-91766\nCVE-2026-91767\nCVE-2026-91768\nCVE-2026-91769\nCVE-2026-92842\nCVE-2026-93682\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 9:47:28 PM",
-     "description": "security update for libzip",
+     "datePublished": "Oct 21, 2026, 3:53:19 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:02 PM",
+     "description": "Red Hat Security Advisory: php:7.4 security update",
      "id": "RHSA-2026:87080",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87080.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008322.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008322.html\nhttps://www.suse.com/security/cve/CVE-2025-1218/\nhttps://www.suse.com/security/cve/CVE-2025-14181/\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-6103/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\nhttps://www.suse.com/security/cve/CVE-2026-91766/\nhttps://www.suse.com/security/cve/CVE-2026-91767/\nhttps://www.suse.com/security/cve/CVE-2026-91768/\nhttps://www.suse.com/security/cve/CVE-2026-91769/\nhttps://www.suse.com/security/cve/CVE-2026-92842/\nhttps://www.suse.com/security/cve/CVE-2026-93682/\n",
+     "references": "https://access.redhat.com/errata/RHSA-2026:87080\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87080.json\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "security update for libzip"
+     "summary": "An update for the php:7.4 module is now available for Red Hat Enterprise Linux 8.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "61bbaa3a-93d9-34bc-addd-a6b2d783ac12"
    },
@@ -24371,6 +28693,15 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "0236c3c9-c0e6-37f5-b034-fb820ecf3e1e",
+       "product": {
+        "name": "Energy Management System",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "0b3187b1-0899-34e5-b817-0ea455071211",
        "product": {
         "name": "Desigo DXR2",
@@ -24398,9 +28729,36 @@
        }
       },
       {
+       "id": "0ebd1f82-76b2-38dc-b540-775ec89140a4",
+       "product": {
+        "name": "Local Monitoring bt-monitoring-vm",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "15f9ab29-e146-339c-a3d8-accc6789deea",
+       "product": {
+        "name": "Heliox Rapid",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "1b5530f9-79a5-33f1-b11b-74c21220e553",
        "product": {
         "name": "cRSP",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "1d86ba58-cc6e-3ad5-9099-9977cbf8b23e",
+       "product": {
+        "name": "Voice alarm systems and audio matrices",
         "vendor": {
          "name": "Siemens"
         }
@@ -24434,6 +28792,15 @@
        }
       },
       {
+       "id": "3dbe36d4-f938-36fb-b052-a2866df23d53",
+       "product": {
+        "name": "VersiCloudHeliox Dual Port 60kW",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "3f844445-6190-30a0-bb64-dde7b83bf3fb",
        "product": {
         "name": "Energy Engage V3.1SP1",
@@ -24452,9 +28819,45 @@
        }
       },
       {
+       "id": "433de6ab-87ff-3e43-83be-93db84d89ade",
+       "product": {
+        "name": "SICHARGE UC",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "4f7daae8-6f82-3437-b7c7-cb7dfd2c85ca",
        "product": {
         "name": "Desigo DXR3",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "65f21f7a-9aae-3f75-9b75-0c722c47c7ca",
+       "product": {
+        "name": "Heliox Flex Pro",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "66331810-4a69-35d8-8e16-7f620c225488",
+       "product": {
+        "name": "Heliox H60",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "68541dd3-3fd4-3605-9b4a-704b5a253b89",
+       "product": {
+        "name": "SICHARGE FLEX",
         "vendor": {
          "name": "Siemens"
         }
@@ -24470,9 +28873,27 @@
        }
       },
       {
+       "id": "6d5dbc02-96a5-3d29-b927-07118aadb8b0",
+       "product": {
+        "name": "Sifinity Setup",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "6dfdf48b-b9d9-33de-a786-d65265127d59",
        "product": {
         "name": "blueplanet 360 NX3 M6 WM OD IISX",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "717a8bed-748f-3d77-871e-c76548bc89c9",
+       "product": {
+        "name": "Sicharge D Configuration Backend",
         "vendor": {
          "name": "Siemens"
         }
@@ -24524,6 +28945,15 @@
        }
       },
       {
+       "id": "8e47fa4d-331f-358f-9b70-1ac4b599ee38",
+       "product": {
+        "name": "Voice alarm panels",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "90c81a2d-ccea-3eca-b6f8-e7ff611371d3",
        "product": {
         "name": "Connect X500",
@@ -24536,6 +28966,15 @@
        "id": "94abeaa7-dc75-35e7-a626-9c7bc048ff7c",
        "product": {
         "name": "Desigo PXC4",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "95c03ba5-c722-334f-9d03-871745efd004",
+       "product": {
+        "name": "Depotfinity",
         "vendor": {
          "name": "Siemens"
         }
@@ -24569,6 +29008,33 @@
        }
       },
       {
+       "id": "9a702912-be1b-3ceb-bb44-ba4dde2c09d4",
+       "product": {
+        "name": "Call stations",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "9aa969fc-a72a-3fd5-9639-3f8d7605e466",
+       "product": {
+        "name": "Verischarge",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "a1d28521-be46-371e-910a-6c143cc6dad5",
+       "product": {
+        "name": "Novigo VANSYS",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "a7cd7370-fb5f-303f-8874-ddb814ae5aa6",
        "product": {
         "name": "Sinteso FS20 EN",
@@ -24578,9 +29044,27 @@
        }
       },
       {
+       "id": "a8d1d443-b88a-3952-8f7d-c5942466c309",
+       "product": {
+        "name": "Sifinity Control",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "b0d79712-bc19-354c-b6c3-6a6f49d42177",
        "product": {
         "name": "Connect X300",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "b35cc853-8bd5-3308-8440-d88835601639",
+       "product": {
+        "name": "Sicharge D",
         "vendor": {
          "name": "Siemens"
         }
@@ -24605,9 +29089,27 @@
        }
       },
       {
+       "id": "c62bcf67-7a03-3dd0-80f6-5c8c0fbe39de",
+       "product": {
+        "name": "Chargesight",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "d0132291-4832-3993-8ccc-32cab75ab2f5",
        "product": {
         "name": "SIPORT",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "d0bfbe11-e7c3-3bce-ba7b-89d32bc02386",
+       "product": {
+        "name": "PACE-Design",
         "vendor": {
          "name": "Siemens"
         }
@@ -24677,6 +29179,15 @@
        }
       },
       {
+       "id": "f4f2dc99-bd60-39c8-8b8a-ee80b1cc9bc6",
+       "product": {
+        "name": "Sifinity Go",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "f69f2780-e954-385e-9c8f-fd397718bbd5",
        "product": {
         "name": "SiPass integrated",
@@ -24693,12 +29204,21 @@
          "name": "Siemens"
         }
        }
+      },
+      {
+       "id": "fe502d69-3042-31ab-8298-0bf32c8a45aa",
+       "product": {
+        "name": "Novigo VANSYS core",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
       }
      ],
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 12:00:00 AM",
-     "dateUpdated": "Oct 29, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 5, 2026, 12:00:00 AM",
      "description": "SSA-166980: PHP2Shell Vulnerabilities in Siemens Products",
      "id": "SSA-166980",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-166980.json\n",
@@ -24706,7 +29226,7 @@
       "id": 7,
       "name": "csaf_siemens"
      },
-     "summary": "On October 21, 2026, the PHP project and security researchers disclosed two critical, unauthenticated remote code execution vulnerabilities in the core PHP language runtime known as \"php2shell\" (tracked as CVE-2026-109618 and CVE-2026-109619). This advisory covers the status of impact of various Siemens software products.\n\nAs a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines, and to follow the recommendations in the product manuals.\n\nSiemens is actively monitoring the situation and assessing the implications of these vulnerabilities on our portfolio. Because this evaluation is ongoing, our findings are subject to change as new technical details and vendor updates emerge. We will publish updated findings, guidance, and remediation recommendations as soon as they become available."
+     "summary": "On October 21, 2026, the PHP project and security researchers disclosed two critical, unauthenticated remote code execution vulnerabilities in the core PHP language runtime known as \"php2shell\" (tracked as CVE-2026-109618 and CVE-2026-109619). This advisory covers the status of impact of various Siemens software products.\n\nAs a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines, and to follow the recommendations in the product manuals.\n\nSiemens is actively monitoring the situation and assessing the implications of these vulnerabilities on our portfolio. Because this evaluation is ongoing, our findings are subject to change as new technical details and vendor updates emerge. We will publish updated findings, guidance, and remediation recommendations as soon as they become available.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fixes and recommends mitigations for products where fixes are not or not yet available."
     },
     "id": "638a06c0-144b-3881-85a5-34051e41182f"
    },
@@ -26541,18 +31061,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
+     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 9:47:20 PM",
-     "description": "security update for php8.4",
+     "datePublished": "Oct 21, 2026, 8:10:03 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:01 PM",
+     "description": "Red Hat Security Advisory: php8.4 security update",
      "id": "RHSA-2026:87071",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87071.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008329.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008329.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
+     "references": "https://access.redhat.com/errata/RHSA-2026:87071\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87071.json\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "security update for php8.4"
+     "summary": "An update for php8.4 is now available for Red Hat Enterprise Linux 10.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "663535ff-3c9c-3b63-8b29-2d9b6c10af53"
    },
@@ -28900,18 +33420,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
+     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 9:47:21 PM",
-     "description": "security update for php",
+     "datePublished": "Oct 21, 2026, 8:35:47 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:03 PM",
+     "description": "Red Hat Security Advisory: php:8.2 security update",
      "id": "RHSA-2026:87072",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87072.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008336.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008336.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
+     "references": "https://access.redhat.com/errata/RHSA-2026:87072\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87072.json\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "security update for php"
+     "summary": "An update for the php:8.2 module is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "7ca50746-bf35-331e-a9e0-f3c4988b669a"
    },
@@ -30740,7 +35260,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 10:00:37 AM",
-     "dateUpdated": "Oct 29, 2026, 9:31:42 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:09 PM",
      "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:88561",
      "references": "https://access.redhat.com/errata/RHSA-2026:88561\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88561.json\n",
@@ -31515,7 +36035,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 9:48:40 AM",
-     "dateUpdated": "Oct 29, 2026, 9:31:42 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:13 PM",
      "description": "Red Hat Security Advisory: php:7.4 security update",
      "id": "RHSA-2026:88565",
      "references": "https://access.redhat.com/errata/RHSA-2026:88565\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88565.json\n",
@@ -32947,7 +37467,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 2:41:02 AM",
-     "dateUpdated": "Oct 29, 2026, 9:31:45 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:12 PM",
      "description": "Red Hat Security Advisory: php:7.4 security update",
      "id": "RHSA-2026:88532",
      "references": "https://access.redhat.com/errata/RHSA-2026:88532\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88532.json\n",
@@ -34784,7 +39304,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 11:44:40 AM",
-     "dateUpdated": "Oct 29, 2026, 9:31:42 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:14 PM",
      "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:88659",
      "references": "https://access.redhat.com/errata/RHSA-2026:88659\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_88659.json\n",
@@ -40492,18 +45012,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
+     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 4:14:39 AM",
-     "dateUpdated": "Nov 4, 2026, 9:47:25 PM",
-     "description": "Important: php:8.3 security update",
+     "datePublished": "Oct 21, 2026, 8:36:00 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:02 PM",
+     "description": "Red Hat Security Advisory: php:8.3 security update",
      "id": "RHSA-2026:87079",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87079.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008338.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008338.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
+     "references": "https://access.redhat.com/errata/RHSA-2026:87079\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87079.json\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "Important: php:8.3 security update"
+     "summary": "An update for the php:8.3 module is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "c505aeda-c0c6-3e1a-8100-be832a0f8370"
    },
@@ -41108,7 +45628,7 @@
      "aliases": "CVE-2023-54404\nCVE-2025-62718\nCVE-2026-8643\nCVE-2026-9496\nCVE-2026-12185\nCVE-2026-13697\nCVE-2026-14682\nCVE-2026-15076\nCVE-2026-16308\nCVE-2026-17106\nCVE-2026-18427\nCVE-2026-19203\nCVE-2026-19534\nCVE-2026-39820\nCVE-2026-41178\nCVE-2026-41707\nCVE-2026-42499\nCVE-2026-42502\nCVE-2026-45416\nCVE-2026-47884\nCVE-2026-47886\nCVE-2026-47888\nCVE-2026-47890\nCVE-2026-47892\nCVE-2026-50010\nCVE-2026-55831\nCVE-2026-55833\nCVE-2026-55851\nCVE-2026-56745\nCVE-2026-56746\nCVE-2026-56819\nCVE-2026-56852\nCVE-2026-56854\nCVE-2026-58062\nCVE-2026-59280\nCVE-2026-59282\nCVE-2026-59283\nCVE-2026-59296\nCVE-2026-59313\nCVE-2026-59323\nCVE-2026-59651\nCVE-2026-59887\nCVE-2026-59899\nCVE-2026-59901\nCVE-2026-62243\nCVE-2026-64607\nCVE-2026-67213\nCVE-2026-67312\nCVE-2026-67313\nCVE-2026-67314\nCVE-2026-67320\nCVE-2026-67321\nCVE-2026-68494\nCVE-2026-68497\nCVE-2026-69152\nCVE-2026-69192\nCVE-2026-71290\nCVE-2026-71324\nCVE-2026-71325\nCVE-2026-71327\nCVE-2026-73500\nCVE-2026-73508\nCVE-2026-74835\nCVE-2026-75838\nCVE-2026-75899\nCVE-2026-75931\nCVE-2026-76169\nCVE-2026-81521\nCVE-2026-82417\nCVE-2026-82562\nCVE-2026-84292\nCVE-2026-84375\nCVE-2026-84394\nCVE-2026-84428\nCVE-2026-84445\nCVE-2026-84469\nCVE-2026-84504\nCVE-2026-84961\nCVE-2026-85062\nCVE-2026-85124\nCVE-2026-85152\nCVE-2026-85595\nCVE-2026-85597\nCVE-2026-86063\nCVE-2026-87743\nCVE-2026-88004\nCVE-2026-88007\nCVE-2026-88008\nCVE-2026-88009\nCVE-2026-88011\nCVE-2026-88012\nCVE-2026-88031\nCVE-2026-88878\nCVE-2026-88879\nCVE-2026-90711\nCVE-2026-93749\nCVE-2026-100655\nCVE-2026-100656\nCVE-2026-100666\nCVE-2026-101916\nCVE-2026-102925\nCVE-2026-102930\nCVE-2026-103435\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 2:24:21 PM",
-     "dateUpdated": "Nov 4, 2026, 4:01:46 PM",
+     "dateUpdated": "Nov 13, 2026, 4:45:10 PM",
      "description": "Red Hat Security Advisory: Red Hat OpenShift Dev Spaces 3.31.0 Release.",
      "id": "RHSA-2026:90321",
      "references": "https://access.redhat.com/errata/RHSA-2026:90321\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90321.json\n",
@@ -43707,18 +48227,18 @@
        }
       }
      ],
-     "aliases": "CVE-2026-109618\nCVE-2026-109619\nCVE-2026-91765\n",
+     "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 21, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 9:47:23 PM",
-     "description": "security update for libzip",
+     "datePublished": "Oct 21, 2026, 8:30:32 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:03 PM",
+     "description": "Red Hat Security Advisory: php:8.2 security update",
      "id": "RHSA-2026:87073",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_87073.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008331.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008331.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\nhttps://www.suse.com/security/cve/CVE-2026-91765/\n",
+     "references": "https://access.redhat.com/errata/RHSA-2026:87073\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87073.json\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "security update for libzip"
+     "summary": "An update for the php:8.2 module is now available for Red Hat Enterprise Linux 8.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "e243d2ef-3010-3e91-a63a-f751028c5ba8"
    },
@@ -46185,16 +50705,16 @@
      ],
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
-     "datePublished": "Oct 26, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 9:47:36 PM",
-     "description": "security update for php",
+     "datePublished": "Oct 26, 2026, 8:43:00 PM",
+     "dateUpdated": "Nov 11, 2026, 7:11:12 PM",
+     "description": "Red Hat Security Advisory: php:8.3 security update",
      "id": "RHSA-2026:89111",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/rhsa-2026_89111.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008440.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008440.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
+     "references": "https://access.redhat.com/errata/RHSA-2026:89111\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_89111.json\n",
      "source": {
       "id": 9,
       "name": "csaf_redhat"
      },
-     "summary": "security update for php"
+     "summary": "An update for the php:8.3 module is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "e41da11d-b6d2-3650-832e-a48ee0f8c844"
    },
@@ -46970,7 +51490,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 9:29:11 PM",
-     "dateUpdated": "Oct 29, 2026, 9:31:32 PM",
+     "dateUpdated": "Nov 11, 2026, 1:46:55 PM",
      "description": "Red Hat Security Advisory: Red Hat Hardened Images RPMs bug fix and enhancement update",
      "id": "RHSA-2026:87414",
      "references": "https://access.redhat.com/errata/RHSA-2026:87414\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87414.json\n",
@@ -47013,6 +51533,15 @@
        }
       },
       {
+       "id": "0ea66170-1400-3d14-b11f-11150bb72b8d",
+       "product": {
+        "name": "Wibu-Systems CodeMeter",
+        "vendor": {
+         "name": "Wibu-Systems"
+        }
+       }
+      },
+      {
        "id": "16af6989-d4cb-32ad-9a9c-8c370f8de826",
        "product": {
         "name": "RESF Rocky Linux",
@@ -47040,6 +51569,15 @@
        }
       },
       {
+       "id": "1fe57771-4829-3757-a58c-2a811cffbb5b",
+       "product": {
+        "name": "3655",
+        "vendor": {
+         "name": "XEROX"
+        }
+       }
+      },
+      {
        "id": "20efbf4d-0070-3540-9ecf-ff41bd49a648",
        "product": {
         "name": "5",
@@ -47058,11 +51596,29 @@
        }
       },
       {
+       "id": "2cb2a32d-8603-37ef-918f-bef4861e9da7",
+       "product": {
+        "name": "SUSE openSUSE",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
        "id": "3d8f8e97-4650-33a1-a1a0-d94118e2b064",
        "product": {
         "name": "Debian Linux",
         "vendor": {
          "name": "Debian"
+        }
+       }
+      },
+      {
+       "id": "40b2f2c5-ef2f-3e06-b051-c0c7a3d762b1",
+       "product": {
+        "name": "WorkCentre",
+        "vendor": {
+         "name": "XEROX"
         }
        }
       },
@@ -47094,6 +51650,15 @@
        }
       },
       {
+       "id": "55d8627e-817f-3543-80a0-bb279d8bcd50",
+       "product": {
+        "name": "aQrate",
+        "vendor": {
+         "name": "Triumph-Adler"
+        }
+       }
+      },
+      {
        "id": "5bd27954-d51b-31b8-92ca-5a2478975e8d",
        "product": {
         "name": "11.136.0.50",
@@ -47121,6 +51686,15 @@
        }
       },
       {
+       "id": "880d3aef-7d38-31d2-a628-5dc07c838188",
+       "product": {
+        "name": "Integration Bus",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
        "id": "8d278ced-69d4-392e-9a31-95725f5f7699",
        "product": {
         "name": "7",
@@ -47130,11 +51704,29 @@
        }
       },
       {
+       "id": "92e74aad-95c8-3732-a575-efc4b0e67d3f",
+       "product": {
+        "name": "IBM App Connect Enterprise",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
        "id": "989fcd1d-421e-39c5-b42b-ed64ca4c99d0",
        "product": {
         "name": "cPanel cPanel/WHM",
         "vendor": {
          "name": "cPanel"
+        }
+       }
+      },
+      {
+       "id": "9e9c0ef8-c85e-3bda-9b33-fd5c598cb0ae",
+       "product": {
+        "name": "Xerox Altalink",
+        "vendor": {
+         "name": "XEROX"
         }
        }
       },
@@ -47202,11 +51794,29 @@
        }
       },
       {
+       "id": "dee052b8-b4df-3f21-a904-8a351127b86f",
+       "product": {
+        "name": "10.1-10.1.0.8",
+        "vendor": {
+         "name": "IBM"
+        }
+       }
+      },
+      {
        "id": "df024924-1fa4-3f26-8f89-2b8de40e9fce",
        "product": {
         "name": "Checkmk",
         "vendor": {
          "name": "Checkmk GmbH"
+        }
+       }
+      },
+      {
+       "id": "e017b341-dece-3964-afbb-4fae5e76a792",
+       "product": {
+        "name": "10.2 (Patch 29)",
+        "vendor": {
+         "name": "Triumph-Adler"
         }
        }
       },
@@ -47225,6 +51835,15 @@
         "name": "Oracle Linux",
         "vendor": {
          "name": "Oracle Corporation"
+        }
+       }
+      },
+      {
+       "id": "e8fe3d82-eef9-368c-8ecb-c37abd3c3f7e",
+       "product": {
+        "name": "3655i",
+        "vendor": {
+         "name": "XEROX"
         }
        }
       },
@@ -47286,7 +51905,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 20, 2026, 10:00:00 PM",
-     "dateUpdated": "Oct 25, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 12, 2026, 11:00:00 PM",
      "description": "PHP: Mehrere Schwachstellen ermöglichen Codeausführung",
      "id": "WID-SEC-W-2026-4055",
      "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4055.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4055\n",
@@ -47357,9 +51976,9 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 6, 2026, 6:00:19 AM",
+     "dataProcessed": "Nov 15, 2026, 7:21:23 AM",
      "datePublished": "Oct 21, 2026, 1:48:34 PM",
-     "dateUpdated": "Nov 5, 2026, 6:17:38 PM",
+     "dateUpdated": "Nov 15, 2026, 12:15:58 AM",
      "description": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
      "enisa_id": "EUVD-2026-107260\n",
      "epss": 100.0,
@@ -50718,7 +55337,7 @@
    }
   ],
   "id": "CVE-2026-109618",
-  "lastModified": "2026-11-05T19:17:07.900",
+  "lastModified": "2026-11-15T01:18:01.333",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -50843,6 +55462,10 @@
     "url": "http://www.openwall.com/lists/oss-security/2026/10/23/5"
    },
    {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "url": "https://github.com/rapid7/metasploit-framework/pull/22139"
+   },
+   {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
     "tags": [
      "Third Party Advisory"
@@ -50893,7 +55516,7 @@
    }
   ],
   "sourceIdentifier": "security@php.net",
-  "vulnStatus": "Analyzed",
+  "vulnStatus": "Modified",
   "weaknesses": [
    {
     "description": [

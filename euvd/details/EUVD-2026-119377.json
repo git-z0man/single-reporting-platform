@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 8, 2026, 2:31:48 AM",
-  "dateUpdated": "Nov 13, 2026, 8:58:23 PM",
+  "dateUpdated": "Nov 14, 2026, 4:56:44 AM",
   "description": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -57,7 +57,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-114713\nGHSA-237f-p9h6-wq4r\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 14, 2026, 7:06:36 AM",
+     "dataProcessed": "Nov 15, 2026, 7:06:37 AM",
      "datePublished": "Nov 8, 2026, 3:30:38 AM",
      "dateUpdated": "Nov 13, 2026, 9:31:47 PM",
      "description": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
@@ -76,12 +76,12 @@
      "baseScore": 8.6,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 14, 2026, 7:18:59 AM",
+     "dataProcessed": "Nov 15, 2026, 7:18:34 AM",
      "datePublished": "Nov 8, 2026, 2:31:48 AM",
-     "dateUpdated": "Nov 13, 2026, 8:58:23 PM",
+     "dateUpdated": "Nov 14, 2026, 4:56:44 AM",
      "description": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
      "enisa_id": "EUVD-2026-119377\n",
-     "epss": 0.3,
+     "epss": 0.51,
      "exploitedSince": "Nov 13, 2026, 12:00:00 AM",
      "id": "CVE-2026-114713",
      "references": "https://www.unrealircd.org/\nhttps://www.unrealircd.org/index/news\nhttps://forums.unrealircd.org/viewtopic.php?t=9487\n",
@@ -110,7 +110,7 @@
    }
   ],
   "enisaUuid": "ac3cf00d-a70c-3a43-9e68-6ac7905aa2e6",
-  "epss": 0.3,
+  "epss": 0.51,
   "exploitedSince": "Nov 13, 2026, 12:00:00 AM",
   "id": "EUVD-2026-119377",
   "references": "https://www.unrealircd.org/\nhttps://www.unrealircd.org/index/news\nhttps://forums.unrealircd.org/viewtopic.php?t=9487\n"
