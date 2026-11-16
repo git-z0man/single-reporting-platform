@@ -32,7 +32,7 @@ vulnerability_services_retrieved: 2026-11-11 (UTC morning run; VulnOptiCON furth
 ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage, and (from 2026-10-08) the Vulnerability Services topic page — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-11-15
+last_check: 2026-11-16
 last_change: 2026-11-12
 ar_user_manual_pdf_v12_url: https://www.enisa.europa.eu/media/57516 (new 2026-10-21: the landing page's "Download" button; served as "SRP - User Manual - ARs v1.2.0.pdf"; the v1.1 URL above still serves the unchanged v1.1 file)
 ar_user_manual_pdf_v13_url: https://www.enisa.europa.eu/sites/default/files/2026-11/SRP%20-%20User%20Manual%20-%20ARs%20v1.3.pdf (new 2026-11-05: the landing page's "Download" button; the v1.2 URL above still serves the unchanged v1.2 file, hash `c8559c9f…` re-verified)
@@ -44,6 +44,16 @@ ar_user_manual_pdf_v12_sha256: c8559c9f21460c2edd719128fe517aa787ea83ee643ef559e
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-11-16 UTC (vs. 2026-11-15)
+
+No wording moved on any of the thirteen pages. One address observation is recorded here for the first time; the EU KEV paragraph still says SRP reports "will" enrich the EU KEV.
+
+**Watch**
+- Four tracked addresses now answer HTTP 301 to the same page under the long path `/topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp/`: the CSIRT list, the AR User Manual, the tutorial video and the PEC guidance, whose slug now reads `cra-srp-guidance-particularly-exceptional-circumstances-pec` (it still said `particular` on 2026-10-13). The main page's navigation links these four at the new path. When they moved is not known: earlier runs followed redirects without recording them. The three other guidance pages, Terms and the Glossary still answer 200 at the short path. Frontmatter URLs left as they are, since they still resolve; replacing them is worth a person's look.
+
+**Unchanged**
+FAQ Q1-Q35 ("Updated: 15 October 2026") and Glossary 1.6 word for word (`tools/fetch_enisa.py --dry-run` exit 0), CSIRT list (`tools/check_csirt_list.py` exit 0, 27 countries), main page (1.3 note, Factsheet in 23 languages plus English), four guidance pages (12 September, PEC 12 October), Terms (10/09/2026), tutorial video, Status page, Vulnerability Services page, manual landing page (version 1.3) and v1.3 PDF (hash `9d01b7dc…`, Last-Modified 4 Nov 2026 20:05:36 GMT). Content navigation 10 entries. 13 pages HTTP 200.
 
 ### 2026-11-13 UTC (vs. 2026-11-12)
 
