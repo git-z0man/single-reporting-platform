@@ -32,7 +32,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 21, 2026, 1:48:34 PM",
-  "dateUpdated": "Nov 15, 2026, 12:15:58 AM",
+  "dateUpdated": "Nov 16, 2026, 3:18:23 PM",
   "description": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
   "enisaIdAdvisory": [
    {
@@ -28792,6 +28792,15 @@
        }
       },
       {
+       "id": "36782b80-d815-3b16-80a0-85d5113b2a3d",
+       "product": {
+        "name": "WTV776-HB6035 Firmware",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "3dbe36d4-f938-36fb-b052-a2866df23d53",
        "product": {
         "name": "VersiCloudHeliox Dual Port 60kW",
@@ -28939,6 +28948,15 @@
        "id": "8701ac85-3823-3c02-af59-b3d7928a87a6",
        "product": {
         "name": "Enlighted Space",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "87e5ae49-8caf-3880-8621-447a22bb328d",
+       "product": {
+        "name": "WTV676-HB6035 Firmware",
         "vendor": {
          "name": "Siemens"
         }
@@ -29218,7 +29236,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 5, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 16, 2026, 12:00:00 AM",
      "description": "SSA-166980: PHP2Shell Vulnerabilities in Siemens Products",
      "id": "SSA-166980",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-166980.json\n",
@@ -51587,6 +51605,15 @@
        }
       },
       {
+       "id": "22194793-6669-371f-abc0-49a99766c490",
+       "product": {
+        "name": "Xerox Versalink",
+        "vendor": {
+         "name": "XEROX"
+        }
+       }
+      },
+      {
        "id": "2898dfd3-f7d9-3fec-bed2-1effeb3f5f30",
        "product": {
         "name": "11.110.0.153",
@@ -51758,6 +51785,15 @@
        }
       },
       {
+       "id": "aed7e1e2-84fb-3e7c-98bf-7012ed9df9b1",
+       "product": {
+        "name": "Trend Micro Apex One",
+        "vendor": {
+         "name": "Trend Micro"
+        }
+       }
+      },
+      {
        "id": "b00b5416-ee9a-35fd-bf16-6b3a046634be",
        "product": {
         "name": "8.4.27",
@@ -51772,6 +51808,15 @@
         "name": "SUSE Linux",
         "vendor": {
          "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c3a717c1-cd13-35ef-862a-6bca95618c38",
+       "product": {
+        "name": "Xerox WorkCentre",
+        "vendor": {
+         "name": "XEROX"
         }
        }
       },
@@ -51905,7 +51950,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 20, 2026, 10:00:00 PM",
-     "dateUpdated": "Nov 12, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 15, 2026, 11:00:00 PM",
      "description": "PHP: Mehrere Schwachstellen ermöglichen Codeausführung",
      "id": "WID-SEC-W-2026-4055",
      "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4055.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4055\n",
@@ -51976,9 +52021,9 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 15, 2026, 7:21:23 AM",
+     "dataProcessed": "Nov 17, 2026, 7:22:46 AM",
      "datePublished": "Oct 21, 2026, 1:48:34 PM",
-     "dateUpdated": "Nov 15, 2026, 12:15:58 AM",
+     "dateUpdated": "Nov 16, 2026, 3:18:23 PM",
      "description": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
      "enisa_id": "EUVD-2026-107260\n",
      "epss": 100.0,
@@ -53449,6 +53494,32 @@
        {
         "lessThan": "*",
         "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "WTV676-HB6035 Firmware",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "WTV776-HB6035 Firmware",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
         "version": "0",
         "versionType": "custom"
        }
@@ -55289,6 +55360,12 @@
      {
       "cpeMatch": [
        {
+        "criteria": "cpe:2.3:a:siemens:local_monitoring_bt-monitoring-vm:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5603B04C-ECD4-4403-A756-456994BF2534",
+        "versionEndExcluding": "20261103",
+        "vulnerable": true
+       },
+       {
         "criteria": "cpe:2.3:a:siemens:spectrum_power_4:-:*:*:*:*:*:*:*",
         "matchCriteriaId": "3D40B786-1DB0-444A-86F5-C4C8785E1DE7",
         "vulnerable": true
@@ -55337,7 +55414,7 @@
    }
   ],
   "id": "CVE-2026-109618",
-  "lastModified": "2026-11-15T01:18:01.333",
+  "lastModified": "2026-11-16T16:54:58.603",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -55463,6 +55540,9 @@
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://github.com/rapid7/metasploit-framework/pull/22139"
    },
    {
@@ -55516,7 +55596,7 @@
    }
   ],
   "sourceIdentifier": "security@php.net",
-  "vulnStatus": "Modified",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [
