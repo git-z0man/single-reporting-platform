@@ -29,11 +29,11 @@ cra_srp_status_url: https://www.enisa.europa.eu/topics/product-security/vulnerab
 cra_srp_status_retrieved: 2026-10-13 (fetched 06:07 UTC, first capture)
 terms_conditions_retrieved: 2026-10-01 (fetched 06:15 UTC, unchanged since 2026-09-17)
 vulnerability_services_retrieved: 2026-11-11 (UTC morning run; VulnOptiCON further-info list removed, EU KEV paragraph unchanged; earlier: 2026-10-08 fetched 10:56 UTC; first capture. Word-identical to the Internet Archive copy of 2026-10-04 05:46 UTC; the "EU KEV Catalogue" paragraph is word-identical to the archive's earliest copy, 2026-09-21 07:50 UTC)
-ar_user_tutorial_video_retrieved: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`)
+ar_user_tutorial_video_retrieved: 2026-11-17 (fetched ~07:00 UTC, twice; the PeerTube iframe is gone, replaced by Drupal's "No video provider was found to handle the given URL." — `videos.enisa.europa.eu` answered HTTP 502 at the same time; earlier: 2026-10-01 (fetched 06:15 UTC; unchanged since 2026-09-23 — same iframe src `tFTcnj2zTHEgHq1vryGNmH`))
 purpose: Baseline snapshot for change detection. Future runs diff the live page(s) — main/FAQ page, the Glossary and CSIRT-list subpages, the four guidance subpages listed in `guidance_urls`, and (from 2026-09-10) the AR User Manual and Terms and Conditions subpages, and (from 2026-09-11) the AR User Tutorial Video subpage, and (from 2026-10-08) the Vulnerability Services topic page — against this file.
 note: One logical block per FAQ entry / per guidance subpage to keep diffs readable. Update `retrieved` (or the other `*_retrieved` dates) and content when a change is confirmed. The Glossary and CSIRT-list pages are captured in summary/table form (field names and per-stage status, not every descriptive sentence) to keep this file diffable — see the "Scope note" under each of those sections. `guidance_urls[3]` (the PEC guidance page) was added 2026-09-08 14:10 UTC, discovered via the main page's "Content" navigation. `ar_user_manual_url` and `terms_conditions_url` were added 2026-09-10 10:12 UTC, discovered the same way. **`ar_user_tutorial_video_url` was added 2026-09-11 11:10 UTC**, discovered the same way — the site's own "Content" navigation grew from 8 to 9 entries in this run (see the change log); this widens the routine's tracked-page count from ten to eleven, and `routines/enisa-srp-pages-monitor.md` needed the matching update in the same commit, per `CLAUDE.md`. None of the guidance-page date stamps is a reliable change signal, in either direction — AR User Registration and AR Notification Submission and Update have each had their stamp move only once or twice since first capture despite being edited more often than that; PEC went weeks with no stamp at all before gaining one on 2026-09-09; and AR Interface Functions was rewritten twice on 2026-09-09 (21:07 and 22:12 UTC) with the stamp reading "09/09/2026" both times — so even a stamp that has just moved is no guarantee against a same-day second edit. Diff the text on every check, not the date.
-last_check: 2026-11-16
-last_change: 2026-11-12
+last_check: 2026-11-17
+last_change: 2026-11-17
 ar_user_manual_pdf_v12_url: https://www.enisa.europa.eu/media/57516 (new 2026-10-21: the landing page's "Download" button; served as "SRP - User Manual - ARs v1.2.0.pdf"; the v1.1 URL above still serves the unchanged v1.1 file)
 ar_user_manual_pdf_v13_url: https://www.enisa.europa.eu/sites/default/files/2026-11/SRP%20-%20User%20Manual%20-%20ARs%20v1.3.pdf (new 2026-11-05: the landing page's "Download" button; the v1.2 URL above still serves the unchanged v1.2 file, hash `c8559c9f…` re-verified)
 ar_user_manual_pdf_v13_sha256: 9d01b7dcedc8b84fbdf21807266e6a1d86d55529b34508b7a1181b597cca12c6 (3,376,334 bytes, cover "V1.3 / NOVEMBER 2026"; first captured 2026-11-05)
@@ -44,6 +44,19 @@ ar_user_manual_pdf_v12_sha256: c8559c9f21460c2edd719128fe517aa787ea83ee643ef559e
 # ENISA Single Reporting Platform (SRP) — FAQ Baseline
 
 ## Change log
+
+### 2026-11-17 UTC (vs. 2026-11-16)
+
+The AR User Tutorial Video page no longer shows the video: where the PeerTube player was, it now prints a Drupal error. The likely cause is ENISA's video server being down rather than a removed video; the next run will tell. Nothing else moved; the EU KEV paragraph still says SRP reports "will" enrich the EU KEV.
+
+**Changed**
+- Tutorial video page: the embedded `<iframe>` (`videos.enisa.europa.eu/videos/embed/tFTcnj2zTHEgHq1vryGNmH`) is replaced by the text "Video Url — No video provider was found to handle the given URL. See the documentation for more information." (link to drupal.org). Confirmed on a second fetch about a minute later. The page's own sentence and title are unchanged, and the main page's Tutorial card still links here.
+
+**Watch**
+- At the same time `videos.enisa.europa.eu` answered HTTP 502 (Azure Application Gateway) on its root, the embed URL, its API and its oEmbed endpoint. Drupal's video field resolves the provider through that host, so an outage there would produce exactly this message. If the iframe returns with the same ID, this was an outage; if it returns with a new ID or not at all, the video was replaced or withdrawn.
+
+**Unchanged**
+FAQ Q1-Q35 ("Updated: 15 October 2026") and Glossary 1.6 word for word (`tools/fetch_enisa.py --dry-run` exit 0), CSIRT list (`tools/check_csirt_list.py` exit 0, 27 countries), main page, four guidance pages, Terms, Status page, Vulnerability Services page, manual landing page (version 1.3) and v1.3 PDF (hash `9d01b7dc…`, Last-Modified 4 Nov 2026 20:05:36 GMT). Content navigation 10 entries; same four 301 redirects as yesterday. 13 pages HTTP 200.
 
 ### 2026-11-16 UTC (vs. 2026-11-15)
 
@@ -1786,6 +1799,8 @@ First captured 2026-10-13 06:07 UTC (HTTP 200), found via the "Content" navigati
 First captured 2026-09-11 11:10 UTC, discovered via the site's own "Content" navigation (which grew from 8 to 9 entries this run) and via the new "Tutorial" card in the main page's "User Support and Guidance" section (see above). No date or version stamp anywhere on the page.
 
 Page text, in full: "Watch this tutorial video for a step-by-step guide to using the CRA Single Reporting Platform." The page itself carries no further body text — it is a thin landing page embedding a video, structurally like the Terms and Conditions page above but pointing to a video rather than a PDF.
+
+**Since 2026-11-17 the page shows no video**: the iframe below is replaced by Drupal's "No video provider was found to handle the given URL. See the documentation for more information." while `videos.enisa.europa.eu` answered HTTP 502 (see the change log). Last seen embed, kept as the record:
 
 Video: embedded via a PeerTube `<iframe>`, `src="https://videos.enisa.europa.eu/videos/embed/tFTcnj2zTHEgHq1vryGNmH?autoplay=1"` *(video ID changed 2026-09-23 06:10 UTC from `wS9DBDDiX2mHQZpK85QXNh` — a different PeerTube video, i.e. the embedded recording itself was replaced/re-uploaded; the iframe's other attributes, the page text, and the title below are all unchanged, so this would be invisible to a check that only diffs visible page text. See the change log.)*, `title="Peertube | CRA SRP - AR User Tutorial Video"` (not fetched/archived by this routine; the video's own content is out of scope for this baseline unless a future check finds reason to review it).
 
