@@ -290,7 +290,7 @@ change.
 ## Repository watch routine
 
 `routines/repo-watch.md` is the prompt of a seventh Routine
-(`trig_01NFjrqErTyJ3muZ6nhqsJ2j`, daily at 08:20 UTC, after the other six). It
+(`trig_01NFjrqErTyJ3muZ6nhqsJ2j`, daily at 08:50 UTC, after the other six). It
 watches the six routines themselves: whether each left today's measurement
 point, and what it left open. It does not read the trigger API — "Routinen-Monitor
 (tägliches Update)" already reports enabled state, schedule and last run to the

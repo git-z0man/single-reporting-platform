@@ -2,8 +2,8 @@
   "permissions": {
     "allow": [
       "mcp__github__pull_request_read",
-      "mcp__Claude_Code_Remote__list_triggers",
-      "mcp__Claude_Code_Remote__get_trigger"
+      "mcp__claude-code-remote__list_triggers",
+      "mcp__claude-code-remote__get_trigger"
     ]
   }
 }

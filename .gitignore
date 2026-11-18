@@ -16,3 +16,6 @@ handoff/
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Personal Claude Code settings, never shared
+.claude/settings.local.json
