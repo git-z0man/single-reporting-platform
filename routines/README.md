@@ -19,7 +19,7 @@ says which of the two it is.
 | `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
 | `guide-sync.md` | **Guide sync** | `trig_01SB5rkv7M4VXgtRtNzPeNYD` | `30 7 * * *` |
 | `euvd-exploited-monitor.md` | **EUVD exploited monitor** | `trig_01Sfn7X2MMSSdBDZv9v51Z1D` | `50 4 * * *` |
-| `repo-watch.md` | **SRP repo watch (daily)** | `trig_01NFjrqErTyJ3muZ6nhqsJ2j` | `20 8 * * *` |
+| `repo-watch.md` | **SRP repo watch (daily)** | `trig_01NFjrqErTyJ3muZ6nhqsJ2j` | `50 8 * * *` |
 
 The UI name and the file name differ for the first one: an attempt to rename it
 to "ENISA SRP pages monitor" was refused along with the prompt update (see
