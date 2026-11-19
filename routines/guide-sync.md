@@ -1,7 +1,7 @@
 # Guide sync
 
 - **Trigger**: `trig_01SB5rkv7M4VXgtRtNzPeNYD`, created 2026-10-04 **disabled** and with no repository attached - see "Guide sync" in `routines/README.md`
-- **Schedule**: `30 7 * * *` (daily, 07:30 UTC - after the ENISA monitor at 06:04 and the domain monitor at 06:00, so any baseline PR they opened is already merged)
+- **Schedule**: `30 12 * * 0` (Sundays, 12:30 UTC, since the live trigger was changed on 2026-11-16; daily `30 7 * * *` before). Either way it runs after the ENISA monitor at 06:04 UTC and the domain monitor at 06:00 UTC, so any baseline PR they opened is already merged
 - **Writes**: `index.html`, `guide-sync/`
 - **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt.
 - **Loader status**: **applied** at creation (2026-10-04), read back and equal to the loader in `routines/README.md`.
