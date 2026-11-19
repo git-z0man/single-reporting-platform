@@ -9,9 +9,9 @@ expected_go_live: 2026-09-11
 retrieved: 2026-09-06
 purpose: Reachability baseline for the SRP production environment. The routine re-checks all 29 hosts, records the first successful HTTP response per host, detects new hosts appearing in the zone, and verifies the assumed country-to-CSIRT mapping once the platform answers.
 note: Only an HTTP status code relayed from upstream counts as live. TCP and TLS are recorded but are forged by an intercepting egress proxy in the monitoring environment — see "Why a TLS handshake is not evidence" below.
-last_check: 2026-11-18
-last_architecture_check: 2026-11-12
-last_change: 2026-11-12
+last_check: 2026-11-19
+last_architecture_check: 2026-11-19
+last_change: 2026-11-19
 ---
 
 # CRA SRP — Production domain reachability baseline
@@ -31,8 +31,8 @@ is the baseline that the reachability routine updates when that changes.
 | Edge | 45-address WEDOS pool `185.8.236.33`–`185.8.236.77` (WEDOS Global, CZ) |
 | State | **LIVE** again since the 2026-10-10 08:39 UTC run (launch confirmed 2026-09-11) |
 | Expected go-live | **reached** — 11 September 2026, 11:24:01 UTC |
-| Last check | 2026-11-18 |
-| Last change | 2026-11-12 `portal` now answers HTTP 401 with a WEDOS proof-of-work challenge page instead of the SRP origin (still counted LIVE by `check.sh`); earlier: 2026-10-18 CSIRT list: Spain contact links changed; earlier: 2026-10-10 08:39 UTC — **all 29 hosts PROVISIONED -> LIVE** (recovery); earlier: 2026-10-10 06:02 UTC all 29 LIVE -> PROVISIONED (timeouts); 2026-09-11 **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
+| Last check | 2026-11-19 |
+| Last change | 2026-11-19 07:09 UTC `hu` and `ie` failed one run with a connection reset and answered again at 07:10 UTC (transient, not an outage); earlier: 2026-11-12 `portal` now answers HTTP 401 with a WEDOS proof-of-work challenge page instead of the SRP origin (still counted LIVE by `check.sh`); earlier: 2026-10-18 CSIRT list: Spain contact links changed; earlier: 2026-10-10 08:39 UTC — **all 29 hosts PROVISIONED -> LIVE** (recovery); earlier: 2026-10-10 06:02 UTC all 29 LIVE -> PROVISIONED (timeouts); 2026-09-11 **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
 
@@ -275,6 +275,14 @@ signals — no login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-11-19 07:10 UTC (vs. 2026-11-18) — `hu` and `ie` dropped out for one run, back a minute later
+
+At 07:09 UTC two country hosts, `hu` and `ie`, failed with a connection reset; three manual fetches in the following minute and a second `check.sh` run at 07:10 UTC found both answering normally. A single-run flap, not an outage: 29/29 LIVE at the close of the run.
+
+**Changed** — 07:09:07 UTC: `hu`, `ie` LIVE -> PROVISIONED (`curl exit 35: Recv failure: Connection reset by peer`); 07:10:00 UTC: both PROVISIONED -> LIVE (HTTP 307, `server: srp`). Both runs are in `reachability-log.csv`.
+**Watch** — the same reset hit `at`, `si` and `auth`'s OpenID configuration once each during the architecture check below, and each answered on retry. Whether the resets come from the WEDOS edge (rate limiting a burst of requests) or from this environment's egress proxy cannot be told from here; they did not stick to any host.
+**Unchanged** — architecture check (due on the event): all 27 countries request `client_id=srp-ar-fe-<cc>` matching their ISO code, `kc_idp_hint=eu-login`, realm `srp` at `auth`, `server: srp`; edge addresses within `185.8.236.33`–`.77`; `portal` still 401 behind the WEDOS challenge, `auth` 302. ReplicaSet hash not visible in the redirect (as since 2026-11-12). ENISA's CSIRT list unchanged, 27 countries. Launch scope not re-checked.
 
 ### 2026-11-12 07:09 UTC (vs. 2026-11-11) — portal now behind a WEDOS bot challenge
 
