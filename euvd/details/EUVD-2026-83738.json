@@ -1,0 +1,247 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-90817"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-90817",
+  "cwes": [
+   "CWE-73",
+   "CWE-94"
+  ],
+  "dateAdded": "2026-11-18",
+  "dueDate": "2026-11-21",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://projectredcap.org/resources/community ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-90817",
+  "product": "Research Electronic Data Capture (REDCap)",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.",
+  "vendorProject": "Vanderbilt University",
+  "vulnerabilityName": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-90817\nGHSA-hg88-qg2r-c8mx\n",
+  "assigner": "Securifera",
+  "baseScore": 9.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Sep 20, 2026, 12:05:32 PM",
+  "dateUpdated": "Nov 18, 2026, 8:58:24 PM",
+  "description": "An unauthenticated Remote Code Execution vulnerability was found in the survey passthrough routing and Data Import processing logic, in which a malicious user could potentially exploit it by manipulating HTTP requests to access an unintended controller route from a public survey context and by supplying a crafted file-path/stream parameter during import handling. If successfully exploited, this could allow the attacker to remotely execute arbitrary code on the REDCap server. The attacker does not have to be authenticated in order to exploit this, but exploitation requires knowledge of a valid public survey hash. This vulnerability exists in REDCap 13.3.0 and higher.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "9e8b7f08-ec09-3f88-af63-4422ad18a1de",
+    "product": {
+     "name": "REDCap",
+     "vendor": {
+      "name": "Vanderbilt"
+     }
+    },
+    "product_version": "13.3.0"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "24412034-f53e-3ba0-9c83-1702b4a0db7b",
+    "vendor": {
+     "name": "Vanderbilt University"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "950ac67c-bd74-3e3d-85fc-cbd287d3fddc",
+    "vulnerability": {
+     "assigner": "Securifera",
+     "baseScore": 9.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 19, 2026, 7:24:46 AM",
+     "datePublished": "Sep 20, 2026, 12:05:32 PM",
+     "dateUpdated": "Nov 18, 2026, 8:58:24 PM",
+     "description": "An unauthenticated Remote Code Execution vulnerability was found in the survey passthrough routing and Data Import processing logic, in which a malicious user could potentially exploit it by manipulating HTTP requests to access an unintended controller route from a public survey context and by supplying a crafted file-path/stream parameter during import handling. If successfully exploited, this could allow the attacker to remotely execute arbitrary code on the REDCap server. The attacker does not have to be authenticated in order to exploit this, but exploitation requires knowledge of a valid public survey hash. This vulnerability exists in REDCap 13.3.0 and higher.",
+     "enisa_id": "EUVD-2026-83738\n",
+     "epss": 3.75,
+     "exploitedSince": "Nov 18, 2026, 12:00:00 AM",
+     "id": "CVE-2026-90817",
+     "references": "https://www.securifera.com/advisories/\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "dd2d4a35-1995-3198-92d0-db7aaca24175",
+       "product": {
+        "name": "REDCap",
+        "vendor": {
+         "name": "Vanderbilt"
+        }
+       },
+       "product_version": "13.3.0"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "a7b3072f-1dd8-3e12-a5cc-9f0ca008a7a6",
+       "vendor": {
+        "name": "Vanderbilt University"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "d622902f-53fd-3c87-879d-2443a4368062",
+    "vulnerability": {
+     "aliases": "CVE-2026-90817\nGHSA-hg88-qg2r-c8mx\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 19, 2026, 7:06:52 AM",
+     "datePublished": "Sep 20, 2026, 3:30:23 PM",
+     "dateUpdated": "Nov 18, 2026, 9:31:16 PM",
+     "description": "An unauthenticated Remote Code Execution vulnerability was found in the survey passthrough routing and Data Import processing logic, in which a malicious user could potentially exploit it by manipulating HTTP requests to access an unintended controller route from a public survey context and by supplying a crafted file-path/stream parameter during import handling. If successfully exploited, this could allow the attacker to remotely execute arbitrary code on the REDCap server. The attacker does not have to be authenticated in order to exploit this, but exploitation requires knowledge of a valid public survey hash. This vulnerability exists in REDCap 13.3.0 and higher.",
+     "enisa_id": "EUVD-2026-83738\n",
+     "epss": 0.0,
+     "id": "GHSA-hg88-qg2r-c8mx",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-90817\nhttps://www.securifera.com/advisories\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "e3a5e12d-6fc7-3667-bdfe-9d8d923f329b",
+  "epss": 3.75,
+  "exploitedSince": "Nov 18, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-83738",
+  "references": "https://www.securifera.com/advisories/\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-83738",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 18, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "REDCap",
+      "vendor": "Vanderbilt University",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "13.3.0"
+       },
+       {
+        "status": "unaffected",
+        "version": "16.0.49"
+       },
+       {
+        "status": "unaffected",
+        "version": "17.3.10"
+       },
+       {
+        "status": "unaffected",
+        "version": "17.4.4"
+       }
+      ]
+     }
+    ],
+    "source": "contact@securifera.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-21",
+  "cisaExploitAdd": "2026-11-18",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "An unauthenticated Remote Code Execution vulnerability was found in the survey passthrough routing and Data Import processing logic, in which a malicious user could potentially exploit it by manipulating HTTP requests to access an unintended controller route from a public survey context and by supplying a crafted file-path/stream parameter during import handling. If successfully exploited, this could allow the attacker to remotely execute arbitrary code on the REDCap server. The attacker does not have to be authenticated in order to exploit this, but exploitation requires knowledge of a valid public survey hash. This vulnerability exists in REDCap 13.3.0 and higher."
+   }
+  ],
+  "id": "CVE-2026-90817",
+  "lastModified": "2026-11-19T05:18:41.563",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "contact@securifera.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-90817",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-18T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-09-20T13:17:44.973",
+  "references": [
+   {
+    "source": "contact@securifera.com",
+    "url": "https://www.securifera.com/advisories/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-90817"
+   }
+  ],
+  "sourceIdentifier": "contact@securifera.com",
+  "vulnStatus": "Undergoing Analysis",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-73"
+     },
+     {
+      "lang": "en",
+      "value": "CWE-94"
+     }
+    ],
+    "source": "contact@securifera.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

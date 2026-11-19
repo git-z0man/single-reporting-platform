@@ -32,7 +32,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 21, 2026, 1:54:43 PM",
-  "dateUpdated": "Nov 16, 2026, 3:18:24 PM",
+  "dateUpdated": "Nov 18, 2026, 6:32:28 PM",
   "description": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
   "enisaIdAdvisory": [
    {
@@ -1968,7 +1968,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 5:04:21 PM",
-     "dateUpdated": "Nov 10, 2026, 4:04:30 PM",
+     "dateUpdated": "Nov 18, 2026, 10:48:29 AM",
      "description": "Security update for php8",
      "id": "openSUSE-SU-2026:22151-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_22151-1.json\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -7192,10 +7192,10 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 4:57:23 PM",
-     "dateUpdated": "Nov 4, 2026, 9:51:09 PM",
+     "dateUpdated": "Nov 18, 2026, 10:44:55 AM",
      "description": "Security update for php8",
      "id": "SUSE-SU-2026:24271-1",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_24271-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/suse-su-2026_24271-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
      "source": {
       "id": 22,
       "name": "csaf_suse"
@@ -10749,10 +10749,10 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 9:56:52 PM",
+     "dateUpdated": "Nov 18, 2026, 10:47:41 AM",
      "description": "php8-8.5.12-1.1 on GA media",
      "id": "openSUSE-SU-2026:12219-1",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12219-1.json\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_12219-1.json\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
      "source": {
       "id": 21,
       "name": "csaf_opensuse"
@@ -16837,7 +16837,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 16, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 18, 2026, 12:00:00 AM",
      "description": "SSA-166980: PHP2Shell Vulnerabilities in Siemens Products",
      "id": "SSA-166980",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-166980.json\n",
@@ -17126,10 +17126,10 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 24, 2026, 12:57:37 PM",
-     "dateUpdated": "Nov 4, 2026, 9:46:30 PM",
+     "dateUpdated": "Nov 18, 2026, 10:41:58 AM",
      "description": "security update for php",
      "id": "ESSA-2026:0206",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/essa-2026_0206.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008398.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008398.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/essa-2026_0206.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008398.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008398.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
      "source": {
       "id": 21,
       "name": "csaf_opensuse"
@@ -22312,10 +22312,10 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 3:44:40 PM",
-     "dateUpdated": "Nov 4, 2026, 9:53:30 PM",
+     "dateUpdated": "Nov 18, 2026, 10:45:43 AM",
      "description": "Security update for php8",
      "id": "SUSE-SU-2026:4843-1",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_4843-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/suse-su-2026_4843-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
      "source": {
       "id": 22,
       "name": "csaf_suse"
@@ -22889,7 +22889,7 @@
      "aliases": "CVE-2023-54404\nCVE-2025-62718\nCVE-2026-8643\nCVE-2026-9496\nCVE-2026-12185\nCVE-2026-13697\nCVE-2026-14682\nCVE-2026-15076\nCVE-2026-16308\nCVE-2026-17106\nCVE-2026-18427\nCVE-2026-19203\nCVE-2026-19534\nCVE-2026-39820\nCVE-2026-41178\nCVE-2026-41707\nCVE-2026-42499\nCVE-2026-42502\nCVE-2026-45416\nCVE-2026-47884\nCVE-2026-47886\nCVE-2026-47888\nCVE-2026-47890\nCVE-2026-47892\nCVE-2026-50010\nCVE-2026-55831\nCVE-2026-55833\nCVE-2026-55851\nCVE-2026-56745\nCVE-2026-56746\nCVE-2026-56819\nCVE-2026-56852\nCVE-2026-56854\nCVE-2026-58062\nCVE-2026-59280\nCVE-2026-59282\nCVE-2026-59283\nCVE-2026-59296\nCVE-2026-59313\nCVE-2026-59323\nCVE-2026-59651\nCVE-2026-59887\nCVE-2026-59899\nCVE-2026-59901\nCVE-2026-62243\nCVE-2026-64607\nCVE-2026-67213\nCVE-2026-67312\nCVE-2026-67313\nCVE-2026-67314\nCVE-2026-67320\nCVE-2026-67321\nCVE-2026-68494\nCVE-2026-68497\nCVE-2026-69152\nCVE-2026-69192\nCVE-2026-71290\nCVE-2026-71324\nCVE-2026-71325\nCVE-2026-71327\nCVE-2026-73500\nCVE-2026-73508\nCVE-2026-74835\nCVE-2026-75838\nCVE-2026-75899\nCVE-2026-75931\nCVE-2026-76169\nCVE-2026-81521\nCVE-2026-82417\nCVE-2026-82562\nCVE-2026-84292\nCVE-2026-84375\nCVE-2026-84394\nCVE-2026-84428\nCVE-2026-84445\nCVE-2026-84469\nCVE-2026-84504\nCVE-2026-84961\nCVE-2026-85062\nCVE-2026-85124\nCVE-2026-85152\nCVE-2026-85595\nCVE-2026-85597\nCVE-2026-86063\nCVE-2026-87743\nCVE-2026-88004\nCVE-2026-88007\nCVE-2026-88008\nCVE-2026-88009\nCVE-2026-88011\nCVE-2026-88012\nCVE-2026-88031\nCVE-2026-88878\nCVE-2026-88879\nCVE-2026-90711\nCVE-2026-93749\nCVE-2026-100655\nCVE-2026-100656\nCVE-2026-100666\nCVE-2026-101916\nCVE-2026-102925\nCVE-2026-102930\nCVE-2026-103435\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 2:24:21 PM",
-     "dateUpdated": "Nov 13, 2026, 4:45:10 PM",
+     "dateUpdated": "Nov 18, 2026, 9:44:19 PM",
      "description": "Red Hat Security Advisory: Red Hat OpenShift Dev Spaces 3.31.0 Release.",
      "id": "RHSA-2026:90321",
      "references": "https://access.redhat.com/errata/RHSA-2026:90321\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90321.json\n",
@@ -29075,10 +29075,10 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 22, 2026, 4:03:33 PM",
-     "dateUpdated": "Nov 4, 2026, 9:53:41 PM",
+     "dateUpdated": "Nov 18, 2026, 10:45:50 AM",
      "description": "Security update for php74",
      "id": "SUSE-SU-2026:4870-1",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/suse-su-2026_4870-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/suse-su-2026_4870-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
      "source": {
       "id": 22,
       "name": "csaf_suse"
@@ -37078,6 +37078,15 @@
        }
       },
       {
+       "id": "21a49cae-c0f5-36c9-b2aa-81f1cba04a8f",
+       "product": {
+        "name": "PHOENIX CONTACT FL SWITCH",
+        "vendor": {
+         "name": "n/a"
+        }
+       }
+      },
+      {
        "id": "22194793-6669-371f-abc0-49a99766c490",
        "product": {
         "name": "Xerox Versalink",
@@ -37423,7 +37432,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 20, 2026, 10:00:00 PM",
-     "dateUpdated": "Nov 15, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 17, 2026, 11:00:00 PM",
      "description": "PHP: Mehrere Schwachstellen ermöglichen Codeausführung",
      "id": "WID-SEC-W-2026-4055",
      "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4055.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4055\n",
@@ -41909,7 +41918,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 18, 2026, 12:00:00 AM",
      "description": "SSA-566512: PHP2Shell Vulnerabilities in Palo Alto Networks PAN-OS on RUGGEDCOM APE1808 Devices",
      "id": "SSA-566512",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-566512.json\n",
@@ -52903,9 +52912,9 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 17, 2026, 7:22:46 AM",
+     "dataProcessed": "Nov 19, 2026, 7:22:18 AM",
      "datePublished": "Oct 21, 2026, 1:54:43 PM",
-     "dateUpdated": "Nov 16, 2026, 3:18:24 PM",
+     "dateUpdated": "Nov 18, 2026, 6:32:28 PM",
      "description": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
      "enisa_id": "EUVD-2026-107265\n",
      "epss": 100.0,
@@ -54400,7 +54409,7 @@
       "vendor": "Siemens",
       "versions": [
        {
-        "lessThan": "*",
+        "lessThan": "FW6.9.22-3.4",
         "status": "affected",
         "version": "0",
         "versionType": "custom"
@@ -56308,7 +56317,7 @@
    }
   ],
   "id": "CVE-2026-109619",
-  "lastModified": "2026-11-16T16:17:46.967",
+  "lastModified": "2026-11-18T19:17:26.517",
   "metrics": {
    "cvssMetricV31": [
     {
