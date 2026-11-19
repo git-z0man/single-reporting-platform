@@ -1,0 +1,610 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-10441"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2024-10441",
+  "cwes": [
+   "CWE-116"
+  ],
+  "dateAdded": "2026-11-18",
+  "dueDate": "2026-11-21",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://www.synology.com/zh-tw/security/advisory/Synology_SA_24_20 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2024-10441",
+  "product": "DiskStation Manager (DSM)",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
+  "vendorProject": "Synology",
+  "vulnerabilityName": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2024-10441\nGHSA-3hx6-3qqx-qhvf\n",
+  "assigner": "synology",
+  "baseScore": 9.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Mar 19, 2025, 2:09:56 AM",
+  "dateUpdated": "Nov 18, 2026, 8:58:23 PM",
+  "description": "Improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) before 1.1-65374 and Synology DiskStation Manager (DSM) before 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 allows remote attackers to execute arbitrary code via unspecified vectors.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0c2cb6c8-dde1-3756-8876-412b2ed157a2",
+       "product": {
+        "name": "Synology DiskStation Manager <7.2.2-72806-3",
+        "vendor": {
+         "name": "Synology"
+        }
+       }
+      },
+      {
+       "id": "4e1b598a-b9b4-3092-87b5-d7411b83e4ca",
+       "product": {
+        "name": "DiskStation Manager",
+        "vendor": {
+         "name": "Synology"
+        }
+       }
+      },
+      {
+       "id": "56084978-c7a3-3e2a-b76b-b43b84672a89",
+       "product": {
+        "name": "Synology DiskStation Manager <7.2.2-72806-1",
+        "vendor": {
+         "name": "Synology"
+        }
+       }
+      },
+      {
+       "id": "64bb421f-d354-3f83-8f24-8bf78a1fb1ce",
+       "product": {
+        "name": "Synology DiskStation Manager 7.1",
+        "vendor": {
+         "name": "Synology"
+        }
+       }
+      },
+      {
+       "id": "6b49d635-467d-32f5-85a2-76533fffd1f0",
+       "product": {
+        "name": "Synology DiskStation Manager 7.2.2-72806-3",
+        "vendor": {
+         "name": "Synology"
+        }
+       }
+      },
+      {
+       "id": "9116a551-056a-3489-863a-60ff329f38cf",
+       "product": {
+        "name": "7.1",
+        "vendor": {
+         "name": "InduSoft"
+        }
+       }
+      },
+      {
+       "id": "cbc7101c-7dad-3eb0-a121-2ea5a5ef76fd",
+       "product": {
+        "name": "Synology DiskStation Manager 7.2.1",
+        "vendor": {
+         "name": "Synology"
+        }
+       }
+      },
+      {
+       "id": "d7bf71d6-1c36-3e50-8ddb-751610283974",
+       "product": {
+        "name": "3.1",
+        "vendor": {
+         "name": "Smiths Medical"
+        }
+       }
+      },
+      {
+       "id": "eeeae528-4e07-3e35-a681-688dc78bbe47",
+       "product": {
+        "name": "7.2.2-72806-1",
+        "vendor": {
+         "name": "Synology"
+        }
+       }
+      },
+      {
+       "id": "f449c7d7-39dc-38f5-a01a-80afe96a1855",
+       "product": {
+        "name": "7.2.1",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "f6b70f8b-d4b3-3d20-a973-96515c3efa9d",
+       "product": {
+        "name": "Synology DiskStation Manager 7.2.2-72806-1",
+        "vendor": {
+         "name": "Synology"
+        }
+       }
+      },
+      {
+       "id": "f772d106-f33f-376e-a5fa-0f336400a479",
+       "product": {
+        "name": "7.2.2-72806-3",
+        "vendor": {
+         "name": "Synology"
+        }
+       }
+      },
+      {
+       "id": "fc7dda33-1d12-39f7-aa73-cd5af8369a42",
+       "product": {
+        "name": "Synology DiskStation Manager 3.1",
+        "vendor": {
+         "name": "Synology"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2024-10441\nCVE-2024-10445\nCVE-2024-50629\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 7, 2024, 11:00:00 PM",
+     "dateUpdated": "Mar 18, 2025, 11:00:00 PM",
+     "description": "Synology DiskStation Manager: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2024-3378",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2024/wid-sec-w-2024-3378.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2024-3378\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen im Synology DiskStation Manager ausnutzen, um beliebigen Code auszuführen, Administrator-Sitzungen zu übernehmen und um Informationen offenzulegen oder zu manipulieren."
+    },
+    "id": "111c6d73-7220-3e23-85b2-7d054c42c5f3"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "0479b047-ba8f-3649-9d4e-bb8ff5a4f9fa",
+    "product": {
+     "name": "BeeStation OS (BSM)",
+     "vendor": {
+      "name": "Synology"
+     }
+    },
+    "product_version": "1.0 <1.1-65374"
+   },
+   {
+    "id": "1f44986b-7d10-3e10-9125-74089e513e69",
+    "product": {
+     "name": "DiskStation Manager (DSM)",
+     "vendor": {
+      "name": "Synology"
+     }
+    },
+    "product_version": "7.2 <7.2-64570-4"
+   },
+   {
+    "id": "3c11086c-3471-3ae7-a393-712dfeb497dd",
+    "product": {
+     "name": "DiskStation Manager (DSM)",
+     "vendor": {
+      "name": "Synology"
+     }
+    },
+    "product_version": "7.2.1 <7.2.1-69057-6"
+   },
+   {
+    "id": "55f3e1d0-345e-3f42-8544-349a996601fa",
+    "product": {
+     "name": "BeeStation OS (BSM)",
+     "vendor": {
+      "name": "Synology"
+     }
+    },
+    "product_version": "1.1 <1.1-65374"
+   },
+   {
+    "id": "b26ff648-53a1-304d-8970-2dc6881a5a3b",
+    "product": {
+     "name": "DiskStation Manager (DSM)",
+     "vendor": {
+      "name": "Synology"
+     }
+    },
+    "product_version": "7.2.2 <7.2.2-72806-1"
+   },
+   {
+    "id": "e3adf5f9-c625-3583-9f73-e784f1f2ee13",
+    "product": {
+     "name": "DiskStation Manager (DSM)",
+     "vendor": {
+      "name": "Synology"
+     }
+    },
+    "product_version": "7.1 <7.1.1-42962-7"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "17dc247d-3acb-38c5-a5ae-d7b0c48d8466",
+    "vendor": {
+     "name": "Synology"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "4a3970cb-2b1b-3d35-ad0a-a9f47cabfaf6",
+    "vulnerability": {
+     "assigner": "synology",
+     "baseScore": 9.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 19, 2026, 7:25:37 AM",
+     "datePublished": "Mar 19, 2025, 2:09:56 AM",
+     "dateUpdated": "Nov 18, 2026, 8:58:23 PM",
+     "description": "Improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) before 1.1-65374 and Synology DiskStation Manager (DSM) before 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 allows remote attackers to execute arbitrary code via unspecified vectors.",
+     "enisa_id": "EUVD-2024-54098\n",
+     "epss": 1.25,
+     "exploitedSince": "Nov 18, 2026, 12:00:00 AM",
+     "id": "CVE-2024-10441",
+     "references": "https://www.synology.com/en-global/security/advisory/Synology_SA_24_20\nhttps://www.synology.com/en-global/security/advisory/Synology_SA_24_23\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "21e1fe5b-bf66-396e-b6ef-207f070c3eb6",
+       "product": {
+        "name": "DiskStation Manager (DSM)",
+        "vendor": {
+         "name": "Synology"
+        }
+       },
+       "product_version": "7.2.2 <7.2.2-72806-1"
+      },
+      {
+       "id": "675ce224-bc02-3023-a43f-c7c8448e447f",
+       "product": {
+        "name": "DiskStation Manager (DSM)",
+        "vendor": {
+         "name": "Synology"
+        }
+       },
+       "product_version": "7.2.1 <7.2.1-69057-6"
+      },
+      {
+       "id": "8a4939b4-57bc-3c2a-9d4c-65ecb1be28eb",
+       "product": {
+        "name": "DiskStation Manager (DSM)",
+        "vendor": {
+         "name": "Synology"
+        }
+       },
+       "product_version": "7.1 <7.1.1-42962-7"
+      },
+      {
+       "id": "aebcdec9-7322-3aa1-8b6d-04f73a784822",
+       "product": {
+        "name": "BeeStation OS (BSM)",
+        "vendor": {
+         "name": "Synology"
+        }
+       },
+       "product_version": "1.1 <1.1-65374"
+      },
+      {
+       "id": "afd8ce2e-7ba4-3b7b-8732-bb8310d5b036",
+       "product": {
+        "name": "BeeStation OS (BSM)",
+        "vendor": {
+         "name": "Synology"
+        }
+       },
+       "product_version": "1.0 <1.1-65374"
+      },
+      {
+       "id": "f3006f97-14aa-310d-b29f-9e0d57b8527a",
+       "product": {
+        "name": "DiskStation Manager (DSM)",
+        "vendor": {
+         "name": "Synology"
+        }
+       },
+       "product_version": "7.2 <7.2-64570-4"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "fcf9ec65-0eee-384f-8f76-776af8f8b81b",
+       "vendor": {
+        "name": "Synology"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "9bbcd9f6-448e-35eb-ad8d-02dfb2be7ec1",
+    "vulnerability": {
+     "aliases": "CVE-2024-10441\nGHSA-3hx6-3qqx-qhvf\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 19, 2026, 7:06:52 AM",
+     "datePublished": "Mar 19, 2025, 3:30:35 AM",
+     "dateUpdated": "Nov 18, 2026, 9:31:14 PM",
+     "description": "Improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation Manager (BSM) before 1.1-65374, Synology DiskStation Manager (DSM) before 6.2.4-25556-8, 7.1.1-42962-7, 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 and Synology Unified Controller (DSMUC) before 3.1.4-23079 allows remote attackers to execute arbitrary code via unspecified vectors.",
+     "enisa_id": "EUVD-2024-54098\n",
+     "epss": 0.0,
+     "id": "GHSA-3hx6-3qqx-qhvf",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2024-10441\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-10441\nhttps://www.synology.com/en-global/security/advisory/Synology_SA_24_20\nhttps://www.synology.com/en-global/security/advisory/Synology_SA_24_23\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "8b6272ef-975e-391a-937b-f9564666dcd1",
+  "epss": 1.25,
+  "exploitedSince": "Nov 18, 2026, 12:00:00 AM",
+  "id": "EUVD-2024-54098",
+  "references": "https://www.synology.com/en-global/security/advisory/Synology_SA_24_20\nhttps://www.synology.com/en-global/security/advisory/Synology_SA_24_23\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2024-54098",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 18, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "affected",
+      "product": "DiskStation Manager (DSM)",
+      "vendor": "Synology",
+      "versions": [
+       {
+        "lessThan": "7.2.2-72806-1",
+        "status": "affected",
+        "version": "7.2.2",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "7.2.1-69057-6",
+        "status": "affected",
+        "version": "7.2.1",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "7.2-64570-4",
+        "status": "affected",
+        "version": "7.2",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "7.1.1-42962-7",
+        "status": "affected",
+        "version": "7.1",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "7.0",
+        "status": "unknown",
+        "version": "0",
+        "versionType": "semver"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "affected",
+      "product": "BeeStation OS (BSM)",
+      "vendor": "Synology",
+      "versions": [
+       {
+        "lessThan": "1.1-65374",
+        "status": "affected",
+        "version": "1.1",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "1.1-65374",
+        "status": "affected",
+        "version": "1.0",
+        "versionType": "semver"
+       },
+       {
+        "lessThan": "1.0",
+        "status": "unknown",
+        "version": "0",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "security@synology.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-21",
+  "cisaExploitAdd": "2026-11-18",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:synology:beestation_os:1.0:-:*:*:*:*:*:*",
+        "matchCriteriaId": "F498216A-5ABD-4DCB-A149-F4D41D9022E5",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:synology:beestation_os:1.0:65145:*:*:*:*:*:*",
+        "matchCriteriaId": "1006E9A9-86FB-4580-8278-8865B1646A00",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:synology:beestation_os:1.0:65149:*:*:*:*:*:*",
+        "matchCriteriaId": "254081F3-13E2-40ED-A543-11DA03CEA508",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:synology:beestation_os:1.0:65162:*:*:*:*:*:*",
+        "matchCriteriaId": "41B53AE7-424C-49F5-8F99-3FDA8FCC6D05",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:synology:beestation_os:1.0.1:65210:*:*:*:*:*:*",
+        "matchCriteriaId": "DF7FFADA-CEB5-4869-9B38-8C58CE4FE673",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:synology:beestation_os:1.0.2:65233:*:*:*:*:*:*",
+        "matchCriteriaId": "312D9B7F-DFE1-403E-B78B-5F79423F4E2F",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:synology:beestation_os:1.0.2:65235:*:*:*:*:*:*",
+        "matchCriteriaId": "12C2383E-4C52-4A8B-8540-597E307C80BD",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:synology:beestation_os:1.1:-:*:*:*:*:*:*",
+        "matchCriteriaId": "E6960C0C-01BF-437C-931A-6375ED673513",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:synology:beestation_os:1.1:65373:*:*:*:*:*:*",
+        "matchCriteriaId": "327C73CB-CE4C-4909-95E4-0423E47B175D",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:synology:diskstation_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "3A7DC498-96F4-4BD4-BC5F-A6F44D4240AB",
+        "versionEndExcluding": "7.2-64570-4",
+        "versionStartIncluding": "7.2",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:synology:diskstation_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "265810D3-F94D-4023-B53C-F82E32B9A451",
+        "versionEndExcluding": "7.2.1-69057-6",
+        "versionStartIncluding": "7.2.1-69057",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:synology:diskstation_manager:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "B1205204-6FAC-4211-9AAA-1998A106AF9F",
+        "versionEndExcluding": "7.2.2-72806-1",
+        "versionStartIncluding": "7.2.2",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) before 1.1-65374 and Synology DiskStation Manager (DSM) before 7.2-64570-4, 7.2.1-69057-6 and 7.2.2-72806-1 allows remote attackers to execute arbitrary code via unspecified vectors."
+   },
+   {
+    "lang": "es",
+    "value": "La vulnerabilidad de codificación o escape incorrecto de la salida en system plugin daemon en Synology BeeStation Manager (BSM) anterior a 1.1-65374, Synology DiskStation Manager (DSM) anterior a 6.2.4-25556-8, 7.1.1-42962-7, 7.2-64570-4, 7.2.1-69057-6 y 7.2.2-72806-1 y Synology Unified Controller (DSMUC) anterior a 3.1.4-23079 permite a atacantes remotos ejecutar código arbitrario a través de vectores no especificados."
+   }
+  ],
+  "id": "CVE-2024-10441",
+  "lastModified": "2026-11-19T05:18:23.700",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "security@synology.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2024-10441",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-18T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2025-03-19T02:15:27.120",
+  "references": [
+   {
+    "source": "security@synology.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://www.synology.com/en-global/security/advisory/Synology_SA_24_20"
+   },
+   {
+    "source": "security@synology.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://www.synology.com/en-global/security/advisory/Synology_SA_24_23"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-10441"
+   }
+  ],
+  "sourceIdentifier": "security@synology.com",
+  "vulnStatus": "Modified",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-116"
+     }
+    ],
+    "source": "security@synology.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

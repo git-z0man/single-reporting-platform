@@ -139,18 +139,18 @@
  "honeypot": [
   {
    "avg30d": 0.0,
-   "avg7d": 0.0,
+   "avg7d": 1.0,
    "avg90d": 0.0,
    "cisaKevFlag": true,
-   "connections1d": 85,
+   "connections1d": 2101,
    "cveId": "CVE-2026-83548",
    "firstSeenAt": "Oct 17, 2026, 3:00:00 AM",
    "isNew": false,
-   "lastSeenAt": "Nov 18, 2026, 7:17:23 AM",
+   "lastSeenAt": "Nov 19, 2026, 7:17:09 AM",
    "product": "SMA1000",
    "source": "shadowserver",
-   "trend": "STEADY",
-   "uniqueIps1d": 1,
+   "trend": "UPTICK",
+   "uniqueIps1d": 5,
    "vendor": "SonicWall",
    "vulnClass": "firewall",
    "vulnSeverity": "Critical"

@@ -29,7 +29,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
   "baseScoreVersion": "4.0",
   "datePublished": "Nov 3, 2026, 8:40:10 PM",
-  "dateUpdated": "Nov 17, 2026, 8:58:23 PM",
+  "dateUpdated": "Nov 18, 2026, 4:55:49 AM",
   "description": "Deserialization of untrusted data in the report-processing code of Puppet, as used by Puppet Server, in the affected releases, allows a client that holds any CA-signed agent certificate to execute arbitrary code on the Puppet Server as its service user by submitting a report containing a crafted rich-data type via PUT request. Where the certificate authority autosigns requests without strong verification, an unauthenticated network attacker can obtain such a certificate.",
   "enisaIdAdvisory": [
    {
@@ -1042,12 +1042,12 @@
      "baseScore": 9.4,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 18, 2026, 7:19:56 AM",
+     "dataProcessed": "Nov 19, 2026, 7:19:46 AM",
      "datePublished": "Nov 3, 2026, 8:40:10 PM",
-     "dateUpdated": "Nov 17, 2026, 8:58:23 PM",
+     "dateUpdated": "Nov 18, 2026, 4:55:49 AM",
      "description": "Deserialization of untrusted data in the report-processing code of Puppet, as used by Puppet Server, in the affected releases, allows a client that holds any CA-signed agent certificate to execute arbitrary code on the Puppet Server as its service user by submitting a report containing a crafted rich-data type via PUT request. Where the certificate authority autosigns requests without strong verification, an unauthenticated network attacker can obtain such a certificate.",
      "enisa_id": "EUVD-2026-116495\n",
-     "epss": 0.37,
+     "epss": 0.69,
      "exploitedSince": "Nov 17, 2026, 12:00:00 AM",
      "id": "CVE-2026-115731",
      "references": "https://portal.perforce.com/s/cve/a91Qi000003IaHpIAK/report-deserialization-code-execution\n",
@@ -1129,7 +1129,7 @@
     "vulnerability": {
      "aliases": "GHSA-4pxx-8frq-9r4j\nCVE-2026-115731\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 18, 2026, 7:06:57 AM",
+     "dataProcessed": "Nov 19, 2026, 7:06:52 AM",
      "datePublished": "Nov 3, 2026, 9:32:17 PM",
      "dateUpdated": "Nov 17, 2026, 9:31:30 PM",
      "description": "Deserialization of untrusted data in the report-processing code of Puppet, as used by Puppet Server, in the affected releases, allows a client that holds any CA-signed agent certificate to execute arbitrary code on the Puppet Server as its service user by submitting a report containing a crafted rich-data type via PUT request. Where the certificate authority autosigns requests without strong verification, an unauthenticated network attacker can obtain such a certificate.",
@@ -1143,7 +1143,7 @@
    }
   ],
   "enisaUuid": "50e43cda-467a-3b91-91cd-abe0641b0c9d",
-  "epss": 0.37,
+  "epss": 0.69,
   "exploitedSince": "Nov 17, 2026, 12:00:00 AM",
   "id": "EUVD-2026-116495",
   "references": "https://portal.perforce.com/s/cve/a91Qi000003IaHpIAK/report-deserialization-code-execution\n"

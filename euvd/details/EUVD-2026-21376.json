@@ -1,0 +1,1613 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-40217"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-40217",
+  "cwes": [
+   "CWE-420"
+  ],
+  "dateAdded": "2026-11-18",
+  "dueDate": "2026-12-02",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://github.com/BerriAI/litellm/security/advisories/GHSA-wxxx-gvqv-xp7p ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-40217",
+  "product": "LiteLLM",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
+  "vendorProject": "BerriAI",
+  "vulnerabilityName": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-40217\n",
+  "assigner": "mitre",
+  "baseScore": 8.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Apr 10, 2026, 1:43:23 PM",
+  "dateUpdated": "Nov 18, 2026, 8:58:23 PM",
+  "description": "LiteLLM through 2026-04-08 allows remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "27540c45-4f33-3c50-899e-9f2145616f71",
+       "product": {
+        "name": "Red Hat Enterprise Linux",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "301852a4-fe73-328a-8c26-aed5b14e2e4a",
+       "product": {
+        "name": "1.83.10",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "6a0fa05a-edf5-3e93-b0f1-443c0be69af2",
+       "product": {
+        "name": "Ansible Automation Platform",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7cf1f360-a211-3b24-b20e-924aeae11db2",
+       "product": {
+        "name": "LiteLLM",
+        "vendor": {
+         "name": "berriai"
+        }
+       }
+      },
+      {
+       "id": "894856e6-b587-38f1-a379-d459a7dbafed",
+       "product": {
+        "name": "2.6",
+        "vendor": {
+         "name": "Moxa"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-40217\n",
+     "baseScore": 0.0,
+     "datePublished": "May 6, 2026, 10:00:00 PM",
+     "dateUpdated": "Jun 25, 2026, 10:00:00 PM",
+     "description": "LiteLLM: Schwachstelle ermöglicht Ausführen von beliebigem Programmcode mit Administratorrechten",
+     "id": "WID-SEC-W-2026-1408",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-1408.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-1408\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in LiteLLM ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen."
+    },
+    "id": "0f926900-e30e-304b-acb2-026f3b806e8f"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "008f9741-41fa-3ad7-9414-2cee93f51702",
+       "product": {
+        "name": "Red Hat Ansible Automation Platform 2.6",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "037c2e89-37f7-32d7-80a9-7c67611194cd",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-builder-rhel9@sha256:d833ed5b6de160d7e0cbf35cd5d7f93bfaa74acb2b12846ccc1eef41ef48074d_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0762d924-228b-340b-ab2d-3ee962e6954b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9-operator@sha256:6be2a2d2a07c738c7ff04fbf4570a45d6c9a78c6d340e10e8a144461867b45d3_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "08736665-52c3-3b91-91dd-7c51909d9bf6",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9@sha256:87b7771c1db5e931baf83d00528dc7b65e90c8828032741a5a1c37cbc4a300b8_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "08b265f6-6fce-3dfb-9679-6380a35e0d0c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-dev-tools-rhel9@sha256:fb3278021a45367ac357ed32872eb4e671844faad6b9eb9b08db0e476849bae4_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0df2821e-375b-3938-a9e8-90e8bd34058f",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/mcp-server-rhel9@sha256:60e660bf0d066c3f799259e57000dcb1d7974753c49771d15361321353ebeb4a_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0e1fdd39-c2a3-3437-8bf3-94524fa2ea85",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9@sha256:6e5abb4c408bdb38987e13f09d6a1699de40ef39243ac91a5731c48b377169b0_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0fe9edfd-c819-33e8-826d-de8a94caef9d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/aap-must-gather-rhel9@sha256:a9ec99ae45084783f79da5a8e41f42763b006489c84ffae0758ce12cea05948d_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "105273fc-d6f0-3093-b7c3-dc3f7bc16f95",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-builder-rhel9@sha256:a35e350ec5c0172601f25ac89fcbc48ff8c83ad2c5fdf798de917d9b046c9cc7_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "111dae65-7d26-38b4-92c0-a6263f5b4b40",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9@sha256:c076cf5c0e56918bb49e8c353bc48265a9d88834934563259308cad15eb304e2_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "14c0702f-093c-35f5-a5e1-96115d0f2e3d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9-operator@sha256:5cd20de178fd45b1775781a93e4e62bd61023175d5faf624ac8d8713fd7f8fe2_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "162d1cc4-22d2-36e6-8917-5f96e616b21e",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform/platform-operator-bundle@sha256:62f9795ac0590dea90f9075d2d98e29714c5eca29b394933d79e94eec926ff8e_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "191976b8-b0b8-3ce6-9db1-db521e7bd5ef",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-rhel9-operator@sha256:cfe1245a29cc96306898ebde112a7cebce0865e5a977f8959e786022235a78a0_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2163a1a9-d8e1-3474-9ea0-eb153d25d78f",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/aap-must-gather-rhel9@sha256:862cb4601db2eb288b72e993ed1c4b6bbb2e4dd37050d549ba86e6eafc3f1045_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "22dba389-41e7-36de-bf47-3b3b789ef89b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9@sha256:5a18e28d9adc93f7429ee2aeddfed16beabb8ea777b568576f35c85579902a81_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2342f3ca-a189-3ed9-be18-ed5e9b23a06f",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9@sha256:12e4d0feaa59c71d5e846dce888e17467a6922aa08a9c2971ae15a47604c8cc2_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2470a93d-c5ef-3541-a0a0-e1bc2921e03b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9@sha256:b37af6bef902e0eb955654296154355ed9941569929d2db7a22a595b0fa0162c_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2748d744-1f74-321f-93ef-7054040ee912",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9@sha256:baf0e909c2a0f3b516e2b4f7417f1557a73f7139480628b9efa487b419784d2e_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2ab44d4e-a766-34cf-8b05-e036bdc82fe8",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-dev-tools-rhel9@sha256:ccbd0249255d0fc1434a1c6fde96fbd6dc1059becefaa475d9cddd61dff0a970_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2b25d5f1-2206-3083-b2e9-14cb453742c5",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-chatbot-rhel9@sha256:264726e334c529ad8a6e8f0fb1591cff3360fc57b9bfec4d937852e8c636547a_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2ec26bd2-65c5-3ae1-bde5-7191aacf9866",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-proxy-rhel9@sha256:8a1cfb834027a80ed63f6baa04138c297b207129cbe2badb5288021ab2d01f9e_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2edb64e4-9ff0-3ab5-b038-740a586594ce",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9-operator@sha256:7cf2d4764244f9d24861c597939224dfad6935823bb5271279e9c1711390f782_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "310719e1-78b3-3796-ad39-9584ff783b5e",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9-operator@sha256:a11554edb0f50083024b36f2dc13c5b6a60211a1ecaad30a78409a433512a705_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "34e16bec-d20d-3d4c-8238-ec9985b78f5c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/receptor-rhel9@sha256:21176a1983a9b934e8b8ad5ff1db86540883bb160e15a733b7ef4f6c11974da9_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "35670ec7-cce0-3625-9f51-fd2e49301b94",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9@sha256:ff4fe0dcbba51685739002ed8703822ae55b9fab6ce0f5bc5e1600b5ad53b474_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "356d9a04-4c57-367a-9934-7de6f8605359",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9@sha256:080f4f2c2db999ee35e700f9090f8bd31cd8e3d345328899cde5406493208a28_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "35adce34-52f6-3aff-925a-fd971b2435ac",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-chatbot-rhel9@sha256:e66798c501870aded1197e33098b181135d7465275f7b18969ac73846db2ae6b_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "360ee96e-71d7-3edf-b13e-98879208be61",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-supported-rhel9@sha256:12726676bf7f888bf49734aab1616046d8c3cef36cda5016de02cb09e36b51a5_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "366b5797-819a-364b-9df6-f340a22e8cca",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9-operator@sha256:abc1f2c6256422a1ecf184a7a942540c365010c2ed07db7c9d96dd3ecb50cbe5_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "38b3222b-23b3-3fbb-884a-1a5eac7482c2",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9@sha256:4e335af8d2fc8b8df96c1338a17fe2e32c51bd16229008ec66d40cc24187a8c6_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3a493089-5d53-3463-8ee5-f5c8ab67b527",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9-operator@sha256:9b92e13859d120c01c8776e7dbe9e56e9569351cdc7ccc53ac34f3e3034feae1_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3ac04f4c-42bd-3982-8b9d-0d94f65cbc78",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9@sha256:98dd1742832e1471100f2aecfe0dc6ac94916c790af0c2ea05ee846e841138b0_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3b43cf57-f490-3cf2-bd36-cf730068298c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-minimal-rhel9@sha256:08ce19063089c5e2432394a730287e17d9aa680aad9c228ca8163a5c86de5283_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3b83189b-3248-390d-a408-3ad24abb51f9",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-runner-rhel9@sha256:797b4d4cab845e5544ca6544a2417578ad135ab38ed180a1f08bec45767e83c2_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "40b69c1c-9cd5-3ee0-9113-9256b40d9eb7",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9@sha256:12040aec052e056cc93acb8d99b725c6ff518445b69e86971f60fe1460d3b80d_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "412ddb2d-b41a-38c6-a3c7-f91054a20bb1",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9@sha256:94b9b25cba1fd560c6572ebde1cce9ea9c959ce31d2f02561e68ff7db580bdcf_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4392eb69-e9cc-3a79-8a6f-bdc5a372ac55",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/receptor-rhel9@sha256:ca3c0b4e72dc9df0eb2626898a3b731b31c2503b9dc907a060defb902c708bf4_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "46ae4296-5a6e-3677-be0d-eb7e695a2f39",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-web-rhel9@sha256:1626a744d4621b09beff3171eefef651b426172ebac25d5a5f9c4ccc4d5aae42_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4856b4d9-f847-3488-becd-70722b56c047",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-tools-rhel9@sha256:bb17450a5a8ff1ff4b364523e0b19cd2913f560f10e0214a0405ee18d2a36fd1_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4b574830-3f60-3079-aace-9e21f73669db",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-minimal-rhel9@sha256:c135bdbb6697bdfd4d711d71f70d915839c08057ba7aab7bf7117643f1f47bf8_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4da4fd93-3aaa-3b66-9269-d500a5a825ba",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-ui-rhel9@sha256:21cd299b7438e018c4f3c9a0092df03f0c042c9cb40bf326056e02740fd2ccab_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4db95798-2877-3bb5-9317-f58e683c2d83",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/mcp-server-rhel9@sha256:574420f56707cf437a81dc92ad5ec529d9e9c5a668dbd569b41becc7fde7e194_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4e37d741-7ae2-306c-94c8-967d5a1b336b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9@sha256:dfc798d88444141412d07492a1f426f083c6b7e3499db2f78abfeba0123c5821_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "51f7eef4-6200-3bab-94e9-10326c92a6e7",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9-operator@sha256:b915260ad68010ba87a875e45bf2a80f92da715b73a1f7277d4f1a40f348428c_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "543c7d43-2a5b-3e31-8631-2a0f02a35fef",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-web-rhel9@sha256:0750bf5476cab8d10288afced3704b87d988e37575ee88cb9c5aeb3a117bbeaf_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "54bfe897-092a-3b53-a70f-cc38e1b687c4",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9-operator@sha256:f01ed355b061010f9584a77daad927f1ccca5097cc17e16823fdd2818508578b_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "584eb94d-b57c-31b8-a81b-f7cdfefbe1fd",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-ui-rhel9@sha256:95d30d40d9cd98affa936cecb673fa0993721f25501fb975d7e7c126ecfa141c_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5b2abe00-3c2e-33d6-8c24-e7be976615da",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9-operator@sha256:007212c6697175cde671e7150b58b05b31f02641451998023ca867e868a5b393_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5ec9de50-0036-373b-9c26-65f774fc160d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9@sha256:653cdc00e8cd62c3606c5680f550c45b72294ff711dd4fa84ed03180d836cfad_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "64ba5e74-7b05-374f-982f-a63ece5f628a",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-tools-rhel9@sha256:93b09e8400609e2507c4909d446e00f709d3c1e1c2f5f18f0e9d83f215c5e7b6_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "64d087a9-07b9-3f4a-a5db-1cbdc27ceb89",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9@sha256:baa6ab272bef882a138529cc0a0accaaf18cc4a2b553d009b294a2d5a258721e_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "669f94a1-4ac6-3656-815d-7fcdd1536d4c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-rhel9-operator@sha256:d7199aa13e57c289cfb7c163dcb6d08a01a5b54f750c8d792d302cf104126353_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "68a05561-8892-3573-aac7-e7a125f434d2",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9-operator@sha256:c9c997790102efacb3e3001fc833cbb9c0e5d43aa506b499158a537af1cb7f84_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "69589850-88ce-3748-ad20-50906070b2b8",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-supported-rhel9@sha256:01780af012f7fad2b3f8975e9a77a8e9d85913ac6869c60d94b9f7b0e71c4e41_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "69a89d18-143f-3bd5-ae2a-8e719d9f4aec",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9@sha256:65813a1c96deb46ed24ae6ec32a41f381a58facacbb5ab953914298b80d27d73_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6ce92c90-8901-3e04-a82c-cbf7627fa3da",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-rhel9-operator@sha256:6939f0ea8c418da6173f39771e7936f69cd3a244587d7c3cc736bf261ba39a34_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6dda9e15-0087-381c-b670-22c255757990",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9@sha256:3f7645c26cacd70cddf3ebf45410ab4e2fd7f34be1e0abf022361a1c486a8e0a_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6f651e6e-7d4c-3c9c-b2bc-b6c5de2fd4e7",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/receptor-rhel9@sha256:e2abe7d7c1a00c6b7911e6db28924f50640abfd88a99ade0690f5394a42e4fdc_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7888d02a-e83c-3552-92a5-f5d4e979ce22",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9@sha256:78cf27a0aa87e23ead38510b5f76b56053fd2fb19dd8dffef714106b035e66cc_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "79ee42f2-8efd-389d-a4c3-e955ceab72ca",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-minimal-rhel9@sha256:eea7078b27cbde48374b22f3c234d7b9cf40119a1e9d226ade575181eff11ec5_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7c91ae46-edad-3be2-bc84-73ab21f9ff59",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-web-rhel9@sha256:e7b4f3a3e5734de252d6214ec345479704c4fe7dcf3ed7bebe5a2a5166f00489_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7d2de943-646a-36ee-a2c7-5729fb79dbf6",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-proxy-rhel9@sha256:a546ff44cde478da177dccf2d3cc93667422297e6bf40923955f3ca9801e6319_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "80d1bad3-6b96-3ee9-8097-f1e50dde3c46",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9-operator@sha256:17ed60234239a1b0b5081ae28b2a2a154ed79eaac34c0cf502c45bef6bb90c0a_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8141a395-363d-348e-83ec-0af99a3c53f7",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9-operator@sha256:f4ddc5a0b88daa83b106e7b09cd57ceb1082f739a4007ad6702e585af73e75e5_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "881d96ef-dc82-377f-9b4a-61e84036d24a",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9-operator@sha256:d2a1bfaf4fe65ac2807409febecca76a1dfea376455c5c92cc9ebd6e43b3d6d9_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "88f34661-a386-3693-a090-d69c11c9f93c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9-operator@sha256:af8ef0d4d9e733370babbe0f6647d20d8f5fdc01349738a173803a7782bab2c1_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "891878a1-62ec-3038-a83b-c2c6afa1f707",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-rhel9-operator@sha256:e8edf62d6739397fa96c44c502c7ee64e0fe884a526d8d2b37ce39f04e3d8f39_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9b5b5fea-6125-31af-94f2-0ff92e62104a",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9@sha256:d4e8c0cbc0691b961a28b670e61fb52941d99804f83a0e3f82c610e800369c08_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9f1c350e-b922-36d4-b1bf-4aa4fbca4e00",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-dev-tools-rhel9@sha256:b5424fd9f704ddf4ab272fc1629a64d3a658b9aa40c4dcfac58dd6ca51b48220_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a171feaa-4629-3091-9001-7d02cf814bcd",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-minimal-rhel9@sha256:19166f3323bf6cb6d86bc917960a452002e9d10e796228c564b400e7849fe164_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a41dc825-23ef-32d6-b09d-471bed0fc6b9",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/mcp-server-rhel9@sha256:bc80d85ced33bf5b7dc60d6d7555949c98cc4ee506d10ea5bb8a8691e58e8f42_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a4699e02-4e28-3a45-9fc8-2e4aaf0da005",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-proxy-rhel9@sha256:0e76b0c1624bd3f7afc103028de41fad5df327f662eb92362243c933d53d7a5e_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a5ceb5ba-15ec-3448-9f03-ef24567d4436",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform/platform-operator-bundle@sha256:1ebe7d8d82749c71de1ac13bf94c8050bcac182918df254a3622215f8c6bc68f_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a7d0e343-96a7-3d1c-b2f0-619b257f62fd",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-tools-rhel9@sha256:295002a40f4e50912d15e5e101306f2281be8dbf6440c4573d56098ad35745d5_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aab24678-ea83-3447-ae70-fe84d0977a24",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-proxy-rhel9@sha256:480e49c6ab2805182121f2204023cc35974b803ecbe8f5f6a1ce8b5c9940df9d_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ab3c9ba2-ed9a-3c6d-86bc-0a40697508ce",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-minimal-rhel9@sha256:1f03bd9054901f83e354a52bde14ad3e5ad8e556db128e22cf7ebe7a46ac7c44_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "aecbcc9c-7feb-327a-b842-4e8f67bc9566",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9@sha256:503dfe60277d2a1b378eec07e179928add2af1d968614f46756a47df11a58579_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b0eece63-21ea-3990-ab00-f01ecb84ab8f",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-web-rhel9@sha256:17b5bc347764f23b1e17bd990e0050a2934315211fa11642b1a206027a356a86_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b1e2460e-7168-3232-9914-9025df9614f2",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9-operator@sha256:7a4a38fb52698e0edb0426bdd5bd8eda86b08758548c22091301a6be10579fa3_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b29d5027-4aea-329a-a950-d2e08cac59d2",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-supported-rhel9@sha256:6b5eac6cb840fc63462c7ba90f9119425b47abe39ce3a035c58aa1c24d20274e_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b4eb1538-08dc-3360-8ae4-7e35ebc69037",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-chatbot-rhel9@sha256:c14363d97da2591ea16578d2825ac7841102bcd205f0d014bc04697257b9c907_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b879c668-ab2a-34d1-8cda-87316dab7314",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/aap-must-gather-rhel9@sha256:3362761d6a5d99330d303adc87e1181369243147d56347362bfba62cc8047081_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b8a01e9b-2f15-33c6-a358-055e6b6d2c00",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/lightspeed-chatbot-rhel9@sha256:4f334f34591be73a659548d4f2f3f59bff8ba7e2c76863d9eb81ed67c3c78e75_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b9511681-cdbd-3c6d-9455-7aebc8cfa16e",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-runner-rhel9@sha256:6430213d3b92e23f1f77bba40e9e7d3d3a047c5988603148d6958bbb197393b3_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b98e2086-428e-3142-98b7-679e0c970366",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-minimal-rhel9@sha256:08bef41a15e546deccf883d64ce525df7efd0511a5a52872f1e7486d3a4e0e75_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bb40ec1c-629e-36a0-b798-e0071dec0449",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9@sha256:fc3ff82f0cf98d1e8031a0a53c4fc06d4783b668b8d22229fd0a13d74b3e3d84_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "be41c657-ef23-340f-bcf0-f9bbecd790bd",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-minimal-rhel9@sha256:dac798d7cd52804aa0fed81b8743d51a7f35a34a920067a44270ed866164688d_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c124d9f3-56b5-3b1b-9133-ac6a07c48703",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9@sha256:baf3be5dd66c26b9295da4d9202e93fa1c718b5ac0700bb450acccbd57367082_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c7c12297-0f8f-3a3a-b618-802058bae177",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-builder-rhel9@sha256:e81951b19451ffa56f4d44225c241229db250e2b87b0cf546d57506ad0911f41_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c8712308-7fcc-33db-abd4-19f1c2dd510e",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-minimal-rhel9@sha256:76084c25d8de65c919ec760b8ddb9ae338da5cebe4b9ea03294c7b6466e0c3b6_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c9a8a8e9-6a1a-3d30-9dfb-10e14dd5d20d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9-operator@sha256:648591fde25f36d752c6f7ba06224fb939f2f227273a13a5e14371147ac5a7f5_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cecd7665-0e4a-3ef3-8ca5-11bddb5f379c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9@sha256:77ab5de9e627656bd9668724e2f59a37510a4905801edd183ecf380dcd9fe585_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d0677b0d-07ba-3a5a-b006-98d20e2aa92d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/aap-must-gather-rhel9@sha256:906f8d05d464820d7f46e9e3e437700adb70397eab300f2c0a2f281ee5322dfd_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d156a9e0-cd23-3ad7-b5fa-b8f8d049553a",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9-operator@sha256:4450f35880b8a42c3dfec603143c0ded87b94b68472efd074eaf850e09cb1949_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d32efc30-00a1-365a-8584-65f422727ee3",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-dev-tools-rhel9@sha256:443ed5ee0076c027a2af55183ce364225dce498e42fccdb259efd69ff412675f_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d54887d7-9db7-333b-b03a-536abba7b76f",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9-operator@sha256:e3711929d6bc96143d385d0d95d0b7cd41ff2271b6be677ac59681c61e91e1a7_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d70dea33-b363-3228-a4e5-0e5582f5f073",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/mcp-server-rhel9@sha256:0233c53a96cc685fc0d82596b84ab8a783ce7affba89dd85def7ad7eacf5bdfe_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ddeeeaee-889f-31d7-b297-4cb593c643cb",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9-operator@sha256:6d72e8f7ae3d541d98cecbd49ec0442097b853cd183f16407795230357eeaaca_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e10fa44b-2c81-3173-a7ae-8bc784d413c4",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/controller-rhel9-operator@sha256:754ad996d3fb66fffb7bfe0ee9289c9191b3ccecebd509ea99b3906f6f9e2208_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e1a4bc9c-941c-3f25-9660-bda08bb8aa06",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9@sha256:78adef6bb83fd97673c8b5d4e889709bd1234a06cf2ee57703fe44500e0ff96c_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e3449432-58a0-3610-86dc-26f03b30b66d",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/receptor-rhel9@sha256:abad27dec9638ed160bce90a10facb04fdce91bcb2969470ffc8c436ac01de50_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e5efaa82-7c5d-3142-beb7-1f8af7c5a72f",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-runner-rhel9@sha256:ba9e7533d69126ea08e4445566b637411cc73cd463a9ec6ff1f91b8c3441fbfd_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e7a4741c-d7a8-3164-81a9-c9686a7c6986",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-rhel9-operator@sha256:e77be358fa816a3bc3dcb40fae651d317da03e6834049dc0c9b2f868a27180e0_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e80e3a7b-20d1-35e1-aba1-b3ebabd9a45c",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9-operator@sha256:f07c731d554f88d8531de6981846e05b817bea2e3f254a0c7dc6a21ba51f8838_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e8e1f64c-d088-3cac-9ba9-21e1e030cec0",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-rhel9-operator@sha256:533bd486273743daf1f023b3d77f0a151fe1e5c6f63f806588964a5bd1b6f1d6_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e91c1cc9-6d89-3d4b-8b80-b0b087dea343",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-ui-rhel9@sha256:dea1282e383022fae2548eab7fcb110afc78276336311729711f200279cc636f_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e9982fdf-b46f-3e3a-8b1d-b5759b0c4bd9",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/platform-resource-runner-rhel9@sha256:5ef4c37365b81ea9d4643a9200c587d438a78d24517d762b80908971fd75d9ab_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ec8b3ae7-82f1-362b-a2f8-7fc819d08caf",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-tech-preview/metrics-service-rhel9-operator@sha256:9577a704733f400f9c9782e6699d180e5a68bbccf44374f8b5e7e48cd2f2aba9_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ed20d241-6b7b-38b3-bcd0-ecf96cc7b847",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/mcp-tools-rhel9@sha256:b332d45519f1d5ea72c3e0ad5cfa2c182a8f9fbba682bd3a86734999e33519e4_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ed3defda-b001-3b44-862f-c5d918eb6271",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/hub-rhel9@sha256:878088c9089f2d9b9eda19edb88c6f11b65316dcdd0291049e357d7d6f5ba9b2_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f3f0c515-7989-30de-804a-bc55ee04104b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ansible-builder-rhel9@sha256:9e37aeb2f8f5d89367c4c1415abbd66464aae126eda811f832a87c7fa1e914b0_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f4c7a344-5469-31d9-a846-901b1feebfaf",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/de-supported-rhel9@sha256:72e638615fa4eccc23719eb2cc6892531508c41a2b3b80efcdcd34360d99b6e9_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f5e36446-8d5b-3671-987a-dbb7c4096c0b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/gateway-rhel9@sha256:085f4b5bef40a152a53dab4032b8f86d00f19186e0e8cc44c43654172c7247e0_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fb2761a9-786b-30fb-963c-b33698697a44",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9@sha256:b16272547b35c5059b4954c2e75ef1aaae29f92576cfbf0a4fc6b870558ce085_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fbbc21bb-552b-3fc4-99a7-6b1274e6742b",
+       "product": {
+        "name": "registry.redhat.io/ansible-automation-platform-26/eda-controller-ui-rhel9@sha256:243badf894b3ecf3ae0e42447e8d4415644d865f01b292416819c0e4d969cec8_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-62718\nCVE-2026-4926\nCVE-2026-6321\nCVE-2026-23490\nCVE-2026-28390\nCVE-2026-28684\nCVE-2026-33154\nCVE-2026-39363\nCVE-2026-39364\nCVE-2026-39892\nCVE-2026-40192\nCVE-2026-40217\nCVE-2026-41140\nCVE-2026-48710\n",
+     "baseScore": 0.0,
+     "datePublished": "Jun 9, 2026, 5:09:44 PM",
+     "dateUpdated": "Nov 12, 2026, 8:27:48 PM",
+     "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.6 Container Release Update",
+     "id": "RHSA-2026:24866",
+     "references": "https://access.redhat.com/errata/RHSA-2026:24866\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_24866.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "An update is now available for Red Hat Ansible Automation Platform 2.6"
+    },
+    "id": "9c878081-15f9-368e-b165-1313df13d306"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "73a477e8-3e08-3d4b-b29a-e657f0a47591",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-rhel9-operator@sha256:f7788f465a7f7d03b8ac7b1de0994e99eb95693f78120856420e7d2426a3c466_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7dce68e6-5570-32e4-9637-4cede2b0708b",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-rhel9-operator@sha256:5b0afdcb5c35d4c55847e1eb2967056ef9f508549f40028d6a6d2b41f6e70fe6_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7e4ec142-42d1-37e7-903f-377c096a4915",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-llama-stack-core-rhel9@sha256:b6ec1fac474c9ff596322446656add0ebb10c449d623c37a3f71548957dc4c9c_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8a2dffac-a634-3c66-8588-aa93f16fc218",
+       "product": {
+        "name": "Red Hat OpenShift AI 3.3",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9b03ec83-40c0-3017-a5df-563c14c42f12",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-rhel9-operator@sha256:195a25181e1ff5c73cea1146a339489398cb54618e8cd9d574e90a72a1ff3e11_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9fd91781-4a7e-34cd-b01b-3745c82248c5",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-llama-stack-core-rhel9@sha256:ee821288511aaf6e91080f8a925a425e5d26eeacc73f042b39469c65c2e7a139_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b9baf674-e90e-3470-a495-21edd1f0555c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-rhel9-operator@sha256:48a73c9e0491f2f9bb109e15fea89ebd65939ed9bcfced506e006f23bbe9f64e_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ed5b382a-9345-3138-bdbf-143978debc9a",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-operator-bundle@sha256:163f636a1cbc151572ad0470bd5b06650980efd72e6c462cff6ce9ce4bcfaa93_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-35029\nCVE-2026-35030\nCVE-2026-40217\nCVE-2026-42271\n",
+     "baseScore": 0.0,
+     "datePublished": "Jun 25, 2026, 6:09:56 PM",
+     "dateUpdated": "Nov 9, 2026, 6:44:15 PM",
+     "description": "Red Hat Security Advisory: RHOAI 3.3.4 - Red Hat OpenShift AI",
+     "id": "RHSA-2026:30056",
+     "references": "https://access.redhat.com/errata/RHSA-2026:30056\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_30056.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Updated images are now available for Red Hat OpenShift AI."
+    },
+    "id": "f6b6e40a-dcbf-3411-81a4-beafde9cf711"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "6b0b5e6c-feb6-3640-b0af-3d4b3565497e",
+    "product": {
+     "name": "LiteLLM",
+     "vendor": {
+      "name": "berriai"
+     }
+    },
+    "product_version": "bb0639701796218a3447160e55c0f1097446e4e6085df7dfd39f476d4143743f"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "48c297b9-3a93-38c4-96c6-166f6e66b51f",
+    "vendor": {
+     "name": "berriai"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "11126500-3c28-34d5-8fd1-bc51ea272ba8",
+    "vulnerability": {
+     "aliases": "CVE-2026-40217\nGHSA-wxxx-gvqv-xp7p\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 15, 2026, 3:10:16 AM",
+     "datePublished": "Jul 13, 2026, 3:15:44 PM",
+     "dateUpdated": "Jul 13, 2026, 4:04:36 PM",
+     "description": "LiteLLM has a sandbox escape in custom-code guardrail",
+     "enisa_id": "EUVD-2026-21376\n",
+     "epss": 0.0,
+     "id": "PYSEC-2026-2601",
+     "references": "https://github.com/BerriAI/litellm/security/advisories/GHSA-wxxx-gvqv-xp7p\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-40217\nhttps://github.com/BerriAI/litellm\nhttps://github.com/BerriAI/litellm/releases/tag/v1.83.10-stable\nhttps://www.x41-dsec.de/lab/advisories/x41-2026-001-litellm\nhttps://pypi.org/project/litellm\nhttps://github.com/advisories/GHSA-wxxx-gvqv-xp7p\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "3747d8c2-3867-3db4-9d9f-7105934b6023",
+    "vulnerability": {
+     "aliases": "GHSA-3926-2jvf-fg29\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 15, 2026, 2:49:26 AM",
+     "datePublished": "Apr 10, 2026, 3:31:57 PM",
+     "dateUpdated": "May 11, 2026, 4:17:14 PM",
+     "description": "Duplicate Advisory: LiteLLM has a sandbox escape in custom-code guardrail",
+     "enisa_id": "EUVD-2026-21376\n",
+     "epss": 0.0,
+     "id": "GHSA-3926-2jvf-fg29",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-40217\nhttps://www.x41-dsec.de/lab/advisories/x41-2026-001-litellm\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "620c4524-228b-3889-b74d-d32090972dca",
+    "vulnerability": {
+     "assigner": "mitre",
+     "baseScore": 8.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 19, 2026, 7:21:10 AM",
+     "datePublished": "Apr 10, 2026, 1:43:23 PM",
+     "dateUpdated": "Nov 18, 2026, 8:58:23 PM",
+     "description": "LiteLLM through 2026-04-08 allows remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
+     "enisa_id": "EUVD-2026-21376\n",
+     "epss": 17.02,
+     "exploitedSince": "Nov 18, 2026, 12:00:00 AM",
+     "id": "CVE-2026-40217",
+     "references": "https://www.x41-dsec.de/lab/advisories/x41-2026-001-litellm/\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "c713d41d-5ea9-37f2-b67a-b91a476c5f77",
+       "product": {
+        "name": "LiteLLM",
+        "vendor": {
+         "name": "berriai"
+        }
+       },
+       "product_version": "bb0639701796218a3447160e55c0f1097446e4e6085df7dfd39f476d4143743f"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "084f77a8-c3d0-373b-b622-c4d80761901a",
+       "vendor": {
+        "name": "berriai"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "a9936fc1-d797-3712-a358-15da0c358efa",
+    "vulnerability": {
+     "aliases": "GHSA-wxxx-gvqv-xp7p\nCVE-2026-40217\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 15, 2026, 2:50:09 AM",
+     "datePublished": "May 11, 2026, 4:17:23 PM",
+     "dateUpdated": "May 11, 2026, 4:17:23 PM",
+     "description": "LiteLLM has a sandbox escape in custom-code guardrail",
+     "enisa_id": "EUVD-2026-21376\n",
+     "epss": 0.0,
+     "id": "GHSA-wxxx-gvqv-xp7p",
+     "references": "https://github.com/BerriAI/litellm/security/advisories/GHSA-wxxx-gvqv-xp7p\nhttps://nvd.nist.gov/vuln/detail/CVE-2026-40217\nhttps://github.com/BerriAI/litellm\nhttps://github.com/BerriAI/litellm/releases/tag/v1.83.10-stable\nhttps://www.x41-dsec.de/lab/advisories/x41-2026-001-litellm\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "5e0c6d63-0253-3eed-b3cb-0a81dcef8bfb",
+  "epss": 17.02,
+  "exploitedSince": "Nov 18, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-21376",
+  "references": "https://www.x41-dsec.de/lab/advisories/x41-2026-001-litellm/\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-21376",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 18, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "LiteLLM",
+      "vendor": "BerriAI",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "bb0639701796218a3447160e55c0f1097446e4e6085df7dfd39f476d4143743f",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "cve@mitre.org"
+   },
+   {
+    "affectedData": [
+     {
+      "collectionURL": "https://catalog.redhat.com/software/containers/",
+      "cpes": [
+       "cpe:/a:redhat:ansible_automation_platform:2.6::el9"
+      ],
+      "defaultStatus": "affected",
+      "packageName": "ansible-automation-platform-26/lightspeed-chatbot-rhel9",
+      "product": "Red Hat Ansible Automation Platform 2.6",
+      "vendor": "Red Hat",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "1780102732",
+        "versionType": "rpm"
+       }
+      ]
+     },
+     {
+      "collectionURL": "https://catalog.redhat.com/software/containers/",
+      "cpes": [
+       "cpe:/a:redhat:openshift_ai:3.3::el9"
+      ],
+      "defaultStatus": "affected",
+      "packageName": "rhoai/odh-llama-stack-core-rhel9",
+      "product": "Red Hat OpenShift AI 3.3",
+      "vendor": "Red Hat",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
+        "version": "1782310008",
+        "versionType": "rpm"
+       }
+      ]
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:lightspeed_core"
+      ],
+      "defaultStatus": "affected",
+      "packageName": "redhat-user-workloads/lightspeed-stack",
+      "product": "Lightspeed Core",
+      "vendor": "Red Hat"
+     },
+     {
+      "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+      "cpes": [
+       "cpe:/a:redhat:openshift_ai"
+      ],
+      "defaultStatus": "unaffected",
+      "packageName": "rhoai/odh-mlflow-rhel9",
+      "product": "Red Hat OpenShift AI (RHOAI)",
+      "vendor": "Red Hat"
+     }
+    ],
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+   }
+  ],
+  "cisaActionDue": "2026-12-02",
+  "cisaExploitAdd": "2026-11-18",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:litellm:litellm:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "1A3B5667-ED76-49FA-A4A7-5B9600843848",
+        "versionEndIncluding": "2026-04-08",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "LiteLLM through 2026-04-08 allows remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI."
+   },
+   {
+    "lang": "es",
+    "value": "LiteLLM hasta el 08-04-2026 permite a atacantes remotos ejecutar código arbitrario mediante la reescritura de bytecode en la URI /guardrails/test_custom_code."
+   }
+  ],
+  "id": "CVE-2026-40217",
+  "lastModified": "2026-11-19T05:18:39.853",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.9,
+     "source": "cve@mitre.org",
+     "type": "Secondary"
+    },
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.9,
+     "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-40217",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-06-15T00:00:00+00:00",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-04-10T14:16:36.307",
+  "references": [
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Exploit",
+     "Mitigation",
+     "Third Party Advisory"
+    ],
+    "url": "https://www.x41-dsec.de/lab/advisories/x41-2026-001-litellm/"
+   },
+   {
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+    "url": "https://access.redhat.com/errata/RHSA-2026:24866"
+   },
+   {
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+    "url": "https://access.redhat.com/errata/RHSA-2026:30056"
+   },
+   {
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+    "url": "https://access.redhat.com/security/cve/CVE-2026-40217"
+   },
+   {
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2457301"
+   },
+   {
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+    "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-40217.json"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-40217"
+   }
+  ],
+  "sourceIdentifier": "cve@mitre.org",
+  "vulnStatus": "Modified",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-420"
+     }
+    ],
+    "source": "cve@mitre.org",
+    "type": "Secondary"
+   },
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-94"
+     }
+    ],
+    "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
