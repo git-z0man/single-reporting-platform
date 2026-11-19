@@ -2,7 +2,7 @@
 
 - **Trigger**: `trig_01NFjrqErTyJ3muZ6nhqsJ2j`, created 2026-11-03 with the repository already attached as source and outcome
 - **Connectors**: none. A Routine created through the HTTP API gets every connector of the account attached; this one was cleared afterwards - see "Connectors come attached" in `routines/README.md`. The first attempt, `trig_0143wWwXFLDgzSDLs539xs1W`, was deleted by the owner on 2026-11-03.
-- **Schedule**: `50 8 * * *` in UTC, no `CRON_TZ` (daily 08:50 UTC). The six monitors run on Berlin time, so the last of them, Guide sync at 09:30 Berlin, starts at 08:30 UTC in winter and 07:30 UTC in summer; 08:50 UTC is after it all year. Until 2026-11-14 the trigger was `CRON_TZ=Europe/Berlin 20 9 * * *`, which ran before Guide sync in winter.
+- **Schedule**: `50 8 * * *` in UTC, no `CRON_TZ` (daily 08:50 UTC). Since 2026-11-19 every monitor runs on UTC as well (see "The routines" in `routines/README.md`), so the order holds all year: the daily monitors are done by about 07:10 UTC, the notified bodies alert by about 07:10 UTC on weekdays. Guide sync runs on Sundays at 12:30 UTC, after this watch; it leaves no evidence of a quiet run, so that changes nothing here. Until 2026-11-14 the trigger was `CRON_TZ=Europe/Berlin 20 9 * * *`, and from 2026-11-11 to 2026-11-19 the monitors ran on Berlin time.
 - **Writes**: nothing of its own. It commits under the scope of the routine it is repairing, and opens its own pull requests for fixes to `tools/`, `euvd/*.py`, `srp-domains/check.sh` and the like. What it may merge by itself is in `CLAUDE.md`, "Repository watch routine".
 - **Live prompt**: a loader that reads this file from `main` - see "Loader prompts" in `routines/README.md`. Everything below the `---` line is the prompt.
 - **Loader status**: **applied** at creation (2026-11-03), read back and equal to the loader in `routines/README.md` with `[FILE]` = `repo-watch.md`.
@@ -32,14 +32,14 @@ For GitHub (pull requests, issues, merges) use the `mcp__github__*` tools; load 
 
 This is the first and most important check, and it needs nothing but the repository. For each routine, read the evidence on `origin/main`:
 
-| Routine | Runs (Europe/Berlin) | Evidence of today's run |
+| Routine | Runs (UTC) | Evidence of today's run |
 |---|---|---|
-| ENISA SRP pages | daily 08:04 | `last_check:` in `enisa-srp-faq-baseline.md` |
-| SRP domains | daily 08:00 | `last_check:` in `srp-domains-baseline.md`, and 29 rows with today's date in `srp-domains/reachability-log.csv` |
-| EUVD exploited | daily 06:50 | `last_check:` in `euvd-exploited-baseline.md`, and today's line in `euvd/history.jsonl` |
-| CRA notified bodies | Mon-Fri 09:00 | `last_check:` in `notified-bodies-baseline.md`; on Saturday and Sunday the last working day is correct |
-| Commission CRA FAQ | Monday 07:00 | none - it commits only when a new version appears. Silence is the normal outcome and is never a finding. |
-| Guide sync | daily 09:30 | none - it commits only when the guide and ENISA disagree. Silence is normal. |
+| ENISA SRP pages | daily 06:04 | `last_check:` in `enisa-srp-faq-baseline.md` |
+| SRP domains | daily 06:00 | `last_check:` in `srp-domains-baseline.md`, and 29 rows with today's date in `srp-domains/reachability-log.csv` |
+| EUVD exploited | daily 04:50 | `last_check:` in `euvd-exploited-baseline.md`, and today's line in `euvd/history.jsonl` |
+| CRA notified bodies | Mon-Fri 07:00 | `last_check:` in `notified-bodies-baseline.md`; on Saturday and Sunday the last working day is correct |
+| Commission CRA FAQ | Monday 05:00 | none - it commits only when a new version appears. Silence is the normal outcome and is never a finding. |
+| Guide sync | Sunday 12:30 | none - it commits only when the guide and ENISA disagree. Silence is normal. |
 
 A missing point for **today**, after the routine's hour has passed, is a failed run. A missing point for an **earlier** day is recorded in the report, never reconstructed: a backfilled measurement would be a fabricated one.
 

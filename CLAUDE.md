@@ -266,7 +266,7 @@ reported through the SRP.
 
 `index.html` (the guide) and everything under `guide-sync/` are maintained by a
 scheduled task that runs `tools/fetch_enisa.py`, `tools/check_guide.py` and
-`tools/sync_guide.py` daily at 07:30 UTC, after the ENISA and domain monitors.
+`tools/sync_guide.py` on Sundays at 12:30 UTC (daily at 07:30 UTC until 2026-11-16), after the ENISA and domain monitors.
 The prompt is `routines/guide-sync.md`; the rules for what is mechanical are in
 `tools/README.md`.
 

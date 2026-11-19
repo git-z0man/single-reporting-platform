@@ -17,9 +17,19 @@ says which of the two it is.
 | `commission-cra-faq-monitor.md` | **Commission CRA FAQ monitor** | `trig_012AzfKXKrPnRCEjXXYWBgY4` | `0 5 * * 1` |
 | `srp-domains-monitor.md` | **SRP domain reachability monitor** | `trig_01426ap5KJGGrY4Fk2pbTm8s` | `0 6 * * *` |
 | `notified-bodies-monitor.md` | **CRA notified body alert** | `trig_01V74LWJSJ7QETodKUS5DojP` | `0 7 * * 1-5` |
-| `guide-sync.md` | **Guide sync** | `trig_01SB5rkv7M4VXgtRtNzPeNYD` | `30 7 * * *` |
+| `guide-sync.md` | **Guide sync** | `trig_01SB5rkv7M4VXgtRtNzPeNYD` | `30 12 * * 0` |
 | `euvd-exploited-monitor.md` | **EUVD exploited monitor** | `trig_01Sfn7X2MMSSdBDZv9v51Z1D` | `50 4 * * *` |
 | `repo-watch.md` | **SRP repo watch (daily)** | `trig_01NFjrqErTyJ3muZ6nhqsJ2j` | `50 8 * * *` |
+
+All schedules are in UTC, with no `CRON_TZ`. On 2026-11-11 the live triggers were
+moved to `CRON_TZ=Europe/Berlin` with the summer offset (UTC+2) although Berlin was
+already on winter time (UTC+1), so from then on every monitor ran an hour later than
+written here; the EUVD monitor, for one, finished after the Cellar watch of
+European-Product-Act had read its `euvd/stats.json`. On 2026-11-19 the owner had
+every Routine set back to plain UTC, at the times in this table. Two of them, the
+ENISA monitor and the notified bodies alert, were created via `http_api` and are
+changed in the Routines UI by the owner. Guide sync has run weekly, on Sundays, since
+the live trigger was changed on 2026-11-16; this table records that.
 
 The UI name and the file name differ for the first one: an attempt to rename it
 to "ENISA SRP pages monitor" was refused along with the prompt update (see
