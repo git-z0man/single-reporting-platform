@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 6, 2026, 3:37:55 PM",
-  "dateUpdated": "Nov 18, 2026, 8:58:24 PM",
+  "dateUpdated": "Nov 19, 2026, 4:55:17 AM",
   "description": "** UNSUPPORTED WHEN ASSIGNED ** Deserialization of an inbound SOAP fault in Apache Axis 1.x allows unauthenticated remote class instantiation. When a SOAP <Fault> carries a <detail><exceptionName> element, Axis loads the named class and, if a String <data> element is also present, instantiates it through its String constructor before checking that it is an AxisFault. Loading alone runs the class's static initializer. With a suitable class on the application's classpath this leads to remote code execution. The fault is parsed while the engine resolves the target service, before any per-service handler chain runs, so authentication handlers configured on a service do not protect against it. This affects all Apache Axis 1.x versions through 1.4.\n\n\n\nAs Axis 1 has been EOL we recommend you migrate to a different SOAP engine, such as Apache Axis 2/Java. Alternatively you could use a build of Axis with the patch from https://github.com/apache/axis-axis1-java/commit/41f3b4e8d04e310ca81f86b92630ab2c11d608bd applied. The Apache Axis project does not expect to create an Axis 1.x release fixing this problem.",
   "enisaIdAdvisory": [
    {
@@ -67,6 +67,287 @@
      "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Atlassian Confluence ausnutzen, um beliebigen Programmcode auszuführen."
     },
     "id": "1b24663b-0ddb-35da-aa27-ab28ec319535"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "52fe854c-a031-3ea6-a8c7-07c0ebb0d5f9",
+       "product": {
+        "name": "axis-manual-0:1.4-311.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6ccf7f90-f8a2-3670-9e55-834e1bef75a6",
+       "product": {
+        "name": "axis-manual-0:1.4-311.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "789d6f0c-5ad2-3aad-ba2f-f229d235a23a",
+       "product": {
+        "name": "axis-0:1.4-311.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8442199f-b108-39ca-9079-68817582d7b1",
+       "product": {
+        "name": "axis-0:1.4-311.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "844e1c6e-6f90-30d4-b27f-82c5941c2792",
+       "product": {
+        "name": "axis-0:1.4-311.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8b167e0a-9dea-3ca9-9c52-0d3e3b3fcba4",
+       "product": {
+        "name": "axis-0:1.4-311.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b5ec285f-ebb1-38b4-a135-0806212978a8",
+       "product": {
+        "name": "openSUSE Tumbleweed",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "cad89a73-5695-3059-8f82-ad68203a4d83",
+       "product": {
+        "name": "axis-manual-0:1.4-311.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "da40cd8a-76f0-3e7f-8e92-19f5eda40e0a",
+       "product": {
+        "name": "axis-manual-0:1.4-311.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-90436\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 17, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 18, 2026, 10:48:03 AM",
+     "description": "axis-1.4-311.1 on GA media",
+     "id": "openSUSE-SU-2026:12580-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_12580-1.json\nhttps://www.suse.com/security/cve/CVE-2026-90436/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "axis-1.4-311.1 on GA media"
+    },
+    "id": "577f1784-6b68-3540-b6f5-93ee817549a7"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "06c1de66-33fc-3735-8c09-f1639fc77a0b",
+       "product": {
+        "name": "Data Center 10.5.2",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "06cc233a-2dd1-3f34-bbff-cd1a14d4e010",
+       "product": {
+        "name": "Bamboo",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "0a8bba92-33bb-371b-bc17-e98333dbc1bf",
+       "product": {
+        "name": "Data Center 11.0.1",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "0f4edc81-b3f0-3b56-9229-c21cea7e3704",
+       "product": {
+        "name": "Data Center LTS 10.2.9",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "1e0b2c5b-feb5-3819-835f-3c858c70737f",
+       "product": {
+        "name": "bitbucket",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "4b62742c-71e2-33f2-9daf-60caea17932f",
+       "product": {
+        "name": "Data Center LTS 10.3.27",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "67779164-0ad0-34c7-b361-4e8c7607823c",
+       "product": {
+        "name": "Confluence",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "6b13caf8-7761-3555-9738-e0f62ae54b14",
+       "product": {
+        "name": "Data Center LTS 12.1.13",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "7556f30c-6430-3537-9da7-70c167250eac",
+       "product": {
+        "name": "Data Center LTS 9.4.27",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "782c713f-411b-357b-bc1c-5a329a96e37b",
+       "product": {
+        "name": "Data Center LTS 11.3.13",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "79e34708-00e4-325d-9d98-fd882910487b",
+       "product": {
+        "name": "Fisheye",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "7b44024e-f38f-32d7-9aeb-e8e94a1bea91",
+       "product": {
+        "name": "Crucible",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "81f6ac02-c0e0-3edb-9574-a830b0c48d5e",
+       "product": {
+        "name": "4.9.16",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "879f698a-58e5-3789-ab7b-898b77fb0f42",
+       "product": {
+        "name": "Data Center LTS 9.2.28",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "8fe4b22f-f8be-324b-b121-fa15867fc299",
+       "product": {
+        "name": "Data Center LTS 10.2.20",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "a02abf68-d034-35f2-a75b-1eb475c65e48",
+       "product": {
+        "name": "Data Center LTS 10.2.26",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "c98f0255-0985-3eac-8c44-9dc88418ccc7",
+       "product": {
+        "name": "Data Center 13.0.1",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      },
+      {
+       "id": "ea4963ce-95ad-37c7-afa0-10c014ffad3e",
+       "product": {
+        "name": "Jira",
+        "vendor": {
+         "name": "Atlassian"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2015-0899\nCVE-2016-1181\nCVE-2016-1182\nCVE-2019-13990\nCVE-2022-1471\nCVE-2022-23521\nCVE-2022-41903\nCVE-2023-22518\nCVE-2023-22522\nCVE-2023-22523\nCVE-2023-22524\nCVE-2023-22527\nCVE-2023-46604\nCVE-2023-49735\nCVE-2026-101296\nCVE-2026-101356\nCVE-2026-102276\nCVE-2026-102278\nCVE-2026-103119\nCVE-2026-104711\nCVE-2026-104714\nCVE-2026-104847\nCVE-2026-104852\nCVE-2026-108106\nCVE-2026-109383\nCVE-2026-109869\nCVE-2026-110879\nCVE-2026-111755\nCVE-2026-111756\nCVE-2026-114111\nCVE-2026-114112\nCVE-2026-114113\nCVE-2026-116539\nCVE-2026-116541\nCVE-2026-118664\nCVE-2026-12185\nCVE-2026-12803\nCVE-2026-12816\nCVE-2026-12860\nCVE-2026-13505\nCVE-2026-13506\nCVE-2026-14682\nCVE-2026-16633\nCVE-2026-18660\nCVE-2026-19203\nCVE-2026-21589\nCVE-2026-21590\nCVE-2026-21591\nCVE-2026-21592\nCVE-2026-21593\nCVE-2026-21594\nCVE-2026-21595\nCVE-2026-21596\nCVE-2026-21598\nCVE-2026-21599\nCVE-2026-21600\nCVE-2026-21601\nCVE-2026-21602\nCVE-2026-21603\nCVE-2026-21605\nCVE-2026-21606\nCVE-2026-21607\nCVE-2026-21609\nCVE-2026-2332\nCVE-2026-40984\nCVE-2026-41695\nCVE-2026-41720\nCVE-2026-47759\nCVE-2026-47761\nCVE-2026-47762\nCVE-2026-47884\nCVE-2026-47885\nCVE-2026-47886\nCVE-2026-47889\nCVE-2026-47890\nCVE-2026-4800\nCVE-2026-54399\nCVE-2026-54428\nCVE-2026-54512\nCVE-2026-54513\nCVE-2026-55153\nCVE-2026-55957\nCVE-2026-58059\nCVE-2026-58060\nCVE-2026-58061\nCVE-2026-59083\nCVE-2026-59084\nCVE-2026-59282\nCVE-2026-59283\nCVE-2026-59313\nCVE-2026-59639\nCVE-2026-59642\nCVE-2026-59651\nCVE-2026-59901\nCVE-2026-62243\nCVE-2026-65183\nCVE-2026-65905\nCVE-2026-65927\nCVE-2026-66422\nCVE-2026-67213\nCVE-2026-67214\nCVE-2026-68494\nCVE-2026-68495\nCVE-2026-68496\nCVE-2026-68497\nCVE-2026-68498\nCVE-2026-68569\nCVE-2026-71290\nCVE-2026-71883\nCVE-2026-71884\nCVE-2026-71888\nCVE-2026-71889\nCVE-2026-73086\nCVE-2026-73646\nCVE-2026-75595\nCVE-2026-75596\nCVE-2026-75973\nCVE-2026-76183\nCVE-2026-76184\nCVE-2026-77711\nCVE-2026-77762\nCVE-2026-77791\nCVE-2026-78383\nCVE-2026-78437\nCVE-2026-79677\nCVE-2026-80353\nCVE-2026-84292\nCVE-2026-84394\nCVE-2026-86248\nCVE-2026-86350\nCVE-2026-87018\nCVE-2026-87022\nCVE-2026-8798\nCVE-2026-88041\nCVE-2026-89407\nCVE-2026-89425\nCVE-2026-90436\nCVE-2026-90559\nCVE-2026-91403\nCVE-2026-91776\nCVE-2026-91777\nCVE-2026-93446\nCVE-2026-93452\nCVE-2026-93488\nCVE-2026-93491\nCVE-2026-93558\nCVE-2026-93565\nCVE-2026-93567\nCVE-2026-93568\nCVE-2026-93569\nCVE-2026-93687\nCVE-2026-93752\nCVE-2026-93753\nCVE-2026-94114\nCVE-2026-9563\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 17, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 17, 2026, 11:00:00 PM",
+     "description": "Atlassian Produkte (Bamboo, Bitbucket, Confluence, Crucible, Fisheye und Jira): Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-4634",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4634.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4634\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Atlassian Bamboo, Atlassian Bitbucket, Atlassian Confluence, Atlassian Crucible, Atlassian Fisheye und Atlassian Jira ausnutzen, um beliebigen Programmcode auszuführen, um seine Privilegien zu erhöhen, um einen Denial of Service Angriff durchzuführen, um Informationen offenzulegen, um Dateien zu manipulieren, um einen Cross-Site Scripting Angriff durchzuführen und um Sicherheitsvorkehrungen zu umgehen."
+    },
+    "id": "8696e66e-c09c-3877-834a-25861033f7a0"
    }
   ],
   "enisaIdProduct": [
@@ -107,12 +388,12 @@
      "baseScore": 9.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 19, 2026, 7:24:17 AM",
+     "dataProcessed": "Nov 20, 2026, 9:05:37 AM",
      "datePublished": "Nov 6, 2026, 3:37:55 PM",
-     "dateUpdated": "Nov 18, 2026, 8:58:24 PM",
+     "dateUpdated": "Nov 19, 2026, 4:55:17 AM",
      "description": "** UNSUPPORTED WHEN ASSIGNED ** Deserialization of an inbound SOAP fault in Apache Axis 1.x allows unauthenticated remote class instantiation. When a SOAP <Fault> carries a <detail><exceptionName> element, Axis loads the named class and, if a String <data> element is also present, instantiates it through its String constructor before checking that it is an AxisFault. Loading alone runs the class's static initializer. With a suitable class on the application's classpath this leads to remote code execution. The fault is parsed while the engine resolves the target service, before any per-service handler chain runs, so authentication handlers configured on a service do not protect against it. This affects all Apache Axis 1.x versions through 1.4.\n\n\n\nAs Axis 1 has been EOL we recommend you migrate to a different SOAP engine, such as Apache Axis 2/Java. Alternatively you could use a build of Axis with the patch from https://github.com/apache/axis-axis1-java/commit/41f3b4e8d04e310ca81f86b92630ab2c11d608bd applied. The Apache Axis project does not expect to create an Axis 1.x release fixing this problem.",
      "enisa_id": "EUVD-2026-118323\n",
-     "epss": 1.13,
+     "epss": 1.77,
      "exploitedSince": "Nov 18, 2026, 12:00:00 AM",
      "id": "CVE-2026-90436",
      "references": "https://github.com/apache/axis-axis1-java/commit/41f3b4e8d04e310ca81f86b92630ab2c11d608bd\nhttps://lists.apache.org/thread.html/8slf0j9gz35z56t0glt5h0ncwlbn4bdz\n",
@@ -154,7 +435,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-90436\nGHSA-988f-c54m-f8jj\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 19, 2026, 7:06:52 AM",
+     "dataProcessed": "Nov 20, 2026, 9:06:04 AM",
      "datePublished": "Nov 6, 2026, 6:35:15 PM",
      "dateUpdated": "Nov 18, 2026, 9:31:17 PM",
      "description": "** UNSUPPORTED WHEN ASSIGNED ** Deserialization of an inbound SOAP fault in Apache Axis 1.x allows unauthenticated remote class instantiation. When a SOAP <Fault> carries a <detail><exceptionName> element, Axis loads the named class and, if a String <data> element is also present, instantiates it through its String constructor before checking that it is an AxisFault. Loading alone runs the class's static initializer. With a suitable class on the application's classpath this leads to remote code execution. The fault is parsed while the engine resolves the target service, before any per-service handler chain runs, so authentication handlers configured on a service do not protect against it. This affects all Apache Axis 1.x versions through 1.4.\n\n\n\nAs Axis 1 has been EOL we recommend you migrate to a different SOAP engine, such as Apache Axis 2/Java. Alternatively you could use a build of Axis with the patch from https://github.com/apache/axis-axis1-java/commit/41f3b4e8d04e310ca81f86b92630ab2c11d608bd applied. The Apache Axis project does not expect to create an Axis 1.x release fixing this problem.",
@@ -168,7 +449,7 @@
    }
   ],
   "enisaUuid": "212f1921-fde4-38cc-b90e-8cc4ccca1e91",
-  "epss": 1.13,
+  "epss": 1.77,
   "exploitedSince": "Nov 18, 2026, 12:00:00 AM",
   "id": "EUVD-2026-118323",
   "references": "https://github.com/apache/axis-axis1-java/commit/41f3b4e8d04e310ca81f86b92630ab2c11d608bd\nhttps://lists.apache.org/thread.html/8slf0j9gz35z56t0glt5h0ncwlbn4bdz\n"
@@ -245,6 +526,25 @@
   "cisaExploitAdd": "2026-11-18",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "Apache Axis Unsafe Reflection Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:apache:axis:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "5114D26C-501B-4F51-B12C-D8A4537BEC80",
+        "versionEndIncluding": "1.4",
+        "versionStartIncluding": "1.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
   "cveTags": [
    {
     "sourceIdentifier": "security@apache.org",
@@ -260,7 +560,7 @@
    }
   ],
   "id": "CVE-2026-90436",
-  "lastModified": "2026-11-19T05:18:41.280",
+  "lastModified": "2026-11-19T14:33:21.617",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -311,23 +611,37 @@
   "references": [
    {
     "source": "security@apache.org",
+    "tags": [
+     "Patch"
+    ],
     "url": "https://github.com/apache/axis-axis1-java/commit/41f3b4e8d04e310ca81f86b92630ab2c11d608bd"
    },
    {
     "source": "security@apache.org",
+    "tags": [
+     "Mailing List",
+     "Vendor Advisory"
+    ],
     "url": "https://lists.apache.org/thread.html/8slf0j9gz35z56t0glt5h0ncwlbn4bdz"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Mailing List",
+     "Third Party Advisory"
+    ],
     "url": "http://www.openwall.com/lists/oss-security/2026/11/06/12"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-90436"
    }
   ],
   "sourceIdentifier": "security@apache.org",
-  "vulnStatus": "Undergoing Analysis",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [
