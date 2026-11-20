@@ -28,9 +28,307 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
   "baseScoreVersion": "3.1",
   "datePublished": "Aug 11, 2026, 5:04:55 PM",
-  "dateUpdated": "Nov 10, 2026, 9:58:37 PM",
+  "dateUpdated": "Nov 19, 2026, 10:17:18 PM",
   "description": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.",
   "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "082eb966-8455-3586-9829-61205421d33f",
+       "product": {
+        "name": "LTSC 2024",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "0d531b6e-97e7-3a3b-9d2c-2efdec5310c6",
+       "product": {
+        "name": "LTSC for Mac 2021",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "179ea60f-36fe-38b9-bf43-cd98c5089fb5",
+       "product": {
+        "name": "SharePoint",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "19d59016-3192-308b-9bdb-52544e5e9372",
+       "product": {
+        "name": "Excel",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "264b941a-4ff2-3732-8db2-ee2b5978d290",
+       "product": {
+        "name": "Red Hat Enterprise Linux",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2847090e-ce1d-3c8d-80c1-d7961c13c77b",
+       "product": {
+        "name": "Word",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "2926c792-162e-3678-8ec1-fa0413224e3f",
+       "product": {
+        "name": "Service Bus",
+        "vendor": {
+         "name": "Oracle Corporation"
+        }
+       }
+      },
+      {
+       "id": "2947f1a9-d212-3af5-9c0c-c0589f1aeb3c",
+       "product": {
+        "name": "Office 365",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "39615a1e-8955-309c-b87e-c8d8acc7222b",
+       "product": {
+        "name": "SQL Managed Instance",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "3ac29fae-aeb8-3393-a81e-c946f7050360",
+       "product": {
+        "name": "Microsoft Teams",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "3c8e723a-ad2d-30c3-b1de-b34d9570ce58",
+       "product": {
+        "name": "Microsoft SharePoint Server 2019",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "434e8a64-cd24-398d-b4c8-b162869618dc",
+       "product": {
+        "name": "2016",
+        "vendor": {
+         "name": "AVEVA Software, LLC"
+        }
+       }
+      },
+      {
+       "id": "57081fb6-cc70-337f-a848-701a0e0c151a",
+       "product": {
+        "name": "Teams",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "79289012-c272-362c-b3cc-4297250431e0",
+       "product": {
+        "name": "for iOS",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "8daefe01-8c67-37c0-a8a3-4ed725ef2060",
+       "product": {
+        "name": "Azure",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "8e76ec6d-cd70-3763-89a0-70fe1c471c5d",
+       "product": {
+        "name": "for Android",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "980f3095-1ddb-3503-9dd8-e7c510a75a6e",
+       "product": {
+        "name": "Server Subscription Edition",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "9963ca02-2eeb-3733-aa6b-d2f50bbbb238",
+       "product": {
+        "name": "OneDrive",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "9a08998d-bb7c-3927-a90c-294042b1c9fd",
+       "product": {
+        "name": "for MacOS",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "9e5c6501-ffd1-34ba-985f-4fbe4685a8a6",
+       "product": {
+        "name": "for Mac",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "a3cd7106-2eb4-39d1-99c4-306af2a534ec",
+       "product": {
+        "name": "Office",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b0db0840-ae5e-3a43-8cc0-78ed111fd51d",
+       "product": {
+        "name": "online",
+        "vendor": {
+         "name": "CollaboraOnline"
+        }
+       }
+      },
+      {
+       "id": "b2bd07d8-3a9c-3436-93fe-a28b1d08401c",
+       "product": {
+        "name": "Azure Service Bus",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b5c4e8ce-7846-37cd-864a-1e1acaf789cf",
+       "product": {
+        "name": "LTSC for Mac 2024",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "b6c38c9f-7751-34d7-8b40-d09b76b91a51",
+       "product": {
+        "name": "Enterprise Server 2016",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c0492172-bd2f-3bee-8445-ecea623cd0e1",
+       "product": {
+        "name": "Outlook",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c3514bb8-7275-3671-8f70-923d48eec550",
+       "product": {
+        "name": "Access",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "c4cbc997-d239-37c1-bfc6-eb5190bbb337",
+       "product": {
+        "name": "LTSC 2021",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "cc9d02e6-c3d7-39a5-a3c2-353a810e6f2d",
+       "product": {
+        "name": "Microsoft 365 Apps",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "ed2ea0cd-839e-3f4f-9764-4ca295e148a4",
+       "product": {
+        "name": "PowerPoint",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "fdf9aec0-45ff-3672-a453-367e921912a3",
+       "product": {
+        "name": "2019",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-57105\nCVE-2026-58639\nCVE-2026-58651\nCVE-2026-62827\nCVE-2026-62829\nCVE-2026-62837\nCVE-2026-62839\nCVE-2026-62842\nCVE-2026-62882\nCVE-2026-62917\nCVE-2026-63512\nCVE-2026-63513\nCVE-2026-63514\nCVE-2026-63515\nCVE-2026-63516\nCVE-2026-63517\nCVE-2026-63518\nCVE-2026-63519\nCVE-2026-63520\nCVE-2026-63521\nCVE-2026-63524\nCVE-2026-63525\nCVE-2026-63526\nCVE-2026-63527\nCVE-2026-63528\nCVE-2026-63529\nCVE-2026-63530\nCVE-2026-63531\nCVE-2026-63532\nCVE-2026-63533\nCVE-2026-64897\nCVE-2026-64898\nCVE-2026-64899\nCVE-2026-64900\nCVE-2026-64901\nCVE-2026-64902\nCVE-2026-64903\nCVE-2026-64904\nCVE-2026-64905\nCVE-2026-64906\nCVE-2026-64907\nCVE-2026-64908\nCVE-2026-64909\nCVE-2026-64910\nCVE-2026-64911\nCVE-2026-64912\nCVE-2026-64914\nCVE-2026-64915\nCVE-2026-64916\nCVE-2026-64917\nCVE-2026-64919\nCVE-2026-64920\nCVE-2026-64921\nCVE-2026-64922\nCVE-2026-65656\nCVE-2026-65657\nCVE-2026-65658\nCVE-2026-65660\nCVE-2026-65661\nCVE-2026-65663\nCVE-2026-65664\nCVE-2026-65665\nCVE-2026-65680\nCVE-2026-65767\nCVE-2026-65768\nCVE-2026-65769\nCVE-2026-65807\nCVE-2026-66805\nCVE-2026-66806\nCVE-2026-66807\nCVE-2026-66808\nCVE-2026-66809\nCVE-2026-66810\nCVE-2026-68792\nCVE-2026-68793\nCVE-2026-68794\nCVE-2026-68795\nCVE-2026-68796\nCVE-2026-68797\nCVE-2026-68798\nCVE-2026-68799\nCVE-2026-68800\nCVE-2026-68801\nCVE-2026-68802\nCVE-2026-68803\nCVE-2026-68804\nCVE-2026-68805\nCVE-2026-68806\nCVE-2026-68807\nCVE-2026-68808\nCVE-2026-68809\nCVE-2026-68810\nCVE-2026-68811\nCVE-2026-68812\nCVE-2026-68813\nCVE-2026-68814\nCVE-2026-68815\nCVE-2026-68816\nCVE-2026-68817\nCVE-2026-70105\nCVE-2026-70130\nCVE-2026-70306\nCVE-2026-70310\nCVE-2026-70311\nCVE-2026-70312\nCVE-2026-70313\nCVE-2026-70314\nCVE-2026-70315\nCVE-2026-70316\nCVE-2026-70317\nCVE-2026-70318\nCVE-2026-70319\nCVE-2026-70320\nCVE-2026-70321\nCVE-2026-70322\nCVE-2026-70323\nCVE-2026-70324\nCVE-2026-70325\nCVE-2026-70326\nCVE-2026-70327\nCVE-2026-70328\nCVE-2026-70329\nCVE-2026-70355\n",
+     "baseScore": 0.0,
+     "datePublished": "Aug 11, 2026, 10:00:00 PM",
+     "dateUpdated": "Sep 23, 2026, 10:00:00 PM",
+     "description": "Microsoft Office Produkte: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-2762",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-2762.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-2762\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Microsoft Office Produkte ausnutzen, um Dateien zu manipulieren, um seine Privilegien zu erhöhen, um Informationen offenzulegen, um einen Cross-Site Scripting Angriff durchzuführen, und um beliebigen Programmcode auszuführen."
+    },
+    "id": "60d35abc-ed45-329f-9eb7-a609edc55816"
+   },
    {
     "advisory": {
      "advisoryProduct": [
@@ -344,7 +642,7 @@
      "aliases": "CVE-2026-65768\nCVE-2026-65767\nCVE-2026-57105\nCVE-2026-62829\nCVE-2026-62827\nCVE-2026-62837\nCVE-2026-63514\nCVE-2026-63512\nCVE-2026-63516\nCVE-2026-63520\nCVE-2026-64922\nCVE-2026-65658\nCVE-2026-65663\nCVE-2026-65660\nCVE-2026-65665\nCVE-2026-70324\nCVE-2026-70355\nCVE-2026-64897\nCVE-2026-64900\nCVE-2026-64902\nCVE-2026-64901\nCVE-2026-64916\nCVE-2026-64921\nCVE-2026-66805\nCVE-2026-66808\nCVE-2026-70306\nCVE-2026-58639\nCVE-2026-62839\nCVE-2026-62917\nCVE-2026-70321\nCVE-2026-70326\nCVE-2026-62896\nCVE-2026-62918\nCVE-2026-65667\nCVE-2026-62836\nCVE-2026-50515\nCVE-2026-63513\nCVE-2026-63515\nCVE-2026-63518\nCVE-2026-63521\nCVE-2026-63519\nCVE-2026-65657\nCVE-2026-65656\nCVE-2026-65661\nCVE-2026-65664\nCVE-2026-65807\nCVE-2026-68792\nCVE-2026-68793\nCVE-2026-68794\nCVE-2026-68795\nCVE-2026-68796\nCVE-2026-68800\nCVE-2026-68802\nCVE-2026-68807\nCVE-2026-68806\nCVE-2026-68808\nCVE-2026-68809\nCVE-2026-68810\nCVE-2026-68811\nCVE-2026-68813\nCVE-2026-68815\nCVE-2026-68816\nCVE-2026-70312\nCVE-2026-70311\nCVE-2026-70313\nCVE-2026-70310\nCVE-2026-70316\nCVE-2026-70315\nCVE-2026-70318\nCVE-2026-70314\nCVE-2026-70317\nCVE-2026-70325\nCVE-2026-70319\nCVE-2026-70320\nCVE-2026-70323\nCVE-2026-70322\nCVE-2026-70327\nCVE-2026-70328\nCVE-2026-70329\nCVE-2026-62842\nCVE-2026-63524\nCVE-2026-63525\nCVE-2026-63526\nCVE-2026-63528\nCVE-2026-63527\nCVE-2026-63529\nCVE-2026-63530\nCVE-2026-63531\nCVE-2026-63532\nCVE-2026-63533\nCVE-2026-64898\nCVE-2026-64899\nCVE-2026-64903\nCVE-2026-64904\nCVE-2026-64905\nCVE-2026-64907\nCVE-2026-64906\nCVE-2026-64909\nCVE-2026-64910\nCVE-2026-64912\nCVE-2026-64911\nCVE-2026-64908\nCVE-2026-64914\nCVE-2026-64915\nCVE-2026-64920\nCVE-2026-64917\nCVE-2026-64919\nCVE-2026-62882\nCVE-2026-66806\nCVE-2026-66807\nCVE-2026-66810\nCVE-2026-66809\nCVE-2026-68797\nCVE-2026-68799\nCVE-2026-68801\nCVE-2026-68803\nCVE-2026-68804\nCVE-2026-68805\nCVE-2026-68812\nCVE-2026-68814\nCVE-2026-68817\nCVE-2026-70130\nCVE-2026-63517\nCVE-2026-58651\nCVE-2026-68798\nCVE-2026-65769\nCVE-2026-65680\nCVE-2026-70332\n",
      "baseScore": 0.0,
      "datePublished": "Aug 11, 2026, 7:57:03 PM",
-     "dateUpdated": "Aug 11, 2026, 7:57:03 PM",
+     "dateUpdated": "Aug 27, 2026, 10:23:06 AM",
      "description": "Kwetsbaarheden verholpen in Microsoft Office",
      "id": "NCSC-2026-0286",
      "references": "",
@@ -476,9 +774,9 @@
      "baseScore": 8.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 11, 2026, 7:21:30 AM",
+     "dataProcessed": "Nov 20, 2026, 9:05:25 AM",
      "datePublished": "Aug 11, 2026, 5:04:55 PM",
-     "dateUpdated": "Nov 10, 2026, 9:58:37 PM",
+     "dateUpdated": "Nov 19, 2026, 10:17:18 PM",
      "description": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.",
      "enisa_id": "EUVD-2026-56431\n",
      "epss": 9.85,
@@ -533,7 +831,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-65660\nGHSA-r94x-x846-rxqx\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 9, 2026, 3:51:03 PM",
+     "dataProcessed": "Nov 15, 2026, 2:53:30 AM",
      "datePublished": "Aug 11, 2026, 6:31:36 PM",
      "dateUpdated": "Sep 25, 2026, 6:31:15 PM",
      "description": "Improper control of generation of code ('code injection') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network.",
