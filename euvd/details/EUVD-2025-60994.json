@@ -1,0 +1,453 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-42884"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2025-42884",
+  "cwes": [
+   "CWE-943"
+  ],
+  "dateAdded": "2026-11-20",
+  "dueDate": "2026-11-23",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://support.sap.com/en/my-support/knowledge-base/security-notes-news/bulletin-2025.html ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2025-42884",
+  "product": "NetWeaver",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.",
+  "vendorProject": "SAP",
+  "vulnerabilityName": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2025-42884\nGHSA-gpv6-m7fj-wr5v\n",
+  "assigner": "sap",
+  "baseScore": 6.5,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 11, 2025, 12:14:02 AM",
+  "dateUpdated": "Nov 20, 2026, 8:58:24 PM",
+  "description": "SAP NetWeaver Enterprise Portal allows an unauthenticated attacker to inject JNDI environment properties or pass a URL used during JNDI lookup operations, enabling access to an unintended JNDI provider.�This could further lead to disclosure or modification of information about the server. There is no impact on availability.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0f1f1dc5-2f76-3397-9996-2e27c0238c2e",
+       "product": {
+        "name": "GUI for Windows",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      },
+      {
+       "id": "17657fd8-aee7-3594-8e03-28f6ff64417c",
+       "product": {
+        "name": "Business One",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      },
+      {
+       "id": "494a60ac-0bd4-3268-ba5e-763e54223060",
+       "product": {
+        "name": "netweaver",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      },
+      {
+       "id": "51d08e03-2c6a-3d51-97b2-b87e6212b2ec",
+       "product": {
+        "name": "SAP Netweaver (RMI-P4)",
+        "vendor": {
+         "name": "SAP_SE"
+        }
+       }
+      },
+      {
+       "id": "59bb144d-e51a-3d14-9533-684160157eaf",
+       "product": {
+        "name": "SQL Anywhere Monitor",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      },
+      {
+       "id": "5d128e9c-b250-3afc-b772-755f9d3642b0",
+       "product": {
+        "name": "HANA",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      },
+      {
+       "id": "609802f8-ef7a-3791-9e26-900a3e41f4e0",
+       "product": {
+        "name": "NetWeaver Enterprise Portal",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      },
+      {
+       "id": "a7a3f4cf-8bd5-3092-878c-599dbae83c81",
+       "product": {
+        "name": "NetWeaver Application Server Java",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      },
+      {
+       "id": "ab709630-9fc8-3913-bf45-ccc7efb3cce2",
+       "product": {
+        "name": "vers:unknown/*",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "b238d305-f483-3003-a278-5e1cf5684262",
+       "product": {
+        "name": "S4CORE",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      },
+      {
+       "id": "b9d2e300-be20-3edb-b0fe-27d6676b7a27",
+       "product": {
+        "name": "Solution Manager",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      },
+      {
+       "id": "d4d145da-57a8-30b4-9211-4cffa7cf0206",
+       "product": {
+        "name": "HANA JDBC Client",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      },
+      {
+       "id": "e7eed18e-44bd-38be-9317-003247ea0fd7",
+       "product": {
+        "name": "NetWeaver Application Server for ABAP",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-42890\nCVE-2025-42944\nCVE-2025-42887\nCVE-2025-42940\nCVE-2025-42895\nCVE-2025-42892\nCVE-2025-42894\nCVE-2025-42884\nCVE-2025-42924\nCVE-2025-42893\nCVE-2025-42886\nCVE-2025-42885\nCVE-2025-42888\nCVE-2025-42889\nCVE-2025-42919\nCVE-2025-42897\nCVE-2025-42899\nCVE-2025-42882\nCVE-2025-42883\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 11, 2025, 12:15:53 PM",
+     "dateUpdated": "Nov 11, 2025, 12:15:53 PM",
+     "description": "Kwetsbaarheden verholpen in SAP-producten",
+     "id": "NCSC-2025-0356",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "011bf372-0112-3e3c-be01-a0dcb9c820b4"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "6371747e-7a62-3493-b680-5c8e6b480f04",
+       "product": {
+        "name": "SAP Software",
+        "vendor": {
+         "name": "SAP"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2025-42882\nCVE-2025-42883\nCVE-2025-42884\nCVE-2025-42885\nCVE-2025-42886\nCVE-2025-42887\nCVE-2025-42888\nCVE-2025-42889\nCVE-2025-42890\nCVE-2025-42892\nCVE-2025-42893\nCVE-2025-42894\nCVE-2025-42895\nCVE-2025-42897\nCVE-2025-42899\nCVE-2025-42919\nCVE-2025-42924\nCVE-2025-42940\nCVE-2025-42944\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 10, 2025, 11:00:00 PM",
+     "dateUpdated": "Nov 12, 2025, 11:00:00 PM",
+     "description": "SAP Software: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2025-2536",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2025/wid-sec-w-2025-2536.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-2536\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in SAP-Software ausnutzen, um seine Privilegien zu erhöhen, Systeminformationen auszulesen, Schadcode auszuführen, Dateien hochzuladen oder administrative Funktionen zu übernehmen."
+    },
+    "id": "6735adba-3886-37fa-af34-a0a3d6276d01"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "46bdc794-a1a5-363e-b47f-b18f865aaf33",
+    "product": {
+     "name": "SAP NetWeaver Enterprise Portal",
+     "vendor": {
+      "name": "SAP_SE"
+     }
+    },
+    "product_version": "EP-BASIS 7.50"
+   },
+   {
+    "id": "cf2c1322-05cf-36e0-8073-07602aca3599",
+    "product": {
+     "name": "SAP NetWeaver Enterprise Portal",
+     "vendor": {
+      "name": "SAP_SE"
+     }
+    },
+    "product_version": "EP-RUNTIME 7.50"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "40a2889b-b5de-370c-933b-4050bfcc4949",
+    "vendor": {
+     "name": "SAP_SE"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "0fa426b7-b91a-3017-92c2-618ff0778c7b",
+    "vulnerability": {
+     "assigner": "sap",
+     "baseScore": 6.5,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 21, 2026, 6:00:23 AM",
+     "datePublished": "Nov 11, 2025, 12:14:02 AM",
+     "dateUpdated": "Nov 20, 2026, 8:58:24 PM",
+     "description": "SAP NetWeaver Enterprise Portal allows an unauthenticated attacker to inject JNDI environment properties or pass a URL used during JNDI lookup operations, enabling access to an unintended JNDI provider.�This could further lead to disclosure or modification of information about the server. There is no impact on availability.",
+     "enisa_id": "EUVD-2025-60994\n",
+     "epss": 0.28,
+     "exploitedSince": "Nov 20, 2026, 12:00:00 AM",
+     "id": "CVE-2025-42884",
+     "references": "https://me.sap.com/notes/3660969\nhttps://url.sap/sapsecuritypatchday\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "1eb0752c-1674-39e2-bfa7-e9dac2950fa8",
+       "product": {
+        "name": "SAP NetWeaver Enterprise Portal",
+        "vendor": {
+         "name": "SAP_SE"
+        }
+       },
+       "product_version": "EP-RUNTIME 7.50"
+      },
+      {
+       "id": "b2ba3a9e-7457-36a2-8110-a44235c8ced8",
+       "product": {
+        "name": "SAP NetWeaver Enterprise Portal",
+        "vendor": {
+         "name": "SAP_SE"
+        }
+       },
+       "product_version": "EP-BASIS 7.50"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "0e5b3102-2a08-3196-a517-c0b9e82fbffc",
+       "vendor": {
+        "name": "SAP_SE"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "62b81e20-b51e-35b8-868b-390fde322116",
+    "vulnerability": {
+     "aliases": "CVE-2025-42884\nGHSA-gpv6-m7fj-wr5v\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 21, 2026, 6:01:26 AM",
+     "datePublished": "Nov 11, 2025, 3:30:28 AM",
+     "dateUpdated": "Nov 20, 2026, 9:31:32 PM",
+     "description": "SAP NetWeaver Enterprise Portal allows an unauthenticated attacker to inject JNDI environment properties or pass a URL used during JNDI lookup operations, enabling access to an unintended JNDI provider.�This could further lead to disclosure or modification of information about the server. There is no impact on availability.",
+     "enisa_id": "EUVD-2025-60994\n",
+     "epss": 0.0,
+     "id": "GHSA-gpv6-m7fj-wr5v",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2025-42884\nhttps://me.sap.com/notes/3660969\nhttps://url.sap/sapsecuritypatchday\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-42884\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "87d34d31-0659-3f38-a6f1-6a49a8912e06",
+  "epss": 0.28,
+  "exploitedSince": "Nov 20, 2026, 12:00:00 AM",
+  "id": "EUVD-2025-60994",
+  "references": "https://me.sap.com/notes/3660969\nhttps://url.sap/sapsecuritypatchday\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2025-60994",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 20, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "SAP NetWeaver Enterprise Portal",
+      "vendor": "SAP_SE",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "EP-BASIS 7.50"
+       },
+       {
+        "status": "affected",
+        "version": "EP-RUNTIME 7.50"
+       }
+      ]
+     }
+    ],
+    "source": "cna@sap.com"
+   }
+  ],
+  "cisaActionDue": "2026-11-23",
+  "cisaExploitAdd": "2026-11-20",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:sap:netweaver_enterprise_portal:7.50:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D91F9D76-39D6-4D5E-BFAE-892CB8C30A79",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "SAP NetWeaver Enterprise Portal allows an unauthenticated attacker to inject JNDI environment properties or pass a URL used during JNDI lookup operations, enabling access to an unintended JNDI provider.�This could further lead to disclosure or modification of information about the server. There is no impact on availability."
+   },
+   {
+    "lang": "es",
+    "value": "SAP NetWeaver Enterprise Portal permite a un atacante no autenticado inyectar propiedades de entorno JNDI o pasar una URL utilizada durante las operaciones de búsqueda JNDI, lo que permite el acceso a un proveedor JNDI no deseado. Esto podría conducir además a la divulgación o modificación de información sobre el servidor. No hay impacto en la disponibilidad."
+   }
+  ],
+  "id": "CVE-2025-42884",
+  "lastModified": "2026-11-20T20:24:56.593",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 6.5,
+      "baseSeverity": "MEDIUM",
+      "confidentialityImpact": "LOW",
+      "integrityImpact": "LOW",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 2.5,
+     "source": "cna@sap.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2025-42884",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-20T18:42:15.844043Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2025-11-11T01:15:36.893",
+  "references": [
+   {
+    "source": "cna@sap.com",
+    "tags": [
+     "Permissions Required"
+    ],
+    "url": "https://me.sap.com/notes/3660969"
+   },
+   {
+    "source": "cna@sap.com",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://url.sap/sapsecuritypatchday"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource",
+     "Third Party Advisory"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-42884"
+   }
+  ],
+  "sourceIdentifier": "cna@sap.com",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-943"
+     }
+    ],
+    "source": "cna@sap.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
