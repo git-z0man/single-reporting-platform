@@ -1,0 +1,286 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-129448"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-129448",
+  "cwes": [
+   "CWE-502"
+  ],
+  "dateAdded": "2026-11-20",
+  "dueDate": "2026-11-23",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://lists.apache.org/thread/cc0jck13nb9vvcmzxzwotr6n16mx28z9 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-129448",
+  "product": "Roller",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions.",
+  "vendorProject": "Apache",
+  "vulnerabilityName": "Apache Roller Deserialization of Untrusted Data Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-129448\nGHSA-pxp4-phq9-fx2q\n",
+  "assigner": "apache",
+  "baseScore": 9.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 17, 2026, 11:03:49 AM",
+  "dateUpdated": "Nov 20, 2026, 8:58:23 PM",
+  "description": "Deserialization of Untrusted Data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code. The XML-RPC endpoint accepts vendor extension types and deserializes them before authenticating the requester.\n\nThis is the same vulnerability as CVE-2026-82384, which listed only Apache Roller 6.1.5 as affected. This issue is being actively exploited.\n\nUsers are recommended to upgrade to Apache Roller 6.1.6 or later, which disables the extension types and rejects XML-RPC requests when the XML-RPC feature is disabled.\n\nUsers who cannot upgrade right away should set \"enabledForExtensions\" to \"false\" in WEB-INF/web.xml, or remove the \"/roller-services/xmlrpc\" servlet mapping, and restart Roller. Disabling XML-RPC in the administration UI is not enough, because older versions deserialize the request before checking that setting.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "a8451451-3d3a-31f3-b18e-0e872ddae9f7",
+    "product": {
+     "name": "Apache Roller",
+     "vendor": {
+      "name": "Apache Software Foundation"
+     }
+    },
+    "product_version": "4.0.0 <6.1.5"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "7a4b95e0-b490-38e6-80c7-0273108269a6",
+    "vendor": {
+     "name": "Apache Software Foundation"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "1cf1dff1-2680-3916-9695-7315e30ebb40",
+    "vulnerability": {
+     "assigner": "apache",
+     "baseScore": 9.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 21, 2026, 6:00:23 AM",
+     "datePublished": "Nov 17, 2026, 11:03:49 AM",
+     "dateUpdated": "Nov 20, 2026, 8:58:23 PM",
+     "description": "Deserialization of Untrusted Data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code. The XML-RPC endpoint accepts vendor extension types and deserializes them before authenticating the requester.\n\nThis is the same vulnerability as CVE-2026-82384, which listed only Apache Roller 6.1.5 as affected. This issue is being actively exploited.\n\nUsers are recommended to upgrade to Apache Roller 6.1.6 or later, which disables the extension types and rejects XML-RPC requests when the XML-RPC feature is disabled.\n\nUsers who cannot upgrade right away should set \"enabledForExtensions\" to \"false\" in WEB-INF/web.xml, or remove the \"/roller-services/xmlrpc\" servlet mapping, and restart Roller. Disabling XML-RPC in the administration UI is not enough, because older versions deserialize the request before checking that setting.",
+     "enisa_id": "EUVD-2026-126955\n",
+     "epss": 1.19,
+     "exploitedSince": "Nov 20, 2026, 12:00:00 AM",
+     "id": "CVE-2026-129448",
+     "references": "https://github.com/apache/roller/pull/171\nhttps://lists.apache.org/thread/cc0jck13nb9vvcmzxzwotr6n16mx28z9\nhttps://www.cve.org/CVERecord?id=CVE-2026-82384\nhttps://lists.apache.org/thread.html/lnz4s26tv6hdo03wngtdbpfj4hg4gtds\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "adf8317b-178e-338c-aa19-6b062a6deab7",
+       "product": {
+        "name": "Apache Roller",
+        "vendor": {
+         "name": "Apache Software Foundation"
+        }
+       },
+       "product_version": "4.0.0 <6.1.5"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "293d3ea2-aae8-3aa7-9f25-ea8518b7062a",
+       "vendor": {
+        "name": "Apache Software Foundation"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "b01df848-7af4-3ac9-8102-714e9a22b4e5",
+    "vulnerability": {
+     "aliases": "GHSA-pxp4-phq9-fx2q\nCVE-2026-129448\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 21, 2026, 6:01:26 AM",
+     "datePublished": "Nov 17, 2026, 12:31:38 PM",
+     "dateUpdated": "Nov 20, 2026, 9:31:33 PM",
+     "description": "Deserialization of Untrusted Data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code. The XML-RPC endpoint accepts vendor extension types and deserializes them before authenticating the requester.\n\nThis is the same vulnerability as CVE-2026-82384, which listed only Apache Roller 6.1.5 as affected. This issue is being actively exploited.\n\nUsers are recommended to upgrade to Apache Roller 6.1.6 or later, which disables the extension types and rejects XML-RPC requests when the XML-RPC feature is disabled.\n\nUsers who cannot upgrade right away should set \"enabledForExtensions\" to \"false\" in WEB-INF/web.xml, or remove the \"/roller-services/xmlrpc\" servlet mapping, and restart Roller. Disabling XML-RPC in the administration UI is not enough, because older versions deserialize the request before checking that setting.",
+     "enisa_id": "EUVD-2026-126955\n",
+     "epss": 0.0,
+     "id": "GHSA-pxp4-phq9-fx2q",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-129448\nhttps://github.com/apache/roller/pull/171\nhttps://lists.apache.org/thread.html/lnz4s26tv6hdo03wngtdbpfj4hg4gtds\nhttps://lists.apache.org/thread/cc0jck13nb9vvcmzxzwotr6n16mx28z9\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-129448\nhttps://www.cve.org/CVERecord?id=CVE-2026-82384\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "acff5761-02f8-3596-898e-990ed109651e",
+  "epss": 1.19,
+  "exploitedSince": "Nov 20, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-126955",
+  "references": "https://github.com/apache/roller/pull/171\nhttps://lists.apache.org/thread/cc0jck13nb9vvcmzxzwotr6n16mx28z9\nhttps://www.cve.org/CVERecord?id=CVE-2026-82384\nhttps://lists.apache.org/thread.html/lnz4s26tv6hdo03wngtdbpfj4hg4gtds\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-126955",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 20, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "cpes": [
+       "cpe:2.3:a:apache:roller:*:*:*:*:*:*:*:*"
+      ],
+      "defaultStatus": "unknown",
+      "product": "Apache Roller",
+      "repo": "https://gitbox.apache.org/repos/asf/roller.git",
+      "vendor": "Apache Software Foundation",
+      "versions": [
+       {
+        "lessThan": "6.1.5",
+        "status": "affected",
+        "version": "4.0.0",
+        "versionType": "semver"
+       }
+      ]
+     }
+    ],
+    "source": "security@apache.org"
+   }
+  ],
+  "cisaActionDue": "2026-11-23",
+  "cisaExploitAdd": "2026-11-20",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Apache Roller Deserialization of Untrusted Data Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:apache:roller:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "57A7D7F0-5220-4AA1-B627-4CF01E9A9222",
+        "versionEndExcluding": "6.1.5",
+        "versionStartIncluding": "4.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Deserialization of Untrusted Data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code. The XML-RPC endpoint accepts vendor extension types and deserializes them before authenticating the requester.\n\nThis is the same vulnerability as CVE-2026-82384, which listed only Apache Roller 6.1.5 as affected. This issue is being actively exploited.\n\nUsers are recommended to upgrade to Apache Roller 6.1.6 or later, which disables the extension types and rejects XML-RPC requests when the XML-RPC feature is disabled.\n\nUsers who cannot upgrade right away should set \"enabledForExtensions\" to \"false\" in WEB-INF/web.xml, or remove the \"/roller-services/xmlrpc\" servlet mapping, and restart Roller. Disabling XML-RPC in the administration UI is not enough, because older versions deserialize the request before checking that setting."
+   }
+  ],
+  "id": "CVE-2026-129448",
+  "lastModified": "2026-11-20T20:25:11.360",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "security@apache.org",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-129448",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-20T18:42:05.015639Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-17T11:17:28.190",
+  "references": [
+   {
+    "source": "security@apache.org",
+    "tags": [
+     "Issue Tracking",
+     "Patch"
+    ],
+    "url": "https://github.com/apache/roller/pull/171"
+   },
+   {
+    "source": "security@apache.org",
+    "tags": [
+     "Mailing List",
+     "Vendor Advisory"
+    ],
+    "url": "https://lists.apache.org/thread.html/lnz4s26tv6hdo03wngtdbpfj4hg4gtds"
+   },
+   {
+    "source": "security@apache.org",
+    "tags": [
+     "Mailing List",
+     "Not Applicable"
+    ],
+    "url": "https://lists.apache.org/thread/cc0jck13nb9vvcmzxzwotr6n16mx28z9"
+   },
+   {
+    "source": "security@apache.org",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://www.cve.org/CVERecord?id=CVE-2026-82384"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory",
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-129448"
+   }
+  ],
+  "sourceIdentifier": "security@apache.org",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-502"
+     }
+    ],
+    "source": "security@apache.org",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
