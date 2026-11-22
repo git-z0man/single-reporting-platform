@@ -28,9 +28,272 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 19, 2026, 2:02:38 PM",
-  "dateUpdated": "Nov 20, 2026, 8:58:23 PM",
+  "dateUpdated": "Nov 21, 2026, 4:55:21 AM",
   "description": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service.\nAffected versions: 9.1.x (fixed in 9.1.1.0200); 9.0.x (fixed in 9.0.2.0200); 8.0 (fixed in 8.0 U3m); 5.x (fixed in 5.2.5).\nTelco Cloud Platform 3.0, 4.x, 5.0.x, 5.1.x, 5.2 and Telco Cloud Infrastructure 3.0 are also affected (see KB463116).",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "415a4c7e-cfb7-3601-9778-fa969cc06859",
+       "product": {
+        "name": "VMware vCenter",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "542c2637-ac5d-3e20-b802-162837d95fd9",
+       "product": {
+        "name": "sddc_manager",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "5d7022bc-b8d1-3213-b1d4-31c3143161f6",
+       "product": {
+        "name": "vSphere Foundation",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "6c4b2a0e-9980-3b14-b849-eec92d4636e2",
+       "product": {
+        "name": "Cloud Foundation",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "7a59aa16-782a-360d-a847-2d371af29240",
+       "product": {
+        "name": "vCenter Server",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "7adac27c-6e0a-30a7-be99-b61e26889b89",
+       "product": {
+        "name": "vcf_installer",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "87241182-f777-37d0-a557-a21a0c1dca66",
+       "product": {
+        "name": "Telco Cloud Infrastructure",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "89ef8676-6089-3492-a241-7a790d546301",
+       "product": {
+        "name": "Tools",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "96b828c9-f0ba-3512-8c20-849ba998169d",
+       "product": {
+        "name": "Tools",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "b8698ea0-20d6-366c-b979-3193a3681e84",
+       "product": {
+        "name": "Telco Cloud Platform",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "d85c30d3-e986-31c8-a962-1b900663cec1",
+       "product": {
+        "name": "vCenter",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "facb69b4-5d1d-3f3c-9d90-edb7d7d49a63",
+       "product": {
+        "name": "VMware Tools",
+        "vendor": {
+         "name": "n/a"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-123890\nCVE-2026-123891\nCVE-2026-123892\nCVE-2026-123893\nCVE-2026-123894\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 20, 2026, 9:14:55 AM",
+     "dateUpdated": "Nov 20, 2026, 9:14:55 AM",
+     "description": "Kwetsbaarheden verholpen in VMware-producten",
+     "id": "NCSC-2026-0510",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "8c032f4a-55f7-3c06-9a34-bdab6d1b6011"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "0337b94b-3a9e-3fba-86c8-1812e9a4e595",
+       "product": {
+        "name": "SDDC Manager 5.2.5",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "24361e89-55ba-374f-b7bb-9c4c3b7f2765",
+       "product": {
+        "name": "vCenter Server",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "305fe459-ec46-3e4d-8502-6564721eed75",
+       "product": {
+        "name": "SDDC Manager 9.1.1.0200",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "31caaa44-de6a-3372-b8ea-4099871bca5c",
+       "product": {
+        "name": "vcenter 9.1.1.0200",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "574d8963-009d-3e35-b9ab-e904ef2fc2d3",
+       "product": {
+        "name": "12.5.5",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "88b06efe-b607-3216-a781-4e000355c9a4",
+       "product": {
+        "name": "vSphere",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "964bda07-9c61-36c8-88bb-614d651a4475",
+       "product": {
+        "name": "13.1.5.0",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "a0448fe0-2c3b-3f75-b215-db8c370d3aba",
+       "product": {
+        "name": "Cloud Foundation",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "dd6b6d5f-39e0-3fd2-89a5-cf54b73e2011",
+       "product": {
+        "name": "Tools",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "e02e219d-4fdd-3e01-91fb-296ac6de4aed",
+       "product": {
+        "name": "8.0 U3m",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "e9728036-feed-302c-bbe6-4230efa959ce",
+       "product": {
+        "name": "vcenter 9.0.2.0200",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "eaf1fe75-e4e1-386b-bb11-8183c9199da0",
+       "product": {
+        "name": "vcenter 5.2.5",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      },
+      {
+       "id": "fba3eb96-edde-30e2-9dd6-e1b601363265",
+       "product": {
+        "name": "SDDC Manager 9.0.2.0100",
+        "vendor": {
+         "name": "VMware"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-123890\nCVE-2026-123891\nCVE-2026-123892\nCVE-2026-123893\nCVE-2026-123894\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 19, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 19, 2026, 11:00:00 PM",
+     "description": "VMware vCenter, Tools, und SDDC Manager: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-4717",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4717.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4717\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in VMware Cloud Foundation, VMware vSphere, VMware vCenter Server und VMware Tools ausnutzen, um Berechtigungen zu erweitern – einschließlich Root-Rechte –, die Authentifizierung zu umgehen, beliebigen Code auszuführen sowie Daten zu manipulieren oder offenzulegen."
+    },
+    "id": "f5a8e01d-be44-3cbc-af59-4171c053211c"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "0286a8b1-0db7-3f7d-b40e-04aa9f7a6222",
@@ -149,12 +412,12 @@
      "baseScore": 9.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 21, 2026, 6:00:23 AM",
+     "dataProcessed": "Nov 22, 2026, 6:00:15 AM",
      "datePublished": "Nov 19, 2026, 2:02:38 PM",
-     "dateUpdated": "Nov 20, 2026, 8:58:23 PM",
+     "dateUpdated": "Nov 21, 2026, 4:55:21 AM",
      "description": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service.\nAffected versions: 9.1.x (fixed in 9.1.1.0200); 9.0.x (fixed in 9.0.2.0200); 8.0 (fixed in 8.0 U3m); 5.x (fixed in 5.2.5).\nTelco Cloud Platform 3.0, 4.x, 5.0.x, 5.1.x, 5.2 and Telco Cloud Infrastructure 3.0 are also affected (see KB463116).",
      "enisa_id": "EUVD-2026-130196\n",
-     "epss": 0.0,
+     "epss": 2.99,
      "exploitedSince": "Nov 20, 2026, 12:00:00 AM",
      "id": "CVE-2026-123890",
      "references": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/39495\n",
@@ -276,7 +539,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-123890\nGHSA-hxhc-xqhg-6gr5\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 21, 2026, 6:01:26 AM",
+     "dataProcessed": "Nov 22, 2026, 6:00:30 AM",
      "datePublished": "Nov 19, 2026, 3:31:13 PM",
      "dateUpdated": "Nov 20, 2026, 9:31:39 PM",
      "description": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service.\nAffected versions: 9.1.x (fixed in 9.1.1.0200); 9.0.x (fixed in 9.0.2.0200); 8.0 (fixed in 8.0 U3m); 5.x (fixed in 5.2.5).\nTelco Cloud Platform 3.0, 4.x, 5.0.x, 5.1.x, 5.2 and Telco Cloud Infrastructure 3.0 are also affected (see KB463116).",
@@ -290,7 +553,7 @@
    }
   ],
   "enisaUuid": "55dbb006-91f9-3f9e-90fb-230ee44bd0f4",
-  "epss": 0.0,
+  "epss": 2.99,
   "exploitedSince": "Nov 20, 2026, 12:00:00 AM",
   "id": "EUVD-2026-130196",
   "references": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/39495\n"
@@ -625,7 +888,7 @@
    }
   ],
   "id": "CVE-2026-123890",
-  "lastModified": "2026-11-20T20:52:33.710",
+  "lastModified": "2026-11-21T05:18:10.817",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -666,7 +929,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-20T18:42:10.389303Z",
+      "timestamp": "2026-11-19T00:00:00+00:00",
       "version": "2.0.3"
      }
     }

@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 17, 2026, 11:03:49 AM",
-  "dateUpdated": "Nov 20, 2026, 8:58:23 PM",
+  "dateUpdated": "Nov 21, 2026, 4:55:18 AM",
   "description": "Deserialization of Untrusted Data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code. The XML-RPC endpoint accepts vendor extension types and deserializes them before authenticating the requester.\n\nThis is the same vulnerability as CVE-2026-82384, which listed only Apache Roller 6.1.5 as affected. This issue is being actively exploited.\n\nUsers are recommended to upgrade to Apache Roller 6.1.6 or later, which disables the extension types and rejects XML-RPC requests when the XML-RPC feature is disabled.\n\nUsers who cannot upgrade right away should set \"enabledForExtensions\" to \"false\" in WEB-INF/web.xml, or remove the \"/roller-services/xmlrpc\" servlet mapping, and restart Roller. Disabling XML-RPC in the administration UI is not enough, because older versions deserialize the request before checking that setting.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -59,12 +59,12 @@
      "baseScore": 9.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 21, 2026, 6:00:23 AM",
+     "dataProcessed": "Nov 22, 2026, 6:00:15 AM",
      "datePublished": "Nov 17, 2026, 11:03:49 AM",
-     "dateUpdated": "Nov 20, 2026, 8:58:23 PM",
+     "dateUpdated": "Nov 21, 2026, 4:55:18 AM",
      "description": "Deserialization of Untrusted Data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code. The XML-RPC endpoint accepts vendor extension types and deserializes them before authenticating the requester.\n\nThis is the same vulnerability as CVE-2026-82384, which listed only Apache Roller 6.1.5 as affected. This issue is being actively exploited.\n\nUsers are recommended to upgrade to Apache Roller 6.1.6 or later, which disables the extension types and rejects XML-RPC requests when the XML-RPC feature is disabled.\n\nUsers who cannot upgrade right away should set \"enabledForExtensions\" to \"false\" in WEB-INF/web.xml, or remove the \"/roller-services/xmlrpc\" servlet mapping, and restart Roller. Disabling XML-RPC in the administration UI is not enough, because older versions deserialize the request before checking that setting.",
      "enisa_id": "EUVD-2026-126955\n",
-     "epss": 1.19,
+     "epss": 5.46,
      "exploitedSince": "Nov 20, 2026, 12:00:00 AM",
      "id": "CVE-2026-129448",
      "references": "https://github.com/apache/roller/pull/171\nhttps://lists.apache.org/thread/cc0jck13nb9vvcmzxzwotr6n16mx28z9\nhttps://www.cve.org/CVERecord?id=CVE-2026-82384\nhttps://lists.apache.org/thread.html/lnz4s26tv6hdo03wngtdbpfj4hg4gtds\n",
@@ -96,7 +96,7 @@
     "vulnerability": {
      "aliases": "GHSA-pxp4-phq9-fx2q\nCVE-2026-129448\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 21, 2026, 6:01:26 AM",
+     "dataProcessed": "Nov 22, 2026, 6:00:30 AM",
      "datePublished": "Nov 17, 2026, 12:31:38 PM",
      "dateUpdated": "Nov 20, 2026, 9:31:33 PM",
      "description": "Deserialization of Untrusted Data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code. The XML-RPC endpoint accepts vendor extension types and deserializes them before authenticating the requester.\n\nThis is the same vulnerability as CVE-2026-82384, which listed only Apache Roller 6.1.5 as affected. This issue is being actively exploited.\n\nUsers are recommended to upgrade to Apache Roller 6.1.6 or later, which disables the extension types and rejects XML-RPC requests when the XML-RPC feature is disabled.\n\nUsers who cannot upgrade right away should set \"enabledForExtensions\" to \"false\" in WEB-INF/web.xml, or remove the \"/roller-services/xmlrpc\" servlet mapping, and restart Roller. Disabling XML-RPC in the administration UI is not enough, because older versions deserialize the request before checking that setting.",
@@ -110,7 +110,7 @@
    }
   ],
   "enisaUuid": "acff5761-02f8-3596-898e-990ed109651e",
-  "epss": 1.19,
+  "epss": 5.46,
   "exploitedSince": "Nov 20, 2026, 12:00:00 AM",
   "id": "EUVD-2026-126955",
   "references": "https://github.com/apache/roller/pull/171\nhttps://lists.apache.org/thread/cc0jck13nb9vvcmzxzwotr6n16mx28z9\nhttps://www.cve.org/CVERecord?id=CVE-2026-82384\nhttps://lists.apache.org/thread.html/lnz4s26tv6hdo03wngtdbpfj4hg4gtds\n"
@@ -179,7 +179,7 @@
    }
   ],
   "id": "CVE-2026-129448",
-  "lastModified": "2026-11-20T20:25:11.360",
+  "lastModified": "2026-11-21T05:18:11.013",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -220,7 +220,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-20T18:42:05.015639Z",
+      "timestamp": "2026-11-18T00:00:00+00:00",
       "version": "2.0.3"
      }
     }

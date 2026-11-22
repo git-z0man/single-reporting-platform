@@ -117,11 +117,22 @@
  },
  "honeypot": [
   {
+   "avg30d": 0.0,
+   "avg7d": 0.0,
+   "avg90d": 0.0,
+   "cisaKevFlag": true,
+   "connections1d": 5,
    "cveId": "CVE-2026-110447",
    "firstSeenAt": "Nov 10, 2026, 2:00:00 AM",
    "isNew": false,
+   "lastSeenAt": "Nov 22, 2026, 5:19:40 AM",
+   "product": "Collabora Online",
    "source": "shadowserver",
-   "trend": "STEADY"
+   "trend": "STEADY",
+   "uniqueIps1d": 1,
+   "vendor": "Collabora",
+   "vulnClass": "other-software",
+   "vulnSeverity": "Critical"
   }
  ],
  "id": "EUVD-2026-100780",
