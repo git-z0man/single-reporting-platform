@@ -49,6 +49,15 @@ class Faq(unittest.TestCase):
         nums = [int(x) for x in re.findall(r'class="faq-num">Q(\d+)<', new)]
         self.assertEqual(nums, [1, 2, 3])
 
+    def test_a_stored_source_anomaly_does_not_change_what_is_synced(self):
+        f1 = H.deep(self.faq)
+        f1["questions"].append(H.question(4, "Added late?"))
+        f2 = H.deep(f1)
+        f2["source_anomalies"] = [{"n": 4, "source_n": 2, "detail": "x"}]
+        _, new1, rep1 = run(self.faq, self.gl, f1, self.gl)
+        _, new2, rep2 = run(self.faq, self.gl, f2, self.gl)
+        self.assertEqual((new1, rep1), (new2, rep2))
+
     def test_typo_is_mechanical(self):
         f1 = H.deep(self.faq)
         f1["questions"][1]["html"] = f1["questions"][1]["html"].replace("Severe", "Sever")
@@ -113,6 +122,16 @@ class Glossary(unittest.TestCase):
         ids = self.ids(new)
         self.assertEqual(ids.index("v26a"), ids.index("v26") + 1)
         self.assertEqual(ids.index("40"), ids.index("2") + 1)
+
+    def test_a_lettered_common_field_goes_after_its_number(self):
+        # Glossary 7a: Both, Optional in the Early Warning, N/A afterwards.
+        g1 = H.deep(self.gl)
+        g1["fields"].insert(1, H.field("1a", "Additional Information", fmt="Short paragraph", h72="n/a", fr="n/a"))
+        g, new, rep = run(self.faq, self.gl, self.faq, g1)
+        self.assertEqual([(m["class"], m["target"]) for m in rep["mechanical"] if m["class"].startswith("gl-")],
+                         [("gl-new", "1a")])
+        self.assertEqual(self.ids(new)[:3], ["1", "1a", "2"])
+        self.assertTrue(rep["eligible_for_auto_merge"])
 
     def test_new_required_field_is_judgment_and_not_inserted(self):
         g1 = H.deep(self.gl)

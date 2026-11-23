@@ -52,6 +52,8 @@ Before relying on the tools, run their own tests: `python3 -m unittest discover 
 
 Exit 0: nothing changed on ENISA's side. Exit 1: `guide-sync/` was rewritten. **Exit 2: the fetch failed.** A rate-limit or server error (HTTP 429, 5xx) or a page that no longer parses is a failed check, never a content change. Change nothing, report the exact message and stop. Do not edit the JSON by hand and do not "fix" the parser to get past it.
 
+A line beginning `source anomaly:` is not a failure. It names a deviation in ENISA's page that the parser recognises and records under `source_anomalies` in `guide-sync/faq.json`; the only one it accepts is the last FAQ question printed with a number already used (since 17 November 2026 the 36th question is printed as "26." and stored as Q36). Carry on. Quote the line in the pull request description and in the report, as a defect of the source, and change nothing because of it.
+
 ## 2. Is there anything to do?
 
     python3 tools/check_guide.py

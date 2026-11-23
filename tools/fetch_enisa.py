@@ -8,6 +8,12 @@ can be re-done later from the repository alone.
 A question or field whose *words* have not changed keeps its stored entry, so
 ENISA's frequent markup-only edits never produce a diff.
 
+A deviation in ENISA's own page that the parser accepts (today only one: the
+last FAQ question printed with a number already used) is stored under
+"source_anomalies" in faq.json and printed as "source anomaly: ...". It is a
+change like any other: it is written when it appears and removed when ENISA
+corrects the page, so the record says what the page said.
+
 Exit: 0 nothing changed, 1 files written (or would be, with --dry-run), 2 error.
 On any error nothing is written.
 """
@@ -107,12 +113,15 @@ def main(argv=None):
 
     new_faq = {"schema": 1, "source": faq_url, "fetched": today, "stamp": faq["stamp"],
                "questions": merge_faq(old_faq, faq)}
+    if faq["anomalies"]:
+        new_faq["source_anomalies"] = faq["anomalies"]
     new_gl = {"schema": 1, "source": gl_url, "fetched": today, "version": gl["version"],
               "last_update": gl["last_update"], "fields": merge_glossary(old_gl, gl)}
 
     # What counts as a change. The FAQ stamp is ENISA's own and moves without
     # edits, so it does not; the Glossary version is shown in the guide, so it does.
-    faq_changed = not old_faq or old_faq.get("questions") != new_faq["questions"]
+    faq_changed = (not old_faq or old_faq.get("questions") != new_faq["questions"]
+                   or old_faq.get("source_anomalies", []) != faq["anomalies"])
     gl_changed = (not old_gl or old_gl.get("fields") != new_gl["fields"]
                   or (old_gl.get("version"), old_gl.get("last_update")) != (gl["version"], gl["last_update"]))
 
@@ -120,11 +129,14 @@ def main(argv=None):
     if faq_changed:
         old_n = {q["n"] for q in (old_faq or {}).get("questions", [])}
         msg.append(f"faq.json: {len(new_faq['questions'])} questions"
-                   + (f", new: {sorted({q['n'] for q in new_faq['questions']} - old_n)}" if old_faq else ", first write"))
+                   + (f", new: {sorted({q['n'] for q in new_faq['questions']} - old_n)}" if old_faq else ", first write")
+                   + (", source anomaly corrected by ENISA" if (old_faq or {}).get("source_anomalies") and not faq["anomalies"] else ""))
     if gl_changed:
         old_ids = {f["nr"] for f in (old_gl or {}).get("fields", [])}
         msg.append(f"glossary.json: v{gl['version']}, {len(new_gl['fields'])} fields"
                    + (f", new: {sorted({f['nr'] for f in new_gl['fields']} - old_ids)}" if old_gl else ", first write"))
+    for an in faq["anomalies"]:
+        print(f"source anomaly: FAQ: {an['detail']}")
     if not msg:
         print("unchanged: faq.json and glossary.json already match ENISA's pages")
         return 0
