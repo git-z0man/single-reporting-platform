@@ -75,6 +75,30 @@ def normalize_answer_html(dd):
     return "\n".join(ln.strip() for ln in s.split("\n") if ln.strip())
 
 
+def renumber_trailing_duplicate(qs):
+    """Check that the questions are numbered 1..N in order, renumbering in place.
+
+    One deviation is accepted, because ENISA has made it: the last question
+    carries a number an earlier question already has (on 17 November 2026 the
+    new 36th question was numbered "26", a second 26). Its position says what it
+    is, so it is stored as Q<N> and the deviation is returned as a source
+    anomaly, to be reported, never silently absorbed. Any other gap, jump or
+    duplicate still stops the parse: an out-of-order list is something we do not
+    understand, and a tool that guesses writes plausible nonsense into the guide.
+
+    Returns a list of anomalies, each {"n": stored, "source_n": printed, "detail": text}.
+    """
+    nums = [q["n"] for q in qs]
+    n = len(nums)
+    if nums == list(range(1, n + 1)):
+        return []
+    if n > 1 and nums[:-1] == list(range(1, n)) and nums[-1] in nums[:-1]:
+        qs[-1]["n"] = n
+        return [{"n": n, "source_n": nums[-1],
+                 "detail": f'ENISA numbers its question {n} "{nums[-1]}." (a second {nums[-1]}); stored as Q{n}'}]
+    raise ParseError(f"FAQ: question numbers are not 1..N in order: {nums}")
+
+
 def parse_faq(raw):
     pairs = _PAIR.findall(raw)
     if len(pairs) < 30:
@@ -82,14 +106,12 @@ def parse_faq(raw):
     qs = []
     for n, t, dd in pairs:
         qs.append({"n": int(n), "title": clean_title(t), "html": normalize_answer_html(dd)})
-    nums = [q["n"] for q in qs]
-    if nums != list(range(1, len(nums) + 1)):
-        raise ParseError(f"FAQ: question numbers are not 1..N in order: {nums}")
+    anomalies = renumber_trailing_duplicate(qs)
     for q in qs:
         if not q["title"] or not words(q["html"]):
             raise ParseError(f"FAQ: Q{q['n']} has an empty title or answer")
     m = re.search(r"Updated:\s*(\d{1,2} [A-Za-z]+ \d{4})", page_text(raw))
-    return {"stamp": ("Updated: " + m.group(1)) if m else "", "questions": qs}
+    return {"stamp": ("Updated: " + m.group(1)) if m else "", "questions": qs, "anomalies": anomalies}
 
 
 # ----------------------------------------------------------------- Glossary
@@ -108,7 +130,11 @@ STAGE = {
     "Optional upon PEC activation": "Optional if PEC",
     "Optional under PEC activation": "Optional if PEC",
 }
-_NR = re.compile(r"^(\d+|v\d+[a-z]?|i\d+)$")
+# A field number: "7", "7a", "v26a", "i31". The letter suffix marks a field
+# ENISA inserted without renumbering: v26a since 26 September 2026, 7a since
+# Version 1.6. Before 23 November 2026 the pattern allowed it after "v" only,
+# so row 7a was dropped without an error and the Glossary counted 42, not 43.
+_NR = re.compile(r"^([vi]?\d+[a-z]?)$")
 
 
 def cell_text(c):
