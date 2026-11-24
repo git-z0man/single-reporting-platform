@@ -2808,3 +2808,148 @@ timestamp_utc,host,dns,tcp443,tls,http_code,note
 2026-11-23T06:08:47Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
 2026-11-23T06:08:47Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
 2026-11-23T06:08:47Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:08:40Z,auth.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,302,LIVE http 302
+2026-11-24T06:08:40Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:08:40Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:08:40Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:08:40Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:08:40Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,401,LIVE http 401
+2026-11-24T06:09:30Z,auth.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,302,LIVE http 302
+2026-11-24T06:09:30Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:09:30Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:09:30Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:09:30Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,401,LIVE http 401
+2026-11-24T06:10:33Z,auth.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,302,LIVE http 302
+2026-11-24T06:10:33Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:10:33Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:10:33Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:10:33Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:10:33Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:10:33Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:11:42Z,auth.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,302,LIVE http 302
+2026-11-24T06:11:42Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:11:42Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:11:42Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:11:42Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,portal.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,401,LIVE http 401
+2026-11-24T06:14:18Z,auth.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,302,LIVE http 302
+2026-11-24T06:14:18Z,at.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,be.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,000,PROVISIONED curl exit 35: curl: (35) Recv failure: Connection reset by peer 
+2026-11-24T06:14:18Z,bg.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,cy.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,cz.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,de.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,dk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,ee.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,es.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,fi.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,fr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,gr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,hr.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,hu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,ie.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,it.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,lt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,lu.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,lv.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,mt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,nl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,pl.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,pt.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,ro.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,se.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,si.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
+2026-11-24T06:14:18Z,sk.cra-srp.enisa.europa.eu,ok,unreliable,unreliable,307,LIVE http 307
