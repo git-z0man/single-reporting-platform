@@ -29,7 +29,7 @@
   "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
   "baseScoreVersion": "3.1",
   "datePublished": "Sep 8, 2026, 5:14:21 PM",
-  "dateUpdated": "Nov 19, 2026, 10:20:40 PM",
+  "dateUpdated": "Nov 23, 2026, 9:48:29 PM",
   "description": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally.",
   "enisaIdAdvisory": [
    {
@@ -900,7 +900,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-85880\nGHSA-96fm-jjf3-wv64\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 15, 2026, 2:54:50 AM",
+     "dataProcessed": "Nov 22, 2026, 2:55:49 AM",
      "datePublished": "Sep 8, 2026, 6:33:39 PM",
      "dateUpdated": "Sep 8, 2026, 9:34:12 PM",
      "description": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally.",
@@ -919,9 +919,9 @@
      "baseScore": 7.8,
      "baseScoreVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 20, 2026, 9:01:48 AM",
+     "dataProcessed": "Nov 24, 2026, 6:00:29 AM",
      "datePublished": "Sep 8, 2026, 5:14:21 PM",
-     "dateUpdated": "Nov 19, 2026, 10:20:40 PM",
+     "dateUpdated": "Nov 23, 2026, 9:48:29 PM",
      "description": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally.",
      "enisa_id": "EUVD-2026-73365\n",
      "epss": 0.39,
