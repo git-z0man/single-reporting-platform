@@ -26,13 +26,13 @@ is the baseline that the reachability routine updates when that changes.
 | | |
 |---|---|
 | Hosts watched | **29** (portal, auth, 27 Member State instances) |
-| Live | **28 / 29 at the close of the 2026-11-24 run** (`be` reset in that run; every host answered on direct retry — repeated single-run connection resets, not an outage; see Delta history). Before that: **29 / 29 — recovered 2026-10-10, first seen 08:39 UTC** (outage seen from 06:02 UTC; go-live confirmed 2026-09-11, first at 11:24:01 UTC (28 hosts), `es` followed at 11:36:58 UTC after a monitoring-side DNS blind spot; see Delta history) |
+| Live | **29 / 29 — control run 2026-11-24 21:45 UTC** with the retrying `check.sh` (a host now counts as down only after three failed attempts). Earlier that day 28 / 29 at the close of the 06:14 UTC run (`be` reset; every host answered on direct retry — repeated single-run connection resets, not an outage; see Delta history). Before that: **29 / 29 — recovered 2026-10-10, first seen 08:39 UTC** (outage seen from 06:02 UTC; go-live confirmed 2026-09-11, first at 11:24:01 UTC (28 hosts), `es` followed at 11:36:58 UTC after a monitoring-side DNS blind spot; see Delta history) |
 | Zone | `cra-srp.enisa.europa.eu` — independently delegated |
 | Edge | 45-address WEDOS pool `185.8.236.33`–`185.8.236.77` (WEDOS Global, CZ) |
 | State | **LIVE** again since the 2026-10-10 08:39 UTC run (launch confirmed 2026-09-11) |
 | Expected go-live | **reached** — 11 September 2026, 11:24:01 UTC |
 | Last check | 2026-11-24 |
-| Last change | 2026-11-24 06:08–06:14 UTC five `check.sh` runs each lost 1–4 random hosts to a connection reset (12 hosts in all, only `bg` twice in a row); every host answered on direct retry (flapping, not an outage); earlier: 2026-11-19 07:09 UTC `hu` and `ie` failed one run with a connection reset and answered again at 07:10 UTC (transient, not an outage); earlier: 2026-11-12 `portal` now answers HTTP 401 with a WEDOS proof-of-work challenge page instead of the SRP origin (still counted LIVE by `check.sh`); earlier: 2026-10-18 CSIRT list: Spain contact links changed; earlier: 2026-10-10 08:39 UTC — **all 29 hosts PROVISIONED -> LIVE** (recovery); earlier: 2026-10-10 06:02 UTC all 29 LIVE -> PROVISIONED (timeouts); 2026-09-11 **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
+| Last change | 2026-11-24 21:45 UTC control run after the retry fix: `be` PROVISIONED -> LIVE, 29/29; earlier: 2026-11-24 06:08–06:14 UTC five `check.sh` runs each lost 1–4 random hosts to a connection reset (12 hosts in all, only `bg` twice in a row); every host answered on direct retry (flapping, not an outage); earlier: 2026-11-19 07:09 UTC `hu` and `ie` failed one run with a connection reset and answered again at 07:10 UTC (transient, not an outage); earlier: 2026-11-12 `portal` now answers HTTP 401 with a WEDOS proof-of-work challenge page instead of the SRP origin (still counted LIVE by `check.sh`); earlier: 2026-10-18 CSIRT list: Spain contact links changed; earlier: 2026-10-10 08:39 UTC — **all 29 hosts PROVISIONED -> LIVE** (recovery); earlier: 2026-10-10 06:02 UTC all 29 LIVE -> PROVISIONED (timeouts); 2026-09-11 **go-live**: all 29 hosts LIVE, portal/auth/country instances all answering with real SRP application content; see Delta history |
 
 Live per-host detail: [`srp-domains/status.md`](srp-domains/status.md).
 
@@ -275,6 +275,13 @@ signals — no login attempts, no form input, no authentication**:
    `srp-domains/evidence/<host>.txt` so every mapping stays checkable.
 
 ## Delta history
+
+### 2026-11-24 21:45 UTC (vs. 2026-11-24 06:14 UTC) — retrying check, 29/29 live
+
+`check.sh` now retries a failed probe twice after a short pause and records a host as down only when all three attempts fail. Its control run found all 29 hosts live, so the record no longer starts the next run in the morning's 28/29 state.
+
+**Fixed** — `be`: PROVISIONED -> LIVE (HTTP 307). No host needed a retry in this run. The reasoning for the retry is in the header of `check.sh` (2026-11-24).
+**Unchanged** — 29 hosts in the zone, `portal` 401 behind the WEDOS challenge, `auth` 302, all 27 countries 307.
 
 ### 2026-11-24 06:14 UTC (vs. 2026-11-23) — connection resets on random hosts in every run, no host down
 
