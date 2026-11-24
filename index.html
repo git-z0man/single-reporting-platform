@@ -672,10 +672,10 @@
       <section id="fields" class="phase divider">
         <div class="phase-eyebrow">Reference &middot; the reporting template</div>
         <h2>Every field, explained</h2>
-        <p class="intro">The phase tables above show what each stage <em>requires</em>. This is the whole form: all <span data-sync="glossary-count">42</span> fields ENISA itemises, with what each one means, how ENISA says to complete it, its worked example and its expected format. Read it as cards, one field at a time, or switch to the full table below. The source is ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">CRA SRP Glossary</a>, as it stood on <span data-sync="glossary-asof">22&nbsp;October&nbsp;2026</span>; the meanings, instructions and examples are quoted from it. <strong>The character limits come from the running platform, not from ENISA&rsquo;s documentation</strong> &mdash; they appear in the form&rsquo;s own placeholders and are published nowhere, so treat them as accurate as of 13&nbsp;September&nbsp;2026 rather than as a specification. They matter when drafting: the field for the malicious actor holds 100&nbsp;characters.</p>
+        <p class="intro">The phase tables above show what each stage <em>requires</em>. This is the whole form: all <span data-sync="glossary-count">43</span> fields ENISA itemises, with what each one means, how ENISA says to complete it, its worked example and its expected format. Read it as cards, one field at a time, or switch to the full table below. The source is ENISA&rsquo;s <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">CRA SRP Glossary</a>, as it stood on <span data-sync="glossary-asof">24&nbsp;November&nbsp;2026</span>; the meanings, instructions and examples are quoted from it. <strong>The character limits come from the running platform, not from ENISA&rsquo;s documentation</strong> &mdash; they appear in the form&rsquo;s own placeholders and are published nowhere, so treat them as accurate as of 13&nbsp;September&nbsp;2026 rather than as a specification. They matter when drafting: the field for the malicious actor holds 100&nbsp;characters.</p>
 
         <div class="callout">
-          <p><strong class="lead-in">Two numbering systems, one of them no longer on ENISA&rsquo;s site.</strong> The Glossary itemises <span data-sync="glossary-count">42</span> fields today, numbered 1&ndash;18, v19&ndash;v30 and i31&ndash;i39, plus those ENISA added later without renumbering (so far v26a, 40 and 41). The FAQ&rsquo;s own field-by-field table once counted <strong>43</strong>, but ENISA removed it from the live FAQ page on 10&nbsp;September&nbsp;2026 and rewrote that answer to defer to the Glossary entirely. This guide numbered its fields after that table until then; it now uses the Glossary&rsquo;s numbers throughout, and the conversion table below maps the old ones. The 43 rows were the Glossary&rsquo;s fields as they then stood (38, under their old numbers), plus five the platform fills in by itself (notification level, three reporting timestamps, and the reporter) &mdash; which the Glossary never described, because you never type them. Fields added to the Glossary since the table was written (v23, v26a, 40 and 41) have no FAQ number at all.</p>
+          <p><strong class="lead-in">Two numbering systems, one of them no longer on ENISA&rsquo;s site.</strong> The Glossary itemises <span data-sync="glossary-count">43</span> fields today, numbered 1&ndash;18, v19&ndash;v30 and i31&ndash;i39, plus those ENISA added later without renumbering (so far v26a, 40 and 41). The FAQ&rsquo;s own field-by-field table once counted <strong>43</strong>, but ENISA removed it from the live FAQ page on 10&nbsp;September&nbsp;2026 and rewrote that answer to defer to the Glossary entirely. This guide numbered its fields after that table until then; it now uses the Glossary&rsquo;s numbers throughout, and the conversion table below maps the old ones. The 43 rows were the Glossary&rsquo;s fields as they then stood (38, under their old numbers), plus five the platform fills in by itself (notification level, three reporting timestamps, and the reporter) &mdash; which the Glossary never described, because you never type them. Fields added to the Glossary since the table was written (v23, v26a, 40 and 41) have no FAQ number at all.</p>
         </div>
 
         <div class="callout neutral">
@@ -697,7 +697,7 @@
           <span class="viewswitch-label">Show as</span>
           <button type="button" class="vsbtn" data-view="cards" aria-pressed="true">Cards</button>
           <button type="button" class="vsbtn" data-view="table" aria-pressed="false">Full table</button>
-          <span class="viewswitch-hint">Cards open one field at a time. The full table lays all <span data-sync="glossary-count">42</span> out at once, plus the one field ENISA does not itemise &mdash; wide, and it scrolls sideways on a phone.</span>
+          <span class="viewswitch-hint">Cards open one field at a time. The full table lays all <span data-sync="glossary-count">43</span> out at once, plus the one field ENISA does not itemise &mdash; wide, and it scrolls sideways on a phone.</span>
         </div>
 
         <div id="fieldcards">
@@ -793,6 +793,19 @@
               <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">4.0 to 4.2.1</p></figure>
               <!-- OWN-NOTE field-7: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Glossary 7</span> &middot; applies to Both</p>
+            </div>
+          </details>
+          <details class="faq field" id="f-7a">
+            <summary><span class="faq-qwrap"><span class="faq-num">7a</span><span>Additional Information</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip na">n/a</span></span><span class="fchip"><b>FR</b><span class="chip na">n/a</span></span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Short paragraph</span></p>
+              <dl class="fdef">
+                <dt>What it means</dt><dd data-k="means">Any extra details about the manufacturer that the standard fields don’t cover, but that help the CDaC correctly identify the entity.</dd>
+                <dt>How to complete it</dt><dd data-k="how">Add only relevant, factual information (max. 255 characters).</dd>
+              </dl>
+              <figure class="field-example"><span class="fdef-label">ENISA’s example</span><p data-k="ex">[name of the company] is owned by [group affiliation]</p></figure>
+              <!-- OWN-NOTE field-7a: your own practical note here, as <p class="ownnote">…</p> -->
+              <p class="field-src"><span class="field-gl">Glossary 7a</span> &middot; applies to Both</p>
             </div>
           </details>
           <details class="faq field" id="f-8">
@@ -1109,7 +1122,7 @@
             <summary><span class="faq-qwrap"><span class="faq-num">&mdash;</span><span>Prerequisites (conditions for exploitation)</span></span><span class="field-chips"><span class="fchip"><b>EW</b><span class="chip optional">Optional</span></span><span class="fchip"><b>72&hairsp;h</b><span class="chip mandatory">Required</span></span><span class="fchip"><b>FR</b><span class="chip na">not seen</span></span></span><span class="faq-chev">+</span></summary>
             <div class="faq-body">
               <p class="field-format"><span class="fdef-label">Format</span><span data-k="fmt">Free text &middot; max 4,000&nbsp;characters</span></p>
-              <div class="faq-amend"><span class="amend-label">Not in the Glossary</span><p><strong>This field carries no ENISA documentation at all</strong> &mdash; it is absent from the Glossary&rsquo;s <span data-sync="glossary-count">42</span> fields, the FAQ and every guidance page. It sits on the AEV path, between <em>Malicious actor</em> and the submit buttons: optional at Early Warning, <strong>required</strong> at the 72-hour Notification &mdash; confirmed on two separate notifications in ENISA&rsquo;s own tutorial video. Going by the label alone, it likely asks what has to be true for the vulnerability to be exploitable &mdash; required access, configuration, or attacker capability &mdash; but that reading is ours, not ENISA&rsquo;s: no completion instruction or worked example is published anywhere. Until ENISA documents it, budget for it at the 72-hour stage and describe the exploitation preconditions in your own words.</p></div>
+              <div class="faq-amend"><span class="amend-label">Not in the Glossary</span><p><strong>This field carries no ENISA documentation at all</strong> &mdash; it is absent from the Glossary&rsquo;s <span data-sync="glossary-count">43</span> fields, the FAQ and every guidance page. It sits on the AEV path, between <em>Malicious actor</em> and the submit buttons: optional at Early Warning, <strong>required</strong> at the 72-hour Notification &mdash; confirmed on two separate notifications in ENISA&rsquo;s own tutorial video. Going by the label alone, it likely asks what has to be true for the vulnerability to be exploitable &mdash; required access, configuration, or attacker capability &mdash; but that reading is ours, not ENISA&rsquo;s: no completion instruction or worked example is published anywhere. Until ENISA documents it, budget for it at the 72-hour stage and describe the exploitation preconditions in your own words.</p></div>
               <!-- OWN-NOTE field-prereq: your own practical note here, as <p class="ownnote">…</p> -->
               <p class="field-src"><span class="field-gl">Not in the Glossary</span> &middot; seen on the AEV path &middot; source: ENISA, <a href="https://videos.enisa.europa.eu/w/wS9DBDDiX2mHQZpK85QXNh" target="_blank" rel="noopener">CRA SRP - AR User Tutorial Video</a></p>
             </div>
@@ -1296,12 +1309,12 @@
           </div>
         </details>
 
-        <p class="imgsrc">Field meanings, completion instructions, examples and formats: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">CRA SRP Glossary</a>, version&nbsp;<span data-sync="glossary-version">1.6</span>, as it stood on <span data-sync="glossary-asof">22&nbsp;October&nbsp;2026</span>. Reproduced with acknowledgement per the ENISA Legal Notice. <strong>Field numbers follow the Glossary.</strong> They previously followed the data-field table in <a href="https://www.enisa.europa.eu/topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp/frequently-asked-questions" target="_blank" rel="noopener">SRP FAQ</a> question&nbsp;16, which ENISA removed on 10&nbsp;September&nbsp;2026 &mdash; that answer now defers entirely to the Glossary, so the Glossary&rsquo;s numbering is the only one still maintained. See the conversion table below if you are working from an older reference.</p>
+        <p class="imgsrc">Field meanings, completion instructions, examples and formats: ENISA, <a href="https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/cra-srp-glossary2" target="_blank" rel="noopener">CRA SRP Glossary</a>, version&nbsp;<span data-sync="glossary-version">1.6</span>, as it stood on <span data-sync="glossary-asof">24&nbsp;November&nbsp;2026</span>. Reproduced with acknowledgement per the ENISA Legal Notice. <strong>Field numbers follow the Glossary.</strong> They previously followed the data-field table in <a href="https://www.enisa.europa.eu/topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp/frequently-asked-questions" target="_blank" rel="noopener">SRP FAQ</a> question&nbsp;16, which ENISA removed on 10&nbsp;September&nbsp;2026 &mdash; that answer now defers entirely to the Glossary, so the Glossary&rsquo;s numbering is the only one still maintained. See the conversion table below if you are working from an older reference.</p>
       </section>
 
       <section id="faq" class="phase divider">
         <h2>Questions &amp; answers</h2>
-        <p class="intro" style="color:var(--faint)">ENISA&rsquo;s official Single Reporting Platform FAQ, reproduced in full &mdash; all <span data-sync="faq-count">35</span> questions as they stood on <span data-sync="faq-asof">16&nbsp;October&nbsp;2026</span>. Wording is ENISA&rsquo;s. <a href="https://www.enisa.europa.eu/topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp/frequently-asked-questions" target="_blank" rel="noopener">Read it at the source</a>.</p>
+        <p class="intro" style="color:var(--faint)">ENISA&rsquo;s official Single Reporting Platform FAQ, reproduced in full &mdash; all <span data-sync="faq-count">36</span> questions as they stood on <span data-sync="faq-asof">24&nbsp;November&nbsp;2026</span>. Wording is ENISA&rsquo;s. <a href="https://www.enisa.europa.eu/topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp/frequently-asked-questions" target="_blank" rel="noopener">Read it at the source</a>.</p>
         <div class="faq-wrap">
           <details class="faq">
             <summary><span class="faq-qwrap"><span class="faq-num">Q1</span><span>What is the Cyber Resilience Act’s Single Reporting Platform (CRA SRP)?</span></span><span class="faq-chev">+</span></summary>
@@ -1610,6 +1623,18 @@
               <p>As ENISA is a CVE Numbering Authority, the Agency can also help assign a Common Vulnerabilities and Exposures (CVE) ID in accordance with the CVE Program rules.</p>
             </div>
           </details>
+          <details class="faq">
+            <summary><span class="faq-qwrap"><span class="faq-num">Q36</span><span>What can do CSIRTs do with the information submitted via the CRA SRP?</span></span><span class="faq-chev">+</span></summary>
+            <div class="faq-body">
+              <p>Once submitted, the notification is shared without delay with the CSIRTs of the Member States indicated by the manufacturer, unless a delay is justified (CRA, Art. 16(2)). As indicated in recital 66 of the CRA, this information supports CSIRTs in fulfilling their tasks as set out in Directive (EU) 2022/2555 and raise the overall level of cybersecurity of essential and important entities as referred to in Article 3 of that Directive. Each CSIRT may therefore analyse the notification and assess the risk to its constituency. On that basis, and within its national mandate, each CSIRT may:</p>
+              <ul>
+                <li>alert essential and important entities and other relevant stakeholders, and share any available mitigation measures (NIS2, Art. 11(3)(b));</li>
+                <li>inform users of the product if the manufacturer has not done so in a timely manner, if considered proportionate and necessary for preventing or mitigating the impact &nbsp;(CRA, Art. 14(8));</li>
+                <li>for a severe incident, inform the public or require the manufacturer to do so, after consulting the manufacturer (CRA, Art. 17(2)).</li>
+              </ul>
+              <p>CSIRTs will also provide their respective market surveillance authorities with the information they need for their tasks under the CRA (CRA, Art. 16(3))</p>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -1620,7 +1645,7 @@
         <dl class="facts" id="abbrlist"></dl>
 
         <p class="footer-legal">Cyber Resilience Act, Articles 14–17 · Delegated Regulation (EU) C(2025)&nbsp;8407 of 11 December 2025. Platform operated by ENISA. <a href="https://www.enisa.europa.eu/topics/product-security/vulnerability-services/eu-incident-response-and-cyber-crisis-management/single-reporting-platform-srp" target="_blank" rel="noopener">ENISA official SRP pages ↗</a></p>
-        <p class="footer-disc">Unofficial community guide. Not affiliated with ENISA. Built from ENISA&rsquo;s published guidance, glossary and FAQ, tracked daily; the FAQ and Glossary reproduced here last changed on ENISA&rsquo;s side on <span data-sync="footer-asof">22&nbsp;October&nbsp;2026</span> &mdash; all three are being edited actively, so check the source for anything you rely on.</p>
+        <p class="footer-disc">Unofficial community guide. Not affiliated with ENISA. Built from ENISA&rsquo;s published guidance, glossary and FAQ, tracked daily; the FAQ and Glossary reproduced here last changed on ENISA&rsquo;s side on <span data-sync="footer-asof">24&nbsp;November&nbsp;2026</span> &mdash; all three are being edited actively, so check the source for anything you rely on.</p>
       </footer>
 
     </div>
