@@ -2426,18 +2426,18 @@
  "honeypot": [
   {
    "avg30d": 0.0,
-   "avg7d": 0.0,
+   "avg7d": 1.0,
    "avg90d": 0.0,
    "cisaKevFlag": true,
-   "connections1d": 7,
+   "connections1d": 92,
    "cveId": "CVE-2026-105133",
    "firstSeenAt": "Oct 27, 2026, 2:00:00 AM",
    "isNew": false,
-   "lastSeenAt": "Nov 22, 2026, 7:17:13 AM",
+   "lastSeenAt": "Nov 23, 2026, 7:17:04 AM",
    "product": "AhsayCBS",
    "source": "shadowserver",
-   "trend": "STEADY",
-   "uniqueIps1d": 1,
+   "trend": "UPTICK",
+   "uniqueIps1d": 2,
    "vendor": "Ahsay",
    "vulnClass": "backup",
    "vulnSeverity": "High"
