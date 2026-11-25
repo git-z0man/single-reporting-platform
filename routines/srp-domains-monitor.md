@@ -44,14 +44,18 @@ Then read `srp-domains/README.md` — it documents the layout, the detection sig
 
 ## 0b. The branch — decide once, record it, never change it
 
-This run uses exactly one branch, decided here, before anything else touches git. Run this as the first git command of the run, before any `reset`, `checkout` or `switch`:
+This run uses exactly one branch, decided here, before anything else touches git. Run this as the first git command of the run, before any `checkout` or `switch`:
 
     git fetch origin
     git rev-parse --abbrev-ref HEAD | tee .git/srp-run-branch
 
 `.git/srp-run-branch` lives inside `.git`, so it is never committed; it is there because a shell variable does not survive from one command to the next, and section 5 reads it back.
 
-**Case A: it printed anything other than `main` or `HEAD`.** This is the normal case, and the name is usually `claude/<two words>-<suffix>`. That is the branch the platform gave this session, and it is this run's branch. Refresh it with `git reset --hard origin/main` and do everything on it. After that reset its content is identical to `main`. It is still not `main`, and it does not need a branch of its own before you commit.
+**Case A: it printed anything other than `main` or `HEAD`.** This is the normal case, and the name is usually `claude/<two words>-<suffix>`. That is the branch the platform gave this session, and it is this run's branch. Refresh it without `git reset --hard`, which this session's permissions refuse (every run from 20 to 24 November 2026 was turned away there). First check that the working tree is clean: `git status --porcelain` must print nothing, as it always does in a fresh container; if it prints anything, report it and stop. Then point the same branch at `main`:
+
+    git checkout --no-track -B "$(cat .git/srp-run-branch)" origin/main
+
+This does not create a new branch; it moves the session's own branch, whose name was just recorded, to `origin/main`. Do everything on it. After that its content is identical to `main`. It is still not `main`, and it does not need a branch of its own before you commit.
 
 **Case B: it printed `main` or `HEAD`, and only then.** Create the fallback branch, named exactly `srp-domains-monitor`, with no date, no counter and no variant, and record that name instead:
 
@@ -61,7 +65,7 @@ Say in the report that the fallback was used.
 
 In either case, nothing after this section creates, renames or switches a branch: no `git checkout -b`/`-B`, no `git switch -c`, no `git branch <name>`. That holds in section 5 too, when committing, which is where it went wrong before. The branch name is never invented, never dated and never "made unique" to get past a branch that already exists on the remote. Never push to `main`.
 
-Why this is spelled out (2026-11-09): on 8 November the run pushed `srp-domains-monitor` (PR #369), and on 9 November `srp-domains-monitor-2026-11-09` (PR #373). In both runs `git branch --show-current` had printed `claude/trusting-hawking-njca17` at the start. Each time the branch was created at commit time, in one line with `git add`, `git commit` and `git push`. The previous wording of this section allowed that in three ways. The only copy-ready command in it was the fallback's `git checkout -B srp-domains-monitor`. The normal case came with no command and no name to carry forward. And "never create a new per-run branch when the session already gave you one" did not say how to recognise the session's branch, after a `reset --hard origin/main` had made it look exactly like `main`. A fixed name like `srp-domains-monitor` did not read as "per-run" either. The EUVD monitor's section 0 was rewritten the same way on 2026-11-07, after the same fault on 6 November, and its runs have used the session's branch since.
+Why this is spelled out (2026-11-09): on 8 November the run pushed `srp-domains-monitor` (PR #369), and on 9 November `srp-domains-monitor-2026-11-09` (PR #373). In both runs `git branch --show-current` had printed `claude/trusting-hawking-njca17` at the start. Each time the branch was created at commit time, in one line with `git add`, `git commit` and `git push`. The previous wording of this section allowed that in three ways. The only copy-ready command in it was the fallback's `git checkout -B srp-domains-monitor`. The normal case came with no command and no name to carry forward. And "never create a new per-run branch when the session already gave you one" did not say how to recognise the session's branch, after the refresh to `origin/main` had made it look exactly like `main`. A fixed name like `srp-domains-monitor` did not read as "per-run" either. The EUVD monitor's section 0 was rewritten the same way on 2026-11-07, after the same fault on 6 November, and its runs have used the session's branch since.
 
 ## 1. Run the check
 

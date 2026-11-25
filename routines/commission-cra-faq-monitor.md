@@ -26,14 +26,18 @@ Then read `commission-faq/README.md` — it documents the layout, the detection 
 
 ### The branch: decide once, record it, never change it
 
-This run uses exactly one branch, decided here, before anything else touches git. Run this as the first git command of the run, before any `reset`, `checkout` or `switch`:
+This run uses exactly one branch, decided here, before anything else touches git. Run this as the first git command of the run, before any `checkout` or `switch`:
 
     git fetch origin
     git rev-parse --abbrev-ref HEAD | tee .git/run-branch
 
 `.git/run-branch` lives inside `.git`, so it is never committed. It exists because a shell variable does not survive from one command to the next; section 5 reads it back.
 
-**Case A: it printed anything other than `main` or `HEAD`.** This is the normal case, and the name is usually `claude/<two words>-<suffix>`. That is the branch the platform gave this session, and it is this run's branch. Refresh it with `git reset --hard origin/main` and do everything on it. After that reset its content is identical to `main`. It is still not `main`, and it does not need a branch of its own before you commit.
+**Case A: it printed anything other than `main` or `HEAD`.** This is the normal case, and the name is usually `claude/<two words>-<suffix>`. That is the branch the platform gave this session, and it is this run's branch. Refresh it without `git reset --hard`, which this session's permissions refuse (every run from 20 to 24 November 2026 was turned away there). First check that the working tree is clean: `git status --porcelain` must print nothing, as it always does in a fresh container; if it prints anything, report it and stop. Then point the same branch at `main`:
+
+    git checkout --no-track -B "$(cat .git/run-branch)" origin/main
+
+This does not create a new branch; it moves the session's own branch, whose name was just recorded, to `origin/main`. Do everything on it. After that its content is identical to `main`. It is still not `main`, and it does not need a branch of its own before you commit.
 
 **Case B: it printed `main` or `HEAD`, and only then.** Create the fallback branch, named exactly `commission-faq-monitor`, with no date, no counter and no variant, and record that name instead:
 
@@ -43,7 +47,7 @@ Say in the report that the fallback was used.
 
 In either case, nothing after this point creates, renames or switches a branch: no `git checkout -b`/`-B`, no `git switch -c`, no `git branch <name>`, and that includes the commit in section 5. The branch name is never invented, never dated and never "made unique" to get past a branch that already exists on the remote. Never push to `main`.
 
-This replaces a looser rule (2026-11-09). The SRP domains monitor, which had the same wording, pushed a branch it created itself on 8 and 9 November, although the session had given it one; the EUVD monitor did the same on 6 November. In each case the branch was created at commit time. The old wording made the fallback's `checkout -B` the only ready-made command and did not say how to recognise the session's branch once `reset --hard origin/main` had made it look exactly like `main`.
+This replaces a looser rule (2026-11-09). The SRP domains monitor, which had the same wording, pushed a branch it created itself on 8 and 9 November, although the session had given it one; the EUVD monitor did the same on 6 November. In each case the branch was created at commit time. The old wording made the fallback's `checkout -B` the only ready-made command and did not say how to recognise the session's branch once the refresh to `origin/main` had made it look exactly like `main`.
 
 ## 1. Detect the current version
 

@@ -36,11 +36,14 @@ If it is not checked out, clone it: `git clone https://github.com/git-z0man/sing
 Do NOT hard-code a branch name; the platform assigns this Routine's outcome branch a fresh name whenever the Routine is edited. Stay on the branch the session gave you (if that is `main`, create `guide-sync` from it). Then:
 
     git fetch origin
+    git status --porcelain   # must print nothing; if it prints anything, report it and stop
     # If origin/[your branch] exists and carries commits that are not in origin/main, an
     # earlier run's pull request is still open. Continue it, so a pending decision is not made twice:
-    git reset --hard origin/[your branch] && git merge --no-edit origin/main
+    git checkout --no-track -B [your branch] origin/[your branch] && git merge --no-edit origin/main
     # Otherwise:
-    git reset --hard origin/main
+    git checkout --no-track -B [your branch] origin/main
+
+Do not use `git reset --hard` for this; this session's permissions refuse it. `checkout -B` with the branch's own name moves that branch and creates nothing new.
 
 Never push to `main`.
 

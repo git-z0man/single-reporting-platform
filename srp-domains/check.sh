@@ -105,6 +105,19 @@
 # resolve() still runs, bounded, purely to populate the informational
 # "Resolves to" column; it never gates classification.
 #
+# ---------------------------------------------------------------------------
+# WHY A FAILED PROBE IS RETRIED BEFORE A HOST COUNTS AS DOWN
+#
+# 2026-11-24: five runs between 06:08 and 06:14 UTC each lost 1 to 4 hosts,
+# a different random set every time, to "curl exit 35: Connection reset by
+# peer". Fetched directly a moment later, every one of them answered (PR
+# #438). A single reset therefore says nothing about the platform. A probe
+# that would classify PROVISIONED (any failure other than NXDOMAIN, BLOCKED
+# or DNS_TIMEOUT) is now repeated twice more after a short pause
+# ($RETRY_PAUSE seconds, default 3, overridable with SRP_RETRY_PAUSE). The
+# host is PROVISIONED only when all three attempts fail; the note records
+# the attempt count either way.
+#
 # Usage:  bash srp-domains/check.sh [--quiet]
 # Exit:   0 = no state change, 1 = at least one host changed state, 2 = error
 # ---------------------------------------------------------------------------
@@ -128,6 +141,11 @@ for cc in "${COUNTRIES[@]}"; do HOSTS+=("$cc.$ZONE"); done
 TOTAL=${#HOSTS[@]}
 
 say() { [ "$QUIET" -eq 1 ] || printf '%s\n' "$*"; }
+
+# A host counts as down only when the first attempt and two more, each after a
+# short pause, all fail (see the 2026-11-24 note in the header).
+ATTEMPTS=3
+RETRY_PAUSE="${SRP_RETRY_PAUSE:-3}"
 
 # --- trust mode -------------------------------------------------------------
 # An intercepting proxy makes the TCP and TLS stages meaningless (see above).
@@ -207,11 +225,30 @@ for h in "${HOSTS[@]}"; do
     tcp="$(probe_tcp "$h")"; tls="$(probe_tls "$h")"
   fi
 
-  err="$(mktemp)"; hdr="$(mktemp)"; body="$(mktemp)"
-  code="$(curl -sS -D "$hdr" -o "$body" -m 20 --max-filesize 2000000 -w '%{http_code}' "https://$h/" 2>"$err")"
-  rc=$?
-  msg="$(tr -d '\r' < "$err" | tr '\n' ' ' | sed 's/,/;/g' | cut -c1-160)"
-  rm -f "$err"
+  # A failure that would read as PROVISIONED (down) is retried: see the
+  # 2026-11-24 note in the header. BLOCKED, NXDOMAIN and DNS_TIMEOUT are not
+  # retried; they are their own states, and none of them counts as down.
+  hdr="$(mktemp)"; body="$(mktemp)"
+  attempt=0
+  while :; do
+    attempt=$((attempt+1))
+    err="$(mktemp)"; : > "$hdr"; : > "$body"
+    code="$(curl -sS -D "$hdr" -o "$body" -m 20 --max-filesize 2000000 -w '%{http_code}' "https://$h/" 2>"$err")"
+    rc=$?
+    msg="$(tr -d '\r' < "$err" | tr '\n' ' ' | sed 's/,/;/g' | cut -c1-160)"
+    rm -f "$err"
+    retryable=1
+    if [ $rc -eq 0 ] && [ "$code" != "000" ]; then retryable=0
+    elif [ $rc -eq 6 ]; then retryable=0
+    elif [ $rc -eq 56 ] && printf '%s' "$msg" | grep -q '403'; then retryable=0
+    elif [ $rc -eq 28 ] && [ "$dns_hung" -eq 1 ]; then retryable=0
+    fi
+    [ "$retryable" -eq 0 ] && break
+    [ "$attempt" -ge "$ATTEMPTS" ] && break
+    sleep "$RETRY_PAUSE"
+  done
+  retried=""
+  [ "$attempt" -gt 1 ] && retried=" (attempt $attempt of $ATTEMPTS)"
 
   if [ $rc -eq 0 ] && [ "$code" != "000" ] \
      && grep -qi 'x-protected-by:.*WEDOS' "$hdr" \
@@ -221,7 +258,7 @@ for h in "${HOSTS[@]}"; do
     # platform signal: never LIVE, never first_live, never in the live tally.
     ST[$h]=EDGE_BLOCKED; HTTP[$h]="$code"; NOTE[$h]="http $code (WEDOS.protection edge page, not origin)"; edge_blocked=$((edge_blocked+1))
   elif [ $rc -eq 0 ] && [ "$code" != "000" ]; then
-    ST[$h]=LIVE; HTTP[$h]="$code"; NOTE[$h]="http $code"; live=$((live+1))
+    ST[$h]=LIVE; HTTP[$h]="$code"; NOTE[$h]="http $code$retried"; live=$((live+1))
   elif [ $rc -eq 6 ]; then
     ST[$h]=NXDOMAIN; HTTP[$h]=000; NOTE[$h]="curl could not resolve host"
     nxdomain=$((nxdomain+1))
@@ -232,7 +269,7 @@ for h in "${HOSTS[@]}"; do
     ST[$h]=DNS_TIMEOUT; HTTP[$h]=000; NOTE[$h]="DNS never answered (local resolver and curl both timed out) - check was blind"
     dns_timeout=$((dns_timeout+1))
   else
-    ST[$h]=PROVISIONED; HTTP[$h]=000; NOTE[$h]="curl exit $rc: $msg"
+    ST[$h]=PROVISIONED; HTTP[$h]=000; NOTE[$h]="curl exit $rc after $attempt attempts: $msg"
   fi
   rm -f "$hdr" "$body"
 
