@@ -32,7 +32,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 21, 2026, 1:48:34 PM",
-  "dateUpdated": "Nov 20, 2026, 11:19:17 AM",
+  "dateUpdated": "Nov 24, 2026, 11:35:44 AM",
   "description": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
   "enisaIdAdvisory": [
    {
@@ -1869,7 +1869,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:06:07 PM",
-     "dateUpdated": "Nov 11, 2026, 7:10:58 PM",
+     "dateUpdated": "Nov 19, 2026, 6:02:25 PM",
      "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:87151",
      "references": "https://access.redhat.com/errata/RHSA-2026:87151\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87151.json\n",
@@ -4336,7 +4336,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Nov 10, 2026, 10:40:17 PM",
-     "dateUpdated": "Nov 19, 2026, 6:03:31 PM",
+     "dateUpdated": "Nov 22, 2026, 6:31:29 AM",
      "description": "Red Hat Security Advisory: php:8.4 security update",
      "id": "RHSA-2026:97880",
      "references": "https://access.redhat.com/errata/RHSA-2026:97880\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_97880.json\n",
@@ -6281,7 +6281,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 5:04:21 PM",
-     "dateUpdated": "Nov 18, 2026, 10:48:29 AM",
+     "dateUpdated": "Nov 20, 2026, 10:30:59 AM",
      "description": "Security update for php8",
      "id": "openSUSE-SU-2026:22151-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_22151-1.json\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -10369,7 +10369,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 18, 2026, 10:47:41 AM",
+     "dateUpdated": "Nov 20, 2026, 10:30:03 AM",
      "description": "php8-8.5.12-1.1 on GA media",
      "id": "openSUSE-SU-2026:12219-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_12219-1.json\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -10385,9 +10385,45 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "0085f244-5b7e-3ea3-9664-8144d14b6a9b",
+       "product": {
+        "name": "Simcenter Multiscale Designer",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "00985d9c-44c9-3f85-af8c-d6fc78a5d728",
+       "product": {
+        "name": "Opcenter APS",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "012ad6c4-3619-3684-a745-53b8d62b47df",
        "product": {
         "name": "Solid Edge",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "01864ccd-d154-352f-8c86-fdaa6fb7b1ea",
+       "product": {
+        "name": "Simcenter Motionview",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "01cf9a11-faab-3840-9398-611b7146755b",
+       "product": {
+        "name": "Simcenter S-Frame",
         "vendor": {
          "name": "Siemens"
         }
@@ -10403,6 +10439,24 @@
        }
       },
       {
+       "id": "0273729e-ecfd-30f7-9a02-e21197079fb8",
+       "product": {
+        "name": "Graph Lakehouse",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "02c7f253-8c36-33c2-af81-f832531014fc",
+       "product": {
+        "name": "Simcenter FLOEFD",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "04a3eb81-6f86-3ef3-a912-9dcc758ba52a",
        "product": {
         "name": "DFMExpress",
@@ -10412,9 +10466,45 @@
        }
       },
       {
+       "id": "05fbd56e-0d67-32fa-98cf-e541b8afdc82",
+       "product": {
+        "name": "Simcenter Motionsolve",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "0a09e27e-e295-392e-af81-cb81e983e278",
+       "product": {
+        "name": "Simcenter Genesis",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "0e80f1a0-4df4-3e1f-be11-e69ddda7f349",
+       "product": {
+        "name": "Rapidminer Analytics Workbench (SLC)",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "10803b62-5ccd-3d45-968c-477ec174d3bb",
        "product": {
         "name": "Designcenter",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "12ca58be-0c02-3864-b01c-042033fa0e13",
+       "product": {
+        "name": "Simcenter e-Motor Platform Optimization",
         "vendor": {
          "name": "Siemens"
         }
@@ -10435,6 +10525,15 @@
         "name": "Polarion",
         "vendor": {
          "name": "Siemens AG"
+        }
+       }
+      },
+      {
+       "id": "15d0bc31-9df6-3150-83d4-5a0dd5f5800c",
+       "product": {
+        "name": "Simcenter Acusolve",
+        "vendor": {
+         "name": "Siemens"
         }
        }
       },
@@ -10466,9 +10565,63 @@
        }
       },
       {
+       "id": "1c549e35-8ad3-3da0-8cd2-360871f2dbf9",
+       "product": {
+        "name": "Simcenter Studio",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "1c79331e-8f52-32a3-b113-609962ed3437",
        "product": {
         "name": "Valor NPI",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "1c7c7911-e958-39fb-a174-7725ca38bf64",
+       "product": {
+        "name": "Simcenter Amesim",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "1cc4af2d-e436-33cc-8cae-b781ddd30fdc",
+       "product": {
+        "name": "Simcenter Hyperview",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "1e0e7d84-28e6-3a66-be06-a001f6cc1818",
+       "product": {
+        "name": "Teamcenter Simulation",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "1fe08134-e588-3b40-a83c-195a6d232367",
+       "product": {
+        "name": "Simcenter Compose",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "200d27c1-81b3-3a36-8581-8ec30c885589",
+       "product": {
+        "name": "Simcenter Nastran",
         "vendor": {
          "name": "Siemens"
         }
@@ -10484,9 +10637,36 @@
        }
       },
       {
+       "id": "213dc356-c3d3-3394-8120-b2ed8b9d6128",
+       "product": {
+        "name": "Simcenter DesignAI",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "2502f50d-1505-33b2-a7d1-ff2d14b76c2b",
+       "product": {
+        "name": "Simcenter Simsolid",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "26b9b428-734a-3673-9a93-9617298f9a83",
        "product": {
         "name": "PADS Pro Student Edition",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "285bdb58-1022-3b01-805d-59afe48f7076",
+       "product": {
+        "name": "HPCWorks Insight Pro",
         "vendor": {
          "name": "Siemens"
         }
@@ -10511,9 +10691,135 @@
        }
       },
       {
+       "id": "2f78ffa3-e7be-35fd-b200-2660fc3399ed",
+       "product": {
+        "name": "Simcenter EDEM",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "31784b17-6839-35b3-b2aa-d919c8d835ee",
+       "product": {
+        "name": "Rapidminer AI Studio",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "34215e15-3595-31d7-8cd2-3197b8c60a1b",
+       "product": {
+        "name": "HPCWorks Mistral",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "34bc0d19-511d-3c5b-959f-1354d193ac23",
+       "product": {
+        "name": "Rapidminer AI Hub",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "34c59b66-9328-3727-ab3c-968ad841b3b4",
+       "product": {
+        "name": "Rapidminer Graph Studio",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "39135d7d-d5ad-3249-b278-b3b15f61ed57",
+       "product": {
+        "name": "Rapidminer Monarch Data Prep Studio",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "39e736a7-3fc2-350a-8ad3-95892d713a4d",
+       "product": {
+        "name": "Simcenter MAGNET",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "3b63a630-d3e4-344f-83cf-fdcc2830e07e",
+       "product": {
+        "name": "Simcenter Electroflo",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "3b782baa-2745-3a21-a1d9-26d81195c522",
+       "product": {
+        "name": "Simcenter Part Manager",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "3cf8f380-7c92-3f2e-9328-50b09d0ab7f6",
+       "product": {
+        "name": "Simcenter SPEED",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "3db26203-4362-34cd-a45a-91f85c344390",
        "product": {
         "name": "PADS Professional",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "3e79dd23-7ad7-3767-9ca4-cbd4ea209c53",
+       "product": {
+        "name": "Simcenter Tire",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "3fa0b2ce-6e98-3fe2-9ae4-08afa0c69d40",
+       "product": {
+        "name": "Simcenter STAR-CCM+",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "47076e0b-e1dd-3800-97f8-f09002345f3d",
+       "product": {
+        "name": "HPCWorks Breeze",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "4870a9b4-b280-3988-a121-81d129c2bb8a",
+       "product": {
+        "name": "Simcenter Executable Digital Twin",
         "vendor": {
          "name": "Siemens"
         }
@@ -10529,9 +10835,162 @@
        }
       },
       {
+       "id": "492fd390-2b15-3cbe-873a-9e108a377796",
+       "product": {
+        "name": "Simcenter Weight Analytics",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "498a199a-4fa6-3474-a7f8-9de3d1046ed2",
+       "product": {
+        "name": "Simcenter System Simulation Client for Git V2021",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "4a21425c-4661-3b84-8bc6-e135b2bc21dd",
+       "product": {
+        "name": "Simcenter Nanofluid",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "4c731572-b840-3444-9a3a-5d26bb2d4dff",
+       "product": {
+        "name": "Panopticon Streams",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "4e4b7ce7-aba0-38c4-9588-455068a49586",
+       "product": {
+        "name": "Rapidminer Knowledge Seeker",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "4f82e3e5-ab4d-314c-8e1b-4eb691a044cc",
+       "product": {
+        "name": "HPCWorks PBS Professional",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "4f9ab650-1361-36dc-be4b-f884cb22d16c",
        "product": {
         "name": "Opcenter Execution Foundation",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "55d1f44b-b5b7-3945-b699-1e328019a19b",
+       "product": {
+        "name": "HPCWorks Monitor",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "56d092d5-a07c-3e03-91a8-ea3004c452e8",
+       "product": {
+        "name": "Simcenter Geomechanics",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "58013506-b92f-3995-b6e4-40949eb33734",
+       "product": {
+        "name": "Simcenter System Architect",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "5854a611-c80b-3d18-91fc-c6655ad22764",
+       "product": {
+        "name": "Simcenter OmniV",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "58b2a6a3-7958-3edc-96dd-cd7230381454",
+       "product": {
+        "name": "Simcenter Feko",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "5e356c73-b593-39f9-b62e-65279b0850c1",
+       "product": {
+        "name": "EDEM BulkSim",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "5fb449c5-8e22-3616-8d6f-fd0c954ee6b0",
+       "product": {
+        "name": "Simcenter PSIM",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "60f918c1-c925-3ab2-bfad-eaed949b7b3f",
+       "product": {
+        "name": "Simcenter Flotherm (XT)",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "62fe21c5-24ee-3fae-bd2d-eac6cfc69841",
+       "product": {
+        "name": "Simcenter Maintenance Aware Design Ecosystem",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "649e3ac6-07e7-35a5-bf7d-c20132b87262",
+       "product": {
+        "name": "HPCWorks Hero",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "6bf49ba6-7144-3d15-8532-a3fda479cea0",
+       "product": {
+        "name": "Simcenter Radioss",
         "vendor": {
          "name": "Siemens"
         }
@@ -10550,6 +11009,33 @@
        "id": "6f7acf14-6f38-367e-8c05-aa37b80dce99",
        "product": {
         "name": "Teamcenter Visualization",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "7150aefc-7a57-3eef-8f6e-8f8244b9e1f6",
+       "product": {
+        "name": "HPCWorks Access",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "717aedac-ead5-3917-bf8e-45ce8a728734",
+       "product": {
+        "name": "Simcenter STAR-CCM+ Viewer",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "719412f3-92bc-31c7-83cd-29a9b6fb582e",
+       "product": {
+        "name": "Simcenter X Mechanical",
         "vendor": {
          "name": "Siemens"
         }
@@ -10583,6 +11069,51 @@
        }
       },
       {
+       "id": "76348a0d-7a3a-3046-a188-4c0d1d702019",
+       "product": {
+        "name": "Simcenter Hypermesh NVH",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "768e9f2a-fae2-3675-b8ee-101d229a034f",
+       "product": {
+        "name": "Thea Render",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "7714e4d7-76ac-3767-bd3c-0316a5e92374",
+       "product": {
+        "name": "HPCWorks Accelerator Plus",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "791ba700-be5a-3bb5-8425-ae53faf38e9e",
+       "product": {
+        "name": "Simcenter Femap",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "7bb6914c-4b18-345c-b11f-c8748fc9eccd",
+       "product": {
+        "name": "Simcenter Material Modeler",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "7d2dc217-ed6c-37c1-9342-1f2a23cec7ed",
        "product": {
         "name": "Opcenter Execution Pharma",
@@ -10595,6 +11126,15 @@
        "id": "7d62385d-9795-3ffb-b792-1063cd30a195",
        "product": {
         "name": "Simcenter Simlab",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "803e5b7a-a724-3ac8-8f51-c83c0cf870ef",
+       "product": {
+        "name": "Simcenter E-Motor Director",
         "vendor": {
          "name": "Siemens"
         }
@@ -10619,9 +11159,99 @@
        }
       },
       {
+       "id": "8343f247-ab80-360c-87d6-662ebdc33266",
+       "product": {
+        "name": "Simcenter Inspire",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "8af370d0-0fbd-379f-92d7-ddd6be780fb6",
+       "product": {
+        "name": "Simcenter Battery Damage Identifier",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "8c4fb310-0064-3d87-b5f5-c7c0cb7a20b2",
        "product": {
         "name": "Opcenter Intelligence",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "8f28085e-936b-3659-843f-87d2fc63012f",
+       "product": {
+        "name": "Simcenter CostAI",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "90bc0a93-355a-3066-8588-468a4fe0b3b5",
+       "product": {
+        "name": "Simcenter 3D",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "937c898a-26ea-36e5-b7e0-db5d56efcfbc",
+       "product": {
+        "name": "Simcenter Hypermesh CFD",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "950fd782-7dff-3cbe-a360-daf1b7028b8f",
+       "product": {
+        "name": "HPCWorks Navops",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "9646aae0-e2df-3ddd-8f86-93d4bf096ab8",
+       "product": {
+        "name": "Simcenter Zona",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "981951d1-5b1c-3003-84f5-cdaffe56d7b7",
+       "product": {
+        "name": "Simcenter Testlab",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "9a1cd1b3-b891-303e-8d07-83a8e7a33acb",
+       "product": {
+        "name": "Simcenter Flightstream",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "9b7f7430-2301-3e27-899c-28d2d3fd6fe0",
+       "product": {
+        "name": "Knowledge Studio for Apache Spark",
         "vendor": {
          "name": "Siemens"
         }
@@ -10637,6 +11267,15 @@
        }
       },
       {
+       "id": "a2b1ff60-cac2-39d0-aaf5-91068d5309bf",
+       "product": {
+        "name": "HPCWorks Allocator",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "a7737f43-26c7-3907-b9c3-1176d08f041f",
        "product": {
         "name": "CADRA",
@@ -10646,9 +11285,54 @@
        }
       },
       {
+       "id": "a806dcb9-1a57-35f0-b9f0-d9520b815aeb",
+       "product": {
+        "name": "Simcenter E-Machine Design",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "a87954c2-f7ad-32b5-8dea-d9ea5a98b893",
+       "product": {
+        "name": "Simcenter Flow Simulator",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "a9152cd9-6fe9-3117-8df7-c4a71fc2599f",
        "product": {
         "name": "Opcenter Intra Plant Logistics",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "aad444b8-2dd6-3f8a-baab-93bbf898a0f2",
+       "product": {
+        "name": "Simcenter Battery Design Studio",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "b2d915f9-b27c-3e52-95df-6bbcaf315575",
+       "product": {
+        "name": "Simcenter SPH Flow",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "b382f575-ba31-36b2-bc17-d7de1737a8fd",
+       "product": {
+        "name": "Simcenter Optistruct",
         "vendor": {
          "name": "Siemens"
         }
@@ -10673,6 +11357,24 @@
        }
       },
       {
+       "id": "b7c417fe-4985-37b1-a2c9-676244ebf3db",
+       "product": {
+        "name": "Rapidminer Panopticon",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "b801ff4c-b727-3c0c-b861-b4eb8c9937c6",
+       "product": {
+        "name": "Rapidminer Knowledge Studio",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "b83bdbf8-b219-363b-955a-435e67193b8b",
        "product": {
         "name": "AX4",
@@ -10691,9 +11393,63 @@
        }
       },
       {
+       "id": "b8869439-da56-3e11-97bf-2118bf82febe",
+       "product": {
+        "name": "Rapidminer AI Cloud",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "b90db6c6-9609-3412-be78-1bc658f9ec27",
        "product": {
         "name": "Opcenter Quality",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "b94ffe86-92c9-38c2-a617-0a450349ad8c",
+       "product": {
+        "name": "HPCWorks Insight Pro for License Analytics",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "bc288b2d-01e8-325a-9769-e6599946ca5c",
+       "product": {
+        "name": "Simcenter Hypermesh",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "bfcb0b8e-2a79-3f2e-9020-c3d14bff13dc",
+       "product": {
+        "name": "Simcenter PhysicsAI Studio",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "c4e6e416-7f60-3768-9cdf-32ab65d27c59",
+       "product": {
+        "name": "HPCWorks Accelerator",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "c536b25b-f1cf-3de9-8a80-fcc2edbbd729",
+       "product": {
+        "name": "Simcenter Simulation Cloud Suite",
         "vendor": {
          "name": "Siemens"
         }
@@ -10718,9 +11474,117 @@
        }
       },
       {
+       "id": "c7d3a5b2-c7e1-3ce8-998e-062973e1c810",
+       "product": {
+        "name": "Simcenter Testlab Data Management",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "cbaa43d4-7c91-328d-84f4-a3f155a4e9c9",
+       "product": {
+        "name": "Simcenter Hyperstudy",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "cc6ac300-a6cf-3d92-8263-9ed804cf1c76",
+       "product": {
+        "name": "Simcenter System Analyst",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "cf06fd40-e018-3ae7-88a6-01dfc1a36a76",
+       "product": {
+        "name": "HPCWorks Asset Optimization",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "cf8de197-2381-36de-898a-eb6c292dc596",
        "product": {
         "name": "PADS Pro Essentials",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "d0f5db5c-ac7b-36fc-a6e9-a1a70faebbd9",
+       "product": {
+        "name": "Simcenter Twin Activate",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "d3b9de79-f1ca-34b3-92b1-bc9040ab4b8c",
+       "product": {
+        "name": "Simcenter PhysicsAI",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "d69f4692-a407-3d6d-a05d-e2fee284aa82",
+       "product": {
+        "name": "Simcenter Unified Design Environment (UDE)",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "d7a8dadd-e90b-36c4-8aaf-28b4fb6e6b7e",
+       "product": {
+        "name": "Simcenter Hypergraph",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "d9823575-c364-3d53-9cef-3d0c5247f653",
+       "product": {
+        "name": "Simcenter System Simulation Client for Git",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "da099f2b-7f73-3acf-8b59-a5ee2d1c12f8",
+       "product": {
+        "name": "Simcenter Ultrafluid",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "db8aeed7-076c-399e-af85-b716f949522e",
+       "product": {
+        "name": "Rapidminer Monarch Classic / Server",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "dd248237-87c5-3578-a87e-6643abcb7e03",
+       "product": {
+        "name": "HPCWorks Control",
         "vendor": {
          "name": "Siemens"
         }
@@ -10745,9 +11609,36 @@
        }
       },
       {
+       "id": "e06b5a4e-b3b2-35de-90e1-c97fa4cbd895",
+       "product": {
+        "name": "HPCWorks Grid Engine",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "e1f8d5c3-0089-37b0-b7f4-2385983702e7",
+       "product": {
+        "name": "Simcenter Flotherm",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "e4adcb10-dec5-30e8-bc38-87325b1d60fe",
        "product": {
         "name": "Opcenter Execution Discrete",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "e4fcfba8-718b-3a2e-9e2e-574697808b67",
+       "product": {
+        "name": "Simcenter Culgi",
         "vendor": {
          "name": "Siemens"
         }
@@ -10763,9 +11654,54 @@
        }
       },
       {
+       "id": "e9f7bea2-8f96-38bc-8ca7-3da8e81278bd",
+       "product": {
+        "name": "HPCWorks Desktop Usage Analytics",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "ec127a67-1141-323e-8973-db6a1eed7996",
        "product": {
         "name": "Tecnomatix Plant Simulation",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "ec8e9711-ed45-3ae1-b1dd-c97aa5f8caa2",
+       "product": {
+        "name": "HPCWorks Flowtracer",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "ed471e46-6397-3cdb-acec-a80530b3b2c8",
+       "product": {
+        "name": "Simcenter Pulse Studio",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "ef8cf9f6-2b88-3690-83c9-32fa24d5a77b",
+       "product": {
+        "name": "Simcenter Reduced Order Modeling",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "f0a8d3c2-0b8f-3315-824e-0e8d213a96e7",
+       "product": {
+        "name": "Simcenter Madymo",
         "vendor": {
          "name": "Siemens"
         }
@@ -10799,9 +11735,63 @@
        }
       },
       {
+       "id": "f25ae9fc-7b83-3138-aead-99026d8571b3",
+       "product": {
+        "name": "Simcenter Fluxmotor",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "f539e221-4903-3ab8-bf6b-56585c3ce3df",
+       "product": {
+        "name": "Simcenter RomAI",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "f815ba9e-6a9c-3c8c-aa67-7adf68cc89d3",
+       "product": {
+        "name": "Simcenter Material Data Center",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "f850da3e-afc0-3428-a312-00daca4d171e",
+       "product": {
+        "name": "Simcenter Inspire Mfg",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "f96605db-ecf8-3231-87d9-9a75e71e6074",
+       "product": {
+        "name": "Simcenter Multi-Disciplinary Optimization Director",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
        "id": "f9e12fb0-f374-3869-8318-d0de9f5dae07",
        "product": {
         "name": "Opcenter X",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "fafe95da-4eef-3a65-aed5-c811b00610a3",
+       "product": {
+        "name": "Simcenter Quality Management",
         "vendor": {
          "name": "Siemens"
         }
@@ -10815,12 +11805,30 @@
          "name": "Siemens"
         }
        }
+      },
+      {
+       "id": "fc21e0b8-a96d-366d-8da6-49737aa5b07d",
+       "product": {
+        "name": "Simcenter Embed",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
+      },
+      {
+       "id": "fccd598e-bbe1-3863-817c-8aa1fe625e10",
+       "product": {
+        "name": "Simcenter HEEDS",
+        "vendor": {
+         "name": "Siemens"
+        }
+       }
       }
      ],
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 12:00:00 AM",
+     "dateUpdated": "Nov 20, 2026, 12:00:00 AM",
      "description": "SSA-566435: PHP2Shell Vulnerabilities in Siemens Software Products",
      "id": "SSA-566435",
      "references": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html\nhttps://cert-portal.siemens.com/productcert/csaf/ssa-566435.json\n",
@@ -12657,7 +13665,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Nov 11, 2026, 1:45:49 PM",
-     "dateUpdated": "Nov 19, 2026, 6:03:42 PM",
+     "dateUpdated": "Nov 22, 2026, 6:31:32 AM",
      "description": "Red Hat Security Advisory: php8.4 security update",
      "id": "RHSA-2026:98609",
      "references": "https://access.redhat.com/errata/RHSA-2026:98609\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_98609.json\n",
@@ -14503,7 +15511,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:11:09 PM",
-     "dateUpdated": "Nov 11, 2026, 7:11:01 PM",
+     "dateUpdated": "Nov 19, 2026, 6:02:23 PM",
      "description": "Red Hat Security Advisory: php security update",
      "id": "RHSA-2026:87070",
      "references": "https://access.redhat.com/errata/RHSA-2026:87070\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87070.json\n",
@@ -16421,7 +17429,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 4:57:23 PM",
-     "dateUpdated": "Nov 18, 2026, 10:44:55 AM",
+     "dateUpdated": "Nov 20, 2026, 10:26:47 AM",
      "description": "Security update for php8",
      "id": "SUSE-SU-2026:24271-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/suse-su-2026_24271-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624271-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -19033,7 +20041,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 24, 2026, 12:57:37 PM",
-     "dateUpdated": "Nov 18, 2026, 10:41:58 AM",
+     "dateUpdated": "Nov 20, 2026, 10:23:40 AM",
      "description": "security update for php",
      "id": "ESSA-2026:0206",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/essa-2026_0206.json\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008398.html\nhttps://lists.suse.com/pipermail/suse-liberty-linux-updates/2026-October/008398.html\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -26237,7 +27245,7 @@
      "aliases": "CVE-2025-1218\nCVE-2025-14181\nCVE-2026-6103\nCVE-2026-91765\nCVE-2026-91766\nCVE-2026-91767\nCVE-2026-91768\nCVE-2026-91769\nCVE-2026-92842\nCVE-2026-93682\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 3:53:19 PM",
-     "dateUpdated": "Nov 11, 2026, 7:11:02 PM",
+     "dateUpdated": "Nov 19, 2026, 6:02:25 PM",
      "description": "Red Hat Security Advisory: php:7.4 security update",
      "id": "RHSA-2026:87080",
      "references": "https://access.redhat.com/errata/RHSA-2026:87080\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87080.json\n",
@@ -28677,7 +29685,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 3:44:40 PM",
-     "dateUpdated": "Nov 18, 2026, 10:45:43 AM",
+     "dateUpdated": "Nov 20, 2026, 10:28:08 AM",
      "description": "Security update for php8",
      "id": "SUSE-SU-2026:4843-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/suse-su-2026_4843-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -31082,7 +32090,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:10:03 PM",
-     "dateUpdated": "Nov 11, 2026, 7:11:01 PM",
+     "dateUpdated": "Nov 19, 2026, 6:02:23 PM",
      "description": "Red Hat Security Advisory: php8.4 security update",
      "id": "RHSA-2026:87071",
      "references": "https://access.redhat.com/errata/RHSA-2026:87071\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87071.json\n",
@@ -33441,7 +34449,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:35:47 PM",
-     "dateUpdated": "Nov 11, 2026, 7:11:03 PM",
+     "dateUpdated": "Nov 19, 2026, 6:02:23 PM",
      "description": "Red Hat Security Advisory: php:8.2 security update",
      "id": "RHSA-2026:87072",
      "references": "https://access.redhat.com/errata/RHSA-2026:87072\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87072.json\n",
@@ -42393,7 +43401,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 22, 2026, 4:03:33 PM",
-     "dateUpdated": "Nov 18, 2026, 10:45:50 AM",
+     "dateUpdated": "Nov 20, 2026, 10:28:18 AM",
      "description": "Security update for php74",
      "id": "SUSE-SU-2026:4870-1",
      "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/suse-su-2026_4870-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-20264870-1/\nhttps://bugzilla.suse.com/1286027\nhttps://www.suse.com/security/cve/CVE-2026-109618/\nhttps://www.suse.com/security/cve/CVE-2026-109619/\n",
@@ -42493,10 +43501,10 @@
      "aliases": "CVE-2026-109618\n",
      "baseScore": 0.0,
      "datePublished": "Oct 22, 2026, 12:00:00 AM",
-     "dateUpdated": "Nov 4, 2026, 9:56:53 PM",
+     "dateUpdated": "Nov 20, 2026, 10:30:04 AM",
      "description": "matomo-5.14.2-1.1 on GA media",
      "id": "openSUSE-SU-2026:12228-1",
-     "references": "https://ftp.suse.com/pub/projects/security/csaf/opensuse-su-2026_12228-1.json\nhttps://www.suse.com/security/cve/CVE-2026-109618/\n",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_12228-1.json\nhttps://www.suse.com/security/cve/CVE-2026-109618/\n",
      "source": {
       "id": 21,
       "name": "csaf_opensuse"
@@ -45033,7 +46041,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:36:00 PM",
-     "dateUpdated": "Nov 11, 2026, 7:11:02 PM",
+     "dateUpdated": "Nov 19, 2026, 6:02:24 PM",
      "description": "Red Hat Security Advisory: php:8.3 security update",
      "id": "RHSA-2026:87079",
      "references": "https://access.redhat.com/errata/RHSA-2026:87079\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87079.json\n",
@@ -45646,7 +46654,7 @@
      "aliases": "CVE-2023-54404\nCVE-2025-62718\nCVE-2026-8643\nCVE-2026-9496\nCVE-2026-12185\nCVE-2026-13697\nCVE-2026-14682\nCVE-2026-15076\nCVE-2026-16308\nCVE-2026-17106\nCVE-2026-18427\nCVE-2026-19203\nCVE-2026-19534\nCVE-2026-39820\nCVE-2026-41178\nCVE-2026-41707\nCVE-2026-42499\nCVE-2026-42502\nCVE-2026-45416\nCVE-2026-47884\nCVE-2026-47886\nCVE-2026-47888\nCVE-2026-47890\nCVE-2026-47892\nCVE-2026-50010\nCVE-2026-55831\nCVE-2026-55833\nCVE-2026-55851\nCVE-2026-56745\nCVE-2026-56746\nCVE-2026-56819\nCVE-2026-56852\nCVE-2026-56854\nCVE-2026-58062\nCVE-2026-59280\nCVE-2026-59282\nCVE-2026-59283\nCVE-2026-59296\nCVE-2026-59313\nCVE-2026-59323\nCVE-2026-59651\nCVE-2026-59887\nCVE-2026-59899\nCVE-2026-59901\nCVE-2026-62243\nCVE-2026-64607\nCVE-2026-67213\nCVE-2026-67312\nCVE-2026-67313\nCVE-2026-67314\nCVE-2026-67320\nCVE-2026-67321\nCVE-2026-68494\nCVE-2026-68497\nCVE-2026-69152\nCVE-2026-69192\nCVE-2026-71290\nCVE-2026-71324\nCVE-2026-71325\nCVE-2026-71327\nCVE-2026-73500\nCVE-2026-73508\nCVE-2026-74835\nCVE-2026-75838\nCVE-2026-75899\nCVE-2026-75931\nCVE-2026-76169\nCVE-2026-81521\nCVE-2026-82417\nCVE-2026-82562\nCVE-2026-84292\nCVE-2026-84375\nCVE-2026-84394\nCVE-2026-84428\nCVE-2026-84445\nCVE-2026-84469\nCVE-2026-84504\nCVE-2026-84961\nCVE-2026-85062\nCVE-2026-85124\nCVE-2026-85152\nCVE-2026-85595\nCVE-2026-85597\nCVE-2026-86063\nCVE-2026-87743\nCVE-2026-88004\nCVE-2026-88007\nCVE-2026-88008\nCVE-2026-88009\nCVE-2026-88011\nCVE-2026-88012\nCVE-2026-88031\nCVE-2026-88878\nCVE-2026-88879\nCVE-2026-90711\nCVE-2026-93749\nCVE-2026-100655\nCVE-2026-100656\nCVE-2026-100666\nCVE-2026-101916\nCVE-2026-102925\nCVE-2026-102930\nCVE-2026-103435\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 26, 2026, 2:24:21 PM",
-     "dateUpdated": "Nov 19, 2026, 9:45:17 PM",
+     "dateUpdated": "Nov 22, 2026, 12:13:46 AM",
      "description": "Red Hat Security Advisory: Red Hat OpenShift Dev Spaces 3.31.0 Release.",
      "id": "RHSA-2026:90321",
      "references": "https://access.redhat.com/errata/RHSA-2026:90321\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_90321.json\n",
@@ -48248,7 +49256,7 @@
      "aliases": "CVE-2026-91765\nCVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 8:30:32 PM",
-     "dateUpdated": "Nov 11, 2026, 7:11:03 PM",
+     "dateUpdated": "Nov 19, 2026, 6:02:24 PM",
      "description": "Red Hat Security Advisory: php:8.2 security update",
      "id": "RHSA-2026:87073",
      "references": "https://access.redhat.com/errata/RHSA-2026:87073\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_87073.json\n",
@@ -51959,7 +52967,7 @@
      "aliases": "CVE-2026-109618\nCVE-2026-109619\n",
      "baseScore": 0.0,
      "datePublished": "Oct 20, 2026, 10:00:00 PM",
-     "dateUpdated": "Nov 17, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 22, 2026, 11:00:00 PM",
      "description": "PHP: Mehrere Schwachstellen ermöglichen Codeausführung",
      "id": "WID-SEC-W-2026-4055",
      "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4055.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4055\n",
@@ -52030,9 +53038,9 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 21, 2026, 6:00:19 AM",
+     "dataProcessed": "Nov 25, 2026, 6:00:33 AM",
      "datePublished": "Oct 21, 2026, 1:48:34 PM",
-     "dateUpdated": "Nov 20, 2026, 11:19:17 AM",
+     "dateUpdated": "Nov 24, 2026, 11:35:44 AM",
      "description": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
      "enisa_id": "EUVD-2026-107260\n",
      "epss": 100.0,
@@ -52347,6 +53355,19 @@
         "lessThan": "*",
         "status": "unaffected",
         "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "CP61850 (6DD7050-0AA80)",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "V3.5.4",
         "versionType": "custom"
        }
       ]
@@ -56865,6 +57886,89 @@
       "operator": "OR"
      }
     ]
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:siemens:cp61850_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "1A68C003-4BFB-4953-B766-964BE13C5024",
+        "versionStartIncluding": "3.5.4",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:siemens:cp61850:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "E59753FB-3DAA-4BC4-B5E7-F995F69C04FB",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:siemens:wtv676-hb6035_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A9BBED45-5503-4142-81B6-048216EA690D",
+        "versionEndExcluding": "6.9.22-3.4",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:siemens:wtv676-hb6035:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D4C97C3A-DEE5-462F-95FB-7FFC9F5A315D",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   },
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:siemens:wtv776-hb6035_firmware:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "2F5A6D6C-34C4-4821-ABEE-89BAF5D3675C",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:siemens:wtv776-hb6035:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "9F465F00-EC9B-4C7C-A0C3-983F4E671336",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
    }
   ],
   "cveTags": [],
@@ -56879,7 +57983,7 @@
    }
   ],
   "id": "CVE-2026-109618",
-  "lastModified": "2026-11-20T12:18:18.987",
+  "lastModified": "2026-11-24T14:27:42.290",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -57037,6 +58141,13 @@
      "Third Party Advisory"
     ],
     "url": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html"
+   },
+   {
+    "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://cert-portal.siemens.com/productcert/html/ssa-862892.html"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",

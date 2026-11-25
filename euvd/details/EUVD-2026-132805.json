@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Nov 22, 2026, 7:10:45 PM",
-  "dateUpdated": "Nov 23, 2026, 9:58:57 PM",
+  "dateUpdated": "Nov 24, 2026, 2:44:15 PM",
   "description": "N-able MailAssure (SpamExperts) before 20261121.1943 does not restrict the destination of the LDAP synchronisation connection check performed when a relay is configured. An authenticated API user can cause the server to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -57,9 +57,9 @@
     "vulnerability": {
      "aliases": "CVE-2026-134624\nGHSA-g4r8-gwqr-j289\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 24, 2026, 6:01:11 AM",
+     "dataProcessed": "Nov 25, 2026, 6:02:10 AM",
      "datePublished": "Nov 22, 2026, 9:30:18 PM",
-     "dateUpdated": "Nov 23, 2026, 9:31:41 PM",
+     "dateUpdated": "Nov 24, 2026, 3:31:29 PM",
      "description": "N-able MailAssure (SpamExperts) before 20261121.1943 does not restrict the destination of the LDAP synchronisation connection check performed when a relay is configured. An authenticated API user can cause the server to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
      "enisa_id": "EUVD-2026-132805\n",
      "epss": 0.0,
@@ -76,12 +76,12 @@
      "baseScore": 9.3,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 24, 2026, 6:00:33 AM",
+     "dataProcessed": "Nov 25, 2026, 6:00:32 AM",
      "datePublished": "Nov 22, 2026, 7:10:45 PM",
-     "dateUpdated": "Nov 23, 2026, 9:58:57 PM",
+     "dateUpdated": "Nov 24, 2026, 2:44:15 PM",
      "description": "N-able MailAssure (SpamExperts) before 20261121.1943 does not restrict the destination of the LDAP synchronisation connection check performed when a relay is configured. An authenticated API user can cause the server to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
      "enisa_id": "EUVD-2026-132805\n",
-     "epss": 0.0,
+     "epss": 0.35,
      "exploitedSince": "Nov 23, 2026, 12:00:00 AM",
      "id": "CVE-2026-134624",
      "references": "https://me.n-able.com/s/security-advisory/aArVy0000002mrlKAA\n",
@@ -110,7 +110,7 @@
    }
   ],
   "enisaUuid": "cfe63977-adf0-370b-8bbb-b5c3f8ce18f4",
-  "epss": 0.0,
+  "epss": 0.35,
   "exploitedSince": "Nov 23, 2026, 12:00:00 AM",
   "id": "EUVD-2026-132805",
   "references": "https://me.n-able.com/s/security-advisory/aArVy0000002mrlKAA\n"
@@ -148,6 +148,24 @@
   "cisaExploitAdd": "2026-11-23",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:n-able:mail_assure:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "CF4AD6ED-2C11-484D-AF62-6ED2C95F026D",
+        "versionEndExcluding": "20261121.1943",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
   "cveTags": [],
   "descriptions": [
    {
@@ -156,8 +174,30 @@
    }
   ],
   "id": "CVE-2026-134624",
-  "lastModified": "2026-11-23T21:17:00.677",
+  "lastModified": "2026-11-24T15:17:22.057",
   "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 8.7,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "HIGH",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.3,
+     "impactScore": 5.8,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
    "cvssMetricV40": [
     {
      "cvssData": {
@@ -219,7 +259,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-23T20:42:12.465162Z",
+      "timestamp": "2026-11-24T04:55:22.187673Z",
       "version": "2.0.3"
      }
     }
@@ -229,15 +269,21 @@
   "references": [
    {
     "source": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
+    "tags": [
+     "Vendor Advisory"
+    ],
     "url": "https://me.n-able.com/s/security-advisory/aArVy0000002mrlKAA"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-134624"
    }
   ],
   "sourceIdentifier": "a5532a13-c4dd-4202-bef1-e0b8f2f8d12b",
-  "vulnStatus": "Received",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [

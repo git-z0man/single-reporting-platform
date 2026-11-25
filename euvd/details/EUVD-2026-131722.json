@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 20, 2026, 6:31:38 PM",
-  "dateUpdated": "Nov 23, 2026, 9:59:27 PM",
+  "dateUpdated": "Nov 24, 2026, 2:43:54 PM",
   "description": "monailabel (aka MONAI Label) before 0.8.6 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -57,7 +57,7 @@
     "vulnerability": {
      "aliases": "GHSA-2f43-rwqm-6h67\nCVE-2026-133968\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 24, 2026, 6:01:11 AM",
+     "dataProcessed": "Nov 25, 2026, 6:02:10 AM",
      "datePublished": "Nov 20, 2026, 9:31:50 PM",
      "dateUpdated": "Nov 23, 2026, 9:31:38 PM",
      "description": "monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026.",
@@ -76,12 +76,12 @@
      "baseScore": 9.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 24, 2026, 6:00:33 AM",
+     "dataProcessed": "Nov 25, 2026, 6:00:32 AM",
      "datePublished": "Nov 20, 2026, 6:31:38 PM",
-     "dateUpdated": "Nov 23, 2026, 9:59:27 PM",
+     "dateUpdated": "Nov 24, 2026, 2:43:54 PM",
      "description": "monailabel (aka MONAI Label) before 0.8.6 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026.",
      "enisa_id": "EUVD-2026-131722\n",
-     "epss": 3.76,
+     "epss": 3.66,
      "exploitedSince": "Nov 23, 2026, 12:00:00 AM",
      "id": "CVE-2026-133968",
      "references": "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94\nhttps://github.com/Project-MONAI/MONAILabel/releases/tag/0.8.6\nhttps://github.com/Project-MONAI/MONAILabel/pull/1915\nhttps://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382\n",
@@ -110,7 +110,7 @@
    }
   ],
   "enisaUuid": "f5317113-b42e-392d-8c7c-3211de3dac1a",
-  "epss": 3.76,
+  "epss": 3.66,
   "exploitedSince": "Nov 23, 2026, 12:00:00 AM",
   "id": "EUVD-2026-131722",
   "references": "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94\nhttps://github.com/Project-MONAI/MONAILabel/releases/tag/0.8.6\nhttps://github.com/Project-MONAI/MONAILabel/pull/1915\nhttps://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382\n"
@@ -149,6 +149,24 @@
   "cisaExploitAdd": "2026-11-23",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "Project MONAI MONAI Label Path Traversal Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:monai:monai_label:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A5A8BB89-6FC4-4706-BD2A-A70E32FBE96F",
+        "versionEndExcluding": "0.8.6",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
   "cveTags": [],
   "descriptions": [
    {
@@ -157,7 +175,7 @@
    }
   ],
   "id": "CVE-2026-133968",
-  "lastModified": "2026-11-23T21:16:58.763",
+  "lastModified": "2026-11-24T15:17:20.847",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -198,7 +216,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-23T20:42:05.606837Z",
+      "timestamp": "2026-11-24T04:55:23.445323Z",
       "version": "2.0.3"
      }
     }
@@ -208,31 +226,50 @@
   "references": [
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Issue Tracking",
+     "Patch"
+    ],
     "url": "https://github.com/Project-MONAI/MONAILabel/pull/1915"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Release Notes"
+    ],
     "url": "https://github.com/Project-MONAI/MONAILabel/releases/tag/0.8.6"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Vendor Advisory"
+    ],
     "url": "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94"
    },
    {
     "source": "cve@mitre.org",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382"
    },
    {
     "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
     "url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/"
    },
    {
     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-133968"
    }
   ],
   "sourceIdentifier": "cve@mitre.org",
-  "vulnStatus": "Received",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [

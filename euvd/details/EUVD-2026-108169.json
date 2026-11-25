@@ -29,7 +29,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Oct 22, 2026, 1:35:41 PM",
-  "dateUpdated": "Nov 18, 2026, 6:32:29 PM",
+  "dateUpdated": "Nov 24, 2026, 2:26:40 PM",
   "description": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
   "enisaIdAdvisory": [
    {
@@ -283,7 +283,7 @@
      "aliases": "CVE-2025-8869\nCVE-2025-13327\nCVE-2025-69418\nCVE-2026-1703\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114406\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:55:30 AM",
-     "dateUpdated": "Nov 18, 2026, 8:12:14 PM",
+     "dateUpdated": "Nov 20, 2026, 12:29:55 PM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (CPU)",
      "id": "RHSA-2026:94459",
      "references": "https://access.redhat.com/errata/RHSA-2026:94459\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94459.json\n",
@@ -2003,7 +2003,7 @@
      "aliases": "CVE-2026-34182\nCVE-2026-43114\nCVE-2026-45445\nCVE-2026-59995\nCVE-2026-59999\nCVE-2026-60002\nCVE-2026-64564\nCVE-2026-68121\nCVE-2026-80792\nCVE-2026-80863\nCVE-2026-80864\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-98432\nCVE-2026-99999\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114406\n",
      "baseScore": 0.0,
      "datePublished": "Nov 11, 2026, 1:47:16 AM",
-     "dateUpdated": "Nov 19, 2026, 3:19:14 AM",
+     "dateUpdated": "Nov 24, 2026, 4:14:52 AM",
      "description": "Red Hat Security Advisory: OpenShift Container Platform 4.17.60 bug fix and security update",
      "id": "RHSA-2026:96282",
      "references": "https://access.redhat.com/errata/RHSA-2026:96282\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_96282.json\n",
@@ -2391,7 +2391,7 @@
      "aliases": "CVE-2026-87018\nCVE-2026-102276\nCVE-2026-102278\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-109383\nCVE-2026-109829\nCVE-2026-109869\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 11, 2026, 12:27:24 PM",
-     "dateUpdated": "Nov 19, 2026, 3:42:59 AM",
+     "dateUpdated": "Nov 23, 2026, 9:43:31 AM",
      "description": "Red Hat Security Advisory: nodejs:26 security, bug fix, and enhancement update",
      "id": "RHSA-2026:98522",
      "references": "https://access.redhat.com/errata/RHSA-2026:98522\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_98522.json\n",
@@ -2593,6 +2593,1879 @@
      "summary": "An update is now available for Red Hat Ansible Automation Platform 2.6\n\nRed Hat Product Security has rated this update as having a security impact\nof Important. A Common Vulnerability Scoring System (CVSS) base score,\nwhich gives a detailed severity rating, is available for each vulnerability\nfrom the CVE link(s) in the References section."
     },
     "id": "21c338ad-ac8a-38de-83f5-ef933cae9725"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "00085625-adeb-3181-8f5a-b3c08e00838f",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-mlmd-grpc-server-rhel9@sha256:dfd8482c6eb76e5331334a43bc3b9a6a1d9ef30c5cb60a310438e3c82718aaaa_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "005789ab-722c-3364-907d-5416e2550145",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-rhel9-operator@sha256:006d2cb3d990feeee58745cb2aaa5fd6838cb99a11d7614dac9b4f36daaba850_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "029eb45b-132f-35b2-bed6-3620e4e93074",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ta-lmes-job-rhel9@sha256:a2e132287d2fb1eddc97023504915857bb5e7ec5d6294e7612ce341c7f80a8e7_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "02c0becd-d124-339e-a6ce-3c92e069d9dc",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-tensorflow-rocm-py312-rhel9@sha256:416289ba7b3d9bacfc3b9efb9769394e78d9c9e4586f0daefaf21265c5c03c2d_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "03184a59-839d-3d7b-8cfb-ba0c9dc12df8",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ta-lmes-job-rhel9@sha256:26584151694d6440a6ced66fb973320da466b7c7ae7f91604e30bcbd29d64ae1_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "03809efa-e012-3f94-b7d8-a79ef9f694e9",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-feature-server-rhel9@sha256:5f21be9b782d8eaeb066e157ba50d84dae3d6b84b1d717c05e297431305ddeb6_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0866af36-e095-30d4-8c38-202d1cee5f91",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-launcher-rhel9@sha256:fb6fb41193405f05d804e3bacef993c87329733dad1f4fa7b444af2ab206f0f8_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "08b9a00c-2f4a-363e-945d-1d34a9eb5ec5",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:5a57e82174e7199ceeca0740321d8a6a5f825bc527aca995224551830e8b907c_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "08c071a5-c68a-34fd-84bc-db77c512a22c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-llm-d-inference-scheduler-rhel9@sha256:28d3fb5d6b77cb518b6db5609bc3c9bb2d969382975ca8ca7042e81d61f87592_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0a1e6c2e-2da9-3a9f-963b-eaf5b70f534a",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-agent-rhel9@sha256:c6c6668b242bc344a10c99c90a439bb842a83d9230932b6d8be3389aaf2d0251_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0bdd5e4c-eb2a-3a9b-b937-9c8795fa00d5",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-minimal-cpu-py312-rhel9@sha256:aad845d8974b848ee6bce99886b9809681274435f9617218e8bb15ac2ff62982_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0c549fd1-b4fe-35cb-bc96-b0024461ee77",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-pytorch-cuda-py312-rhel9@sha256:2742e11a9e54fc428e3ceea1c6d774554fb7cd5fc8a1d3858735ca55799537fa_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0d4be556-402a-3242-8626-9c3ca0ecedb6",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-caikit-tgis-serving-rhel9@sha256:706dd7102aefb27b8b238e5e429ccad0e2019c698561204a737152123fb5c701_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0d7b05c3-67b7-3a46-8692-5ffdb31083b5",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-fms-guardrails-orchestrator-rhel9@sha256:07bb2044a77c9a2556aff2eb1d39c0e40846c42338a481757f7c11e224e09d8f_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0df39bdb-bb10-3d0c-8932-f1f7e6cc3315",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel9@sha256:a54914ba47ff65fd1bcd71124c0843759bbaaf7d4e860d99779936bb78aebe0b_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "0e6d5cd4-6ff7-3cb4-ada9-0271c01cd819",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-router-rhel9@sha256:3ab90d9be67f4415bea53b68438928af1dde24c35fc9ecec943b2e3a4e481af1_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "11096564-3b5e-3b77-a811-ef06e4f9f5ce",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:7b73a54c7b7d0f32db12cff3da524e6a1b798cec39880870189eeb727825131e_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "11a80bad-6652-3eb8-bcfb-10c0d4f73a5c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-built-in-detector-rhel9@sha256:9dddbf6881aea5e3f28b4f08d211ef024d828ec799803785e838713099029e1a_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "126a1063-9a64-34c3-af94-33e220579bfd",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-codeserver-datascience-cpu-py312-rhel9@sha256:253446245b1cfe89cb707721c8eef6342f917f810b89993864282e43dc81f90e_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "14352e5a-c3d1-3fd0-903e-9ebe534eeb0b",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel9@sha256:6e41070799bbad200fae57777cf19517137aae594f7c8a60af708f85d4ea8a5b_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "18510945-5419-31d5-af45-31248c0a66af",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:276e7519913ef0f91bf2491e98eca3112269358ae40808d1816fc99c314c647f_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1cfe961b-f722-3683-93fe-f5fd27409e66",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kueue-controller-rhel9@sha256:c8f8d484e7bbdffbde028cbc7a8a7ed31252fab6e94b96feb801d07e83f11ef9_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1d146bcd-a0ee-3a15-8ecc-48db0c38feac",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-llama-stack-core-rhel9@sha256:8066bc675465a25e027bdabe46087fd27348b7c0b80be0f0673d08cdf14ffd8f_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1dbac4b7-133b-367e-b33f-f0ca179534d0",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ta-lmes-driver-rhel9@sha256:64a58a9411c825aea4efef43915477f4ff6ae3455e586557af5e4e99693a3528_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "1eae9c36-2c76-32c5-8870-d31cd9dec851",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel9@sha256:43b01e74e929444c0e6f5c82dcde80940a724b1310b09e491bca916f89932869_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "20016869-96ca-3f2d-ac99-47607efe5d97",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-controller-rhel9@sha256:87ae0c97badc89d4b4deb058c7270771c7c3725c5b5015a6b15993d7ce0c8b75_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2030419c-3d0c-37f4-9919-f5440bc819bd",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-operator-rhel9@sha256:72f4c03c5ea33bbda106e57eff21d4fc17c6971a3d75dc6dc6f59a06e6897cb0_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "20b83da3-fc69-37c8-a458-df13547f30e5",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-dashboard-rhel9@sha256:034ed39ad78b29073880a9d9eec61e24e1fc9490125549e1add5a8ff8c72cae1_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "21207b62-6343-30ef-9b26-ab770fa74859",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-operator-rhel9@sha256:e5dd5442acda1272a4670f576296700c87be9e0b9aa20471aee741175f0cf2ae_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "227dfa36-879a-33ad-8cc6-f41d1d247846",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-rhel9@sha256:28e4206f851ef61ecf3dbeb61bfafd72d429a60833a37d1a15f626ff9a0485ca_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "23c59737-c6a4-38cd-b32e-3daf06d35f24",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel9@sha256:268017c9dedef037936fcf4b45aec45d4d225cf5468396331268fbc5b89c4487_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "244bb4e6-c394-3234-8d26-0aeaec4079e3",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-codeserver-datascience-cpu-py312-rhel9@sha256:0a2e6b1a6d3f7bd1107220f5876199e15ec1e7583f1f784588e93decd115954d_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "256b4f9b-8335-392d-a491-f4a27b10e174",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:1b030479c97f45b5246d99ebf1e046f5125b2b755b266ad5b8d98a80c8e089a2_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "26b08b0c-255e-35a3-a408-1755b5f25d81",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-codeserver-datascience-cpu-py312-rhel9@sha256:256bcf110a1a449198b25308274453cf142bc3f3d3c5cd8a87d07358165d0276_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "298635a1-7bc7-3c05-a13e-c4dd8b286620",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-router-rhel9@sha256:df5afcd1de8a5c099a0e01c8dd19e628ca64952dac474f3b6fb0a195a800f425_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2bebdb4e-abc3-3249-8d67-8c8bdc2db778",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-service-rhel9@sha256:2f70efd0d17037c3d9ca4b064217b5fc95a6702ec66d2594f39c159857ce5129_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "2cebde61-e95c-36e9-985c-8032cee3243d",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:7e3e4f9e31cb5b564d6c1c40fdf9be1cbe4e2fddf31f63de23a8b1195f907e7a_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "322adbd2-ca37-3bb8-97cb-cc15518b6023",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-datascience-cpu-py312-rhel9@sha256:d5d1f5e938df7e189ec366585687bb24d7d98151b54d7ccca32965124c54d60a_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "33e9e6bc-1731-3671-8a69-ba54450ddb48",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-modelmesh-serving-controller-rhel9@sha256:95f919c7ba172b799fe55b15afd0eac7d0eeaeb3d47e4dc2b0207d33ea12366f_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3494ca3b-e291-34ee-832f-73495f813309",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kueue-controller-rhel9@sha256:335f356ccde787cce6751f9598cbe24e64595e1927c093505d9c7a2815068dea_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "36497570-caca-3d1c-b366-ea0647927feb",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-guardrails-detector-huggingface-runtime-rhel9@sha256:84a3bcd611416204bfa5b21cb49d998ae848320fdfc50f29a0e7c22dccfecb95_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3691329a-18a2-38c5-8bce-25d9476b8a88",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-router-rhel9@sha256:6a5fb148ee114b6e674f7a8dde0a6c6e71ef9eff6a42f3588e033ae98420dfa7_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "38dc7520-cc8b-3962-be82-fe5b831350d6",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-dashboard-rhel9@sha256:1cf346a2825bf11b474cab984d23f90d9c1fd20f32a22ed4173c8e95379941ce_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "3aa05bf3-efe5-348d-ae86-607977dc7d0c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ta-lmes-job-rhel9@sha256:15b511d8e4c735035f1c9e1060d5ee93b29215ba1c7af3a7619faea864177c16_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "41336cd1-8176-3b2e-8083-c498a9b93c9a",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:ca38e3d3a04b2534dbea3db15105e1ec3878e195f8f97c0eae11d3f6d5a68a55_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "42975cb7-407d-3e87-9d71-ba2bd7069dd1",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:5fa1cac3e4d22f97a3e74a6412dac71273e99c2906594e0b8d6918fbab22afc5_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "438e8011-2b40-37a8-87ee-9f3b1d1b757e",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kueue-controller-rhel9@sha256:c6d8bc0a932b5610b627c03b5fdd86547a4fae5bf1f0d8ed0eb4ca3bd5ba7a50_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "43943413-3327-3262-8182-637450f9490b",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-data-science-pipelines-operator-controller-rhel9@sha256:b48ed034a85d113b63d20b8726ccb5a353c1278d3ba9fd717e1e5577e2fd840a_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4559dc70-4bf3-3fc5-9ce5-f24bcb3a1bd0",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ta-lmes-driver-rhel9@sha256:5751adae468c704f517cc05511940ff913be6ff0d399d0f99967154eca4aa954_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "458adc14-e840-3fcf-b777-11f13d1bdfec",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-guardrails-detector-huggingface-runtime-rhel9@sha256:cb9bb90ddd9d3a4ee5aa4081c8bfacea220f5bbc8c0ab2336ebecb605f80de21_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "46cbe9c9-cd49-38c7-9e32-acc5e307a85c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-datascience-cpu-py312-rhel9@sha256:f5b46f05662b008f09c752ea9dee5857c02cea60a5e46a6c310ab59178525951_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "46ce37b8-9575-3613-90c3-e028ec37fc3d",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-controller-rhel9@sha256:7cf1ce2d9a73ccd7aec1bb3705f59036bf1d998ee6a02392bd77563ca621c111_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "479dde97-757b-38f8-a124-5d79d83f02b0",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-vllm-cuda-rhel9@sha256:7384a5c14a85ad4503fece7e005a867fda85d73004d123563b37ad5596475df7_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "47b59f4f-af18-39bf-ac64-59a6e9d2c4b2",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:a52123adc7a1a1171a4fd5238fe71f2b03d47f6e8bd8f7c6e05f41111519a85c_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "49d9b976-6ede-38b1-8337-b49011ac7ffa",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-notebook-controller-rhel9@sha256:5ec58065007ec1c3dec44b3d7daea15fef24826625e85f317738e7e1c6628b32_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4a84daf5-78e1-3fe9-b525-114e21516d5c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel9@sha256:06868364e6101d1a69d1af17b6ba6158eeaad5b945c955e3567a6aad484433d3_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4b034026-89bf-36be-a12d-a626608470b7",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-openvino-model-server-rhel9@sha256:146210a5750bde9dd8f89d19dd6e098f94a131cb2cf96087e4f93a878e43c969_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4ced1877-d81f-3548-a0f3-e22199e7c352",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-vllm-orchestrator-gateway-rhel9@sha256:bf60f4103d081c07466a3c91e6ea350a03feb482eb4b91025361d82b4bfbfeeb_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4e005e5a-9e19-3baf-8192-9e94aae0e187",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-service-rhel9@sha256:3f9c3eaaaa60ebb8fd64f7db47e86f0ed1c4260d2c45d0c402476dad305d99b0_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4e11c926-456c-3435-96b1-93a7ee306978",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-service-rhel9@sha256:029248dbc2b23d9905ca5adb76aeb13f707aeab938928463d7289ddcae935750_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4e9ff677-d329-36d5-8ed9-97e248e8309b",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-modelmesh-runtime-adapter-rhel9@sha256:92265f02e67bdf8d8b36ac21c05a44b8dd65eb383e23d708a032fd2750a75e5c_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4eea7592-deb4-30e0-b082-ca9c636facf9",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-minimal-cpu-py312-rhel9@sha256:55d2276c656181b1084cc43e2f50ce1eb76a6bb80279f5e159f6d0b21864a472_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4f726f8d-0b5a-3db9-a1a0-f73cb808b747",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-rhel9@sha256:843c17483e9de9e0ae70642ca08f34279e133333b0d790fbee68b3285756ad77_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "4fccece0-c0c6-3871-9609-08ba0d3a2a23",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-modelmesh-runtime-adapter-rhel9@sha256:0e888dc17b98a9d71fd37b8cd2b717e4ad2a9da447f88c46ead999862b83d2f4_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "52a30351-2f7b-3720-9131-56d8a0587f46",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ta-lmes-job-rhel9@sha256:e5d237176bd58b1f2cf8bca5cf1dc9491d574b9a0e2d79500d9343311952860a_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "53335b3b-bee7-3252-98f9-30872e95ce57",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-rhel9-operator@sha256:15dc4c7ee68eeccd54fce56eb580fb28cc24fd7099c3c4828c74866386a54aed_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "533e092f-04e4-3ce5-b812-36473abef3a0",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel9@sha256:dd3172cdb7384e0f9f5223769363b88a52fd54f0360826354299396562f5c95d_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "534edae3-929e-3d4f-9415-ec41c5872754",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-feast-operator-rhel9@sha256:2bb930add29f833452169f21250cc583070c2c5cc8b38b502e52a234e4d8112a_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "540127b1-351a-3c8e-b52f-a6b002b7a3a1",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-built-in-detector-rhel9@sha256:1102023082c0bf60c7c0bb93fe8506b88627f36a20039d3cbe94b25ed2cca8ea_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5442b7e4-13e9-367d-9e57-fa0a6c2f61d8",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:b3e2732dae8c4d6f2f0b15f21d01d9464f8fd74c2cd17cda74c48875edb0a916_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5626e1db-c3f7-3861-872d-c1ee693fa2b8",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-tensorflow-cuda-py312-rhel9@sha256:17a8db33c02ef75d5f6dcab6bdc444006c960dd2b06ae97e7d26e7fb320b9c42_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "562b90dc-9432-36ba-8b87-f0d6ecf733ed",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:ee4a3b906e4bad340d1aa9bd135e5cb548cf86f585ccf348bc89992ad3b0352e_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "56892957-cb08-3015-90a3-43dc7ad3d353",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-launcher-rhel9@sha256:ffc7d66822862dd1bfa53c5f40a02d8e4958c17326e4f41a3e90c223b45648a1_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "584f5147-4d3e-34c5-9095-057bd829a193",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-service-rhel9@sha256:e5631117ec3d4b7fffa219ca9cfc62ce66e86ffc610cd9710512b54c2014fb09_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5869717a-9b53-33ff-adae-7cfd413283b3",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-api-server-v2-rhel9@sha256:9096a9a1d4cdf4b906179e157d2c8243eb78994d2b1b31de9a7a74ee8d13442b_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "58873900-1b17-3845-a2c5-5b60c15c462f",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-minimal-cpu-py312-rhel9@sha256:7a78d0e5d8538112cd48199b6ee0db68371c3852172714650c2c847875773646_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "59a515fa-ee88-329f-b547-936d3e7aa10d",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-codeflare-operator-rhel9@sha256:05287f5ef0e60dcda062131e0b4dd375f62385700e73a3c5ffaa6f0f374f9edc_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5c3c16e5-d1fc-30ad-88eb-a06b02e6c811",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-modelmesh-rhel9@sha256:15cd208dddd23a4c99704f750f1493d2849515b4be237548dda7af7b7ba1cfd9_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5d1cfa50-22f9-33e1-bb3a-2aa410da88cd",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:25cd5eae3e95daaa3376fd64217c11c93fd57fc7addb842d587344c2f4ec8577_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5da01ec8-86d4-3226-a03b-314df32ef71e",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-caikit-nlp-rhel9@sha256:407bdaf0297cbe54eb81d75c60664f8c6c0f94aa9d2eab4d4c3cbf51832aca82_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5db09396-5e50-38a0-916e-78a149eb3d52",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-datascience-cpu-py312-rhel9@sha256:316e2e95d1fd09ed4476d84c030557b9c60506f5d470063551d2c26103d91bc2_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "5e1fc940-6f79-3b46-a36c-287dbd87c844",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-runtime-generic-rhel9@sha256:3195b4c25769894015faa400f921fa013170fc5cda67efbe29129672e30d3355_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6040c477-ce08-3d4c-979f-d5b8a87c6b00",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-built-in-detector-rhel9@sha256:483ce9316864381d44bbbc5b422075bb7a5991e04dfd196f8bc7379a4c22002c_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "60882c40-4a19-383d-b35a-b99dfdf26dbd",
+       "product": {
+        "name": "Red Hat OpenShift AI 2.25",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "609b1ab5-2d36-36c9-8f06-bca31dac8d1b",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-minimal-cpu-py312-rhel9@sha256:1f201a15c1d3bcba862ea747650fedf57128e246106033d03a34a08b7a620949_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "612686e0-48ec-3e6e-8b82-47a11f9364f1",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-fms-guardrails-orchestrator-rhel9@sha256:b9849f0d21818f9f48473bb5c1ccf61f6e700523800803855732848321294354_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "64cb212b-1688-33bd-883f-68c0edbdf4ca",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-must-gather-rhel9@sha256:acc939857de7704cc69ebc6663b0cc9b956490ee671dc2166167309d9e10fe13_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "68cfb78c-746a-3f19-937b-4660de387976",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-controller-rhel9@sha256:2ac98d01901a48f7c20faa8f5f536e26e58fabb28917a7a9b2e6271867173181_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "69252f94-26c5-396c-a3f8-fd78dd677309",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-metadata-collection-rhel9@sha256:2233a43bacae5aed5eab9b7d5c347216de12f57f313cfdbc639dc0c2474a99e1_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "69d269a1-6971-37a0-b7a0-4f0ba8e29f7e",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-must-gather-rhel9@sha256:39be7bca7eb831439f4c172ac8b429322e883a2d355817d778ec2534c72b28cd_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "69d5407c-82aa-3dd0-a149-e94f7d6058cb",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-driver-rhel9@sha256:f4341bab285c7d703793dc17009ca568d54e7b8cc30622e905d1c640c5d4304f_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6a6db269-7a47-3f0b-b822-ff5fcd4f3954",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:a465cc70797a7cae69044a54c3c3ce146f7804f559b898468c6d6d7b699d4888_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6c66d69a-2ded-368c-8d10-a6ab8c16c2c0",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-must-gather-rhel9@sha256:90d19272ae3b75bde2dc5953fa4496faa2ce54b554475d086a86d12cf64a617a_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6d235344-1685-3819-a9d5-a5ba6fffb600",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ta-lmes-driver-rhel9@sha256:facd031c685efa80bccdae2b2a264139403b1ac0c5fbb0297b2ff5b95f07c2d6_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "6f5bab3f-c3eb-3f68-867d-663a8f8a3aa4",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:88cf40daaebbd8a30a5643f80e7e2e77e30e6d085e04a06fa49c734b1b84158b_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "73869bc1-5963-3f5e-a4cb-49e504a27f57",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:e3a4d397930a290f6f957ffb8a5ab47d6b09fed3b4db220be8909ab34012b667_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "79b1ac50-b3e7-3de9-a2a6-517cc49efb78",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:818c3fd346805a9393e640135d4a2bb3c6c2a61d5dd9da7e31b2faff209b0cc2_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7ab8a049-fa6c-363a-a94e-7e01c226c119",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:7b6b1e71b6a47541d62c83140f438ac6c92f8b0ce8f77ea498080346c3f6df8d_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7ad14308-9475-3a1f-95ff-afe3968d0bc4",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-tensorflow-cuda-py312-rhel9@sha256:6099b76c2d56d71c7118b264729513118983eff152fbf619d4a2c9b005154810_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7bab2fd0-0f63-316d-b3b1-7bae01b5a545",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-vllm-orchestrator-gateway-rhel9@sha256:350bb3bd2dbb2f239ed4b0b2a2d83cf418ecd26cc3185efa8f232b3584acc4ae_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "7c544976-4e72-3e25-b44e-a651d847763c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:d2dc49838f577da4cddf3bf07841ea5092bbe8e31696c2c5dc3c1a28169d554c_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "80ae1b45-3317-3f10-8531-6aae3db037b0",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-pytorch-cuda-py312-rhel9@sha256:21745dfa75f87f7db13db22172f5bc18e8f34d24e2045aba40d384505baa6777_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "878f5caa-0e6c-365f-a47d-b4d02266cc83",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-rhel9@sha256:45e2811f4565b5631178caf72c9f7c327c3f8b06cbff834ecaeb76d91016365a_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "88a7840f-8981-35cd-97f2-e31dcaf297bc",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-datascience-cpu-py312-rhel9@sha256:01a4dbd6794c9881bfac191d788df1b726c1d8176f23c9ca557d23edcbedd47f_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8913664a-d169-3e28-93e5-ef3d3eb02ceb",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-vllm-orchestrator-gateway-rhel9@sha256:b1587a0e91dc149bbf3961636f435c40210784066d4c8f1bdc9c152f8edd4634_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8db046d4-f92f-379b-a33d-d297c612b522",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-vllm-cpu-rhel9@sha256:96cf9f08aebf909fd95910d6b7a1bcac4bcde9a0e8ada391984b0b44f86a47c5_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8e0004a2-0fac-3f80-8a62-ff7675258fba",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-data-science-pipelines-operator-controller-rhel9@sha256:a38c47f56474cd8daeaefdca4677e70af42f6293c98f5901b574083e5d41fe90_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8f8bbd53-270e-3824-9412-41bcfd343acc",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-driver-rhel9@sha256:a946ba2b871ec8ff6dfa6eeecd7ff65c47afd5d1a5acbd11eecdb210bd5c4079_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "8f924c58-afed-33c7-b2b3-48137b78fae0",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kueue-controller-rhel9@sha256:e1fab85800b28b45d1f92fbb4078211c20ac63f84da4a319109cadc77237b530_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "90bfb6c3-d7a6-3470-b1c3-2df95eaff9de",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-tensorflow-cuda-py312-rhel9@sha256:9309e3120c478d9a4f5b538db7b481016f261404cd330d62ad68ca6ca4ee4feb_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "90f1a1f3-e84e-3ca9-b4d7-3749acfd917b",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-guardrails-detector-huggingface-runtime-rhel9@sha256:367f1c0795c29aa4f55f3b438ceb2e09077d6802bf0a439aa1dca0150f01e0e0_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "913ec871-4032-312a-8d78-edff363f87c2",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-operator-rhel9@sha256:5927dab2648c5586e36ed7aaa153708dfd2b1d44b4d64763a4d36d71e66b39b5_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9239d724-5645-3b28-ab63-c50ca5a2558e",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:2d9376212aac37a0e43a3dd6d4bc2bd05ca860e76cbe550acf072dda180d7bfe_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9249bad5-f798-3e66-8abb-150996a68da8",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-llm-d-routing-sidecar-rhel9@sha256:f75a3a521ad0d97f715715eedcfa09ab023eef722a0aca73b6f537b8134d9417_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "928d0c54-0965-3028-ae21-2f425907c1dd",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-minimal-cpu-py312-rhel9@sha256:f046f6097bf7c2d381541d599a14800e86886ca1b01ae73e9bda0da54b97bccc_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "95165b39-1015-3c03-a037-02f581005841",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-vllm-cpu-rhel9@sha256:042cd75c5331af0500df4c3661d3db6d50381bf5657d56ffb80c4162de10d2a4_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9756b5a4-b86c-3e92-af50-0cbee8f59ce1",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:38cfe5c825a4cb0279df5a6a47534f350c2576c69f84d13b4178dd5042169adf_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9896378e-71f5-361d-bf45-da4fde045121",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-minimal-cpu-py312-rhel9@sha256:77598a5d9a20c7384cb1dbc6d0eaaa93f299720989fc0075e91a5d6693b53793_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "997e24a4-034a-33c8-955e-916df69310bc",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:b5da93747b18a564a59ad884be333e06fef859eba4fbc3c921d910a0cad50fc8_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9eaa5af6-893f-3e19-b83f-11f3e3f18b5b",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-codeflare-operator-rhel9@sha256:af6e239df52560ac50c6a0b7a059a88186ae1683da8565805e829e12632efb9e_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9f0ce69a-d5e7-3477-9365-554ab38a3d89",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-driver-rhel9@sha256:979e4d1e7b839d9b529f1c8335f939d5add65d2526085a8af2a3729fa4d8f948_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "9f811aef-6e2d-35c7-97ed-79b5b84214ab",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-vllm-orchestrator-gateway-rhel9@sha256:7f0595a13e3a103146eec89fb28289b7427945dbcfd9b8b90df50fe4f0be9177_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a29b0e6e-60f1-3420-ba5b-fe2c5af1f9a8",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-agent-rhel9@sha256:2cbf1de17329e168b37e8311ac41e99beee4a868e7fa732ad4b9cd828788a116_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a3cec138-47fc-385b-8585-e6df7ffa957e",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-rhel9-operator@sha256:f32ad484f140a6dd517107eed8e2dee9c371f61567e05baecba6a4f934350e00_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a3e5dc5b-eaf9-380f-a948-1b9404bd2808",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-rhel9-operator@sha256:c53ea29a67b01d3e5bdf46f6db58becbc523c459e8ee8326442d3e0d6339bd6f_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a5cef00b-9a71-3ee8-83b8-51f58720a42d",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-metadata-collection-rhel9@sha256:a2c10a0bae6b4fcdcfc7121761fcc86e36a3866dad326eda16a36304a4256d74_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a6246dc9-363a-3b3a-9089-f03b6cb69a13",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-training-operator-rhel9@sha256:09f8f55e2431a759107cd921260cc2efcb292d751598a30ce992253d06da0f5e_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a67cef4e-f9ae-3812-84b9-688d9822bc75",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-minimal-cuda-py312-rhel9@sha256:b6b0d7a85691ba28c1587ee8f68830bd1783bba0a9eacf6bf074313daf71eb91_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a8b2aa06-b64a-38f3-83be-2e9c9e3695ef",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-codeserver-datascience-cpu-py312-rhel9@sha256:82359e5278603d376feeafb8871473e494493f1e9f67d3724f02cd7224629fdf_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a99c29e3-64ad-348b-a458-228d26635bb6",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-datascience-cpu-py312-rhel9@sha256:00909db23507536230bc6618fa523c6ddf65ba2f092a5bd33eca2f642649622c_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "a9e5584a-f8c1-3125-949d-f6d1fd0678e1",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-fms-guardrails-orchestrator-rhel9@sha256:e9f854d05aff9fc6d2b1b4739c7ba2c93d8551f011be765e657ec80eaea0a283_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ad003a86-bdbe-3023-b0d3-266b41b785b2",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-guardrails-detector-huggingface-runtime-rhel9@sha256:d3897e0d466420642686c215ae3452bdc0ac78a4f6eaea89ec5bf646e8de6d44_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ad0f7970-bb6b-3a38-b887-3df84b8b4242",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:da6ecf92a6cce96445a0a4f9c0e06772b87ba48827a200620a0b97ce5fa4ef58_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "af01ec26-a673-3f3d-9741-d7a48a2996ee",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel9@sha256:4b4e3832ba5ac00299c71ac22454cf029bc8da520d05f2ca06c3aacdf79a1aaa_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "afdd552c-dba1-30d6-8815-f36afc3ca098",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-launcher-rhel9@sha256:c4976c9ebf22d8c63d1d98dfcb5df02755db45c078e7c576f53ec264f009d556_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b0e2b549-c4a1-3d05-8870-9350a67915bb",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-dashboard-rhel9@sha256:48f0a5130e22c6b9f48472abffabcc5c02caf1a261d114b59695357fda86dba4_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b0e8c7d3-40b2-32ba-8c1b-7803aeddfd13",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:a5d76adc5f66d54f5734a6af14183891936114c0da6ee36314d1fea4c2f0f685_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b18faf7d-855e-36ee-bd93-99a37d2b3a54",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-mm-rest-proxy-rhel9@sha256:b55a026febdc8b4c51632d3b0606b8cf57683eefa5c2a3ddcf15b6ce3ab6e7f6_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b36a1e51-9358-3340-bea9-091ee31fc7aa",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-controller-rhel9@sha256:714745a2d7e634fdf50b9d771a4a8f900ffbd4d476d19adbb3680887638fab2e_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b3fa0e0b-961c-36a3-a2b8-5afe21d28689",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-caikit-tgis-serving-rhel9@sha256:116294dac5f717e97f33d775480c7ce5cd7ed21fd834df69c88431b9398ab26b_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b5fa0d42-33ac-3d36-8cae-0afefef5618f",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-runtime-generic-rhel9@sha256:e6d745a9e64ff45f5b54280fd235284e20e64d5f0f8d46527c3c8693074a56c1_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b79913c2-476a-3d8b-a146-9be2ea310fbb",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-feast-operator-rhel9@sha256:d3568f068132f5bb08edb294125d9a8a2d76440213394cd1d2778a3e96bbc934_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b79a1e20-63d7-32c8-819c-4c31963d9284",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-data-science-pipelines-operator-controller-rhel9@sha256:a47df79a585669000f680be8a5c1239861e33543205bd8d0f02b081244f46cc3_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b887975a-f148-310b-ab23-2b019ec4da35",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-feast-operator-rhel9@sha256:05412cfc4ffec2dd2884e394ae597f041d0187cb3d939333680f789e7f323b00_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "b91a4ce3-4b6c-3ede-82d1-94364518e747",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-controller-rhel9@sha256:10873def7f537b77f7130139da66660aaf08627be9035f0f81d3e2cf473f674f_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ba123a65-2cff-3b05-ae29-b939f2441d1e",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-training-operator-rhel9@sha256:8291e028dacf45e2f25b07cdf7facd2d5bbcc2a8908fa376b252e67049dc05cd_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bca1b7ef-9aea-3edd-8bbe-7667a955e7dd",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-mlmd-grpc-server-rhel9@sha256:a30b008452ceac5ed6d1362ba0d99e13c0ac9c4c528f0f5f00fd8bc5b2570d19_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "bdea1e60-3968-337e-b244-1573d3d9df9c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-vllm-rocm-rhel9@sha256:a8f3b5f4895bf98f60a1ba7bb1fe33cb184ffeab2e67ec1b6e819cce6391d126_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "be25ccf2-8e24-38c1-bc30-112b4fcac4d2",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-feature-server-rhel9@sha256:34881e9e893eba3c28d88ee41b6fdeb33509fd5aa1219c3c663ccc8a11e45123_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "be3a35d7-9cea-319c-a183-78ac13726743",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-feature-server-rhel9@sha256:29b23f02bf882d50875c51adcf19ea062c2fd251566175994a95133bb8678c5f_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "becca647-0b04-3145-8180-dc915c5b65f8",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-pytorch-rocm-py312-rhel9@sha256:0a3bdc682b01d3632fd67f788f79d91d50050b8d256c5e837d6686f0695a89a3_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c1d4c8d2-89d6-39dd-ae36-a4f0e1949776",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-rhel9@sha256:b4030ce8b1452c77dbe1061083d7b45c33ac725f209f825f8671dff1b40d09a8_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c2544526-0b37-312a-8813-4ca964a607a3",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-built-in-detector-rhel9@sha256:b858a06fe75742efe3197bfe202dd619e8a1e864a8985955c5ddee2e1228d411_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c2f6e3f8-00b5-314b-ba4b-4478722fe76f",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-controller-rhel9@sha256:3f43700a8a0763f6859e45ef4018e6544f8dc68f054370db38d021e90559c331_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c3145411-af9d-3ff0-958e-89a6fdc2f8f3",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-runtime-generic-rhel9@sha256:96c77837b1c99b6dfbf9c1835cfdb4df7d6aacbd124a9cf4afd63edaf8b13086_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c3b9e737-7fd2-3315-a86d-b62be2e787e1",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-operator-rhel9@sha256:1eaa0307a1b4df90dd62df02c0c3f8ad623a2cd64cc5c2a01ec9d23c9610ef09_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c6aedaea-e185-30a6-ac0f-65a27f1d1e7a",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-minimal-cuda-py312-rhel9@sha256:b6d5c919a7677558570f6832fbff1c306737b4e0735722b45fcd1371469e3934_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c761b398-37e2-3fc4-ad13-fc289c6f0e1a",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-llm-d-routing-sidecar-rhel9@sha256:5ee8d5d155ae527095cc25367ba7cd401134acce93090406d78ad00a054af42f_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "c80d1f74-ee20-36e6-b362-50b2af6b0863",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-modelmesh-rhel9@sha256:54572ed0eba86b756d809437c5e92be444f3863a787dc55e31d8398113d5d798_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ca158a8a-2b70-38e8-85d1-b0d2c61e7ff7",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-datascience-cpu-py312-rhel9@sha256:4f129e68f9c43c8fcfb055ca972a58cac761cd901e3b9b8cb8dbcc8ea28b42d9_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cbc8c54c-ffa2-3273-9e7a-e42d9522bd4c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-llm-d-inference-scheduler-rhel9@sha256:429e17de97a30402fd22c32d856baeace2efe67dc3c57ae3c202ef62ab7a11d3_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cc300421-68e6-3bec-b439-483950285a03",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-notebook-controller-rhel9@sha256:6181c38e4f9c8c7cd957c98fbd5a1d6e6b7864af42637c10bfa24421fc176ec6_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cd4293e1-761f-30a0-a2cb-193fc91fc0ca",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-vllm-cuda-rhel9@sha256:5d52a272e4f8c3281d7566a3ad0bd4a264205b2fc6f7f82765673d5087623e6f_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cd86e88f-8d25-332c-be92-8175e48a37af",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-pytorch-rocm-py312-rhel9@sha256:4f2b7e8b6f3ae3f34c516799f22322303ad96102d44aa7349925a8361a107014_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cda4930c-8808-32ed-b693-5512ee827333",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-llama-stack-core-rhel9@sha256:d39e377d42cf6e9099948da99fa924239fb18bac2d96826cdbf7d920bf4793f1_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cf360ecd-0d25-34eb-8626-f72e4128f30a",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-agent-rhel9@sha256:9e89afeb32ca57505acba73681f5ef1cb0f41aad2a35be60e632d6324ad41707_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cf47f581-7ebd-37b5-9dca-38573c0929ab",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-minimal-rocm-py312-rhel9@sha256:0ba6c88a8100fbb8e609e4c2db12496f66ee6b506fac2ddc1d947ce711df95e4_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cf4f9d1b-3f99-36f4-b2dc-d7f91076beae",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-api-server-v2-rhel9@sha256:209fc0a735481cd57806326d4847e8319fe106cb5655a6f943dc846e2495c9ac_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "cf6c0765-b090-3b4e-b92d-ae86e4cad2c5",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-minimal-cpu-py312-rhel9@sha256:6274034b33af24435a50f089d42eaeabde178f0d0cc49d8c351a8d8d783eadca_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d13f1d1a-cc75-321e-a8bd-578d2acc05b9",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-training-operator-rhel9@sha256:812fdd0f6e3e9d146ed6f57251e65862e73c4e732d015d22cb45652464256c04_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d28895e7-be20-3e65-a95f-aab8941fbe75",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-minimal-cpu-py312-rhel9@sha256:6c2ea807d216d37799e927284e6ccf96d7c1f00b416bc6a94ed8041e91c36f51_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d4665fc9-364c-35d2-8367-4cd47d2b03f5",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-controller-rhel9@sha256:6f952456cc669cafffc8937699e2e91dc88ba00259c9c43710e1e3b2bae45428_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d669a086-db87-372d-9a1a-5aafb1b530c4",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-controller-rhel9@sha256:07971fe1c02b4a38ef0b1bb0e81a505b8979edce81cf7a8b0b07dd69b2f437e3_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d6ad3f0f-728f-3980-a401-967369165bb4",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-operator-bundle@sha256:44ad16d6de340b4b1612c427f2a6678525588fc11fac4348af7047f50b3b44c6_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d86a558f-8ed4-319f-85fd-989f9470a8e8",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-agent-rhel9@sha256:0f2821a5720af460fac91cdd4294e553477fa7ad9f61e8c6be37cfcfe0021731_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "d87c5fb0-8834-3c27-8453-075055df442a",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-router-rhel9@sha256:4949f667e18b2211a9a225195401a78d1713a6bd3236ec4226ef7b20165126a9_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "daba716f-4656-35ed-8f40-000ad5c56f70",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel9@sha256:6eba8509d73fba2e5b3909546c7f6efef0083128d6938031eb31cce8fae6d320_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dbfa5c53-016e-3874-830c-4e5aac3a4469",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-dashboard-rhel9@sha256:2dde913992b42cee4cb8b773b02683c897477511bc64302cf2b1e650a88a1144_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "dc04f523-7bd9-304c-80c5-7cc07a62af7b",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-notebook-controller-rhel9@sha256:8e82bc45a24d28eefb3f3092132165e76c333e24b90340c37c84c10441cb424a_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "df516770-8977-396e-b585-205b9758cf72",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-datascience-cpu-py312-rhel9@sha256:64b4af3030be30d5f9c9065a4a12710ec6ad075b3e9db8bbbd55374d9ba079cb_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e294b6fd-9f7e-32fb-b97b-0e7a10250fad",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:15201b4fe415eea030115196d420a74ad2543c138c59e11f395a4a120a9d422e_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e36c555f-79c5-3968-9229-e709a3d82241",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312-rhel9@sha256:2aa8ebc8f0b916770fb7ad62019f260595b7df3560d5ab67179d1460e8bb3808_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e399bb9d-42fa-3cab-9fa3-a16620cc0592",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel9@sha256:3d7d8744bdee3756492696ae412eed0171c35c5367f50e98dc7fbaeefba61ae7_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "e82f6d8b-5af0-351b-8188-c7fff16a073b",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ta-lmes-driver-rhel9@sha256:bfe20634d115b91e847aecd8d47ccd6d1ed5488b3a8b69a5c1f32f21eabb0ae6_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ea0cd545-b4c7-3275-8d46-2480bd236e3f",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-caikit-nlp-rhel9@sha256:c2af99970cff0c98868b2aa9edf6140626a51b42d12655991130524af2f4bc3e_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ee081b22-9b87-3ef2-bcb3-86bc02c3a343",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel9@sha256:236a127aa0b1a035f4c8216ea4e8770b426369712927f6ea2831bb0b47811296_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "eed1ffa9-637b-3fd1-87cf-144a9358bf2c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-metadata-collection-rhel9@sha256:9b797e2d63b64eb5c8975aabc03f44a1a0ec8b73c049a2d200c9a40f9e1c1175_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ef2ecd02-fe9d-3aed-9c53-a662aa4027b5",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:baa2b0dff61e6286d357f19ed106a3a39b95698d33ab0690ac83e2ed6d8f310d_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f07afd71-91fd-3728-afeb-30620efd99aa",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel9@sha256:d8b50009b3b1ea68abf80a1cd0ee63dc6ca51a332ecc3209fb8fb91e208c5771_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f1845d95-d81b-339d-92ea-94e08257dd70",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-tensorflow-rocm-py312-rhel9@sha256:3bbc41fde6131a8271341089b07bb14af28ae8ac48dfec8c1da32a87bd726c7b_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f211996b-4fa0-32c0-a196-bb9ec02e0ceb",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-pytorch-llmcompressor-cuda-py312-rhel9@sha256:acb9a7d4316c721c765443e5304f917fe299e93fe0d9e205f19c0ae58bf23a99_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f233637e-ef31-38b7-8871-265ad7e8642f",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:54ec6c1cbcd20824d7790f44c5ca2e66d880e590480f99fcb8b3137e5abb1936_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f28fe09b-2f3d-30db-9d4b-1c7113c43998",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-mm-rest-proxy-rhel9@sha256:49267e6bf24a1ab52981179c2839c530a34ec3be895b6b6752115fa0a5b1cac9_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f2ffa10b-7c16-3b0b-9a90-cd194587187f",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-modelmesh-serving-controller-rhel9@sha256:7d4a73a65d8a0f3dad73e1fed797634da9dfbe8d0ef9fa0c6f302b6265425e25_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f3587185-33ae-3ddc-a352-29e21ede8bd9",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-datascience-cpu-py312-rhel9@sha256:e02babdfa08a8c9d8661a09a92b70657353852d37a6f338f9236a212227797d1_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f4a14f20-bce7-3b77-a697-31a79c19f886",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-pipeline-runtime-tensorflow-cuda-py312-rhel9@sha256:010c4d959cd572b783a79cf73ee5a9f327a0d0f25e54e0f0903aae9f2c1d0655_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f706578d-faf3-3436-a550-ce544b3cc13c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-model-metadata-collection-rhel9@sha256:9ff311c7666e5c731dfcaa051cdd4f1e34fcf3ab0e4aa5bd73cf11752b261a42_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f936c702-90c6-3140-92ab-6eb6b62266e5",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:0efd606595f3cbc0ce6bdff9fe776917f5cbfa3c5577af250c6d74bd9161bb8b_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f959c945-3afc-3951-9985-b8fc944d1af4",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:45bee8fba1b3f35c956ffeb40297a897f3f63525e5a1c6f2f69923b7451e6a47_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f9b7411e-753a-3a96-8993-86812c455054",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-must-gather-rhel9@sha256:d2fe49f93014caa37bc0bcd5473e3a22eb467a20c417935f64d7f109d465288e_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f9ea4337-88c8-3e28-adcb-fcdcfa4a0d53",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-notebook-controller-rhel9@sha256:0e8a8c0471d8567e75ded28a709e773a555f619708f8600669269b381198cbcb_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fdc85592-381d-3c9c-a7e1-66b96c8c356b",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel9@sha256:a97e8dc2bd384df4328aed167fc4194495a0f8c6ac62bc2c26d86ff02c99779d_amd64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fe3fb413-4944-3abc-b322-f8ec4430b73c",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-fms-guardrails-orchestrator-rhel9@sha256:18d883208493825ce33e03f49c2e440dbdec355dd0ebcb47152a029a55fa8e53_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fe8746d2-308c-3b5c-b54b-6246e80b21fc",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-mlmd-grpc-server-rhel9@sha256:f82d23e8ec064129a4c2198830b7edbffbe37a678465190e1270648099a772f0_arm64",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "fe936ac6-7251-3bc2-adc1-607c48e055a9",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:aadcf62e6f586aefe449ed6370d7025ace15959e7c9f5888718c8b0a45e63414_s390x",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "ff12e651-249b-30d0-8235-e055c0a595d1",
+       "product": {
+        "name": "registry.redhat.io/rhoai/odh-ml-pipelines-api-server-v2-rhel9@sha256:b7ea0783ffae0b9467decb0bbf91de2ef0ef782a5b332023d5dcec0fdcc14408_ppc64le",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2019-25781\nCVE-2026-12185\nCVE-2026-14682\nCVE-2026-18446\nCVE-2026-27136\nCVE-2026-32283\nCVE-2026-33186\nCVE-2026-33810\nCVE-2026-33818\nCVE-2026-35536\nCVE-2026-39820\nCVE-2026-39821\nCVE-2026-39828\nCVE-2026-39830\nCVE-2026-39831\nCVE-2026-39832\nCVE-2026-39834\nCVE-2026-39836\nCVE-2026-42499\nCVE-2026-42502\nCVE-2026-46595\nCVE-2026-54272\nCVE-2026-56851\nCVE-2026-56853\nCVE-2026-56858\nCVE-2026-56859\nCVE-2026-56860\nCVE-2026-56862\nCVE-2026-57845\nCVE-2026-58062\nCVE-2026-59651\nCVE-2026-59903\nCVE-2026-59951\nCVE-2026-59969\nCVE-2026-61373\nCVE-2026-63209\nCVE-2026-63374\nCVE-2026-68498\nCVE-2026-71290\nCVE-2026-71888\nCVE-2026-71889\nCVE-2026-73619\nCVE-2026-75975\nCVE-2026-76172\nCVE-2026-78659\nCVE-2026-78661\nCVE-2026-78667\nCVE-2026-78669\nCVE-2026-79993\nCVE-2026-81726\nCVE-2026-82397\nCVE-2026-83663\nCVE-2026-84445\nCVE-2026-84501\nCVE-2026-85394\nCVE-2026-87018\nCVE-2026-89407\nCVE-2026-89425\nCVE-2026-90711\nCVE-2026-91403\nCVE-2026-91990\nCVE-2026-94637\nCVE-2026-96640\nCVE-2026-96643\nCVE-2026-96644\nCVE-2026-96749\nCVE-2026-96778\nCVE-2026-97031\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-102267\nCVE-2026-102271\nCVE-2026-102272\nCVE-2026-102273\nCVE-2026-102276\nCVE-2026-102278\nCVE-2026-102554\nCVE-2026-102930\nCVE-2026-102937\nCVE-2026-102994\nCVE-2026-102996\nCVE-2026-102997\nCVE-2026-102998\nCVE-2026-102999\nCVE-2026-103000\nCVE-2026-103262\nCVE-2026-104150\nCVE-2026-104850\nCVE-2026-104851\nCVE-2026-105922\nCVE-2026-106445\nCVE-2026-106446\nCVE-2026-109383\nCVE-2026-109527\nCVE-2026-109829\nCVE-2026-109869\nCVE-2026-109956\nCVE-2026-111064\nCVE-2026-111066\nCVE-2026-111497\nCVE-2026-111758\nCVE-2026-111759\nCVE-2026-111767\nCVE-2026-111943\nCVE-2026-112390\nCVE-2026-112391\nCVE-2026-112392\nCVE-2026-112393\nCVE-2026-112397\nCVE-2026-112398\nCVE-2026-112399\nCVE-2026-112400\nCVE-2026-112402\nCVE-2026-112403\nCVE-2026-112404\nCVE-2026-112405\nCVE-2026-112406\nCVE-2026-112892\nCVE-2026-112893\nCVE-2026-112894\nCVE-2026-112895\nCVE-2026-112896\nCVE-2026-112897\nCVE-2026-112940\nCVE-2026-113718\nCVE-2026-113722\nCVE-2026-113723\nCVE-2026-113725\nCVE-2026-113726\nCVE-2026-113732\nCVE-2026-113776\nCVE-2026-114140\nCVE-2026-114406\nCVE-2026-114605\nCVE-2026-115586\nCVE-2026-118764\nCVE-2026-119194\nCVE-2026-119195\nCVE-2026-119196\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 19, 2026, 7:28:21 AM",
+     "dateUpdated": "Nov 23, 2026, 5:08:16 PM",
+     "description": "Red Hat Security Advisory: RHOAI 2.25.13 - Red Hat OpenShift AI",
+     "id": "RHSA-2026:100634",
+     "references": "https://access.redhat.com/errata/RHSA-2026:100634\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_100634.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Updated images are now available for Red Hat OpenShift AI."
+    },
+    "id": "233c2c2a-f6ce-319f-a966-1ad2e8ce8f44"
    },
    {
     "advisory": {
@@ -3467,7 +5340,7 @@
      "aliases": "CVE-2026-15307\nCVE-2026-18660\nCVE-2026-19203\nCVE-2026-56853\nCVE-2026-59646\nCVE-2026-68497\nCVE-2026-73619\nCVE-2026-78667\nCVE-2026-78669\nCVE-2026-78677\nCVE-2026-84445\nCVE-2026-87819\nCVE-2026-89407\nCVE-2026-89425\nCVE-2026-94440\nCVE-2026-96640\nCVE-2026-96643\nCVE-2026-96778\nCVE-2026-97031\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-110856\nCVE-2026-110857\nCVE-2026-110858\nCVE-2026-110859\nCVE-2026-111497\nCVE-2026-111943\nCVE-2026-112390\nCVE-2026-112391\nCVE-2026-112392\nCVE-2026-112393\nCVE-2026-112397\nCVE-2026-112398\nCVE-2026-112399\nCVE-2026-112400\nCVE-2026-112402\nCVE-2026-112403\nCVE-2026-112404\nCVE-2026-112405\nCVE-2026-112406\nCVE-2026-112892\nCVE-2026-112893\nCVE-2026-112894\nCVE-2026-112895\nCVE-2026-112896\nCVE-2026-112897\nCVE-2026-114145\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 9:37:34 PM",
-     "dateUpdated": "Nov 18, 2026, 11:19:43 AM",
+     "dateUpdated": "Nov 23, 2026, 12:16:23 PM",
      "description": "Red Hat Security Advisory: Satellite 6.19 security update",
      "id": "RHSA-2026:92861",
      "references": "https://access.redhat.com/errata/RHSA-2026:92861\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92861.json\n",
@@ -5726,7 +7599,7 @@
      "aliases": "CVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106070\nCVE-2026-106071\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\nCVE-2026-28330\n",
      "baseScore": 0.0,
      "datePublished": "Oct 21, 2026, 10:00:00 PM",
-     "dateUpdated": "Nov 17, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 22, 2026, 11:00:00 PM",
      "description": "Node.js: Mehrere Schwachstellen",
      "id": "WID-SEC-W-2026-4117",
      "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4117.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4117\n",
@@ -6123,7 +7996,7 @@
      "aliases": "CVE-2026-101911\nCVE-2026-102276\nCVE-2026-102277\nCVE-2026-102278\nCVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106071\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 2:26:32 PM",
-     "dateUpdated": "Nov 19, 2026, 3:42:48 AM",
+     "dateUpdated": "Nov 23, 2026, 9:43:21 AM",
      "description": "Red Hat Security Advisory: nodejs:24 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92376",
      "references": "https://access.redhat.com/errata/RHSA-2026:92376\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92376.json\n",
@@ -7009,7 +8882,7 @@
      "aliases": "CVE-2025-47273\nCVE-2026-16313\nCVE-2026-28390\nCVE-2026-34182\nCVE-2026-42011\nCVE-2026-42013\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-59995\nCVE-2026-59999\nCVE-2026-60002\nCVE-2026-80792\nCVE-2026-89846\nCVE-2026-98432\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 9, 2026, 5:10:46 PM",
-     "dateUpdated": "Nov 19, 2026, 3:43:02 AM",
+     "dateUpdated": "Nov 20, 2026, 12:29:57 PM",
      "description": "Red Hat Security Advisory: OpenShift Container Platform 4.14.78 bug fix and security update",
      "id": "RHSA-2026:95508",
      "references": "https://access.redhat.com/errata/RHSA-2026:95508\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95508.json\n",
@@ -7246,7 +9119,7 @@
      "aliases": "CVE-2026-8932\nCVE-2026-12345\nCVE-2026-19445\nCVE-2026-19553\nCVE-2026-34743\nCVE-2026-59997\nCVE-2026-59998\nCVE-2026-60000\nCVE-2026-77214\nCVE-2026-88806\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-102633\nCVE-2026-111497\nCVE-2026-114136\nCVE-2026-114137\nCVE-2026-114138\nCVE-2026-114406\nCVE-2026-118669\n",
      "baseScore": 0.0,
      "datePublished": "Nov 4, 2026, 12:36:55 AM",
-     "dateUpdated": "Nov 19, 2026, 3:29:03 AM",
+     "dateUpdated": "Nov 23, 2026, 4:41:58 AM",
      "description": "Red Hat Security Advisory: A Subscription Management tool for finding and reporting Red Hat product usage",
      "id": "RHSA-2026:94802",
      "references": "https://access.redhat.com/errata/RHSA-2026:94802\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94802.json\n",
@@ -8069,7 +9942,7 @@
      "aliases": "CVE-2025-8869\nCVE-2025-13327\nCVE-2025-69418\nCVE-2026-1703\nCVE-2026-3219\nCVE-2026-6357\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114109\nCVE-2026-114110\nCVE-2026-114406\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 9:01:44 AM",
-     "dateUpdated": "Nov 18, 2026, 8:12:14 PM",
+     "dateUpdated": "Nov 20, 2026, 12:29:56 PM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.0.8 (CUDA)",
      "id": "RHSA-2026:94476",
      "references": "https://access.redhat.com/errata/RHSA-2026:94476\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94476.json\n",
@@ -8142,7 +10015,7 @@
      "aliases": "CVE-2026-78669\nCVE-2026-87018\nCVE-2026-87029\nCVE-2026-102276\nCVE-2026-102278\nCVE-2026-106492\nCVE-2026-106498\nCVE-2026-106500\nCVE-2026-106501\nCVE-2026-106503\nCVE-2026-109383\nCVE-2026-109829\nCVE-2026-109841\nCVE-2026-109869\nCVE-2026-109924\nCVE-2026-109932\nCVE-2026-111497\nCVE-2026-111758\nCVE-2026-111759\nCVE-2026-111943\nCVE-2026-113872\nCVE-2026-114406\nCVE-2026-116576\n",
      "baseScore": 0.0,
      "datePublished": "Nov 11, 2026, 4:11:16 PM",
-     "dateUpdated": "Nov 18, 2026, 11:19:55 AM",
+     "dateUpdated": "Nov 23, 2026, 9:43:33 AM",
      "description": "Red Hat Security Advisory: Red Hat Developer Hub 1.10.7 release.",
      "id": "RHSA-2026:99044",
      "references": "https://access.redhat.com/errata/RHSA-2026:99044\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_99044.json\n",
@@ -8505,7 +10378,7 @@
      "aliases": "CVE-2026-98432\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 9, 2026, 2:13:41 AM",
-     "dateUpdated": "Nov 19, 2026, 3:19:10 AM",
+     "dateUpdated": "Nov 20, 2026, 11:10:15 AM",
      "description": "Red Hat Security Advisory: OpenShift Container Platform 4.18.60 bug fix update",
      "id": "RHSA-2026:95104",
      "references": "https://access.redhat.com/errata/RHSA-2026:95104\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95104.json\n",
@@ -9013,7 +10886,7 @@
      "aliases": "CVE-2026-34182\nCVE-2026-45445\nCVE-2026-59995\nCVE-2026-59999\nCVE-2026-60002\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-98432\nCVE-2026-103111\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 9, 2026, 1:58:04 AM",
-     "dateUpdated": "Nov 19, 2026, 3:19:10 AM",
+     "dateUpdated": "Nov 20, 2026, 11:10:15 AM",
      "description": "Red Hat Security Advisory: OpenShift Container Platform 4.16.75 bug fix and security update",
      "id": "RHSA-2026:95229",
      "references": "https://access.redhat.com/errata/RHSA-2026:95229\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95229.json\n",
@@ -9059,7 +10932,7 @@
      "aliases": "CVE-2025-69418\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-44172\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114406\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:57:03 AM",
-     "dateUpdated": "Nov 18, 2026, 8:12:14 PM",
+     "dateUpdated": "Nov 20, 2026, 12:29:55 PM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.4.7 (CUDA 13.0)",
      "id": "RHSA-2026:94468",
      "references": "https://access.redhat.com/errata/RHSA-2026:94468\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94468.json\n",
@@ -10218,7 +12091,7 @@
      "aliases": "CVE-2026-101911\nCVE-2026-102276\nCVE-2026-102277\nCVE-2026-102278\nCVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106071\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 10:34:48 PM",
-     "dateUpdated": "Nov 19, 2026, 3:42:48 AM",
+     "dateUpdated": "Nov 23, 2026, 9:43:22 AM",
      "description": "Red Hat Security Advisory: nodejs:24 security, bug fix, and enhancement update",
      "id": "RHSA-2026:92378",
      "references": "https://access.redhat.com/errata/RHSA-2026:92378\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92378.json\n",
@@ -12406,7 +14279,7 @@
      "aliases": "CVE-2026-98432\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 9, 2026, 2:14:31 AM",
-     "dateUpdated": "Nov 19, 2026, 3:42:56 AM",
+     "dateUpdated": "Nov 20, 2026, 11:10:16 AM",
      "description": "Red Hat Security Advisory: OpenShift Container Platform 4.20.46 bug fix and security update",
      "id": "RHSA-2026:95377",
      "references": "https://access.redhat.com/errata/RHSA-2026:95377\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95377.json\n",
@@ -13561,6 +15434,223 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "069c1cbb-0ae8-3d35-b372-192f769d2c78",
+       "product": {
+        "name": "15.0.1.0.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "18568a6b-7523-3577-b76c-7b7da679a9f1",
+       "product": {
+        "name": "9.0.3-9.0.5",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "19248a47-5f3f-3cde-a989-ede8022f86e4",
+       "product": {
+        "name": "15.0.0.0.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "1cfccdcb-604a-3ca5-84e7-8a8714625dbc",
+       "product": {
+        "name": "8.26.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "239614c1-fe07-330a-b650-0a055ce5ddfb",
+       "product": {
+        "name": "6.1.1-7.00",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "3210c83d-84ae-34a5-b3cf-6375f5a4b30c",
+       "product": {
+        "name": "8.0-8.26",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "37da5ac6-a4d9-3b24-bc10-2b81ab2b42ba",
+       "product": {
+        "name": "7.8.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "3ca4c9f8-e376-3d3a-8a97-62b202dccdd4",
+       "product": {
+        "name": "9.0.0-9.0.5",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "429e43e6-8cb1-359f-b412-9254a38af50c",
+       "product": {
+        "name": "15.1.0.0.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "4f29d2bd-07d8-33cd-9f36-96840739e237",
+       "product": {
+        "name": "7.0.0",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "682c25d5-cb8c-3203-8774-33cdd7e7e082",
+       "product": {
+        "name": "15.2.0.0.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "6edec8c2-95a0-37fc-9975-fe943ea1af3f",
+       "product": {
+        "name": "9.1.0.0.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "7d11a557-ff02-34e7-bd87-7a22b7643a26",
+       "product": {
+        "name": "9.0.0.0.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "82349b68-4cea-337f-8ff3-18163b83552d",
+       "product": {
+        "name": "9.0.0.0.0-9.3.0.0.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "86669c41-4456-3056-85d9-1812c6745fd5",
+       "product": {
+        "name": "communications",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "89370ab6-03f8-36ff-b83a-10abd2e27cda",
+       "product": {
+        "name": "7.7.0",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "9c01fa24-5c1d-36cd-bb1e-623b88c83de1",
+       "product": {
+        "name": "7.6.0",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "a20d51af-7ebe-3270-bc67-906af2abe8a6",
+       "product": {
+        "name": "7.5.1",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "b6667f3e-125e-35bd-8cab-f7d5fa7acb90",
+       "product": {
+        "name": "8.0.1",
+        "vendor": {
+         "name": "TopQuadrant"
+        }
+       }
+      },
+      {
+       "id": "bc0d29a3-73ca-3cc4-9375-f38cd4e44f74",
+       "product": {
+        "name": "9.0.1.0.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "c0512b45-2028-3a7a-a06d-f910a1488337",
+       "product": {
+        "name": "7.5.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "e878b288-b2bd-3cdf-8ee1-5848291923fb",
+       "product": {
+        "name": "6.1.1-7.0.0",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-102278\nCVE-2026-111497\nCVE-2026-114820\nCVE-2026-1229\nCVE-2026-22018\nCVE-2026-27135\nCVE-2026-3198\nCVE-2026-41889\nCVE-2026-41989\nCVE-2026-47242\nCVE-2026-47737\nCVE-2026-53495\nCVE-2026-54297\nCVE-2026-54522\nCVE-2026-57438\nCVE-2026-63435\nCVE-2026-67420\nCVE-2026-71557\nCVE-2026-76957\nCVE-2026-85396\nCVE-2026-87022\nCVE-2026-88816\nCVE-2026-89161\nCVE-2026-9076\nCVE-2026-91777\nCVE-2026-93546\nCVE-2026-9547\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 17, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 17, 2026, 11:00:00 PM",
+     "description": "Oracle Communications: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-4616",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4616.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4616\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, anonymer oder authentisierter Angreifer kann mehrere Schwachstellen in Oracle Communications ausnutzen, um die Vertraulichkeit, Integrität und Verfügbarkeit zu gefährden."
+    },
+    "id": "85aa63a6-f2b8-35df-905c-fd4634b7fbff"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
        "id": "16cc2656-020a-3fba-abb4-2eb348858309",
        "product": {
         "name": "Red Hat OpenShift Container Platform 4.13",
@@ -13582,7 +15672,7 @@
      "aliases": "CVE-2025-47273\nCVE-2026-16313\nCVE-2026-28390\nCVE-2026-34182\nCVE-2026-42011\nCVE-2026-42013\nCVE-2026-43114\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-55653\nCVE-2026-59995\nCVE-2026-59999\nCVE-2026-60002\nCVE-2026-64564\nCVE-2026-68121\nCVE-2026-80792\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-89846\nCVE-2026-98432\nCVE-2026-99999\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114406\n",
      "baseScore": 0.0,
      "datePublished": "Nov 11, 2026, 1:43:46 AM",
-     "dateUpdated": "Nov 19, 2026, 3:19:12 AM",
+     "dateUpdated": "Nov 24, 2026, 4:14:50 AM",
      "description": "Red Hat Security Advisory: OpenShift Container Platform 4.13.73 bug fix and security update",
      "id": "RHSA-2026:95745",
      "references": "https://access.redhat.com/errata/RHSA-2026:95745\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95745.json\n",
@@ -16499,7 +18589,7 @@
      "aliases": "CVE-2023-54404\nCVE-2026-11822\nCVE-2026-11824\nCVE-2026-13717\nCVE-2026-16221\nCVE-2026-17106\nCVE-2026-18446\nCVE-2026-25681\nCVE-2026-26007\nCVE-2026-27136\nCVE-2026-33814\nCVE-2026-33818\nCVE-2026-39821\nCVE-2026-39834\nCVE-2026-41178\nCVE-2026-42502\nCVE-2026-45819\nCVE-2026-45820\nCVE-2026-56853\nCVE-2026-56858\nCVE-2026-56859\nCVE-2026-56860\nCVE-2026-56862\nCVE-2026-57516\nCVE-2026-59951\nCVE-2026-63209\nCVE-2026-63374\nCVE-2026-65898\nCVE-2026-67312\nCVE-2026-67314\nCVE-2026-67320\nCVE-2026-67321\nCVE-2026-69097\nCVE-2026-69153\nCVE-2026-73086\nCVE-2026-73088\nCVE-2026-73089\nCVE-2026-73643\nCVE-2026-75838\nCVE-2026-75899\nCVE-2026-75931\nCVE-2026-75975\nCVE-2026-76172\nCVE-2026-76844\nCVE-2026-77301\nCVE-2026-78679\nCVE-2026-82397\nCVE-2026-83663\nCVE-2026-84375\nCVE-2026-84445\nCVE-2026-85393\nCVE-2026-85525\nCVE-2026-87018\nCVE-2026-90711\nCVE-2026-91990\nCVE-2026-92599\nCVE-2026-93690\nCVE-2026-93749\nCVE-2026-94637\nCVE-2026-96640\nCVE-2026-96643\nCVE-2026-96644\nCVE-2026-96778\nCVE-2026-96804\nCVE-2026-97687\nCVE-2026-97689\nCVE-2026-102267\nCVE-2026-102271\nCVE-2026-102272\nCVE-2026-102276\nCVE-2026-102278\nCVE-2026-102282\nCVE-2026-104150\nCVE-2026-104851\nCVE-2026-105922\nCVE-2026-106445\nCVE-2026-106446\nCVE-2026-109156\nCVE-2026-109383\nCVE-2026-109527\nCVE-2026-109829\nCVE-2026-109869\nCVE-2026-109956\nCVE-2026-110856\nCVE-2026-110857\nCVE-2026-110858\nCVE-2026-110859\nCVE-2026-111064\nCVE-2026-111066\nCVE-2026-111497\nCVE-2026-112390\nCVE-2026-112391\nCVE-2026-112392\nCVE-2026-112397\nCVE-2026-112399\nCVE-2026-112400\nCVE-2026-112402\nCVE-2026-112404\nCVE-2026-112405\nCVE-2026-112893\nCVE-2026-112894\nCVE-2026-112895\nCVE-2026-112896\nCVE-2026-112897\nCVE-2026-112940\nCVE-2026-114145\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 3:22:35 PM",
-     "dateUpdated": "Nov 19, 2026, 3:55:42 AM",
+     "dateUpdated": "Nov 24, 2026, 4:13:08 AM",
      "description": "Red Hat Security Advisory: RHOAI 3.4.6 - Red Hat OpenShift AI",
      "id": "RHSA-2026:92510",
      "references": "https://access.redhat.com/errata/RHSA-2026:92510\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92510.json\n",
@@ -16510,6 +18600,187 @@
      "summary": "Updated images are now available for Red Hat OpenShift AI."
     },
     "id": "88fc3617-62ca-3945-b3c1-24ebb2dfc816"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "36753be7-d51c-3d0e-a114-02d42b9cc7ff",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "37b0e50a-f16d-3a76-b15c-0961a36653ee",
+       "product": {
+        "name": "nodejs24-0:24.22.1-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3ca9e2e8-225f-3b27-bc9e-46a29c55f9a1",
+       "product": {
+        "name": "corepack24-0:24.22.1-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5125aa08-ae4b-3fca-93dd-df3ceeaa27fb",
+       "product": {
+        "name": "nodejs24-0:24.22.1-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6b372774-3410-36a1-97f1-fd54bba63adf",
+       "product": {
+        "name": "npm24-0:24.22.1-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "708b071f-208d-307a-97d7-4a487fb221bc",
+       "product": {
+        "name": "corepack24-0:24.22.1-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "861e31dd-d3d2-3b76-9ade-f422540163b6",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "875c0f0d-7df3-38a7-a211-eab5e7c666b4",
+       "product": {
+        "name": "openSUSE Leap 16.0",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8873b663-44bc-3ae9-af18-191e61b810c8",
+       "product": {
+        "name": "nodejs24-0:24.22.1-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "acc4208a-f240-388f-9f54-4be6a4525172",
+       "product": {
+        "name": "npm24-0:24.22.1-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b293ae5d-cd6e-3f78-a318-1a6742b69b2b",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c21b6319-2798-395d-8fd8-54a1e5e6bad3",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "dd24830d-c5a1-32e2-84b9-f9c11d483130",
+       "product": {
+        "name": "npm24-0:24.22.1-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "de78e8c5-3e07-33d6-90af-4d01b1733d0d",
+       "product": {
+        "name": "corepack24-0:24.22.1-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e3cd8391-bfca-3416-9c51-7ab84afcb108",
+       "product": {
+        "name": "nodejs24-0:24.22.1-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ecea2488-7e22-36f2-bb3c-3202b3f7df19",
+       "product": {
+        "name": "corepack24-0:24.22.1-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f33f4cff-1150-3288-8b30-960d8077cb51",
+       "product": {
+        "name": "nodejs24-docs-0:24.22.1-160000.1.1.noarch",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f43e4d66-9fcf-3031-a6e3-6dcc4cb5cb76",
+       "product": {
+        "name": "npm24-0:24.22.1-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 13, 2026, 9:49:07 AM",
+     "dateUpdated": "Nov 22, 2026, 10:10:44 AM",
+     "description": "Security update for nodejs24",
+     "id": "openSUSE-SU-2026:22393-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_22393-1.json\nhttps://bugzilla.suse.com/1262274\nhttps://bugzilla.suse.com/1266318\nhttps://bugzilla.suse.com/1276224\nhttps://bugzilla.suse.com/1286261\nhttps://bugzilla.suse.com/1286561\nhttps://bugzilla.suse.com/1286562\nhttps://bugzilla.suse.com/1286563\nhttps://bugzilla.suse.com/1286564\nhttps://bugzilla.suse.com/1286565\nhttps://bugzilla.suse.com/1286566\nhttps://bugzilla.suse.com/1286567\nhttps://bugzilla.suse.com/1286570\nhttps://www.suse.com/security/cve/CVE-2026-105481/\nhttps://www.suse.com/security/cve/CVE-2026-105482/\nhttps://www.suse.com/security/cve/CVE-2026-105483/\nhttps://www.suse.com/security/cve/CVE-2026-106069/\nhttps://www.suse.com/security/cve/CVE-2026-106072/\nhttps://www.suse.com/security/cve/CVE-2026-106073/\nhttps://www.suse.com/security/cve/CVE-2026-106074/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "Security update for nodejs24"
+    },
+    "id": "8ad75f8c-5ff2-325d-bea2-1df7ba16ddd2"
    },
    {
     "advisory": {
@@ -19731,6 +22002,196 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "04c9d22c-24aa-3e2e-aef5-ba777daaf041",
+       "product": {
+        "name": "nodejs24-0:24.22.1-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "0e0efc26-79be-3219-8d5b-86e794b1ed52",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "16be7ce6-50fe-3133-a993-79bf50f0e019",
+       "product": {
+        "name": "corepack24-0:24.22.1-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "27d5be79-6bda-3f63-a953-e0316a161f5c",
+       "product": {
+        "name": "npm24-0:24.22.1-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3afd024d-e7d3-325a-a77c-21f33f922d7f",
+       "product": {
+        "name": "nodejs24-0:24.22.1-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "43baa14a-4d19-3d4d-823d-f662cabec8ed",
+       "product": {
+        "name": "corepack24-0:24.22.1-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "500c5499-9559-308a-b9d5-3fcc8e5e27ec",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6caba6e6-3cc3-3e24-8852-a579b7d74826",
+       "product": {
+        "name": "corepack24-0:24.22.1-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6e437242-e309-31eb-a74b-cc3d1b5bf8bd",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "93faf860-7385-3fe8-a92d-218d23a8a7f6",
+       "product": {
+        "name": "nodejs24-devel-0:24.22.1-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9a2b908e-5e25-3045-92ae-caf5f26e79e1",
+       "product": {
+        "name": "corepack24-0:24.22.1-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9a59afe2-4e19-323c-b990-c6035c94c25a",
+       "product": {
+        "name": "SUSE Linux Enterprise Server for SAP applications 16.0",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b313bf98-7a56-3efa-b9a3-4540d288a289",
+       "product": {
+        "name": "nodejs24-0:24.22.1-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b86df574-bc16-354e-a197-9dbed2a205c1",
+       "product": {
+        "name": "nodejs24-docs-0:24.22.1-160000.1.1.noarch",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c191e041-460c-35d8-901d-b1d2d8eeb667",
+       "product": {
+        "name": "npm24-0:24.22.1-160000.1.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d422f3e0-ba48-381e-b6f4-ae1aeabec32f",
+       "product": {
+        "name": "npm24-0:24.22.1-160000.1.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d891e6f4-b8aa-399b-9400-37b40c9afe21",
+       "product": {
+        "name": "npm24-0:24.22.1-160000.1.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e95168df-8541-3d6d-b3c3-2fe70e3fad38",
+       "product": {
+        "name": "nodejs24-0:24.22.1-160000.1.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "f92a72d0-3c79-3d79-8171-2a5782875edf",
+       "product": {
+        "name": "SUSE Linux Enterprise Server 16.0",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-105481\nCVE-2026-105482\nCVE-2026-105483\nCVE-2026-106069\nCVE-2026-106072\nCVE-2026-106073\nCVE-2026-106074\nCVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 13, 2026, 9:05:26 AM",
+     "dateUpdated": "Nov 18, 2026, 10:45:11 AM",
+     "description": "Security update for nodejs24",
+     "id": "SUSE-SU-2026:24732-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/suse-su-2026_24732-1.json\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624732-1/\nhttps://www.suse.com/support/update/announcement/2026/suse-su-202624732-1/\nhttps://bugzilla.suse.com/1262274\nhttps://bugzilla.suse.com/1266318\nhttps://bugzilla.suse.com/1276224\nhttps://bugzilla.suse.com/1286261\nhttps://bugzilla.suse.com/1286561\nhttps://bugzilla.suse.com/1286562\nhttps://bugzilla.suse.com/1286563\nhttps://bugzilla.suse.com/1286564\nhttps://bugzilla.suse.com/1286565\nhttps://bugzilla.suse.com/1286566\nhttps://bugzilla.suse.com/1286567\nhttps://bugzilla.suse.com/1286570\nhttps://www.suse.com/security/cve/CVE-2026-105481/\nhttps://www.suse.com/security/cve/CVE-2026-105482/\nhttps://www.suse.com/security/cve/CVE-2026-105483/\nhttps://www.suse.com/security/cve/CVE-2026-106069/\nhttps://www.suse.com/security/cve/CVE-2026-106072/\nhttps://www.suse.com/security/cve/CVE-2026-106073/\nhttps://www.suse.com/security/cve/CVE-2026-106074/\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 22,
+      "name": "csaf_suse"
+     },
+     "summary": "Security update for nodejs24"
+    },
+    "id": "9e83e905-7be0-3993-b56e-7bf0789ccf05"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
        "id": "4aafe8a1-008e-33f0-adb2-e81946f053ec",
        "product": {
         "name": "python313-Brotli-0:1.2.1-160000.1.1.x86_64",
@@ -20253,6 +22714,34 @@
      "summary": "Red Hat AI Base Images 3.4.7 (ROCm 6.4) is now available."
     },
     "id": "a3d2f4d2-0885-3919-9708-62eb9b8917c3"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "539c955b-0c1d-3886-966c-a79aa3d77efa",
+       "product": {
+        "name": "Red Hat JBoss Core Services 2.4.62.SP7",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-42528\nCVE-2026-46729\nCVE-2026-56153\nCVE-2026-56154\nCVE-2026-57941\nCVE-2026-59685\nCVE-2026-59797\nCVE-2026-63292\nCVE-2026-63686\nCVE-2026-63718\nCVE-2026-73636\nCVE-2026-75804\nCVE-2026-84782\nCVE-2026-93546\nCVE-2026-111497\nCVE-2026-119618\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 17, 2026, 9:12:42 PM",
+     "dateUpdated": "Nov 22, 2026, 3:15:03 AM",
+     "description": "Red Hat Security Advisory: Red Hat JBoss Core Services Apache HTTP Server 2.4.62 SP7 security update",
+     "id": "RHSA-2026:100552",
+     "references": "https://access.redhat.com/errata/RHSA-2026:100552\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_100552.json\n",
+     "source": {
+      "id": 9,
+      "name": "csaf_redhat"
+     },
+     "summary": "Red Hat JBoss Core Services Apache HTTP Server 2.4.62 Service Pack 7 is now available.\n\nRed Hat Product Security has rated this update as having a security impact of Critical. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
+    },
+    "id": "a7cbec42-7b53-3496-be90-2e84f357c21f"
    },
    {
     "advisory": {
@@ -36760,6 +39249,33 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "a1b47d88-700d-385f-ae41-168cba348bc7",
+       "product": {
+        "name": "PeopleSoft Enterprise PeopleTools",
+        "vendor": {
+         "name": "Oracle Corporation"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\nCVE-2026-114862\nCVE-2026-114928\nCVE-2026-114937\nCVE-2024-41311\nCVE-2026-114932\nCVE-2026-114933\nCVE-2026-114931\nCVE-2026-114929\nCVE-2026-114930\nCVE-2026-114935\nCVE-2026-114927\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 18, 2026, 2:58:13 PM",
+     "dateUpdated": "Nov 18, 2026, 2:58:13 PM",
+     "description": "Kwetsbaarheden verholpen in Oracle PeopleSoft Enterprise",
+     "id": "NCSC-2026-0504",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "c5c5c3d8-8429-398c-94aa-49251dbfef75"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
        "id": "097dbb1d-3b07-324f-8f0d-83821a50c3f3",
        "product": {
         "name": "nodejs22-devel-0:22.23.4-160000.1.1.x86_64",
@@ -38024,7 +40540,7 @@
      "aliases": "CVE-2026-84782\nCVE-2026-111064\nCVE-2026-111066\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Oct 29, 2026, 8:31:32 PM",
-     "dateUpdated": "Nov 18, 2026, 10:28:37 AM",
+     "dateUpdated": "Nov 20, 2026, 5:51:34 PM",
      "description": "Red Hat Security Advisory: Red Hat Ansible Automation Platform 2.6 Container Release Update",
      "id": "RHSA-2026:92856",
      "references": "https://access.redhat.com/errata/RHSA-2026:92856\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_92856.json\n",
@@ -38088,7 +40604,7 @@
      "aliases": "CVE-2026-111497\nCVE-2026-111943\nCVE-2026-114406\n",
      "baseScore": 0.0,
      "datePublished": "Nov 9, 2026, 6:18:05 PM",
-     "dateUpdated": "Nov 18, 2026, 11:19:51 AM",
+     "dateUpdated": "Nov 23, 2026, 8:18:06 AM",
      "description": "Red Hat Security Advisory: Red Hat Developer Hub 2.1.0 release.",
      "id": "RHSA-2026:96391",
      "references": "https://access.redhat.com/errata/RHSA-2026:96391\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_96391.json\n",
@@ -38134,7 +40650,7 @@
      "aliases": "CVE-2025-69418\nCVE-2026-6653\nCVE-2026-11979\nCVE-2026-13346\nCVE-2026-28390\nCVE-2026-31790\nCVE-2026-34182\nCVE-2026-34183\nCVE-2026-45445\nCVE-2026-45447\nCVE-2026-74860\nCVE-2026-86138\nCVE-2026-86140\nCVE-2026-86142\nCVE-2026-86143\nCVE-2026-86144\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-96889\nCVE-2026-103111\nCVE-2026-111497\nCVE-2026-114406\n",
      "baseScore": 0.0,
      "datePublished": "Nov 3, 2026, 8:59:48 AM",
-     "dateUpdated": "Nov 18, 2026, 8:12:14 PM",
+     "dateUpdated": "Nov 20, 2026, 12:29:55 PM",
      "description": "Red Hat Security Advisory: Red Hat AI Base Images 3.5.6 (CUDA 12.9)",
      "id": "RHSA-2026:94474",
      "references": "https://access.redhat.com/errata/RHSA-2026:94474\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_94474.json\n",
@@ -39686,6 +42202,43 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "20d03b3d-817d-395b-9f26-123e164a0d88",
+       "product": {
+        "name": "peoplesoft",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      },
+      {
+       "id": "f2b0fa0d-a647-355a-9546-0402ccd2798f",
+       "product": {
+        "name": "8.61-8.63",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2024-41311\nCVE-2026-111497\nCVE-2026-114862\nCVE-2026-114927\nCVE-2026-114928\nCVE-2026-114929\nCVE-2026-114930\nCVE-2026-114931\nCVE-2026-114932\nCVE-2026-114933\nCVE-2026-114934\nCVE-2026-114935\nCVE-2026-114937\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 17, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 17, 2026, 11:00:00 PM",
+     "description": "Oracle PeopleSoft: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-4622",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4622.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4622\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, anonymer oder authentisierter Angreifer kann mehrere Schwachstellen in Oracle PeopleSoft ausnutzen, um die Vertraulichkeit, Integrität und Verfügbarkeit zu gefährden."
+    },
+    "id": "d5a63122-2233-3cb0-93ad-37a1b3ebf0a3"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
        "id": "276a1be3-fb32-37d3-b722-52be9cb557b4",
        "product": {
         "name": "firefox-debuginfo-0:140.10.0-1.el8_6.x86_64",
@@ -40387,7 +42940,7 @@
      "aliases": "CVE-2025-47273\nCVE-2026-16313\nCVE-2026-42011\nCVE-2026-42013\nCVE-2026-43114\nCVE-2026-64564\nCVE-2026-86145\nCVE-2026-89161\nCVE-2026-98432\nCVE-2026-103111\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 11, 2026, 12:38:51 PM",
-     "dateUpdated": "Nov 19, 2026, 3:19:14 AM",
+     "dateUpdated": "Nov 24, 2026, 4:14:52 AM",
      "description": "Red Hat Security Advisory: OpenShift Container Platform 4.15.71 bug fix and security update",
      "id": "RHSA-2026:95755",
      "references": "https://access.redhat.com/errata/RHSA-2026:95755\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95755.json\n",
@@ -40451,7 +43004,7 @@
      "aliases": "CVE-2026-98432\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 9, 2026, 2:23:43 AM",
-     "dateUpdated": "Nov 19, 2026, 3:42:58 AM",
+     "dateUpdated": "Nov 20, 2026, 11:10:17 AM",
      "description": "Red Hat Security Advisory: OpenShift Container Platform 4.19.55 bug fix and security update",
      "id": "RHSA-2026:95523",
      "references": "https://access.redhat.com/errata/RHSA-2026:95523\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95523.json\n",
@@ -40462,6 +43015,241 @@
      "summary": "Red Hat OpenShift Container Platform release 4.19.55 is now available with updates to packages and images that fix several bugs and add enhancements.\n\nThis release includes a security update for Red Hat OpenShift Container Platform 4.19.\n\nRed Hat Product Security has rated this update as having a security impact of Critical. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section."
     },
     "id": "e291d283-2e4c-3187-b203-043e1bd0cafa"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "04547a0e-0922-367f-af81-017b381bd639",
+       "product": {
+        "name": "libbrotlienc1-0:1.1.0-160100.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "216e31d7-e82f-3a85-9caa-fc4e17d65686",
+       "product": {
+        "name": "openSUSE Leap 16.1",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3a234e00-b818-305f-bf3f-8e6c20600cc4",
+       "product": {
+        "name": "libbrotli-devel-0:1.1.0-160100.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "3a357ea9-1b9e-3a38-b03b-18ce97c86b73",
+       "product": {
+        "name": "brotli-0:1.1.0-160100.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5bca91af-bd92-3152-a4e1-5941decb60ca",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160100.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "5d922d0c-43b2-33e8-a1ac-6bac0601fe38",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160100.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "636cb0a2-b753-3bb2-b93d-2bcca01f65f1",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160100.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "6c201993-0ffc-3224-bc11-a0ef95088dcc",
+       "product": {
+        "name": "brotli-0:1.1.0-160100.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8100c5ec-c380-3fee-b2a2-cc27b44dbe44",
+       "product": {
+        "name": "libbrotlienc1-0:1.1.0-160100.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "8455a486-4106-35c6-b22f-0cab2b374b9b",
+       "product": {
+        "name": "libbrotlienc1-x86-64-v3-0:1.1.0-160100.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "95d19995-d098-3d35-86b7-f8c5ed32974d",
+       "product": {
+        "name": "brotli-0:1.1.0-160100.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "9ebb5231-feaf-3593-8ac7-00b173e3988f",
+       "product": {
+        "name": "brotli-0:1.1.0-160100.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "a5d197e8-8de6-360f-859a-7a6d8256eee5",
+       "product": {
+        "name": "libbrotlicommon1-x86-64-v3-0:1.1.0-160100.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b43fdb33-0af0-329b-ae35-1e8a48a07e4c",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160100.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b58e181d-7682-3382-b00a-14ec60a8c3db",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160100.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "b8a82e80-d1a5-36c0-8b63-457e09f5ce1c",
+       "product": {
+        "name": "libbrotlienc1-0:1.1.0-160100.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "c662d2a3-7df2-3bc3-b10c-9c9d285f6cbc",
+       "product": {
+        "name": "libbrotlienc1-0:1.1.0-160100.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "d4826696-709f-36d8-8b15-35b2fd921570",
+       "product": {
+        "name": "libbrotli-devel-0:1.1.0-160100.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e01ccfae-34fe-3ec7-a7be-fbbd1131f9f1",
+       "product": {
+        "name": "libbrotlidec1-0:1.1.0-160100.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "e9e73dc5-079a-3335-bc88-ef3a2a6d751c",
+       "product": {
+        "name": "libbrotlidec1-x86-64-v3-0:1.1.0-160100.3.1.x86_64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "ea1b2735-46ef-361a-88c1-8bfbcf9cf9bf",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160100.3.1.s390x",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "eaa12d67-0309-396e-b4ff-809301bc680e",
+       "product": {
+        "name": "libbrotli-devel-0:1.1.0-160100.3.1.ppc64le",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "eaa6b39e-21dd-336d-aea6-89a335ede8d6",
+       "product": {
+        "name": "libbrotli-devel-0:1.1.0-160100.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      },
+      {
+       "id": "fd6b59e7-c5cb-3d44-a487-a5fac47e0a23",
+       "product": {
+        "name": "libbrotlicommon1-0:1.1.0-160100.3.1.aarch64",
+        "vendor": {
+         "name": "SUSE"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 11, 2026, 8:14:20 AM",
+     "dateUpdated": "Nov 18, 2026, 6:26:36 PM",
+     "description": "Security update for brotli",
+     "id": "openSUSE-SU-2026:22344-1",
+     "references": "https://ftp.suse.com/pub/projects/security/csaf/2026/opensuse-su-2026_22344-1.json\nhttps://bugzilla.suse.com/1287778\nhttps://www.suse.com/security/cve/CVE-2026-111497/\n",
+     "source": {
+      "id": 21,
+      "name": "csaf_opensuse"
+     },
+     "summary": "Security update for brotli"
+    },
+    "id": "e7637313-698b-31e9-a056-4466be3d67ba"
    },
    {
     "advisory": {
@@ -41264,7 +44052,7 @@
      "aliases": "CVE-2026-98432\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 9, 2026, 7:14:32 AM",
-     "dateUpdated": "Nov 19, 2026, 3:42:57 AM",
+     "dateUpdated": "Nov 20, 2026, 11:10:17 AM",
      "description": "Red Hat Security Advisory: OpenShift Container Platform 4.12.103 bug fix update",
      "id": "RHSA-2026:95416",
      "references": "https://access.redhat.com/errata/RHSA-2026:95416\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95416.json\n",
@@ -41275,6 +44063,52 @@
      "summary": "Red Hat OpenShift Container Platform release 4.12.103 is now available with updates to packages and images that fix several bugs."
     },
     "id": "ec422a44-e703-31b8-98bf-1a32b9fa81d4"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "8c247a0e-4287-3a17-8b5c-2c482ae3acab",
+       "product": {
+        "name": "4.4.20",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "a2642d2e-031f-3840-b2a6-cb23b22b12a2",
+       "product": {
+        "name": "Wireshark",
+        "vendor": {
+         "name": "Wireshark Foundation"
+        }
+       }
+      },
+      {
+       "id": "db262733-0821-31d5-9bee-98b98322d973",
+       "product": {
+        "name": "4.6.10",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-111497\nCVE-2026-130434\nCVE-2026-130435\nCVE-2026-130436\nCVE-2026-130437\nCVE-2026-130438\nCVE-2026-130439\nCVE-2026-130440\nCVE-2026-130441\nCVE-2026-130442\nCVE-2026-130443\nCVE-2026-130444\nCVE-2026-130445\nCVE-2026-130446\nCVE-2026-130447\nCVE-2026-130448\nCVE-2026-130449\nCVE-2026-130450\nCVE-2026-130451\nCVE-2026-130452\nCVE-2026-130453\nCVE-2026-130454\nCVE-2026-130455\nCVE-2026-130456\nCVE-2026-130457\nCVE-2026-130458\nCVE-2026-130459\nCVE-2026-130460\nCVE-2026-130461\nCVE-2026-130462\nCVE-2026-130463\nCVE-2026-130464\nCVE-2026-130465\nCVE-2026-130466\nCVE-2026-130467\nCVE-2026-130468\nCVE-2026-130469\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 18, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 22, 2026, 11:00:00 PM",
+     "description": "Wireshark: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-4672",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4672.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4672\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Wireshark ausnutzen, um einen Denial of Service Angriff durchzuführen, und um Informationen offenzulegen."
+    },
+    "id": "f3c8fdd2-5941-3f60-932a-19b8925a5e24"
    },
    {
     "advisory": {
@@ -41328,7 +44162,7 @@
      "aliases": "CVE-2026-98432\nCVE-2026-111497\n",
      "baseScore": 0.0,
      "datePublished": "Nov 9, 2026, 2:02:34 AM",
-     "dateUpdated": "Nov 19, 2026, 3:42:57 AM",
+     "dateUpdated": "Nov 20, 2026, 11:10:17 AM",
      "description": "Red Hat Security Advisory: OpenShift Container Platform 4.21.42 bug fix and security update",
      "id": "RHSA-2026:95408",
      "references": "https://access.redhat.com/errata/RHSA-2026:95408\nhttps://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_95408.json\n",
@@ -42278,6 +45112,33 @@
     "advisory": {
      "advisoryProduct": [
       {
+       "id": "7d33a669-ce90-36a5-b157-ca7005a696bf",
+       "product": {
+        "name": "communications",
+        "vendor": {
+         "name": "Oracle"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-1229\nCVE-2026-3198\nCVE-2026-9076\nCVE-2026-9547\nCVE-2026-22018\nCVE-2026-27135\nCVE-2026-41889\nCVE-2026-41989\nCVE-2026-47242\nCVE-2026-47737\nCVE-2026-53495\nCVE-2026-54297\nCVE-2026-54522\nCVE-2026-57438\nCVE-2026-63435\nCVE-2026-67420\nCVE-2026-71557\nCVE-2026-76957\nCVE-2026-85396\nCVE-2026-87022\nCVE-2026-88816\nCVE-2026-89161\nCVE-2026-91777\nCVE-2026-93546\nCVE-2026-102278\nCVE-2026-111497\nCVE-2026-114820\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 18, 2026, 2:42:59 PM",
+     "dateUpdated": "Nov 18, 2026, 2:42:59 PM",
+     "description": "Kwetsbaarheden verholpen in Oracle Communications",
+     "id": "NCSC-2026-0498",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "fda774d2-4bdd-352a-b983-3006e44ae2c8"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
        "id": "59527fb2-6d6f-342c-84d8-65185406f953",
        "product": {
         "name": "thunderbird-debugsource-0:140.10.0-1.el8_4.x86_64",
@@ -42394,7 +45255,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 19, 2026, 7:07:28 AM",
+     "dataProcessed": "Nov 25, 2026, 6:02:26 AM",
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
      "dateUpdated": "Oct 23, 2026, 12:00:00 AM",
      "description": "Out-of-bounds write in the brotlicffi decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -42411,7 +45272,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111497\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 19, 2026, 7:07:28 AM",
+     "dataProcessed": "Nov 25, 2026, 6:02:26 AM",
      "datePublished": "Oct 23, 2026, 12:00:00 AM",
      "dateUpdated": "Oct 23, 2026, 12:00:00 AM",
      "description": "Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -42428,7 +45289,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-111497\nGHSA-9v8h-qqgm-4m35\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 19, 2026, 7:05:05 AM",
+     "dataProcessed": "Nov 24, 2026, 7:06:10 AM",
      "datePublished": "Oct 22, 2026, 3:32:49 PM",
      "dateUpdated": "Nov 3, 2026, 5:10:27 PM",
      "description": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
@@ -42447,12 +45308,12 @@
      "baseScore": 9.2,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 19, 2026, 7:18:57 AM",
+     "dataProcessed": "Nov 25, 2026, 6:00:32 AM",
      "datePublished": "Oct 22, 2026, 1:35:41 PM",
-     "dateUpdated": "Nov 18, 2026, 6:32:29 PM",
+     "dateUpdated": "Nov 24, 2026, 2:26:40 PM",
      "description": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
      "enisa_id": "EUVD-2026-108169\n",
-     "epss": 82.64,
+     "epss": 99.93,
      "exploitedSince": "Oct 27, 2026, 12:00:00 AM",
      "id": "CVE-2026-111497",
      "references": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high\nhttps://github.com/andybalholm/brotli/releases/tag/v1.2.7\n",
@@ -42501,7 +45362,7 @@
    }
   ],
   "enisaUuid": "42d57d45-3372-37f9-9ddd-62b353c64700",
-  "epss": 82.64,
+  "epss": 99.93,
   "exploitedSince": "Oct 27, 2026, 12:00:00 AM",
   "id": "EUVD-2026-108169",
   "references": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high\nhttps://github.com/andybalholm/brotli/releases/tag/v1.2.7\n"
@@ -42643,6 +45504,19 @@
      },
      {
       "defaultStatus": "unknown",
+      "product": "COMOS Walkinside",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
       "product": "Desigo CC family V8",
       "vendor": "Siemens",
       "versions": [
@@ -42662,6 +45536,19 @@
        {
         "lessThan": "*",
         "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "gDAP (gPROMS Digital Application Platform)",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "unaffected",
         "version": "0",
         "versionType": "custom"
        }
@@ -42722,6 +45609,97 @@
      {
       "defaultStatus": "unknown",
       "product": "Integrated PA Suite Tester",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "INTRALOG WMS Kronos",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "INTRALOG WMS Kronos",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "Project Server Web Administration Tool",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SCALANCE LPE9413 (6GK5998-3GS01-2AC2)",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SCALANCE LPE9423",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SCALANCE LPE9433 (6GK5998-3GS11-2AC2)",
       "vendor": "Siemens",
       "versions": [
        {
@@ -42831,6 +45809,240 @@
        {
         "lessThan": "*",
         "status": "unaffected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC BRAUMAT",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V8.2 Update 5",
+        "status": "affected",
+        "version": "V8.2 Update 1",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC PCS neo",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC Profiling Tool",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC SISTAR",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V8.2 Update 5",
+        "status": "affected",
+        "version": "V8.2 Update 1",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC Companion",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC OA V3.20",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V3.20.17.1",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC OA V3.21",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V3.21.7",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC Runtime Professional",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC Unified for Industrial Edge",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC Unified PC Runtime",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC Unified SIQENCE",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SIMATIC WinCC V7/V8",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SINEC INS",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SINEMA Remote Connect Client",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SINEMA Remote Connect Edge Client",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "SITOP Manager",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "*",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "TIA Administrator",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V3.3.1",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     },
+     {
+      "defaultStatus": "unknown",
+      "product": "User Management Component (UMC)",
+      "vendor": "Siemens",
+      "versions": [
+       {
+        "lessThan": "V2.15.4.1",
+        "status": "affected",
         "version": "0",
         "versionType": "custom"
        }
@@ -43350,201 +46562,6 @@
       "versions": [
        {
         "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "COMOS Walkinside",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "Project Server Web Administration Tool",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "SIMATIC BRAUMAT",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "V8.2 Update 5",
-        "status": "affected",
-        "version": "V8.2 Update 1",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "SIMATIC Profiling Tool",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "SIMATIC SISTAR",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "V8.2 Update 5",
-        "status": "affected",
-        "version": "V8.2 Update 1",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "SIMATIC WinCC Companion",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "SIMATIC WinCC OA V3.20",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "V3.20.17.1",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "SIMATIC WinCC OA V3.21",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "V3.21.7",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "SIMATIC WinCC Runtime Professional",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "SIMATIC WinCC Unified for Industrial Edge",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "SIMATIC WinCC Unified PC Runtime",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "SIMATIC WinCC Unified SIQENCE",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "SIMATIC WinCC V7/V8",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "TIA Administrator",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "*",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-       }
-      ]
-     },
-     {
-      "defaultStatus": "unknown",
-      "product": "User Management Component (UMC)",
-      "vendor": "Siemens",
-      "versions": [
-       {
-        "lessThan": "V2.15.4.1",
         "status": "affected",
         "version": "0",
         "versionType": "custom"
@@ -44290,7 +47307,7 @@
    }
   ],
   "id": "CVE-2026-111497",
-  "lastModified": "2026-11-18T19:17:27.513",
+  "lastModified": "2026-11-24T15:17:09.400",
   "metrics": {
    "cvssMetricV31": [
     {
