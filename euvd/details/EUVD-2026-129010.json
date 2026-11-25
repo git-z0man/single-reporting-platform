@@ -1,0 +1,380 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-132224"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-132224",
+  "cwes": [
+   "CWE-642"
+  ],
+  "dateAdded": "2026-11-24",
+  "dueDate": "2026-11-27",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf ; https://status.optimizely.com/incidents/ftw0fh9wx43z ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-132224",
+  "product": "Web Experimentation",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer websites.",
+  "vendorProject": "Optimizely",
+  "vulnerabilityName": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-132224\nGHSA-xr6g-wr3x-r365\n",
+  "assigner": "mitre",
+  "baseScore": 7.1,
+  "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
+  "baseScoreVersion": "4.0",
+  "datePublished": "Nov 18, 2026, 3:50:17 PM",
+  "dateUpdated": "Nov 24, 2026, 8:58:23 PM",
+  "description": "Optimizely Web Experimentation before 2026-11-17 mishandles the account signup flow, leading to presence of attacker-controlled code in the projectJS (aka Project JavaScript) field of certain cdn.optimizely.com assets.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "1ddb472f-d6d3-3c9c-a393-c9abaeefd834",
+    "product": {
+     "name": "Web Experimentation",
+     "vendor": {
+      "name": "Optimizely"
+     }
+    },
+    "product_version": "0 <2026-11-17"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "1f1ade18-1be2-3b99-8ad0-8ac2c6e6c96f",
+    "vendor": {
+     "name": "Optimizely"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "0f776dde-0b0a-3059-88a1-9760fc51aa0e",
+    "vulnerability": {
+     "assigner": "mitre",
+     "baseScore": 7.1,
+     "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
+     "baseScoreVersion": "4.0",
+     "dataProcessed": "Nov 25, 2026, 6:00:25 AM",
+     "datePublished": "Nov 18, 2026, 3:50:17 PM",
+     "dateUpdated": "Nov 24, 2026, 8:58:23 PM",
+     "description": "Optimizely Web Experimentation before 2026-11-17 mishandles the account signup flow, leading to presence of attacker-controlled code in the projectJS (aka Project JavaScript) field of certain cdn.optimizely.com assets.",
+     "enisa_id": "EUVD-2026-129010\n",
+     "epss": 0.43,
+     "exploitedSince": "Nov 24, 2026, 12:00:00 AM",
+     "id": "CVE-2026-132224",
+     "references": "https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf\nhttps://status.optimizely.com/incidents/ftw0fh9wx43z\nhttps://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/\nhttps://scotthelme.co.uk/reflecting-on-the-optimizely-incident-and-why-we-keep-failing/\nhttps://github.com/brave/adblock-resources/pull/355\nhttps://news.ycombinator.com/item?id=50524767\nhttps://www.thatprivacyguy.com/blog/optimizely-bbc-cnn-consent/\nhttps://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/\nhttps://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/\nhttps://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/\nhttps://therecord.media/optimizely-malicious-code-customer-sites\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "d8647ec1-6e80-3444-976e-6fcec00f3b2f",
+       "product": {
+        "name": "Web Experimentation",
+        "vendor": {
+         "name": "Optimizely"
+        }
+       },
+       "product_version": "0 <2026-11-17"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "c623bc33-11c9-3cb2-b762-b6b9289c464a",
+       "vendor": {
+        "name": "Optimizely"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "43c58297-11a7-3577-a039-8be784e41ce1",
+    "vulnerability": {
+     "aliases": "CVE-2026-132224\nGHSA-xr6g-wr3x-r365\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 25, 2026, 6:02:10 AM",
+     "datePublished": "Nov 18, 2026, 6:32:03 PM",
+     "dateUpdated": "Nov 24, 2026, 9:30:38 PM",
+     "description": "Optimizely Web Experimentation before 2026-11-17 mishandles the account signup flow, leading to presence of attacker-controlled code in the projectJS (aka Project JavaScript) field of certain cdn.optimizely.com assets.",
+     "enisa_id": "EUVD-2026-129010\n",
+     "epss": 0.0,
+     "id": "GHSA-xr6g-wr3x-r365",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224\nhttps://github.com/brave/adblock-resources/pull/355\nhttps://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites\nhttps://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely\nhttps://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites\nhttps://news.ycombinator.com/item?id=50524767\nhttps://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf\nhttps://scotthelme.co.uk/reflecting-on-the-optimizely-incident-and-why-we-keep-failing\nhttps://status.optimizely.com/incidents/ftw0fh9wx43z\nhttps://therecord.media/optimizely-malicious-code-customer-sites\nhttps://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-132224\nhttps://www.thatprivacyguy.com/blog/optimizely-bbc-cnn-consent\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "a807214d-f745-3c4f-9cc6-dbfe6011b253",
+  "epss": 0.43,
+  "exploitedSince": "Nov 24, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-129010",
+  "references": "https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf\nhttps://status.optimizely.com/incidents/ftw0fh9wx43z\nhttps://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/\nhttps://scotthelme.co.uk/reflecting-on-the-optimizely-incident-and-why-we-keep-failing/\nhttps://github.com/brave/adblock-resources/pull/355\nhttps://news.ycombinator.com/item?id=50524767\nhttps://www.thatprivacyguy.com/blog/optimizely-bbc-cnn-consent/\nhttps://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/\nhttps://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/\nhttps://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/\nhttps://therecord.media/optimizely-malicious-code-customer-sites\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-129010",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 24, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "Web Experimentation",
+      "vendor": "Optimizely",
+      "versions": [
+       {
+        "lessThan": "2026-11-17",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "cve@mitre.org"
+   }
+  ],
+  "cisaActionDue": "2026-11-27",
+  "cisaExploitAdd": "2026-11-24",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:optimizely:web_experimentation:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "6950E31E-D8B4-4D67-8390-D43379C40928",
+        "versionEndExcluding": "2026-11-17",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [
+   {
+    "sourceIdentifier": "cve@mitre.org",
+    "tags": [
+     "exclusively-hosted-service"
+    ]
+   }
+  ],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Optimizely Web Experimentation before 2026-11-17 mishandles the account signup flow, leading to presence of attacker-controlled code in the projectJS (aka Project JavaScript) field of certain cdn.optimizely.com assets."
+   }
+  ],
+  "id": "CVE-2026-132224",
+  "lastModified": "2026-11-24T20:17:50.587",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 8.7,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "CHANGED",
+      "userInteraction": "REQUIRED",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.3,
+     "impactScore": 5.8,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "cvssMetricV40": [
+    {
+     "cvssData": {
+      "Automatable": "NOT_DEFINED",
+      "Recovery": "NOT_DEFINED",
+      "Safety": "NOT_DEFINED",
+      "attackComplexity": "HIGH",
+      "attackRequirements": "NONE",
+      "attackVector": "NETWORK",
+      "availabilityRequirement": "NOT_DEFINED",
+      "baseScore": 7.1,
+      "baseSeverity": "HIGH",
+      "confidentialityRequirement": "NOT_DEFINED",
+      "exploitMaturity": "NOT_DEFINED",
+      "integrityRequirement": "NOT_DEFINED",
+      "modifiedAttackComplexity": "NOT_DEFINED",
+      "modifiedAttackRequirements": "NOT_DEFINED",
+      "modifiedAttackVector": "NOT_DEFINED",
+      "modifiedPrivilegesRequired": "NOT_DEFINED",
+      "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+      "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+      "modifiedSubIntegrityImpact": "NOT_DEFINED",
+      "modifiedUserInteraction": "NOT_DEFINED",
+      "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+      "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+      "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+      "privilegesRequired": "LOW",
+      "providerUrgency": "NOT_DEFINED",
+      "subAvailabilityImpact": "NONE",
+      "subConfidentialityImpact": "HIGH",
+      "subIntegrityImpact": "HIGH",
+      "userInteraction": "NONE",
+      "valueDensity": "NOT_DEFINED",
+      "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+      "version": "4.0",
+      "vulnAvailabilityImpact": "NONE",
+      "vulnConfidentialityImpact": "NONE",
+      "vulnIntegrityImpact": "HIGH",
+      "vulnerabilityResponseEffort": "NOT_DEFINED"
+     },
+     "source": "cve@mitre.org",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-132224",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-24T18:42:06.199064Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-18T16:18:15.627",
+  "references": [
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Press/Media Coverage"
+    ],
+    "url": "https://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Issue Tracking",
+     "Mitigation",
+     "Third Party Advisory"
+    ],
+    "url": "https://github.com/brave/adblock-resources/pull/355"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Issue Tracking",
+     "Third Party Advisory"
+    ],
+    "url": "https://news.ycombinator.com/item?id=50524767"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://scotthelme.co.uk/reflecting-on-the-optimizely-incident-and-why-we-keep-failing/"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://status.optimizely.com/incidents/ftw0fh9wx43z"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://therecord.media/optimizely-malicious-code-customer-sites"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Press/Media Coverage"
+    ],
+    "url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/"
+   },
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://www.thatprivacyguy.com/blog/optimizely-bbc-cnn-consent/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-132224"
+   }
+  ],
+  "sourceIdentifier": "cve@mitre.org",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-642"
+     }
+    ],
+    "source": "cve@mitre.org",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
