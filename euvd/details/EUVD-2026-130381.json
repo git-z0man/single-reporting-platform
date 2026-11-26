@@ -1,0 +1,258 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-133311"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-133311",
+  "cwes": [
+   "CWE-1390"
+  ],
+  "dateAdded": "2026-11-25",
+  "dueDate": "2026-12-09",
+  "forensicTriage": "No",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-133311",
+  "product": "MiCollab",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Mitel MiCollab contains a weak authentication vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to access sensitive information using a specific system-generated random identifier or pre-staged content.",
+  "vendorProject": "Mitel",
+  "vulnerabilityName": "Mitel MiCollab Weak Authentication Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-133311\nGHSA-m3fg-h3j7-px6r\n",
+  "assigner": "mitre",
+  "baseScore": 5.9,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Nov 19, 2026, 4:22:22 PM",
+  "dateUpdated": "Nov 25, 2026, 8:17:45 PM",
+  "description": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker, with knowledge of a specific system-generated random identifier or pre-staged content, to conduct an unauthorized access attack due to improper authentication mechanisms. A successful exploit could allow an attacker to obtain sensitive information. The vulnerability is limited to the affected functionality and does not provide unrestricted access to arbitrary files elsewhere on the system. This is MTLVULN-1863.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "d13c5e1c-6ced-3bca-b3ae-8a96df27cd2f",
+    "product": {
+     "name": "micollab",
+     "vendor": {
+      "name": "Mitel"
+     }
+    },
+    "product_version": "0 ≤10.3 (10.3.0.18)"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "c7c6ae95-19fe-396c-8e67-b2d92feda672",
+    "vendor": {
+     "name": "Mitel"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "3c8e0941-e2dd-3e43-ad24-9c8bbec4cc3a",
+    "vulnerability": {
+     "aliases": "CVE-2026-133311\nGHSA-m3fg-h3j7-px6r\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 26, 2026, 6:01:19 AM",
+     "datePublished": "Nov 19, 2026, 6:32:01 PM",
+     "dateUpdated": "Nov 25, 2026, 9:30:29 PM",
+     "description": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker, with knowledge of a specific system-generated random identifier or pre-staged content, to conduct an unauthorized access attack due to improper authentication mechanisms. A successful exploit could allow an attacker to obtain sensitive information. The vulnerability is limited to the affected functionality and does not provide unrestricted access to arbitrary files elsewhere on the system. This is MTLVULN-1863.",
+     "enisa_id": "EUVD-2026-130381\n",
+     "epss": 0.0,
+     "id": "GHSA-m3fg-h3j7-px6r",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-133311\nhttps://accenture.github.io/cyber-intelligence/micollab-exploitation\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-133311\nhttps://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "f1f527f3-2ea0-3529-b720-19ecbd785936",
+    "vulnerability": {
+     "assigner": "mitre",
+     "baseScore": 5.9,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 26, 2026, 6:00:31 AM",
+     "datePublished": "Nov 19, 2026, 4:22:22 PM",
+     "dateUpdated": "Nov 25, 2026, 8:17:45 PM",
+     "description": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker, with knowledge of a specific system-generated random identifier or pre-staged content, to conduct an unauthorized access attack due to improper authentication mechanisms. A successful exploit could allow an attacker to obtain sensitive information. The vulnerability is limited to the affected functionality and does not provide unrestricted access to arbitrary files elsewhere on the system. This is MTLVULN-1863.",
+     "enisa_id": "EUVD-2026-130381\n",
+     "epss": 0.26,
+     "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
+     "id": "CVE-2026-133311",
+     "references": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "48e7c838-76d0-3bc7-91e4-2c83d5126516",
+       "product": {
+        "name": "micollab",
+        "vendor": {
+         "name": "Mitel"
+        }
+       },
+       "product_version": "0 ≤10.3 (10.3.0.18)"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "a1144ea4-d248-3d4e-8ff0-1bda9fbcca56",
+       "vendor": {
+        "name": "Mitel"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "4f739466-31f4-3cc6-82b3-d2205c808be1",
+  "epss": 0.26,
+  "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-130381",
+  "references": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-130381",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 25, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unknown",
+      "product": "MiCollab",
+      "vendor": "Mitel",
+      "versions": [
+       {
+        "lessThanOrEqual": "10.3 (10.3.0.18)",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "cve@mitre.org"
+   }
+  ],
+  "cisaActionDue": "2026-12-09",
+  "cisaExploitAdd": "2026-11-25",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Mitel MiCollab Weak Authentication Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:mitel:micollab:*:*:*:*:*:-:*:*",
+        "matchCriteriaId": "962D1D1E-C6D0-429C-84E4-3C1B42708EB1",
+        "versionEndIncluding": "10.3.0.18",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker, with knowledge of a specific system-generated random identifier or pre-staged content, to conduct an unauthorized access attack due to improper authentication mechanisms. A successful exploit could allow an attacker to obtain sensitive information. The vulnerability is limited to the affected functionality and does not provide unrestricted access to arbitrary files elsewhere on the system. This is MTLVULN-1863."
+   }
+  ],
+  "id": "CVE-2026-133311",
+  "lastModified": "2026-11-25T21:17:17.920",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "NONE",
+      "baseScore": 5.9,
+      "baseSeverity": "MEDIUM",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "NONE",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.2,
+     "impactScore": 3.6,
+     "source": "cve@mitre.org",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-133311",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-25T20:15:30.724834Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-11-19T17:18:52.740",
+  "references": [
+   {
+    "source": "cve@mitre.org",
+    "tags": [
+     "Mitigation",
+     "Vendor Advisory"
+    ],
+    "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://accenture.github.io/cyber-intelligence/micollab-exploitation/"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-133311"
+   }
+  ],
+  "sourceIdentifier": "cve@mitre.org",
+  "vulnStatus": "Modified",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-1390"
+     }
+    ],
+    "source": "cve@mitre.org",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

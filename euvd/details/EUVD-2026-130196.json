@@ -564,6 +564,10 @@
   {
    "dateAdded": "Nov 20, 2026, 12:00:00 AM",
    "source": "CISA"
+  },
+  {
+   "dateAdded": "Nov 25, 2026, 12:00:00 AM",
+   "source": "EUKEV"
   }
  ],
  "nvd": {

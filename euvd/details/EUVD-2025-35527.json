@@ -1,0 +1,216 @@
+{
+ "cert_links": [],
+ "cisa_kev": null,
+ "euvd": {
+  "aliases": "CVE-2025-49931\nGHSA-rwx2-3f4p-3fqj\n",
+  "assigner": "Patchstack",
+  "baseScore": 9.3,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Oct 22, 2025, 2:32:15 PM",
+  "dateUpdated": "Oct 22, 2026, 2:29:49 PM",
+  "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Crocoblock JetSearch jet-search allows Blind SQL Injection.This issue affects JetSearch: from n/a through 3.5.10.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "bcb46e53-775d-301f-aad4-7db5a343aef5",
+    "product": {
+     "name": "JetSearch",
+     "vendor": {
+      "name": "Crocoblock"
+     }
+    },
+    "product_version": "0 ≤3.5.10"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "2cd11ea0-6429-3394-8613-230d112d0978",
+    "vendor": {
+     "name": "Crocoblock"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "07b6090d-55b2-31a0-beb2-c8729ac8eeee",
+    "vulnerability": {
+     "assigner": "Patchstack",
+     "baseScore": 9.3,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 25, 2026, 12:30:02 PM",
+     "datePublished": "Oct 22, 2025, 2:32:15 PM",
+     "dateUpdated": "Oct 22, 2026, 2:29:49 PM",
+     "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Crocoblock JetSearch jet-search allows Blind SQL Injection.This issue affects JetSearch: from n/a through 3.5.10.",
+     "enisa_id": "EUVD-2025-35527\n",
+     "epss": 0.5,
+     "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
+     "id": "CVE-2025-49931",
+     "references": "https://patchstack.com/database/wordpress/plugin/jet-search/vulnerability/wordpress-jetsearch-plugin-3-5-10-sql-injection-vulnerability?_s_id=cve\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "0a5788d3-b137-3975-9417-9b028c307e28",
+       "product": {
+        "name": "JetSearch",
+        "vendor": {
+         "name": "Crocoblock"
+        }
+       },
+       "product_version": "0 ≤3.5.10"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "36d8fcde-76c8-3b94-badc-b7d69f00030a",
+       "vendor": {
+        "name": "Crocoblock"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "d1b7e44a-fe65-3935-910f-c484aa6f71ed",
+    "vulnerability": {
+     "aliases": "GHSA-rwx2-3f4p-3fqj\nCVE-2025-49931\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 22, 2026, 2:46:13 AM",
+     "datePublished": "Oct 22, 2025, 3:31:14 PM",
+     "dateUpdated": "Oct 21, 2026, 9:31:47 PM",
+     "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in CrocoBlock JetSearch jet-search allows Blind SQL Injection.This issue affects JetSearch: from n/a through <= 3.5.10.",
+     "enisa_id": "EUVD-2025-35527\n",
+     "epss": 0.0,
+     "id": "GHSA-rwx2-3f4p-3fqj",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2025-49931\nhttps://patchstack.com/database/Wordpress/Plugin/jet-search/vulnerability/wordpress-jetsearch-plugin-3-5-10-sql-injection-vulnerability?_s_id=cve\nhttps://vdp.patchstack.com/database/Wordpress/Plugin/jet-search/vulnerability/wordpress-jetsearch-plugin-3-5-10-sql-injection-vulnerability\nhttps://vdp.patchstack.com/database/Wordpress/Plugin/jet-search/vulnerability/wordpress-jetsearch-plugin-3-5-10-sql-injection-vulnerability?_s_id=cve\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "ffef6684-fabc-3423-a6ed-7ebc4ea49ddd",
+  "epss": 0.5,
+  "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
+  "id": "EUVD-2025-35527",
+  "references": "https://patchstack.com/database/wordpress/plugin/jet-search/vulnerability/wordpress-jetsearch-plugin-3-5-10-sql-injection-vulnerability?_s_id=cve\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2025-35527",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 25, 2026, 12:00:00 AM",
+   "source": "EUKEV"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "collectionURL": "https://crocoblock.com",
+      "defaultStatus": "unaffected",
+      "packageName": "jet-search",
+      "product": "JetSearch",
+      "vendor": "Crocoblock",
+      "versions": [
+       {
+        "changes": [
+         {
+          "at": "3.5.10.1",
+          "status": "unaffected"
+         }
+        ],
+        "lessThanOrEqual": "3.5.10",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "audit@patchstack.com"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Crocoblock JetSearch jet-search allows Blind SQL Injection.This issue affects JetSearch: from n/a through 3.5.10."
+   },
+   {
+    "lang": "es",
+    "value": "Una vulnerabilidad de Neutralización Inadecuada de Elementos Especiales utilizados en un Comando SQL ('inyección SQL') en CrocoBlock JetSearch jet-search permite inyección SQL Ciega. Este problema afecta a JetSearch: desde n/a hasta menor o igual que 3.5.10."
+   }
+  ],
+  "id": "CVE-2025-49931",
+  "lastModified": "2026-10-21T19:16:47.920",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "LOW",
+      "baseScore": 9.3,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "NONE",
+      "privilegesRequired": "NONE",
+      "scope": "CHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 4.7,
+     "source": "audit@patchstack.com",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2025-49931",
+      "options": [
+       {
+        "exploitation": "none"
+       },
+       {
+        "automatable": "yes"
+       },
+       {
+        "technicalImpact": "partial"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-04-27T19:40:47.798291Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2025-10-22T15:15:39.227",
+  "references": [
+   {
+    "source": "audit@patchstack.com",
+    "url": "https://patchstack.com/database/wordpress/plugin/jet-search/vulnerability/wordpress-jetsearch-plugin-3-5-10-sql-injection-vulnerability?_s_id=cve"
+   }
+  ],
+  "sourceIdentifier": "audit@patchstack.com",
+  "vulnStatus": "Deferred",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-89"
+     }
+    ],
+    "source": "audit@patchstack.com",
+    "type": "Secondary"
+   }
+  ]
+ }
+}
