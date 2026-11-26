@@ -1,0 +1,414 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-103406"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2026-103406",
+  "cwes": [
+   "CWE-78"
+  ],
+  "dateAdded": "2026-11-25",
+  "dueDate": "2026-11-28",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://supportportal.juniper.net/s/article/2026-10-On-Demand-Security-Bulletin-Session-Smart-Router-and-Session-Smart-Conductor-Multiple-internally-discovered-vulnerabilities-resolved ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-103406",
+  "product": "Juniper Session Smart Conductor and Session Smart Router",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+  "vendorProject": "Hewlett Packard Enterprise (HPE)",
+  "vulnerabilityName": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2026-103406\nGHSA-4q6m-6p89-9rmf\n",
+  "assigner": "juniper",
+  "baseScore": 9.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Oct 28, 2026, 4:35:53 PM",
+  "dateUpdated": "Nov 25, 2026, 5:32:56 PM",
+  "description": "An Improper Neutralization of Special Elements used in an OS Command vulnerability in the AutomatedProvisioner in Juniper Networks Session Smart Conductor allows a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "044c681d-5717-3977-9cf1-02f492399f49",
+       "product": {
+        "name": "7.2.3",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "8f580c18-d086-336d-985f-e93be9a956db",
+       "product": {
+        "name": "7.0.5",
+        "vendor": {
+         "name": "Cisco"
+        }
+       }
+      },
+      {
+       "id": "eeff4419-d322-346a-a12f-d2bbecf0124a",
+       "product": {
+        "name": "7.1.7",
+        "vendor": {
+         "name": "Red Hat"
+        }
+       }
+      },
+      {
+       "id": "f57c633b-4f8c-36e4-b5b4-309f10cafb58",
+       "product": {
+        "name": "Session Smart Router",
+        "vendor": {
+         "name": "Juniper Networks"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-103390\nCVE-2026-103391\nCVE-2026-103392\nCVE-2026-103393\nCVE-2026-103394\nCVE-2026-103400\nCVE-2026-103401\nCVE-2026-103402\nCVE-2026-103403\nCVE-2026-103404\nCVE-2026-103405\nCVE-2026-103406\nCVE-2026-103407\nCVE-2026-103408\nCVE-2026-103409\nCVE-2026-103410\nCVE-2026-103411\nCVE-2026-106079\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 28, 2026, 11:00:00 PM",
+     "dateUpdated": "Oct 28, 2026, 11:00:00 PM",
+     "description": "Juniper Session Smart Router: Mehrere Schwachstellen",
+     "id": "WID-SEC-W-2026-4234",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4234.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4234\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Juniper Session Smart Router ausnutzen, um seine Privilegien zu erhöhen, um beliebigen Programmcode auszuführen, um einen Denial of Service Angriff durchzuführen, um Informationen offenzulegen, um Dateien zu manipulieren und um Sicherheitsvorkehrungen zu umgehen."
+    },
+    "id": "452452f8-306e-3dfa-9fdf-b31bc1c36740"
+   },
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "483acdbc-a029-3f75-9d6c-73c7d2ce20d6",
+       "product": {
+        "name": "Session Smart Conductor",
+        "vendor": {
+         "name": "Juniper Networks"
+        }
+       }
+      },
+      {
+       "id": "fe3669fa-5e03-3660-9e8c-f780ad59ae65",
+       "product": {
+        "name": "Session Smart Router",
+        "vendor": {
+         "name": "Juniper Networks"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-103390\nCVE-2026-103391\nCVE-2026-103392\nCVE-2026-103393\nCVE-2026-103394\nCVE-2026-103400\nCVE-2026-103401\nCVE-2026-103402\nCVE-2026-103403\nCVE-2026-103404\nCVE-2026-103405\nCVE-2026-103406\nCVE-2026-103407\nCVE-2026-103408\nCVE-2026-103409\nCVE-2026-103410\nCVE-2026-103411\nCVE-2026-106079\n",
+     "baseScore": 0.0,
+     "datePublished": "Oct 30, 2026, 1:15:45 PM",
+     "dateUpdated": "Oct 30, 2026, 1:15:45 PM",
+     "description": "Kwetsbaarheden verholpen in Juniper Networks Session Smart Router en Session Smart Conductor",
+     "id": "NCSC-2026-0462",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "dfe0635f-0ccc-3069-9f9d-3e4c23d7569e"
+   }
+  ],
+  "enisaIdProduct": [
+   {
+    "id": "10e12d88-690a-399e-b0a4-acc461648411",
+    "product": {
+     "name": "Session Smart Conductor",
+     "vendor": {
+      "name": "Juniper Networks"
+     }
+    },
+    "product_version": "7.2.0 <7.2.3"
+   },
+   {
+    "id": "7f7778a4-d526-38d2-a030-03dff536fdc5",
+    "product": {
+     "name": "Session Smart Conductor",
+     "vendor": {
+      "name": "Juniper Networks"
+     }
+    },
+    "product_version": "7.1.0 <7.1.7"
+   },
+   {
+    "id": "f8abf421-ff8f-3fc5-b875-0c1023b5aa19",
+    "product": {
+     "name": "Session Smart Conductor",
+     "vendor": {
+      "name": "Juniper Networks"
+     }
+    },
+    "product_version": "0 <7.0.5"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "70cc5851-5f8a-3545-8d81-c2c0f43ef791",
+    "vendor": {
+     "name": "Juniper Networks"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "45c33fb7-686c-319e-9806-231e726f7fd3",
+    "vulnerability": {
+     "assigner": "juniper",
+     "baseScore": 9.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 26, 2026, 6:00:43 AM",
+     "datePublished": "Oct 28, 2026, 4:35:53 PM",
+     "dateUpdated": "Nov 25, 2026, 5:32:56 PM",
+     "description": "An Improper Neutralization of Special Elements used in an OS Command vulnerability in the AutomatedProvisioner in Juniper Networks Session Smart Conductor allows a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+     "enisa_id": "EUVD-2026-112215\n",
+     "epss": 0.52,
+     "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
+     "id": "CVE-2026-103406",
+     "references": "https://supportportal.juniper.net/JSA112183\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "0ccdbcf3-33bb-3789-89c3-95e2dc64e833",
+       "product": {
+        "name": "Session Smart Conductor",
+        "vendor": {
+         "name": "Juniper Networks"
+        }
+       },
+       "product_version": "7.1.0 <7.1.7"
+      },
+      {
+       "id": "65e934c4-3d18-3d38-b634-19969af32612",
+       "product": {
+        "name": "Session Smart Conductor",
+        "vendor": {
+         "name": "Juniper Networks"
+        }
+       },
+       "product_version": "0 <7.0.5"
+      },
+      {
+       "id": "682542d7-6db2-3ac0-a0e2-2cb30f3109e0",
+       "product": {
+        "name": "Session Smart Conductor",
+        "vendor": {
+         "name": "Juniper Networks"
+        }
+       },
+       "product_version": "7.2.0 <7.2.3"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "8842ddba-39d2-31ec-8e2f-ea0d915cc199",
+       "vendor": {
+        "name": "Juniper Networks"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "ff3d6b33-8731-3ccc-9258-536f5ff980f4",
+    "vulnerability": {
+     "aliases": "GHSA-4q6m-6p89-9rmf\nCVE-2026-103406\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 26, 2026, 6:01:19 AM",
+     "datePublished": "Oct 28, 2026, 6:32:03 PM",
+     "dateUpdated": "Nov 25, 2026, 6:30:35 PM",
+     "description": "An Improper Neutralization of Special Elements used in an OS Command vulnerability in the AutomatedProvisioner in Juniper Networks Session Smart Conductor allows a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+     "enisa_id": "EUVD-2026-112215\n",
+     "epss": 0.0,
+     "id": "GHSA-4q6m-6p89-9rmf",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-103406\nhttps://supportportal.juniper.net/JSA112183\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-103406\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   }
+  ],
+  "enisaUuid": "b3c7a93c-58d9-31c4-984c-90184cc104ab",
+  "epss": 0.52,
+  "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
+  "id": "EUVD-2026-112215",
+  "references": "https://supportportal.juniper.net/JSA112183\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2026-112215",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 25, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "Session Smart Conductor",
+      "vendor": "Juniper Networks",
+      "versions": [
+       {
+        "lessThan": "7.0.5",
+        "status": "affected",
+        "version": "0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "7.1.7",
+        "status": "affected",
+        "version": "7.1.0",
+        "versionType": "custom"
+       },
+       {
+        "lessThan": "7.2.3",
+        "status": "affected",
+        "version": "7.2.0",
+        "versionType": "custom"
+       }
+      ]
+     }
+    ],
+    "source": "sirt@juniper.net"
+   }
+  ],
+  "cisaActionDue": "2026-11-28",
+  "cisaExploitAdd": "2026-11-25",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:juniper:session_smart_conductor:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "D8F84771-A96E-4307-9EB0-87EB7E57D875",
+        "versionEndExcluding": "7.0.5-14-lts",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:juniper:session_smart_conductor:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "DC5B82D6-C89E-4ABC-AB2E-D45CC74C522C",
+        "versionEndExcluding": "7.1.7-15-sts",
+        "versionStartIncluding": "7.1.0-50r1",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:o:juniper:session_smart_conductor:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "35EDD1F7-F923-4E9B-A6B9-3299201E84C7",
+        "versionEndExcluding": "7.2.3-8r2",
+        "versionStartIncluding": "7.2.0-29r1",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "An Improper Neutralization of Special Elements used in an OS Command vulnerability in the AutomatedProvisioner in Juniper Networks Session Smart Conductor allows a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID."
+   }
+  ],
+  "id": "CVE-2026-103406",
+  "lastModified": "2026-11-25T18:21:06.383",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "sirt@juniper.net",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-103406",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-25T15:15:11.579452Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2026-10-28T17:17:25.830",
+  "references": [
+   {
+    "source": "sirt@juniper.net",
+    "tags": [
+     "Vendor Advisory"
+    ],
+    "url": "https://supportportal.juniper.net/JSA112183"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-103406"
+   }
+  ],
+  "sourceIdentifier": "sirt@juniper.net",
+  "vulnStatus": "Analyzed",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-78"
+     }
+    ],
+    "source": "sirt@juniper.net",
+    "type": "Secondary"
+   }
+  ]
+ }
+}

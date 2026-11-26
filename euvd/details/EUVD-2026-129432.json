@@ -28,9 +28,47 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A",
   "baseScoreVersion": "4.0",
   "datePublished": "Nov 19, 2026, 1:29:12 AM",
-  "dateUpdated": "Nov 24, 2026, 8:58:24 PM",
+  "dateUpdated": "Nov 25, 2026, 4:56:50 AM",
   "description": "Deserialization of untrusted data in double-submit cookie vs. form field validation in Idunno.AntiCsrf versions through 0.9.1 Beta on ASP.NET allows remote unauthenticated attackers to execute code via object injection",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "143defca-9f1f-3bbb-90d2-be9773ee0b5e",
+       "product": {
+        "name": "Idunno.AntiCsrf library 0.9.1 Beta",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      },
+      {
+       "id": "21a92b01-2783-3ffa-8d49-b32f028bbfe0",
+       "product": {
+        "name": "ASP.NET",
+        "vendor": {
+         "name": "Microsoft"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-131914\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 22, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 22, 2026, 11:00:00 PM",
+     "description": "Microsoft ASP.NET Idunno.AntiCsrf: Schwachstelle ermöglicht Ausführen von beliebigem Programmcode mit den Rechten des Dienstes",
+     "id": "WID-SEC-W-2026-4735",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4735.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4735\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Microsoft ASP.NET Idunno.AntiCsrf ausnutzen, um beliebigen Programmcode mit den Rechten des Dienstes auszuführen, was zu einer vollständigen Kompromittierung des Webanwendungsservers führt."
+    },
+    "id": "80021a13-3091-3ab5-9111-9dd36da8ca57"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "41a3023c-8bc0-3495-a7e2-aae1be05ffdc",
@@ -67,7 +105,7 @@
     "vulnerability": {
      "aliases": "GHSA-pj2m-2r8v-h9cp\nCVE-2026-131914\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 25, 2026, 6:02:10 AM",
+     "dataProcessed": "Nov 26, 2026, 6:01:19 AM",
      "datePublished": "Nov 19, 2026, 3:31:31 AM",
      "dateUpdated": "Nov 24, 2026, 9:30:38 PM",
      "description": "Deserialization of untrusted data in double-submit cookie vs. form field validation in Idunno.AntiCsrf versions through 0.9.1 Beta on ASP.NET allows remote unauthenticated attackers to execute code via object injection",
@@ -86,9 +124,9 @@
      "baseScore": 9.3,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 25, 2026, 6:00:25 AM",
+     "dataProcessed": "Nov 26, 2026, 6:00:12 AM",
      "datePublished": "Nov 19, 2026, 1:29:12 AM",
-     "dateUpdated": "Nov 24, 2026, 8:58:24 PM",
+     "dateUpdated": "Nov 25, 2026, 4:56:50 AM",
      "description": "Deserialization of untrusted data in double-submit cookie vs. form field validation in Idunno.AntiCsrf versions through 0.9.1 Beta on ASP.NET allows remote unauthenticated attackers to execute code via object injection",
      "enisa_id": "EUVD-2026-129432\n",
      "epss": 0.61,
@@ -204,7 +242,7 @@
    }
   ],
   "id": "CVE-2026-131914",
-  "lastModified": "2026-11-24T20:18:43.990",
+  "lastModified": "2026-11-25T05:18:30.107",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -289,7 +327,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-24T18:42:13.103149Z",
+      "timestamp": "2026-11-24T00:00:00+00:00",
       "version": "2.0.3"
      }
     }

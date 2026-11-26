@@ -1,0 +1,326 @@
+{
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-25914"
+  ],
+  [
+   "DIVD CSIRT",
+   "https://csirt.divd.nl/CVE-2023-25914"
+  ],
+  [
+   "DIVD CSIRT",
+   "https://csirt.divd.nl/DIVD-2023-00025"
+  ]
+ ],
+ "cisa_kev": {
+  "cveID": "CVE-2023-25914",
+  "cwes": [
+   "CWE-22"
+  ],
+  "dateAdded": "2026-11-25",
+  "dueDate": "2026-11-28",
+  "forensicTriage": "Yes",
+  "knownRansomwareCampaignUse": "Unknown",
+  "notes": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2023-08-01 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2023-25914",
+  "product": "AK-SM 800A Series",
+  "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "shortDescription": "Danfoss AK-SM 800A Series contains a path traversal vulnerability that could allow an attacker to access and read underlying server system files via the XML interface.",
+  "vendorProject": "Danfoss",
+  "vulnerabilityName": "Danfoss AK-SM 800A Series Path Traversal Vulnerability"
+ },
+ "euvd": {
+  "aliases": "CVE-2023-25914\nGHSA-cmrr-63r4-j6f9\n",
+  "assigner": "DIVD",
+  "baseScore": 8.8,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
+  "datePublished": "Aug 21, 2023, 8:30:03 PM",
+  "dateUpdated": "Nov 25, 2026, 8:17:26 PM",
+  "description": "Due to improper restriction, authenticated attackers could retrieve and read system files of the underlying server through the XML interface. The information that can be read can lead to a full system compromise.",
+  "enisaIdAdvisory": [],
+  "enisaIdProduct": [
+   {
+    "id": "34d8d738-45dd-3713-bc8f-0a9a3fdf9ad1",
+    "product": {
+     "name": "AK-SM800A",
+     "vendor": {
+      "name": "Danfoss"
+     }
+    },
+    "product_version": "< 3.3"
+   }
+  ],
+  "enisaIdVendor": [
+   {
+    "id": "616f026b-d20e-3973-b535-b96091e83b8c",
+    "vendor": {
+     "name": "Danfoss"
+    }
+   }
+  ],
+  "enisaIdVulnerability": [
+   {
+    "id": "71410e07-e04d-3787-8f00-41b42918a9f3",
+    "vulnerability": {
+     "aliases": "GHSA-cmrr-63r4-j6f9\nCVE-2023-25914\n",
+     "baseScore": 0.0,
+     "dataProcessed": "Nov 26, 2026, 6:01:19 AM",
+     "datePublished": "Aug 21, 2023, 9:31:23 PM",
+     "dateUpdated": "Nov 25, 2026, 9:30:25 PM",
+     "description": "Due to improper restriction, attackers could retrieve and read system files of the underlying server through the XML interface.",
+     "enisa_id": "EUVD-2023-29802\n",
+     "epss": 0.0,
+     "id": "GHSA-cmrr-63r4-j6f9",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2023-25914\nhttps://csirt.divd.nl/CVE-2023-25914\nhttps://csirt.divd.nl/DIVD-2023-00025\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-25914\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "c227df65-d2fa-3819-a9d6-94fcc3305d1c",
+    "vulnerability": {
+     "assigner": "DIVD",
+     "baseScore": 8.8,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 26, 2026, 6:00:31 AM",
+     "datePublished": "Aug 21, 2023, 8:30:03 PM",
+     "dateUpdated": "Nov 25, 2026, 8:17:26 PM",
+     "description": "Due to improper restriction, authenticated attackers could retrieve and read system files of the underlying server through the XML interface. The information that can be read can lead to a full system compromise.",
+     "enisa_id": "EUVD-2023-29802\n",
+     "epss": 0.81,
+     "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
+     "id": "CVE-2023-25914",
+     "references": "https://csirt.divd.nl/CVE-2023-25914\nhttps://csirt.divd.nl/DIVD-2023-00025\n",
+     "status": "PUBLISHED",
+     "vulnerabilityProduct": [
+      {
+       "id": "007606ca-3fa1-3529-85e5-6175a6318dcf",
+       "product": {
+        "name": "AK-SM800A",
+        "vendor": {
+         "name": "Danfoss"
+        }
+       },
+       "product_version": "< 3.3"
+      }
+     ],
+     "vulnerabilityVendor": [
+      {
+       "id": "61cee9c4-61ce-3cfe-a0b6-71e9cd2fa312",
+       "vendor": {
+        "name": "Danfoss"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "enisaUuid": "0a9cd9ab-3633-3b77-99fa-e0c7419cc115",
+  "epss": 0.81,
+  "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
+  "id": "EUVD-2023-29802",
+  "references": "https://csirt.divd.nl/CVE-2023-25914\nhttps://csirt.divd.nl/DIVD-2023-00025\n"
+ },
+ "honeypot": [],
+ "id": "EUVD-2023-29802",
+ "kev_sources": [
+  {
+   "dateAdded": "Nov 25, 2026, 12:00:00 AM",
+   "source": "CISA"
+  }
+ ],
+ "nvd": {
+  "affected": [
+   {
+    "affectedData": [
+     {
+      "defaultStatus": "unaffected",
+      "product": "AK-SM800A",
+      "vendor": "Danfoss",
+      "versions": [
+       {
+        "status": "affected",
+        "version": "< 3.3"
+       }
+      ]
+     }
+    ],
+    "source": "csirt@divd.nl"
+   }
+  ],
+  "cisaActionDue": "2026-11-28",
+  "cisaExploitAdd": "2026-11-25",
+  "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+  "cisaVulnerabilityName": "Danfoss AK-SM 800A Series Path Traversal Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:o:danfoss:ak-sm_800a_firmware:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "0FE57274-BA94-492A-9D3A-A74F047E9EF4",
+        "versionEndIncluding": "3.3",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     },
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:h:danfoss:ak-sm_800a:-:*:*:*:*:*:*:*",
+        "matchCriteriaId": "A4EC90A1-18C1-4509-96DF-A528E2AF5989",
+        "vulnerable": false
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ],
+    "operator": "AND"
+   }
+  ],
+  "cveTags": [],
+  "descriptions": [
+   {
+    "lang": "en",
+    "value": "Due to improper restriction, authenticated attackers could retrieve and read system files of the underlying server through the XML interface. The information that can be read can lead to a full system compromise."
+   },
+   {
+    "lang": "es",
+    "value": "Debido a una restricción inadecuada, los atacantes podían recuperar y leer archivos de sistema del servidor subyacente a través de la interfaz XML."
+   }
+  ],
+  "id": "CVE-2023-25914",
+  "lastModified": "2026-11-25T21:17:15.277",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.9,
+     "source": "csirt@divd.nl",
+     "type": "Secondary"
+    },
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.8,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "LOW",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.8,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2023-25914",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-25T20:15:08.560472Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
+  "published": "2023-08-21T21:15:08.970",
+  "references": [
+   {
+    "source": "csirt@divd.nl",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://csirt.divd.nl/CVE-2023-25914"
+   },
+   {
+    "source": "csirt@divd.nl",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://csirt.divd.nl/DIVD-2023-00025"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://csirt.divd.nl/CVE-2023-25914"
+   },
+   {
+    "source": "af854a3a-2127-422b-91ae-364da2661108",
+    "tags": [
+     "Third Party Advisory"
+    ],
+    "url": "https://csirt.divd.nl/DIVD-2023-00025"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-25914"
+   }
+  ],
+  "sourceIdentifier": "csirt@divd.nl",
+  "vulnStatus": "Modified",
+  "weaknesses": [
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-22"
+     }
+    ],
+    "source": "csirt@divd.nl",
+    "type": "Secondary"
+   },
+   {
+    "description": [
+     {
+      "lang": "en",
+      "value": "CWE-22"
+     }
+    ],
+    "source": "nvd@nist.gov",
+    "type": "Primary"
+   }
+  ]
+ }
+}

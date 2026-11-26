@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
   "baseScoreVersion": "4.0",
   "datePublished": "Nov 18, 2026, 3:50:17 PM",
-  "dateUpdated": "Nov 24, 2026, 8:58:23 PM",
+  "dateUpdated": "Nov 25, 2026, 4:56:49 AM",
   "description": "Optimizely Web Experimentation before 2026-11-17 mishandles the account signup flow, leading to presence of attacker-controlled code in the projectJS (aka Project JavaScript) field of certain cdn.optimizely.com assets.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -59,12 +59,12 @@
      "baseScore": 7.1,
      "baseScoreVector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
      "baseScoreVersion": "4.0",
-     "dataProcessed": "Nov 25, 2026, 6:00:25 AM",
+     "dataProcessed": "Nov 26, 2026, 6:00:12 AM",
      "datePublished": "Nov 18, 2026, 3:50:17 PM",
-     "dateUpdated": "Nov 24, 2026, 8:58:23 PM",
+     "dateUpdated": "Nov 25, 2026, 4:56:49 AM",
      "description": "Optimizely Web Experimentation before 2026-11-17 mishandles the account signup flow, leading to presence of attacker-controlled code in the projectJS (aka Project JavaScript) field of certain cdn.optimizely.com assets.",
      "enisa_id": "EUVD-2026-129010\n",
-     "epss": 0.43,
+     "epss": 0.41,
      "exploitedSince": "Nov 24, 2026, 12:00:00 AM",
      "id": "CVE-2026-132224",
      "references": "https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf\nhttps://status.optimizely.com/incidents/ftw0fh9wx43z\nhttps://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/\nhttps://scotthelme.co.uk/reflecting-on-the-optimizely-incident-and-why-we-keep-failing/\nhttps://github.com/brave/adblock-resources/pull/355\nhttps://news.ycombinator.com/item?id=50524767\nhttps://www.thatprivacyguy.com/blog/optimizely-bbc-cnn-consent/\nhttps://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/\nhttps://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/\nhttps://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/\nhttps://therecord.media/optimizely-malicious-code-customer-sites\n",
@@ -96,7 +96,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-132224\nGHSA-xr6g-wr3x-r365\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 25, 2026, 6:02:10 AM",
+     "dataProcessed": "Nov 26, 2026, 6:01:19 AM",
      "datePublished": "Nov 18, 2026, 6:32:03 PM",
      "dateUpdated": "Nov 24, 2026, 9:30:38 PM",
      "description": "Optimizely Web Experimentation before 2026-11-17 mishandles the account signup flow, leading to presence of attacker-controlled code in the projectJS (aka Project JavaScript) field of certain cdn.optimizely.com assets.",
@@ -110,7 +110,7 @@
    }
   ],
   "enisaUuid": "a807214d-f745-3c4f-9cc6-dbfe6011b253",
-  "epss": 0.43,
+  "epss": 0.41,
   "exploitedSince": "Nov 24, 2026, 12:00:00 AM",
   "id": "EUVD-2026-129010",
   "references": "https://pages.optimizely.com/rs/947-RKE-048/images/Security%20Incident%20Report%20-%20Optimizely%20Web%20Experimentation%20-%20Nov%2017%202026.pdf\nhttps://status.optimizely.com/incidents/ftw0fh9wx43z\nhttps://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/\nhttps://scotthelme.co.uk/reflecting-on-the-optimizely-incident-and-why-we-keep-failing/\nhttps://github.com/brave/adblock-resources/pull/355\nhttps://news.ycombinator.com/item?id=50524767\nhttps://www.thatprivacyguy.com/blog/optimizely-bbc-cnn-consent/\nhttps://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/\nhttps://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/\nhttps://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/\nhttps://therecord.media/optimizely-malicious-code-customer-sites\n"
@@ -181,7 +181,7 @@
    }
   ],
   "id": "CVE-2026-132224",
-  "lastModified": "2026-11-24T20:17:50.587",
+  "lastModified": "2026-11-25T05:18:30.523",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -266,7 +266,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-24T18:42:06.199064Z",
+      "timestamp": "2026-11-24T00:00:00+00:00",
       "version": "2.0.3"
      }
     }
