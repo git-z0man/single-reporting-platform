@@ -29,7 +29,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 23, 2026, 5:07:16 PM",
-  "dateUpdated": "Nov 25, 2026, 8:17:23 PM",
+  "dateUpdated": "Nov 26, 2026, 4:55:46 AM",
   "description": "XO (Xen Orchestra) is a solution to visualize, manage, backup and delegate your XCP-ng (or XenServer) infrastructure. Prior to 6.9.2 and 6.10.1, REST cookie parsing turns authenticationToken=j:%7B%7D into {}. REST authentication passes that object to the XO token provider without requiring a string. The token collection treats {} as an unfiltered lookup and returns its first token; the provider authenticates as that token's owner if it is unexpired. The authenticated /rest/v0/users/me/authentication_tokens route then returns reusable login token IDs. This vulnerability is actively exploited in the wild. This vulnerability is fixed in 6.9.2 and 6.10.1.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -94,7 +94,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-133469\nGHSA-2r3w-c2vx-fv5g\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 25, 2026, 11:02:28 PM",
+     "dataProcessed": "Nov 26, 2026, 7:06:48 AM",
      "datePublished": "Nov 23, 2026, 5:29:29 PM",
      "dateUpdated": "Nov 23, 2026, 5:29:29 PM",
      "description": "Xen Orchestra: Empty-object login token",
@@ -113,12 +113,12 @@
      "baseScore": 9.8,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 26, 2026, 6:00:31 AM",
+     "dataProcessed": "Nov 27, 2026, 6:00:07 AM",
      "datePublished": "Nov 23, 2026, 5:07:16 PM",
-     "dateUpdated": "Nov 25, 2026, 8:17:23 PM",
+     "dateUpdated": "Nov 26, 2026, 4:55:46 AM",
      "description": "XO (Xen Orchestra) is a solution to visualize, manage, backup and delegate your XCP-ng (or XenServer) infrastructure. Prior to 6.9.2 and 6.10.1, REST cookie parsing turns authenticationToken=j:%7B%7D into {}. REST authentication passes that object to the XO token provider without requiring a string. The token collection treats {} as an unfiltered lookup and returns its first token; the provider authenticates as that token's owner if it is unexpired. The authenticated /rest/v0/users/me/authentication_tokens route then returns reusable login token IDs. This vulnerability is actively exploited in the wild. This vulnerability is fixed in 6.9.2 and 6.10.1.",
      "enisa_id": "EUVD-2026-133254\n",
-     "epss": 0.78,
+     "epss": 1.1,
      "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
      "id": "CVE-2026-133469",
      "references": "https://github.com/vatesfr/xen-orchestra/security/advisories/GHSA-2r3w-c2vx-fv5g\nhttps://github.com/vatesfr/xen-orchestra/pull/10748\nhttps://github.com/vatesfr/xen-orchestra/commit/50166fe3a49c02069d35ba9046ca4a1f77f4e11d\nhttps://docs.vates.tech/security-advisories/advisories/2026/vates-sa-2026-062\n",
@@ -183,7 +183,7 @@
    }
   ],
   "enisaUuid": "735207c1-617b-33bb-80b7-8cdd1c3a135f",
-  "epss": 0.78,
+  "epss": 1.1,
   "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
   "id": "EUVD-2026-133254",
   "references": "https://github.com/vatesfr/xen-orchestra/security/advisories/GHSA-2r3w-c2vx-fv5g\nhttps://github.com/vatesfr/xen-orchestra/pull/10748\nhttps://github.com/vatesfr/xen-orchestra/commit/50166fe3a49c02069d35ba9046ca4a1f77f4e11d\nhttps://docs.vates.tech/security-advisories/advisories/2026/vates-sa-2026-062\n"
@@ -292,7 +292,7 @@
    }
   ],
   "id": "CVE-2026-133469",
-  "lastModified": "2026-11-25T21:17:18.503",
+  "lastModified": "2026-11-26T05:18:22.960",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -333,7 +333,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-25T20:14:54.440740Z",
+      "timestamp": "2026-11-25T00:00:00+00:00",
       "version": "2.0.3"
      }
     }

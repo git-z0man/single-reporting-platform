@@ -28,7 +28,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "May 8, 2025, 9:41:20 AM",
-  "dateUpdated": "Nov 25, 2026, 8:17:18 PM",
+  "dateUpdated": "Nov 26, 2026, 4:55:48 AM",
   "description": "Improper Authentication vulnerability in Danfoss AKSM8xxA Series.This issue affects Danfoss AK-SM 8xxA Series prior to version 4.2",
   "enisaIdAdvisory": [
    {
@@ -95,7 +95,7 @@
     "vulnerability": {
      "aliases": "GHSA-6p47-2pgh-wj76\nCVE-2025-41450\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 26, 2026, 6:01:19 AM",
+     "dataProcessed": "Nov 27, 2026, 6:01:08 AM",
      "datePublished": "May 8, 2025, 12:34:29 PM",
      "dateUpdated": "Nov 25, 2026, 9:30:26 PM",
      "description": "Improper Authentication vulnerability in Danfoss AKSM8xxA Series.This issue affects Danfoss AK-SM 8xxA Series prior to version 4.2",
@@ -114,12 +114,12 @@
      "baseScore": 8.2,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 26, 2026, 6:00:31 AM",
+     "dataProcessed": "Nov 27, 2026, 6:00:07 AM",
      "datePublished": "May 8, 2025, 9:41:20 AM",
-     "dateUpdated": "Nov 25, 2026, 8:17:18 PM",
+     "dateUpdated": "Nov 26, 2026, 4:55:48 AM",
      "description": "Improper Authentication vulnerability in Danfoss AKSM8xxA Series.This issue affects Danfoss AK-SM 8xxA Series prior to version 4.2",
      "enisa_id": "EUVD-2025-13996\n",
-     "epss": 0.97,
+     "epss": 0.51,
      "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
      "id": "CVE-2025-41450",
      "references": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2025-03-01/\n",
@@ -148,7 +148,7 @@
    }
   ],
   "enisaUuid": "ee392fbf-f340-35ac-b06c-8d4150c4277f",
-  "epss": 0.97,
+  "epss": 0.51,
   "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
   "id": "EUVD-2025-13996",
   "references": "https://www.danfoss.com/en/service-and-support/coordinated-vulnerability-disclosure/danfoss-security-advisories/dsa-2025-03-01/\n"
@@ -228,7 +228,7 @@
    }
   ],
   "id": "CVE-2025-41450",
-  "lastModified": "2026-11-25T21:17:15.640",
+  "lastModified": "2026-11-26T05:18:07.057",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -289,7 +289,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-25T20:14:59.737127Z",
+      "timestamp": "2026-11-25T00:00:00+00:00",
       "version": "2.0.3"
      }
     }

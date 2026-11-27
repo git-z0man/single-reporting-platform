@@ -28,9 +28,37 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
   "baseScoreVersion": "3.1",
   "datePublished": "Nov 19, 2026, 4:09:46 PM",
-  "dateUpdated": "Nov 25, 2026, 8:17:40 PM",
+  "dateUpdated": "Nov 26, 2026, 4:55:51 AM",
   "description": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker to conduct an arbitrary file upload attack due to insufficient file type validation. A successful exploit could allow an attacker to upload arbitrary files to the target system. This is MTLVULN-1861.",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "a331137e-638f-3f71-bce2-d0a1d2ad1856",
+       "product": {
+        "name": "micollab",
+        "vendor": {
+         "name": "Mitel"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-133275\nCVE-2026-133303\nCVE-2026-133311\nCVE-2026-133323\nCVE-2026-133324\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 24, 2026, 1:25:44 PM",
+     "dateUpdated": "Nov 24, 2026, 1:25:44 PM",
+     "description": "Kwetsbaarheden verholpen in Mitel MiCollab",
+     "id": "NCSC-2026-0514",
+     "references": "",
+     "source": {
+      "id": 19,
+      "name": "csaf_ncscnl"
+     }
+    },
+    "id": "f9d8a422-83fd-34b9-b768-7301edff44d0"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "4ae474db-5b70-3168-9b91-a68a0abeef68",
@@ -59,12 +87,12 @@
      "baseScore": 5.3,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 26, 2026, 6:00:31 AM",
+     "dataProcessed": "Nov 27, 2026, 6:00:07 AM",
      "datePublished": "Nov 19, 2026, 4:09:46 PM",
-     "dateUpdated": "Nov 25, 2026, 8:17:40 PM",
+     "dateUpdated": "Nov 26, 2026, 4:55:51 AM",
      "description": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker to conduct an arbitrary file upload attack due to insufficient file type validation. A successful exploit could allow an attacker to upload arbitrary files to the target system. This is MTLVULN-1861.",
      "enisa_id": "EUVD-2026-130372\n",
-     "epss": 0.25,
+     "epss": 0.32,
      "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
      "id": "CVE-2026-133275",
      "references": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012\n",
@@ -96,7 +124,7 @@
     "vulnerability": {
      "aliases": "CVE-2026-133275\nGHSA-hc7j-2vxc-5pjv\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 26, 2026, 6:01:19 AM",
+     "dataProcessed": "Nov 27, 2026, 6:01:08 AM",
      "datePublished": "Nov 19, 2026, 6:31:58 PM",
      "dateUpdated": "Nov 25, 2026, 9:30:29 PM",
      "description": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker to conduct an arbitrary file upload attack due to insufficient file type validation. A successful exploit could allow an attacker to upload arbitrary files to the target system. This is MTLVULN-1861.",
@@ -110,7 +138,7 @@
    }
   ],
   "enisaUuid": "51d1e1a9-bbb7-3389-b40d-87179fcac229",
-  "epss": 0.25,
+  "epss": 0.32,
   "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
   "id": "EUVD-2026-130372",
   "references": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012\n"
@@ -174,7 +202,7 @@
    }
   ],
   "id": "CVE-2026-133275",
-  "lastModified": "2026-11-25T21:17:17.630",
+  "lastModified": "2026-11-26T05:18:20.573",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -215,7 +243,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-25T20:15:25.018934Z",
+      "timestamp": "2026-11-25T00:00:00+00:00",
       "version": "2.0.3"
      }
     }
