@@ -1555,6 +1555,23 @@
    "first_seen": "2026-11-26",
    "first_seen_after": "2026-11-25",
    "changes": []
+  },
+  {
+   "id": "EUVD-2026-92807",
+   "cve": "CVE-2026-21589",
+   "row": 1902,
+   "dateAdded": "2026-11-23",
+   "origin": "CSIRT-ITA",
+   "vendor": "Atlassian",
+   "product": "Bamboo Data Center",
+   "notes": "https://www.acn.gov.it/portale/w/impiego-di-agenti-di-ia-in-campagne-di-compromissione-automatizzate",
+   "cisa": "2026-10-15",
+   "inserted_after": "2026-11-25",
+   "inserted_before": "",
+   "backdated_days": 2,
+   "first_seen": "2026-11-27",
+   "first_seen_after": "2026-11-26",
+   "changes": []
   }
  ],
  "removed": [

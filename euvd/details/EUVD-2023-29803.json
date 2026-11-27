@@ -36,7 +36,7 @@
   "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
   "baseScoreVersion": "3.1",
   "datePublished": "Aug 21, 2023, 8:30:02 PM",
-  "dateUpdated": "Nov 25, 2026, 8:17:30 PM",
+  "dateUpdated": "Nov 26, 2026, 4:55:53 AM",
   "description": "Due to improper input validation, an authenticated remote attacker could execute arbitrary commands on the target system.",
   "enisaIdAdvisory": [],
   "enisaIdProduct": [
@@ -67,12 +67,12 @@
      "baseScore": 9.9,
      "baseScoreVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
      "baseScoreVersion": "3.1",
-     "dataProcessed": "Nov 26, 2026, 6:00:31 AM",
+     "dataProcessed": "Nov 27, 2026, 6:00:07 AM",
      "datePublished": "Aug 21, 2023, 8:30:02 PM",
-     "dateUpdated": "Nov 25, 2026, 8:17:30 PM",
+     "dateUpdated": "Nov 26, 2026, 4:55:53 AM",
      "description": "Due to improper input validation, an authenticated remote attacker could execute arbitrary commands on the target system.",
      "enisa_id": "EUVD-2023-29803\n",
-     "epss": 1.04,
+     "epss": 1.43,
      "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
      "id": "CVE-2023-25915",
      "references": "https://csirt.divd.nl/CVE-2023-25915\nhttps://csirt.divd.nl/DIVD-2023-00025\n",
@@ -104,7 +104,7 @@
     "vulnerability": {
      "aliases": "GHSA-3jj6-g8g9-j5w2\nCVE-2023-25915\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 26, 2026, 6:01:19 AM",
+     "dataProcessed": "Nov 27, 2026, 6:01:08 AM",
      "datePublished": "Aug 21, 2023, 9:31:23 PM",
      "dateUpdated": "Nov 25, 2026, 9:30:26 PM",
      "description": "Due to improper input validation, a remote attacker could execute arbitrary commands on the target system.",
@@ -118,7 +118,7 @@
    }
   ],
   "enisaUuid": "ce2771b0-04b5-3350-9e70-c414907bad3b",
-  "epss": 1.04,
+  "epss": 1.43,
   "exploitedSince": "Nov 25, 2026, 12:00:00 AM",
   "id": "EUVD-2023-29803",
   "references": "https://csirt.divd.nl/CVE-2023-25915\nhttps://csirt.divd.nl/DIVD-2023-00025\n"
@@ -196,7 +196,7 @@
    }
   ],
   "id": "CVE-2023-25915",
-  "lastModified": "2026-11-25T21:17:15.460",
+  "lastModified": "2026-11-26T05:17:53.213",
   "metrics": {
    "cvssMetricV31": [
     {
@@ -257,7 +257,7 @@
        }
       ],
       "role": "CISA Coordinator",
-      "timestamp": "2026-11-25T20:15:14.073311Z",
+      "timestamp": "2026-11-25T00:00:00+00:00",
       "version": "2.0.3"
      }
     }

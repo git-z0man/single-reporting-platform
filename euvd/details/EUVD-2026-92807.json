@@ -539,18 +539,18 @@
  "honeypot": [
   {
    "avg30d": 6.0,
-   "avg7d": 6.0,
-   "avg90d": 3.0,
+   "avg7d": 7.0,
+   "avg90d": 4.0,
    "cisaKevFlag": true,
-   "connections1d": 5650,
+   "connections1d": 2505,
    "cveId": "CVE-2026-21589",
    "firstSeenAt": "Oct 14, 2026, 3:00:00 AM",
    "isNew": false,
-   "lastSeenAt": "Nov 25, 2026, 7:19:37 AM",
+   "lastSeenAt": "Nov 26, 2026, 7:18:11 AM",
    "product": "Confluence",
    "source": "shadowserver",
    "trend": "UPTICK",
-   "uniqueIps1d": 21,
+   "uniqueIps1d": 9,
    "vendor": "Atlassian",
    "vulnClass": "other-software",
    "vulnSeverity": "Critical"
@@ -561,6 +561,10 @@
   {
    "dateAdded": "Oct 15, 2026, 12:00:00 AM",
    "source": "CISA"
+  },
+  {
+   "dateAdded": "Nov 23, 2026, 12:00:00 AM",
+   "source": "EUKEV"
   }
  ],
  "nvd": {
