@@ -1,5 +1,10 @@
 {
- "cert_links": [],
+ "cert_links": [
+  [
+   "CISA",
+   "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-132165"
+  ]
+ ],
  "cisa_kev": {
   "cveID": "CVE-2026-132165",
   "cwes": [
@@ -17,13 +22,71 @@
   "vulnerabilityName": "Drupal Core Remote Code Execution Vulnerability"
  },
  "euvd": {
-  "aliases": "CVE-2026-132165\n",
+  "aliases": "CVE-2026-132165\nGHSA-rxxp-22w8-2353\n",
   "assigner": "drupal",
-  "baseScore": 0.0,
+  "baseScore": 8.1,
+  "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+  "baseScoreVersion": "3.1",
   "datePublished": "Nov 26, 2026, 12:44:41 AM",
-  "dateUpdated": "Nov 26, 2026, 12:44:41 AM",
+  "dateUpdated": "Nov 27, 2026, 2:06:01 PM",
   "description": "Missing Authentication for Critical Function vulnerability in Drupal Drupal core allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Drupal core versions: from 0.0.0 to 10.6.22, from 11.0.0 to 11.3.22, from 11.4.0 to 11.4.13.",
-  "enisaIdAdvisory": [],
+  "enisaIdAdvisory": [
+   {
+    "advisory": {
+     "advisoryProduct": [
+      {
+       "id": "57d7210f-dea0-3cd5-b9cc-d3e1f2972eb0",
+       "product": {
+        "name": "Core 11.3.22",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "8e3f91df-7a2d-3437-8a71-26444733ae81",
+       "product": {
+        "name": "Core 11.4.13",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      },
+      {
+       "id": "c40cb7c1-5797-3185-a160-56ea41f14d11",
+       "product": {
+        "name": "Drupal",
+        "vendor": {
+         "name": "Drupal"
+        }
+       }
+      },
+      {
+       "id": "de757f40-4c3a-346e-ae82-d097a5aef3da",
+       "product": {
+        "name": "Core 10.6.22",
+        "vendor": {
+         "name": "open source"
+        }
+       }
+      }
+     ],
+     "aliases": "CVE-2026-132165\nCVE-2026-132166\n",
+     "baseScore": 0.0,
+     "datePublished": "Nov 18, 2026, 11:00:00 PM",
+     "dateUpdated": "Nov 25, 2026, 11:00:00 PM",
+     "description": "Drupal Core: Mehrere Schwachstellen ermöglichen Codeausführung",
+     "id": "WID-SEC-W-2026-4686",
+     "references": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-4686.json\nhttps://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4686\n",
+     "source": {
+      "id": 8,
+      "name": "csaf_certbund"
+     },
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Drupal Core ausnutzen, um beliebigen Programmcode auszuführen."
+    },
+    "id": "0035ac2d-56c9-3072-9b3b-14f184398755"
+   }
+  ],
   "enisaIdProduct": [
    {
     "id": "1bd3ac83-5c4f-365d-86da-5f13468f3fae",
@@ -66,16 +129,35 @@
   ],
   "enisaIdVulnerability": [
    {
-    "id": "e9846480-efa5-3ff0-9616-40c6c5a2fd90",
+    "id": "203cea48-8e6e-3c45-98ff-a6ae2747f4c1",
     "vulnerability": {
-     "assigner": "drupal",
+     "aliases": "CVE-2026-132165\nGHSA-rxxp-22w8-2353\n",
      "baseScore": 0.0,
-     "dataProcessed": "Nov 26, 2026, 6:00:12 AM",
-     "datePublished": "Nov 26, 2026, 12:44:41 AM",
-     "dateUpdated": "Nov 26, 2026, 12:44:41 AM",
+     "dataProcessed": "Nov 28, 2026, 6:00:37 AM",
+     "datePublished": "Nov 26, 2026, 3:30:27 AM",
+     "dateUpdated": "Nov 27, 2026, 3:31:33 PM",
      "description": "Missing Authentication for Critical Function vulnerability in Drupal Drupal core allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Drupal core versions: from 0.0.0 to 10.6.22, from 11.0.0 to 11.3.22, from 11.4.0 to 11.4.13.",
      "enisa_id": "EUVD-2026-135952\n",
      "epss": 0.0,
+     "id": "GHSA-rxxp-22w8-2353",
+     "references": "https://nvd.nist.gov/vuln/detail/CVE-2026-132165\nhttps://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-132165\nhttps://www.drupal.org/sa-core-2026-017\n",
+     "vulnerabilityProduct": [],
+     "vulnerabilityVendor": []
+    }
+   },
+   {
+    "id": "e9846480-efa5-3ff0-9616-40c6c5a2fd90",
+    "vulnerability": {
+     "assigner": "drupal",
+     "baseScore": 8.1,
+     "baseScoreVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+     "baseScoreVersion": "3.1",
+     "dataProcessed": "Nov 28, 2026, 6:00:17 AM",
+     "datePublished": "Nov 26, 2026, 12:44:41 AM",
+     "dateUpdated": "Nov 27, 2026, 2:06:01 PM",
+     "description": "Missing Authentication for Critical Function vulnerability in Drupal Drupal core allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Drupal core versions: from 0.0.0 to 10.6.22, from 11.0.0 to 11.3.22, from 11.4.0 to 11.4.13.",
+     "enisa_id": "EUVD-2026-135952\n",
+     "epss": 11.05,
      "exploitedSince": "Nov 24, 2026, 12:00:00 AM",
      "id": "CVE-2026-132165",
      "references": "https://www.drupal.org/sa-core-2026-017\n",
@@ -124,7 +206,7 @@
    }
   ],
   "enisaUuid": "757336e4-236d-374d-9c39-212a9b54ac4d",
-  "epss": 0.0,
+  "epss": 11.05,
   "exploitedSince": "Nov 24, 2026, 12:00:00 AM",
   "id": "EUVD-2026-135952",
   "references": "https://www.drupal.org/sa-core-2026-017\n"
@@ -175,6 +257,38 @@
   "cisaExploitAdd": "2026-11-24",
   "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
   "cisaVulnerabilityName": "Drupal Core Remote Code Execution Vulnerability",
+  "configurations": [
+   {
+    "nodes": [
+     {
+      "cpeMatch": [
+       {
+        "criteria": "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "18E3CBE2-DA01-4230-9405-9493EDD81FF0",
+        "versionEndExcluding": "10.6.22",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "26218731-28BA-4253-9CEC-B2C385BEBF88",
+        "versionEndExcluding": "11.3.22",
+        "versionStartIncluding": "11.0.0",
+        "vulnerable": true
+       },
+       {
+        "criteria": "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*",
+        "matchCriteriaId": "9FE961B1-23A7-4731-BBDE-094AA782A1A2",
+        "versionEndExcluding": "11.4.13",
+        "versionStartIncluding": "11.4.0",
+        "vulnerable": true
+       }
+      ],
+      "negate": false,
+      "operator": "OR"
+     }
+    ]
+   }
+  ],
   "cveTags": [],
   "descriptions": [
    {
@@ -183,17 +297,93 @@
    }
   ],
   "id": "CVE-2026-132165",
-  "lastModified": "2026-11-26T01:17:10.290",
-  "metrics": {},
+  "lastModified": "2026-11-27T15:25:22.903",
+  "metrics": {
+   "cvssMetricV31": [
+    {
+     "cvssData": {
+      "attackComplexity": "LOW",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 9.8,
+      "baseSeverity": "CRITICAL",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 3.9,
+     "impactScore": 5.9,
+     "source": "nvd@nist.gov",
+     "type": "Primary"
+    },
+    {
+     "cvssData": {
+      "attackComplexity": "HIGH",
+      "attackVector": "NETWORK",
+      "availabilityImpact": "HIGH",
+      "baseScore": 8.1,
+      "baseSeverity": "HIGH",
+      "confidentialityImpact": "HIGH",
+      "integrityImpact": "HIGH",
+      "privilegesRequired": "NONE",
+      "scope": "UNCHANGED",
+      "userInteraction": "NONE",
+      "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "version": "3.1"
+     },
+     "exploitabilityScore": 2.2,
+     "impactScore": 5.9,
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "type": "Secondary"
+    }
+   ],
+   "ssvcV203": [
+    {
+     "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+     "ssvcData": {
+      "id": "CVE-2026-132165",
+      "options": [
+       {
+        "exploitation": "active"
+       },
+       {
+        "automatable": "no"
+       },
+       {
+        "technicalImpact": "total"
+       }
+      ],
+      "role": "CISA Coordinator",
+      "timestamp": "2026-11-27T14:00:05.782822Z",
+      "version": "2.0.3"
+     }
+    }
+   ]
+  },
   "published": "2026-11-26T01:17:10.290",
   "references": [
    {
     "source": "mlhess@drupal.org",
+    "tags": [
+     "Vendor Advisory"
+    ],
     "url": "https://www.drupal.org/sa-core-2026-017"
+   },
+   {
+    "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+    "tags": [
+     "Third Party Advisory",
+     "US Government Resource"
+    ],
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-132165"
    }
   ],
   "sourceIdentifier": "mlhess@drupal.org",
-  "vulnStatus": "Received",
+  "vulnStatus": "Analyzed",
   "weaknesses": [
    {
     "description": [

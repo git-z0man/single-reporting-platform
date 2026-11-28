@@ -1567,7 +1567,7 @@
    "notes": "https://www.acn.gov.it/portale/w/impiego-di-agenti-di-ia-in-campagne-di-compromissione-automatizzate",
    "cisa": "2026-10-15",
    "inserted_after": "2026-11-25",
-   "inserted_before": "",
+   "inserted_before": "2026-11-27",
    "backdated_days": 2,
    "first_seen": "2026-11-27",
    "first_seen_after": "2026-11-26",

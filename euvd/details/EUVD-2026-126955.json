@@ -117,22 +117,11 @@
  },
  "honeypot": [
   {
-   "avg30d": 0.0,
-   "avg7d": 0.0,
-   "avg90d": 0.0,
-   "cisaKevFlag": true,
-   "connections1d": 7,
    "cveId": "CVE-2026-129448",
    "firstSeenAt": "Nov 22, 2026, 2:00:00 AM",
    "isNew": false,
-   "lastSeenAt": "Nov 26, 2026, 7:18:11 AM",
-   "product": "Apache Roller",
    "source": "shadowserver",
-   "trend": "STEADY",
-   "uniqueIps1d": 1,
-   "vendor": "Apache Software Foundation",
-   "vulnClass": "other-software",
-   "vulnSeverity": "Critical"
+   "trend": "STEADY"
   }
  ],
  "id": "EUVD-2026-126955",
